@@ -1,0 +1,64 @@
+{
+  "owner": "A",
+  "formula_count": 2500,
+  "unique_compositions_rounded_12_decimals": 2500,
+  "parent_families": 2100,
+  "formula_checks": "passed",
+  "cross_person_review": "pending",
+  "global_split": "pending_B_C_master",
+  "formal_20000_spectra": "not_generated",
+  "pilots": {
+    "P1": {
+      "spectra": 200,
+      "formulas": 100,
+      "audit": "passed",
+      "full_replay": "passed_with_environment_differences",
+      "same_environment": false,
+      "environment_difference": "Thread limits only; complete difference record in replay_environment JSON",
+      "maximum_absolute_array_difference": 0.0,
+      "total_observed_counts_range": [
+        270981,
+        823275
+      ],
+      "candidate_pairs_with_both_line_centers_in_window": {
+        "As/Pb": 88,
+        "S/Pb": 96
+      },
+      "raw_bytes": 216485597,
+      "check_timings": {
+        "audit_seconds": null,
+        "audit_reused_existing_report": true,
+        "replay_seconds": null,
+        "replay_reused_existing_report": true,
+        "pack_seconds": 13.888169599998946,
+        "pack_reused_existing_report": false
+      }
+    },
+    "P2": {
+      "spectra": 200,
+      "formulas": 100,
+      "audit": "passed",
+      "full_replay": "passed_with_environment_differences",
+      "same_environment": false,
+      "environment_difference": "Thread limits only; complete difference record in replay_environment JSON",
+      "maximum_absolute_array_difference": 0.0,
+      "total_observed_counts_range": [
+        24025,
+        79017
+      ],
+      "candidate_pairs_with_both_line_centers_in_window": {
+        "As/Pb": 88,
+        "S/Pb": 96
+      },
+      "raw_bytes": 219647669,
+      "check_timings": {
+        "audit_seconds": null,
+        "audit_reused_existing_report": true,
+        "replay_seconds": null,
+        "replay_reused_existing_report": true,
+        "pack_seconds": 13.86761700000352,
+        "pack_reused_existing_report": false
+      }
+    }
+  }
+}

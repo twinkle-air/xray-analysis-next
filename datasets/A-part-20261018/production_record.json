@@ -1,0 +1,62 @@
+{
+  "owner": "A",
+  "operator": "single assistant session on user machine",
+  "date": "2026-10-18",
+  "cwd": "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析",
+  "software_version": "0.2.1",
+  "physical_model_version": "0.2.0",
+  "profiles": {
+    "P1": {
+      "seed": 2026101801,
+      "sample_file_at_generation": "outputs/member-A-20261018/A_pilot_samples.json",
+      "profile_file_at_generation": "outputs/training-generation-plan-20261018/profiles/P1.json",
+      "output_at_generation": "outputs/member-A-20261018/pilot_P1"
+    },
+    "P2": {
+      "seed": 2026101802,
+      "sample_file_at_generation": "outputs/member-A-20261018/A_pilot_samples.json",
+      "profile_file_at_generation": "outputs/training-generation-plan-20261018/profiles/P2.json",
+      "output_at_generation": "outputs/member-A-20261018/pilot_P2"
+    }
+  },
+  "replicates": 2,
+  "jitter": null,
+  "targets": [
+    "Na",
+    "Mg",
+    "Al",
+    "Si",
+    "P",
+    "S",
+    "Cl",
+    "K",
+    "Ca",
+    "Ti",
+    "V",
+    "Cr",
+    "Mn",
+    "Fe",
+    "Co",
+    "Ni",
+    "Cu",
+    "Zn",
+    "As",
+    "Se",
+    "Rb",
+    "Sr",
+    "Y",
+    "Zr",
+    "Nb",
+    "Mo",
+    "Cd",
+    "Sn",
+    "Sb",
+    "Ba",
+    "W",
+    "Pb"
+  ],
+  "split_seed": 20261018,
+  "purpose": "workflow_pilot_only",
+  "independent_person_review": "pending",
+  "formal_P1_P2_20000": "awaiting combined 5000 master and global index"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "method": "Python compile built-in; no bytecode cache written",
+  "files": [
+    "fp_competition/app.py",
+    "fp_competition/core.py",
+    "fp_competition/dataset.py",
+    "fp_competition/minerals.py",
+    "fp_competition/robustness.py",
+    "fp_competition/version.py",
+    "fp_competition/__init__.py",
+    "fp_competition/\u57fa\u4e8e\u57fa\u672c\u53c2\u6570\u6cd5\u7684\u80fd\u8c31\u751f\u6210\u6a21\u578b_\u6bd4\u8d5b\u7814\u7a76\u7248.py",
+    "fp_competition/public_data/build_references.py",
+    "fp_competition/public_data/fetch_usgs.py",
+    "fp_competition/tests/check_public_sources.py",
+    "fp_competition/tests/test_core.py",
+    "fp_competition/tests/test_dataset.py",
+    "fp_competition/tests/test_expansion.py",
+    "fp_competition/tests/test_robustness.py",
+    "outputs/member-A-20261018/build_A.py",
+    "outputs/member-A-20261018/check_pilot.py",
+    "outputs/member-A-20261018/summarize_A.py"
+  ]
+}
