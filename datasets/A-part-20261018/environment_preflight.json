@@ -1,0 +1,66 @@
+{
+  "dependencies": {
+    "numpy": {
+      "expected": "2.4.6",
+      "actual": "2.4.6"
+    },
+    "scipy": {
+      "expected": "1.17.1",
+      "actual": "1.17.1"
+    },
+    "matplotlib": {
+      "expected": "3.11.2",
+      "actual": "3.11.2"
+    },
+    "xraylib": {
+      "expected": "4.3.0",
+      "actual": "4.3.0"
+    },
+    "openpyxl": {
+      "expected": "3.1.5",
+      "actual": "3.1.5"
+    },
+    "et-xmlfile": {
+      "expected": "2.0.0",
+      "actual": "2.0.0"
+    },
+    "contourpy": {
+      "expected": "1.3.3",
+      "actual": "1.3.3"
+    },
+    "cycler": {
+      "expected": "0.12.1",
+      "actual": "0.12.1"
+    },
+    "fonttools": {
+      "expected": "4.66.0",
+      "actual": "4.66.0"
+    },
+    "kiwisolver": {
+      "expected": "1.5.1",
+      "actual": "1.5.1"
+    },
+    "packaging": {
+      "expected": "26.3",
+      "actual": "26.3"
+    },
+    "pillow": {
+      "expected": "12.3.0",
+      "actual": "12.3.0"
+    },
+    "pyparsing": {
+      "expected": "3.3.3",
+      "actual": "3.3.3"
+    },
+    "python-dateutil": {
+      "expected": "2.9.0.post0",
+      "actual": "2.9.0.post0"
+    },
+    "six": {
+      "expected": "1.17.0",
+      "actual": "1.17.0"
+    }
+  },
+  "mismatches": [],
+  "release_zip_sha256": "626cb71032774bce2f520cb60d1d2ee17d5c3ad4a5df1cce5468017f900a4269"
+}

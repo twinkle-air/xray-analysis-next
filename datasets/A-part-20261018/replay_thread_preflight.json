@@ -1,0 +1,8 @@
+{
+  "thread_limits": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "seconds": 1.7075365999990026,
+  "counts_equal": true
+}

@@ -1,0 +1,183 @@
+{
+  "total": 2500,
+  "unique": 2500,
+  "scenario_counts": {
+    "routine": 1500,
+    "sparse_boundary": 500,
+    "interference": 500
+  },
+  "low_definition": "0 < elemental mass percent <= 0.1; operational design bin, not detection limit",
+  "coverage": {
+    "Na": {
+      "zero": 100,
+      "low_0_to_0_1_percent": 145,
+      "above_0_1_percent": 2255
+    },
+    "Mg": {
+      "zero": 100,
+      "low_0_to_0_1_percent": 121,
+      "above_0_1_percent": 2279
+    },
+    "Al": {
+      "zero": 50,
+      "low_0_to_0_1_percent": 67,
+      "above_0_1_percent": 2383
+    },
+    "Si": {
+      "zero": 0,
+      "low_0_to_0_1_percent": 0,
+      "above_0_1_percent": 2500
+    },
+    "P": {
+      "zero": 100,
+      "low_0_to_0_1_percent": 739,
+      "above_0_1_percent": 1661
+    },
+    "S": {
+      "zero": 250,
+      "low_0_to_0_1_percent": 730,
+      "above_0_1_percent": 1520
+    },
+    "Cl": {
+      "zero": 150,
+      "low_0_to_0_1_percent": 544,
+      "above_0_1_percent": 1806
+    },
+    "K": {
+      "zero": 100,
+      "low_0_to_0_1_percent": 171,
+      "above_0_1_percent": 2229
+    },
+    "Ca": {
+      "zero": 100,
+      "low_0_to_0_1_percent": 78,
+      "above_0_1_percent": 2322
+    },
+    "Ti": {
+      "zero": 100,
+      "low_0_to_0_1_percent": 250,
+      "above_0_1_percent": 2150
+    },
+    "V": {
+      "zero": 845,
+      "low_0_to_0_1_percent": 1655,
+      "above_0_1_percent": 0
+    },
+    "Cr": {
+      "zero": 789,
+      "low_0_to_0_1_percent": 1711,
+      "above_0_1_percent": 0
+    },
+    "Mn": {
+      "zero": 100,
+      "low_0_to_0_1_percent": 510,
+      "above_0_1_percent": 1890
+    },
+    "Fe": {
+      "zero": 50,
+      "low_0_to_0_1_percent": 71,
+      "above_0_1_percent": 2379
+    },
+    "Co": {
+      "zero": 836,
+      "low_0_to_0_1_percent": 1664,
+      "above_0_1_percent": 0
+    },
+    "Ni": {
+      "zero": 823,
+      "low_0_to_0_1_percent": 1677,
+      "above_0_1_percent": 0
+    },
+    "Cu": {
+      "zero": 785,
+      "low_0_to_0_1_percent": 1715,
+      "above_0_1_percent": 0
+    },
+    "Zn": {
+      "zero": 836,
+      "low_0_to_0_1_percent": 1528,
+      "above_0_1_percent": 136
+    },
+    "As": {
+      "zero": 808,
+      "low_0_to_0_1_percent": 1685,
+      "above_0_1_percent": 7
+    },
+    "Se": {
+      "zero": 803,
+      "low_0_to_0_1_percent": 1697,
+      "above_0_1_percent": 0
+    },
+    "Rb": {
+      "zero": 763,
+      "low_0_to_0_1_percent": 1737,
+      "above_0_1_percent": 0
+    },
+    "Sr": {
+      "zero": 827,
+      "low_0_to_0_1_percent": 1534,
+      "above_0_1_percent": 139
+    },
+    "Y": {
+      "zero": 794,
+      "low_0_to_0_1_percent": 1706,
+      "above_0_1_percent": 0
+    },
+    "Zr": {
+      "zero": 826,
+      "low_0_to_0_1_percent": 1532,
+      "above_0_1_percent": 142
+    },
+    "Nb": {
+      "zero": 818,
+      "low_0_to_0_1_percent": 1682,
+      "above_0_1_percent": 0
+    },
+    "Mo": {
+      "zero": 819,
+      "low_0_to_0_1_percent": 1681,
+      "above_0_1_percent": 0
+    },
+    "Cd": {
+      "zero": 833,
+      "low_0_to_0_1_percent": 1667,
+      "above_0_1_percent": 0
+    },
+    "Sn": {
+      "zero": 777,
+      "low_0_to_0_1_percent": 1723,
+      "above_0_1_percent": 0
+    },
+    "Sb": {
+      "zero": 875,
+      "low_0_to_0_1_percent": 1625,
+      "above_0_1_percent": 0
+    },
+    "Ba": {
+      "zero": 866,
+      "low_0_to_0_1_percent": 1414,
+      "above_0_1_percent": 220
+    },
+    "W": {
+      "zero": 823,
+      "low_0_to_0_1_percent": 1677,
+      "above_0_1_percent": 0
+    },
+    "Pb": {
+      "zero": 895,
+      "low_0_to_0_1_percent": 1480,
+      "above_0_1_percent": 125
+    }
+  },
+  "gaps": {
+    "Si": {
+      "zero": 0,
+      "low_0_to_0_1_percent": 0,
+      "above_0_1_percent": 2500
+    }
+  },
+  "required_matrix": [
+    "Si",
+    "O"
+  ]
+}
