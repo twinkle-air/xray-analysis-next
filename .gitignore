@@ -1,0 +1,18 @@
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+.mpl-cache/
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+# Local analysis results and build outputs
+outputs/
+dist/
+*.log
+.DS_Store
+Thumbs.db
