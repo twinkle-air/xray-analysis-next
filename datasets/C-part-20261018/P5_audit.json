@@ -1,0 +1,208 @@
+{
+  "status": "passed",
+  "check_type": "bundle_integrity_and_synthetic_flow",
+  "spectra_checked": 2000,
+  "family_count": 944,
+  "target_coverage": {
+    "Na": {
+      "positive": 0,
+      "zero": 2000,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "Mg": {
+      "positive": 0,
+      "zero": 2000,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "Al": {
+      "positive": 1226,
+      "zero": 774,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Si": {
+      "positive": 1210,
+      "zero": 790,
+      "min_percent": 0.0,
+      "max_percent": 8.643718
+    },
+    "P": {
+      "positive": 0,
+      "zero": 2000,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "S": {
+      "positive": 0,
+      "zero": 2000,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "Cl": {
+      "positive": 0,
+      "zero": 2000,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "K": {
+      "positive": 0,
+      "zero": 2000,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "Ca": {
+      "positive": 0,
+      "zero": 2000,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "Ti": {
+      "positive": 1226,
+      "zero": 774,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "V": {
+      "positive": 1226,
+      "zero": 774,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Cr": {
+      "positive": 1258,
+      "zero": 742,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Mn": {
+      "positive": 1258,
+      "zero": 742,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Fe": {
+      "positive": 2000,
+      "zero": 0,
+      "min_percent": 62.0,
+      "max_percent": 99.999
+    },
+    "Co": {
+      "positive": 1258,
+      "zero": 742,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Ni": {
+      "positive": 1610,
+      "zero": 390,
+      "min_percent": 0.0,
+      "max_percent": 10.54023245
+    },
+    "Cu": {
+      "positive": 1242,
+      "zero": 758,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Zn": {
+      "positive": 1238,
+      "zero": 762,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "As": {
+      "positive": 1242,
+      "zero": 758,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Se": {
+      "positive": 1228,
+      "zero": 772,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Rb": {
+      "positive": 1230,
+      "zero": 770,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Sr": {
+      "positive": 1234,
+      "zero": 766,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Y": {
+      "positive": 1232,
+      "zero": 768,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Zr": {
+      "positive": 1236,
+      "zero": 764,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Nb": {
+      "positive": 1226,
+      "zero": 774,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Mo": {
+      "positive": 1242,
+      "zero": 758,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Cd": {
+      "positive": 1246,
+      "zero": 754,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Sn": {
+      "positive": 1246,
+      "zero": 754,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Sb": {
+      "positive": 1260,
+      "zero": 740,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Ba": {
+      "positive": 1246,
+      "zero": 754,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "W": {
+      "positive": 1242,
+      "zero": 758,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Pb": {
+      "positive": 1256,
+      "zero": 744,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    }
+  },
+  "errors": [],
+  "tolerances": {
+    "rtol": 1e-12,
+    "atol_counts": 1e-08
+  },
+  "complete_physics_recalculation": false,
+  "physical_calibration_verified": false,
+  "concentration_accuracy_verified": false
+}
