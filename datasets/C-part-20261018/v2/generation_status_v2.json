@@ -1,0 +1,62 @@
+{
+  "dataset_dir": "P5_dataset_v2",
+  "dataset_exists": true,
+  "target_spectra": 2000,
+  "master": {
+    "name": "master_samples_v2.json",
+    "sha256": "78ca94780021c17915565d152cffb234976e2d007d796126d84cbf4ce3d1a9b3"
+  },
+  "manifest_identity": {
+    "schema": "competition-fp-dataset/0.2",
+    "software_version": "0.2.1",
+    "physical_model_version": "0.2.0",
+    "batch_version": "C-recipes-v2",
+    "supersedes": "C-part-20261018 (C-recipes-v1, PR #2 review_failed)",
+    "seed": 2026110205,
+    "split_seed": 20261102,
+    "replicates": 2,
+    "status": "complete",
+    "acceptance_status": "pending_independent_validation",
+    "source_samples_semantic_sha256": "07b1215d8288a556dc583801594c84b3b04dfc606d89ff0cc60e90de40474262",
+    "physics_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0"
+  },
+  "progress": {
+    "blind_inputs": 2000,
+    "full_results": 2000,
+    "truth_rows": 2000,
+    "manifest_records": 2000,
+    "distinct_families": 1000,
+    "consistent": true,
+    "percent_of_target": 100.0
+  },
+  "qc_artifacts_present": {
+    "audit.json": false,
+    "replay.json": false,
+    "integrity.json": true,
+    "reproducibility/environment.json": true
+  },
+  "qc_stage": "sealed_complete_batch",
+  "sealed": true,
+  "disk_bytes": 1397555922,
+  "delivery": {
+    "pushed_to_github": false,
+    "note": "本文件只描述本地批次；是否推送以分支上的提交为准。"
+  },
+  "time_budget": {
+    "seconds_per_spectrum_measured": [
+      1.8,
+      2.5
+    ],
+    "remaining_spectra": 0,
+    "remaining_minutes_range": [
+      0.0,
+      0.0
+    ]
+  },
+  "finished": true,
+  "caveats": [
+    "合成数据；未做真实设备校准，不能据此得出 95%/5% 一类准确率结论。",
+    "批次未完成前 manifest.records 只是阶段性清单，不可作为最终交付依据。",
+    "本批若最终不用于交付，也仅作为候选试产，不得进入训练/调参入口。"
+  ]
+}

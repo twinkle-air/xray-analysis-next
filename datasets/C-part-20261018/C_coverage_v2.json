@@ -1,5 +1,5 @@
 {
-  "dataset": "C:\\Users\\TianT\\Desktop\\兴智杯AI\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\P5_dataset",
+  "dataset_dir": "P5_dataset",
   "profile_id": "candidate_holdout_P45_Al50_air1",
   "profile_sha256": "e30ba2115f3b3507b835cda8f5e21209e615348e87ef7f6a7a32999d424cb280",
   "spectra": 2000,

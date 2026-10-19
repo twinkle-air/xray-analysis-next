@@ -70,7 +70,9 @@ def main():
         first = label[ids[0]]
         registry.append({
             'formula_id': sample['id'],
-            'scenario': sample['provenance'].get('scenario', ''),
+            # 主表里的键是 design_scenario（不是 scenario）；旧版误写 scenario，
+            # 导致归档登记表 scenario 列 1000 行全空。见 v2/registry_scenario_fix_check.json。
+            'scenario': sample['provenance'].get('design_scenario', ''),
             'matrix': sample['provenance'].get('matrix', ''),
             'parent_family': sample['provenance'].get('parent_family', ''),
             'composition_family': first['family'],

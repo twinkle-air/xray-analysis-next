@@ -1,8 +1,8 @@
 # P5 索引与划分策略 v2 自检
 
 - 批次：C-part-20261018 / C-recipes-v1(review_failed,pilot_only)
-- 数据集：C:\Users\TianT\Desktop\兴智杯AI\fp-spectrum-generator-competition-v0.2.1\fp_competition\P5_dataset
-- 主配方表：C:\Users\TianT\Desktop\兴智杯AI\C_part\master_samples.json
+- 数据集目录名：P5_dataset（manifest.json SHA-256 `d68f2f4f28c64f21816d0d63fb7a237056dcc643de80eedea94437ede8ea396c`）
+- 主配方表：master_samples.json（SHA-256 `ff783d84c6a0cbe426ad777fec8700201e097ccf15bf9261274a348242435b05`）
 
 ## 断言
 

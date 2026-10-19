@@ -8,9 +8,25 @@
   "review": {
     "pr_number": 2,
     "pr_url": "https://github.com/twinkle-air/xray-analysis-next/pull/2",
-    "verdict": "requested_changes",
+    "verdict": "requested_changes_twice",
     "merged": false,
-    "reviewed_on": "2026-10-19"
+    "reviewed_on": "2026-10-19",
+    "second_round": {
+      "on": "2026-10-19",
+      "findings": [
+        {
+          "id": "R2-1",
+          "title": "三项配方问题标成\"已修复\"，但引用的新脚本与主表未提交，无法验证",
+          "resolution": "v2 设计/索引/守卫/预检/复现脚本与 v2 主表、全部自检产物随包提交；发现状态措辞改为 fixed_in_v2_code_archived_batch_unchanged，并写明归档批次数据未变。"
+        },
+        {
+          "id": "R2-2",
+          "title": "把 A/B 试产数据推荐为可训练数据，与其用途限制不符",
+          "resolution": "删除\"改用已通过评审的 A/B 批次\"推荐（README、C_batch_status、c_pilot_guard 文案三处同步），改为要求核对目标批次自身 usage_policy 与评审状态；本交付不为其他批次作背书。"
+        }
+      ],
+      "archival_only": "按评审意见，本批仅归档失败批次，不重生成旧谱即继续评审。"
+    }
   },
   "branch": {
     "name": "c-part-20261018",
@@ -33,40 +49,45 @@
       "severity": "P1",
       "title": "留出批次被标成可训练划分",
       "evidence": "v1 索引 benchmark_split = train 1402 / validation 302 / test 296；交付 README 写\"下游只按 benchmark_split 读取训练数据\"。",
-      "status": "fixed_in_v2",
-      "fix": "全部 2000 行改为 holdout_status=condition_heldout、benchmark_split=heldout、usage_policy=pilot_only_isolated_from_training_and_tuning；原训练语义降级为描述性字段 recipe_family_split。见 v2/index_policy_check_v2.md。"
+      "status": "fixed_in_v2_code_archived_batch_unchanged",
+      "fix": "全部 2000 行改为 holdout_status=condition_heldout、benchmark_split=heldout、usage_policy=pilot_only_isolated_from_training_and_tuning；原训练语义降级为描述性字段 recipe_family_split。见 v2/index_policy_check_v2.md。",
+      "scope_note": "修复位于 v2 代码与 v2 主表；本归档批次的 2000 条谱仍由 v1 主表生成，未就地改写。要按 v2 出数必须另起批次重新生成与密封。"
     },
     {
       "id": "P1-2",
       "severity": "P1",
       "title": "相同采用组成跨集合（泄漏）",
       "evidence": "9 组完全相同的组成落在不同集合；根因是划分按设计族 parent_family，而生成器族按实际采用组成。",
-      "status": "fixed_in_v2",
-      "fix": "并查集把「实际采用组成 ∪ parent_family ∪ 生成器族 ∪ 噪声重复」合成 leak_group，划分只在 leak_group 粒度进行并断言不跨集合。"
+      "status": "fixed_in_v2_code_archived_batch_unchanged",
+      "fix": "并查集把「实际采用组成 ∪ parent_family ∪ 生成器族 ∪ 噪声重复」合成 leak_group，划分只在 leak_group 粒度进行并断言不跨集合。",
+      "scope_note": "修复位于 v2 代码与 v2 主表；本归档批次的 2000 条谱仍由 v1 主表生成，未就地改写。要按 v2 出数必须另起批次重新生成与密封。"
     },
     {
       "id": "P2-1",
       "severity": "P2",
       "title": "1000 行配方仅 944 种独立组成",
       "evidence": "v1 主表复算：distinct=944，重复组 34；稀疏/边界的 Fe 变化被 100% 闭合归一化抹平，\"元素=0\" 在只存非零元素的采用组成里不留痕。",
-      "status": "fixed_in_v2",
-      "fix": "低含量档由元素自身上限推导；零配方带唯一共存签名；全局去重并断言 1000 行 1000 种。"
+      "status": "fixed_in_v2_code_archived_batch_unchanged",
+      "fix": "低含量档由元素自身上限推导；零配方带唯一共存签名；全局去重并断言 1000 行 1000 种。",
+      "scope_note": "修复位于 v2 代码与 v2 主表；本归档批次的 2000 条谱仍由 v1 主表生成，未就地改写。要按 v2 出数必须另起批次重新生成与密封。"
     },
     {
       "id": "P2-2",
       "severity": "P2",
       "title": "干扰对照被写死的 Ni=8 与 Fe 平衡破坏",
       "evidence": "v1 每行 `close_percent({**vals, \"Ni\": 8.0, \"Fe\": fe})`：对含 Ni 时目标被覆盖，含 Fe 的 3 对里 Fe 既是基体又是对照变量。",
-      "status": "fixed_in_v2",
-      "fix": "干扰对去掉全部含 Fe 组合；背景母配方不含 a/b/Fe 且同族两档共用；逐 variant 断言存在性、背景值不被改写与 equal/1:5/5:1 实际比值。"
+      "status": "fixed_in_v2_code_archived_batch_unchanged",
+      "fix": "干扰对去掉全部含 Fe 组合；背景母配方不含 a/b/Fe 且同族两档共用；逐 variant 断言存在性、背景值不被改写与 equal/1:5/5:1 实际比值。",
+      "scope_note": "修复位于 v2 代码与 v2 主表；本归档批次的 2000 条谱仍由 v1 主表生成，未就地改写。要按 v2 出数必须另起批次重新生成与密封。"
     },
     {
       "id": "P2-3",
       "severity": "P2",
       "title": "548/600 常规配方越出自身声明范围",
       "evidence": "v1 主表复算：常规情景 548 行越界（如 C=1.397% 声明上限 0.8%、W=5.04% 声明上限 2%），合计 1334 项；采样时只校验 Fe。",
-      "status": "fixed_in_v2",
-      "fix": "按每元素冻结上下限先验采样，闭合后逐字段按该行 ranges_percent 断言，v2 主表 1000 行越界 0 项。"
+      "status": "fixed_in_v2_code_archived_batch_unchanged",
+      "fix": "按每元素冻结上下限先验采样，闭合后逐字段按该行 ranges_percent 断言，v2 主表 1000 行越界 0 项。",
+      "scope_note": "修复位于 v2 代码与 v2 主表；本归档批次的 2000 条谱仍由 v1 主表生成，未就地改写。要按 v2 出数必须另起批次重新生成与密封。"
     }
   ],
   "v2_remediation": {
@@ -95,19 +116,159 @@
       "passed": true
     },
     "generation": {
-      "started": false,
-      "reason": "按要求先出验证报告，用户批准后再启动 2000 谱重生成。"
+      "stage": "sealed_complete_batch",
+      "spectra": "2000/2000",
+      "consistency_ok": true,
+      "generator_sealed": true,
+      "disk_bytes": 1397555922,
+      "qc_artifacts_present": {
+        "audit.json": false,
+        "replay.json": false,
+        "integrity.json": true,
+        "reproducibility/environment.json": true
+      },
+      "audit_replay_pack": "not run",
+      "pushed_to_github": false,
+      "snapshot_file": "v2/generation_status_v2.json",
+      "note": "按第二轮评审意见本批只归档。v2 数据批次已在本地生成完足 2000 谱并通过一致性核对，但未做全量 audit / 物理 replay / 打包 / 推送，因此不构成任何可交付数据集，也不随本批提交谱数据。"
     },
     "shipped_files": [
       "C_authoritative_index_v2.csv",
-      "C_global_split_v2.csv",
       "C_coverage_v2.json",
+      "C_formula_registry_v2.csv",
+      "C_global_split_v2.csv",
       "C_index_policy_check_v2.json",
       "C_index_policy_check_v2.md",
       "C_pilot_guard_selftest.json",
+      "C_samples_v2.json",
       "pilot_isolation.json",
-      "scripts/c_pilot_guard.py"
-    ]
+      "scripts/annotate_candidate_batch.py",
+      "scripts/annotate_round2.py",
+      "scripts/build_p5_index_v2.py",
+      "scripts/c_pilot_guard.py",
+      "scripts/check_doc_references.py",
+      "scripts/check_review_findings.py",
+      "scripts/design_c_alloy_formulas_v2.py",
+      "scripts/fix_registry_scenario.py",
+      "scripts/generate_v2_batch.py",
+      "scripts/pregenerate_dryrun_v2.py",
+      "scripts/reproduce_v2_check.py",
+      "scripts/v2_generation_status.py",
+      "scripts/verify_annotation_push.py",
+      "v2/C_v2_verification_report.md",
+      "v2/annotation_push_verification.json",
+      "v2/coverage_v2.json",
+      "v2/design_selfcheck_v2.json",
+      "v2/design_selfcheck_v2.md",
+      "v2/doc_reference_check.json",
+      "v2/generation_status_v2.json",
+      "v2/generation_status_v2.md",
+      "v2/global_split_v2.csv",
+      "v2/index_policy_check_v2.json",
+      "v2/index_policy_check_v2.md",
+      "v2/index_policy_check_v2_on_v2_data.json",
+      "v2/index_policy_check_v2_on_v2_data.md",
+      "v2/index_v2.csv",
+      "v2/master_samples_v2.json",
+      "v2/pilot_guard_selftest.json",
+      "v2/pilot_isolation.json",
+      "v2/pregenerate_dryrun.json",
+      "v2/registry_scenario_fix_check.json",
+      "v2/reproduction_check_v2.json",
+      "v2/reproduction_check_v2.md",
+      "v2/review_findings_check.json"
+    ],
+    "reproduction": {
+      "script": "scripts/reproduce_v2_check.py",
+      "result_file": "v2/reproduction_check_v2.json",
+      "all_identical": true,
+      "passed": true,
+      "v1_master_sha256": "ff783d84c6a0cbe426ad777fec8700201e097ccf15bf9261274a348242435b05",
+      "file_checks": {
+        "v2/master_samples_v2.json": {
+          "status": "identical",
+          "reproduced_sha256": "78ca94780021c17915565d152cffb234976e2d007d796126d84cbf4ce3d1a9b3",
+          "repo_sha256": "78ca94780021c17915565d152cffb234976e2d007d796126d84cbf4ce3d1a9b3",
+          "bytes": 2963316
+        },
+        "v2/design_selfcheck_v2.json": {
+          "status": "identical_except_master_name",
+          "reproduced_sha256": "8be2a35244074af90bf712d9b366bfabe87e36c2f2a90f33a99ebdf82f80f561",
+          "repo_sha256": "59fd35e72680179cf5a746392dd1adfe63a576b49e1ae8561f30ce4a1da513d8",
+          "bytes": 2904,
+          "note": "主表在仓库里名为 C_samples.json、本地名为 master_samples.json，SHA-256 相同，故报告仅此一栏不同（文件名归一后逐字符一致）。"
+        },
+        "v2/design_selfcheck_v2.md": {
+          "status": "identical_except_master_name",
+          "reproduced_sha256": "c32633fd3093b0769a97a988be058f05514d4a16e26fc2cfe92711d76b81dbde",
+          "repo_sha256": "ca08fda1a7fbb31de125781fc0ea48296f0dc48397533ae19bd1188d48db310b",
+          "bytes": 4043,
+          "note": "主表在仓库里名为 C_samples.json、本地名为 master_samples.json，SHA-256 相同，故报告仅此一栏不同（文件名归一后逐字符一致）。"
+        },
+        "v2/index_v2.csv": {
+          "status": "identical",
+          "reproduced_sha256": "a23ebe61d5a7385b2515db48791d030c44202f0700353f16dfd3975a1ba35617",
+          "repo_sha256": "a23ebe61d5a7385b2515db48791d030c44202f0700353f16dfd3975a1ba35617",
+          "bytes": 987822
+        },
+        "v2/global_split_v2.csv": {
+          "status": "identical",
+          "reproduced_sha256": "5ee2b6a56163751ef5a60d094f736ce812eb1cea42835be5ab167705715e462c",
+          "repo_sha256": "5ee2b6a56163751ef5a60d094f736ce812eb1cea42835be5ab167705715e462c",
+          "bytes": 38196
+        },
+        "v2/coverage_v2.json": {
+          "status": "identical",
+          "reproduced_sha256": "afa8fcadacca9d905ae9513f83e2a4b6a60df8850ed495c83dc81953f5c8c1db",
+          "repo_sha256": "afa8fcadacca9d905ae9513f83e2a4b6a60df8850ed495c83dc81953f5c8c1db",
+          "bytes": 6532
+        },
+        "v2/index_policy_check_v2.json": {
+          "status": "identical_except_master_name",
+          "reproduced_sha256": "30c010e1f7b76783b94f685a587403483a2a8a447857d36d78b51503884da5fb",
+          "repo_sha256": "f5df23d35e76c819cb0e9a17a2a78189161edba896a78445b088241e03d02dff",
+          "bytes": 3121,
+          "note": "主表在仓库里名为 C_samples.json、本地名为 master_samples.json，SHA-256 相同，故报告仅此一栏不同（文件名归一后逐字符一致）。"
+        },
+        "v2/index_policy_check_v2.md": {
+          "status": "identical_except_master_name",
+          "reproduced_sha256": "bb6659d76267295acef077a0908b68be79f3ee119e1811fd94316facfa92e724",
+          "repo_sha256": "4c770eacfde7b26de41d072b060acd55d0f0fd8ced652686dce9bbba28733e9f",
+          "bytes": 1740,
+          "note": "主表在仓库里名为 C_samples.json、本地名为 master_samples.json，SHA-256 相同，故报告仅此一栏不同（文件名归一后逐字符一致）。"
+        },
+        "v2/pilot_guard_selftest.json": {
+          "status": "identical",
+          "reproduced_sha256": "bb23f8191f002415221fc3859d2acb570014b4d6ca0126dae3f68a627c1d7065",
+          "repo_sha256": "bb23f8191f002415221fc3859d2acb570014b4d6ca0126dae3f68a627c1d7065",
+          "bytes": 1696
+        }
+      }
+    },
+    "usage_policy_statement": "本批次禁止训练/调参；不对其他批次（含 A/B 试产数据）的可训练性作背书。",
+    "document_reference_check": {
+      "script": "scripts/check_doc_references.py",
+      "result_file": "v2/doc_reference_check.json"
+    },
+    "index_split_on_new_batch": {
+      "script": "scripts/build_p5_index_v2.py",
+      "dataset_dir": "P5_dataset_v2",
+      "master_file": "master_samples_v2.json",
+      "master_sha256": "78ca94780021c17915565d152cffb234976e2d007d796126d84cbf4ce3d1a9b3",
+      "dataset_manifest_sha256": "604cd6a07ca7857fd901073bc3a276210447fce4f41aa5a0af7b9ac6a4666f1f",
+      "result_file": "v2/index_policy_check_v2_on_v2_data.json",
+      "rows": 2000,
+      "distinct_formula_compositions": 1000,
+      "duplicate_composition_groups": 0,
+      "leak_groups": 680,
+      "group_size_histogram": {
+        "1": 600,
+        "5": 80
+      },
+      "identical_compositions_crossing_split": [],
+      "passed": true,
+      "note": "与归档批次同一套 v2 策略，跑在新生成的 2000 条 v2 谱上：1000 条配方 1000 种独立采用组成、重复组 0（归档批次为 944/34），最大 leak_group 从 70 降到 5（等于设计里的 5 变体族）。"
+    }
   },
   "v1_baseline_recomputed": {
     "available": true,
@@ -120,6 +281,36 @@
       "regular_variation": 548,
       "sparse_boundary": 200,
       "interference_control": 143
+    }
+  },
+  "usage": {
+    "may_be_used_for_training": false,
+    "may_be_used_for_tuning": false,
+    "other_batches_endorsed": false
+  },
+  "self_disclosed_defects": {
+    "registry_scenario_column": {
+      "id": "SD-1",
+      "severity": "P3",
+      "title": "归档登记表 C_formula_registry.csv 的 scenario 列 1000 行全空",
+      "root_cause": "build_github_payload.py 用了 provenance['scenario']，主表键名是 provenance['design_scenario']",
+      "evidence_file": "v2/review_findings_check.json（scenario_counts_in_registry）",
+      "archived_file_rewritten": false,
+      "fixed_copy": "C_formula_registry_v2.csv",
+      "fixed_copy_sha256": "5869e7ca6b6c9f1b3f55d6f385e01ee51d8b92a22881cc62a287803ab47816bd",
+      "original_sha256": "06494e43fba09bf373dc07cb755f68ecc6910e26b71788de52ee8fe0cacb04fe",
+      "columns_that_differ": [
+        "scenario"
+      ],
+      "other_column_value_mismatches": 0,
+      "scenario_counts_after_fix": {
+        "regular_variation": 600,
+        "sparse_boundary": 200,
+        "interference_control": 200
+      },
+      "reserializer_roundtrip_bytes_identical": true,
+      "affects_spectra_or_split": false,
+      "passed": true
     }
   }
 }

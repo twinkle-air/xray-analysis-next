@@ -1,0 +1,11 @@
+{
+  "payload": "C-part-20261018",
+  "references_found": 60,
+  "missing": {},
+  "passed": true,
+  "checked_suffixes": [
+    ".md",
+    ".json"
+  ],
+  "note": "只检查载荷目录内的相对路径引用；外部生成器源码与解包目录不计入。"
+}

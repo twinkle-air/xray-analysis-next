@@ -9,7 +9,9 @@
 """
 from __future__ import annotations
 import csv
+import hashlib
 import json
+import os
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent.parent
@@ -72,13 +74,21 @@ def training_rows(rows, split='train'):
         raise PilotIsolationError(
             f'{len(blocked)}/{len(rows)} 行属于留出或候选试产批次，禁止用于 {split}：'
             f'示例 {ids}；原因 {blocked[0][1]}。'
-            f'请改用已通过评审的批次（A/B 部分），或等 C 部分新版本批次通过评审。')
+            f'请先确认目标批次自身的 usage_policy 与评审状态：本守卫不为任何其他批次'
+            f'（包括 A/B 试产批次）的可训练性作背书。')
     return [r for r in rows if r['recipe_family_split'] == split]
 
 
 def self_test(path=INDEX):
+    path = Path(path)
+    try:
+        shown = path.relative_to(HERE).as_posix()   # 正斜杠：跨平台逐字节一致
+    except ValueError:
+        shown = path.name        # 只记相对路径/文件名，换布局也能逐字节复现自检结果
     rows = load_index(path)
-    result = {'index': str(path), 'rows': len(rows),
+    result = {'index': shown, 'index_sha256':
+              hashlib.sha256(path.read_bytes()).hexdigest(),
+              'rows': len(rows),
               'uniform_heldout': all(r['benchmark_split'] == 'heldout' for r in rows)}
     for split in ('train', 'validation', 'test'):
         try:
@@ -95,6 +105,7 @@ def self_test(path=INDEX):
 
 if __name__ == '__main__':
     res = self_test()
-    out = INDEX.parent / 'pilot_guard_selftest.json'
+    out = Path(os.environ.get('C_GUARD_OUT', str(HERE / 'v2' / 'pilot_guard_selftest.json')))
+    out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(res, ensure_ascii=False, indent=2), encoding='utf-8')
     print('passed', res['passed'], out)

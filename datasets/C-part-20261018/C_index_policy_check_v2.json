@@ -1,8 +1,10 @@
 {
   "batch_label": "C-part-20261018",
   "batch_version": "C-recipes-v1(review_failed,pilot_only)",
-  "dataset": "C:\\Users\\TianT\\Desktop\\兴智杯AI\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\P5_dataset",
-  "master": "C:\\Users\\TianT\\Desktop\\兴智杯AI\\C_part\\master_samples.json",
+  "dataset_dir": "P5_dataset",
+  "dataset_manifest_sha256": "d68f2f4f28c64f21816d0d63fb7a237056dcc643de80eedea94437ede8ea396c",
+  "master_file": "master_samples.json",
+  "master_sha256": "ff783d84c6a0cbe426ad777fec8700201e097ccf15bf9261274a348242435b05",
   "checks": {
     "rows": 2000,
     "uniform_holdout": true,
@@ -38,7 +40,7 @@
     "passed": true
   },
   "coverage": {
-    "dataset": "C:\\Users\\TianT\\Desktop\\兴智杯AI\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\P5_dataset",
+    "dataset_dir": "P5_dataset",
     "profile_id": "candidate_holdout_P45_Al50_air1",
     "profile_sha256": "e30ba2115f3b3507b835cda8f5e21209e615348e87ef7f6a7a32999d424cb280",
     "spectra": 2000,

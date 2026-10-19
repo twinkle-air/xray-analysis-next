@@ -1,0 +1,586 @@
+{
+  "master_rows": 1000,
+  "registry_rows": 1000,
+  "index_rows": 2000,
+  "scenario_counts_in_master": {
+    "regular_variation": 600,
+    "sparse_boundary": 200,
+    "interference_control": 200
+  },
+  "scenario_counts_in_registry": {
+    "": 1000
+  },
+  "P1_1_index_benchmark_split": {
+    "test": 296,
+    "train": 1402,
+    "validation": 302
+  },
+  "P1_1_index_generator_split": {
+    "train": 1400,
+    "validation": 292,
+    "test": 308
+  },
+  "P1_1_formula_benchmark_split": {
+    "test": 148,
+    "train": 701,
+    "validation": 151
+  },
+  "P2_1_distinct_compositions": 944,
+  "P2_1_duplicate_groups": 34,
+  "P2_1_redundant_rows": 56,
+  "P2_1_examples": [
+    {
+      "composition": {
+        "Fe": 99.995,
+        "Si": 0.005
+      },
+      "ids": [
+        "C0631",
+        "C0632",
+        "C0633",
+        "C0634",
+        "C0635"
+      ]
+    },
+    {
+      "composition": {
+        "C": 0.002,
+        "Fe": 99.998
+      },
+      "ids": [
+        "C0636",
+        "C0637",
+        "C0638",
+        "C0639",
+        "C0640"
+      ]
+    },
+    {
+      "composition": {
+        "As": 0.001,
+        "Fe": 99.999
+      },
+      "ids": [
+        "C0703",
+        "C0771"
+      ]
+    },
+    {
+      "composition": {
+        "Fe": 99.999,
+        "Sb": 0.001
+      },
+      "ids": [
+        "C0704",
+        "C0772"
+      ]
+    },
+    {
+      "composition": {
+        "Fe": 99.999,
+        "Sn": 0.001
+      },
+      "ids": [
+        "C0705",
+        "C0773"
+      ]
+    },
+    {
+      "composition": {
+        "Fe": 99.998,
+        "Sb": 0.002
+      },
+      "ids": [
+        "C0708",
+        "C0776"
+      ]
+    }
+  ],
+  "P2_1_C0631_C0640": {
+    "C0631": {
+      "Fe": 99.995,
+      "Si": 0.005
+    },
+    "C0632": {
+      "Fe": 99.995,
+      "Si": 0.005
+    },
+    "C0633": {
+      "Fe": 99.995,
+      "Si": 0.005
+    },
+    "C0634": {
+      "Fe": 99.995,
+      "Si": 0.005
+    },
+    "C0635": {
+      "Fe": 99.995,
+      "Si": 0.005
+    },
+    "C0636": {
+      "C": 0.002,
+      "Fe": 99.998
+    },
+    "C0637": {
+      "C": 0.002,
+      "Fe": 99.998
+    },
+    "C0638": {
+      "C": 0.002,
+      "Fe": 99.998
+    },
+    "C0639": {
+      "C": 0.002,
+      "Fe": 99.998
+    },
+    "C0640": {
+      "C": 0.002,
+      "Fe": 99.998
+    }
+  },
+  "P1_2_cross_split_groups": 9,
+  "P1_2_examples": [
+    {
+      "composition": {
+        "Fe": 92.0,
+        "Ni": 8.0
+      },
+      "ids": [
+        "C0812",
+        "C0817",
+        "C0822",
+        "C0827",
+        "C0832",
+        "C0837",
+        "C0841",
+        "C0846",
+        "C0852",
+        "C0857",
+        "C0961",
+        "C0966",
+        "C0982",
+        "C0987"
+      ],
+      "splits": [
+        "test",
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "composition": {
+        "Co": 5.0,
+        "Fe": 87.0,
+        "Ni": 8.0
+      },
+      "ids": [
+        "C0815",
+        "C0819",
+        "C0844",
+        "C0850"
+      ],
+      "splits": [
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "composition": {
+        "Co": 10.0,
+        "Fe": 82.0,
+        "Ni": 8.0
+      },
+      "ids": [
+        "C0818",
+        "C0848"
+      ],
+      "splits": [
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "composition": {
+        "Co": 25.0,
+        "Fe": 67.0,
+        "Ni": 8.0
+      },
+      "ids": [
+        "C0820",
+        "C0849"
+      ],
+      "splits": [
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "composition": {
+        "Fe": 90.0,
+        "Mn": 2.0,
+        "Ni": 8.0
+      },
+      "ids": [
+        "C0823",
+        "C0963"
+      ],
+      "splits": [
+        "test",
+        "validation"
+      ]
+    },
+    {
+      "composition": {
+        "Fe": 91.0,
+        "Mn": 1.0,
+        "Ni": 8.0
+      },
+      "ids": [
+        "C0824",
+        "C0965"
+      ],
+      "splits": [
+        "test",
+        "validation"
+      ]
+    },
+    {
+      "composition": {
+        "Fe": 87.0,
+        "Mn": 5.0,
+        "Ni": 8.0
+      },
+      "ids": [
+        "C0825",
+        "C0829",
+        "C0964",
+        "C0970"
+      ],
+      "splits": [
+        "test",
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "composition": {
+        "Fe": 82.0,
+        "Mn": 10.0,
+        "Ni": 8.0
+      },
+      "ids": [
+        "C0828",
+        "C0968"
+      ],
+      "splits": [
+        "test",
+        "train"
+      ]
+    },
+    {
+      "composition": {
+        "Fe": 67.0,
+        "Mn": 25.0,
+        "Ni": 8.0
+      },
+      "ids": [
+        "C0830",
+        "C0969"
+      ],
+      "splits": [
+        "test",
+        "train"
+      ]
+    }
+  ],
+  "P1_2_Fe92_Ni8": [
+    {
+      "ids": [
+        "C0812",
+        "C0817",
+        "C0822",
+        "C0827",
+        "C0832",
+        "C0837",
+        "C0841",
+        "C0846",
+        "C0852",
+        "C0857",
+        "C0961",
+        "C0966",
+        "C0982",
+        "C0987"
+      ],
+      "splits": [
+        "test",
+        "train",
+        "validation"
+      ]
+    }
+  ],
+  "P2_2_interference_rows": 200,
+  "P2_2_interference_families": 40,
+  "P2_2_C0812_C0821": {
+    "C0812": {
+      "Fe": 92.0,
+      "Ni": 8.0
+    },
+    "C0813": {
+      "Co": 2.0,
+      "Fe": 90.0,
+      "Ni": 8.0
+    },
+    "C0814": {
+      "Co": 1.0,
+      "Fe": 91.0,
+      "Ni": 8.0
+    },
+    "C0815": {
+      "Co": 5.0,
+      "Fe": 87.0,
+      "Ni": 8.0
+    },
+    "C0816": {
+      "Co": 11.60325358,
+      "Fe": 80.39674642,
+      "Ni": 8.0
+    },
+    "C0817": {
+      "Fe": 92.0,
+      "Ni": 8.0
+    },
+    "C0818": {
+      "Co": 10.0,
+      "Fe": 82.0,
+      "Ni": 8.0
+    },
+    "C0819": {
+      "Co": 5.0,
+      "Fe": 87.0,
+      "Ni": 8.0
+    },
+    "C0820": {
+      "Co": 25.0,
+      "Fe": 67.0,
+      "Ni": 8.0
+    },
+    "C0821": {
+      "Fe": 89.61261871,
+      "Mn": 2.38738129,
+      "Ni": 8.0
+    }
+  },
+  "P2_2_rows_with_pinned_Ni_8": 200,
+  "P2_2_examples": [
+    {
+      "family": "INTERF001_L1",
+      "id": "C0801",
+      "Ni": 8.0,
+      "others": {
+        "Cr": 2.1988999,
+        "Ni": 8.0
+      }
+    },
+    {
+      "family": "INTERF001_L1",
+      "id": "C0802",
+      "Ni": 8.0,
+      "others": {
+        "Mn": 2.13569145,
+        "Ni": 8.0
+      }
+    },
+    {
+      "family": "INTERF001_L1",
+      "id": "C0803",
+      "Ni": 8.0,
+      "others": {
+        "Cr": 2.0,
+        "Mn": 2.0,
+        "Ni": 8.0
+      }
+    },
+    {
+      "family": "INTERF001_L1",
+      "id": "C0804",
+      "Ni": 8.0,
+      "others": {
+        "Cr": 1.0,
+        "Mn": 5.0,
+        "Ni": 8.0
+      }
+    },
+    {
+      "family": "INTERF001_L1",
+      "id": "C0805",
+      "Ni": 8.0,
+      "others": {
+        "Cr": 5.0,
+        "Mn": 1.0,
+        "Ni": 8.0
+      }
+    },
+    {
+      "family": "INTERF001_L2",
+      "id": "C0806",
+      "Ni": 8.0,
+      "others": {
+        "Cr": 10.4971907,
+        "Ni": 8.0
+      }
+    },
+    {
+      "family": "INTERF001_L2",
+      "id": "C0807",
+      "Ni": 8.0,
+      "others": {
+        "Mn": 10.56699721,
+        "Ni": 8.0
+      }
+    },
+    {
+      "family": "INTERF001_L2",
+      "id": "C0808",
+      "Ni": 8.0,
+      "others": {
+        "Cr": 10.0,
+        "Mn": 10.0,
+        "Ni": 8.0
+      }
+    }
+  ],
+  "P2_3_regular_rows": 600,
+  "P2_3_regular_rows_violating": 548,
+  "P2_3_regular_items_violating": 1334,
+  "P2_3_examples": [
+    {
+      "id": "C0001",
+      "bad": [
+        {
+          "element": "Al",
+          "value": 2.52709311,
+          "declared": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "element": "C",
+          "value": 1.39683749,
+          "declared": [
+            0.0,
+            0.8
+          ]
+        },
+        {
+          "element": "Ti",
+          "value": 2.07600853,
+          "declared": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "element": "W",
+          "value": 5.04045672,
+          "declared": [
+            0.0,
+            2.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C0002",
+      "bad": [
+        {
+          "element": "C",
+          "value": 2.3345298,
+          "declared": [
+            0.0,
+            0.8
+          ]
+        },
+        {
+          "element": "Nb",
+          "value": 2.73301512,
+          "declared": [
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "element": "Ti",
+          "value": 2.51050492,
+          "declared": [
+            0.0,
+            2.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C0003",
+      "bad": [
+        {
+          "element": "C",
+          "value": 2.04402166,
+          "declared": [
+            0.0,
+            0.8
+          ]
+        },
+        {
+          "element": "Nb",
+          "value": 1.49430107,
+          "declared": [
+            0.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C0004",
+      "bad": [
+        {
+          "element": "Nb",
+          "value": 3.47787314,
+          "declared": [
+            0.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C0005",
+      "bad": [
+        {
+          "element": "V",
+          "value": 2.34812333,
+          "declared": [
+            0.0,
+            2.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C0006",
+      "bad": [
+        {
+          "element": "C",
+          "value": 3.75299073,
+          "declared": [
+            0.0,
+            0.8
+          ]
+        }
+      ]
+    }
+  ],
+  "P2_3_all_1000_rows_violating": 548,
+  "master_file": "master_samples.json",
+  "batch_dir": "C-part-20261018"
+}

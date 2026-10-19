@@ -1,0 +1,14 @@
+{
+  "index": "v2/index_v2.csv",
+  "index_sha256": "a23ebe61d5a7385b2515db48791d030c44202f0700353f16dfd3975a1ba35617",
+  "rows": 2000,
+  "uniform_heldout": true,
+  "train_entry": "blocked",
+  "train_message": "2000/2000 行属于留出或候选试产批次，禁止用于 train：示例 S000001, S000002, S000003；原因 ['pilot_batch_id=C-part-20261018', 'condition_heldout', 'holdout_status=condition_heldout', 'pilot_only_batch', 'batch_version=C-recipes-v1(review_failed,pilot_only)']。请先确认目标批次自身的 usage_policy 与评审状态：本守卫不为任何其他批次（包括 A/B 试产批次）的可训练性作背书。",
+  "validation_entry": "blocked",
+  "validation_message": "2000/2000 行属于留出或候选试产批次，禁止用于 validation：示例 S000001, S000002, S000003；原因 ['pilot_batch_id=C-part-20261018', 'condition_heldout', 'holdout_status=condition_heldout', 'pilot_only_batch', 'batch_version=C-recipes-v1(review_failed,pilot_only)']。请先确认目标批次自身的 usage_policy 与评审状态：本守卫不为任何其他批次（包括 A/B 试产批次）的可训练性作背书。",
+  "test_entry": "blocked",
+  "test_message": "2000/2000 行属于留出或候选试产批次，禁止用于 test：示例 S000001, S000002, S000003；原因 ['pilot_batch_id=C-part-20261018', 'condition_heldout', 'holdout_status=condition_heldout', 'pilot_only_batch', 'batch_version=C-recipes-v1(review_failed,pilot_only)']。请先确认目标批次自身的 usage_policy 与评审状态：本守卫不为任何其他批次（包括 A/B 试产批次）的可训练性作背书。",
+  "all_entries_blocked": true,
+  "passed": true
+}
