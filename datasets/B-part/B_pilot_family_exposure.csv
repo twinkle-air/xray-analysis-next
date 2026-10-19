@@ -1,4 +1,4 @@
-parent_family,family_size_total,exposed_recipe_ids_in_pilot,exposed_count,scenario,selection_reason,blind_test_use_forbidden
+﻿parent_family,family_size_total,exposed_recipe_ids_in_pilot,exposed_count,scenario,selection_reason,blind_test_use_forbidden
 B-H-K,1,B01172,1,sparse_boundary,sparse/boundary block draw (declared_maximum_spike),yes
 B-H-Nb,1,B01188,1,sparse_boundary,sparse/boundary block draw (declared_maximum_spike),yes
 B-H-Sr,1,B01185,1,sparse_boundary,sparse/boundary block draw (declared_maximum_spike),yes

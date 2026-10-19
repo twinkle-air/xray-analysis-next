@@ -24,8 +24,8 @@
       "legacy_al": "reject",
       "jitter": null,
       "targets_count": 32,
-      "command": "python -B app.py batch --samples C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part\\\\B_pilot_samples.json --profile C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part\\\\P3_candidate.json --out C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part\\\\pilot_P3_v1 --seed 2026101825 --replicates 2 --split-seed 20261018 --closure strict --legacy-al reject --targets Na Mg Al Si P S Cl K Ca Ti V Cr Mn Fe Co Ni Cu Zn As Se Rb Sr Y Zr Nb Mo Cd Sn Sb Ba W Pb --design-ranges C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part\\\\B_design_ranges.json",
-      "working_directory": "C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\fp-spectrum-generator-competition-v0.2.1\\\\fp_competition",
+      "command": "python -B app.py batch --samples C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\B_pilot_samples.json --profile C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\P3_candidate.json --out C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\pilot_P3_v1 --seed 2026101825 --replicates 2 --split-seed 20261018 --closure strict --legacy-al reject --targets Na Mg Al Si P S Cl K Ca Ti V Cr Mn Fe Co Ni Cu Zn As Se Rb Sr Y Zr Nb Mo Cd Sn Sb Ba W Pb --design-ranges C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\B_design_ranges.json",
+      "working_directory": "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\fp-spectrum-generator-competition-v0.2.1\\fp_competition",
       "thread_env_pinned": {
         "OMP_NUM_THREADS": "1",
         "OPENBLAS_NUM_THREADS": "1",
@@ -85,8 +85,8 @@
       "legacy_al": "reject",
       "jitter": null,
       "targets_count": 32,
-      "command": "python -B app.py batch --samples C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part\\\\B_pilot_samples.json --profile C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part\\\\P4_candidate.json --out C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part\\\\pilot_P4_v1 --seed 2026101826 --replicates 2 --split-seed 20261018 --closure strict --legacy-al reject --targets Na Mg Al Si P S Cl K Ca Ti V Cr Mn Fe Co Ni Cu Zn As Se Rb Sr Y Zr Nb Mo Cd Sn Sb Ba W Pb --design-ranges C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part\\\\B_design_ranges.json",
-      "working_directory": "C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\fp-spectrum-generator-competition-v0.2.1\\\\fp_competition",
+      "command": "python -B app.py batch --samples C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\B_pilot_samples.json --profile C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\P4_candidate.json --out C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\pilot_P4_v1 --seed 2026101826 --replicates 2 --split-seed 20261018 --closure strict --legacy-al reject --targets Na Mg Al Si P S Cl K Ca Ti V Cr Mn Fe Co Ni Cu Zn As Se Rb Sr Y Zr Nb Mo Cd Sn Sb Ba W Pb --design-ranges C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\B_design_ranges.json",
+      "working_directory": "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\fp-spectrum-generator-competition-v0.2.1\\fp_competition",
       "thread_env_pinned": {
         "OMP_NUM_THREADS": "1",
         "OPENBLAS_NUM_THREADS": "1",
