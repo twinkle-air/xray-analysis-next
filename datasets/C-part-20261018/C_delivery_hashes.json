@@ -13,9 +13,25 @@
       "bytes": 474912,
       "sha256": "3b8e575f87c3fc523c09adccf4f04cd7178f29fc9e50293fd43b8172b3cd6a65"
     },
+    "C_authoritative_index_v2.csv": {
+      "bytes": 987822,
+      "sha256": "a23ebe61d5a7385b2515db48791d030c44202f0700353f16dfd3975a1ba35617"
+    },
+    "C_batch_status.json": {
+      "bytes": 5224,
+      "sha256": "46dd08a72ee7a228125c60933af15f6efd768f73a3d249e0c9418d364eff4490"
+    },
+    "C_batch_status.md": {
+      "bytes": 2781,
+      "sha256": "a5965dba1aafd7f1c3bf850b3b691564fa161acd2c22e914ef7a53f01b1df2c4"
+    },
     "C_coverage.json": {
       "bytes": 132556,
       "sha256": "1b8fad4e360d275ce1b3d6a5dd16618539fea4273a689232ef03946d3422b694"
+    },
+    "C_coverage_v2.json": {
+      "bytes": 6626,
+      "sha256": "c6188b12b040f1514bc90e1d622f8c1f067ab1e104153671ce8e2d03f2a8bbf2"
     },
     "C_formula_registry.csv": {
       "bytes": 217257,
@@ -24,6 +40,22 @@
     "C_global_split.csv": {
       "bytes": 26964,
       "sha256": "3cf6ce566f93116a3c8be01e2fb94ef3480a6b871d99549a6326c8794ec9ef7d"
+    },
+    "C_global_split_v2.csv": {
+      "bytes": 38196,
+      "sha256": "5ee2b6a56163751ef5a60d094f736ce812eb1cea42835be5ab167705715e462c"
+    },
+    "C_index_policy_check_v2.json": {
+      "bytes": 3171,
+      "sha256": "c801a4f3ac682053a95ae287f75a1ffce5f39c1f69330a74ba72f02644712826"
+    },
+    "C_index_policy_check_v2.md": {
+      "bytes": 1695,
+      "sha256": "fa28cc537bd717039379022d6d6f1ee700aa81c848619cdb41c4ae4d1bc2c266"
+    },
+    "C_pilot_guard_selftest.json": {
+      "bytes": 1487,
+      "sha256": "51e5ba293109c11e83e7fe082f47b415a6c175775d883d7a11c366fc3bfe6b65"
     },
     "C_production_record.json": {
       "bytes": 4335,
@@ -93,9 +125,13 @@
       "bytes": 410,
       "sha256": "261c376958a519f4f63566bd49062ac01f6e1f29bf414dda9a0faeb016d2602e"
     },
+    "pilot_isolation.json": {
+      "bytes": 1089,
+      "sha256": "c713046c85ca72f1b323e4e9fd6ccb8bc0553ed3ca40062791b46df5967edffd"
+    },
     "README.md": {
-      "bytes": 3917,
-      "sha256": "bf28ab6d7c1f382f85dbe9220f52c386695aceaeabf42086a71406ea5761131a"
+      "bytes": 4750,
+      "sha256": "b7b1480b1eb05837b67b09f7b9d6982235a670461f6e624bd6c3f258d3ebc0f0"
     },
     "scripts/build_github_payload.py": {
       "bytes": 17720,
@@ -104,6 +140,10 @@
     "scripts/build_p5_index.py": {
       "bytes": 13001,
       "sha256": "714c5be5a67fef8904abae1eab2916b822f505ca76a6912e1baa52af5e504b12"
+    },
+    "scripts/c_pilot_guard.py": {
+      "bytes": 3969,
+      "sha256": "4aef437b1b37adafbb72e6528397652e46ecdae7c6eac9c768e1112da6b378d9"
     },
     "scripts/check_and_pack_p5.py": {
       "bytes": 4253,
@@ -122,7 +162,7 @@
       "sha256": "ab4a5b3baa1134cec53a977c96ba9a2471a043444c409c0eefcc6accd9141e98"
     }
   },
-  "scope": "本目录逐文件 SHA-256（含分卷）。C_samples/索引/覆盖等源件哈希另见原始交付清单。",
+  "scope": "本目录逐文件 SHA-256（不含卷内清单）。密封数据集与分卷未重写；本清单在候选标注后重算，原 README 哈希见 annotation。",
   "source_inventory": {
     "deliverables": {
       "P5_acceptance_summary.md": {
@@ -246,5 +286,14 @@
       "sha256": "a397dbdb16b5faf2f8a4fb51637eaef77f2def92b0b17c5db3a841258e4521a0"
     }
   ],
-  "zip_sha256_original": "9178746d90e26e45d64a8a9f15ca35736ba363110d535d787e3e589fbf3bf3f2"
+  "zip_sha256_original": "9178746d90e26e45d64a8a9f15ca35736ba363110d535d787e3e589fbf3bf3f2",
+  "annotation": {
+    "annotated_at_utc": "2026-10-19T14:43:35+00:00",
+    "reason": "PR #2 requested changes：批次定位改为 review_failed / workflow_pilot_only",
+    "sealed_data_rewritten": false,
+    "zip_sha256_unchanged": true,
+    "readme_sha256_before": "b7b1480b1eb05837b67b09f7b9d6982235a670461f6e624bd6c3f258d3ebc0f0",
+    "readme_sha256_after": "b7b1480b1eb05837b67b09f7b9d6982235a670461f6e624bd6c3f258d3ebc0f0",
+    "file_count": 40
+  }
 }

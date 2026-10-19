@@ -1,0 +1,31 @@
+{
+  "blocked_batch_ids": [
+    "C-part-20261018"
+  ],
+  "reason": "PR #2 requested changes（未合并）：配方设计与划分存在 P1/P2 缺陷，批次仅定位为候选试产。",
+  "heldout_condition": true,
+  "blocked_entry_points": [
+    "training_rows(split=train)",
+    "training_rows(split=validation)",
+    "training_rows(split=test)",
+    "任何以本批谱做阈值/超参挑选的流程"
+  ],
+  "guard": "scripts/c_pilot_guard.py",
+  "authoritative_files": {
+    "index_v2": "C_authoritative_index_v2.csv",
+    "global_split_v2": "C_global_split_v2.csv",
+    "coverage_v2": "C_coverage_v2.json",
+    "status": "C_batch_status.md"
+  },
+  "superseded_files_kept_for_audit": [
+    "C_authoritative_index.csv",
+    "C_global_split.csv",
+    "C_coverage.json"
+  ],
+  "immutable": {
+    "truth.jsonl": "not rewritten",
+    "manifest.json": "not rewritten",
+    "P5_dataset.zip.sha256": "9178746d90e26e45d64a8a9f15ca35736ba363110d535d787e3e589fbf3bf3f2"
+  },
+  "next_batch": "C-recipes-v2（重生成后另立分支与 PR；本目录不覆盖）"
+}

@@ -1,5 +1,7 @@
 # C 部分 · C-part-20261018（铁基合金 1000 配方 / P5 候选留出条件 / 2000 合成谱）
 
+> **状态：未通过独立评审（PR #2 requested changes），仅候选试产（pilot-only），禁止用于训练与调参。** 详见 `C_batch_status.md`。
+
 生成器 fp-spectrum-generator-competition-0.2.1（物理模型 0.2.0）。
 与 `datasets/A-part-20261018` 同构平铺；数据集本体在分卷 ZIP 内，逐文件清单见 `C_delivery_hashes.json`。
 
@@ -39,10 +41,19 @@ python -B P5_dataset_dir/reproducibility/generator/fp_competition/app.py audit -
 
 `blind_inputs/`（2000，严格 5 字段：x、counts、axis、signal_unit、synthetic）、`full_results/`（2000，六分量分解与窗外账目）、`truth.jsonl`、`manifest.json`（status=complete，acceptance_status=pending_independent_validation）、`integrity.json`、`inputs/`、`configs/`、`reproducibility/`（源码快照 + 环境 + 依赖锁定 + recipe）。
 
-## 划分与用法
+## 划分与用法（v2 修正）
 
-权威划分 `benchmark_split` 以 parent_family 为单位：train 1402 / validation 302 / test 296。
-下游只按 `benchmark_split` 读取训练数据；**本批 P5 全部 2000 条谱禁止训练与调参**（它是留出条件）。
+**本批次未通过独立评审，定位为候选试产（pilot-only），并从所有训练/调参入口隔离。**
+状态见 `C_batch_status.md`；评审意见见 PR #2。
+
+- 权威字段：每一行 `holdout_status=condition_heldout`、`benchmark_split=heldout`、
+  `usage_policy=pilot_only_isolated_from_training_and_tuning`。
+- `recipe_family_split`（train/validation/test）只描述配方来源，**不得作为基准划分**。
+- 同一 leak_group（实际采用组成 ∪ parent_family ∪ 生成器族 ∪ 噪声重复）不跨集合；
+  v1 里 9 组相同组成跨集合的问题在 v2 索引中已消除并逐条断言。
+- 下游入口请用 `scripts/c_pilot_guard.py::training_rows()`：请求本批次任何划分都会抛
+  `PilotIsolationError`，不会静默返回可训练行。
+- 需要可训练数据请使用已通过评审的批次（A/B 部分）。
 
 ## 未验证事项
 

@@ -1,0 +1,125 @@
+{
+  "batch_id": "C-part-20261018",
+  "status": "review_failed",
+  "positioning": "workflow_pilot_only",
+  "may_be_used_for_training": false,
+  "may_be_used_for_tuning": false,
+  "heldout_condition": true,
+  "review": {
+    "pr_number": 2,
+    "pr_url": "https://github.com/twinkle-air/xray-analysis-next/pull/2",
+    "verdict": "requested_changes",
+    "merged": false,
+    "reviewed_on": "2026-10-19"
+  },
+  "branch": {
+    "name": "c-part-20261018",
+    "commit": "cdc4f739c01446e24c0f3701a94cf2e04a15fbdf",
+    "base_prefix": "64f4bfd7",
+    "landing_directory": "datasets/C-part-20261018"
+  },
+  "sealed_batch_identity": {
+    "preserved": true,
+    "rewritten": false,
+    "zip_sha256": "9178746d90e26e45d64a8a9f15ca35736ba363110d535d787e3e589fbf3bf3f2",
+    "input_semantic_sha256": "6673fb80fb961c6700dc223ddfe0d419a3b9cc3d5b858eceb28390736e4ccaff",
+    "physics_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "dataset_manifest_status": "complete（未改动）",
+    "note": "失败批次的 truth/manifest/ZIP/分卷均不重写，身份保留以便追溯。"
+  },
+  "findings": [
+    {
+      "id": "P1-1",
+      "severity": "P1",
+      "title": "留出批次被标成可训练划分",
+      "evidence": "v1 索引 benchmark_split = train 1402 / validation 302 / test 296；交付 README 写\"下游只按 benchmark_split 读取训练数据\"。",
+      "status": "fixed_in_v2",
+      "fix": "全部 2000 行改为 holdout_status=condition_heldout、benchmark_split=heldout、usage_policy=pilot_only_isolated_from_training_and_tuning；原训练语义降级为描述性字段 recipe_family_split。见 v2/index_policy_check_v2.md。"
+    },
+    {
+      "id": "P1-2",
+      "severity": "P1",
+      "title": "相同采用组成跨集合（泄漏）",
+      "evidence": "9 组完全相同的组成落在不同集合；根因是划分按设计族 parent_family，而生成器族按实际采用组成。",
+      "status": "fixed_in_v2",
+      "fix": "并查集把「实际采用组成 ∪ parent_family ∪ 生成器族 ∪ 噪声重复」合成 leak_group，划分只在 leak_group 粒度进行并断言不跨集合。"
+    },
+    {
+      "id": "P2-1",
+      "severity": "P2",
+      "title": "1000 行配方仅 944 种独立组成",
+      "evidence": "v1 主表复算：distinct=944，重复组 34；稀疏/边界的 Fe 变化被 100% 闭合归一化抹平，\"元素=0\" 在只存非零元素的采用组成里不留痕。",
+      "status": "fixed_in_v2",
+      "fix": "低含量档由元素自身上限推导；零配方带唯一共存签名；全局去重并断言 1000 行 1000 种。"
+    },
+    {
+      "id": "P2-2",
+      "severity": "P2",
+      "title": "干扰对照被写死的 Ni=8 与 Fe 平衡破坏",
+      "evidence": "v1 每行 `close_percent({**vals, \"Ni\": 8.0, \"Fe\": fe})`：对含 Ni 时目标被覆盖，含 Fe 的 3 对里 Fe 既是基体又是对照变量。",
+      "status": "fixed_in_v2",
+      "fix": "干扰对去掉全部含 Fe 组合；背景母配方不含 a/b/Fe 且同族两档共用；逐 variant 断言存在性、背景值不被改写与 equal/1:5/5:1 实际比值。"
+    },
+    {
+      "id": "P2-3",
+      "severity": "P2",
+      "title": "548/600 常规配方越出自身声明范围",
+      "evidence": "v1 主表复算：常规情景 548 行越界（如 C=1.397% 声明上限 0.8%、W=5.04% 声明上限 2%），合计 1334 项；采样时只校验 Fe。",
+      "status": "fixed_in_v2",
+      "fix": "按每元素冻结上下限先验采样，闭合后逐字段按该行 ranges_percent 断言，v2 主表 1000 行越界 0 项。"
+    }
+  ],
+  "v2_remediation": {
+    "design": {
+      "script": "scripts/design_c_alloy_formulas_v2.py",
+      "master": "v2/master_samples_v2.json",
+      "rows": 1000,
+      "distinct_compositions": 1000,
+      "rows_with_range_violations": 0,
+      "passed": true
+    },
+    "index_split": {
+      "script": "scripts/build_p5_index_v2.py",
+      "leak_groups": 801,
+      "uniform_holdout": true,
+      "identical_compositions_crossing_split": [],
+      "passed": true
+    },
+    "isolation_guard": {
+      "script": "scripts/c_pilot_guard.py",
+      "blocked_entries": [
+        "train_entry",
+        "validation_entry",
+        "test_entry"
+      ],
+      "passed": true
+    },
+    "generation": {
+      "started": false,
+      "reason": "按要求先出验证报告，用户批准后再启动 2000 谱重生成。"
+    },
+    "shipped_files": [
+      "C_authoritative_index_v2.csv",
+      "C_global_split_v2.csv",
+      "C_coverage_v2.json",
+      "C_index_policy_check_v2.json",
+      "C_index_policy_check_v2.md",
+      "C_pilot_guard_selftest.json",
+      "pilot_isolation.json",
+      "scripts/c_pilot_guard.py"
+    ]
+  },
+  "v1_baseline_recomputed": {
+    "available": true,
+    "rows": 1000,
+    "distinct_compositions": 944,
+    "duplicate_groups": 34,
+    "rows_with_range_violations": 891,
+    "range_violation_items": 1750,
+    "violations_by_scenario": {
+      "regular_variation": 548,
+      "sparse_boundary": 200,
+      "interference_control": 143
+    }
+  }
+}
