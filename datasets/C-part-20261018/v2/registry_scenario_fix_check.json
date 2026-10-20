@@ -1,0 +1,46 @@
+{
+  "source_file": {
+    "name": "C_formula_registry.csv",
+    "bytes": 217257,
+    "sha256": "06494e43fba09bf373dc07cb755f68ecc6910e26b71788de52ee8fe0cacb04fe"
+  },
+  "fixed_file": {
+    "name": "C_formula_registry_v2.csv",
+    "bytes": 234457,
+    "sha256": "5869e7ca6b6c9f1b3f55d6f385e01ee51d8b92a22881cc62a287803ab47816bd"
+  },
+  "format": {
+    "utf8_bom": true,
+    "newline": "'\\r\\n'",
+    "columns": [
+      "formula_id",
+      "scenario",
+      "matrix",
+      "parent_family",
+      "composition_family",
+      "generator_split",
+      "benchmark_split",
+      "spectra",
+      "n_elements_positive",
+      "closure_sum_percent",
+      "blind_input_sha256"
+    ],
+    "rows": 1000
+  },
+  "root_cause": "build_github_payload.py 用了 provenance['scenario']，主表键名是 provenance['design_scenario']",
+  "row_alignment_formula_id": "exact_order_match",
+  "reserializer_roundtrip_bytes_identical": true,
+  "columns_that_differ": [
+    "scenario"
+  ],
+  "other_column_value_mismatches": 0,
+  "scenario_empty_rows_after_fix": 0,
+  "scenario_counts_after_fix": {
+    "regular_variation": 600,
+    "sparse_boundary": 200,
+    "interference_control": 200
+  },
+  "archived_file_rewritten": false,
+  "generator_script_fixed": "scripts/build_github_payload.py（未来批次不再空列）",
+  "passed": true
+}

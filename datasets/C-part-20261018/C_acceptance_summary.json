@@ -1,0 +1,182 @@
+{
+  "coverage": {
+    "ba_window_summary": {
+      "L_center_in_window": 1246,
+      "M_center_in_window": 1246,
+      "present": 1246
+    },
+    "detail_file": "C_coverage.json",
+    "elements_with_ge_50_low": 16,
+    "elements_with_ge_50_zero": 31,
+    "window_keV": {
+      "first_center_range": [
+        0.6,
+        0.6
+      ],
+      "last_center_range": [
+        29.258000000000003,
+        29.258000000000003
+      ],
+      "lower_edge_range": [
+        0.593,
+        0.593
+      ],
+      "unit": "keV",
+      "upper_edge_range": [
+        29.265000000000004,
+        29.265000000000004
+      ]
+    },
+    "window_loss_fraction": {
+      "definition": "sum(outside_window_counts) / detected_signal_before_window_counts, excludes artificial background",
+      "range": [
+        0.0007244562965419613,
+        0.010505917474488273
+      ]
+    }
+  },
+  "engineering_checks": {
+    "audit": {
+      "atol_counts": 1e-08,
+      "complete_physics_recalculation": false,
+      "errors": 0,
+      "rtol": 1e-12,
+      "spectra_checked": 2000,
+      "status": "passed"
+    },
+    "delivery_copy": {
+      "audit_from_bundled_snapshot": "passed",
+      "file_sha256_mismatches": 0,
+      "files_compared": 4061,
+      "zip_rebuilt_from_copy_sha256_matches_original": true
+    },
+    "pack": {
+      "archive_sha256": "9178746d90e26e45d64a8a9f15ca35736ba363110d535d787e3e589fbf3bf3f2",
+      "status": "passed",
+      "zip_size": 344994035
+    },
+    "replay": {
+      "atol_counts": 1e-08,
+      "complete_physics_recalculation": true,
+      "concentration_accuracy_verified": false,
+      "errors": [],
+      "file_byte_identity_tested": false,
+      "maximum_absolute_array_difference": 0.0,
+      "physical_calibration_verified": false,
+      "rtol": 1e-12,
+      "same_environment": true,
+      "scope": "all_records",
+      "spectra_recalculated": 2000,
+      "status": "passed"
+    }
+  },
+  "identity": {
+    "generator_version": "0.2.1",
+    "hardware_validated": false,
+    "physical_model_version": "0.2.0",
+    "physics_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "profile": {
+      "expected_sha256": "e30ba2115f3b3507b835cda8f5e21209e615348e87ef7f6a7a32999d424cb280",
+      "matches_expected": true,
+      "name": "candidate_holdout_P45_Al50_air1",
+      "sha256": "e30ba2115f3b3507b835cda8f5e21209e615348e87ef7f6a7a32999d424cb280"
+    },
+    "samples_semantic_sha256": "6673fb80fb961c6700dc223ddfe0d419a3b9cc3d5b858eceb28390736e4ccaff",
+    "seeds": {
+      "batch": 2026101805,
+      "split": 20261018
+    },
+    "synthetic": true
+  },
+  "not_verified": [
+    "P5 是候选模拟配置，不是真实未见设备；真实设备与真实样品的科学验证仍保留",
+    "模型未包含死时间、堆积、粒度、水分、多层、多次散射与粗糙度",
+    "含量相对误差 ≤5% 的结论不能由本批合成数据得出",
+    "acceptance_status = pending_independent_validation"
+  ],
+  "scale": {
+    "composition_families": 944,
+    "dataset_files": 4061,
+    "dataset_size_bytes": 1528015828,
+    "formulas": 1000,
+    "parent_families": 814,
+    "replicates": 2,
+    "scenario_counts": {
+      "interference_control": 200,
+      "regular": 600,
+      "sparse_boundary": 200
+    },
+    "spectra": 2000,
+    "zip_size_bytes": 344994035
+  },
+  "splits": {
+    "benchmark_split": {
+      "test": 296,
+      "train": 1402,
+      "validation": 302
+    },
+    "generator_split": {
+      "test": 308,
+      "train": 1400,
+      "validation": 292
+    },
+    "rule": "benchmark_split 以 parent_family 为单位，同一母配方的干扰对照变体与噪声重复不跨集合；P5 全批禁止训练与调参"
+  },
+  "storage_budget": {
+    "batch_overhead_mib": 10,
+    "note": "scale_10000/scale_50000 为按单谱实测体积与耗时线性推算，非再次实测；secondary_layers 恢复默认 96 时物理耗时约翻倍",
+    "per_spectrum_bytes": 764007,
+    "per_spectrum_mib": 0.729,
+    "scale_10000": {
+      "dataset_gib": 7.1,
+      "generation_hours": [
+        5,
+        7
+      ],
+      "git_pack_gib": 1.6,
+      "reserve_gib": 15,
+      "zip_gib": 1.6
+    },
+    "scale_2000": {
+      "dataset_mib": 1457.2,
+      "generation_hours": [
+        1.0,
+        1.4
+      ],
+      "git_pack_mib": 280.4,
+      "zip_mib": 329.0
+    },
+    "scale_50000": {
+      "dataset_gib": 35.5,
+      "generation_hours": [
+        25,
+        35
+      ],
+      "git_pack_gib": 8.0,
+      "reserve_gib": 60,
+      "total_compute_hours_with_replay": [
+        60,
+        75
+      ],
+      "zip_gib": 8.0
+    },
+    "zip_over_dataset_ratio": 0.226
+  },
+  "timings": {
+    "audit_C_original_window_minutes": 14,
+    "audit_D_copy_minutes_for_2000_spectra": 3,
+    "full_audit_s_per_spectrum": 0.1,
+    "full_physics_replay_s_per_spectrum": 2.59,
+    "generate_note": "最长连续段 1555 谱 47.2 min（1.82 s/谱）；10 配方×2 重复的端到端实测 2.52 s/谱（含密封写入）",
+    "generate_s_per_spectrum": [
+      1.82,
+      2.52
+    ],
+    "measured_on": "本机单进程，secondary_layers=32，2026-10-19",
+    "pack_seconds_for_2000_spectra": 81.7,
+    "this_batch_pure_compute_hours": [
+      2.5,
+      3.0
+    ]
+  }
+}

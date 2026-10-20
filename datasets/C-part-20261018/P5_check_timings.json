@@ -1,0 +1,17 @@
+{
+  "audit_C_original_window_minutes": 14,
+  "audit_D_copy_minutes_for_2000_spectra": 3,
+  "full_audit_s_per_spectrum": 0.1,
+  "full_physics_replay_s_per_spectrum": 2.59,
+  "generate_note": "最长连续段 1555 谱 47.2 min（1.82 s/谱）；10 配方×2 重复的端到端实测 2.52 s/谱（含密封写入）",
+  "generate_s_per_spectrum": [
+    1.82,
+    2.52
+  ],
+  "measured_on": "本机单进程，secondary_layers=32，2026-10-19",
+  "pack_seconds_for_2000_spectra": 81.7,
+  "this_batch_pure_compute_hours": [
+    2.5,
+    3.0
+  ]
+}

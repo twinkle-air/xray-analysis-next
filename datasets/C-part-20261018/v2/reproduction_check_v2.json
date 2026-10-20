@@ -1,0 +1,120 @@
+{
+  "repo_layout_root": "datasets/C-part-20261018",
+  "v1_master": {
+    "name": "C_samples.json",
+    "sha256": "ff783d84c6a0cbe426ad777fec8700201e097ccf15bf9261274a348242435b05"
+  },
+  "steps": {
+    "design": {
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "index": {
+      "rc": 0,
+      "stdout": "C-part-20261018 True 801 34",
+      "stderr": ""
+    },
+    "guard": {
+      "rc": 0,
+      "stdout": "passed True C:\\Users\\TianT\\AppData\\Local\\Temp\\c_v2_repro_oo5kn76p\\batch\\v2\\pilot_guard_selftest.json",
+      "stderr": ""
+    }
+  },
+  "design_field_compare": {
+    "identical_on_assertions": true,
+    "differing_fields": [],
+    "v2": {
+      "rows": 1000,
+      "distinct_compositions": 1000,
+      "rows_with_range_violations": 0,
+      "range_violation_items": 0,
+      "passed": true
+    },
+    "v1_recomputed": {
+      "available": true,
+      "rows": 1000,
+      "distinct_compositions": 944,
+      "duplicate_groups": 34,
+      "rows_with_range_violations": 891,
+      "range_violation_items": 1750,
+      "violations_by_scenario": {
+        "regular_variation": 548,
+        "sparse_boundary": 200,
+        "interference_control": 143
+      }
+    }
+  },
+  "guard_field_compare": {
+    "identical_on_assertions": true,
+    "differing_fields": [],
+    "blocked_entries": [
+      "train_entry",
+      "validation_entry",
+      "test_entry"
+    ]
+  },
+  "file_checks": {
+    "v2/master_samples_v2.json": {
+      "status": "identical",
+      "reproduced_sha256": "78ca94780021c17915565d152cffb234976e2d007d796126d84cbf4ce3d1a9b3",
+      "repo_sha256": "78ca94780021c17915565d152cffb234976e2d007d796126d84cbf4ce3d1a9b3",
+      "bytes": 2963316
+    },
+    "v2/design_selfcheck_v2.json": {
+      "status": "identical_except_master_name",
+      "reproduced_sha256": "8be2a35244074af90bf712d9b366bfabe87e36c2f2a90f33a99ebdf82f80f561",
+      "repo_sha256": "59fd35e72680179cf5a746392dd1adfe63a576b49e1ae8561f30ce4a1da513d8",
+      "bytes": 2904,
+      "note": "主表在仓库里名为 C_samples.json、本地名为 master_samples.json，SHA-256 相同，故报告仅此一栏不同（文件名归一后逐字符一致）。"
+    },
+    "v2/design_selfcheck_v2.md": {
+      "status": "identical_except_master_name",
+      "reproduced_sha256": "c32633fd3093b0769a97a988be058f05514d4a16e26fc2cfe92711d76b81dbde",
+      "repo_sha256": "ca08fda1a7fbb31de125781fc0ea48296f0dc48397533ae19bd1188d48db310b",
+      "bytes": 4043,
+      "note": "主表在仓库里名为 C_samples.json、本地名为 master_samples.json，SHA-256 相同，故报告仅此一栏不同（文件名归一后逐字符一致）。"
+    },
+    "v2/index_v2.csv": {
+      "status": "identical",
+      "reproduced_sha256": "a23ebe61d5a7385b2515db48791d030c44202f0700353f16dfd3975a1ba35617",
+      "repo_sha256": "a23ebe61d5a7385b2515db48791d030c44202f0700353f16dfd3975a1ba35617",
+      "bytes": 987822
+    },
+    "v2/global_split_v2.csv": {
+      "status": "identical",
+      "reproduced_sha256": "5ee2b6a56163751ef5a60d094f736ce812eb1cea42835be5ab167705715e462c",
+      "repo_sha256": "5ee2b6a56163751ef5a60d094f736ce812eb1cea42835be5ab167705715e462c",
+      "bytes": 38196
+    },
+    "v2/coverage_v2.json": {
+      "status": "identical",
+      "reproduced_sha256": "afa8fcadacca9d905ae9513f83e2a4b6a60df8850ed495c83dc81953f5c8c1db",
+      "repo_sha256": "afa8fcadacca9d905ae9513f83e2a4b6a60df8850ed495c83dc81953f5c8c1db",
+      "bytes": 6532
+    },
+    "v2/index_policy_check_v2.json": {
+      "status": "identical_except_master_name",
+      "reproduced_sha256": "30c010e1f7b76783b94f685a587403483a2a8a447857d36d78b51503884da5fb",
+      "repo_sha256": "f5df23d35e76c819cb0e9a17a2a78189161edba896a78445b088241e03d02dff",
+      "bytes": 3121,
+      "note": "主表在仓库里名为 C_samples.json、本地名为 master_samples.json，SHA-256 相同，故报告仅此一栏不同（文件名归一后逐字符一致）。"
+    },
+    "v2/index_policy_check_v2.md": {
+      "status": "identical_except_master_name",
+      "reproduced_sha256": "bb6659d76267295acef077a0908b68be79f3ee119e1811fd94316facfa92e724",
+      "repo_sha256": "4c770eacfde7b26de41d072b060acd55d0f0fd8ced652686dce9bbba28733e9f",
+      "bytes": 1740,
+      "note": "主表在仓库里名为 C_samples.json、本地名为 master_samples.json，SHA-256 相同，故报告仅此一栏不同（文件名归一后逐字符一致）。"
+    },
+    "v2/pilot_guard_selftest.json": {
+      "status": "identical",
+      "reproduced_sha256": "bb23f8191f002415221fc3859d2acb570014b4d6ca0126dae3f68a627c1d7065",
+      "repo_sha256": "bb23f8191f002415221fc3859d2acb570014b4d6ca0126dae3f68a627c1d7065",
+      "bytes": 1696
+    }
+  },
+  "all_identical": true,
+  "passed": true,
+  "note": "索引步骤需要解包后的密封数据集；未提供时该步 skipped 且不计入 passed。三处配方问题的结论只针对 v2 主表，已归档的 P5 批次数据未重生成。"
+}

@@ -1,0 +1,123 @@
+{
+  "batch_label": "C-part-20261018",
+  "batch_version": "C-recipes-v1(review_failed,pilot_only)",
+  "dataset_dir": "P5_dataset",
+  "dataset_manifest_sha256": "d68f2f4f28c64f21816d0d63fb7a237056dcc643de80eedea94437ede8ea396c",
+  "master_file": "master_samples.json",
+  "master_sha256": "ff783d84c6a0cbe426ad777fec8700201e097ccf15bf9261274a348242435b05",
+  "checks": {
+    "rows": 2000,
+    "uniform_holdout": true,
+    "benchmark_split_values": {
+      "heldout": 2000
+    },
+    "recipe_family_split_by_spectra": {
+      "train": 1450,
+      "test": 258,
+      "validation": 292
+    },
+    "groups_crossing_recipe_split": [],
+    "identical_compositions_crossing_split": [],
+    "parent_families_crossing_split": [],
+    "formula_replicates_split": [],
+    "distinct_formula_compositions": 944,
+    "formulas": 1000,
+    "duplicate_composition_groups": 34,
+    "duplicate_groups_all_single_leak_group": true,
+    "leak_groups": 801,
+    "group_size_histogram": {
+      "1": 754,
+      "2": 18,
+      "5": 28,
+      "70": 1
+    },
+    "generator_split_untouched": {
+      "train": 1400,
+      "validation": 292,
+      "test": 308
+    },
+    "sealed_manifest_split_seed": 20261018,
+    "passed": true
+  },
+  "coverage": {
+    "dataset_dir": "P5_dataset",
+    "profile_id": "candidate_holdout_P45_Al50_air1",
+    "profile_sha256": "e30ba2115f3b3507b835cda8f5e21209e615348e87ef7f6a7a32999d424cb280",
+    "spectra": 2000,
+    "formulas": 1000,
+    "replicates": 2,
+    "scenario_counts": {
+      "regular_variation": 600,
+      "sparse_boundary": 200,
+      "interference_control": 200
+    },
+    "holdout_status": {
+      "holdout_status": "condition_heldout",
+      "benchmark_split": "heldout",
+      "usage_policy": "pilot_only_isolated_from_training_and_tuning"
+    },
+    "window_keV": {
+      "unit": "keV",
+      "first_center_range": [
+        0.6,
+        0.6
+      ],
+      "last_center_range": [
+        29.258000000000003,
+        29.258000000000003
+      ],
+      "lower_edge_range": [
+        0.593,
+        0.593
+      ],
+      "upper_edge_range": [
+        29.265000000000004,
+        29.265000000000004
+      ]
+    },
+    "window_loss_fraction": {
+      "definition": "sum(outside_window_counts) / detected_signal_before_window_counts, excludes artificial background",
+      "range": [
+        0.0007244562965419613,
+        0.010505917474488273
+      ]
+    },
+    "target_elements": [
+      "Na",
+      "Mg",
+      "Al",
+      "Si",
+      "P",
+      "S",
+      "Cl",
+      "K",
+      "Ca",
+      "Ti",
+      "V",
+      "Cr",
+      "Mn",
+      "Fe",
+      "Co",
+      "Ni",
+      "Cu",
+      "Zn",
+      "As",
+      "Se",
+      "Rb",
+      "Sr",
+      "Y",
+      "Zr",
+      "Nb",
+      "Mo",
+      "Cd",
+      "Sn",
+      "Sb",
+      "Ba",
+      "W",
+      "Pb"
+    ],
+    "input_semantic_sha256": "6673fb80fb961c6700dc223ddfe0d419a3b9cc3d5b858eceb28390736e4ccaff",
+    "physics_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "index_rows": 2000
+  }
+}

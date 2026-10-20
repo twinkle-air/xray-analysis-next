@@ -1,0 +1,339 @@
+{
+  "dataset_dir": "P5_dataset",
+  "profile_id": "candidate_holdout_P45_Al50_air1",
+  "profile_sha256": "e30ba2115f3b3507b835cda8f5e21209e615348e87ef7f6a7a32999d424cb280",
+  "spectra": 2000,
+  "formulas": 1000,
+  "replicates": 2,
+  "scenario_counts": {
+    "regular_variation": 600,
+    "sparse_boundary": 200,
+    "interference_control": 200
+  },
+  "holdout_status": {
+    "holdout_status": "condition_heldout",
+    "benchmark_split": "heldout",
+    "usage_policy": "pilot_only_isolated_from_training_and_tuning"
+  },
+  "element_coverage": {
+    "Na": {
+      "zero": 1000,
+      "low": 0,
+      "mid": 0,
+      "high": 0,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "Mg": {
+      "zero": 1000,
+      "low": 0,
+      "mid": 0,
+      "high": 0,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "Al": {
+      "zero": 387,
+      "low": 37,
+      "mid": 285,
+      "high": 291,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Si": {
+      "zero": 395,
+      "low": 52,
+      "mid": 247,
+      "high": 306,
+      "min_percent": 0.0,
+      "max_percent": 8.643718
+    },
+    "P": {
+      "zero": 1000,
+      "low": 0,
+      "mid": 0,
+      "high": 0,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "S": {
+      "zero": 1000,
+      "low": 0,
+      "mid": 0,
+      "high": 0,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "Cl": {
+      "zero": 1000,
+      "low": 0,
+      "mid": 0,
+      "high": 0,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "K": {
+      "zero": 1000,
+      "low": 0,
+      "mid": 0,
+      "high": 0,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "Ca": {
+      "zero": 1000,
+      "low": 0,
+      "mid": 0,
+      "high": 0,
+      "min_percent": 0.0,
+      "max_percent": 0.0
+    },
+    "Ti": {
+      "zero": 387,
+      "low": 45,
+      "mid": 270,
+      "high": 298,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "V": {
+      "zero": 387,
+      "low": 46,
+      "mid": 285,
+      "high": 282,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Cr": {
+      "zero": 371,
+      "low": 54,
+      "mid": 271,
+      "high": 304,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Mn": {
+      "zero": 371,
+      "low": 47,
+      "mid": 270,
+      "high": 312,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Fe": {
+      "zero": 0,
+      "low": 0,
+      "mid": 0,
+      "high": 1000,
+      "min_percent": 62.0,
+      "max_percent": 99.999
+    },
+    "Co": {
+      "zero": 371,
+      "low": 51,
+      "mid": 248,
+      "high": 330,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Ni": {
+      "zero": 195,
+      "low": 43,
+      "mid": 295,
+      "high": 467,
+      "min_percent": 0.0,
+      "max_percent": 10.54023245
+    },
+    "Cu": {
+      "zero": 379,
+      "low": 50,
+      "mid": 276,
+      "high": 295,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Zn": {
+      "zero": 381,
+      "low": 611,
+      "mid": 0,
+      "high": 8,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "As": {
+      "zero": 379,
+      "low": 613,
+      "mid": 0,
+      "high": 8,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Se": {
+      "zero": 386,
+      "low": 606,
+      "mid": 0,
+      "high": 8,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Rb": {
+      "zero": 385,
+      "low": 607,
+      "mid": 0,
+      "high": 8,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Sr": {
+      "zero": 383,
+      "low": 609,
+      "mid": 0,
+      "high": 8,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Y": {
+      "zero": 384,
+      "low": 608,
+      "mid": 0,
+      "high": 8,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Zr": {
+      "zero": 382,
+      "low": 610,
+      "mid": 0,
+      "high": 8,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Nb": {
+      "zero": 387,
+      "low": 48,
+      "mid": 252,
+      "high": 313,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Mo": {
+      "zero": 379,
+      "low": 52,
+      "mid": 273,
+      "high": 296,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Cd": {
+      "zero": 377,
+      "low": 615,
+      "mid": 0,
+      "high": 8,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Sn": {
+      "zero": 377,
+      "low": 615,
+      "mid": 0,
+      "high": 8,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Sb": {
+      "zero": 370,
+      "low": 614,
+      "mid": 0,
+      "high": 16,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Ba": {
+      "zero": 377,
+      "low": 615,
+      "mid": 0,
+      "high": 8,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "W": {
+      "zero": 379,
+      "low": 41,
+      "mid": 270,
+      "high": 310,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    },
+    "Pb": {
+      "zero": 372,
+      "low": 612,
+      "mid": 0,
+      "high": 16,
+      "min_percent": 0.0,
+      "max_percent": 25.0
+    }
+  },
+  "window_keV": {
+    "unit": "keV",
+    "first_center_range": [
+      0.6,
+      0.6
+    ],
+    "last_center_range": [
+      29.258000000000003,
+      29.258000000000003
+    ],
+    "lower_edge_range": [
+      0.593,
+      0.593
+    ],
+    "upper_edge_range": [
+      29.265000000000004,
+      29.265000000000004
+    ]
+  },
+  "window_loss_fraction": {
+    "definition": "sum(outside_window_counts) / detected_signal_before_window_counts, excludes artificial background",
+    "range": [
+      0.0007244562965419613,
+      0.010505917474488273
+    ]
+  },
+  "target_elements": [
+    "Na",
+    "Mg",
+    "Al",
+    "Si",
+    "P",
+    "S",
+    "Cl",
+    "K",
+    "Ca",
+    "Ti",
+    "V",
+    "Cr",
+    "Mn",
+    "Fe",
+    "Co",
+    "Ni",
+    "Cu",
+    "Zn",
+    "As",
+    "Se",
+    "Rb",
+    "Sr",
+    "Y",
+    "Zr",
+    "Nb",
+    "Mo",
+    "Cd",
+    "Sn",
+    "Sb",
+    "Ba",
+    "W",
+    "Pb"
+  ],
+  "input_semantic_sha256": "6673fb80fb961c6700dc223ddfe0d419a3b9cc3d5b858eceb28390736e4ccaff",
+  "physics_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+  "index_rows": 2000
+}

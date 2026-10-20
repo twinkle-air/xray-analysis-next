@@ -1,0 +1,155 @@
+{
+  "acceptance_status": "pending_independent_validation",
+  "ba_window_summary": {
+    "L_center_in_window": 1246,
+    "M_center_in_window": 1246,
+    "present": 1246
+  },
+  "batch_id": "C-part-20261018",
+  "benchmark_split": {
+    "test": 296,
+    "train": 1402,
+    "validation": 302
+  },
+  "closure": "strict",
+  "composition_families": 944,
+  "dataset_files": 4061,
+  "dataset_size_bytes": 1528015828,
+  "formulas": 1000,
+  "generator_split": {
+    "test": 308,
+    "train": 1400,
+    "validation": 292
+  },
+  "generator_version": "0.2.1",
+  "hardware_validated": false,
+  "jitter": {},
+  "manifest_status": "complete",
+  "parent_families": 814,
+  "physical_model_version": "0.2.0",
+  "physics_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+  "profile_name": "candidate_holdout_P45_Al50_air1",
+  "profile_sha256": "e30ba2115f3b3507b835cda8f5e21209e615348e87ef7f6a7a32999d424cb280",
+  "replicates": 2,
+  "role": "C 部分（铁基合金主配方 + P5 候选留出条件）",
+  "samples_semantic_sha256": "6673fb80fb961c6700dc223ddfe0d419a3b9cc3d5b858eceb28390736e4ccaff",
+  "scenario_counts": {
+    "interference_control": 200,
+    "regular": 600,
+    "sparse_boundary": 200
+  },
+  "seed_batch": 2026101805,
+  "seed_split": 20261018,
+  "spectra": 2000,
+  "synthetic": true,
+  "target_elements": [
+    "Na",
+    "Mg",
+    "Al",
+    "Si",
+    "P",
+    "S",
+    "Cl",
+    "K",
+    "Ca",
+    "Ti",
+    "V",
+    "Cr",
+    "Mn",
+    "Fe",
+    "Co",
+    "Ni",
+    "Cu",
+    "Zn",
+    "As",
+    "Se",
+    "Rb",
+    "Sr",
+    "Y",
+    "Zr",
+    "Nb",
+    "Mo",
+    "Cd",
+    "Sn",
+    "Sb",
+    "Ba",
+    "W",
+    "Pb"
+  ],
+  "unzip_and_verify": [
+    "copy /b P5_pack.zip.part01+P5_pack.zip.part02+P5_pack.zip.part03+P5_pack.zip.part04+P5_pack.zip.part05+P5_pack.zip.part06+P5_pack.zip.part07+P5_pack.zip.part08 P5_dataset.zip",
+    "certutil -hashfile P5_dataset.zip SHA256  # 应等于 P5_dataset.zip.sha256 中的 9178746d...f3f2",
+    "python -B P5_dataset/reproducibility/generator/fp_competition/app.py audit --dataset P5_dataset --out P5_qc_after_clone.json"
+  ],
+  "window_keV": {
+    "first_center_range": [
+      0.6,
+      0.6
+    ],
+    "last_center_range": [
+      29.258000000000003,
+      29.258000000000003
+    ],
+    "lower_edge_range": [
+      0.593,
+      0.593
+    ],
+    "unit": "keV",
+    "upper_edge_range": [
+      29.265000000000004,
+      29.265000000000004
+    ]
+  },
+  "window_loss_fraction": {
+    "definition": "sum(outside_window_counts) / detected_signal_before_window_counts, excludes artificial background",
+    "range": [
+      0.0007244562965419613,
+      0.010505917474488273
+    ]
+  },
+  "zip_parts": [
+    {
+      "bytes": 43124255,
+      "file": "P5_pack.zip.part01",
+      "sha256": "393e31dc4199403e8678126cc0f301651971f6939d3e40719fc792db02959e4b"
+    },
+    {
+      "bytes": 43124255,
+      "file": "P5_pack.zip.part02",
+      "sha256": "60adee24784db199ade79117e82a1d96a7eed984e9ed0464e943fff64cf43c96"
+    },
+    {
+      "bytes": 43124255,
+      "file": "P5_pack.zip.part03",
+      "sha256": "22f3ebe59ea02ab9ebc2e6da20d4f2ecd7496060bf5616b2a3f95daee3353465"
+    },
+    {
+      "bytes": 43124255,
+      "file": "P5_pack.zip.part04",
+      "sha256": "e460d530422f28e57f2ef55c11b061a844f0798a0914e59d80d0c612e372b6ef"
+    },
+    {
+      "bytes": 43124255,
+      "file": "P5_pack.zip.part05",
+      "sha256": "1a21b0c897e19cc9ccb05b7ea41e93a474c932a351dd7ee5be0315582e8febe9"
+    },
+    {
+      "bytes": 43124255,
+      "file": "P5_pack.zip.part06",
+      "sha256": "f470a08802530b0851882e03b3b4735d0b5fa549c9bd742f5792c4f2da9158df"
+    },
+    {
+      "bytes": 43124255,
+      "file": "P5_pack.zip.part07",
+      "sha256": "fe8c569c78cd00317a850e7bd21e76f0be6a744fcdb9e1986b2cfe5f82ffb947"
+    },
+    {
+      "bytes": 43124250,
+      "file": "P5_pack.zip.part08",
+      "sha256": "a397dbdb16b5faf2f8a4fb51637eaef77f2def92b0b17c5db3a841258e4521a0"
+    }
+  ],
+  "zip_rebuild_verified": "从交付副本重新 pack 得到的 ZIP 与原件 SHA-256 相同，归档不含时间戳等易变字段",
+  "zip_sha256": "9178746d90e26e45d64a8a9f15ca35736ba363110d535d787e3e589fbf3bf3f2",
+  "zip_size_bytes": 344994035
+}
