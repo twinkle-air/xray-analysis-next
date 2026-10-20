@@ -1,0 +1,141 @@
+{
+  "stage": "member B candidate profile digest reverification",
+  "finding": "the records written by work/build_B_profiles.py and work/select_B_pilot.py hashed the line-ending-normalized text of each file they produced, while the files themselves were written in text mode and carry CRLF breaks, so sha256 of the delivered bytes never equalled the recorded value. The parsed contents are identical, which the canonical 34-field vector hash and the sealed batch copies prove",
+  "authoritative_for_cross_checks": "sha256_of_file_as_stored, because that is what any tool hashing the delivered file obtains",
+  "affected_records": [
+    "B_profile_diff.json config_sha256 and support_runs profile digests",
+    "B_profile_review.md section 2.9 hash table",
+    "B_pilot_selection.json files.B_pilot_samples.json"
+  ],
+  "generator_fixed": [
+    "work/build_B_profiles.py",
+    "work/select_B_pilot.py"
+  ],
+  "consequence_for_the_pilot": "none physically: the sealed batches carry the same 34 fields, the recorded generation digests equal the stored-file digests, and no spectrum was generated from different values",
+  "consequence_for_the_section_2_support_runs": "still valid as measurements of these profiles; the profile digests inside those records are the normalized-text variant and are kept unchanged as the original evidence",
+  "candidates": {
+    "P3": {
+      "file": "datasets/B-part/P3_candidate.json",
+      "bytes_on_disk": 987,
+      "crlf_line_breaks": 36,
+      "sha256_of_file_as_stored": "5bb3aeb948145c587c5c25f7f7a7eab321804be556c06e0edb6e26b1e8f1ac6c",
+      "sha256_of_line_ending_normalized_text": "4b533155c69ccc1aadc47133fab81aa707ee74b5993b43bab4fe826c2c39a69f",
+      "sha256_of_canonical_field_vector": "0a0b5e0276b7e0d0a347c501dbfa9c5f26f4bf26c439341b481a14aae837ea42",
+      "field_count": 34,
+      "section_2_record": {
+        "recorded_sha256_of_file": "4b533155c69ccc1aadc47133fab81aa707ee74b5993b43bab4fe826c2c39a69f",
+        "recorded_sha256_of_canonical_field_vector": "0a0b5e0276b7e0d0a347c501dbfa9c5f26f4bf26c439341b481a14aae837ea42",
+        "recorded_bytes": 987
+      },
+      "section_2_record_matches_file_as_stored": false,
+      "section_2_record_matches_normalized_text": true,
+      "section_2_record_matches_canonical_vector": true,
+      "pilot_batches": {
+        "pilot_P3_v1": {
+          "ledger_profile_sha256": "5bb3aeb948145c587c5c25f7f7a7eab321804be556c06e0edb6e26b1e8f1ac6c",
+          "ledger_matches_file_as_stored": true,
+          "sealed_copies": {
+            "configs/profile.json": {
+              "same_field_for_field_as_candidate": true,
+              "same_canonical_vector": true,
+              "sha256_of_file_as_stored": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351"
+            },
+            "inputs/original_profile.json": {
+              "same_field_for_field_as_candidate": true,
+              "same_canonical_vector": true,
+              "sha256_of_file_as_stored": "5bb3aeb948145c587c5c25f7f7a7eab321804be556c06e0edb6e26b1e8f1ac6c"
+            }
+          },
+          "sealed_manifest_original_inputs": {
+            "samples": {
+              "file": "inputs/original_samples.json",
+              "sha256": "ed3c26bc86c99d4af175b47fd1aea61bac9e4492d0b924c28fc565489e6702fe"
+            },
+            "profile": {
+              "file": "inputs/original_profile.json",
+              "sha256": "5bb3aeb948145c587c5c25f7f7a7eab321804be556c06e0edb6e26b1e8f1ac6c"
+            },
+            "design_ranges": {
+              "file": "inputs/original_design_ranges.json",
+              "sha256": "0f10d70db547b05198c70d72be4c8a5c3c58dac1a31aca49a3ce3c72bc0f7d70"
+            }
+          }
+        }
+      }
+    },
+    "P4": {
+      "file": "datasets/B-part/P4_candidate.json",
+      "bytes_on_disk": 996,
+      "crlf_line_breaks": 36,
+      "sha256_of_file_as_stored": "e62cec80bbead62568225bcfafbe51f48ee12d5965609edb5957408618f7ef3a",
+      "sha256_of_line_ending_normalized_text": "5e696944ba972d68f696b56878d648b07c0397d3c490f4d176eba7430abd1f32",
+      "sha256_of_canonical_field_vector": "197182623607a1fd5570b3365ac63e3050259793bac00b77795d27951b6482a0",
+      "field_count": 34,
+      "section_2_record": {
+        "recorded_sha256_of_file": "5e696944ba972d68f696b56878d648b07c0397d3c490f4d176eba7430abd1f32",
+        "recorded_sha256_of_canonical_field_vector": "197182623607a1fd5570b3365ac63e3050259793bac00b77795d27951b6482a0",
+        "recorded_bytes": 996
+      },
+      "section_2_record_matches_file_as_stored": false,
+      "section_2_record_matches_normalized_text": true,
+      "section_2_record_matches_canonical_vector": true,
+      "pilot_batches": {
+        "pilot_P4_v1": {
+          "ledger_profile_sha256": "e62cec80bbead62568225bcfafbe51f48ee12d5965609edb5957408618f7ef3a",
+          "ledger_matches_file_as_stored": true,
+          "sealed_copies": {
+            "configs/profile.json": {
+              "same_field_for_field_as_candidate": true,
+              "same_canonical_vector": true,
+              "sha256_of_file_as_stored": "2ac954eeecd88438d9670ff4ab00a3194459dcb48645d99cd2af9155135bf66d"
+            },
+            "inputs/original_profile.json": {
+              "same_field_for_field_as_candidate": true,
+              "same_canonical_vector": true,
+              "sha256_of_file_as_stored": "e62cec80bbead62568225bcfafbe51f48ee12d5965609edb5957408618f7ef3a"
+            }
+          },
+          "sealed_manifest_original_inputs": {
+            "samples": {
+              "file": "inputs/original_samples.json",
+              "sha256": "ed3c26bc86c99d4af175b47fd1aea61bac9e4492d0b924c28fc565489e6702fe"
+            },
+            "profile": {
+              "file": "inputs/original_profile.json",
+              "sha256": "e62cec80bbead62568225bcfafbe51f48ee12d5965609edb5957408618f7ef3a"
+            },
+            "design_ranges": {
+              "file": "inputs/original_design_ranges.json",
+              "sha256": "0f10d70db547b05198c70d72be4c8a5c3c58dac1a31aca49a3ce3c72bc0f7d70"
+            }
+          }
+        }
+      }
+    }
+  },
+  "pilot_sample_table": {
+    "file": "datasets/B-part/B_pilot_samples.json",
+    "bytes_on_disk": 807612,
+    "crlf_line_breaks": 21582,
+    "sha256_of_file_as_stored": "ed3c26bc86c99d4af175b47fd1aea61bac9e4492d0b924c28fc565489e6702fe",
+    "sha256_of_line_ending_normalized_text": "18ab59b974aace4de864ec6a46733c75099a4e8a98439da69f77afa7d450d96f",
+    "recorded_in_B_pilot_selection_json": "18ab59b974aace4de864ec6a46733c75099a4e8a98439da69f77afa7d450d96f",
+    "recorded_value_is_the_normalized_text_variant": true,
+    "pilot_batches": {
+      "pilot_P3_v1": {
+        "ledger_samples_sha256": "ed3c26bc86c99d4af175b47fd1aea61bac9e4492d0b924c28fc565489e6702fe",
+        "manifest_original_inputs_samples_sha256": "ed3c26bc86c99d4af175b47fd1aea61bac9e4492d0b924c28fc565489e6702fe",
+        "sealed_copy_sha256_as_stored": "ed3c26bc86c99d4af175b47fd1aea61bac9e4492d0b924c28fc565489e6702fe",
+        "sealed_copy_equals_delivered_bytes": true,
+        "sealed_copy_sample_count": 100
+      },
+      "pilot_P4_v1": {
+        "ledger_samples_sha256": "ed3c26bc86c99d4af175b47fd1aea61bac9e4492d0b924c28fc565489e6702fe",
+        "manifest_original_inputs_samples_sha256": "ed3c26bc86c99d4af175b47fd1aea61bac9e4492d0b924c28fc565489e6702fe",
+        "sealed_copy_sha256_as_stored": "ed3c26bc86c99d4af175b47fd1aea61bac9e4492d0b924c28fc565489e6702fe",
+        "sealed_copy_equals_delivered_bytes": true,
+        "sealed_copy_sample_count": 100
+      }
+    }
+  }
+}

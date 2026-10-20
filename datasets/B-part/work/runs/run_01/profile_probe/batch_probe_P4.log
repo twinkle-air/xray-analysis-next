@@ -1,0 +1,10 @@
+command: python -B app.py batch --samples C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\datasets\B-part\work\profile_probe\probe_samples.json --profile C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\datasets\B-part\P4_candidate.json --out C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\datasets\B-part\work\profile_probe\dataset_probe_P4 --seed 2026101822 --replicates 1 --closure strict --legacy-al reject --targets Na Mg Al Si P S Cl K Ca Ti V Cr Mn Fe Co Ni Cu Zn As Se Rb Sr Y Zr Nb Mo Cd Sn Sb Ba W Pb --design-ranges C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\datasets\B-part\B_design_ranges.json
+cwd: C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\fp-spectrum-generator-competition-v0.2.1\fp_competition
+exit_code: 0
+stdout:
+1/2
+2/2
+C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\datasets\B-part\work\profile_probe\dataset_probe_P4
+
+stderr:
+

@@ -1,0 +1,33 @@
+{
+  "recipes": 1500,
+  "scenarios": {
+    "routine": 900,
+    "sparse_boundary": 300,
+    "interference": 300
+  },
+  "unique_a_rule": 1500,
+  "unique_unified": 1500,
+  "families": 1120,
+  "cross_family_near_neighbours": 39,
+  "gap_elements": [
+    "As",
+    "Cd",
+    "Co",
+    "Cu",
+    "Mo",
+    "Nb",
+    "Ni",
+    "Rb",
+    "Sb",
+    "Se",
+    "Sn",
+    "W",
+    "Y"
+  ],
+  "shortfall_elements": [],
+  "block_construction_violations": 0,
+  "min_zero": 66,
+  "min_low": 66,
+  "exact_overlap_with_A": 0,
+  "checks_failed": []
+}

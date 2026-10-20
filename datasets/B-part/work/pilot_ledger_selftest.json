@@ -1,0 +1,26 @@
+{
+  "batches": [
+    {
+      "id": "probe_pilot_v1",
+      "condition": "P3",
+      "dataset": "datasets/B-part/work/runs/probe_pilot_v1",
+      "verification": {
+        "report": "datasets/B-part/work/pilot_selftest_reports/probe_pilot_v1/verification.json",
+        "status": "failed",
+        "problems": [],
+        "spectra_checked": 6,
+        "window_loss_max": 0.0009564871808354268,
+        "replicate_pairs_all_passed": true,
+        "pairs": {
+          "interference | As/Pb": {
+            "As KL3_LINE": 2,
+            "Fe KL3_LINE": 6,
+            "Pb L3M5_LINE": 2,
+            "Pb M5N6_LINE": 2,
+            "S KL3_LINE": 6
+          }
+        }
+      }
+    }
+  ]
+}

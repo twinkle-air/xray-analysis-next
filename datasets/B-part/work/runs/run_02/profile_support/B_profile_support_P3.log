@@ -1,0 +1,8 @@
+command: python -B app.py support --profile C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\datasets\B-part\P3_candidate.json --elements Na Mg Al Si P S Cl K Ca Ti V Cr Mn Fe Co Ni Cu Zn As Se Rb Sr Y Zr Nb Mo Cd Sn Sb Ba W Pb --out C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\datasets\B-part\work\runs\run_02\profile_support\B_profile_support_P3.json
+cwd: C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\fp-spectrum-generator-competition-v0.2.1\fp_competition
+exit_code: 0
+stdout:
+C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\datasets\B-part\work\runs\run_02\profile_support\B_profile_support_P3.json
+
+stderr:
+

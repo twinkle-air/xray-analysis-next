@@ -1,0 +1,1287 @@
+{
+  "stage": "member B section 2 candidate conditions (P3/P4)",
+  "status": "candidate_built_and_preflighted, awaiting the joint freeze",
+  "non_authoritative": "these two files are B proposals. They are NOT frozen conditions: formal P3/P4 production may only start after the team freezes them (or replaces them); if the frozen values differ, the pilot acceptance must be redone with the frozen files",
+  "calibration_status": "assumed_unverified",
+  "calibration_note": "the delivered release refuses any calibration_status other than assumed_unverified, so no hardware calibration is claimed for P3/P4",
+  "field_count_profile_dataclass": 34,
+  "fields_written_per_candidate": {
+    "P3": 34,
+    "P4": 34
+  },
+  "config_sha256": {
+    "P3_candidate.json": {
+      "sha256_of_file": "4b533155c69ccc1aadc47133fab81aa707ee74b5993b43bab4fe826c2c39a69f",
+      "sha256_of_canonical_field_vector": "0a0b5e0276b7e0d0a347c501dbfa9c5f26f4bf26c439341b481a14aae837ea42",
+      "bytes": 987
+    },
+    "P4_candidate.json": {
+      "sha256_of_file": "5e696944ba972d68f696b56878d648b07c0397d3c490f4d176eba7430abd1f32",
+      "sha256_of_canonical_field_vector": "197182623607a1fd5570b3365ac63e3050259793bac00b77795d27951b6482a0",
+      "bytes": 996
+    }
+  },
+  "energy_window_keV": {
+    "P1": {
+      "unit": "keV",
+      "first_center": 0.6133928571428573,
+      "last_center": 28.942410714285714,
+      "lower_edge": 0.6064732142857144,
+      "upper_edge": 28.949330357142856,
+      "channels": 2048,
+      "channel_of_edge": {
+        "lower_edge_channel": -0.5,
+        "first_center_channel": 0,
+        "last_center_channel": 2047,
+        "upper_edge_channel": 2047.5
+      }
+    },
+    "P2": {
+      "unit": "keV",
+      "first_center": 0.55,
+      "last_center": 29.208000000000002,
+      "lower_edge": 0.543,
+      "upper_edge": 29.215000000000003,
+      "channels": 2048,
+      "channel_of_edge": {
+        "lower_edge_channel": -0.5,
+        "first_center_channel": 0,
+        "last_center_channel": 2047,
+        "upper_edge_channel": 2047.5
+      }
+    },
+    "local_default": {
+      "unit": "keV",
+      "first_center": 0.6133928571428573,
+      "last_center": 28.942410714285714,
+      "lower_edge": 0.6064732142857144,
+      "upper_edge": 28.949330357142856,
+      "channels": 2048,
+      "channel_of_edge": {
+        "lower_edge_channel": -0.5,
+        "first_center_channel": 0,
+        "last_center_channel": 2047,
+        "upper_edge_channel": 2047.5
+      }
+    },
+    "P3_candidate": {
+      "unit": "keV",
+      "first_center": 0.3,
+      "last_center": 16.676000000000002,
+      "lower_edge": 0.296,
+      "upper_edge": 16.680000000000003,
+      "channels": 2048,
+      "channel_of_edge": {
+        "lower_edge_channel": -0.5,
+        "first_center_channel": 0,
+        "last_center_channel": 2047,
+        "upper_edge_channel": 2047.5
+      }
+    },
+    "P4_candidate": {
+      "unit": "keV",
+      "first_center": 0.45,
+      "last_center": 26.0375,
+      "lower_edge": 0.44375000000000003,
+      "upper_edge": 26.043750000000003,
+      "channels": 2048,
+      "channel_of_edge": {
+        "lower_edge_channel": -0.5,
+        "first_center_channel": 0,
+        "last_center_channel": 2047,
+        "upper_edge_channel": 2047.5
+      }
+    }
+  },
+  "window_definition": "channel i centre energy = zero_keV + gain_keV_channel * i; the window edges are one half gain below the first centre and one half gain above the last centre (dataset.energy_window)",
+  "per_field_diff": {
+    "name": {
+      "unit": "label",
+      "local_default": "assumed_SDD_method_validation",
+      "a_P1": "assumed_P1_reference",
+      "a_P2": "assumed_P2_low_exposure",
+      "B_P3_candidate": "candidate_B_P3_low_voltage_L_systems",
+      "B_P4_candidate": "candidate_B_P4_hard_filter_long_air_path",
+      "P3_changed_vs_a_P1": true,
+      "P4_changed_vs_a_P1": true,
+      "P3_changed_vs_local_default": true,
+      "P4_changed_vs_local_default": true,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "voltage_kV": {
+      "unit": "kV",
+      "local_default": 49.0,
+      "a_P1": 49.0,
+      "a_P2": 49.0,
+      "B_P3_candidate": 20.0,
+      "B_P4_candidate": 49.0,
+      "P3_changed_vs_a_P1": true,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": true,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "20 kV 是任务卡指定的低压情景：Ag 的 K 系(22.16 keV)在 20 kV 下不被激发，一次线只剩连续谱与 Ag L 系(约 2.98 keV)，重元素只能靠 L/M 系与连续谱尾部激发，用来检验模型与标签在低激发效率条件下是否仍然可用",
+      "reason_P4": "49 kV 由任务卡指定，与 A 的 P1/P2 相同，使本情景的变量集中在衰减与噪声"
+    },
+    "current_uA": {
+      "unit": "uA",
+      "local_default": 196.1,
+      "a_P1": 196.1,
+      "a_P2": 196.1,
+      "B_P3_candidate": 196.1,
+      "B_P4_candidate": 196.1,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "沿用 A 的 196.1 uA，使管流不是本情景的自由变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "reference_current_uA": {
+      "unit": "uA",
+      "local_default": 196.1,
+      "a_P1": 196.1,
+      "a_P2": 196.1,
+      "B_P3_candidate": 196.1,
+      "B_P4_candidate": 196.1,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "target": {
+      "unit": "element symbol (X-ray tube anode)",
+      "local_default": "Ag",
+      "a_P1": "Ag",
+      "a_P2": "Ag",
+      "B_P3_candidate": "Ag",
+      "B_P4_candidate": "Ag",
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "仍为 Ag 靶(任务卡要求两个候选条件都用 Ag 靶)"
+    },
+    "live_time_s": {
+      "unit": "s",
+      "local_default": 150.0,
+      "a_P1": 150.0,
+      "a_P2": 30,
+      "B_P3_candidate": 60.0,
+      "B_P4_candidate": 60.0,
+      "P3_changed_vs_a_P1": true,
+      "P4_changed_vs_a_P1": true,
+      "P3_changed_vs_local_default": true,
+      "P4_changed_vs_local_default": true,
+      "reason_P3": "取 60 s，使总入射注量为 6.0e8 photons，与 P4 候选相同；两情景每谱净计数之差因此只来自管压/刻度/噪声等物理条件，而不来自曝光设置。20 kV 下主要靠连续谱激发，产额低于 49 kV，故注量不再进一步下调以免低端统计过差",
+      "reason_P4": "60 s，与 P3 候选共用同一总入射注量 6.0e8 photons，使两个情景的计数统计水平可直接比较；滤波与空气路径造成的实际净计数差异由探针实测记录"
+    },
+    "incident_photons_s": {
+      "unit": "photons/s at 1 uA-equivalent before the specified incident air path",
+      "local_default": 10000000.0,
+      "a_P1": 10000000.0,
+      "a_P2": 5000000.0,
+      "B_P3_candidate": 10000000.0,
+      "B_P4_candidate": 10000000.0,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "沿用 A 的 P1 的 1e7 photons/s，与 P4 候选一致，只允许 live time 定义本情景的曝光量",
+      "reason_P4": "沿用 A 的 P1 的 1e7 photons/s，不用提高管通量去抵消 100 um Al 滤波与 8 cm 空气路径造成的通量损失，让低能衰减作为可观测量保留在谱形里"
+    },
+    "channels": {
+      "unit": "count",
+      "local_default": 2048,
+      "a_P1": 2048,
+      "a_P2": 2048,
+      "B_P3_candidate": 2048,
+      "B_P4_candidate": 2048,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "gain_keV_channel": {
+      "unit": "keV/channel",
+      "local_default": 0.013839285714285714,
+      "a_P1": 0.013839285714285714,
+      "a_P2": 0.014,
+      "B_P3_candidate": 0.008,
+      "B_P4_candidate": 0.0125,
+      "P3_changed_vs_a_P1": true,
+      "P4_changed_vs_a_P1": true,
+      "P3_changed_vs_local_default": true,
+      "P4_changed_vs_local_default": true,
+      "reason_P3": "与零位一起把 2048 道压到 0.30-16.68 keV，提高 3-13 keV 的 L 系采样密度",
+      "reason_P4": "0.0125 keV/道，把窗口拉到 0.45-26.04 keV，覆盖 Ag 韧致极限与 Sn/Sb K 系，避免\"出窗损失\"被窗口选择掩盖"
+    },
+    "zero_keV": {
+      "unit": "keV",
+      "local_default": 0.6133928571428573,
+      "a_P1": 0.6133928571428573,
+      "a_P2": 0.55,
+      "B_P3_candidate": 0.3,
+      "B_P4_candidate": 0.45,
+      "P3_changed_vs_a_P1": true,
+      "P4_changed_vs_a_P1": true,
+      "P3_changed_vs_local_default": true,
+      "P4_changed_vs_local_default": true,
+      "reason_P3": "把窗口下沿从 0.613 keV 降到 0.30 keV，避免低压软线被窗口切掉",
+      "reason_P4": "零位 0.45 keV，与增益一起定义边界窗"
+    },
+    "noise_fwhm_eV": {
+      "unit": "eV (electronic noise floor of the FWHM model)",
+      "local_default": 55.0,
+      "a_P1": 55.0,
+      "a_P2": 70,
+      "B_P3_candidate": 90.0,
+      "B_P4_candidate": 140.0,
+      "P3_changed_vs_a_P1": true,
+      "P4_changed_vs_a_P1": true,
+      "P3_changed_vs_local_default": true,
+      "P4_changed_vs_local_default": true,
+      "reason_P3": "低压通道假定更差的电子学：90 eV 噪声底(相对 A 的 P1 55 eV)",
+      "reason_P4": "140 eV 噪声底：本情景故意用最差的分辨率，考察近重合线(As/Pb、S/Pb)的容忍度"
+    },
+    "fano_factor": {
+      "unit": "dimensionless",
+      "local_default": 0.115,
+      "a_P1": 0.115,
+      "a_P2": 0.115,
+      "B_P3_candidate": 0.115,
+      "B_P4_candidate": 0.115,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "pair_creation_eV": {
+      "unit": "eV per electron-hole pair",
+      "local_default": 3.65,
+      "a_P1": 3.65,
+      "a_P2": 3.65,
+      "B_P3_candidate": 3.65,
+      "B_P4_candidate": 3.65,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "detector_area_cm2": {
+      "unit": "cm^2",
+      "local_default": 0.25,
+      "a_P1": 0.25,
+      "a_P2": 0.25,
+      "B_P3_candidate": 0.25,
+      "B_P4_candidate": 0.25,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "detector_distance_cm": {
+      "unit": "cm",
+      "local_default": 1.0,
+      "a_P1": 1.0,
+      "a_P2": 1.0,
+      "B_P3_candidate": 1.0,
+      "B_P4_candidate": 1.0,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "detector_si_um": {
+      "unit": "um (Si dead layer)",
+      "local_default": 500.0,
+      "a_P1": 500.0,
+      "a_P2": 500.0,
+      "B_P3_candidate": 500.0,
+      "B_P4_candidate": 500.0,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "detector_be_um": {
+      "unit": "um (detector Be window)",
+      "local_default": 12.5,
+      "a_P1": 12.5,
+      "a_P2": 12.5,
+      "B_P3_candidate": 12.5,
+      "B_P4_candidate": 12.5,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "tube_be_um": {
+      "unit": "um (tube Be window)",
+      "local_default": 200.0,
+      "a_P1": 200.0,
+      "a_P2": 200.0,
+      "B_P3_candidate": 200.0,
+      "B_P4_candidate": 200.0,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "filter_Al_um": {
+      "unit": "um (Al filter in the beam)",
+      "local_default": 0.0,
+      "a_P1": 0.0,
+      "a_P2": 0.0,
+      "B_P3_candidate": 0.0,
+      "B_P4_candidate": 100.0,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": true,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": true,
+      "reason_P3": "保持 0，低压情景不引入滤波片变量(滤波片是 P4 的主题)",
+      "reason_P4": "100 um Al 硬滤波：Al K 边 1.56 keV 以下几乎全被吸收，专门压 Na/Mg/Al/Si/P/S/Cl 等轻元素线，检验低端衰减建模"
+    },
+    "incident_air_path_cm": {
+      "unit": "cm",
+      "local_default": 0.0,
+      "a_P1": 0.0,
+      "a_P2": 0.5,
+      "B_P3_candidate": 0.0,
+      "B_P4_candidate": 4.0,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": true,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": true,
+      "reason_P3": "保持 0，空气路径是 P4 的变量",
+      "reason_P4": "入射侧空气路径 4.0 cm(比 A 的 P2 0.5 cm 长 8 倍)，与滤波片叠加低能吸收"
+    },
+    "exit_air_path_cm": {
+      "unit": "cm",
+      "local_default": 0.0,
+      "a_P1": 0.0,
+      "a_P2": 0.5,
+      "B_P3_candidate": 0.0,
+      "B_P4_candidate": 4.0,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": true,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": true,
+      "reason_P3": "保持 0，空气路径是 P4 的变量",
+      "reason_P4": "出射侧空气路径 4.0 cm，同样只压制低能荧光线"
+    },
+    "air_density_g_cm3": {
+      "unit": "g/cm^3",
+      "local_default": 0.001205,
+      "a_P1": 0.001205,
+      "a_P2": 0.001205,
+      "B_P3_candidate": 0.001205,
+      "B_P4_candidate": 0.001205,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "incident_angle_deg": {
+      "unit": "deg",
+      "local_default": 45.0,
+      "a_P1": 45.0,
+      "a_P2": 45.0,
+      "B_P3_candidate": 45.0,
+      "B_P4_candidate": 45.0,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "exit_angle_deg": {
+      "unit": "deg",
+      "local_default": 45.0,
+      "a_P1": 45.0,
+      "a_P2": 45.0,
+      "B_P3_candidate": 45.0,
+      "B_P4_candidate": 45.0,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "scatter_angle_deg": {
+      "unit": "deg",
+      "local_default": 90.0,
+      "a_P1": 90.0,
+      "a_P2": 90.0,
+      "B_P3_candidate": 90.0,
+      "B_P4_candidate": 90.0,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "mass_thickness_g_cm2": {
+      "unit": "g/cm^2 (sample areal thickness)",
+      "local_default": 2.37,
+      "a_P1": 2.37,
+      "a_P2": 2.37,
+      "B_P3_candidate": 2.37,
+      "B_P4_candidate": 2.37,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "tube_line_fraction": {
+      "unit": "fraction of the total flux placed in the discrete tube lines",
+      "local_default": 0.15,
+      "a_P1": 0.15,
+      "a_P2": 0.15,
+      "B_P3_candidate": 0.15,
+      "B_P4_candidate": 0.15,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "escape_fraction": {
+      "unit": "fraction of Si K escapes for lines above the Si K edge",
+      "local_default": 0.01,
+      "a_P1": 0.01,
+      "a_P2": 0.01,
+      "B_P3_candidate": 0.01,
+      "B_P4_candidate": 0.01,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "source_step_keV": {
+      "unit": "keV (continuum quadrature step)",
+      "local_default": 0.1,
+      "a_P1": 0.1,
+      "a_P2": 0.1,
+      "B_P3_candidate": 0.1,
+      "B_P4_candidate": 0.1,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "secondary_layers": {
+      "unit": "count (finite-slab secondary-fluorescence discretisation)",
+      "local_default": 96,
+      "a_P1": 96,
+      "a_P2": 96,
+      "B_P3_candidate": 96,
+      "B_P4_candidate": 96,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "secondary": {
+      "unit": "boolean",
+      "local_default": true,
+      "a_P1": true,
+      "a_P2": true,
+      "B_P3_candidate": true,
+      "B_P4_candidate": true,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "scatter": {
+      "unit": "boolean",
+      "local_default": true,
+      "a_P1": true,
+      "a_P2": true,
+      "B_P3_candidate": true,
+      "B_P4_candidate": true,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "background_counts_channel": {
+      "unit": "counts/channel (flat background)",
+      "local_default": 0.0,
+      "a_P1": 0.0,
+      "a_P2": 0.0,
+      "B_P3_candidate": 0.0,
+      "B_P4_candidate": 0.0,
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    },
+    "calibration_status": {
+      "unit": "enum; this release only accepts assumed_unverified",
+      "local_default": "assumed_unverified",
+      "a_P1": "assumed_unverified",
+      "a_P2": "assumed_unverified",
+      "B_P3_candidate": "assumed_unverified",
+      "B_P4_candidate": "assumed_unverified",
+      "P3_changed_vs_a_P1": false,
+      "P4_changed_vs_a_P1": false,
+      "P3_changed_vs_local_default": false,
+      "P4_changed_vs_local_default": false,
+      "reason_P3": "与 A 的 P1 保持一致，本情景不引入该变量",
+      "reason_P4": "与 A 的 P1 保持一致，本情景不引入该变量"
+    }
+  },
+  "changed_field_names": {
+    "P3_vs_a_P1": [
+      "gain_keV_channel",
+      "live_time_s",
+      "name",
+      "noise_fwhm_eV",
+      "voltage_kV",
+      "zero_keV"
+    ],
+    "P4_vs_a_P1": [
+      "exit_air_path_cm",
+      "filter_Al_um",
+      "gain_keV_channel",
+      "incident_air_path_cm",
+      "live_time_s",
+      "name",
+      "noise_fwhm_eV",
+      "zero_keV"
+    ],
+    "P3_vs_local_default": [
+      "gain_keV_channel",
+      "live_time_s",
+      "name",
+      "noise_fwhm_eV",
+      "voltage_kV",
+      "zero_keV"
+    ],
+    "P4_vs_local_default": [
+      "exit_air_path_cm",
+      "filter_Al_um",
+      "gain_keV_channel",
+      "incident_air_path_cm",
+      "live_time_s",
+      "name",
+      "noise_fwhm_eV",
+      "zero_keV"
+    ]
+  },
+  "target_tube_lines": {
+    "P3_candidate": [
+      {
+        "line": "KL1_LINE",
+        "energy_keV": 21.7082,
+        "below_voltage": false,
+        "inside_window": false
+      },
+      {
+        "line": "KL2_LINE",
+        "energy_keV": 21.9903,
+        "below_voltage": false,
+        "inside_window": false
+      },
+      {
+        "line": "KL3_LINE",
+        "energy_keV": 22.1629,
+        "below_voltage": false,
+        "inside_window": false
+      },
+      {
+        "line": "KM1_LINE",
+        "energy_keV": 24.7965,
+        "below_voltage": false,
+        "inside_window": false
+      },
+      {
+        "line": "KM2_LINE",
+        "energy_keV": 24.9116,
+        "below_voltage": false,
+        "inside_window": false
+      },
+      {
+        "line": "KM3_LINE",
+        "energy_keV": 24.9426,
+        "below_voltage": false,
+        "inside_window": false
+      },
+      {
+        "line": "KM4_LINE",
+        "energy_keV": 25.1412,
+        "below_voltage": false,
+        "inside_window": false
+      },
+      {
+        "line": "KM5_LINE",
+        "energy_keV": 25.1473,
+        "below_voltage": false,
+        "inside_window": false
+      },
+      {
+        "line": "KN1_LINE",
+        "energy_keV": 25.4188,
+        "below_voltage": false,
+        "inside_window": false
+      },
+      {
+        "line": "KN2_LINE",
+        "energy_keV": 25.4514,
+        "below_voltage": false,
+        "inside_window": false
+      },
+      {
+        "line": "KN3_LINE",
+        "energy_keV": 25.4581,
+        "below_voltage": false,
+        "inside_window": false
+      },
+      {
+        "line": "KN4_LINE",
+        "energy_keV": 25.5107,
+        "below_voltage": false,
+        "inside_window": false
+      },
+      {
+        "line": "KN5_LINE",
+        "energy_keV": 25.5107,
+        "below_voltage": false,
+        "inside_window": false
+      },
+      {
+        "line": "L1M1_LINE",
+        "energy_keV": 3.0883,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1M2_LINE",
+        "energy_keV": 3.2034,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1M3_LINE",
+        "energy_keV": 3.2344,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1M4_LINE",
+        "energy_keV": 3.433,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1M5_LINE",
+        "energy_keV": 3.4391,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1N1_LINE",
+        "energy_keV": 3.7106,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1N2_LINE",
+        "energy_keV": 3.7432,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1N3_LINE",
+        "energy_keV": 3.7499,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1N4_LINE",
+        "energy_keV": 3.8025,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1N5_LINE",
+        "energy_keV": 3.8025,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2M1_LINE",
+        "energy_keV": 2.8062,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2M2_LINE",
+        "energy_keV": 2.9213,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2M3_LINE",
+        "energy_keV": 2.9523,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2M4_LINE",
+        "energy_keV": 3.1509,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2M5_LINE",
+        "energy_keV": 3.157,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2N1_LINE",
+        "energy_keV": 3.4285,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2N2_LINE",
+        "energy_keV": 3.4611,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2N3_LINE",
+        "energy_keV": 3.4678,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2N4_LINE",
+        "energy_keV": 3.5204,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2N5_LINE",
+        "energy_keV": 3.5204,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3M1_LINE",
+        "energy_keV": 2.6336,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3M2_LINE",
+        "energy_keV": 2.7487,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3M3_LINE",
+        "energy_keV": 2.7797,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3M4_LINE",
+        "energy_keV": 2.9783,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3M5_LINE",
+        "energy_keV": 2.9844,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3N1_LINE",
+        "energy_keV": 3.2559,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3N2_LINE",
+        "energy_keV": 3.2885,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3N3_LINE",
+        "energy_keV": 3.2952,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3N4_LINE",
+        "energy_keV": 3.3478,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3N5_LINE",
+        "energy_keV": 3.3478,
+        "below_voltage": true,
+        "inside_window": true
+      }
+    ],
+    "P4_candidate": [
+      {
+        "line": "KL1_LINE",
+        "energy_keV": 21.7082,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "KL2_LINE",
+        "energy_keV": 21.9903,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "KL3_LINE",
+        "energy_keV": 22.1629,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "KM1_LINE",
+        "energy_keV": 24.7965,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "KM2_LINE",
+        "energy_keV": 24.9116,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "KM3_LINE",
+        "energy_keV": 24.9426,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "KM4_LINE",
+        "energy_keV": 25.1412,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "KM5_LINE",
+        "energy_keV": 25.1473,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "KN1_LINE",
+        "energy_keV": 25.4188,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "KN2_LINE",
+        "energy_keV": 25.4514,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "KN3_LINE",
+        "energy_keV": 25.4581,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "KN4_LINE",
+        "energy_keV": 25.5107,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "KN5_LINE",
+        "energy_keV": 25.5107,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1M1_LINE",
+        "energy_keV": 3.0883,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1M2_LINE",
+        "energy_keV": 3.2034,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1M3_LINE",
+        "energy_keV": 3.2344,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1M4_LINE",
+        "energy_keV": 3.433,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1M5_LINE",
+        "energy_keV": 3.4391,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1N1_LINE",
+        "energy_keV": 3.7106,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1N2_LINE",
+        "energy_keV": 3.7432,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1N3_LINE",
+        "energy_keV": 3.7499,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1N4_LINE",
+        "energy_keV": 3.8025,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L1N5_LINE",
+        "energy_keV": 3.8025,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2M1_LINE",
+        "energy_keV": 2.8062,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2M2_LINE",
+        "energy_keV": 2.9213,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2M3_LINE",
+        "energy_keV": 2.9523,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2M4_LINE",
+        "energy_keV": 3.1509,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2M5_LINE",
+        "energy_keV": 3.157,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2N1_LINE",
+        "energy_keV": 3.4285,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2N2_LINE",
+        "energy_keV": 3.4611,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2N3_LINE",
+        "energy_keV": 3.4678,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2N4_LINE",
+        "energy_keV": 3.5204,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L2N5_LINE",
+        "energy_keV": 3.5204,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3M1_LINE",
+        "energy_keV": 2.6336,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3M2_LINE",
+        "energy_keV": 2.7487,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3M3_LINE",
+        "energy_keV": 2.7797,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3M4_LINE",
+        "energy_keV": 2.9783,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3M5_LINE",
+        "energy_keV": 2.9844,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3N1_LINE",
+        "energy_keV": 3.2559,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3N2_LINE",
+        "energy_keV": 3.2885,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3N3_LINE",
+        "energy_keV": 3.2952,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3N4_LINE",
+        "energy_keV": 3.3478,
+        "below_voltage": true,
+        "inside_window": true
+      },
+      {
+        "line": "L3N5_LINE",
+        "energy_keV": 3.3478,
+        "below_voltage": true,
+        "inside_window": true
+      }
+    ],
+    "note": "the delivered source model only keeps a discrete tube line when its energy is below the tube voltage, so at 20 kV the Ag K system (22.16/24.94 keV) is absent by construction and primary excitation comes from the continuum plus Ag L"
+  },
+  "exposure_arithmetic": {
+    "P3": "1.0e7 photons/s * 60 s * (196.1/196.1) = 6.0e8 <= 1e14 numeric cap",
+    "P4": "1.0e7 photons/s * 60 s * (196.1/196.1) = 6.0e8 <= 1e14 numeric cap",
+    "validator": "Profile.validate() of the delivered release enforces the cap and was run on both candidates",
+    "fluence_design": "both candidates deliberately share one incident fluence (6.0e8 photons) so a counts gap between P3 and P4 is attributable to the tube voltage, filter, air path and calibration, not to exposure",
+    "counting_level_reference": {
+      "a_p1_total_observed_counts_range": [
+        270981,
+        823275
+      ],
+      "a_p2_total_observed_counts_range": [
+        24025,
+        79017
+      ],
+      "source": "datasets/A-part-20261018/A_acceptance_summary.json pilots.<P1|P2>.total_observed_counts_range",
+      "use": "B targets the same order of magnitude per spectrum; the realised value per candidate is measured by the probes below and is not asserted here"
+    }
+  },
+  "support_runs": {
+    "P3": {
+      "profile_file": "datasets/B-part/P3_candidate.json",
+      "profile_sha256": "4b533155c69ccc1aadc47133fab81aa707ee74b5993b43bab4fe826c2c39a69f",
+      "support_file": "datasets/B-part/work/runs/run_02/profile_support/B_profile_support_P3.json",
+      "support_sha256": "02871cc3a41067834e808450ce227909029fbbe590e7437a37f9331ad267258f",
+      "stable_copy": "datasets/B-part/work/profile_support/B_profile_support_P3.json",
+      "stable_copy_sha256": "02871cc3a41067834e808450ce227909029fbbe590e7437a37f9331ad267258f",
+      "stable_copy_identical": true,
+      "command": "python -B app.py support --profile P3_candidate.json --elements <32 targets> --out B_profile_support_P3.json",
+      "element_count": 32,
+      "status_counts": {
+        "structurally_supported_unvalidated": 32
+      },
+      "log": "datasets/B-part/work/runs/run_02/profile_support/B_profile_support_P3.log"
+    },
+    "P4": {
+      "profile_file": "datasets/B-part/P4_candidate.json",
+      "profile_sha256": "5e696944ba972d68f696b56878d648b07c0397d3c490f4d176eba7430abd1f32",
+      "support_file": "datasets/B-part/work/runs/run_02/profile_support/B_profile_support_P4.json",
+      "support_sha256": "cabba0704e4c3e73062b29e86109174481c26c3bcae2ec8b4649b2e0d1dc6c02",
+      "stable_copy": "datasets/B-part/work/profile_support/B_profile_support_P4.json",
+      "stable_copy_sha256": "cabba0704e4c3e73062b29e86109174481c26c3bcae2ec8b4649b2e0d1dc6c02",
+      "stable_copy_identical": true,
+      "command": "python -B app.py support --profile P4_candidate.json --elements <32 targets> --out B_profile_support_P4.json",
+      "element_count": 32,
+      "status_counts": {
+        "strongly_attenuated_assumed_response": 3,
+        "structurally_supported_unvalidated": 29
+      },
+      "log": "datasets/B-part/work/runs/run_02/profile_support/B_profile_support_P4.log"
+    },
+    "P1_reference": {
+      "profile_file": "datasets/A-part-20261018/P1.json",
+      "profile_sha256": "f8b726dc0083dd8f1ea4b60f6b46b10b575c5c711794f0f2a9a89d21bba55ecf",
+      "support_file": "datasets/B-part/work/runs/run_02/profile_support/B_profile_support_P1_reference.json",
+      "support_sha256": "a37bf5d9a76a2dec1a47a5ccd29b1c28f3014d39ed7c3d163b73a720b22381ce",
+      "stable_copy": "datasets/B-part/work/profile_support/B_profile_support_P1_reference.json",
+      "stable_copy_sha256": "a37bf5d9a76a2dec1a47a5ccd29b1c28f3014d39ed7c3d163b73a720b22381ce",
+      "stable_copy_identical": true,
+      "command": "python -B app.py support --profile P1.json --elements <32 targets> --out B_profile_support_P1_reference.json",
+      "element_count": 32,
+      "status_counts": {
+        "structurally_supported_unvalidated": 32
+      },
+      "log": "datasets/B-part/work/runs/run_02/profile_support/B_profile_support_P1_reference.log"
+    }
+  },
+  "probes": {
+    "P3": {
+      "purpose": "counting-level and window-loss pre-flight only; not part of any pilot, not counted in the 20,000 or 50,000 budget",
+      "recipes": [
+        "B00001",
+        "B01165"
+      ],
+      "seed": 2026101822,
+      "elapsed_seconds": 8.85,
+      "seconds_per_spectrum": 4.43,
+      "records": [
+        {
+          "record": "S000001",
+          "formula_id": "S000001",
+          "total_expected_counts": 648017.3077358252,
+          "total_observed_counts": 647033.0,
+          "detected_before_window_counts": 648456.9435223422,
+          "outside_window_counts": 439.63578651664244,
+          "window_loss_fraction": 0.0006779722091162943
+        },
+        {
+          "record": "S000002",
+          "formula_id": "S000002",
+          "total_expected_counts": 620421.3308576385,
+          "total_observed_counts": 620022.0,
+          "detected_before_window_counts": 620871.7091871742,
+          "outside_window_counts": 450.3783295360834,
+          "window_loss_fraction": 0.0007253967653409505
+        }
+      ],
+      "observed_counts_range": [
+        620022.0,
+        647033.0
+      ],
+      "a_p1_reference_range": [
+        270981,
+        823275
+      ],
+      "counts_ratio_vs_a_p1_midpoint": 1.158,
+      "spectrum_count": 2
+    },
+    "P4": {
+      "purpose": "counting-level and window-loss pre-flight only; not part of any pilot, not counted in the 20,000 or 50,000 budget",
+      "recipes": [
+        "B00001",
+        "B01165"
+      ],
+      "seed": 2026101822,
+      "elapsed_seconds": 10.01,
+      "seconds_per_spectrum": 5.01,
+      "records": [
+        {
+          "record": "S000001",
+          "formula_id": "S000001",
+          "total_expected_counts": 785773.5396810179,
+          "total_observed_counts": 787328.0,
+          "detected_before_window_counts": 791309.8096611176,
+          "outside_window_counts": 5536.269980098559,
+          "window_loss_fraction": 0.006996336848736268
+        },
+        {
+          "record": "S000002",
+          "formula_id": "S000002",
+          "total_expected_counts": 682151.1149444607,
+          "total_observed_counts": 682544.0,
+          "detected_before_window_counts": 687666.5657083642,
+          "outside_window_counts": 5515.450763900608,
+          "window_loss_fraction": 0.00802053064513781
+        }
+      ],
+      "observed_counts_range": [
+        682544.0,
+        787328.0
+      ],
+      "a_p1_reference_range": [
+        270981,
+        823275
+      ],
+      "counts_ratio_vs_a_p1_midpoint": 1.343,
+      "spectrum_count": 2
+    }
+  },
+  "handed_to": "A and C for the joint condition freeze; B pilot batches use exactly these two files and no other numbers",
+  "cli_output_run_directory": "datasets/B-part/work/runs/run_02",
+  "run_directory_note": "the delivered CLI will not overwrite an existing --out path, so each run writes work/runs/run_NN and the newest reports are additionally copied byte for byte to the stable deliverable names under work/profile_support/"
+}

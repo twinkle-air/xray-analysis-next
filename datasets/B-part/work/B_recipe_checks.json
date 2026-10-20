@@ -1,0 +1,22 @@
+{
+  "nonnegative_and_finite": true,
+  "sum_is_100_within_strict_tolerance": true,
+  "max_abs_composition_sum_error": 1.4210854715202004e-14,
+  "scenario_quota_met": true,
+  "unique_by_a_rule_hash": 1500,
+  "unique_by_unified_12_decimal": 1500,
+  "duplicate_repairs": [],
+  "id_format_stable_and_unique": true,
+  "provenance_reconversion_matches": true,
+  "provenance_reconversion_mismatches": [],
+  "closure_policy_used": [
+    "strict"
+  ],
+  "matrix_owner": [
+    "B",
+    "iron_rich_oxide"
+  ],
+  "elements_outside_canonical_order": [],
+  "block_construction_violation_count": 0,
+  "block_construction_violations": []
+}

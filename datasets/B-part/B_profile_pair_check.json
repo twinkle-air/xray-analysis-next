@@ -1,0 +1,242 @@
+{
+  "stage": "member B section 2 interference pair resolution check",
+  "definition": {
+    "delta_keV": "energy gap between the two line centres",
+    "fwhm_keV": "delivered Profile.fwhm_keV at each line energy: sqrt(noise_fwhm_eV^2 + 2.35482^2 * Fano * pair_creation_eV * E)/1000",
+    "separation_in_fwhm": "delta_keV divided by the larger of the two FWHM values. Below ~1 means the two Gaussians share one peak maximum, i.e. 'structurally both present' but not resolvable by peak shape alone",
+    "separation_in_channels": "delta_keV / gain_keV_channel",
+    "status_note": "this is a peak-shape statement only. It is not a detection limit, not a concentration accuracy claim, and not a fit that was actually run on a generated spectrum"
+  },
+  "conditions": {
+    "P1_a_reference": {
+      "profile_file": "datasets/A-part-20261018/P1.json",
+      "voltage_kV": 49.0,
+      "noise_fwhm_eV": 55.0,
+      "fano_factor": 0.115,
+      "gain_keV_channel": 0.013839285714285714,
+      "zero_keV": 0.6133928571428573,
+      "filter_Al_um": 0.0,
+      "incident_air_path_cm": 0.0,
+      "exit_air_path_cm": 0.0,
+      "pairs": [
+        {
+          "pair": "As_K_vs_Pb_L",
+          "line_a": "As KL3",
+          "energy_a_keV": 10.5436,
+          "channel_a": 717.54,
+          "fwhm_a_keV": 0.16603,
+          "line_b": "Pb L3M5",
+          "energy_b_keV": 10.5512,
+          "channel_b": 718.09,
+          "fwhm_b_keV": 0.16608,
+          "delta_keV": 0.0076,
+          "delta_eV": 7.6,
+          "separation_in_channels": 0.55,
+          "separation_in_fwhm": 0.0458,
+          "resolvable_by_peak_shape": false,
+          "support_state": {
+            "element_a_status": "structurally_supported_unvalidated",
+            "element_b_status": "structurally_supported_unvalidated",
+            "line_a_excitable": true,
+            "line_a_window_fraction": 1.0,
+            "line_b_excitable": true,
+            "line_b_window_fraction": 1.0
+          }
+        },
+        {
+          "pair": "S_K_vs_Pb_M",
+          "line_a": "S KL3",
+          "energy_a_keV": 2.3078,
+          "channel_a": 122.43,
+          "fwhm_a_keV": 0.09163,
+          "line_b": "Pb M5N6",
+          "energy_b_keV": 2.3428,
+          "channel_b": 124.96,
+          "fwhm_b_keV": 0.09208,
+          "delta_keV": 0.035,
+          "delta_eV": 35.0,
+          "separation_in_channels": 2.53,
+          "separation_in_fwhm": 0.3801,
+          "resolvable_by_peak_shape": false,
+          "support_state": {
+            "element_a_status": "structurally_supported_unvalidated",
+            "element_b_status": "structurally_supported_unvalidated",
+            "line_a_excitable": true,
+            "line_a_window_fraction": 1.0,
+            "line_b_excitable": true,
+            "line_b_window_fraction": 1.0
+          }
+        }
+      ]
+    },
+    "P2_a_reference": {
+      "profile_file": "datasets/A-part-20261018/P2.json",
+      "voltage_kV": 49.0,
+      "noise_fwhm_eV": 70,
+      "fano_factor": 0.115,
+      "gain_keV_channel": 0.014,
+      "zero_keV": 0.55,
+      "filter_Al_um": 0.0,
+      "incident_air_path_cm": 0.5,
+      "exit_air_path_cm": 0.5,
+      "pairs": [
+        {
+          "pair": "As_K_vs_Pb_L",
+          "line_a": "As KL3",
+          "energy_a_keV": 10.5436,
+          "channel_a": 713.83,
+          "fwhm_a_keV": 0.17158,
+          "line_b": "Pb L3M5",
+          "energy_b_keV": 10.5512,
+          "channel_b": 714.37,
+          "fwhm_b_keV": 0.17164,
+          "delta_keV": 0.0076,
+          "delta_eV": 7.6,
+          "separation_in_channels": 0.54,
+          "separation_in_fwhm": 0.0443,
+          "resolvable_by_peak_shape": false,
+          "support_state": {}
+        },
+        {
+          "pair": "S_K_vs_Pb_M",
+          "line_a": "S KL3",
+          "energy_a_keV": 2.3078,
+          "channel_a": 125.56,
+          "fwhm_a_keV": 0.10135,
+          "line_b": "Pb M5N6",
+          "energy_b_keV": 2.3428,
+          "channel_b": 128.06,
+          "fwhm_b_keV": 0.10175,
+          "delta_keV": 0.035,
+          "delta_eV": 35.0,
+          "separation_in_channels": 2.5,
+          "separation_in_fwhm": 0.344,
+          "resolvable_by_peak_shape": false,
+          "support_state": {}
+        }
+      ]
+    },
+    "P3_B_candidate": {
+      "profile_file": "datasets/B-part/P3_candidate.json",
+      "voltage_kV": 20.0,
+      "noise_fwhm_eV": 90.0,
+      "fano_factor": 0.115,
+      "gain_keV_channel": 0.008,
+      "zero_keV": 0.3,
+      "filter_Al_um": 0.0,
+      "incident_air_path_cm": 0.0,
+      "exit_air_path_cm": 0.0,
+      "pairs": [
+        {
+          "pair": "As_K_vs_Pb_L",
+          "line_a": "As KL3",
+          "energy_a_keV": 10.5436,
+          "channel_a": 1280.45,
+          "fwhm_a_keV": 0.18067,
+          "line_b": "Pb L3M5",
+          "energy_b_keV": 10.5512,
+          "channel_b": 1281.4,
+          "fwhm_b_keV": 0.18072,
+          "delta_keV": 0.0076,
+          "delta_eV": 7.6,
+          "separation_in_channels": 0.95,
+          "separation_in_fwhm": 0.0421,
+          "resolvable_by_peak_shape": false,
+          "support_state": {
+            "element_a_status": "structurally_supported_unvalidated",
+            "element_b_status": "structurally_supported_unvalidated",
+            "line_a_excitable": true,
+            "line_a_window_fraction": 1.0,
+            "line_b_excitable": true,
+            "line_b_window_fraction": 1.0
+          }
+        },
+        {
+          "pair": "S_K_vs_Pb_M",
+          "line_a": "S KL3",
+          "energy_a_keV": 2.3078,
+          "channel_a": 250.97,
+          "fwhm_a_keV": 0.11607,
+          "line_b": "Pb M5N6",
+          "energy_b_keV": 2.3428,
+          "channel_b": 255.35,
+          "fwhm_b_keV": 0.11642,
+          "delta_keV": 0.035,
+          "delta_eV": 35.0,
+          "separation_in_channels": 4.38,
+          "separation_in_fwhm": 0.3006,
+          "resolvable_by_peak_shape": false,
+          "support_state": {
+            "element_a_status": "structurally_supported_unvalidated",
+            "element_b_status": "structurally_supported_unvalidated",
+            "line_a_excitable": true,
+            "line_a_window_fraction": 1.0,
+            "line_b_excitable": true,
+            "line_b_window_fraction": 1.0
+          }
+        }
+      ]
+    },
+    "P4_B_candidate": {
+      "profile_file": "datasets/B-part/P4_candidate.json",
+      "voltage_kV": 49.0,
+      "noise_fwhm_eV": 140.0,
+      "fano_factor": 0.115,
+      "gain_keV_channel": 0.0125,
+      "zero_keV": 0.45,
+      "filter_Al_um": 100.0,
+      "incident_air_path_cm": 4.0,
+      "exit_air_path_cm": 4.0,
+      "pairs": [
+        {
+          "pair": "As_K_vs_Pb_L",
+          "line_a": "As KL3",
+          "energy_a_keV": 10.5436,
+          "channel_a": 807.49,
+          "fwhm_a_keV": 0.2101,
+          "line_b": "Pb L3M5",
+          "energy_b_keV": 10.5512,
+          "channel_b": 808.1,
+          "fwhm_b_keV": 0.21014,
+          "delta_keV": 0.0076,
+          "delta_eV": 7.6,
+          "separation_in_channels": 0.61,
+          "separation_in_fwhm": 0.0362,
+          "resolvable_by_peak_shape": false,
+          "support_state": {
+            "element_a_status": "structurally_supported_unvalidated",
+            "element_b_status": "structurally_supported_unvalidated",
+            "line_a_excitable": true,
+            "line_a_window_fraction": 1.0,
+            "line_b_excitable": true,
+            "line_b_window_fraction": 1.0
+          }
+        },
+        {
+          "pair": "S_K_vs_Pb_M",
+          "line_a": "S KL3",
+          "energy_a_keV": 2.3078,
+          "channel_a": 148.62,
+          "fwhm_a_keV": 0.15802,
+          "line_b": "Pb M5N6",
+          "energy_b_keV": 2.3428,
+          "channel_b": 151.42,
+          "fwhm_b_keV": 0.15828,
+          "delta_keV": 0.035,
+          "delta_eV": 35.0,
+          "separation_in_channels": 2.8,
+          "separation_in_fwhm": 0.2211,
+          "resolvable_by_peak_shape": false,
+          "support_state": {
+            "element_a_status": "structurally_supported_unvalidated",
+            "element_b_status": "structurally_supported_unvalidated",
+            "line_a_excitable": true,
+            "line_a_window_fraction": 1.0,
+            "line_b_excitable": true,
+            "line_b_window_fraction": 1.0
+          }
+        }
+      ]
+    }
+  }
+}
