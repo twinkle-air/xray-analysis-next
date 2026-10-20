@@ -1,0 +1,156 @@
+{
+  "owner": "B",
+  "recorded_at": "2026-10-19T18:07:34+0800",
+  "role": "frozen interpreter for every B design, generation, audit, replay and pack run",
+  "python": {
+    "version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\work\\venv313\\Scripts\\python.exe",
+    "implementation": "CPython",
+    "build": "3.13.14",
+    "filesystem_encoding": "utf-8",
+    "float_info": {
+      "dig": 15,
+      "epsilon": 2.220446049250313e-16
+    }
+  },
+  "system": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "release": "11",
+    "version": "10.0.26200",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "cpu_count": 32,
+    "windows_version": "sys.getwindowsversion(major=10, minor=0, build=26200, platform=2, service_pack='')"
+  },
+  "thread_environment": {},
+  "thread_policy": "OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=NUMEXPR_NUM_THREADS=1 for every generator run so B results do not depend on BLAS splitting; the same pinned environment is used for generation and replay inside B, which is what makes B internal replay same_environment comparable",
+  "dependencies": {
+    "lock_file": "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\requirements-lock.txt",
+    "lock_sha256": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0",
+    "expected": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "matplotlib": "3.11.2",
+      "xraylib": "4.3.0",
+      "openpyxl": "3.1.5",
+      "et-xmlfile": "2.0.0",
+      "contourpy": "1.3.3",
+      "cycler": "0.12.1",
+      "fonttools": "4.66.0",
+      "kiwisolver": "1.5.1",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pyparsing": "3.3.3",
+      "python-dateutil": "2.9.0.post0",
+      "six": "1.17.0"
+    },
+    "actual": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "matplotlib": "3.11.2",
+      "xraylib": "4.3.0",
+      "openpyxl": "3.1.5",
+      "et-xmlfile": "2.0.0",
+      "contourpy": "1.3.3",
+      "cycler": "0.12.1",
+      "fonttools": "4.66.0",
+      "kiwisolver": "1.5.1",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pyparsing": "3.3.3",
+      "python-dateutil": "2.9.0.post0",
+      "six": "1.17.0"
+    },
+    "mismatches": {}
+  },
+  "numpy_internals": {
+    "numpy_version": "2.4.6",
+    "default_bit_generator": "PCG64",
+    "blas": {
+      "blas": {
+        "name": "scipy-openblas",
+        "found": true,
+        "version": "0.3.31.188.0",
+        "detection method": "pkgconfig",
+        "include directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-zj20k55h/cp313-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include",
+        "lib directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-zj20k55h/cp313-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib",
+        "openblas configuration": "OpenBLAS 0.3.31.188.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=24",
+        "pc file directory": "D:/a/numpy-release/numpy-release/.openblas"
+      },
+      "lapack": {
+        "name": "scipy-openblas",
+        "found": true,
+        "version": "0.3.31.188.0",
+        "detection method": "pkgconfig",
+        "include directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-zj20k55h/cp313-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include",
+        "lib directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-zj20k55h/cp313-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib",
+        "openblas configuration": "OpenBLAS 0.3.31.188.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=24",
+        "pc file directory": "D:/a/numpy-release/numpy-release/.openblas"
+      }
+    }
+  },
+  "generator_source": {
+    "directory": "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\fp-spectrum-generator-competition-v0.2.1\\fp_competition",
+    "key_file_sha256": {
+      "app.py": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+      "core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "dataset.py": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+      "requirements-lock.txt": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0",
+      "default_profile.json": "68e83da80e9938af58ff1a41210075934351420f5a8e0741f8ba2706a978df97",
+      "physics_baseline.json": "0e2d67fa5ccaa818c71bb51011a56a934e242c20071c365ac695e6de9d599c86",
+      "version.py": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+      "robustness.py": "8878e652ce4b1554e97d383e2428718f1f140d10624007206eea908d59b9f634"
+    },
+    "sealed_copy_verification": {
+      "report": "work/B_source_verification.json",
+      "status": "passed",
+      "compared_count": 35,
+      "mismatches": [],
+      "p1_vs_p2": []
+    }
+  },
+  "measured_throughput": {
+    "seconds_per_spectrum": 5.011,
+    "basis": "six spectra of A's sealed P1 profile measured by work/check_environment_reproducibility.py",
+    "estimated_pilot_wall_clock_minutes": 33.4,
+    "estimated_replay_wall_clock_minutes": 33.4
+  },
+  "cross_environment_check": {
+    "purpose": "environment_reproducibility_check_only; never a training, validation, tuning or test batch and never counted in the 50,000 formal budget",
+    "status": "passed",
+    "maximum_absolute_expected_counts_difference": 0.0,
+    "observed_counts_bit_identical_to_a": true,
+    "blind_input_files_byte_identical_to_a": true,
+    "b_python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "a_environment_as_recorded_by_a": {
+      "python": "3.12.14",
+      "implementation": "CPython",
+      "system": "Windows",
+      "machine": "AMD64",
+      "packages": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "xraylib": "4.3.0",
+        "matplotlib": "3.11.2",
+        "openpyxl": "3.1.5"
+      },
+      "bit_generator": "PCG64",
+      "thread_environment": {
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null
+      }
+    },
+    "a_replay_thread_note": "A generated with all three thread variables unset and replayed with OMP/OPENBLAS=1, which is why A's own replay reported same_environment=false while differences_limited_to_thread_environment=true",
+    "b_replay_policy": "B generates and replays both with the same pinned thread environment, so the B internal replay can report same_environment=true; a cross-person replay run with the variables unset is expected to differ only in that block",
+    "conclusion": "the 3.13.14 interpreter with the exact dependency lock reproduces A's sealed pilot arrays and Poisson streams exactly on the probe, so no numeric interpreter delta was observed on this machine"
+  },
+  "explicit_non_choices": {
+    "启动生成器.cmd": "not used: it launches the desktop GUI and does not record a reproducible production command",
+    "GUI export": "not used: every batch is produced through app.py batch with recorded arguments, seeds and files",
+    "D:\\Python314 system interpreter": "not used for generator work",
+    "XRF physics solver rewrite": "not done: generator digests match the copy sealed inside A P1_pack.zip",
+    "A directory writes": "none: A files are read only"
+  }
+}

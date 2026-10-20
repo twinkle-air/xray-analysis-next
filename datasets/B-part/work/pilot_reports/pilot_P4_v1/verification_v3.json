@@ -1,0 +1,2700 @@
+{
+  "batch": "pilot_P4_v1",
+  "condition": "P4",
+  "purpose": "workflow pilot verification only, not an accuracy or detection-limit claim",
+  "declared_checks": {
+    "replicate_identity": "two spectra of one recipe must share composition, profile, energy axis, the full expected spectrum and the six component spectra, and differ only in Poisson counting noise",
+    "six_component_identity": "sum(components) = sum(expected_counts) and sum(components) + sum(outside_window) = detected_signal_before_window_counts, tolerance 1e-6 relative",
+    "window_loss_budget": "declared before the run: outside/detected <= 0.01 per spectrum",
+    "profile_matches_candidate_file": "every sealed profile must equal P4_candidate.json field for field",
+    "energy_window_matches_candidate": "every sealed energy_window must equal the window the delivered dataset.energy_window() derives from P4_candidate.json",
+    "composition_sums_to_100": "used_percent must sum to 100 within the documented strict tolerance of 1e-6 percentage points",
+    "support_table": "the delivered core.element_support() is called with original_percent keys minus {Als, Alt} union the modelled weights (core.py:406), so the table documents the elements of this recipe, not a fixed 32-target panel. Accepted rule, checked per spectrum: the key set must reproduce that call exactly, every target with positive used mass must have an entry, and O is counted separately as a non-target key.",
+    "matrix_line": "every spectrum with Fe mass must model Fe KL3_LINE"
+  },
+  "spectra_checked": 200,
+  "recipes_checked": 100,
+  "candidate_energy_window": {
+    "unit": "keV",
+    "first_center": 0.45,
+    "last_center": 26.0375,
+    "lower_edge": 0.44375000000000003,
+    "upper_edge": 26.043750000000003
+  },
+  "sealed_windows_all_identical": true,
+  "replicate_pairs_all_passed": true,
+  "replicate_rows": [
+    {
+      "original_sample_id": "B00015",
+      "record_ids": [
+        "S000001",
+        "S000002"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        656504,
+        655741
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 501
+    },
+    {
+      "original_sample_id": "B00018",
+      "record_ids": [
+        "S000003",
+        "S000004"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        640148,
+        641235
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 430
+    },
+    {
+      "original_sample_id": "B00024",
+      "record_ids": [
+        "S000005",
+        "S000006"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        720449,
+        720837
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 339
+    },
+    {
+      "original_sample_id": "B00059",
+      "record_ids": [
+        "S000007",
+        "S000008"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        726302,
+        727658
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 759
+    },
+    {
+      "original_sample_id": "B00086",
+      "record_ids": [
+        "S000009",
+        "S000010"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        608228,
+        608475
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 787
+    },
+    {
+      "original_sample_id": "B00101",
+      "record_ids": [
+        "S000011",
+        "S000012"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        527851,
+        526538
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 320
+    },
+    {
+      "original_sample_id": "B00106",
+      "record_ids": [
+        "S000013",
+        "S000014"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        605135,
+        606583
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 421
+    },
+    {
+      "original_sample_id": "B00128",
+      "record_ids": [
+        "S000015",
+        "S000016"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        536193,
+        537784
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 540
+    },
+    {
+      "original_sample_id": "B00165",
+      "record_ids": [
+        "S000017",
+        "S000018"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        701045,
+        701667
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 485
+    },
+    {
+      "original_sample_id": "B00193",
+      "record_ids": [
+        "S000019",
+        "S000020"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        703413,
+        703808
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 475
+    },
+    {
+      "original_sample_id": "B00218",
+      "record_ids": [
+        "S000021",
+        "S000022"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        763946,
+        764571
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 385
+    },
+    {
+      "original_sample_id": "B00242",
+      "record_ids": [
+        "S000023",
+        "S000024"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        565026,
+        564815
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 365
+    },
+    {
+      "original_sample_id": "B00244",
+      "record_ids": [
+        "S000025",
+        "S000026"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        661288,
+        661584
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 471
+    },
+    {
+      "original_sample_id": "B00250",
+      "record_ids": [
+        "S000027",
+        "S000028"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        580951,
+        580703
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 328
+    },
+    {
+      "original_sample_id": "B00256",
+      "record_ids": [
+        "S000029",
+        "S000030"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        480490,
+        479863
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 338
+    },
+    {
+      "original_sample_id": "B00300",
+      "record_ids": [
+        "S000031",
+        "S000032"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        563236,
+        563190
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 291
+    },
+    {
+      "original_sample_id": "B00302",
+      "record_ids": [
+        "S000033",
+        "S000034"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        615020,
+        614661
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 353
+    },
+    {
+      "original_sample_id": "B00327",
+      "record_ids": [
+        "S000035",
+        "S000036"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        515796,
+        517113
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 349
+    },
+    {
+      "original_sample_id": "B00377",
+      "record_ids": [
+        "S000037",
+        "S000038"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        745410,
+        744241
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 435
+    },
+    {
+      "original_sample_id": "B00398",
+      "record_ids": [
+        "S000039",
+        "S000040"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        751053,
+        750001
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 435
+    },
+    {
+      "original_sample_id": "B00409",
+      "record_ids": [
+        "S000041",
+        "S000042"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        740042,
+        740644
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 442
+    },
+    {
+      "original_sample_id": "B00487",
+      "record_ids": [
+        "S000043",
+        "S000044"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        483800,
+        482281
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 551
+    },
+    {
+      "original_sample_id": "B00523",
+      "record_ids": [
+        "S000045",
+        "S000046"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        793134,
+        793242
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 426
+    },
+    {
+      "original_sample_id": "B00530",
+      "record_ids": [
+        "S000047",
+        "S000048"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        687009,
+        688826
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 494
+    },
+    {
+      "original_sample_id": "B00548",
+      "record_ids": [
+        "S000049",
+        "S000050"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        606714,
+        606817
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 446
+    },
+    {
+      "original_sample_id": "B00593",
+      "record_ids": [
+        "S000051",
+        "S000052"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        711751,
+        712685
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 754
+    },
+    {
+      "original_sample_id": "B00677",
+      "record_ids": [
+        "S000053",
+        "S000054"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        614109,
+        612206
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 558
+    },
+    {
+      "original_sample_id": "B00718",
+      "record_ids": [
+        "S000055",
+        "S000056"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        647866,
+        648983
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 471
+    },
+    {
+      "original_sample_id": "B00721",
+      "record_ids": [
+        "S000057",
+        "S000058"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        625561,
+        623491
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 648
+    },
+    {
+      "original_sample_id": "B00769",
+      "record_ids": [
+        "S000059",
+        "S000060"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        699818,
+        700538
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 289
+    },
+    {
+      "original_sample_id": "B00808",
+      "record_ids": [
+        "S000061",
+        "S000062"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        795535,
+        795404
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 424
+    },
+    {
+      "original_sample_id": "B00825",
+      "record_ids": [
+        "S000063",
+        "S000064"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        502542,
+        502783
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 227
+    },
+    {
+      "original_sample_id": "B00831",
+      "record_ids": [
+        "S000065",
+        "S000066"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        609148,
+        607714
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 465
+    },
+    {
+      "original_sample_id": "B00836",
+      "record_ids": [
+        "S000067",
+        "S000068"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        620158,
+        620941
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 377
+    },
+    {
+      "original_sample_id": "B00849",
+      "record_ids": [
+        "S000069",
+        "S000070"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        628200,
+        629447
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 617
+    },
+    {
+      "original_sample_id": "B00851",
+      "record_ids": [
+        "S000071",
+        "S000072"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        600860,
+        603383
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 580
+    },
+    {
+      "original_sample_id": "B00852",
+      "record_ids": [
+        "S000073",
+        "S000074"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        685410,
+        684529
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 445
+    },
+    {
+      "original_sample_id": "B00864",
+      "record_ids": [
+        "S000075",
+        "S000076"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        547706,
+        547621
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 332
+    },
+    {
+      "original_sample_id": "B00869",
+      "record_ids": [
+        "S000077",
+        "S000078"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        511103,
+        511388
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 306
+    },
+    {
+      "original_sample_id": "B00896",
+      "record_ids": [
+        "S000079",
+        "S000080"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        582308,
+        583240
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 407
+    },
+    {
+      "original_sample_id": "B00943",
+      "record_ids": [
+        "S000081",
+        "S000082"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        713465,
+        712911
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 299
+    },
+    {
+      "original_sample_id": "B00958",
+      "record_ids": [
+        "S000083",
+        "S000084"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        654714,
+        655775
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 382
+    },
+    {
+      "original_sample_id": "B00965",
+      "record_ids": [
+        "S000085",
+        "S000086"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        763964,
+        763420
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 629
+    },
+    {
+      "original_sample_id": "B00983",
+      "record_ids": [
+        "S000087",
+        "S000088"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        636144,
+        635600
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 660
+    },
+    {
+      "original_sample_id": "B00996",
+      "record_ids": [
+        "S000089",
+        "S000090"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        857199,
+        857364
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 670
+    },
+    {
+      "original_sample_id": "B00999",
+      "record_ids": [
+        "S000091",
+        "S000092"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        842983,
+        842791
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 585
+    },
+    {
+      "original_sample_id": "B01006",
+      "record_ids": [
+        "S000093",
+        "S000094"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        819258,
+        821153
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 527
+    },
+    {
+      "original_sample_id": "B01012",
+      "record_ids": [
+        "S000095",
+        "S000096"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        814897,
+        815086
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 586
+    },
+    {
+      "original_sample_id": "B01018",
+      "record_ids": [
+        "S000097",
+        "S000098"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        790543,
+        789721
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 731
+    },
+    {
+      "original_sample_id": "B01047",
+      "record_ids": [
+        "S000099",
+        "S000100"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        690603,
+        692296
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 574
+    },
+    {
+      "original_sample_id": "B01069",
+      "record_ids": [
+        "S000101",
+        "S000102"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        706207,
+        706464
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 465
+    },
+    {
+      "original_sample_id": "B01075",
+      "record_ids": [
+        "S000103",
+        "S000104"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        754878,
+        754858
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 397
+    },
+    {
+      "original_sample_id": "B01122",
+      "record_ids": [
+        "S000105",
+        "S000106"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        722367,
+        720666
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 582
+    },
+    {
+      "original_sample_id": "B01160",
+      "record_ids": [
+        "S000107",
+        "S000108"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        721275,
+        720535
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 577
+    },
+    {
+      "original_sample_id": "B01172",
+      "record_ids": [
+        "S000109",
+        "S000110"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        589599,
+        588365
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 367
+    },
+    {
+      "original_sample_id": "B01185",
+      "record_ids": [
+        "S000111",
+        "S000112"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        724949,
+        724579
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 280
+    },
+    {
+      "original_sample_id": "B01188",
+      "record_ids": [
+        "S000113",
+        "S000114"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        680277,
+        679896
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 628
+    },
+    {
+      "original_sample_id": "B01196",
+      "record_ids": [
+        "S000115",
+        "S000116"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        797675,
+        797379
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 606
+    },
+    {
+      "original_sample_id": "B01197",
+      "record_ids": [
+        "S000117",
+        "S000118"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        477189,
+        476844
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 353
+    },
+    {
+      "original_sample_id": "B01199",
+      "record_ids": [
+        "S000119",
+        "S000120"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        703793,
+        704397
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 505
+    },
+    {
+      "original_sample_id": "B01201",
+      "record_ids": [
+        "S000121",
+        "S000122"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        553681,
+        552854
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 337
+    },
+    {
+      "original_sample_id": "B01202",
+      "record_ids": [
+        "S000123",
+        "S000124"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        553546,
+        554360
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 611
+    },
+    {
+      "original_sample_id": "B01203",
+      "record_ids": [
+        "S000125",
+        "S000126"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        554900,
+        552801
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 449
+    },
+    {
+      "original_sample_id": "B01204",
+      "record_ids": [
+        "S000127",
+        "S000128"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        555102,
+        553357
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 434
+    },
+    {
+      "original_sample_id": "B01205",
+      "record_ids": [
+        "S000129",
+        "S000130"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        556799,
+        557050
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 273
+    },
+    {
+      "original_sample_id": "B01276",
+      "record_ids": [
+        "S000131",
+        "S000132"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        644754,
+        643995
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 411
+    },
+    {
+      "original_sample_id": "B01277",
+      "record_ids": [
+        "S000133",
+        "S000134"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        644548,
+        645531
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 330
+    },
+    {
+      "original_sample_id": "B01278",
+      "record_ids": [
+        "S000135",
+        "S000136"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        645329,
+        643687
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 427
+    },
+    {
+      "original_sample_id": "B01279",
+      "record_ids": [
+        "S000137",
+        "S000138"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        645712,
+        644919
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 383
+    },
+    {
+      "original_sample_id": "B01280",
+      "record_ids": [
+        "S000139",
+        "S000140"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        647120,
+        647206
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 380
+    },
+    {
+      "original_sample_id": "B01281",
+      "record_ids": [
+        "S000141",
+        "S000142"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        719576,
+        721462
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 730
+    },
+    {
+      "original_sample_id": "B01282",
+      "record_ids": [
+        "S000143",
+        "S000144"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        718287,
+        719359
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 633
+    },
+    {
+      "original_sample_id": "B01283",
+      "record_ids": [
+        "S000145",
+        "S000146"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        719453,
+        718313
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 359
+    },
+    {
+      "original_sample_id": "B01284",
+      "record_ids": [
+        "S000147",
+        "S000148"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        720439,
+        720248
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 650
+    },
+    {
+      "original_sample_id": "B01285",
+      "record_ids": [
+        "S000149",
+        "S000150"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        722057,
+        721139
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 594
+    },
+    {
+      "original_sample_id": "B01301",
+      "record_ids": [
+        "S000151",
+        "S000152"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        771859,
+        773874
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 587
+    },
+    {
+      "original_sample_id": "B01302",
+      "record_ids": [
+        "S000153",
+        "S000154"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        773146,
+        773061
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 454
+    },
+    {
+      "original_sample_id": "B01303",
+      "record_ids": [
+        "S000155",
+        "S000156"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        772120,
+        773333
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 456
+    },
+    {
+      "original_sample_id": "B01304",
+      "record_ids": [
+        "S000157",
+        "S000158"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        773275,
+        773117
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 518
+    },
+    {
+      "original_sample_id": "B01305",
+      "record_ids": [
+        "S000159",
+        "S000160"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        774680,
+        773323
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 497
+    },
+    {
+      "original_sample_id": "B01356",
+      "record_ids": [
+        "S000161",
+        "S000162"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        714581,
+        717532
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 392
+    },
+    {
+      "original_sample_id": "B01357",
+      "record_ids": [
+        "S000163",
+        "S000164"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        714115,
+        711796
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 397
+    },
+    {
+      "original_sample_id": "B01358",
+      "record_ids": [
+        "S000165",
+        "S000166"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        714534,
+        714749
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 479
+    },
+    {
+      "original_sample_id": "B01359",
+      "record_ids": [
+        "S000167",
+        "S000168"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        710463,
+        712596
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 472
+    },
+    {
+      "original_sample_id": "B01360",
+      "record_ids": [
+        "S000169",
+        "S000170"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        689727,
+        689289
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 325
+    },
+    {
+      "original_sample_id": "B01406",
+      "record_ids": [
+        "S000171",
+        "S000172"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        549300,
+        549503
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 498
+    },
+    {
+      "original_sample_id": "B01407",
+      "record_ids": [
+        "S000173",
+        "S000174"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        545894,
+        545873
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 516
+    },
+    {
+      "original_sample_id": "B01408",
+      "record_ids": [
+        "S000175",
+        "S000176"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        548872,
+        548562
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 475
+    },
+    {
+      "original_sample_id": "B01409",
+      "record_ids": [
+        "S000177",
+        "S000178"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        546128,
+        546441
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 497
+    },
+    {
+      "original_sample_id": "B01410",
+      "record_ids": [
+        "S000179",
+        "S000180"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        526417,
+        527859
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 299
+    },
+    {
+      "original_sample_id": "B01451",
+      "record_ids": [
+        "S000181",
+        "S000182"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        730925,
+        731114
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 433
+    },
+    {
+      "original_sample_id": "B01452",
+      "record_ids": [
+        "S000183",
+        "S000184"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        730003,
+        729391
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 588
+    },
+    {
+      "original_sample_id": "B01453",
+      "record_ids": [
+        "S000185",
+        "S000186"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        732907,
+        732151
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 638
+    },
+    {
+      "original_sample_id": "B01454",
+      "record_ids": [
+        "S000187",
+        "S000188"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        729174,
+        730473
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 735
+    },
+    {
+      "original_sample_id": "B01455",
+      "record_ids": [
+        "S000189",
+        "S000190"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        706591,
+        705950
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 428
+    },
+    {
+      "original_sample_id": "B01486",
+      "record_ids": [
+        "S000191",
+        "S000192"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        553181,
+        553852
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 610
+    },
+    {
+      "original_sample_id": "B01487",
+      "record_ids": [
+        "S000193",
+        "S000194"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        550621,
+        553041
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 394
+    },
+    {
+      "original_sample_id": "B01488",
+      "record_ids": [
+        "S000195",
+        "S000196"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        553700,
+        553114
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 471
+    },
+    {
+      "original_sample_id": "B01489",
+      "record_ids": [
+        "S000197",
+        "S000198"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        551118,
+        552430
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 413
+    },
+    {
+      "original_sample_id": "B01490",
+      "record_ids": [
+        "S000199",
+        "S000200"
+      ],
+      "composition_identical": true,
+      "profile_identical": true,
+      "energy_axis_identical": true,
+      "expected_spectrum_identical": true,
+      "component_spectra_identical": true,
+      "observed_counts_differ": true,
+      "seeds_distinct": true,
+      "observed_totals": [
+        531472,
+        532128
+      ],
+      "max_abs_expected_difference": 0.0,
+      "max_abs_counts_difference": 441
+    }
+  ],
+  "window_loss": {
+    "min": 0.006106227366159124,
+    "max": 0.014404821401604796,
+    "mean": 0.009236865922090177,
+    "budget": 0.01,
+    "over_budget_count": 70,
+    "over_budget_component_share_percent": {
+      "compton": 72.908,
+      "rayleigh": 23.846,
+      "primary": 2.459,
+      "escape": 0.786,
+      "secondary": 0.001
+    },
+    "over_budget_record_ids": [
+      "S000009",
+      "S000010",
+      "S000011",
+      "S000012",
+      "S000015",
+      "S000016",
+      "S000023",
+      "S000024",
+      "S000027",
+      "S000028",
+      "S000029",
+      "S000030",
+      "S000031",
+      "S000032",
+      "S000035",
+      "S000036",
+      "S000043",
+      "S000044",
+      "S000049",
+      "S000050",
+      "S000053",
+      "S000054",
+      "S000057",
+      "S000058",
+      "S000063",
+      "S000064",
+      "S000067",
+      "S000068",
+      "S000071",
+      "S000072",
+      "S000075",
+      "S000076",
+      "S000077",
+      "S000078",
+      "S000079",
+      "S000080",
+      "S000109",
+      "S000110",
+      "S000117",
+      "S000118",
+      "S000121",
+      "S000122",
+      "S000123",
+      "S000124",
+      "S000125",
+      "S000126",
+      "S000127",
+      "S000128",
+      "S000129",
+      "S000130",
+      "S000171",
+      "S000172",
+      "S000173",
+      "S000174",
+      "S000175",
+      "S000176",
+      "S000177",
+      "S000178",
+      "S000179",
+      "S000180",
+      "S000191",
+      "S000192",
+      "S000193",
+      "S000194",
+      "S000195",
+      "S000196",
+      "S000197",
+      "S000198",
+      "S000199",
+      "S000200"
+    ],
+    "loss_side_attribution": {
+      "lower_edge_keV": 0.44375000000000003,
+      "upper_edge_keV": 26.043750000000003,
+      "tube_voltage_keV": 49.0,
+      "delivered_source_grid_starts_at_1_keV": true,
+      "compton_90deg_threshold_keV": 27.442,
+      "conclusion": "the discarded band is the high-energy side, from 26.044 keV to the 49 keV tube voltage (unscattered continuum plus its Rayleigh and Compton tail; a photon above 27.4 keV Compton-scattered at 90 degrees still lands above the window). Nothing can sit below the 0.444 keV lower edge because the delivered source grid starts at 1 keV"
+    }
+  },
+  "element_status_counts_per_spectrum": {
+    "Al": {
+      "strongly_attenuated_assumed_response": 194
+    },
+    "As": {
+      "structurally_supported_unvalidated": 160
+    },
+    "Ba": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Ca": {
+      "structurally_supported_unvalidated": 196
+    },
+    "Cd": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Cl": {
+      "structurally_supported_unvalidated": 186
+    },
+    "Co": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Cr": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Cu": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Fe": {
+      "structurally_supported_unvalidated": 200
+    },
+    "K": {
+      "structurally_supported_unvalidated": 186
+    },
+    "Mg": {
+      "strongly_attenuated_assumed_response": 188
+    },
+    "Mn": {
+      "structurally_supported_unvalidated": 186
+    },
+    "Mo": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Na": {
+      "strongly_attenuated_assumed_response": 186
+    },
+    "Nb": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Ni": {
+      "structurally_supported_unvalidated": 200
+    },
+    "O": {
+      "no_modeled_line_above_1keV": 200
+    },
+    "P": {
+      "structurally_supported_unvalidated": 186
+    },
+    "Pb": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Rb": {
+      "structurally_supported_unvalidated": 200
+    },
+    "S": {
+      "structurally_supported_unvalidated": 186
+    },
+    "Sb": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Se": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Si": {
+      "structurally_supported_unvalidated": 194
+    },
+    "Sn": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Sr": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Ti": {
+      "structurally_supported_unvalidated": 186
+    },
+    "V": {
+      "structurally_supported_unvalidated": 200
+    },
+    "W": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Y": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Zn": {
+      "structurally_supported_unvalidated": 200
+    },
+    "Zr": {
+      "structurally_supported_unvalidated": 200
+    }
+  },
+  "support_non_target_keys": {
+    "O": 200
+  },
+  "support_target_count_histogram": {
+    "32": 146,
+    "23": 14,
+    "31": 40
+  },
+  "target_coverage": {
+    "Na": {
+      "spectra": 200,
+      "positive": 186,
+      "exact_zero": 14,
+      "low_le_0p1": 14,
+      "min_positive_percent": 0.002922341196768802,
+      "max_positive_percent": 1.577233321699152
+    },
+    "Mg": {
+      "spectra": 200,
+      "positive": 188,
+      "exact_zero": 12,
+      "low_le_0p1": 2,
+      "min_positive_percent": 0.022007873610813748,
+      "max_positive_percent": 7.228437161365907
+    },
+    "Al": {
+      "spectra": 200,
+      "positive": 194,
+      "exact_zero": 6,
+      "low_le_0p1": 14,
+      "min_positive_percent": 0.0011909373141273062,
+      "max_positive_percent": 10.58198382479043
+    },
+    "Si": {
+      "spectra": 200,
+      "positive": 194,
+      "exact_zero": 6,
+      "low_le_0p1": 4,
+      "min_positive_percent": 0.0011578255377094494,
+      "max_positive_percent": 11.597947440926
+    },
+    "P": {
+      "spectra": 200,
+      "positive": 186,
+      "exact_zero": 14,
+      "low_le_0p1": 56,
+      "min_positive_percent": 0.004735371369291525,
+      "max_positive_percent": 0.42984413731869786
+    },
+    "S": {
+      "spectra": 200,
+      "positive": 170,
+      "exact_zero": 30,
+      "low_le_0p1": 48,
+      "min_positive_percent": 0.003438182144889101,
+      "max_positive_percent": 0.7048591587477614
+    },
+    "Cl": {
+      "spectra": 200,
+      "positive": 186,
+      "exact_zero": 14,
+      "low_le_0p1": 70,
+      "min_positive_percent": 0.0020620807842890955,
+      "max_positive_percent": 0.3011122108731497
+    },
+    "K": {
+      "spectra": 200,
+      "positive": 186,
+      "exact_zero": 14,
+      "low_le_0p1": 16,
+      "min_positive_percent": 0.004310551907348209,
+      "max_positive_percent": 1.6602972399150744
+    },
+    "Ca": {
+      "spectra": 200,
+      "positive": 196,
+      "exact_zero": 4,
+      "low_le_0p1": 8,
+      "min_positive_percent": 0.01309375378322534,
+      "max_positive_percent": 10.564940852269443
+    },
+    "Ti": {
+      "spectra": 200,
+      "positive": 186,
+      "exact_zero": 14,
+      "low_le_0p1": 24,
+      "min_positive_percent": 0.0010485506240006683,
+      "max_positive_percent": 1.7362761375733324
+    },
+    "V": {
+      "spectra": 200,
+      "positive": 156,
+      "exact_zero": 44,
+      "low_le_0p1": 148,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.21711454813266579
+    },
+    "Cr": {
+      "spectra": 200,
+      "positive": 166,
+      "exact_zero": 34,
+      "low_le_0p1": 160,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.20565546557852252
+    },
+    "Mn": {
+      "spectra": 200,
+      "positive": 186,
+      "exact_zero": 14,
+      "low_le_0p1": 26,
+      "min_positive_percent": 0.0018117476960653766,
+      "max_positive_percent": 3.040474164578445
+    },
+    "Fe": {
+      "spectra": 200,
+      "positive": 200,
+      "exact_zero": 0,
+      "low_le_0p1": 0,
+      "min_positive_percent": 27.977457733249842,
+      "max_positive_percent": 52.45773324984345
+    },
+    "Co": {
+      "spectra": 200,
+      "positive": 158,
+      "exact_zero": 42,
+      "low_le_0p1": 152,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.1363798440789668
+    },
+    "Ni": {
+      "spectra": 200,
+      "positive": 156,
+      "exact_zero": 44,
+      "low_le_0p1": 140,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.13053301129787723
+    },
+    "Cu": {
+      "spectra": 200,
+      "positive": 146,
+      "exact_zero": 54,
+      "low_le_0p1": 140,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.14829976120941077
+    },
+    "Zn": {
+      "spectra": 200,
+      "positive": 174,
+      "exact_zero": 26,
+      "low_le_0p1": 154,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.2743708334596919
+    },
+    "As": {
+      "spectra": 200,
+      "positive": 108,
+      "exact_zero": 92,
+      "low_le_0p1": 94,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.2
+    },
+    "Se": {
+      "spectra": 200,
+      "positive": 166,
+      "exact_zero": 34,
+      "low_le_0p1": 166,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.08737122545850166
+    },
+    "Rb": {
+      "spectra": 200,
+      "positive": 148,
+      "exact_zero": 52,
+      "low_le_0p1": 134,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.1989513338362212
+    },
+    "Sr": {
+      "spectra": 200,
+      "positive": 132,
+      "exact_zero": 68,
+      "low_le_0p1": 126,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.30000000000000004
+    },
+    "Y": {
+      "spectra": 200,
+      "positive": 146,
+      "exact_zero": 54,
+      "low_le_0p1": 132,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.14632793246038844
+    },
+    "Zr": {
+      "spectra": 200,
+      "positive": 146,
+      "exact_zero": 54,
+      "low_le_0p1": 122,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.33792108286581246
+    },
+    "Nb": {
+      "spectra": 200,
+      "positive": 150,
+      "exact_zero": 50,
+      "low_le_0p1": 144,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.2
+    },
+    "Mo": {
+      "spectra": 200,
+      "positive": 142,
+      "exact_zero": 58,
+      "low_le_0p1": 138,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.14033417796529918
+    },
+    "Cd": {
+      "spectra": 200,
+      "positive": 162,
+      "exact_zero": 38,
+      "low_le_0p1": 158,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.1177487524105067
+    },
+    "Sn": {
+      "spectra": 200,
+      "positive": 176,
+      "exact_zero": 24,
+      "low_le_0p1": 174,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.11596364674944758
+    },
+    "Sb": {
+      "spectra": 200,
+      "positive": 150,
+      "exact_zero": 50,
+      "low_le_0p1": 136,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.14047395741257873
+    },
+    "Ba": {
+      "spectra": 200,
+      "positive": 134,
+      "exact_zero": 66,
+      "low_le_0p1": 128,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.3459504746753409
+    },
+    "W": {
+      "spectra": 200,
+      "positive": 156,
+      "exact_zero": 44,
+      "low_le_0p1": 140,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.1918829056679292
+    },
+    "Pb": {
+      "spectra": 200,
+      "positive": 138,
+      "exact_zero": 62,
+      "low_le_0p1": 126,
+      "min_positive_percent": 9.999999999999999e-05,
+      "max_positive_percent": 0.2564006928731056
+    }
+  },
+  "line_system_check": {
+    "meaning": "per scenario/interference-pair group: how many of the 200 spectra model each watched line, how many of those place it inside the recorded window, and the largest expected net detected counts that line reaches in that group. Modeled counts are bounded by how many spectra actually contain the element, listed in elements_present. Line existence is not resolvability, and a modeled line with a small net count is not detectability either.",
+    "expected_detected_counts": "primary_emitted + secondary_emitted, multiplied by the same factors core.simulate() applies (incident_photons_s * live_time_s * current_uA / reference_current_uA * solid_angle / 4pi, then detector_efficiency * exit-air transmission), so the number is an expected net count over the whole live time",
+    "geometry_multiplier": 11268379.636771496,
+    "watched_lines": [
+      "As KL3_LINE",
+      "Fe KL3_LINE",
+      "Pb L3M5_LINE",
+      "Pb M5N6_LINE",
+      "S KL3_LINE"
+    ],
+    "groups": {
+      "routine | not-an-interference-family": {
+        "scenario": "routine",
+        "candidate_pair": "not-an-interference-family",
+        "spectra": 80,
+        "elements_present": {
+          "Fe": 80,
+          "As": 58,
+          "S": 80,
+          "Pb": 64
+        },
+        "lines": {
+          "As KL3_LINE": {
+            "modeled_in_spectra": 58,
+            "in_window_in_spectra": 58,
+            "energy_keV": 10.5436,
+            "channel": 807.49,
+            "max_expected_detected_counts": 2016.9855371261667
+          },
+          "Fe KL3_LINE": {
+            "modeled_in_spectra": 80,
+            "in_window_in_spectra": 80,
+            "energy_keV": 6.4039,
+            "channel": 476.31,
+            "max_expected_detected_counts": 422693.57743807253
+          },
+          "Pb L3M5_LINE": {
+            "modeled_in_spectra": 64,
+            "in_window_in_spectra": 64,
+            "energy_keV": 10.5512,
+            "channel": 808.1,
+            "max_expected_detected_counts": 1850.4964108417091
+          },
+          "Pb M5N6_LINE": {
+            "modeled_in_spectra": 64,
+            "in_window_in_spectra": 64,
+            "energy_keV": 2.3428,
+            "channel": 151.42,
+            "max_expected_detected_counts": 0.6635960560012725
+          },
+          "S KL3_LINE": {
+            "modeled_in_spectra": 80,
+            "in_window_in_spectra": 80,
+            "energy_keV": 2.3078,
+            "channel": 148.62,
+            "max_expected_detected_counts": 17.33250591726525
+          }
+        }
+      },
+      "sparse_boundary | not-an-interference-family": {
+        "scenario": "sparse_boundary",
+        "candidate_pair": "not-an-interference-family",
+        "spectra": 40,
+        "elements_present": {
+          "Fe": 40,
+          "As": 26,
+          "S": 26,
+          "Pb": 26
+        },
+        "lines": {
+          "As KL3_LINE": {
+            "modeled_in_spectra": 26,
+            "in_window_in_spectra": 26,
+            "energy_keV": 10.5436,
+            "channel": 807.49,
+            "max_expected_detected_counts": 179.89639939684145
+          },
+          "Fe KL3_LINE": {
+            "modeled_in_spectra": 40,
+            "in_window_in_spectra": 40,
+            "energy_keV": 6.4039,
+            "channel": 476.31,
+            "max_expected_detected_counts": 469658.937131359
+          },
+          "Pb L3M5_LINE": {
+            "modeled_in_spectra": 26,
+            "in_window_in_spectra": 26,
+            "energy_keV": 10.5512,
+            "channel": 808.1,
+            "max_expected_detected_counts": 633.5413251479026
+          },
+          "Pb M5N6_LINE": {
+            "modeled_in_spectra": 26,
+            "in_window_in_spectra": 26,
+            "energy_keV": 2.3428,
+            "channel": 151.42,
+            "max_expected_detected_counts": 0.24902065413514038
+          },
+          "S KL3_LINE": {
+            "modeled_in_spectra": 26,
+            "in_window_in_spectra": 26,
+            "energy_keV": 2.3078,
+            "channel": 148.62,
+            "max_expected_detected_counts": 10.896093023916503
+          }
+        }
+      },
+      "interference | As/Pb": {
+        "scenario": "interference",
+        "candidate_pair": "As/Pb",
+        "spectra": 40,
+        "elements_present": {
+          "Fe": 40,
+          "S": 40,
+          "As": 24,
+          "Pb": 24
+        },
+        "lines": {
+          "As KL3_LINE": {
+            "modeled_in_spectra": 24,
+            "in_window_in_spectra": 24,
+            "energy_keV": 10.5436,
+            "channel": 807.49,
+            "max_expected_detected_counts": 3199.9473670241646
+          },
+          "Fe KL3_LINE": {
+            "modeled_in_spectra": 40,
+            "in_window_in_spectra": 40,
+            "energy_keV": 6.4039,
+            "channel": 476.31,
+            "max_expected_detected_counts": 414786.7863713495
+          },
+          "Pb L3M5_LINE": {
+            "modeled_in_spectra": 24,
+            "in_window_in_spectra": 24,
+            "energy_keV": 10.5512,
+            "channel": 808.1,
+            "max_expected_detected_counts": 193.8285693992418
+          },
+          "Pb M5N6_LINE": {
+            "modeled_in_spectra": 24,
+            "in_window_in_spectra": 24,
+            "energy_keV": 2.3428,
+            "channel": 151.42,
+            "max_expected_detected_counts": 0.05197248495597996
+          },
+          "S KL3_LINE": {
+            "modeled_in_spectra": 40,
+            "in_window_in_spectra": 40,
+            "energy_keV": 2.3078,
+            "channel": 148.62,
+            "max_expected_detected_counts": 15.66329749715859
+          }
+        }
+      },
+      "interference | S/Pb": {
+        "scenario": "interference",
+        "candidate_pair": "S/Pb",
+        "spectra": 40,
+        "elements_present": {
+          "Fe": 40,
+          "S": 24,
+          "Pb": 24
+        },
+        "lines": {
+          "As KL3_LINE": {
+            "modeled_in_spectra": 0,
+            "in_window_in_spectra": 0,
+            "energy_keV": null,
+            "channel": null,
+            "max_expected_detected_counts": 0.0
+          },
+          "Fe KL3_LINE": {
+            "modeled_in_spectra": 40,
+            "in_window_in_spectra": 40,
+            "energy_keV": 6.4039,
+            "channel": 476.31,
+            "max_expected_detected_counts": 385293.8145999279
+          },
+          "Pb L3M5_LINE": {
+            "modeled_in_spectra": 24,
+            "in_window_in_spectra": 24,
+            "energy_keV": 10.5512,
+            "channel": 808.1,
+            "max_expected_detected_counts": 193.3863623134311
+          },
+          "Pb M5N6_LINE": {
+            "modeled_in_spectra": 24,
+            "in_window_in_spectra": 24,
+            "energy_keV": 2.3428,
+            "channel": 151.42,
+            "max_expected_detected_counts": 0.049669251844773055
+          },
+          "S KL3_LINE": {
+            "modeled_in_spectra": 24,
+            "in_window_in_spectra": 24,
+            "energy_keV": 2.3078,
+            "channel": 148.62,
+            "max_expected_detected_counts": 11.220757149221544
+          }
+        }
+      }
+    }
+  },
+  "problems": [
+    "70 of 200 spectra are above the pre-declared out-of-window budget of 0.01 (measured max 0.014405, mean 0.009237). Discarded counts on those records by component: {'compton': 72.91, 'rayleigh': 23.85, 'primary': 2.46, 'escape': 0.79, 'secondary': 0.0}. The window is the one the delivered tool derives from the candidate profile, so this is a property of the condition, not of the recipes or of the solver; the threshold was declared before the run, so B reports the miss instead of re-drawing it"
+  ],
+  "integrity_problems": [],
+  "declared_budget_finding": "70 of 200 spectra are above the pre-declared out-of-window budget of 0.01 (measured max 0.014405, mean 0.009237). Discarded counts on those records by component: {'compton': 72.91, 'rayleigh': 23.85, 'primary': 2.46, 'escape': 0.79, 'secondary': 0.0}. The window is the one the delivered tool derives from the candidate profile, so this is a property of the condition, not of the recipes or of the solver; the threshold was declared before the run, so B reports the miss instead of re-drawing it",
+  "status": "failed"
+}

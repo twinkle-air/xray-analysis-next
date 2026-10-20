@@ -1,0 +1,38 @@
+{
+  "what": "CLI flag preflight for the section 3 pilots, run before the 200+200 spectrum batches",
+  "why": "app.py refuses an existing --out for every command, so a wrong flag set would only be discovered after tens of minutes of generation. Three interference recipes x 2 replicates were enough to prove the full flag set and to discover the sealed data layout.",
+  "command": "python -B app.py batch --samples work/probe_pilot_samples.json --profile P3_candidate.json --out work/runs/probe_pilot_v1 --seed 2026101825 --replicates 2 --split-seed 20261018 --closure strict --legacy-al reject --targets <32 elements> --design-ranges B_design_ranges.json   (no --jitter; run from the delivered generator directory, BLAS threads pinned to 1)",
+  "exit_code": 0,
+  "wall_seconds_measured": 15.7,
+  "spectra": 6,
+  "families": 3,
+  "samples_used": [
+    "B01201",
+    "B01202",
+    "B01203"
+  ],
+  "probe_dataset": "datasets/B-part/work/runs/probe_pilot_v1",
+  "probe_dataset_status": "kept on disk as evidence, not a deliverable batch, not counted in the 400 pilot spectra",
+  "hashes": {
+    "P3_candidate.json": "5bb3aeb948145c587c5c25f7f7a7eab321804be556c06e0edb6e26b1e8f1ac6c",
+    "probe_samples": "0bf46630808d598991728305c23bed3d20b4fcf6a38688bd46a3669dd4068dc2",
+    "B_design_ranges.json": "0f10d70db547b05198c70d72be4c8a5c3c58dac1a31aca49a3ce3c72bc0f7d70"
+  },
+  "layout_facts_learned": {
+    "line_labels": "full_results lines use xraylib labels such as KL3_LINE, L3M5_LINE, M5N6_LINE, not the short KL3 form used by the support report",
+    "element_support_keys": "33 keys: the 32 targets plus O, because the delivered tool adds the provenance elements, so the check is a superset test, not len==32",
+    "composition_key": "full_results composition is provenance, the per-element percents live in composition.used_percent and truth.targets_percent (targets_percent also lists the exact zeros)",
+    "component_identity": "sum(six components) = sum(expected_counts) and that sum plus sum(outside_window_counts) = detected_signal_before_window_counts; measured residual -1.16e-10 counts on 533145.89 detected",
+    "energy_window": "sealed energy_window equals dataset.energy_window(P3_candidate.json) exactly: 0.296 to 16.680000000000003 keV",
+    "outside_window_components": "outside_window_counts carries five keys (no background, which is flat inside the window by construction)"
+  },
+  "pilot_scale_measurement": {
+    "note": "expected net counts over 60 s live time at 20 kV for the 200 ppm interference partners in these three recipes, computed with the delivered efficiency and air transmission functions",
+    "Fe_KL3_line": 232259.9,
+    "As_KL3_line": 78.28,
+    "Pb_L3M5_line": 31.09,
+    "Pb_M5N6_line": 1.23,
+    "S_KL3_line": 626.07,
+    "conclusion": "the designed As/Pb overlap is not only unresolved at 20 kV, both partners also sit near the counting floor at 200 ppm, so any accuracy claim from these lines needs far more live time and must not be inferred from this pilot"
+  }
+}

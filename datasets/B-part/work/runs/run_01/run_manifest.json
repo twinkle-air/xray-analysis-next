@@ -1,0 +1,7 @@
+{
+  "run": "run_01",
+  "stage": "member B section 2 candidate pre-flight, first exposure values",
+  "note": "P3 used live_time_s=240 (2.4e9 incident photons) and P4 used incident_photons_s=3e7 with live_time_s=300 (9.0e9). Measured probe totals were 2.48e6-2.59e6 (P3) and 1.02e7-1.18e7 (P4) observed counts per spectrum, i.e. 3-29x A's recorded P1 band (270981-823275, A_acceptance_summary.json pilots.P1.total_observed_counts_range). Kept as evidence of the retuning decision; superseded by run_02 which uses one shared incident fluence of 6.0e8 photons for both candidates.",
+  "preserved_because": "the delivered CLI will not overwrite an existing --out path, so outputs are versioned per run rather than rewritten",
+  "archive_only": "these spectra are counting-level probes, not pilot, train, validation or test data"
+}

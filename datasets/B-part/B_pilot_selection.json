@@ -1,0 +1,296 @@
+{
+  "stage": "member B section 3 pilot recipe selection",
+  "seed": 2026101823,
+  "rule": {
+    "routine": "seeded handle draw (sha256(\"seed|routine|id\")) over the sorted 900 routine ids",
+    "sparse_boundary": "independent seeded draw per construction block with the fixed quota {\"sparse_exact_zero\": 7, \"sparse_low\": 7, \"declared_maximum_spike\": 3, \"boundary\": 3}",
+    "interference": "whole five-row families only; the four As/Pb and four S/Pb families come from a seeded draw over the sorted family ids of each pair",
+    "controls_verified": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          10,
+          1
+        ]
+      ]
+    ]
+  },
+  "quota": {
+    "routine": 40,
+    "sparse_boundary": 20,
+    "interference": 40
+  },
+  "selected_count": 100,
+  "scenario_counts": {
+    "routine": 40,
+    "sparse_boundary": 20,
+    "interference": 40
+  },
+  "block_counts": {
+    "routine": 40,
+    "sparse_exact_zero": 7,
+    "sparse_low": 7,
+    "declared_maximum_spike": 3,
+    "boundary": 3,
+    "interference_control": 40
+  },
+  "sparse_block_detail": {
+    "sparse_exact_zero": {
+      "pool_size": 132,
+      "quota": 7,
+      "chosen": [
+        "B00943",
+        "B00965",
+        "B00983",
+        "B00999",
+        "B01047",
+        "B01069",
+        "B01075"
+      ]
+    },
+    "sparse_low": {
+      "pool_size": 132,
+      "quota": 7,
+      "chosen": [
+        "B00958",
+        "B00996",
+        "B01006",
+        "B01012",
+        "B01018",
+        "B01122",
+        "B01160"
+      ]
+    },
+    "declared_maximum_spike": {
+      "pool_size": 31,
+      "quota": 3,
+      "chosen": [
+        "B01172",
+        "B01185",
+        "B01188"
+      ]
+    },
+    "boundary": {
+      "pool_size": 5,
+      "quota": 3,
+      "chosen": [
+        "B01196",
+        "B01197",
+        "B01199"
+      ]
+    }
+  },
+  "interference_families": {
+    "As/Pb": {
+      "B-I0000": [
+        "B01201",
+        "B01202",
+        "B01203",
+        "B01204",
+        "B01205"
+      ],
+      "B-I0015": [
+        "B01276",
+        "B01277",
+        "B01278",
+        "B01279",
+        "B01280"
+      ],
+      "B-I0016": [
+        "B01281",
+        "B01282",
+        "B01283",
+        "B01284",
+        "B01285"
+      ],
+      "B-I0020": [
+        "B01301",
+        "B01302",
+        "B01303",
+        "B01304",
+        "B01305"
+      ]
+    },
+    "S/Pb": {
+      "B-I0031": [
+        "B01356",
+        "B01357",
+        "B01358",
+        "B01359",
+        "B01360"
+      ],
+      "B-I0041": [
+        "B01406",
+        "B01407",
+        "B01408",
+        "B01409",
+        "B01410"
+      ],
+      "B-I0050": [
+        "B01451",
+        "B01452",
+        "B01453",
+        "B01454",
+        "B01455"
+      ],
+      "B-I0057": [
+        "B01486",
+        "B01487",
+        "B01488",
+        "B01489",
+        "B01490"
+      ]
+    }
+  },
+  "distinct_families": 68,
+  "exposure": {
+    "meaning": "the delivered split logic separates train/validation/test only by exactly identical composed percent vectors and ignores parent_family, so the siblings of every recipe listed here will be silently available to whichever split the CLI chooses. These families are developer-exposed.",
+    "blind_test_forbidden": "no parent_family listed in B_pilot_family_exposure.csv may be used as a blind-test family for member C, in the pilot or in any formal batch",
+    "workflow_pilot_only": "the 100 recipes below feed only the pilot batches; the pilot does not enter the formal 20,000 budget and is not training, validation or final-test data"
+  },
+  "spot_checks": {
+    "fe2o3t_target_percent_present_in_selection": 2,
+    "iron_percent_min_max": [
+      27.9775,
+      52.4577
+    ],
+    "exact_zero_rows_for_sample_elements": {
+      "Sb": 25,
+      "W": 22,
+      "Zr": 27,
+      "Y": 27
+    },
+    "low_bin_rows_for_sample_elements": {
+      "Sb": 68,
+      "W": 70,
+      "Zr": 61,
+      "Y": 66
+    }
+  },
+  "files": {
+    "B_pilot_samples.json": "18ab59b974aace4de864ec6a46733c75099a4e8a98439da69f77afa7d450d96f",
+    "source_B_samples.json": "214ac617e74ca0153ebf8f5fc3aa8c1eb2f29c2e9297b884b5037c15d98973ec",
+    "source_B_formula_registry.csv": "f292e5bc4f3115621a0f54ff296a7fd83d6e58d14a45948e421c6eee457021da"
+  },
+  "selected_ids": [
+    "B00015",
+    "B00018",
+    "B00024",
+    "B00059",
+    "B00086",
+    "B00101",
+    "B00106",
+    "B00128",
+    "B00165",
+    "B00193",
+    "B00218",
+    "B00242",
+    "B00244",
+    "B00250",
+    "B00256",
+    "B00300",
+    "B00302",
+    "B00327",
+    "B00377",
+    "B00398",
+    "B00409",
+    "B00487",
+    "B00523",
+    "B00530",
+    "B00548",
+    "B00593",
+    "B00677",
+    "B00718",
+    "B00721",
+    "B00769",
+    "B00808",
+    "B00825",
+    "B00831",
+    "B00836",
+    "B00849",
+    "B00851",
+    "B00852",
+    "B00864",
+    "B00869",
+    "B00896",
+    "B00943",
+    "B00958",
+    "B00965",
+    "B00983",
+    "B00996",
+    "B00999",
+    "B01006",
+    "B01012",
+    "B01018",
+    "B01047",
+    "B01069",
+    "B01075",
+    "B01122",
+    "B01160",
+    "B01172",
+    "B01185",
+    "B01188",
+    "B01196",
+    "B01197",
+    "B01199",
+    "B01201",
+    "B01202",
+    "B01203",
+    "B01204",
+    "B01205",
+    "B01276",
+    "B01277",
+    "B01278",
+    "B01279",
+    "B01280",
+    "B01281",
+    "B01282",
+    "B01283",
+    "B01284",
+    "B01285",
+    "B01301",
+    "B01302",
+    "B01303",
+    "B01304",
+    "B01305",
+    "B01356",
+    "B01357",
+    "B01358",
+    "B01359",
+    "B01360",
+    "B01406",
+    "B01407",
+    "B01408",
+    "B01409",
+    "B01410",
+    "B01451",
+    "B01452",
+    "B01453",
+    "B01454",
+    "B01455",
+    "B01486",
+    "B01487",
+    "B01488",
+    "B01489",
+    "B01490"
+  ],
+  "not_used": {
+    "a_recipes": "zero A-part recipes were read for this selection",
+    "generation_seeds": "this seed selects recipes only; batch generation uses the seeds recorded in the pilot run script, which are not A's 2026101803/2026101804"
+  }
+}

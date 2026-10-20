@@ -1,0 +1,2 @@
+{"batch": "pilot_P3_v1", "spectra": 200, "families": 100, "splits": {"train": 140, "test": 30, "validation": 30}}
+{"batch": "pilot_P4_v1", "spectra": 200, "families": 100, "splits": {"train": 140, "test": 30, "validation": 30}}

@@ -1,0 +1,8 @@
+command: C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\datasets\B-part\work\venv313\Scripts\python.exe -B app.py design-mineral --ranges C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\datasets\B-part\B_design_ranges.json --count 1000 --out C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\datasets\B-part\work\B_design_mineral_pool.json --seed 2026101821
+cwd: C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\fp-spectrum-generator-competition-v0.2.1\fp_competition
+exit_code: 0
+stdout:
+C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\datasets\B-part\work\B_design_mineral_pool.json
+
+stderr:
+

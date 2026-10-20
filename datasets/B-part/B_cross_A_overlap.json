@@ -1,0 +1,74 @@
+{
+  "a_master_file": "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\A-part-20261018\\A_samples.json",
+  "a_recipe_count": 2500,
+  "b_recipe_count": 1500,
+  "duplicate_criterion_1_a_rule": "SHA256 of json.dumps({element: percent for nonzero elements}, sort_keys=True), identical to build_A.py",
+  "duplicate_criterion_2_unified_numeric": "unified 33-symbol element order (32 targets + O) with values rounded to 12 decimals, then SHA256; this also matches compositions that differ only by which elements happen to be zero",
+  "near_neighbour_rule": "L-inf distance over the unified 33-element vector, nearest neighbour reported for every B recipe; merge threshold 0.10 points",
+  "exact_overlap_a_rule": [],
+  "exact_overlap_unified_numeric": [],
+  "nearest_neighbour_counts_by_threshold": {
+    "0.00": 0,
+    "0.05": 0,
+    "0.10": 0,
+    "0.50": 0,
+    "1.00": 0,
+    "5.00": 0
+  },
+  "closest_pairs_top10": [
+    {
+      "b_id": "B01197",
+      "closest_a_id": "A01421",
+      "linfinity_percent": 13.995983095443998
+    },
+    {
+      "b_id": "B00071",
+      "closest_a_id": "A01421",
+      "linfinity_percent": 14.093801483203999
+    },
+    {
+      "b_id": "B01265",
+      "closest_a_id": "A01421",
+      "linfinity_percent": 14.105998302275
+    },
+    {
+      "b_id": "B00453",
+      "closest_a_id": "A00849",
+      "linfinity_percent": 14.210528124154001
+    },
+    {
+      "b_id": "B01264",
+      "closest_a_id": "A01421",
+      "linfinity_percent": 14.231896862074999
+    },
+    {
+      "b_id": "B01262",
+      "closest_a_id": "A01421",
+      "linfinity_percent": 14.245885590940999
+    },
+    {
+      "b_id": "B01263",
+      "closest_a_id": "A01421",
+      "linfinity_percent": 14.245885590940999
+    },
+    {
+      "b_id": "B00096",
+      "closest_a_id": "A01421",
+      "linfinity_percent": 14.254269598669998
+    },
+    {
+      "b_id": "B01261",
+      "closest_a_id": "A01421",
+      "linfinity_percent": 14.259874319808
+    },
+    {
+      "b_id": "B00330",
+      "closest_a_id": "A01421",
+      "linfinity_percent": 14.315110994143
+    }
+  ],
+  "matrix_separation_note": "A balances on SiO2 with Fe2O3T 1-20 percent while B balances on Fe2O3T 40-75 percent, so an exact or near collision would itself be a design error; the distances are recorded anyway",
+  "formula_id_collisions": [],
+  "parent_family_collisions": [],
+  "action_for_A": "this list is handed to A for the 5,000-row master merge; B does not modify any A recipe"
+}
