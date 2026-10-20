@@ -1,0 +1,674 @@
+{
+  "owner": "B",
+  "stage": "member B delivery status for prompt 01",
+  "rule": "passed only for work that was actually executed and whose report is on disk; pending or blocked for everything that needs A, C or the joint freeze. A single-operator self-check is not the A cross review of B.",
+  "items": {
+    "0_read_sources_and_list_existing_vs_missing": {
+      "requirement": "0. read both PDFs and the A-part evidence, list what exists and what is missing",
+      "status": "passed",
+      "evidence": [
+        "B_preflight.json"
+      ],
+      "numbers": {
+        "preflight_status": "passed",
+        "files_missing_at_intake": [],
+        "things_that_did_not_exist_before_b_started": [
+          "datasets/C-part",
+          "profiles/P3..P5 frozen configurations",
+          "authoritative_index.csv / global_split.csv",
+          "any previous B recipe file or spectra batch",
+          "M1 shared-recipe closed loop evidence (A 100 recipes, B 3 spectra each, C review)",
+          "Python 3.12.14 interpreter used by A"
+        ],
+        "input_disappeared_after_the_preflight_record": [
+          "datasets/B-part/03_prompt_review.md"
+        ]
+      }
+    },
+    "0_isolated_environment_and_digests": {
+      "requirement": "0. isolated environment from requirements-lock.txt, re-recorded digests, GUI launcher not used as a production command",
+      "status": "passed",
+      "evidence": [
+        "B_environment.json",
+        "B_preflight.json",
+        "B_environment_crosscheck.json",
+        "work/B_source_verification.json"
+      ],
+      "numbers": {
+        "local_files": 40,
+        "sealed_files_compared": 35,
+        "digest_mismatches": 0,
+        "a_sealed_p1_vs_p2_mismatches": 0,
+        "a_pilot_replay_expected_counts_max_diff": 0.0,
+        "a_pilot_blind_files_byte_identical": true,
+        "crosscheck_status": "passed"
+      }
+    },
+    "1_1500_recipes_with_predeclared_criteria": {
+      "requirement": "1. 1,500 iron-rich-oxide recipes (900/300/300) balanced on Fe2O3T, strict closure, dual dedup hashes, family integrity, near-neighbour rule",
+      "status": "passed",
+      "evidence": [
+        "B_samples.json",
+        "B_formula_registry.csv",
+        "B_coverage.json",
+        "B_design_basis.md",
+        "B_design_ranges.json",
+        "build_B.py",
+        "B_cross_A_overlap.json"
+      ],
+      "numbers": {
+        "recipes": 1500,
+        "unique_by_a_rule": 1500,
+        "unique_by_unified_12_decimal": 1500,
+        "scenarios": {
+          "routine": 900,
+          "sparse_boundary": 300,
+          "interference": 300
+        },
+        "max_abs_composition_sum_error": 1.4210854715202004e-14,
+        "duplicate_repairs": [],
+        "provenance_reconversion_mismatches": []
+      }
+    },
+    "1_exact_zero_and_low_bin_coverage": {
+      "requirement": "1. at least 50 exact-zero and 50 low-quantity (0 < percent <= 0.1) independent recipes per applicable element, otherwise a documented per-element gap with the reason",
+      "status": "passed",
+      "evidence": [
+        "B_coverage.json",
+        "B_design_basis.md"
+      ],
+      "numbers": {
+        "applicable_elements": [
+          "Na",
+          "Mg",
+          "Al",
+          "Si",
+          "P",
+          "S",
+          "Cl",
+          "K",
+          "Ca",
+          "Ti",
+          "V",
+          "Cr",
+          "Mn",
+          "Co",
+          "Ni",
+          "Cu",
+          "Zn",
+          "As",
+          "Se",
+          "Rb",
+          "Sr",
+          "Y",
+          "Zr",
+          "Nb",
+          "Mo",
+          "Cd",
+          "Sn",
+          "Sb",
+          "Ba",
+          "W",
+          "Pb"
+        ],
+        "elements_below_50_in_zero_or_low": [],
+        "exempt": {
+          "Fe": "required iron matrix of the iron-rich oxide design; never asked to be zero",
+          "O": "stoichiometric matrix bookkeeping, not a direct fluorescence target of this model version"
+        },
+        "documented_gap_elements": [
+          "As",
+          "Cd",
+          "Co",
+          "Cu",
+          "Mo",
+          "Nb",
+          "Ni",
+          "Rb",
+          "Sb",
+          "Se",
+          "Sn",
+          "W",
+          "Y"
+        ],
+        "gap_kind": "only the degenerate mid band, no zero or low shortfall (shortfall_counts empty)"
+      },
+      "note": "Fe and O are exempt: Fe is the required iron matrix, O is stoichiometric bookkeeping and not a fluorescence target of this model version"
+    },
+    "2_P3_P4_candidate_profiles": {
+      "requirement": "2. complete-field P3_candidate.json and P4_candidate.json with per-field diffs, units, reasons, windows, config SHA256 and calibration_status=assumed_unverified",
+      "status": "passed",
+      "evidence": [
+        "P3_candidate.json",
+        "P4_candidate.json",
+        "B_profile_diff.json",
+        "work/B_candidate_hash_reverification.json"
+      ],
+      "numbers": {
+        "fields_per_candidate": {
+          "P3": 34,
+          "P4": 34
+        },
+        "dataclass_field_count": 34,
+        "config_sha256": {
+          "P3_candidate.json": {
+            "sha256_of_file": "4b533155c69ccc1aadc47133fab81aa707ee74b5993b43bab4fe826c2c39a69f",
+            "sha256_of_canonical_field_vector": "0a0b5e0276b7e0d0a347c501dbfa9c5f26f4bf26c439341b481a14aae837ea42",
+            "bytes": 987
+          },
+          "P4_candidate.json": {
+            "sha256_of_file": "5e696944ba972d68f696b56878d648b07c0397d3c490f4d176eba7430abd1f32",
+            "sha256_of_canonical_field_vector": "197182623607a1fd5570b3365ac63e3050259793bac00b77795d27951b6482a0",
+            "bytes": 996
+          }
+        },
+        "digest_erratum": {
+          "P3": {
+            "sha256_of_file_as_stored": "5bb3aeb948145c587c5c25f7f7a7eab321804be556c06e0edb6e26b1e8f1ac6c",
+            "sha256_of_canonical_field_vector": "0a0b5e0276b7e0d0a347c501dbfa9c5f26f4bf26c439341b481a14aae837ea42",
+            "crlf_line_breaks": 36,
+            "bytes_on_disk": 987
+          },
+          "P4": {
+            "sha256_of_file_as_stored": "e62cec80bbead62568225bcfafbe51f48ee12d5965609edb5957408618f7ef3a",
+            "sha256_of_canonical_field_vector": "197182623607a1fd5570b3365ac63e3050259793bac00b77795d27951b6482a0",
+            "crlf_line_breaks": 36,
+            "bytes_on_disk": 996
+          }
+        },
+        "authoritative_for_cross_checks": "sha256_of_file_as_stored, because that is what any tool hashing the delivered file obtains",
+        "calibration_status": "assumed_unverified",
+        "diff_status": "candidate_built_and_preflighted, awaiting the joint freeze"
+      },
+      "note": "candidates only: they are not the frozen P3/P4 and carry no instrument calibration. The section 2 config_sha256 values hashed the line-ending-normalized text; the stored-byte digests above are what a cross check obtains, and the canonical 34-field vector hash proves the parsed values never changed"
+    },
+    "2_support_runs_and_element_review": {
+      "requirement": "2. run app.py support with the isolated interpreter for both candidates and write the per-element conclusions to B_profile_review.md",
+      "status": "passed",
+      "evidence": [
+        "B_profile_review.md",
+        "work/profile_support/B_profile_support_P3.json",
+        "work/profile_support/B_profile_support_P4.json",
+        "B_profile_support_summary.json",
+        "B_profile_pair_check.json",
+        "B_profile_diff.json"
+      ],
+      "numbers": {
+        "support_runs": {
+          "P3": {
+            "support_file": "datasets/B-part/work/profile_support/B_profile_support_P3.json",
+            "support_sha256": "02871cc3a41067834e808450ce227909029fbbe590e7437a37f9331ad267258f",
+            "element_count": 32,
+            "status_counts": {
+              "structurally_supported_unvalidated": 32
+            },
+            "cli_log": "datasets/B-part/work/runs/run_02/profile_support/B_profile_support_P3.log"
+          },
+          "P4": {
+            "support_file": "datasets/B-part/work/profile_support/B_profile_support_P4.json",
+            "support_sha256": "cabba0704e4c3e73062b29e86109174481c26c3bcae2ec8b4649b2e0d1dc6c02",
+            "element_count": 32,
+            "status_counts": {
+              "strongly_attenuated_assumed_response": 3,
+              "structurally_supported_unvalidated": 29
+            },
+            "cli_log": "datasets/B-part/work/runs/run_02/profile_support/B_profile_support_P4.log"
+          },
+          "P1_reference": {
+            "support_file": "datasets/B-part/work/profile_support/B_profile_support_P1_reference.json",
+            "support_sha256": "a37bf5d9a76a2dec1a47a5ccd29b1c28f3014d39ed7c3d163b73a720b22381ce",
+            "element_count": 32,
+            "status_counts": {
+              "structurally_supported_unvalidated": 32
+            },
+            "cli_log": "datasets/B-part/work/runs/run_02/profile_support/B_profile_support_P1_reference.log"
+          }
+        },
+        "cli_output_run_directory": "datasets/B-part/work/runs/run_02"
+      }
+    },
+    "3_pilot_recipe_selection": {
+      "requirement": "3. deterministic 100-recipe selection (40 routine, 20 sparse/boundary, 4+4 complete 5-row interference families) plus the exposure list for C",
+      "status": "passed",
+      "evidence": [
+        "B_pilot_samples.json",
+        "B_pilot_family_exposure.csv",
+        "B_pilot_selection.json",
+        "work/select_B_pilot.py"
+      ],
+      "numbers": {
+        "selected": 100,
+        "scenarios": {
+          "routine": 40,
+          "sparse_boundary": 20,
+          "interference": 40
+        },
+        "blocks": {
+          "routine": 40,
+          "sparse_exact_zero": 7,
+          "sparse_low": 7,
+          "declared_maximum_spike": 3,
+          "boundary": 3,
+          "interference_control": 40
+        },
+        "interference_families": {
+          "As/Pb": {
+            "B-I0000": [
+              "B01201",
+              "B01202",
+              "B01203",
+              "B01204",
+              "B01205"
+            ],
+            "B-I0015": [
+              "B01276",
+              "B01277",
+              "B01278",
+              "B01279",
+              "B01280"
+            ],
+            "B-I0016": [
+              "B01281",
+              "B01282",
+              "B01283",
+              "B01284",
+              "B01285"
+            ],
+            "B-I0020": [
+              "B01301",
+              "B01302",
+              "B01303",
+              "B01304",
+              "B01305"
+            ]
+          },
+          "S/Pb": {
+            "B-I0031": [
+              "B01356",
+              "B01357",
+              "B01358",
+              "B01359",
+              "B01360"
+            ],
+            "B-I0041": [
+              "B01406",
+              "B01407",
+              "B01408",
+              "B01409",
+              "B01410"
+            ],
+            "B-I0050": [
+              "B01451",
+              "B01452",
+              "B01453",
+              "B01454",
+              "B01455"
+            ],
+            "B-I0057": [
+              "B01486",
+              "B01487",
+              "B01488",
+              "B01489",
+              "B01490"
+            ]
+          }
+        },
+        "selection_seed": 2026101823
+      }
+    },
+    "P3_generate": {
+      "requirement": "3. generate 200 pilot spectra with the documented flag set, no --jitter, pilot seed different from the formal 2026101803/04",
+      "status": "passed",
+      "evidence": [
+        "datasets/B-part/work/pilot_reports/pilot_P3_v1/generate_P3.log",
+        "datasets/B-part/pilot_P3_v1"
+      ],
+      "numbers": {
+        "exit_code": 0,
+        "spectra": 200,
+        "families": 100,
+        "seed": 2026101825,
+        "replicates": 2,
+        "split_seed": 20261018,
+        "jitter": null,
+        "closure": "strict",
+        "legacy_al": "reject",
+        "targets": 32,
+        "splits": {
+          "train": 140,
+          "test": 30,
+          "validation": 30
+        },
+        "window_loss_fraction": {
+          "definition": "sum(outside_window_counts) / detected_signal_before_window_counts, excludes artificial background",
+          "range": [
+            0.0006123318171260532,
+            0.0010582780646735239
+          ]
+        },
+        "ba_window_summary": {
+          "present": 134,
+          "L_center_in_window": 134,
+          "M_center_in_window": 134
+        },
+        "measured_throughput": {
+          "spectra": 200,
+          "wall_minutes": 17.9,
+          "seconds_per_spectrum": 5.37,
+          "projected_hours_for_20000_single_thread": 29.8,
+          "basis": "full_results file mtime span, single thread pinned"
+        }
+      },
+      "note": "workflow_pilot_only, excluded from the formal budget"
+    },
+    "P3_verify": {
+      "requirement": "3. confirm same-recipe replicates share composition, profile and expected spectrum and differ only in counting noise; check line systems, windows, support, six components and out-of-window loss",
+      "status": "passed",
+      "evidence": [
+        "datasets/B-part/work/pilot_reports/pilot_P3_v1/verification_v4.json"
+      ],
+      "numbers": {
+        "report_status": "passed",
+        "spectra_checked": 200,
+        "replicate_pairs_all_passed": true,
+        "window_loss_max": 0.0010582780646735237,
+        "interference_pair_line_presence": {
+          "interference | As/Pb": {
+            "As KL3_LINE": 24,
+            "Fe KL3_LINE": 40,
+            "Pb L3M5_LINE": 24,
+            "Pb M5N6_LINE": 24,
+            "S KL3_LINE": 40
+          },
+          "interference | S/Pb": {
+            "As KL3_LINE": 0,
+            "Fe KL3_LINE": 40,
+            "Pb L3M5_LINE": 24,
+            "Pb M5N6_LINE": 24,
+            "S KL3_LINE": 24
+          }
+        },
+        "problems": []
+      }
+    },
+    "P3_audit": {
+      "requirement": "3. write the QC audit report outside the sealed directory",
+      "status": "passed",
+      "evidence": [
+        "datasets/B-part/work/pilot_reports/pilot_P3_v1/audit.json",
+        "datasets/B-part/work/pilot_reports/pilot_P3_v1/audit.log"
+      ],
+      "numbers": {
+        "exit_code": 0,
+        "status": "passed",
+        "check_type": "bundle_integrity_and_synthetic_flow",
+        "spectra_checked": 200,
+        "errors": [],
+        "complete_physics_recalculation": false,
+        "report_outside_sealed_dataset": true
+      }
+    },
+    "P3_replay": {
+      "requirement": "3. run the full replay without --limit using the app.py sealed inside the batch",
+      "status": "passed",
+      "evidence": [
+        "datasets/B-part/work/pilot_reports/pilot_P3_v1/replay.json",
+        "datasets/B-part/work/pilot_reports/pilot_P3_v1/replay.log"
+      ],
+      "numbers": {
+        "exit_code": 0,
+        "status": "passed",
+        "scope": "all_records",
+        "spectra_recalculated": 200,
+        "complete_physics_recalculation": true,
+        "same_environment": true,
+        "maximum_absolute_array_difference": 0.0,
+        "errors": [],
+        "executed_with": "datasets/B-part/pilot_P3_v1/reproducibility/generator/fp_competition/app.py",
+        "executed_with_sha256": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8"
+      }
+    },
+    "P3_pack": {
+      "requirement": "3. pack the batch, record the external ZIP SHA256 and verify the ZIP CRC",
+      "status": "passed",
+      "evidence": [
+        "datasets/B-part/pilot_P3_v1_pack.zip",
+        "datasets/B-part/pilot_P3_v1_pack.zip.sha256",
+        "datasets/B-part/work/pilot_reports/pilot_P3_v1/pilot_P3_v1_pack.log"
+      ],
+      "numbers": {
+        "exit_code": 0,
+        "zip": "datasets/B-part/pilot_P3_v1_pack.zip",
+        "zip_sha256": "50c82cc4e1365ac1c3bbc2a428139cc42e6b04b31b2a0f1084e366627ea4467f",
+        "members": 450,
+        "crc_test": "passed"
+      }
+    },
+    "P4_generate": {
+      "requirement": "3. generate 200 pilot spectra with the documented flag set, no --jitter, pilot seed different from the formal 2026101803/04",
+      "status": "passed",
+      "evidence": [
+        "datasets/B-part/work/pilot_reports/pilot_P4_v1/generate_P4.log",
+        "datasets/B-part/pilot_P4_v1"
+      ],
+      "numbers": {
+        "exit_code": 0,
+        "spectra": 200,
+        "families": 100,
+        "seed": 2026101826,
+        "replicates": 2,
+        "split_seed": 20261018,
+        "jitter": null,
+        "closure": "strict",
+        "legacy_al": "reject",
+        "targets": 32,
+        "splits": {
+          "train": 140,
+          "test": 30,
+          "validation": 30
+        },
+        "window_loss_fraction": {
+          "definition": "sum(outside_window_counts) / detected_signal_before_window_counts, excludes artificial background",
+          "range": [
+            0.0061062273661591235,
+            0.014404821401604796
+          ]
+        },
+        "ba_window_summary": {
+          "present": 134,
+          "L_center_in_window": 134,
+          "M_center_in_window": 134
+        },
+        "measured_throughput": {
+          "spectra": 200,
+          "wall_minutes": 13.5,
+          "seconds_per_spectrum": 4.05,
+          "projected_hours_for_20000_single_thread": 22.5,
+          "basis": "full_results file mtime span, single thread pinned"
+        }
+      },
+      "note": "workflow_pilot_only, excluded from the formal budget"
+    },
+    "P4_verify": {
+      "requirement": "3. confirm same-recipe replicates share composition, profile and expected spectrum and differ only in counting noise; check line systems, windows, support, six components and out-of-window loss",
+      "status": "blocked",
+      "evidence": [
+        "datasets/B-part/work/pilot_reports/pilot_P4_v1/verification_v3.json"
+      ],
+      "numbers": {
+        "report_status": "failed",
+        "spectra_checked": 200,
+        "replicate_pairs_all_passed": true,
+        "window_loss_max": 0.014404821401604796,
+        "interference_pair_line_presence": {
+          "interference | As/Pb": {
+            "As KL3_LINE": 24,
+            "Fe KL3_LINE": 40,
+            "Pb L3M5_LINE": 24,
+            "Pb M5N6_LINE": 24,
+            "S KL3_LINE": 40
+          },
+          "interference | S/Pb": {
+            "As KL3_LINE": 0,
+            "Fe KL3_LINE": 40,
+            "Pb L3M5_LINE": 24,
+            "Pb M5N6_LINE": 24,
+            "S KL3_LINE": 24
+          }
+        },
+        "problems": [
+          "70 of 200 spectra are above the pre-declared out-of-window budget of 0.01 (measured max 0.014405, mean 0.009237). Discarded counts on those records by component: {'compton': 72.91, 'rayleigh': 23.85, 'primary': 2.46, 'escape': 0.79, 'secondary': 0.0}. The window is the one the delivered tool derives from the candidate profile, so this is a property of the condition, not of the recipes or of the solver; the threshold was declared before the run, so B reports the miss instead of re-drawing it"
+        ]
+      },
+      "note": "the check ran on all 200 spectra and every integrity check passed; it is recorded as blocked only because B's own pre-declared 1% out-of-window budget is exceeded on part of the batch. B will not relax a threshold it declared before the run, so the joint freeze has to either accept the measured loss or re-plan the window. See the report window_loss block and B_profile_review.md section 2.8"
+    },
+    "P4_audit": {
+      "requirement": "3. write the QC audit report outside the sealed directory",
+      "status": "passed",
+      "evidence": [
+        "datasets/B-part/work/pilot_reports/pilot_P4_v1/audit.json",
+        "datasets/B-part/work/pilot_reports/pilot_P4_v1/audit.log"
+      ],
+      "numbers": {
+        "exit_code": 0,
+        "status": "passed",
+        "check_type": "bundle_integrity_and_synthetic_flow",
+        "spectra_checked": 200,
+        "errors": [],
+        "complete_physics_recalculation": false,
+        "report_outside_sealed_dataset": true
+      }
+    },
+    "P4_replay": {
+      "requirement": "3. run the full replay without --limit using the app.py sealed inside the batch",
+      "status": "passed",
+      "evidence": [
+        "datasets/B-part/work/pilot_reports/pilot_P4_v1/replay.json",
+        "datasets/B-part/work/pilot_reports/pilot_P4_v1/replay.log"
+      ],
+      "numbers": {
+        "exit_code": 0,
+        "status": "passed",
+        "scope": "all_records",
+        "spectra_recalculated": 200,
+        "complete_physics_recalculation": true,
+        "same_environment": true,
+        "maximum_absolute_array_difference": 0.0,
+        "errors": [],
+        "executed_with": "datasets/B-part/pilot_P4_v1/reproducibility/generator/fp_competition/app.py",
+        "executed_with_sha256": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8"
+      }
+    },
+    "P4_pack": {
+      "requirement": "3. pack the batch, record the external ZIP SHA256 and verify the ZIP CRC",
+      "status": "passed",
+      "evidence": [
+        "datasets/B-part/pilot_P4_v1_pack.zip",
+        "datasets/B-part/pilot_P4_v1_pack.zip.sha256",
+        "datasets/B-part/work/pilot_reports/pilot_P4_v1/pilot_P4_v1_pack.log"
+      ],
+      "numbers": {
+        "exit_code": 0,
+        "zip": "datasets/B-part/pilot_P4_v1_pack.zip",
+        "zip_sha256": "d585a87fb08e27c1f559ac549675ecc7924913659a3b1eb7b9b907b2502077e2",
+        "members": 450,
+        "crc_test": "passed"
+      }
+    },
+    "4_M1": {
+      "requirement": "4. check milestone M1 separately (A 100 recipes, B 3 spectra each, C lead review, A second review, 300 new spectra) and never substitute the section 3 pilots for it",
+      "status": "blocked",
+      "evidence": [
+        "B_M1_status.json",
+        "work/prepare_B_M1.py"
+      ],
+      "numbers": {
+        "recorded_status": "M1_pending_profile",
+        "planner_dry_run_jobs": {
+          "P1": 300,
+          "P2": 300
+        },
+        "proposed_seed_once_frozen": 2026101827,
+        "blockers": [
+          "A frozen M1 condition (profile file + hash)",
+          "C lead review assignment for M1",
+          "confirmation that A 100-recipe pilot file is the M1 input, or a newer A file"
+        ]
+      },
+      "note": "readiness is proved by a make_plan dry run only; no spectrum was generated, because A has not frozen an M1 condition in this workspace and P3/P4 must not be guessed as M1 conditions"
+    },
+    "freeze_dependencies_outstanding": {
+      "requirement": "outstanding: joint freeze of P3/P4, 5,000-recipe master table with C 1,000 recipes, family-aware global split index, A cross review of B, C lead review of the pilot batches",
+      "status": "blocked",
+      "evidence": [
+        "B_design_basis.md",
+        "B_profile_review.md",
+        "B_M1_status.json"
+      ],
+      "numbers": {
+        "pilot_batches_need_repeat_if_frozen_values_differ": true,
+        "a_cross_review_of_B": "not started (this delivery is a single-operator self-check)",
+        "c_exposure_marking_of_pilot_families": "ready: B_pilot_family_exposure.csv lists the 68 exposed parent families with blind_test_use_forbidden=yes"
+      }
+    },
+    "formal_P3_P4_20000_spectra": {
+      "requirement": "prompt 02 scope: formal P3/P4 production of 20,000 spectra",
+      "status": "blocked",
+      "evidence": [
+        "02_B_formal_production_prompt.md"
+      ],
+      "numbers": {
+        "missing_inputs": [
+          "frozen P3/P4 profiles",
+          "5,000-recipe master table",
+          "authoritative family split index",
+          "M3 development pilot result",
+          "approved wall-clock budget"
+        ],
+        "measured_seconds_per_spectrum_candidates": {
+          "P3": {
+            "spectra": 200,
+            "wall_minutes": 17.9,
+            "seconds_per_spectrum": 5.37,
+            "projected_hours_for_20000_single_thread": 29.8,
+            "basis": "full_results file mtime span, single thread pinned"
+          },
+          "P4": {
+            "spectra": 200,
+            "wall_minutes": 13.5,
+            "seconds_per_spectrum": 4.05,
+            "projected_hours_for_20000_single_thread": 22.5,
+            "basis": "full_results file mtime span, single thread pinned"
+          }
+        },
+        "reference_a_pilot_crosscheck_seconds_per_spectrum": 5.011
+      }
+    },
+    "5_readme_and_delivery_manifest": {
+      "requirement": "5. write README.md with the actual counts, coverage and gaps, every verification command with its exit code, the hashes, the pilot status, the M1 status, the files handed to A and C, and the outstanding freeze dependencies",
+      "status": "passed",
+      "evidence": [
+        "README.md",
+        "work/README_prompt_packaging_original.md",
+        "B_delivery_status.json",
+        "B_delivery_hashes.json"
+      ],
+      "numbers": {
+        "readme_bytes": 33319,
+        "readme_sha256": "8af130b421ff55cb275eb1f0fd43d6ff295367a6771d307ae41891bdff86dd91",
+        "original_prompt_packaging_text_kept_verbatim": true,
+        "original_prompt_packaging_sha256_of_copy": "f60eaa9e4cb222c6c56ff111f03b07e699ba885ab6665ccbd326985c77292876",
+        "original_prompt_packaging_sha256_recorded_at_intake": "f60eaa9e4cb222c6c56ff111f03b07e699ba885ab6665ccbd326985c77292876",
+        "markers_present": [
+          "退出码",
+          "M1_pending_profile",
+          "冻结",
+          "交给 A/C",
+          "缺口",
+          "B_delivery_hashes"
+        ]
+      },
+      "note": "this delivery is a single-operator self-check: it is not the A cross review of B and not the C lead review"
+    }
+  }
+}

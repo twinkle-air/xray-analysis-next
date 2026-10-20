@@ -1,0 +1,336 @@
+{
+  "stage": "member B section 3 workflow pilots",
+  "batch_id": "pilot_P4_v1",
+  "batches": [
+    {
+      "id": "pilot_P4_v1",
+      "condition": "P4",
+      "dataset": "datasets/B-part/pilot_P4_v1",
+      "profile_file": "datasets/B-part/P4_candidate.json",
+      "profile_sha256": "e62cec80bbead62568225bcfafbe51f48ee12d5965609edb5957408618f7ef3a",
+      "samples_file": "datasets/B-part/B_pilot_samples.json",
+      "samples_sha256": "ed3c26bc86c99d4af175b47fd1aea61bac9e4492d0b924c28fc565489e6702fe",
+      "design_ranges_sha256": "0f10d70db547b05198c70d72be4c8a5c3c58dac1a31aca49a3ce3c72bc0f7d70",
+      "seed": 2026101826,
+      "replicates": 2,
+      "split_seed": 20261018,
+      "closure": "strict",
+      "legacy_al": "reject",
+      "jitter": null,
+      "targets_count": 32,
+      "command": "python -B app.py batch --samples C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\B_pilot_samples.json --profile C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\P4_candidate.json --out C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\pilot_P4_v1 --seed 2026101826 --replicates 2 --split-seed 20261018 --closure strict --legacy-al reject --targets Na Mg Al Si P S Cl K Ca Ti V Cr Mn Fe Co Ni Cu Zn As Se Rb Sr Y Zr Nb Mo Cd Sn Sb Ba W Pb --design-ranges C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\B_design_ranges.json",
+      "working_directory": "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\fp-spectrum-generator-competition-v0.2.1\\fp_competition",
+      "thread_env_pinned": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      },
+      "generation_exit_code": 0,
+      "generation_log": "datasets/B-part/work/pilot_reports/pilot_P4_v1/generate_P4.log",
+      "status": "generated",
+      "spectrum_count": 200,
+      "family_count": 100,
+      "manifest_status": "complete",
+      "manifest_acceptance_status": "pending_independent_validation",
+      "manifest_jitter_ranges": {},
+      "manifest_closure": "strict",
+      "manifest_legacy_al": "reject",
+      "manifest_split_rule": "Exact used-composition families, seeded ordering, approximately 70/15/15; not a device/matrix holdout",
+      "manifest_split_counts": {
+        "train": 140,
+        "test": 30,
+        "validation": 30
+      },
+      "source_samples_semantic_sha256": "3f27070f3df032b2b5f10c4f01e0d7d69dd4251cecd0cce4449361832f000f4a",
+      "physics_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "software_version": "0.2.1",
+      "physical_model_version": "0.2.0",
+      "window_loss_fraction_manifest": {
+        "definition": "sum(outside_window_counts) / detected_signal_before_window_counts, excludes artificial background",
+        "range": [
+          0.0061062273661591235,
+          0.014404821401604796
+        ]
+      },
+      "ba_window_summary": {
+        "present": 134,
+        "L_center_in_window": 134,
+        "M_center_in_window": 134
+      },
+      "manifest_warnings_count": 2,
+      "environment": "datasets/B-part/pilot_P4_v1/reproducibility/environment.json",
+      "sealed_generator_app_sha256": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+      "external_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "verification": {
+        "report": "datasets/B-part/work/pilot_reports/pilot_P4_v1/verification_v3.json",
+        "status": "failed",
+        "problems": [
+          "70 of 200 spectra are above the pre-declared out-of-window budget of 0.01 (measured max 0.014405, mean 0.009237). Discarded counts on those records by component: {'compton': 72.91, 'rayleigh': 23.85, 'primary': 2.46, 'escape': 0.79, 'secondary': 0.0}. The window is the one the delivered tool derives from the candidate profile, so this is a property of the condition, not of the recipes or of the solver; the threshold was declared before the run, so B reports the miss instead of re-drawing it"
+        ],
+        "spectra_checked": 200,
+        "window_loss_max": 0.014404821401604796,
+        "replicate_pairs_all_passed": true,
+        "pairs": {
+          "interference | As/Pb": {
+            "As KL3_LINE": 24,
+            "Fe KL3_LINE": 40,
+            "Pb L3M5_LINE": 24,
+            "Pb M5N6_LINE": 24,
+            "S KL3_LINE": 40
+          },
+          "interference | S/Pb": {
+            "As KL3_LINE": 0,
+            "Fe KL3_LINE": 40,
+            "Pb L3M5_LINE": 24,
+            "Pb M5N6_LINE": 24,
+            "S KL3_LINE": 24
+          }
+        }
+      },
+      "audit": {
+        "exit_code": 0,
+        "report": "datasets/B-part/work/pilot_reports/pilot_P4_v1/audit.json",
+        "report_outside_sealed_dataset": true,
+        "log": "datasets/B-part/work/pilot_reports/pilot_P4_v1/audit.log",
+        "status": "passed",
+        "check_type": "bundle_integrity_and_synthetic_flow",
+        "spectra_checked": 200,
+        "family_count": 100,
+        "target_coverage": {
+          "Na": {
+            "positive": 186,
+            "zero": 14,
+            "min_percent": 0.0,
+            "max_percent": 1.577233321699152
+          },
+          "Mg": {
+            "positive": 188,
+            "zero": 12,
+            "min_percent": 0.0,
+            "max_percent": 7.228437161365907
+          },
+          "Al": {
+            "positive": 194,
+            "zero": 6,
+            "min_percent": 0.0,
+            "max_percent": 10.58198382479043
+          },
+          "Si": {
+            "positive": 194,
+            "zero": 6,
+            "min_percent": 0.0,
+            "max_percent": 11.597947440926
+          },
+          "P": {
+            "positive": 186,
+            "zero": 14,
+            "min_percent": 0.0,
+            "max_percent": 0.42984413731869786
+          },
+          "S": {
+            "positive": 170,
+            "zero": 30,
+            "min_percent": 0.0,
+            "max_percent": 0.7048591587477614
+          },
+          "Cl": {
+            "positive": 186,
+            "zero": 14,
+            "min_percent": 0.0,
+            "max_percent": 0.3011122108731497
+          },
+          "K": {
+            "positive": 186,
+            "zero": 14,
+            "min_percent": 0.0,
+            "max_percent": 1.6602972399150744
+          },
+          "Ca": {
+            "positive": 196,
+            "zero": 4,
+            "min_percent": 0.0,
+            "max_percent": 10.564940852269443
+          },
+          "Ti": {
+            "positive": 186,
+            "zero": 14,
+            "min_percent": 0.0,
+            "max_percent": 1.7362761375733324
+          },
+          "V": {
+            "positive": 156,
+            "zero": 44,
+            "min_percent": 0.0,
+            "max_percent": 0.21711454813266579
+          },
+          "Cr": {
+            "positive": 166,
+            "zero": 34,
+            "min_percent": 0.0,
+            "max_percent": 0.20565546557852252
+          },
+          "Mn": {
+            "positive": 186,
+            "zero": 14,
+            "min_percent": 0.0,
+            "max_percent": 3.040474164578445
+          },
+          "Fe": {
+            "positive": 200,
+            "zero": 0,
+            "min_percent": 27.977457733249842,
+            "max_percent": 52.45773324984345
+          },
+          "Co": {
+            "positive": 158,
+            "zero": 42,
+            "min_percent": 0.0,
+            "max_percent": 0.1363798440789668
+          },
+          "Ni": {
+            "positive": 156,
+            "zero": 44,
+            "min_percent": 0.0,
+            "max_percent": 0.13053301129787723
+          },
+          "Cu": {
+            "positive": 146,
+            "zero": 54,
+            "min_percent": 0.0,
+            "max_percent": 0.14829976120941077
+          },
+          "Zn": {
+            "positive": 174,
+            "zero": 26,
+            "min_percent": 0.0,
+            "max_percent": 0.2743708334596919
+          },
+          "As": {
+            "positive": 108,
+            "zero": 92,
+            "min_percent": 0.0,
+            "max_percent": 0.2
+          },
+          "Se": {
+            "positive": 166,
+            "zero": 34,
+            "min_percent": 0.0,
+            "max_percent": 0.08737122545850166
+          },
+          "Rb": {
+            "positive": 148,
+            "zero": 52,
+            "min_percent": 0.0,
+            "max_percent": 0.1989513338362212
+          },
+          "Sr": {
+            "positive": 132,
+            "zero": 68,
+            "min_percent": 0.0,
+            "max_percent": 0.30000000000000004
+          },
+          "Y": {
+            "positive": 146,
+            "zero": 54,
+            "min_percent": 0.0,
+            "max_percent": 0.14632793246038844
+          },
+          "Zr": {
+            "positive": 146,
+            "zero": 54,
+            "min_percent": 0.0,
+            "max_percent": 0.33792108286581246
+          },
+          "Nb": {
+            "positive": 150,
+            "zero": 50,
+            "min_percent": 0.0,
+            "max_percent": 0.2
+          },
+          "Mo": {
+            "positive": 142,
+            "zero": 58,
+            "min_percent": 0.0,
+            "max_percent": 0.14033417796529918
+          },
+          "Cd": {
+            "positive": 162,
+            "zero": 38,
+            "min_percent": 0.0,
+            "max_percent": 0.1177487524105067
+          },
+          "Sn": {
+            "positive": 176,
+            "zero": 24,
+            "min_percent": 0.0,
+            "max_percent": 0.11596364674944758
+          },
+          "Sb": {
+            "positive": 150,
+            "zero": 50,
+            "min_percent": 0.0,
+            "max_percent": 0.14047395741257873
+          },
+          "Ba": {
+            "positive": 134,
+            "zero": 66,
+            "min_percent": 0.0,
+            "max_percent": 0.3459504746753409
+          },
+          "W": {
+            "positive": 156,
+            "zero": 44,
+            "min_percent": 0.0,
+            "max_percent": 0.1918829056679292
+          },
+          "Pb": {
+            "positive": 138,
+            "zero": 62,
+            "min_percent": 0.0,
+            "max_percent": 0.2564006928731056
+          }
+        },
+        "errors": [],
+        "tolerances": {
+          "rtol": 1e-12,
+          "atol_counts": 1e-08
+        },
+        "complete_physics_recalculation": false,
+        "physical_calibration_verified": false,
+        "concentration_accuracy_verified": false
+      },
+      "replay": {
+        "exit_code": 0,
+        "executed_with": "datasets/B-part/pilot_P4_v1/reproducibility/generator/fp_competition/app.py",
+        "executed_with_sha256": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+        "working_directory": "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\pilot_P4_v1\\reproducibility\\generator\\fp_competition",
+        "limit": null,
+        "report": "datasets/B-part/work/pilot_reports/pilot_P4_v1/replay.json",
+        "log": "datasets/B-part/work/pilot_reports/pilot_P4_v1/replay.log",
+        "status": "passed",
+        "scope": "all_records",
+        "spectra_recalculated": 200,
+        "complete_physics_recalculation": true,
+        "same_environment": true,
+        "maximum_absolute_array_difference": 0.0,
+        "errors": [],
+        "rtol": 1e-12,
+        "atol_counts": 1e-08,
+        "file_byte_identity_tested": false,
+        "physical_calibration_verified": false,
+        "concentration_accuracy_verified": false
+      },
+      "pack": {
+        "exit_code": 0,
+        "zip": "datasets/B-part/pilot_P4_v1_pack.zip",
+        "zip_sha256": "d585a87fb08e27c1f559ac549675ecc7924913659a3b1eb7b9b907b2502077e2",
+        "zip_sha256_sidecar": "datasets/B-part/pilot_P4_v1_pack.zip.sha256",
+        "zip_member_count": 450,
+        "zip_crc_test": "passed",
+        "log": "datasets/B-part/work/pilot_reports/pilot_P4_v1/pilot_P4_v1_pack.log",
+        "meaning": "pack is a QC/archiving step, not a physics replay"
+      }
+    }
+  ]
+}

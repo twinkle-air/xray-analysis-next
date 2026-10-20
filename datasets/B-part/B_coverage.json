@@ -1,0 +1,2646 @@
+{
+  "total_recipes": 1500,
+  "unique_by_a_rule_hash": 1500,
+  "unique_by_unified_12_decimal_key": 1500,
+  "scenario_counts": {
+    "routine": 900,
+    "sparse_boundary": 300,
+    "interference": 300
+  },
+  "scenario_quota": {
+    "routine": 900,
+    "sparse_boundary": 300,
+    "interference": 300
+  },
+  "low_bin_definition": "0 < element mass percent <= 0.1; an initial statistical reporting convention of this design, not a detection limit and not a claim about real samples",
+  "mid_high_definition": "mid = 0.1 < x <= 0.5 * declared maximum element percent for that element; high = x > that half-maximum. Declared maxima come from B_design_ranges.json (compound maxima converted to elements, trace maxima in ppm/10000), so unreachable bins stay visible",
+  "exact_zero_definition": "the recipe adds no compound or trace carrying that element; it is not a claim that a physical sample is non-detect",
+  "applicable_elements": [
+    "Na",
+    "Mg",
+    "Al",
+    "Si",
+    "P",
+    "S",
+    "Cl",
+    "K",
+    "Ca",
+    "Ti",
+    "V",
+    "Cr",
+    "Mn",
+    "Co",
+    "Ni",
+    "Cu",
+    "Zn",
+    "As",
+    "Se",
+    "Rb",
+    "Sr",
+    "Y",
+    "Zr",
+    "Nb",
+    "Mo",
+    "Cd",
+    "Sn",
+    "Sb",
+    "Ba",
+    "W",
+    "Pb"
+  ],
+  "candidate_target_count": 32,
+  "canonical_vector_element_count": 33,
+  "exempt": {
+    "Fe": "required iron matrix of the iron-rich oxide design; never asked to be zero",
+    "O": "stoichiometric matrix bookkeeping, not a direct fluorescence target of this model version"
+  },
+  "coverage": {
+    "Na": {
+      "zero": 134,
+      "low_0_to_0_1_percent": 153,
+      "low_bin_spread_percent": {
+        "min": 0.002820190812532126,
+        "max": 0.09999995137859694
+      },
+      "mid_above_0_1_to_declared_half_max": 591,
+      "high_above_declared_half_max": 622,
+      "min_percent": 0.0,
+      "max_percent": 1.6805866707867525,
+      "declared_maximum_percent": 1.6805866707867523,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 16,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 134,
+          "low_0_to_0_1_percent": 132,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 5,
+          "rows": 300
+        }
+      }
+    },
+    "Mg": {
+      "zero": 68,
+      "low_0_to_0_1_percent": 91,
+      "low_bin_spread_percent": {
+        "min": 0.001007497562068008,
+        "max": 0.09770246471123435
+      },
+      "mid_above_0_1_to_declared_half_max": 613,
+      "high_above_declared_half_max": 728,
+      "min_percent": 0.0,
+      "max_percent": 7.238095238095238,
+      "declared_maximum_percent": 7.238095238095237,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 10,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 68,
+          "low_0_to_0_1_percent": 66,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 15,
+          "rows": 300
+        }
+      }
+    },
+    "Al": {
+      "zero": 66,
+      "low_0_to_0_1_percent": 71,
+      "low_bin_spread_percent": {
+        "min": 0.0010479202515459767,
+        "max": 0.0951159670607941
+      },
+      "mid_above_0_1_to_declared_half_max": 662,
+      "high_above_declared_half_max": 701,
+      "min_percent": 0.0,
+      "max_percent": 10.582695703354915,
+      "declared_maximum_percent": 10.582695703354915,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 5,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 66,
+          "low_0_to_0_1_percent": 66,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 0,
+          "rows": 300
+        }
+      }
+    },
+    "Si": {
+      "zero": 66,
+      "low_0_to_0_1_percent": 71,
+      "low_bin_spread_percent": {
+        "min": 0.001113475921274344,
+        "max": 0.0903973735470782
+      },
+      "mid_above_0_1_to_declared_half_max": 652,
+      "high_above_declared_half_max": 711,
+      "min_percent": 0.0,
+      "max_percent": 11.686636711599267,
+      "declared_maximum_percent": 11.686636711599267,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 5,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 66,
+          "low_0_to_0_1_percent": 66,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 0,
+          "rows": 300
+        }
+      }
+    },
+    "P": {
+      "zero": 134,
+      "low_0_to_0_1_percent": 400,
+      "low_bin_spread_percent": {
+        "min": 1.2864623940829942e-05,
+        "max": 0.09982164030487534
+      },
+      "mid_above_0_1_to_declared_half_max": 341,
+      "high_above_declared_half_max": 625,
+      "min_percent": 0.0,
+      "max_percent": 0.43646097492251335,
+      "declared_maximum_percent": 0.43646097492251335,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 213,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 134,
+          "low_0_to_0_1_percent": 132,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 55,
+          "rows": 300
+        }
+      }
+    },
+    "S": {
+      "zero": 194,
+      "low_0_to_0_1_percent": 323,
+      "low_bin_spread_percent": {
+        "min": 0.0007144286711723484,
+        "max": 0.09969604856085963
+      },
+      "mid_above_0_1_to_declared_half_max": 392,
+      "high_above_declared_half_max": 591,
+      "min_percent": 0.0,
+      "max_percent": 0.7066470804260009,
+      "declared_maximum_percent": 0.7066470804260008,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 125,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 134,
+          "low_0_to_0_1_percent": 133,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 60,
+          "low_0_to_0_1_percent": 65,
+          "rows": 300
+        }
+      }
+    },
+    "Cl": {
+      "zero": 134,
+      "low_0_to_0_1_percent": 512,
+      "low_bin_spread_percent": {
+        "min": 0.00011077414148861121,
+        "max": 0.09999990000000002
+      },
+      "mid_above_0_1_to_declared_half_max": 225,
+      "high_above_declared_half_max": 629,
+      "min_percent": 0.0,
+      "max_percent": 0.30328429695518305,
+      "declared_maximum_percent": 0.30328429695518305,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 290,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 134,
+          "low_0_to_0_1_percent": 142,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 80,
+          "rows": 300
+        }
+      }
+    },
+    "K": {
+      "zero": 134,
+      "low_0_to_0_1_percent": 217,
+      "low_bin_spread_percent": {
+        "min": 0.0010110563523167443,
+        "max": 0.09858823821676528
+      },
+      "mid_above_0_1_to_declared_half_max": 561,
+      "high_above_declared_half_max": 588,
+      "min_percent": 0.0,
+      "max_percent": 1.6602972399150742,
+      "declared_maximum_percent": 1.6602972399150744,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 65,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 134,
+          "low_0_to_0_1_percent": 132,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 20,
+          "rows": 300
+        }
+      }
+    },
+    "Ca": {
+      "zero": 68,
+      "low_0_to_0_1_percent": 66,
+      "low_bin_spread_percent": {
+        "min": 0.004495094723069081,
+        "max": 0.09999999990000005
+      },
+      "mid_above_0_1_to_declared_half_max": 672,
+      "high_above_declared_half_max": 694,
+      "min_percent": 0.0,
+      "max_percent": 10.888849725721032,
+      "declared_maximum_percent": 10.888849725721032,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 0,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 68,
+          "low_0_to_0_1_percent": 66,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 0,
+          "rows": 300
+        }
+      }
+    },
+    "Ti": {
+      "zero": 134,
+      "low_0_to_0_1_percent": 197,
+      "low_bin_spread_percent": {
+        "min": 0.0010168845442762179,
+        "max": 0.0992703560144245
+      },
+      "mid_above_0_1_to_declared_half_max": 565,
+      "high_above_declared_half_max": 604,
+      "min_percent": 0.0,
+      "max_percent": 1.7984981226533163,
+      "declared_maximum_percent": 1.7984981226533163,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 55,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 134,
+          "low_0_to_0_1_percent": 132,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 10,
+          "rows": 300
+        }
+      }
+    },
+    "V": {
+      "zero": 422,
+      "low_0_to_0_1_percent": 944,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09934236282472098
+      },
+      "mid_above_0_1_to_declared_half_max": 50,
+      "high_above_declared_half_max": 84,
+      "min_percent": 0.0,
+      "max_percent": 0.3,
+      "declared_maximum_percent": 0.3,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 219,
+          "low_0_to_0_1_percent": 592,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 162,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 70,
+          "low_0_to_0_1_percent": 190,
+          "rows": 300
+        }
+      }
+    },
+    "Cr": {
+      "zero": 432,
+      "low_0_to_0_1_percent": 956,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09987565238764712
+      },
+      "mid_above_0_1_to_declared_half_max": 30,
+      "high_above_declared_half_max": 82,
+      "min_percent": 0.0,
+      "max_percent": 0.25,
+      "declared_maximum_percent": 0.25,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 229,
+          "low_0_to_0_1_percent": 578,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 163,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 70,
+          "low_0_to_0_1_percent": 215,
+          "rows": 300
+        }
+      }
+    },
+    "Mn": {
+      "zero": 134,
+      "low_0_to_0_1_percent": 165,
+      "low_bin_spread_percent": {
+        "min": 0.0010060496523428722,
+        "max": 0.09787661684580826
+      },
+      "mid_above_0_1_to_declared_half_max": 605,
+      "high_above_declared_half_max": 596,
+      "min_percent": 0.0,
+      "max_percent": 3.0978291513955454,
+      "declared_maximum_percent": 3.0978291513955454,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 23,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 134,
+          "low_0_to_0_1_percent": 132,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 10,
+          "rows": 300
+        }
+      }
+    },
+    "Fe": {
+      "zero": 0,
+      "low_0_to_0_1_percent": 0,
+      "low_bin_spread_percent": {
+        "min": null,
+        "max": null
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 1500,
+      "min_percent": 27.977457733249842,
+      "max_percent": 52.45773324984345,
+      "declared_maximum_percent": 52.45773324984346,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 0,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 0,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 0,
+          "low_0_to_0_1_percent": 0,
+          "rows": 300
+        }
+      }
+    },
+    "Co": {
+      "zero": 401,
+      "low_0_to_0_1_percent": 1052,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09663271417533276
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 47,
+      "min_percent": 0.0,
+      "max_percent": 0.15,
+      "declared_maximum_percent": 0.15,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 238,
+          "low_0_to_0_1_percent": 619,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 163,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 30,
+          "low_0_to_0_1_percent": 270,
+          "rows": 300
+        }
+      }
+    },
+    "Ni": {
+      "zero": 450,
+      "low_0_to_0_1_percent": 965,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09911322956971938
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 85,
+      "min_percent": 0.0,
+      "max_percent": 0.2,
+      "declared_maximum_percent": 0.2,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 242,
+          "low_0_to_0_1_percent": 591,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 164,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 75,
+          "low_0_to_0_1_percent": 210,
+          "rows": 300
+        }
+      }
+    },
+    "Cu": {
+      "zero": 421,
+      "low_0_to_0_1_percent": 994,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09847224962424071
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 85,
+      "min_percent": 0.0,
+      "max_percent": 0.2,
+      "declared_maximum_percent": 0.2,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 213,
+          "low_0_to_0_1_percent": 628,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 161,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 75,
+          "low_0_to_0_1_percent": 205,
+          "rows": 300
+        }
+      }
+    },
+    "Zn": {
+      "zero": 403,
+      "low_0_to_0_1_percent": 963,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.0987500112266129
+      },
+      "mid_above_0_1_to_declared_half_max": 48,
+      "high_above_declared_half_max": 86,
+      "min_percent": 0.0,
+      "max_percent": 0.3,
+      "declared_maximum_percent": 0.3,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 200,
+          "low_0_to_0_1_percent": 610,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 163,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 70,
+          "low_0_to_0_1_percent": 190,
+          "rows": 300
+        }
+      }
+    },
+    "As": {
+      "zero": 559,
+      "low_0_to_0_1_percent": 842,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09914889410699008
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 99,
+      "min_percent": 0.0,
+      "max_percent": 0.2,
+      "declared_maximum_percent": 0.2,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 216,
+          "low_0_to_0_1_percent": 620,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 162,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 210,
+          "low_0_to_0_1_percent": 60,
+          "rows": 300
+        }
+      }
+    },
+    "Se": {
+      "zero": 380,
+      "low_0_to_0_1_percent": 1078,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09939488624195476
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 42,
+      "min_percent": 0.0,
+      "max_percent": 0.15,
+      "declared_maximum_percent": 0.15,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 207,
+          "low_0_to_0_1_percent": 659,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 164,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 40,
+          "low_0_to_0_1_percent": 255,
+          "rows": 300
+        }
+      }
+    },
+    "Rb": {
+      "zero": 404,
+      "low_0_to_0_1_percent": 1028,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09986198018162588
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 68,
+      "min_percent": 0.0,
+      "max_percent": 0.2,
+      "declared_maximum_percent": 0.2,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 241,
+          "low_0_to_0_1_percent": 613,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 160,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 30,
+          "low_0_to_0_1_percent": 255,
+          "rows": 300
+        }
+      }
+    },
+    "Sr": {
+      "zero": 415,
+      "low_0_to_0_1_percent": 943,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09746513031077216
+      },
+      "mid_above_0_1_to_declared_half_max": 42,
+      "high_above_declared_half_max": 100,
+      "min_percent": 0.0,
+      "max_percent": 0.3,
+      "declared_maximum_percent": 0.3,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 217,
+          "low_0_to_0_1_percent": 588,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 160,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 65,
+          "low_0_to_0_1_percent": 195,
+          "rows": 300
+        }
+      }
+    },
+    "Y": {
+      "zero": 420,
+      "low_0_to_0_1_percent": 1022,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09981447522424927
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 58,
+      "min_percent": 0.0,
+      "max_percent": 0.15,
+      "declared_maximum_percent": 0.15,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 217,
+          "low_0_to_0_1_percent": 639,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 163,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 70,
+          "low_0_to_0_1_percent": 220,
+          "rows": 300
+        }
+      }
+    },
+    "Zr": {
+      "zero": 437,
+      "low_0_to_0_1_percent": 899,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09975059538654088
+      },
+      "mid_above_0_1_to_declared_half_max": 93,
+      "high_above_declared_half_max": 71,
+      "min_percent": 0.0,
+      "max_percent": 0.4,
+      "declared_maximum_percent": 0.4,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 209,
+          "low_0_to_0_1_percent": 593,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 161,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 95,
+          "low_0_to_0_1_percent": 145,
+          "rows": 300
+        }
+      }
+    },
+    "Nb": {
+      "zero": 433,
+      "low_0_to_0_1_percent": 972,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09915397731915176
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 95,
+      "min_percent": 0.0,
+      "max_percent": 0.2,
+      "declared_maximum_percent": 0.2,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 220,
+          "low_0_to_0_1_percent": 613,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 164,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 80,
+          "low_0_to_0_1_percent": 195,
+          "rows": 300
+        }
+      }
+    },
+    "Mo": {
+      "zero": 433,
+      "low_0_to_0_1_percent": 1024,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09769597357474473
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 43,
+      "min_percent": 0.0,
+      "max_percent": 0.15,
+      "declared_maximum_percent": 0.15,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 220,
+          "low_0_to_0_1_percent": 654,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 160,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 80,
+          "low_0_to_0_1_percent": 210,
+          "rows": 300
+        }
+      }
+    },
+    "Cd": {
+      "zero": 420,
+      "low_0_to_0_1_percent": 1065,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09927756933395117
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 15,
+      "min_percent": 0.0,
+      "max_percent": 0.12,
+      "declared_maximum_percent": 0.12,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 212,
+          "low_0_to_0_1_percent": 675,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 165,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 75,
+          "low_0_to_0_1_percent": 225,
+          "rows": 300
+        }
+      }
+    },
+    "Sn": {
+      "zero": 395,
+      "low_0_to_0_1_percent": 1048,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.099597341704933
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 57,
+      "min_percent": 0.0,
+      "max_percent": 0.15,
+      "declared_maximum_percent": 0.15,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 222,
+          "low_0_to_0_1_percent": 639,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 164,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 40,
+          "low_0_to_0_1_percent": 245,
+          "rows": 300
+        }
+      }
+    },
+    "Sb": {
+      "zero": 415,
+      "low_0_to_0_1_percent": 1026,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09989618772723106
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 59,
+      "min_percent": 0.0,
+      "max_percent": 0.15,
+      "declared_maximum_percent": 0.15,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 207,
+          "low_0_to_0_1_percent": 659,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 162,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 75,
+          "low_0_to_0_1_percent": 205,
+          "rows": 300
+        }
+      }
+    },
+    "Ba": {
+      "zero": 439,
+      "low_0_to_0_1_percent": 915,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09951431020907633
+      },
+      "mid_above_0_1_to_declared_half_max": 78,
+      "high_above_declared_half_max": 68,
+      "min_percent": 0.0,
+      "max_percent": 0.4,
+      "declared_maximum_percent": 0.4,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 231,
+          "low_0_to_0_1_percent": 559,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 161,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 75,
+          "low_0_to_0_1_percent": 195,
+          "rows": 300
+        }
+      }
+    },
+    "W": {
+      "zero": 421,
+      "low_0_to_0_1_percent": 978,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09878695394178562
+      },
+      "mid_above_0_1_to_declared_half_max": 0,
+      "high_above_declared_half_max": 101,
+      "min_percent": 0.0,
+      "max_percent": 0.2,
+      "declared_maximum_percent": 0.2,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 233,
+          "low_0_to_0_1_percent": 598,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 160,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 55,
+          "low_0_to_0_1_percent": 220,
+          "rows": 300
+        }
+      }
+    },
+    "Pb": {
+      "zero": 491,
+      "low_0_to_0_1_percent": 911,
+      "low_bin_spread_percent": {
+        "min": 9.999999999999999e-05,
+        "max": 0.09905675196596915
+      },
+      "mid_above_0_1_to_declared_half_max": 34,
+      "high_above_declared_half_max": 64,
+      "min_percent": 0.0,
+      "max_percent": 0.3,
+      "declared_maximum_percent": 0.3,
+      "declared_maximum_reached": true,
+      "by_scenario": {
+        "routine": {
+          "zero": 238,
+          "low_0_to_0_1_percent": 573,
+          "rows": 900
+        },
+        "sparse_boundary": {
+          "zero": 133,
+          "low_0_to_0_1_percent": 158,
+          "rows": 300
+        },
+        "interference": {
+          "zero": 120,
+          "low_0_to_0_1_percent": 180,
+          "rows": 300
+        }
+      }
+    }
+  },
+  "gaps": {
+    "Co": {
+      "shortfall_counts": {},
+      "band_definition_degenerate": true,
+      "notes": [
+        "mid band is degenerate by definition, not a coverage failure: half of the declared maximum 0.15 percent is 0.075, at or below the low-bin ceiling 0.1, so every value above the low bin is counted as high"
+      ],
+      "target": ">= 50 exact-zero and >= 50 low recipes per applicable element"
+    },
+    "Ni": {
+      "shortfall_counts": {},
+      "band_definition_degenerate": true,
+      "notes": [
+        "mid band is degenerate by definition, not a coverage failure: half of the declared maximum 0.2 percent is 0.1, at or below the low-bin ceiling 0.1, so every value above the low bin is counted as high"
+      ],
+      "target": ">= 50 exact-zero and >= 50 low recipes per applicable element"
+    },
+    "Cu": {
+      "shortfall_counts": {},
+      "band_definition_degenerate": true,
+      "notes": [
+        "mid band is degenerate by definition, not a coverage failure: half of the declared maximum 0.2 percent is 0.1, at or below the low-bin ceiling 0.1, so every value above the low bin is counted as high"
+      ],
+      "target": ">= 50 exact-zero and >= 50 low recipes per applicable element"
+    },
+    "As": {
+      "shortfall_counts": {},
+      "band_definition_degenerate": true,
+      "notes": [
+        "mid band is degenerate by definition, not a coverage failure: half of the declared maximum 0.2 percent is 0.1, at or below the low-bin ceiling 0.1, so every value above the low bin is counted as high"
+      ],
+      "target": ">= 50 exact-zero and >= 50 low recipes per applicable element"
+    },
+    "Se": {
+      "shortfall_counts": {},
+      "band_definition_degenerate": true,
+      "notes": [
+        "mid band is degenerate by definition, not a coverage failure: half of the declared maximum 0.15 percent is 0.075, at or below the low-bin ceiling 0.1, so every value above the low bin is counted as high"
+      ],
+      "target": ">= 50 exact-zero and >= 50 low recipes per applicable element"
+    },
+    "Rb": {
+      "shortfall_counts": {},
+      "band_definition_degenerate": true,
+      "notes": [
+        "mid band is degenerate by definition, not a coverage failure: half of the declared maximum 0.2 percent is 0.1, at or below the low-bin ceiling 0.1, so every value above the low bin is counted as high"
+      ],
+      "target": ">= 50 exact-zero and >= 50 low recipes per applicable element"
+    },
+    "Y": {
+      "shortfall_counts": {},
+      "band_definition_degenerate": true,
+      "notes": [
+        "mid band is degenerate by definition, not a coverage failure: half of the declared maximum 0.15 percent is 0.075, at or below the low-bin ceiling 0.1, so every value above the low bin is counted as high"
+      ],
+      "target": ">= 50 exact-zero and >= 50 low recipes per applicable element"
+    },
+    "Nb": {
+      "shortfall_counts": {},
+      "band_definition_degenerate": true,
+      "notes": [
+        "mid band is degenerate by definition, not a coverage failure: half of the declared maximum 0.2 percent is 0.1, at or below the low-bin ceiling 0.1, so every value above the low bin is counted as high"
+      ],
+      "target": ">= 50 exact-zero and >= 50 low recipes per applicable element"
+    },
+    "Mo": {
+      "shortfall_counts": {},
+      "band_definition_degenerate": true,
+      "notes": [
+        "mid band is degenerate by definition, not a coverage failure: half of the declared maximum 0.15 percent is 0.075, at or below the low-bin ceiling 0.1, so every value above the low bin is counted as high"
+      ],
+      "target": ">= 50 exact-zero and >= 50 low recipes per applicable element"
+    },
+    "Cd": {
+      "shortfall_counts": {},
+      "band_definition_degenerate": true,
+      "notes": [
+        "mid band is degenerate by definition, not a coverage failure: half of the declared maximum 0.12 percent is 0.06, at or below the low-bin ceiling 0.1, so every value above the low bin is counted as high"
+      ],
+      "target": ">= 50 exact-zero and >= 50 low recipes per applicable element"
+    },
+    "Sn": {
+      "shortfall_counts": {},
+      "band_definition_degenerate": true,
+      "notes": [
+        "mid band is degenerate by definition, not a coverage failure: half of the declared maximum 0.15 percent is 0.075, at or below the low-bin ceiling 0.1, so every value above the low bin is counted as high"
+      ],
+      "target": ">= 50 exact-zero and >= 50 low recipes per applicable element"
+    },
+    "Sb": {
+      "shortfall_counts": {},
+      "band_definition_degenerate": true,
+      "notes": [
+        "mid band is degenerate by definition, not a coverage failure: half of the declared maximum 0.15 percent is 0.075, at or below the low-bin ceiling 0.1, so every value above the low bin is counted as high"
+      ],
+      "target": ">= 50 exact-zero and >= 50 low recipes per applicable element"
+    },
+    "W": {
+      "shortfall_counts": {},
+      "band_definition_degenerate": true,
+      "notes": [
+        "mid band is degenerate by definition, not a coverage failure: half of the declared maximum 0.2 percent is 0.1, at or below the low-bin ceiling 0.1, so every value above the low bin is counted as high"
+      ],
+      "target": ">= 50 exact-zero and >= 50 low recipes per applicable element"
+    }
+  },
+  "family_integrity": {
+    "family_count": 1120,
+    "family_size_histogram": {
+      "1": 945,
+      "2": 110,
+      "4": 1,
+      "3": 2,
+      "20": 1,
+      "5": 61
+    },
+    "interference_family_count": 60,
+    "interference_family_sizes": [
+      5
+    ],
+    "interference_families_of_size_5": 60,
+    "families_spanning_scenarios": [],
+    "largest_family_evidence": {
+      "parent_family": "B-S0110",
+      "row_ids": [
+        "B01121",
+        "B01122",
+        "B01125",
+        "B01127",
+        "B01128",
+        "B01129",
+        "B01130",
+        "B01131",
+        "B01132",
+        "B01133",
+        "B01135",
+        "B01141",
+        "B01143",
+        "B01145",
+        "B01151",
+        "B01152",
+        "B01153",
+        "B01157",
+        "B01159",
+        "B01163"
+      ],
+      "blocks": [
+        "sparse_exact_zero",
+        "sparse_low"
+      ],
+      "note": "near-neighbour merging is transitive (union-find), so a chain of individually close constructed families can end up under one label; this only ever makes the global family split more conservative, it never splits one constructed control group across folds"
+    }
+  },
+  "iron_rich_criterion_verification": {
+    "criterion": "Fe2O3T in [40,75] mass percent (elemental Fe in [27.977,52.458] percent under the Fe2O3 stoichiometry assumption) AND Fe strictly larger than every other candidate target AND strict closure of the element sum to 100 percent within 1e-6 points",
+    "rows_passing_all_boolean_checks": 1500,
+    "rows_total": 1500,
+    "Fe2O3T_min": 40.0,
+    "Fe2O3T_max": 75.0,
+    "Fe_min": 27.977457733249842,
+    "Fe_max": 52.45773324984345,
+    "gangue_min": 25.0,
+    "gangue_max": 60.0,
+    "max_abs_closure_error": 1.4210854715202004e-14
+  },
+  "near_neighbour_grouping": {
+    "rule": "two distinct recipes are near-neighbours when the maximum absolute difference over the unified 33-element vector is <= 0.10 absolute element percent points; near-neighbours are merged into one parent_family (deterministic: smallest family label wins)",
+    "cross_family_near_neighbour_pairs": [
+      {
+        "ids": [
+          "B01019",
+          "B01025"
+        ],
+        "families": [
+          "B-S0059",
+          "B-S0062"
+        ],
+        "linfinity_percent": 0.07144636461402598,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01020",
+          "B01026"
+        ],
+        "families": [
+          "B-S0059",
+          "B-S0062"
+        ],
+        "linfinity_percent": 0.09142691291748961,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01091",
+          "B01115"
+        ],
+        "families": [
+          "B-S0095",
+          "B-S0107"
+        ],
+        "linfinity_percent": 0.07613878769284721,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01121",
+          "B01127"
+        ],
+        "families": [
+          "B-S0110",
+          "B-S0113"
+        ],
+        "linfinity_percent": 0.09169266203456772,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01122",
+          "B01128"
+        ],
+        "families": [
+          "B-S0110",
+          "B-S0113"
+        ],
+        "linfinity_percent": 0.09172360768018883,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01123",
+          "B01155"
+        ],
+        "families": [
+          "B-S0111",
+          "B-S0127"
+        ],
+        "linfinity_percent": 0.04049303575303753,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01125",
+          "B01145"
+        ],
+        "families": [
+          "B-S0112",
+          "B-S0122"
+        ],
+        "linfinity_percent": 0.05722471030163767,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01125",
+          "B01163"
+        ],
+        "families": [
+          "B-S0112",
+          "B-S0131"
+        ],
+        "linfinity_percent": 0.047915343922070974,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01127",
+          "B01145"
+        ],
+        "families": [
+          "B-S0113",
+          "B-S0122"
+        ],
+        "linfinity_percent": 0.08306126591422647,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01127",
+          "B01151"
+        ],
+        "families": [
+          "B-S0113",
+          "B-S0125"
+        ],
+        "linfinity_percent": 0.09362339992640045,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01128",
+          "B01152"
+        ],
+        "families": [
+          "B-S0113",
+          "B-S0125"
+        ],
+        "linfinity_percent": 0.09362339992640045,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01129",
+          "B01131"
+        ],
+        "families": [
+          "B-S0114",
+          "B-S0115"
+        ],
+        "linfinity_percent": 0.008265507111360648,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01129",
+          "B01135"
+        ],
+        "families": [
+          "B-S0114",
+          "B-S0117"
+        ],
+        "linfinity_percent": 0.008207592203234526,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01129",
+          "B01151"
+        ],
+        "families": [
+          "B-S0114",
+          "B-S0125"
+        ],
+        "linfinity_percent": 0.0531836787319957,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01129",
+          "B01153"
+        ],
+        "families": [
+          "B-S0114",
+          "B-S0126"
+        ],
+        "linfinity_percent": 0.022250878146572006,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01129",
+          "B01159"
+        ],
+        "families": [
+          "B-S0114",
+          "B-S0129"
+        ],
+        "linfinity_percent": 0.01493295467315292,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01130",
+          "B01132"
+        ],
+        "families": [
+          "B-S0114",
+          "B-S0115"
+        ],
+        "linfinity_percent": 0.09346373672726918,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01130",
+          "B01152"
+        ],
+        "families": [
+          "B-S0114",
+          "B-S0125"
+        ],
+        "linfinity_percent": 0.08041116652423838,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01131",
+          "B01135"
+        ],
+        "families": [
+          "B-S0115",
+          "B-S0117"
+        ],
+        "linfinity_percent": 0.0055288887594002745,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01131",
+          "B01151"
+        ],
+        "families": [
+          "B-S0115",
+          "B-S0125"
+        ],
+        "linfinity_percent": 0.0584077140795074,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01131",
+          "B01153"
+        ],
+        "families": [
+          "B-S0115",
+          "B-S0126"
+        ],
+        "linfinity_percent": 0.013985371035211358,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01131",
+          "B01159"
+        ],
+        "families": [
+          "B-S0115",
+          "B-S0129"
+        ],
+        "linfinity_percent": 0.020156990020664622,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01132",
+          "B01152"
+        ],
+        "families": [
+          "B-S0115",
+          "B-S0125"
+        ],
+        "linfinity_percent": 0.09624521275357743,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01133",
+          "B01143"
+        ],
+        "families": [
+          "B-S0116",
+          "B-S0121"
+        ],
+        "linfinity_percent": 0.07353497406108289,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01133",
+          "B01163"
+        ],
+        "families": [
+          "B-S0116",
+          "B-S0131"
+        ],
+        "linfinity_percent": 0.09245918786651153,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01135",
+          "B01151"
+        ],
+        "families": [
+          "B-S0117",
+          "B-S0125"
+        ],
+        "linfinity_percent": 0.052878825320107126,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01135",
+          "B01153"
+        ],
+        "families": [
+          "B-S0117",
+          "B-S0126"
+        ],
+        "linfinity_percent": 0.01404328594333748,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01135",
+          "B01159"
+        ],
+        "families": [
+          "B-S0117",
+          "B-S0129"
+        ],
+        "linfinity_percent": 0.018614223286981257,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01137",
+          "B01139"
+        ],
+        "families": [
+          "B-S0118",
+          "B-S0119"
+        ],
+        "linfinity_percent": 0.0898554194827792,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01137",
+          "B01161"
+        ],
+        "families": [
+          "B-S0118",
+          "B-S0130"
+        ],
+        "linfinity_percent": 0.0633177537148839,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01138",
+          "B01156"
+        ],
+        "families": [
+          "B-S0118",
+          "B-S0127"
+        ],
+        "linfinity_percent": 0.08270649256084858,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01141",
+          "B01143"
+        ],
+        "families": [
+          "B-S0120",
+          "B-S0121"
+        ],
+        "linfinity_percent": 0.048067092543897516,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01141",
+          "B01157"
+        ],
+        "families": [
+          "B-S0120",
+          "B-S0128"
+        ],
+        "linfinity_percent": 0.09175352806228076,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01142",
+          "B01144"
+        ],
+        "families": [
+          "B-S0120",
+          "B-S0121"
+        ],
+        "linfinity_percent": 0.08814848981707532,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01145",
+          "B01163"
+        ],
+        "families": [
+          "B-S0122",
+          "B-S0131"
+        ],
+        "linfinity_percent": 0.09405152161706809,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01146",
+          "B01164"
+        ],
+        "families": [
+          "B-S0122",
+          "B-S0131"
+        ],
+        "linfinity_percent": 0.0940515216170823,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01151",
+          "B01153"
+        ],
+        "families": [
+          "B-S0125",
+          "B-S0126"
+        ],
+        "linfinity_percent": 0.06337634107971724,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01151",
+          "B01159"
+        ],
+        "families": [
+          "B-S0125",
+          "B-S0129"
+        ],
+        "linfinity_percent": 0.03825072405884278,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      },
+      {
+        "ids": [
+          "B01153",
+          "B01159"
+        ],
+        "families": [
+          "B-S0126",
+          "B-S0129"
+        ],
+        "linfinity_percent": 0.03265750923031874,
+        "scenarios": [
+          "sparse_boundary",
+          "sparse_boundary"
+        ]
+      }
+    ],
+    "cross_family_pair_count": 39,
+    "family_renamed_rows": 27,
+    "family_count_after_merge": 1323,
+    "largest_family_after_merge": 15
+  },
+  "block_construction_proof": {
+    "per_block": {
+      "boundary": {
+        "rows": 5,
+        "scenarios": [
+          "sparse_boundary"
+        ],
+        "element_zero_low_counts": {
+          "Na": {
+            "zero": 2,
+            "low_0_to_0_1_percent": 0
+          },
+          "Mg": {
+            "zero": 2,
+            "low_0_to_0_1_percent": 0
+          },
+          "Al": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "Si": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "P": {
+            "zero": 2,
+            "low_0_to_0_1_percent": 0
+          },
+          "S": {
+            "zero": 2,
+            "low_0_to_0_1_percent": 1
+          },
+          "Cl": {
+            "zero": 2,
+            "low_0_to_0_1_percent": 2
+          },
+          "K": {
+            "zero": 2,
+            "low_0_to_0_1_percent": 0
+          },
+          "Ca": {
+            "zero": 2,
+            "low_0_to_0_1_percent": 0
+          },
+          "Ti": {
+            "zero": 2,
+            "low_0_to_0_1_percent": 0
+          },
+          "V": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Cr": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Mn": {
+            "zero": 2,
+            "low_0_to_0_1_percent": 0
+          },
+          "Co": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Ni": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Cu": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Zn": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "As": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Se": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Rb": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Sr": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Y": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Zr": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Nb": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Mo": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Cd": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Sn": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Sb": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Ba": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "W": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          },
+          "Pb": {
+            "zero": 1,
+            "low_0_to_0_1_percent": 3
+          }
+        }
+      },
+      "declared_maximum_spike": {
+        "rows": 31,
+        "scenarios": [
+          "sparse_boundary"
+        ],
+        "element_zero_low_counts": {
+          "Na": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "Mg": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "Al": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "Si": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "P": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "S": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "Cl": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 8
+          },
+          "K": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "Ca": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "Ti": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "V": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 27
+          },
+          "Cr": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 28
+          },
+          "Mn": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "Co": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 28
+          },
+          "Ni": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 29
+          },
+          "Cu": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 26
+          },
+          "Zn": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 28
+          },
+          "As": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 27
+          },
+          "Se": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 29
+          },
+          "Rb": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 25
+          },
+          "Sr": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 25
+          },
+          "Y": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 28
+          },
+          "Zr": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 26
+          },
+          "Nb": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 29
+          },
+          "Mo": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 25
+          },
+          "Cd": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 30
+          },
+          "Sn": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 29
+          },
+          "Sb": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 27
+          },
+          "Ba": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 26
+          },
+          "W": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 25
+          },
+          "Pb": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 23
+          }
+        }
+      },
+      "interference_control": {
+        "rows": 300,
+        "scenarios": [
+          "interference"
+        ],
+        "element_zero_low_counts": {
+          "Na": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 5
+          },
+          "Mg": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 15
+          },
+          "Al": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "Si": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "P": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 55
+          },
+          "S": {
+            "zero": 60,
+            "low_0_to_0_1_percent": 65
+          },
+          "Cl": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 80
+          },
+          "K": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 20
+          },
+          "Ca": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "Ti": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 10
+          },
+          "V": {
+            "zero": 70,
+            "low_0_to_0_1_percent": 190
+          },
+          "Cr": {
+            "zero": 70,
+            "low_0_to_0_1_percent": 215
+          },
+          "Mn": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 10
+          },
+          "Co": {
+            "zero": 30,
+            "low_0_to_0_1_percent": 270
+          },
+          "Ni": {
+            "zero": 75,
+            "low_0_to_0_1_percent": 210
+          },
+          "Cu": {
+            "zero": 75,
+            "low_0_to_0_1_percent": 205
+          },
+          "Zn": {
+            "zero": 70,
+            "low_0_to_0_1_percent": 190
+          },
+          "As": {
+            "zero": 210,
+            "low_0_to_0_1_percent": 60
+          },
+          "Se": {
+            "zero": 40,
+            "low_0_to_0_1_percent": 255
+          },
+          "Rb": {
+            "zero": 30,
+            "low_0_to_0_1_percent": 255
+          },
+          "Sr": {
+            "zero": 65,
+            "low_0_to_0_1_percent": 195
+          },
+          "Y": {
+            "zero": 70,
+            "low_0_to_0_1_percent": 220
+          },
+          "Zr": {
+            "zero": 95,
+            "low_0_to_0_1_percent": 145
+          },
+          "Nb": {
+            "zero": 80,
+            "low_0_to_0_1_percent": 195
+          },
+          "Mo": {
+            "zero": 80,
+            "low_0_to_0_1_percent": 210
+          },
+          "Cd": {
+            "zero": 75,
+            "low_0_to_0_1_percent": 225
+          },
+          "Sn": {
+            "zero": 40,
+            "low_0_to_0_1_percent": 245
+          },
+          "Sb": {
+            "zero": 75,
+            "low_0_to_0_1_percent": 205
+          },
+          "Ba": {
+            "zero": 75,
+            "low_0_to_0_1_percent": 195
+          },
+          "W": {
+            "zero": 55,
+            "low_0_to_0_1_percent": 220
+          },
+          "Pb": {
+            "zero": 120,
+            "low_0_to_0_1_percent": 180
+          }
+        }
+      },
+      "routine": {
+        "rows": 900,
+        "scenarios": [
+          "routine"
+        ],
+        "element_zero_low_counts": {
+          "Na": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 16
+          },
+          "Mg": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 10
+          },
+          "Al": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 5
+          },
+          "Si": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 5
+          },
+          "P": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 213
+          },
+          "S": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 125
+          },
+          "Cl": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 290
+          },
+          "K": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 65
+          },
+          "Ca": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 0
+          },
+          "Ti": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 55
+          },
+          "V": {
+            "zero": 219,
+            "low_0_to_0_1_percent": 592
+          },
+          "Cr": {
+            "zero": 229,
+            "low_0_to_0_1_percent": 578
+          },
+          "Mn": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 23
+          },
+          "Co": {
+            "zero": 238,
+            "low_0_to_0_1_percent": 619
+          },
+          "Ni": {
+            "zero": 242,
+            "low_0_to_0_1_percent": 591
+          },
+          "Cu": {
+            "zero": 213,
+            "low_0_to_0_1_percent": 628
+          },
+          "Zn": {
+            "zero": 200,
+            "low_0_to_0_1_percent": 610
+          },
+          "As": {
+            "zero": 216,
+            "low_0_to_0_1_percent": 620
+          },
+          "Se": {
+            "zero": 207,
+            "low_0_to_0_1_percent": 659
+          },
+          "Rb": {
+            "zero": 241,
+            "low_0_to_0_1_percent": 613
+          },
+          "Sr": {
+            "zero": 217,
+            "low_0_to_0_1_percent": 588
+          },
+          "Y": {
+            "zero": 217,
+            "low_0_to_0_1_percent": 639
+          },
+          "Zr": {
+            "zero": 209,
+            "low_0_to_0_1_percent": 593
+          },
+          "Nb": {
+            "zero": 220,
+            "low_0_to_0_1_percent": 613
+          },
+          "Mo": {
+            "zero": 220,
+            "low_0_to_0_1_percent": 654
+          },
+          "Cd": {
+            "zero": 212,
+            "low_0_to_0_1_percent": 675
+          },
+          "Sn": {
+            "zero": 222,
+            "low_0_to_0_1_percent": 639
+          },
+          "Sb": {
+            "zero": 207,
+            "low_0_to_0_1_percent": 659
+          },
+          "Ba": {
+            "zero": 231,
+            "low_0_to_0_1_percent": 559
+          },
+          "W": {
+            "zero": 233,
+            "low_0_to_0_1_percent": 598
+          },
+          "Pb": {
+            "zero": 238,
+            "low_0_to_0_1_percent": 573
+          }
+        }
+      },
+      "sparse_exact_zero": {
+        "rows": 132,
+        "scenarios": [
+          "sparse_boundary"
+        ],
+        "element_zero_low_counts": {
+          "Na": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Mg": {
+            "zero": 66,
+            "low_0_to_0_1_percent": 0
+          },
+          "Al": {
+            "zero": 66,
+            "low_0_to_0_1_percent": 0
+          },
+          "Si": {
+            "zero": 66,
+            "low_0_to_0_1_percent": 0
+          },
+          "P": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "S": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Cl": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "K": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Ca": {
+            "zero": 66,
+            "low_0_to_0_1_percent": 0
+          },
+          "Ti": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "V": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Cr": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Mn": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Co": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Ni": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Cu": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Zn": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "As": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Se": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Rb": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Sr": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Y": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Zr": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Nb": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Mo": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Cd": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Sn": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Sb": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Ba": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "W": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          },
+          "Pb": {
+            "zero": 132,
+            "low_0_to_0_1_percent": 0
+          }
+        }
+      },
+      "sparse_low": {
+        "rows": 132,
+        "scenarios": [
+          "sparse_boundary"
+        ],
+        "element_zero_low_counts": {
+          "Na": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Mg": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 66
+          },
+          "Al": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 66
+          },
+          "Si": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 66
+          },
+          "P": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "S": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Cl": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "K": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Ca": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 66
+          },
+          "Ti": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "V": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Cr": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Mn": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Co": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Ni": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Cu": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Zn": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "As": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Se": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Rb": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Sr": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Y": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Zr": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Nb": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Mo": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Cd": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Sn": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Sb": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Ba": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "W": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          },
+          "Pb": {
+            "zero": 0,
+            "low_0_to_0_1_percent": 132
+          }
+        }
+      }
+    },
+    "violations": [],
+    "violation_count": 0,
+    "note": "per-block zero/low counts are the arithmetic evidence behind the gap list in B_coverage.json; the routine and interference blocks are randomly drawn or control-structured, so no per-element zero/low quota is claimed for them"
+  },
+  "design_checks": {
+    "nonnegative_and_finite": true,
+    "sum_is_100_within_strict_tolerance": true,
+    "max_abs_composition_sum_error": 1.4210854715202004e-14,
+    "scenario_quota_met": true,
+    "unique_by_a_rule_hash": 1500,
+    "unique_by_unified_12_decimal": 1500,
+    "duplicate_repairs": [],
+    "id_format_stable_and_unique": true,
+    "provenance_reconversion_matches": true,
+    "provenance_reconversion_mismatches": [],
+    "closure_policy_used": [
+      "strict"
+    ],
+    "matrix_owner": [
+      "B",
+      "iron_rich_oxide"
+    ],
+    "elements_outside_canonical_order": [],
+    "block_construction_violation_count": 0,
+    "block_construction_violations": []
+  },
+  "design_manifest": {
+    "design_ranges": {
+      "file": "B_design_ranges.json",
+      "sha256": "0f10d70db547b05198c70d72be4c8a5c3c58dac1a31aca49a3ce3c72bc0f7d70"
+    },
+    "design_mineral_pool": {
+      "file": "work/B_design_mineral_pool.json",
+      "sha256": "05a2c3fac86df1fd8ccc84a21f8e0850bf562b8041412e2ea34cde3602476231",
+      "seed": 2026101821,
+      "count": 1000,
+      "command_log": "work/design_mineral_cli.log"
+    },
+    "construction_seed": 2026101820,
+    "strict_closure_tolerance_points": 1e-06
+  }
+}

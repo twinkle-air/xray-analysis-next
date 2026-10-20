@@ -1,0 +1,273 @@
+{
+  "purpose": "Re-record local generator digests and verify them against the generator sealed inside A P1_pack.zip before using the local CLI for production",
+  "generator_local_directory": "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\fp-spectrum-generator-competition-v0.2.1\\fp_competition",
+  "a_sealed_pack": "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\A-part-20261018\\P1_pack.zip",
+  "a_sealed_pack_sha256": "4d9eae10332eea3470b5bc5a865e6c850919bcd56f1f545a28f057b3a611bf60",
+  "a_sealed_pack_p2_sha256": "cd802c955dc7580c9b6239c9c229cef33e5bb44747733807632b836afdc514ff",
+  "local_file_count": 40,
+  "sealed_file_count": 35,
+  "compared_count": 35,
+  "key_files": {
+    "app.py": {
+      "local_sha256": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+      "sealed_p1_sha256": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+      "match": true
+    },
+    "core.py": {
+      "local_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "sealed_p1_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "match": true
+    },
+    "minerals.py": {
+      "local_sha256": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "sealed_p1_sha256": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "match": true
+    },
+    "dataset.py": {
+      "local_sha256": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+      "sealed_p1_sha256": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+      "match": true
+    },
+    "requirements-lock.txt": {
+      "local_sha256": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0",
+      "sealed_p1_sha256": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0",
+      "match": true
+    }
+  },
+  "local_files": {
+    "__init__.py": {
+      "sha256": "3338a26d3706620d0b1eb836a6e39beb4ae15d61a4c04d9441215ec17ffeafa1",
+      "bytes": 76
+    },
+    "app.py": {
+      "sha256": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+      "bytes": 26395
+    },
+    "CHANGELOG_0.2.1.md": {
+      "sha256": "48721907e5c47d3c7f361fd899f3f0993f3740dcccde53ab9d862d93259291b6",
+      "bytes": 1853
+    },
+    "core.py": {
+      "sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "bytes": 22109
+    },
+    "dataset.py": {
+      "sha256": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+      "bytes": 31774
+    },
+    "default_profile.json": {
+      "sha256": "68e83da80e9938af58ff1a41210075934351420f5a8e0741f8ba2706a978df97",
+      "bytes": 1009
+    },
+    "docs/X射线模拟训练集数据产生要求_v1.0.pdf": {
+      "sha256": "4a3adc44cf38d23d0493232e2cf610e6ec61851eeb887bc92cf823998942e374",
+      "bytes": 483939
+    },
+    "docs/训练集数据产生要求.md": {
+      "sha256": "ddd8f9f4ac05b49e69cd822d8bcef40c36d137f1d605c3bc99cf56fe36260a33",
+      "bytes": 32943
+    },
+    "example_composition.json": {
+      "sha256": "2446ca21420d269d223f2c70e222b514c441c9ad081a20ec9e889973ac9a3277",
+      "bytes": 45
+    },
+    "generator-tests.log": {
+      "sha256": "8fb25e2e18835bbe05d8e8a2cc605e5a9c97889484d7ee04455bcf9389d79c1c",
+      "bytes": 6445
+    },
+    "jitter_example.json": {
+      "sha256": "01ffbc70f7d4958d259f29c3e419a3c582f51eac61e0365e92b5ea0bd8e34aad",
+      "bytes": 182
+    },
+    "legacy_presets.json": {
+      "sha256": "b85d0515ae5737c318ebc2e9d1db0a3957c45ad806267274c7c94d10426e1a6d",
+      "bytes": 5094
+    },
+    "mineral_design_ranges.json": {
+      "sha256": "4e2c0abe739c1153f320f4188994f6e0358464b8989388c5b54e2f74c38d3486",
+      "bytes": 990
+    },
+    "mineral_jitter_example.json": {
+      "sha256": "3a17fab72ed80e7b38816d600ce66a1d526f77d6d2a6bc8d431e774b2c0e1ef6",
+      "bytes": 247
+    },
+    "minerals.py": {
+      "sha256": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "bytes": 5340
+    },
+    "physics_baseline.json": {
+      "sha256": "0e2d67fa5ccaa818c71bb51011a56a934e242c20071c365ac695e6de9d599c86",
+      "bytes": 394
+    },
+    "public_data/BCR-2-USGS-2022.pdf": {
+      "sha256": "a9b30e232851bd4b6dad80f97b4265da2b873762d6011c7b8e5e6d4af23beeed",
+      "bytes": 293589
+    },
+    "public_data/BHVO-2-USGS-2022.pdf": {
+      "sha256": "0c571e9c4fc925e19451a07f46648f73a127d76d68a66812a0c700e3de303e4f",
+      "bytes": 436062
+    },
+    "public_data/build_references.py": {
+      "sha256": "4db9eae853f3a72f0137423de656a459886b79129935eb22b4b7616b95db6284",
+      "bytes": 1450
+    },
+    "public_data/download_manifest.json": {
+      "sha256": "8511e235ceada3f0401c03147c281f31e07b9119b3912c52f0a66e832d10ed2d",
+      "bytes": 1268
+    },
+    "public_data/fetch_usgs.py": {
+      "sha256": "b0dbfa5f211655f7cbe71c157f00ff70296552192326ef3776e4ae25d62c6e78",
+      "bytes": 1948
+    },
+    "public_data/reference_samples.json": {
+      "sha256": "e793c1bf22422378e06170446b44f5f3d02017ad01ca47360c54aff933279866",
+      "bytes": 17855
+    },
+    "public_data/usgs_compositions.json": {
+      "sha256": "7054d3f9cd5016337f6477f9aa3241d386c0910a274e311ead7e96000e0168ec",
+      "bytes": 2145
+    },
+    "README.md": {
+      "sha256": "cac9d9985b15b9f7204ed5cfdb5a04f45868b9ca619d0564754e1b3f39b6ceff",
+      "bytes": 19461
+    },
+    "REFERENCES.md": {
+      "sha256": "ed170446c1a648fdef9bb6f6376d26e679419750836f260a25da3277e12fb92d",
+      "bytes": 8092
+    },
+    "requirements-lock.txt": {
+      "sha256": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0",
+      "bytes": 267
+    },
+    "requirements.txt": {
+      "sha256": "cc53b69124590b58924efdddf4e8db17def9f5bc56ccb8d89d73330b9394b446",
+      "bytes": 81
+    },
+    "robustness.py": {
+      "sha256": "8878e652ce4b1554e97d383e2428718f1f140d10624007206eea908d59b9f634",
+      "bytes": 7882
+    },
+    "samples_template.csv": {
+      "sha256": "ea48f5edfd5ed67b61c9fd5d02d739a1c6c48d181377331a6a38c5e0b697dec0",
+      "bytes": 70
+    },
+    "steel_design_ranges.json": {
+      "sha256": "a3ba8134b7da2ff8087f927771554a7a788b5a04fba8bcdb148293a6e6df1652",
+      "bytes": 254
+    },
+    "tests/check_public_sources.py": {
+      "sha256": "a620e7a13adadf3c32c462b577a7952e68be9e8074d6a1935b3b2aa0dece5748",
+      "bytes": 1509
+    },
+    "tests/test_core.py": {
+      "sha256": "de29ad04433a75c3721fa3bcea7abe9aad8041404d2ab9782800a452525f4852",
+      "bytes": 10060
+    },
+    "tests/test_dataset.py": {
+      "sha256": "a50150c016d881ce2d5e036bffb5d8d202dbbb5d654ba07254cbd1651599da68",
+      "bytes": 6911
+    },
+    "tests/test_expansion.py": {
+      "sha256": "9fcc5f41901ce504e3186532e038ca8096b5db15d76b8b881fa57774986ffe0a",
+      "bytes": 5987
+    },
+    "tests/test_robustness.py": {
+      "sha256": "271afb9e0a761fd38473fed38aec3da103224b4fe6f449e3b55fbe6bfc70e4fa",
+      "bytes": 3042
+    },
+    "VALIDATION.md": {
+      "sha256": "dc9594fd80db240bf3391c1100a560054b896fbe66e778d4d69aab3630608103",
+      "bytes": 7223
+    },
+    "validation_record.json": {
+      "sha256": "d5111c6bccf931b2b8723f56b0fa22a7cc053d16441b437aa3d06e5e542e4427",
+      "bytes": 1306
+    },
+    "version.py": {
+      "sha256": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+      "bytes": 94
+    },
+    "启动生成器.cmd": {
+      "sha256": "3a165cea09b98ed34bfd48f3bcb61c06f56c04b39ccdbb6c206a6ef80548dc99",
+      "bytes": 307
+    },
+    "基于基本参数法的能谱生成模型_比赛研究版.py": {
+      "sha256": "59f6f399367d3443056c0894de600c91474b1f0ef41d545e415a35654dfb0bf1",
+      "bytes": 130
+    }
+  },
+  "sealed_p1_files": {
+    "__init__.py": "3338a26d3706620d0b1eb836a6e39beb4ae15d61a4c04d9441215ec17ffeafa1",
+    "app.py": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+    "CHANGELOG_0.2.1.md": "48721907e5c47d3c7f361fd899f3f0993f3740dcccde53ab9d862d93259291b6",
+    "core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "dataset.py": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+    "default_profile.json": "68e83da80e9938af58ff1a41210075934351420f5a8e0741f8ba2706a978df97",
+    "example_composition.json": "2446ca21420d269d223f2c70e222b514c441c9ad081a20ec9e889973ac9a3277",
+    "jitter_example.json": "01ffbc70f7d4958d259f29c3e419a3c582f51eac61e0365e92b5ea0bd8e34aad",
+    "legacy_presets.json": "b85d0515ae5737c318ebc2e9d1db0a3957c45ad806267274c7c94d10426e1a6d",
+    "mineral_design_ranges.json": "4e2c0abe739c1153f320f4188994f6e0358464b8989388c5b54e2f74c38d3486",
+    "mineral_jitter_example.json": "3a17fab72ed80e7b38816d600ce66a1d526f77d6d2a6bc8d431e774b2c0e1ef6",
+    "minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+    "physics_baseline.json": "0e2d67fa5ccaa818c71bb51011a56a934e242c20071c365ac695e6de9d599c86",
+    "public_data/BCR-2-USGS-2022.pdf": "a9b30e232851bd4b6dad80f97b4265da2b873762d6011c7b8e5e6d4af23beeed",
+    "public_data/BHVO-2-USGS-2022.pdf": "0c571e9c4fc925e19451a07f46648f73a127d76d68a66812a0c700e3de303e4f",
+    "public_data/build_references.py": "4db9eae853f3a72f0137423de656a459886b79129935eb22b4b7616b95db6284",
+    "public_data/download_manifest.json": "8511e235ceada3f0401c03147c281f31e07b9119b3912c52f0a66e832d10ed2d",
+    "public_data/fetch_usgs.py": "b0dbfa5f211655f7cbe71c157f00ff70296552192326ef3776e4ae25d62c6e78",
+    "public_data/reference_samples.json": "e793c1bf22422378e06170446b44f5f3d02017ad01ca47360c54aff933279866",
+    "public_data/usgs_compositions.json": "7054d3f9cd5016337f6477f9aa3241d386c0910a274e311ead7e96000e0168ec",
+    "README.md": "cac9d9985b15b9f7204ed5cfdb5a04f45868b9ca619d0564754e1b3f39b6ceff",
+    "REFERENCES.md": "ed170446c1a648fdef9bb6f6376d26e679419750836f260a25da3277e12fb92d",
+    "requirements-lock.txt": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0",
+    "requirements.txt": "cc53b69124590b58924efdddf4e8db17def9f5bc56ccb8d89d73330b9394b446",
+    "robustness.py": "8878e652ce4b1554e97d383e2428718f1f140d10624007206eea908d59b9f634",
+    "steel_design_ranges.json": "a3ba8134b7da2ff8087f927771554a7a788b5a04fba8bcdb148293a6e6df1652",
+    "tests/check_public_sources.py": "a620e7a13adadf3c32c462b577a7952e68be9e8074d6a1935b3b2aa0dece5748",
+    "tests/test_core.py": "de29ad04433a75c3721fa3bcea7abe9aad8041404d2ab9782800a452525f4852",
+    "tests/test_dataset.py": "a50150c016d881ce2d5e036bffb5d8d202dbbb5d654ba07254cbd1651599da68",
+    "tests/test_expansion.py": "9fcc5f41901ce504e3186532e038ca8096b5db15d76b8b881fa57774986ffe0a",
+    "tests/test_robustness.py": "271afb9e0a761fd38473fed38aec3da103224b4fe6f449e3b55fbe6bfc70e4fa",
+    "VALIDATION.md": "dc9594fd80db240bf3391c1100a560054b896fbe66e778d4d69aab3630608103",
+    "version.py": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+    "启动生成器.cmd": "3a165cea09b98ed34bfd48f3bcb61c06f56c04b39ccdbb6c206a6ef80548dc99",
+    "基于基本参数法的能谱生成模型_比赛研究版.py": "59f6f399367d3443056c0894de600c91474b1f0ef41d545e415a35654dfb0bf1"
+  },
+  "sealed_p2_files_count": 35,
+  "sealed_p1_vs_p2_mismatches": [],
+  "mismatches": [],
+  "only_in_local_not_sealed": [
+    "docs/X射线模拟训练集数据产生要求_v1.0.pdf",
+    "docs/训练集数据产生要求.md",
+    "generator-tests.log",
+    "samples_template.csv",
+    "validation_record.json"
+  ],
+  "only_in_sealed_not_local": [],
+  "physics_baseline_record": {
+    "baseline": "workspace 0.2.0 before 2026-10-17 export revision; not proof of unavailable teammate source",
+    "files": {
+      "core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "robustness.py": "8878e652ce4b1554e97d383e2428718f1f140d10624007206eea908d59b9f634"
+    }
+  },
+  "physics_baseline_check": {
+    "core.py": {
+      "expected": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "actual_local": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "match": true
+    },
+    "minerals.py": {
+      "expected": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "actual_local": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "match": true
+    },
+    "robustness.py": {
+      "expected": "8878e652ce4b1554e97d383e2428718f1f140d10624007206eea908d59b9f634",
+      "actual_local": "8878e652ce4b1554e97d383e2428718f1f140d10624007206eea908d59b9f634",
+      "match": true
+    }
+  },
+  "status": "passed"
+}
