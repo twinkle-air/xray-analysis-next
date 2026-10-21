@@ -1,0 +1,21 @@
+{
+  "status": "instructions_only_no_generation",
+  "review_policy": "member_selfcheck_then_user_reviews_B_C_D",
+  "user_role": "A",
+  "per_member": {
+    "silicate_oxide": 150,
+    "iron_rich_oxide": 100,
+    "routine": 150,
+    "sparse_boundary": 50,
+    "interference": 50,
+    "formulas": 250,
+    "profiles": 3,
+    "replicates": 2,
+    "spectra": 1500
+  },
+  "total_formulas": 1000,
+  "total_spectra": 6000,
+  "peak_budget_bytes": 10000000000,
+  "evaluation": "internal_family_holdout_not_independently_blinded",
+  "extra_pilot_spectra": 0
+}
