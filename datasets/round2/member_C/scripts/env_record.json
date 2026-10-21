@@ -1,0 +1,20 @@
+{
+ "python": "3.15.0 (tags/v3.15.0:d220409, Oct  9 2026, 11:55:56) [MSC v.1951 64 bit (AMD64)]",
+ "implementation": "CPython",
+ "platform": "Windows-11-10.0.26200-SP0",
+ "machine": "AMD64",
+ "processor": "Intel64 Family 6 Model 204 Stepping 2, GenuineIntel",
+ "cwd": "C:\\Users\\TianT\\Documents\\Qoder\\2026-10-21\\ddc06964\\C_r2",
+ "generator_app_sha256": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+ "core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+ "profiles": {
+  "P1": "9814cf45872eb9d71d0160791e58247de4de6439828e6c0b3855423c74aa7e18",
+  "P2": "16d5792a65a7e2f0d37c2b70632d4eba1cf061555b06f74857d18459f08dd096",
+  "P3": "7b8e58a99eea79ac022b17449b927659a92778e8128f142e7f14c1334ba63813"
+ },
+ "packages": {
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "xraylib": "4.3.0"
+ }
+}
