@@ -1,0 +1,118 @@
+{
+  "distance": "L1 sum over complete elemental mass-percent composition, percentage points",
+  "purpose": "diagnostic internal near-neighbor listing; global grouping threshold and split are coordinator-owned",
+  "candidate_count": 250,
+  "parent_family_count": 210,
+  "pair_counts_below_l1_threshold": {
+    "0.1": 21,
+    "0.5": 84,
+    "1.0": 85,
+    "2.0": 102,
+    "5.0": 130
+  },
+  "nearest_distance_min": 0.019999999999990907,
+  "nearest_distance_median": 8.044042331795014,
+  "nearest_distance_max": 15.80184451217169,
+  "nearest_cross_parent_20": [
+    {
+      "l1_percent_points": 0.09581695574382021,
+      "id_a": "B2-SIL-EDG-016",
+      "id_b": "B2-SIL-EDG-020"
+    },
+    {
+      "l1_percent_points": 0.16932313125367227,
+      "id_a": "B2-SIL-EDG-020",
+      "id_b": "B2-SIL-EDG-028"
+    },
+    {
+      "l1_percent_points": 0.2651400869974925,
+      "id_a": "B2-SIL-EDG-016",
+      "id_b": "B2-SIL-EDG-028"
+    },
+    {
+      "l1_percent_points": 0.3918490980482161,
+      "id_a": "B2-FEO-EDG-007",
+      "id_b": "B2-FEO-EDG-019"
+    },
+    {
+      "l1_percent_points": 0.796865422998623,
+      "id_a": "B2-SIL-EDG-002",
+      "id_b": "B2-SIL-EDG-026"
+    },
+    {
+      "l1_percent_points": 1.4315902485391407,
+      "id_a": "B2-SIL-EDG-001",
+      "id_b": "B2-SIL-EDG-013"
+    },
+    {
+      "l1_percent_points": 1.7462940087926142,
+      "id_a": "B2-SIL-EDG-006",
+      "id_b": "B2-SIL-EDG-012"
+    },
+    {
+      "l1_percent_points": 1.7732980005604748,
+      "id_a": "B2-SIL-EDG-004",
+      "id_b": "B2-SIL-EDG-016"
+    },
+    {
+      "l1_percent_points": 1.8480924755147194,
+      "id_a": "B2-SIL-EDG-004",
+      "id_b": "B2-SIL-EDG-020"
+    },
+    {
+      "l1_percent_points": 1.9976814254231918,
+      "id_a": "B2-SIL-EDG-004",
+      "id_b": "B2-SIL-EDG-028"
+    },
+    {
+      "l1_percent_points": 2.084661565626833,
+      "id_a": "B2-SIL-EDG-004",
+      "id_b": "B2-SIL-EDG-008"
+    },
+    {
+      "l1_percent_points": 2.1495889499084617,
+      "id_a": "B2-SIL-EDG-008",
+      "id_b": "B2-SIL-EDG-016"
+    },
+    {
+      "l1_percent_points": 2.2243834248627063,
+      "id_a": "B2-SIL-EDG-008",
+      "id_b": "B2-SIL-EDG-020"
+    },
+    {
+      "l1_percent_points": 2.3739723747711787,
+      "id_a": "B2-SIL-EDG-008",
+      "id_b": "B2-SIL-EDG-028"
+    },
+    {
+      "l1_percent_points": 2.9352485255675766,
+      "id_a": "B2-SIL-EDG-008",
+      "id_b": "B2-SIL-EDG-022"
+    },
+    {
+      "l1_percent_points": 3.3433807770560633,
+      "id_a": "B2-FEO-EDG-005",
+      "id_b": "B2-FEO-EDG-013"
+    },
+    {
+      "l1_percent_points": 3.752698033958825,
+      "id_a": "B2-SIL-EDG-026",
+      "id_b": "B2-SIL-EDG-030"
+    },
+    {
+      "l1_percent_points": 3.762545348608708,
+      "id_a": "B2-FEO-EDG-004",
+      "id_b": "B2-FEO-EDG-016"
+    },
+    {
+      "l1_percent_points": 3.8040690837623137,
+      "id_a": "B2-FEO-EDG-010",
+      "id_b": "B2-FEO-EDG-016"
+    },
+    {
+      "l1_percent_points": 3.81110063714172,
+      "id_a": "B2-SIL-EDG-002",
+      "id_b": "B2-SIL-EDG-030"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "owner": "B",
+  "round_id": "round2-20261021",
+  "status": "selfcheck_passed_provisional_pending_global_inclusion",
+  "scope": "user-authorized B-local provisional; not a global shared-input freeze",
+  "candidate_count": 250,
+  "actual_spectra": 1500,
+  "spectra_by_profile": {
+    "P1": 500,
+    "P2": 500,
+    "P3": 500
+  },
+  "completed_sealed_batches": 30,
+  "full_audit_spectra": 1500,
+  "full_replay_spectra": 1500,
+  "zip_count": 30,
+  "zip_sha256_file": "B2_provisional_zip_hashes.sha256",
+  "summary": "B2_provisional_summary.json",
+  "report": "B2_provisional_report.md",
+  "global_coordinator_acceptance": "pending",
+  "github_repo_modified": false,
+  "old_packages_modified": false,
+  "failed_spectra_deleted": false
+}
