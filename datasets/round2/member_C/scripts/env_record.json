@@ -1,0 +1,21 @@
+{
+ "python": "3.15.0 (tags/v3.15.0:d220409, Oct  9 2026, 11:55:56) [MSC v.1951 64 bit (AMD64)]",
+ "implementation": "CPython",
+ "platform": "Windows-11-10.0.26200-SP0",
+ "machine": "AMD64",
+ "processor": "Intel64 Family 6 Model 204 Stepping 2, GenuineIntel",
+ "cwd": "C:\\Users\\TianT\\Documents\\Qoder\\2026-10-21\\ddc06964\\C_r2",
+ "generator_app_sha256": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+ "core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+ "profiles": {
+  "P1": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221",
+  "P2": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03",
+  "P3": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351"
+ },
+ "packages": {
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "xraylib": "4.3.0"
+ },
+ "note": "v2: profiles byte-identical to A frozen P1/P2/P3 (coordinator review baseline); app/core unchanged"
+}

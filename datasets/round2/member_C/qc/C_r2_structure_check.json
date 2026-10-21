@@ -1,0 +1,55 @@
+{
+ "P1": {
+  "records": 500,
+  "unique_ids": 500,
+  "recipes": 250,
+  "replicates_per_recipe": [
+   2
+  ],
+  "families": 250,
+  "splits": {
+   "test": 74,
+   "validation": 76,
+   "train": 350
+  },
+  "profiles": [
+   "reference_P49_150s_default"
+  ]
+ },
+ "P2": {
+  "records": 500,
+  "unique_ids": 500,
+  "recipes": 250,
+  "replicates_per_recipe": [
+   2
+  ],
+  "families": 250,
+  "splits": {
+   "test": 74,
+   "validation": 76,
+   "train": 350
+  },
+  "profiles": [
+   "low_count_P49_30s_response_shift"
+  ]
+ },
+ "P3": {
+  "records": 500,
+  "unique_ids": 500,
+  "recipes": 250,
+  "replicates_per_recipe": [
+   2
+  ],
+  "families": 250,
+  "splits": {
+   "test": 74,
+   "validation": 76,
+   "train": 350
+  },
+  "profiles": [
+   "low_voltage_P20_response_shift"
+  ]
+ },
+ "same_recipe_set_all_conditions": true,
+ "total_spectra": 1500
+}

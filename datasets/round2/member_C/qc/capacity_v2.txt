@@ -1,0 +1,10 @@
+369M	C:/Users/TianT/Documents/Qoder/2026-10-21/ddc06964/C_r2/v2/batches/C_r2_P1
+8.0K	C:/Users/TianT/Documents/Qoder/2026-10-21/ddc06964/C_r2/v2/batches/C_r2_P1.log
+372M	C:/Users/TianT/Documents/Qoder/2026-10-21/ddc06964/C_r2/v2/batches/C_r2_P2
+8.0K	C:/Users/TianT/Documents/Qoder/2026-10-21/ddc06964/C_r2/v2/batches/C_r2_P2.log
+370M	C:/Users/TianT/Documents/Qoder/2026-10-21/ddc06964/C_r2/v2/batches/C_r2_P3
+8.0K	C:/Users/TianT/Documents/Qoder/2026-10-21/ddc06964/C_r2/v2/batches/C_r2_P3.log
+1.0K	C:/Users/TianT/Documents/Qoder/2026-10-21/ddc06964/C_r2/v2/batches/timings.jsonl
+81M	C:/Users/TianT/Documents/Qoder/2026-10-21/ddc06964/C_r2/v2/qc/C_r2_P1_dataset.zip
+83M	C:/Users/TianT/Documents/Qoder/2026-10-21/ddc06964/C_r2/v2/qc/C_r2_P2_dataset.zip
+83M	C:/Users/TianT/Documents/Qoder/2026-10-21/ddc06964/C_r2/v2/qc/C_r2_P3_dataset.zip
