@@ -1,0 +1,29 @@
+{
+  "source_commit": "334514d9d9851798ece89b4972de4aa3c0976261",
+  "operation": "relocate_unchanged_subtrees",
+  "round_id": "round1",
+  "training_acceptance_changed": false,
+  "mapping": [
+    {
+      "old_prefix": "datasets/A-part-20261018",
+      "new_prefix": "datasets/round1/A-part-20261018",
+      "unchanged_subtree_sha": "de2becc156280fda1cbf776fc2d290366b2133a8",
+      "file_count": 38,
+      "file_bytes": 105196659
+    },
+    {
+      "old_prefix": "datasets/B-part",
+      "new_prefix": "datasets/round1/B-part",
+      "unchanged_subtree_sha": "1061129101f86007ed3cbdbc8a17e20f49162d4f",
+      "file_count": 96,
+      "file_bytes": 103350645
+    },
+    {
+      "old_prefix": "datasets/C-part-20261018",
+      "new_prefix": "datasets/round1/C-part-20261018",
+      "unchanged_subtree_sha": "366570bb8c9ba3b131fb842a17add3d56da03b83",
+      "file_count": 78,
+      "file_bytes": 356502614
+    }
+  ]
+}
