@@ -8,13 +8,14 @@
  "generator_app_sha256": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
  "core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
  "profiles": {
-  "P1": "9814cf45872eb9d71d0160791e58247de4de6439828e6c0b3855423c74aa7e18",
-  "P2": "16d5792a65a7e2f0d37c2b70632d4eba1cf061555b06f74857d18459f08dd096",
-  "P3": "7b8e58a99eea79ac022b17449b927659a92778e8128f142e7f14c1334ba63813"
+  "P1": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221",
+  "P2": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03",
+  "P3": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351"
  },
  "packages": {
   "numpy": "2.5.4",
   "scipy": "1.18.1",
   "xraylib": "4.3.0"
- }
+ },
+ "note": "v2: profiles byte-identical to A frozen P1/P2/P3 (coordinator review baseline); app/core unchanged"
 }

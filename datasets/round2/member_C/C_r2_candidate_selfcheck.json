@@ -4,12 +4,12 @@
  "status": "candidates_selfchecked_pending_generation",
  "recipes": 250,
  "quota": {
-  "iron-rich-oxide|interference": 20,
-  "iron-rich-oxide|routine": 60,
-  "iron-rich-oxide|sparse_boundary": 20,
-  "silicate-oxide|interference": 30,
-  "silicate-oxide|routine": 90,
-  "silicate-oxide|sparse_boundary": 30
+  "iron-rich-oxide/interference": 20,
+  "iron-rich-oxide/routine": 60,
+  "iron-rich-oxide/sparse_boundary": 20,
+  "silicate-oxide/interference": 30,
+  "silicate-oxide/routine": 90,
+  "silicate-oxide/sparse_boundary": 30
  },
  "unique_ids": 250,
  "unique_compositions": 250,
@@ -43,6 +43,12 @@
    "granite",
    "granodiorite",
    "illite-clay",
+   "int-SIL-01-As-Pb",
+   "int-SIL-02-P-Zr",
+   "int-SIL-03-Ti-V",
+   "int-SIL-04-Cr-Mn",
+   "int-SIL-05-Se-Pb",
+   "int-SIL-06-W-Cu",
    "kaolinite-clay",
    "laterite-residual",
    "limestone",
@@ -70,85 +76,433 @@
    "fe-ti-oxide",
    "goethite-limonite",
    "hematite-magnetite",
+   "int-FE-01-Sr-Zr",
+   "int-FE-02-Rb-Mo",
+   "int-FE-03-Sn-Nb",
+   "int-FE-04-Ti-Ba",
    "manganese-iron",
    "ni-laterite"
   ]
  },
  "family_counts": {
-  "silicate-oxide": 29,
-  "iron-rich-oxide": 22
+  "iron-rich-oxide/boundary-boundary-1": 1,
+  "iron-rich-oxide/boundary-boundary-2": 1,
+  "iron-rich-oxide/boundary-boundary-3": 1,
+  "iron-rich-oxide/boundary-boundary-4": 1,
+  "iron-rich-oxide/boundary-boundary-5": 1,
+  "iron-rich-oxide/boundary-boundary-6": 1,
+  "iron-rich-oxide/boundary-boundary-7": 1,
+  "iron-rich-oxide/boundary-boundary-8": 1,
+  "iron-rich-oxide/boundary-boundary-9": 1,
+  "iron-rich-oxide/boundary-sparse-10": 1,
+  "iron-rich-oxide/boundary-sparse-11": 1,
+  "iron-rich-oxide/boundary-sparse-12": 1,
+  "iron-rich-oxide/boundary-sparse-13": 1,
+  "iron-rich-oxide/boundary-sparse-14": 1,
+  "iron-rich-oxide/carbonate-siderite-ox": 9,
+  "iron-rich-oxide/chromite-sand": 7,
+  "iron-rich-oxide/fe-skarn-mixed": 7,
+  "iron-rich-oxide/fe-ti-oxide": 9,
+  "iron-rich-oxide/goethite-limonite": 9,
+  "iron-rich-oxide/hematite-magnetite": 9,
+  "iron-rich-oxide/int-FE-01-Sr-Zr": 5,
+  "iron-rich-oxide/int-FE-02-Rb-Mo": 5,
+  "iron-rich-oxide/int-FE-03-Sn-Nb": 5,
+  "iron-rich-oxide/int-FE-04-Ti-Ba": 5,
+  "iron-rich-oxide/manganese-iron": 8,
+  "iron-rich-oxide/ni-laterite": 8,
+  "silicate-oxide/andesite": 8,
+  "silicate-oxide/bauxite": 7,
+  "silicate-oxide/boundary-boundary-1": 1,
+  "silicate-oxide/boundary-boundary-2": 1,
+  "silicate-oxide/boundary-boundary-3": 1,
+  "silicate-oxide/boundary-boundary-4": 1,
+  "silicate-oxide/boundary-boundary-5": 1,
+  "silicate-oxide/boundary-boundary-6": 1,
+  "silicate-oxide/boundary-boundary-7": 1,
+  "silicate-oxide/boundary-boundary-8": 1,
+  "silicate-oxide/boundary-boundary-9": 1,
+  "silicate-oxide/boundary-sparse-10": 1,
+  "silicate-oxide/boundary-sparse-11": 1,
+  "silicate-oxide/boundary-sparse-12": 1,
+  "silicate-oxide/boundary-sparse-13": 1,
+  "silicate-oxide/boundary-sparse-14": 1,
+  "silicate-oxide/boundary-sparse-15": 1,
+  "silicate-oxide/diorite-basalt": 8,
+  "silicate-oxide/dolomite-marl": 7,
+  "silicate-oxide/feldspar-arkose": 7,
+  "silicate-oxide/gneiss-mica-schist": 7,
+  "silicate-oxide/granite": 8,
+  "silicate-oxide/granodiorite": 8,
+  "silicate-oxide/illite-clay": 7,
+  "silicate-oxide/int-SIL-01-As-Pb": 5,
+  "silicate-oxide/int-SIL-02-P-Zr": 5,
+  "silicate-oxide/int-SIL-03-Ti-V": 5,
+  "silicate-oxide/int-SIL-04-Cr-Mn": 5,
+  "silicate-oxide/int-SIL-05-Se-Pb": 5,
+  "silicate-oxide/int-SIL-06-W-Cu": 5,
+  "silicate-oxide/kaolinite-clay": 8,
+  "silicate-oxide/laterite-residual": 7,
+  "silicate-oxide/limestone": 7,
+  "silicate-oxide/montmorillonite": 7,
+  "silicate-oxide/quartz-arenite": 9
  },
  "target_nonzero_recipe_counts": {
-  "silicate-oxide": {
-   "Na": 134,
-   "Mg": 143,
-   "Al": 144,
-   "Si": 148,
-   "P": 34,
-   "S": 37,
-   "Cl": 38,
-   "K": 135,
-   "Ca": 146,
-   "Ti": 142,
-   "V": 29,
-   "Cr": 24,
-   "Mn": 3,
-   "Fe": 146,
-   "Co": 23,
-   "Ni": 35,
-   "Cu": 33,
-   "Zn": 27,
-   "As": 21,
-   "Se": 32,
-   "Rb": 36,
-   "Sr": 35,
-   "Y": 31,
-   "Zr": 35,
-   "Nb": 34,
-   "Mo": 23,
-   "Cd": 26,
-   "Sn": 31,
-   "Sb": 36,
-   "Ba": 27,
-   "W": 31,
-   "Pb": 35
-  },
-  "iron-rich-oxide": {
-   "Na": 9,
-   "Mg": 92,
-   "Al": 90,
-   "Si": 95,
-   "P": 34,
-   "S": 31,
-   "Cl": 0,
-   "K": 44,
-   "Ca": 91,
-   "Ti": 48,
-   "V": 38,
-   "Cr": 44,
-   "Mn": 46,
-   "Fe": 100,
-   "Co": 30,
-   "Ni": 29,
-   "Cu": 18,
-   "Zn": 24,
-   "As": 21,
-   "Se": 25,
-   "Rb": 28,
-   "Sr": 23,
-   "Y": 30,
-   "Zr": 25,
-   "Nb": 24,
-   "Mo": 19,
-   "Cd": 22,
-   "Sn": 22,
-   "Sb": 22,
-   "Ba": 22,
-   "W": 26,
-   "Pb": 27
-  }
+  "Na": 126,
+  "Mg": 235,
+  "Al": 234,
+  "Si": 243,
+  "P": 59,
+  "S": 52,
+  "Cl": 33,
+  "K": 169,
+  "Ca": 237,
+  "Ti": 169,
+  "V": 59,
+  "Cr": 59,
+  "Mn": 43,
+  "Fe": 246,
+  "Co": 40,
+  "Ni": 50,
+  "Cu": 47,
+  "Zn": 95,
+  "As": 38,
+  "Se": 47,
+  "Rb": 51,
+  "Sr": 89,
+  "Y": 94,
+  "Zr": 91,
+  "Nb": 94,
+  "Mo": 37,
+  "Cd": 34,
+  "Sn": 43,
+  "Sb": 44,
+  "Ba": 34,
+  "W": 45,
+  "Pb": 50
  },
  "trace_ppm_ledger_present": true,
+ "control_groups": {
+  "expected_groups": 10,
+  "expected_per_group": 5,
+  "silicate_groups": 6,
+  "iron_groups": 4,
+  "all_ok": true,
+  "pair_spike_percent_min": 0.4,
+  "pair_spike_percent_max": 2.0,
+  "groups": [
+   {
+    "control_group": "int-FE-01-Sr-Zr",
+    "matrix_type": "iron-rich-oxide",
+    "pair": [
+     "Sr",
+     "Zr"
+    ],
+    "roles": {
+     "absent": 1,
+     "A_only": 1,
+     "B_only": 1,
+     "both_1to1": 1,
+     "both_5to1": 1
+    },
+    "base_sha256": "be43dcf1d3e9d080dd882891d98e4400a542e498ee930d9b194ad097518de517",
+    "ratio_expected": 5.0,
+    "ratio_observed": 5.0,
+    "pair_spike_percent_min": 0.4,
+    "pair_spike_percent_max": 2.0,
+    "checks": {
+     "five_variants": true,
+     "roles_complete": true,
+     "same_parent_family": true,
+     "same_base_matrix": true,
+     "absent_is_zero": true,
+     "A_only_has_no_B": true,
+     "B_only_has_no_A": true,
+     "ratio_matches": true
+    },
+    "ok": true
+   },
+   {
+    "control_group": "int-FE-02-Rb-Mo",
+    "matrix_type": "iron-rich-oxide",
+    "pair": [
+     "Rb",
+     "Mo"
+    ],
+    "roles": {
+     "absent": 1,
+     "A_only": 1,
+     "B_only": 1,
+     "both_1to1": 1,
+     "both_1to5": 1
+    },
+    "base_sha256": "0d14320a827c9da16935f5974a22eea744d2c75c3f30b52f77961d34f7e55e57",
+    "ratio_expected": 0.2,
+    "ratio_observed": 0.2,
+    "pair_spike_percent_min": 0.4,
+    "pair_spike_percent_max": 2.0,
+    "checks": {
+     "five_variants": true,
+     "roles_complete": true,
+     "same_parent_family": true,
+     "same_base_matrix": true,
+     "absent_is_zero": true,
+     "A_only_has_no_B": true,
+     "B_only_has_no_A": true,
+     "ratio_matches": true
+    },
+    "ok": true
+   },
+   {
+    "control_group": "int-FE-03-Sn-Nb",
+    "matrix_type": "iron-rich-oxide",
+    "pair": [
+     "Sn",
+     "Nb"
+    ],
+    "roles": {
+     "absent": 1,
+     "A_only": 1,
+     "B_only": 1,
+     "both_1to1": 1,
+     "both_5to1": 1
+    },
+    "base_sha256": "c1193e93b542d692c88dc2c779dca63642bd72417e742ab189fe4a7c84e4ef63",
+    "ratio_expected": 5.0,
+    "ratio_observed": 5.0,
+    "pair_spike_percent_min": 0.4,
+    "pair_spike_percent_max": 2.0,
+    "checks": {
+     "five_variants": true,
+     "roles_complete": true,
+     "same_parent_family": true,
+     "same_base_matrix": true,
+     "absent_is_zero": true,
+     "A_only_has_no_B": true,
+     "B_only_has_no_A": true,
+     "ratio_matches": true
+    },
+    "ok": true
+   },
+   {
+    "control_group": "int-FE-04-Ti-Ba",
+    "matrix_type": "iron-rich-oxide",
+    "pair": [
+     "Ti",
+     "Ba"
+    ],
+    "roles": {
+     "absent": 1,
+     "A_only": 1,
+     "B_only": 1,
+     "both_1to1": 1,
+     "both_1to5": 1
+    },
+    "base_sha256": "e3d3e4c00ec495638f7ddb6d5975eda920a5436fa727a24808dc4a7be1ca60df",
+    "ratio_expected": 0.2,
+    "ratio_observed": 0.2,
+    "pair_spike_percent_min": 0.4,
+    "pair_spike_percent_max": 2.0,
+    "checks": {
+     "five_variants": true,
+     "roles_complete": true,
+     "same_parent_family": true,
+     "same_base_matrix": true,
+     "absent_is_zero": true,
+     "A_only_has_no_B": true,
+     "B_only_has_no_A": true,
+     "ratio_matches": true
+    },
+    "ok": true
+   },
+   {
+    "control_group": "int-SIL-01-As-Pb",
+    "matrix_type": "silicate-oxide",
+    "pair": [
+     "As",
+     "Pb"
+    ],
+    "roles": {
+     "absent": 1,
+     "A_only": 1,
+     "B_only": 1,
+     "both_1to1": 1,
+     "both_5to1": 1
+    },
+    "base_sha256": "795dab23d97cc84167d0bb7de2387076d4308318a9bbe33deb48cdf2f3649a3e",
+    "ratio_expected": 5.0,
+    "ratio_observed": 5.0,
+    "pair_spike_percent_min": 0.4,
+    "pair_spike_percent_max": 2.0,
+    "checks": {
+     "five_variants": true,
+     "roles_complete": true,
+     "same_parent_family": true,
+     "same_base_matrix": true,
+     "absent_is_zero": true,
+     "A_only_has_no_B": true,
+     "B_only_has_no_A": true,
+     "ratio_matches": true
+    },
+    "ok": true
+   },
+   {
+    "control_group": "int-SIL-02-P-Zr",
+    "matrix_type": "silicate-oxide",
+    "pair": [
+     "P",
+     "Zr"
+    ],
+    "roles": {
+     "absent": 1,
+     "A_only": 1,
+     "B_only": 1,
+     "both_1to1": 1,
+     "both_1to5": 1
+    },
+    "base_sha256": "efafb0a8513460bfb0cfcf10d7e95879483cab390750e15ba82d2159e2647feb",
+    "ratio_expected": 0.2,
+    "ratio_observed": 0.2,
+    "pair_spike_percent_min": 0.4,
+    "pair_spike_percent_max": 2.0,
+    "checks": {
+     "five_variants": true,
+     "roles_complete": true,
+     "same_parent_family": true,
+     "same_base_matrix": true,
+     "absent_is_zero": true,
+     "A_only_has_no_B": true,
+     "B_only_has_no_A": true,
+     "ratio_matches": true
+    },
+    "ok": true
+   },
+   {
+    "control_group": "int-SIL-03-Ti-V",
+    "matrix_type": "silicate-oxide",
+    "pair": [
+     "Ti",
+     "V"
+    ],
+    "roles": {
+     "absent": 1,
+     "A_only": 1,
+     "B_only": 1,
+     "both_1to1": 1,
+     "both_5to1": 1
+    },
+    "base_sha256": "e89e2cc7dc1fe5d952f7c90326725ef739bba89ccf65a39b334861bea7f5350c",
+    "ratio_expected": 5.0,
+    "ratio_observed": 5.0,
+    "pair_spike_percent_min": 0.4,
+    "pair_spike_percent_max": 2.0,
+    "checks": {
+     "five_variants": true,
+     "roles_complete": true,
+     "same_parent_family": true,
+     "same_base_matrix": true,
+     "absent_is_zero": true,
+     "A_only_has_no_B": true,
+     "B_only_has_no_A": true,
+     "ratio_matches": true
+    },
+    "ok": true
+   },
+   {
+    "control_group": "int-SIL-04-Cr-Mn",
+    "matrix_type": "silicate-oxide",
+    "pair": [
+     "Cr",
+     "Mn"
+    ],
+    "roles": {
+     "absent": 1,
+     "A_only": 1,
+     "B_only": 1,
+     "both_1to1": 1,
+     "both_1to5": 1
+    },
+    "base_sha256": "a8cf57471bc2d39f88033eb7588d178e96414c2399843e79e38eec5de95db461",
+    "ratio_expected": 0.2,
+    "ratio_observed": 0.2,
+    "pair_spike_percent_min": 0.4,
+    "pair_spike_percent_max": 2.0,
+    "checks": {
+     "five_variants": true,
+     "roles_complete": true,
+     "same_parent_family": true,
+     "same_base_matrix": true,
+     "absent_is_zero": true,
+     "A_only_has_no_B": true,
+     "B_only_has_no_A": true,
+     "ratio_matches": true
+    },
+    "ok": true
+   },
+   {
+    "control_group": "int-SIL-05-Se-Pb",
+    "matrix_type": "silicate-oxide",
+    "pair": [
+     "Se",
+     "Pb"
+    ],
+    "roles": {
+     "absent": 1,
+     "A_only": 1,
+     "B_only": 1,
+     "both_1to1": 1,
+     "both_5to1": 1
+    },
+    "base_sha256": "aa4895d2b63b6273fd0ac7517a60e6649f1d1faa782ad27a216b644c35b3192f",
+    "ratio_expected": 5.0,
+    "ratio_observed": 5.0,
+    "pair_spike_percent_min": 0.4,
+    "pair_spike_percent_max": 2.0,
+    "checks": {
+     "five_variants": true,
+     "roles_complete": true,
+     "same_parent_family": true,
+     "same_base_matrix": true,
+     "absent_is_zero": true,
+     "A_only_has_no_B": true,
+     "B_only_has_no_A": true,
+     "ratio_matches": true
+    },
+    "ok": true
+   },
+   {
+    "control_group": "int-SIL-06-W-Cu",
+    "matrix_type": "silicate-oxide",
+    "pair": [
+     "W",
+     "Cu"
+    ],
+    "roles": {
+     "absent": 1,
+     "A_only": 1,
+     "B_only": 1,
+     "both_1to1": 1,
+     "both_1to5": 1
+    },
+    "base_sha256": "080f1bd04724a7fdd09b7b8c5173b608bff6bc9265042cdaa7a1cabd43187728",
+    "ratio_expected": 0.2,
+    "ratio_observed": 0.2,
+    "pair_spike_percent_min": 0.4,
+    "pair_spike_percent_max": 2.0,
+    "checks": {
+     "five_variants": true,
+     "roles_complete": true,
+     "same_parent_family": true,
+     "same_base_matrix": true,
+     "absent_is_zero": true,
+     "A_only_has_no_B": true,
+     "B_only_has_no_A": true,
+     "ratio_matches": true
+    },
+    "ok": true
+   }
+  ]
+ },
  "design_seed": 2026102101,
  "targets": [
   "Na",
@@ -184,5 +538,5 @@
   "W",
   "Pb"
  ],
- "note": "候选自检；未包含跨成员去重（由协调人合并时执行）"
+ "note": "合成配方候选自检；干扰对照为同一基体五变体（缺席/A单/B单/1:1/5:1或1:5），不代表真实样品或检出结论"
 }

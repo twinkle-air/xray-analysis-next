@@ -1,0 +1,27 @@
+{
+ "version": "v1",
+ "commit": "f5d721e8397a6652b902beed0c4a89a6f842d785",
+ "status": "superseded_by_v2",
+ "reasons": [
+  "P2/P3 profiles were the generator-library variants, not the P1/P2/P3 baseline named in the coordinator review",
+  "the 50 interference recipes were independent coexistence draws, not complete matched control groups"
+ ],
+ "large_artifacts": {
+  "qc/C_r2_P1_dataset.zip": "4470be8a9158695685609c25a80992d1fa2cdf88909fa38af5145ab2261018e9",
+  "qc/C_r2_P2_dataset.zip": "dd5afece5a868b29a5e0489de7608c064d7ab1bad9b3fcc650ef9a3a043ab109",
+  "qc/C_r2_P3_dataset.zip": "2a9adbf69c8650691f5170afad52a7a4eb223d096a34e5f66e32701c8d3e9a7d"
+ },
+ "small_evidence": "v1 reports, logs and recipe files are kept under qc/superseded_v1/ and are not overwritten",
+ "retention_note": "The v1 ZIPs stay unchanged at qc/C_r2_P{1,2,3}_dataset.zip and in commit f5d721e; v2 adds differently named *_v2 artifacts alongside them. No v1 spectrum, truth file or manifest is deleted or edited.",
+ "profile_hashes_v1": {
+  "P1": "9814cf45872eb9d71d0160791e58247de4de6439828e6c0b3855423c74aa7e18",
+  "P2": "16d5792a65a7e2f0d37c2b70632d4eba1cf061555b06f74857d18459f08dd096",
+  "P3": "7b8e58a99eea79ac022b17449b927659a92778e8128f142e7f14c1334ba63813"
+ },
+ "v1_counts": {
+  "recipes": 250,
+  "spectra": 1500,
+  "silicate": 150,
+  "iron_rich": 100
+ }
+}

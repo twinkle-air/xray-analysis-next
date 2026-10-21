@@ -1,0 +1,1 @@
+{"archive": "C:\\Users\\TianT\\Documents\\Qoder\\2026-10-21\\ddc06964\\C_r2\\qc\\C_r2_P3_dataset.zip", "sha256": "2a9adbf69c8650691f5170afad52a7a4eb223d096a34e5f66e32701c8d3e9a7d", "qc": "passed", "physics_replay_required_separately": true}

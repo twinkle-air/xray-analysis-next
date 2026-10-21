@@ -5,6 +5,9 @@
   - silicate/oxide   150 = 90 routine / 30 sparse-boundary / 30 interference
   - iron-rich oxide  100 = 60 routine / 20 sparse-boundary / 20 interference
 
+Interference recipes are complete matched groups: one fixed base matrix per
+group and five variants (absent / A only / B only / 1:1 / 5:1 or 1:5).
+
 Constructions are element-mass-percent, strictly closed to 100.00000000 at 1e-8
 granularity (well inside the 1e-6-pp acceptance tolerance).  Every recipe keeps
 its full matrix (including O) and a provenance ledger recording the original
@@ -146,19 +149,71 @@ FE_TRACE_POOL = ["Zn", "Cu", "Ni", "Co", "Cr", "V", "As", "Se", "Pb", "Cd",
                  "Sn", "Sb", "Ba", "W", "Sr", "Y", "Zr", "Nb", "Mo", "Rb",
                  "P", "S"]
 
-# interference pairs: (elemA, elemB, note) -- classic spectral overlaps
-PAIRS = [
-    ("As", "Pb", "As Ka 10.544 / Pb La 10.551"),
-    ("Ti", "Ba", "Ti Ka 4.511 / Ba La 4.466"),
-    ("P", "Zr", "P Ka 2.013 / Zr La 2.043"),
-    ("Ti", "V", "Ti Kb 4.932 / V Ka 4.952"),
-    ("Cr", "Mn", "Cr Kb 5.839 / Mn Ka 5.899"),
-    ("Se", "Pb", "Se Kb 12.598 / Pb Lb 12.614"),
-    ("W", "Cu", "W La 8.397 / Cu Kb 8.401"),
-    ("Sr", "Zr", "Sr Kb 15.688 / Zr Ka 15.775"),
-    ("Rb", "Mo", "Rb Ka 13.395 / Mo Lb 17.378? use Rb K vs Mo L region"),
-    ("Sn", "Nb", "Sn La 3.444 / Nb L-series low-energy tail"),
+# Complete interference control groups.  Each group keeps one fixed base matrix
+# and adds A/B only through the five variants (absent / A only / B only /
+# 1:1 / 5:1 or 1:5).  The base compounds never contain A or B, so "absent"
+# really is exact zero in the delivered composition.
+CONTROL_GROUPS = [
+    ("int-SIL-01-As-Pb", "silicate-oxide", "As", "Pb",
+     "As Ka 10.544 / Pb La 10.551",
+     {"SiO2": 78.0, "Al2O3": 9.0, "Fe2O3": 4.0, "CaCO3": 4.0,
+      "MgO": 1.5, "Na2O": 2.0, "K2O": 1.5}),
+    ("int-SIL-02-P-Zr", "silicate-oxide", "P", "Zr",
+     "P Ka 2.013 / Zr La 2.043",
+     {"SiO2": 70.0, "Al2O3": 14.0, "Fe2O3": 3.0, "CaCO3": 3.0,
+      "MgO": 1.5, "Na2O": 3.5, "K2O": 5.0}),
+    ("int-SIL-03-Ti-V", "silicate-oxide", "Ti", "V",
+     "Ti Kb 4.932 / V Ka 4.952",
+     {"SiO2": 58.0, "Al2O3": 16.0, "Fe2O3": 7.0, "CaCO3": 6.0,
+      "MgO": 4.0, "Na2O": 3.5, "K2O": 5.5}),
+    ("int-SIL-04-Cr-Mn", "silicate-oxide", "Cr", "Mn",
+     "Cr Kb 5.839 / Mn Ka 5.899",
+     {"CaCO3": 55.0, "MgCO3": 30.0, "SiO2": 8.0, "Al2O3": 4.0,
+      "Fe2O3": 2.0, "K2O": 1.0}),
+    ("int-SIL-05-Se-Pb", "silicate-oxide", "Se", "Pb",
+     "Se Kb 12.598 / Pb Lb 12.614",
+     {"SiO2": 50.0, "Al2O3": 32.0, "Fe2O3": 8.0, "MgO": 3.0,
+      "K2O": 4.0, "CaCO3": 3.0}),
+    ("int-SIL-06-W-Cu", "silicate-oxide", "W", "Cu",
+     "W La 8.397 / Cu Kb 8.401",
+     {"CaCO3": 88.0, "SiO2": 5.0, "Al2O3": 2.0, "Fe2O3": 1.5,
+      "MgCO3": 2.5, "K2O": 1.0}),
+    ("int-FE-01-Sr-Zr", "iron-rich-oxide", "Sr", "Zr",
+     "Sr Kb 15.688 / Zr Ka 15.775",
+     {"Fe2O3": 75.0, "SiO2": 12.0, "Al2O3": 6.0, "CaCO3": 3.0,
+      "MgO": 3.0, "TiO2": 1.0}),
+    ("int-FE-02-Rb-Mo", "iron-rich-oxide", "Rb", "Mo",
+     "Rb Ka 13.395 / Mo L-series region",
+     {"Fe2O3": 62.0, "SiO2": 22.0, "Al2O3": 9.0, "CaCO3": 4.0,
+      "MgO": 2.0, "TiO2": 1.0}),
+    ("int-FE-03-Sn-Nb", "iron-rich-oxide", "Sn", "Nb",
+     "Sn La 3.444 / Nb L-series low-energy tail",
+     {"Fe2O3": 55.0, "TiO2": 18.0, "SiO2": 12.0, "Al2O3": 9.0,
+      "MgO": 4.0, "CaO": 2.0}),
+    ("int-FE-04-Ti-Ba", "iron-rich-oxide", "Ti", "Ba",
+     "Ti Ka 4.511 / Ba La 4.466",
+     {"Fe2O3": 45.0, "MnO": 25.0, "SiO2": 12.0, "Al2O3": 9.0,
+      "CaO": 5.0, "MgO": 4.0}),
 ]
+CONTROL_BASE_PPM = 4000.0          # 0.4 wt% element in the 1:1 variant
+CONTROL_BG_PPM = {"Zn": 120.0, "Sr": 45.0, "Zr": 60.0, "Y": 35.0, "Nb": 25.0}
+CONTROL_FE_BG_PPM = {"Zn": 150.0, "Sr": 55.0, "Zr": 70.0, "Y": 40.0, "Nb": 30.0}
+
+
+def control_roles(a, b, high_side):
+    """Five matched variants of one control group."""
+    base = CONTROL_BASE_PPM
+    ratio_role = "both_5to1" if high_side == "A" else "both_1to5"
+    return [
+        ("absent", {}, None),
+        ("A_only", {a: base}, None),
+        ("B_only", {b: base}, None),
+        ("both_1to1", {a: base, b: base}, 1.0),
+        (ratio_role,
+         {a: base * 5.0, b: base} if high_side == "A" else {a: base, b: base * 5.0},
+         5.0 if high_side == "A" else 0.2),
+    ]
+
 
 
 def sample_family(rng, fam, lo_factor=1.0):
@@ -238,10 +293,13 @@ def sha_comp(els):
 def build():
     rng = np.random.default_rng(DESIGN_SEED)
     recipes = []
-    seen = set()
+    seen = {}
+    dups = []
 
-    def new_recipe(rid, matrix, fam, scenario, comp, spikes, note=""):
-        els = compound_to_elements(comp)
+    def new_recipe(rid, matrix, fam, scenario, comp, spikes, note="",
+                   extra_prov=None):
+        base_els = compound_to_elements(comp)
+        els = base_els
         if spikes:
             els, scale = add_ppm_spikes(els, spikes)
         else:
@@ -249,8 +307,9 @@ def build():
         els = close_exact(els)
         h = sha_comp(els)
         if h in seen:
+            dups.append((rid, seen[h], h))
             return None
-        seen.add(h)
+        seen[h] = rid
         prov = {
             "round_id": ROUND_ID,
             "owner": OWNER,
@@ -266,6 +325,10 @@ def build():
             "composition_semantic_sha256": h,
             "note": note,
         }
+        if extra_prov:
+            prov.update(extra_prov)
+        if scenario == "interference":
+            prov["control_base_sha256"] = sha_comp(base_els)
         return {"id": rid, "composition_percent": els, "provenance": prov}
 
     # ---- silicates: 90 routine ----
@@ -326,29 +389,31 @@ def build():
             recipes.append(r)
             made += 1
 
-    # ---- silicates: 30 interference ----
+    # ---- silicates: 30 interference = 6 complete groups x 5 variants ----
     made = 0
-    pi = 0
-    while made < 30:
-        a, b, note = PAIRS[pi % len(PAIRS)]
-        pi += 1
-        famidx = (made * 7 + 3) % len(SIL_FAMILIES)
-        famname = fams[famidx]
-        comp, total = sample_family(rng, SIL_FAMILIES[famname])
-        comp = exact_scale(comp, total)
-        ratio = [0.2, 1.0, 5.0][(made // len(PAIRS)) % 3]
-        base = float(np.round(10 ** rng.uniform(1.4, 2.6), 3))  # 25..400 ppm
-        spikes = {a: base, b: base * ratio}
-        if rng.random() < 0.5:
-            spikes[a], spikes[b] = base * ratio, base
-        for e in rng.choice([x for x in SIL_TRACE_POOL if x not in (a, b)],
-                            size=int(rng.integers(2, 6)), replace=False):
-            spikes[e] = float(np.round(10 ** rng.uniform(0.3, 2.3), 3))
-        r = new_recipe(f"C-S-{120+made+1:03d}", "silicate-oxide", famname,
-                       "interference", comp, spikes, note=f"{a}/{b}: {note}")
-        if r:
+    sil_groups = [g for g in CONTROL_GROUPS if g[1] == "silicate-oxide"]
+    for gi, (gid, _matrix, a, b, pair_note, base_comp) in enumerate(sil_groups):
+        comp = exact_scale(dict(base_comp), sum(base_comp.values()))
+        bg = {e: v for e, v in CONTROL_BG_PPM.items() if e not in (a, b)}
+        for role, pair_add, ratio in control_roles(a, b, "A" if gi % 2 == 0 else "B"):
+            spikes = dict(bg)
+            spikes.update(pair_add)
+            extra = {
+                "control_group": gid,
+                "control_role": role,
+                "interference_pair": [a, b],
+                "pair_ratio": ratio,
+                "spike_percent": {e: v / 10000.0 for e, v in pair_add.items()},
+            }
+            note = f"{a}/{b}: {pair_note}; role={role}"
+            r = new_recipe(f"C-S-{120+made+1:03d}", "silicate-oxide", gid,
+                           "interference", comp, spikes, note=note,
+                           extra_prov=extra)
+            if r is None:
+                raise AssertionError(f"duplicate control recipe {gid}/{role}: {dups[-1]}")
             recipes.append(r)
             made += 1
+    assert made == 30, made
 
     # ---- iron-rich: 60 routine ----
     ffams = list(FE_FAMILIES)
@@ -406,29 +471,31 @@ def build():
             recipes.append(r)
             made += 1
 
-    # ---- iron-rich: 20 interference ----
+    # ---- iron-rich: 20 interference = 4 complete groups x 5 variants ----
     made = 0
-    pi = 0
-    while made < 20:
-        a, b, note = PAIRS[pi % len(PAIRS)]
-        pi += 1
-        fam = FE_FAMILIES[ffams[made % len(ffams)]]
-        comp, total = sample_family(rng, fam)
-        comp = exact_scale(comp, total)
-        ratio = [0.25, 1.0, 4.0][(made // len(PAIRS)) % 3]
-        base = float(np.round(10 ** rng.uniform(1.5, 2.8), 3))
-        spikes = {a: base, b: base * ratio}
-        if rng.random() < 0.5:
-            spikes[a], spikes[b] = base * ratio, base
-        for e in rng.choice([x for x in FE_TRACE_POOL if x not in (a, b)],
-                            size=int(rng.integers(2, 7)), replace=False):
-            spikes[e] = float(np.round(10 ** rng.uniform(0.3, 2.5), 3))
-        r = new_recipe(f"C-F-{80+made+1:03d}", "iron-rich-oxide",
-                       ffams[made % len(ffams)], "interference", comp, spikes,
-                       note=f"{a}/{b}: {note}")
-        if r:
+    fe_groups = [g for g in CONTROL_GROUPS if g[1] == "iron-rich-oxide"]
+    for gi, (gid, _matrix, a, b, pair_note, base_comp) in enumerate(fe_groups):
+        comp = exact_scale(dict(base_comp), sum(base_comp.values()))
+        bg = {e: v for e, v in CONTROL_FE_BG_PPM.items() if e not in (a, b)}
+        for role, pair_add, ratio in control_roles(a, b, "A" if gi % 2 == 0 else "B"):
+            spikes = dict(bg)
+            spikes.update(pair_add)
+            extra = {
+                "control_group": gid,
+                "control_role": role,
+                "interference_pair": [a, b],
+                "pair_ratio": ratio,
+                "spike_percent": {e: v / 10000.0 for e, v in pair_add.items()},
+            }
+            note = f"{a}/{b}: {pair_note}; role={role}"
+            r = new_recipe(f"C-F-{80+made+1:03d}", "iron-rich-oxide", gid,
+                           "interference", comp, spikes, note=note,
+                           extra_prov=extra)
+            if r is None:
+                raise AssertionError(f"duplicate control recipe {gid}/{role}: {dups[-1]}")
             recipes.append(r)
             made += 1
+    assert made == 20, made
 
     # ---- outputs ----
     out = Path(__file__).parent / "build"
@@ -449,6 +516,12 @@ def build():
             "compounds": json.dumps(pr["original_compounds_percent"], sort_keys=True),
             "trace_ppm": json.dumps(pr["trace_ppm"], sort_keys=True),
             "matrix_rescale_factor": pr["matrix_rescale_factor"],
+            "control_group": pr.get("control_group", ""),
+            "control_role": pr.get("control_role", ""),
+            "interference_pair": json.dumps(pr.get("interference_pair", [])),
+            "pair_ratio": pr.get("pair_ratio", ""),
+            "spike_percent": json.dumps(pr.get("spike_percent", {}), sort_keys=True),
+            "control_base_sha256": pr.get("control_base_sha256", ""),
             "note": pr["note"],
         })
     import csv
@@ -457,15 +530,128 @@ def build():
         w.writeheader()
         w.writerows(reg_rows)
 
-    # quota & closure summary
-    from collections import Counter
+    # ---- quota / closure / complete-control-group self check ----
+    from collections import Counter, defaultdict
     cnt = Counter((r["provenance"]["matrix_type"], r["provenance"]["scenario"])
                   for r in recipes)
-    maxerr = max(abs(sum(r["composition_percent"].values()) - 100.0) for r in recipes)
-    print(json.dumps({
+    maxerr = max(abs(sum(r["composition_percent"].values()) - 100.0)
+                 for r in recipes)
+
+    groups = defaultdict(list)
+    for r in recipes:
+        if r["provenance"]["scenario"] == "interference":
+            groups[r["provenance"]["control_group"]].append(r)
+
+    def el(recipe, symbol):
+        return recipe["composition_percent"].get(symbol, 0.0)
+
+    group_checks = []
+    for gid, rows in sorted(groups.items()):
+        pair = rows[0]["provenance"]["interference_pair"]
+        a, b = pair
+        by_role = {r["provenance"]["control_role"]: r for r in rows}
+        roles = sorted(by_role)
+        ratio_row = [r for r in rows
+                     if r["provenance"]["control_role"].startswith("both_")
+                     and r["provenance"]["control_role"] != "both_1to1"][0]
+        pair_percent = [v for r in rows
+                        for v in r["provenance"]["spike_percent"].values()]
+        observed_ratio = el(ratio_row, a) / el(ratio_row, b)
+        expected = ratio_row["provenance"]["pair_ratio"]
+        checks = {
+            "five_variants": len(rows) == 5,
+            "roles_complete": set(roles) == {
+                "absent", "A_only", "B_only", "both_1to1",
+                ratio_row["provenance"]["control_role"]},
+            "same_parent_family": all(
+                r["provenance"]["parent_family"] == gid for r in rows),
+            "same_base_matrix": len({
+                r["provenance"]["control_base_sha256"] for r in rows}) == 1,
+            "absent_is_zero": el(by_role["absent"], a) == 0.0
+            and el(by_role["absent"], b) == 0.0,
+            "A_only_has_no_B": el(by_role["A_only"], b) == 0.0
+            and el(by_role["A_only"], a) > 0.0,
+            "B_only_has_no_A": el(by_role["B_only"], a) == 0.0
+            and el(by_role["B_only"], b) > 0.0,
+            "ratio_matches": abs(observed_ratio / expected - 1.0) < 1e-6,
+        }
+        group_checks.append({
+            "control_group": gid,
+            "matrix_type": rows[0]["provenance"]["matrix_type"],
+            "pair": pair,
+            "roles": dict(Counter(r["provenance"]["control_role"] for r in rows)),
+            "base_sha256": rows[0]["provenance"]["control_base_sha256"],
+            "ratio_expected": expected,
+            "ratio_observed": round(observed_ratio, 9),
+            "pair_spike_percent_min": min(pair_percent),
+            "pair_spike_percent_max": max(pair_percent),
+            "checks": checks,
+            "ok": all(checks.values()),
+        })
+
+    families = defaultdict(list)
+    for r in recipes:
+        families[r["provenance"]["matrix_type"]].append(
+            r["provenance"]["parent_family"])
+    families = {k: sorted(set(v)) for k, v in families.items()}
+    family_counts = Counter(
+        (r["provenance"]["matrix_type"], r["provenance"]["parent_family"])
+        for r in recipes)
+    target_counts = {
+        t: sum(1 for r in recipes if r["composition_percent"].get(t, 0.0) > 0.0)
+        for t in TARGETS}
+    selfcheck = {
+        "round_id": ROUND_ID,
+        "owner": OWNER,
+        "status": "candidates_selfchecked_pending_generation",
         "recipes": len(recipes),
         "quota": {f"{k[0]}/{k[1]}": v for k, v in sorted(cnt.items())},
+        "unique_ids": len({r["id"] for r in recipes}),
+        "unique_compositions": len({
+            r["provenance"]["composition_semantic_sha256"] for r in recipes}),
+        "max_closure_abs_err_percent": maxerr,
+        "closure_tolerance_percent": 1e-6,
+        "closure_ok": maxerr <= 1e-6,
+        "nonzero_value_check_ok": all(
+            v >= 0.0 and v == v for r in recipes
+            for v in r["composition_percent"].values()),
+        "families": families,
+        "family_counts": {f"{k[0]}/{k[1]}": v
+                          for k, v in sorted(family_counts.items())},
+        "target_nonzero_recipe_counts": target_counts,
+        "trace_ppm_ledger_present": all(
+            isinstance(r["provenance"].get("trace_ppm"), dict) for r in recipes),
+        "control_groups": {
+            "expected_groups": 10,
+            "expected_per_group": 5,
+            "silicate_groups": sum(
+                1 for g in group_checks if g["matrix_type"] == "silicate-oxide"),
+            "iron_groups": sum(
+                1 for g in group_checks if g["matrix_type"] == "iron-rich-oxide"),
+            "all_ok": len(group_checks) == 10
+            and all(g["ok"] for g in group_checks),
+            "pair_spike_percent_min": min(
+                g["pair_spike_percent_min"] for g in group_checks),
+            "pair_spike_percent_max": max(
+                g["pair_spike_percent_max"] for g in group_checks),
+            "groups": group_checks,
+        },
+        "design_seed": DESIGN_SEED,
+        "targets": TARGETS,
+        "note": ("合成配方候选自检；干扰对照为同一基体五变体"
+                 "（缺席/A单/B单/1:1/5:1或1:5），不代表真实样品或检出结论"),
+    }
+    (out / "C_r2_candidate_selfcheck.json").write_text(
+        json.dumps(selfcheck, ensure_ascii=False, indent=1), encoding="utf-8")
+
+    print(json.dumps({
+        "recipes": len(recipes),
+        "quota": selfcheck["quota"],
         "max_closure_abs_err": maxerr,
+        "unique_ids": selfcheck["unique_ids"],
+        "unique_compositions": selfcheck["unique_compositions"],
+        "control_groups": len(group_checks),
+        "control_all_ok": selfcheck["control_groups"]["all_ok"],
         "design_seed": DESIGN_SEED,
     }, ensure_ascii=False))
 
