@@ -1,0 +1,39 @@
+{
+  "formula_design_owner": {
+    "A_development_silicate": 510,
+    "B_development_iron_oxide": 340,
+    "D_test_silicate": 90,
+    "D_test_iron_oxide": 60
+  },
+  "scenarios_by_design": {
+    "A": [
+      306,
+      104,
+      100
+    ],
+    "B": [
+      204,
+      66,
+      70
+    ],
+    "D_silicate": [
+      54,
+      16,
+      20
+    ],
+    "D_iron": [
+      36,
+      14,
+      10
+    ]
+  },
+  "production_spectra_nominal": {
+    "A_P1_development": 1700,
+    "B_P2_development": 1700,
+    "C_P3_development": 1700,
+    "D_new_family_test": 900
+  },
+  "D_pilot_spectra_approx": 300,
+  "new_peak_budget_bytes": 10000000000,
+  "status": "handoff_instructions_only_no_generation_or_messages_sent"
+}

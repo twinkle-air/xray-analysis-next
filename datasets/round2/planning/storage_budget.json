@@ -1,0 +1,40 @@
+{
+  "status": "plan_only_inputs_not_frozen",
+  "date": "2026-10-21",
+  "budget_unit": "decimal_bytes",
+  "peak_budget_bytes": 10000000000,
+  "includes_pilot_archives_working_files_reports_models": true,
+  "budget_categories_bytes": {
+    "raw_final_and_pilot": 7000000000,
+    "archives": 1500000000,
+    "metadata_reports_models": 200000000,
+    "working_files": 300000000,
+    "safety_margin": 1000000000
+  },
+  "unique_formulas": 1000,
+  "matrix_formulas": {
+    "A": 600,
+    "B": 400
+  },
+  "profiles": [
+    "P1",
+    "P2",
+    "P3"
+  ],
+  "replicates": 2,
+  "spectra_by_usage_nominal": {
+    "train": 4200,
+    "validation": 900,
+    "new_family_test": 900
+  },
+  "total_spectra": 6000,
+  "estimated_raw_final_bytes": 6517727040.000001,
+  "pilot_spectra_approx": 300,
+  "automatic_disk_guard_implemented": false,
+  "full_physics_replay_required": true,
+  "excluded": [
+    "C/P5",
+    "old B/P4"
+  ],
+  "notes": "Measured pilot sizes are estimates, not a guaranteed upper bound. Re-estimate peak storage before production; no spectra generated."
+}
