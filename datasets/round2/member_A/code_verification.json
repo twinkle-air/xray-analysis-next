@@ -1,0 +1,53 @@
+{
+  "compiled_sources": [
+    "datasets\\round2\\member_A\\build_candidates.py"
+  ],
+  "candidate_rebuild_exactly_equal": true,
+  "failure_cases": {
+    "duplicate_id_and_composition_rejected": true,
+    "incomplete_interference_rejected": true,
+    "range_and_ledger_mismatch_rejected": true
+  },
+  "planned_spectra": 1500,
+  "unique_planned_child_seeds": 1500,
+  "actual_spectra_generated": 0,
+  "physics_modules_unchanged": {
+    "core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+    "robustness.py": "8878e652ce4b1554e97d383e2428718f1f140d10624007206eea908d59b9f634"
+  },
+  "generator_source_sha256": {
+    "app.py": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+    "core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "dataset.py": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+    "minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+    "robustness.py": "8878e652ce4b1554e97d383e2428718f1f140d10624007206eea908d59b9f634",
+    "version.py": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+    "__init__.py": "3338a26d3706620d0b1eb836a6e39beb4ae15d61a4c04d9441215ec17ffeafa1",
+    "基于基本参数法的能谱生成模型_比赛研究版.py": "59f6f399367d3443056c0894de600c91474b1f0ef41d545e415a35654dfb0bf1"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "implementation": "CPython",
+    "system": "Windows",
+    "machine": "AMD64",
+    "packages": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "xraylib": "4.3.0",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5"
+    },
+    "bit_generator": "PCG64",
+    "thread_environment": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null
+    }
+  },
+  "first_failed_candidate_check": {
+    "error": "Fe S/Pb family retained an unaffected As value above an accidentally narrowed interference envelope",
+    "resolution": "Interference envelope now retains the routine upper bound for unaffected As; original routine ranges unchanged",
+    "spectra_generated_before_resolution": 0
+  }
+}

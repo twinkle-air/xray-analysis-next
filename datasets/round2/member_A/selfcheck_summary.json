@@ -1,0 +1,44 @@
+{
+  "round_id": "round2-20261021",
+  "owner": "A",
+  "version": "A-sharded-production-v2",
+  "status": "selfcheck_passed_pending_global_inclusion",
+  "actual_formulas": 250,
+  "parent_families": 210,
+  "complete_interference_families": 10,
+  "actual_spectra": 1500,
+  "profile_counts": {
+    "P1": 500,
+    "P2": 500,
+    "P3": 500
+  },
+  "sealed_shards": 30,
+  "candidate_checks": "passed",
+  "audit": "30/30 passed",
+  "full_physics_replay": "1500/1500 passed",
+  "maximum_absolute_array_difference": 0.0,
+  "same_environment": true,
+  "independent_person_review": false,
+  "cross_member_deduplication": "pending_B_C_D_candidates",
+  "global_family_split": "pending",
+  "eligible_for_training": false,
+  "concentration_accuracy_verified": false,
+  "archive_bytes": 333052116,
+  "raw_dataset_bytes": 1638811768,
+  "cancelled_v1": {
+    "status": "cancelled_partial_preserved_not_delivery",
+    "reason": "Switch to whole-family native CLI shards to use available CPU concurrency; not a physics error",
+    "completed_full_result_files": {
+      "P1": 32,
+      "P2": 32,
+      "P3": 38
+    },
+    "total_full_result_files": 102,
+    "audit": "not_completed",
+    "replay": "not_completed",
+    "formal_delivery_spectra": 0,
+    "do_not_load_for_training": true
+  },
+  "candidate_errors": [],
+  "production_errors": []
+}

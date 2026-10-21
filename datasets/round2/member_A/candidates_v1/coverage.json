@@ -1,0 +1,329 @@
+{
+  "bin_definition": "0 < mass percent <= 0.1; not a detection limit",
+  "targets": {
+    "silicate_oxide": {
+      "Na": {
+        "zero": 7,
+        "positive_le_0_1": 3,
+        "above_0_1": 140
+      },
+      "Mg": {
+        "zero": 11,
+        "positive_le_0_1": 0,
+        "above_0_1": 139
+      },
+      "Al": {
+        "zero": 10,
+        "positive_le_0_1": 0,
+        "above_0_1": 140
+      },
+      "Si": {
+        "zero": 0,
+        "positive_le_0_1": 0,
+        "above_0_1": 150
+      },
+      "P": {
+        "zero": 15,
+        "positive_le_0_1": 30,
+        "above_0_1": 105
+      },
+      "S": {
+        "zero": 19,
+        "positive_le_0_1": 38,
+        "above_0_1": 93
+      },
+      "Cl": {
+        "zero": 14,
+        "positive_le_0_1": 23,
+        "above_0_1": 113
+      },
+      "K": {
+        "zero": 21,
+        "positive_le_0_1": 1,
+        "above_0_1": 128
+      },
+      "Ca": {
+        "zero": 7,
+        "positive_le_0_1": 1,
+        "above_0_1": 142
+      },
+      "Ti": {
+        "zero": 11,
+        "positive_le_0_1": 4,
+        "above_0_1": 135
+      },
+      "V": {
+        "zero": 51,
+        "positive_le_0_1": 99,
+        "above_0_1": 0
+      },
+      "Cr": {
+        "zero": 45,
+        "positive_le_0_1": 105,
+        "above_0_1": 0
+      },
+      "Mn": {
+        "zero": 16,
+        "positive_le_0_1": 21,
+        "above_0_1": 113
+      },
+      "Fe": {
+        "zero": 17,
+        "positive_le_0_1": 0,
+        "above_0_1": 133
+      },
+      "Co": {
+        "zero": 48,
+        "positive_le_0_1": 102,
+        "above_0_1": 0
+      },
+      "Ni": {
+        "zero": 46,
+        "positive_le_0_1": 104,
+        "above_0_1": 0
+      },
+      "Cu": {
+        "zero": 57,
+        "positive_le_0_1": 93,
+        "above_0_1": 0
+      },
+      "Zn": {
+        "zero": 55,
+        "positive_le_0_1": 85,
+        "above_0_1": 10
+      },
+      "As": {
+        "zero": 66,
+        "positive_le_0_1": 84,
+        "above_0_1": 0
+      },
+      "Se": {
+        "zero": 54,
+        "positive_le_0_1": 96,
+        "above_0_1": 0
+      },
+      "Rb": {
+        "zero": 42,
+        "positive_le_0_1": 108,
+        "above_0_1": 0
+      },
+      "Sr": {
+        "zero": 60,
+        "positive_le_0_1": 83,
+        "above_0_1": 7
+      },
+      "Y": {
+        "zero": 39,
+        "positive_le_0_1": 111,
+        "above_0_1": 0
+      },
+      "Zr": {
+        "zero": 61,
+        "positive_le_0_1": 84,
+        "above_0_1": 5
+      },
+      "Nb": {
+        "zero": 56,
+        "positive_le_0_1": 94,
+        "above_0_1": 0
+      },
+      "Mo": {
+        "zero": 58,
+        "positive_le_0_1": 92,
+        "above_0_1": 0
+      },
+      "Cd": {
+        "zero": 51,
+        "positive_le_0_1": 99,
+        "above_0_1": 0
+      },
+      "Sn": {
+        "zero": 48,
+        "positive_le_0_1": 102,
+        "above_0_1": 0
+      },
+      "Sb": {
+        "zero": 48,
+        "positive_le_0_1": 102,
+        "above_0_1": 0
+      },
+      "Ba": {
+        "zero": 48,
+        "positive_le_0_1": 93,
+        "above_0_1": 9
+      },
+      "W": {
+        "zero": 50,
+        "positive_le_0_1": 100,
+        "above_0_1": 0
+      },
+      "Pb": {
+        "zero": 63,
+        "positive_le_0_1": 81,
+        "above_0_1": 6
+      }
+    },
+    "iron_oxide": {
+      "Na": {
+        "zero": 5,
+        "positive_le_0_1": 4,
+        "above_0_1": 91
+      },
+      "Mg": {
+        "zero": 7,
+        "positive_le_0_1": 2,
+        "above_0_1": 91
+      },
+      "Al": {
+        "zero": 13,
+        "positive_le_0_1": 0,
+        "above_0_1": 87
+      },
+      "Si": {
+        "zero": 6,
+        "positive_le_0_1": 0,
+        "above_0_1": 94
+      },
+      "P": {
+        "zero": 13,
+        "positive_le_0_1": 23,
+        "above_0_1": 64
+      },
+      "S": {
+        "zero": 16,
+        "positive_le_0_1": 13,
+        "above_0_1": 71
+      },
+      "Cl": {
+        "zero": 11,
+        "positive_le_0_1": 26,
+        "above_0_1": 63
+      },
+      "K": {
+        "zero": 8,
+        "positive_le_0_1": 4,
+        "above_0_1": 88
+      },
+      "Ca": {
+        "zero": 9,
+        "positive_le_0_1": 4,
+        "above_0_1": 87
+      },
+      "Ti": {
+        "zero": 11,
+        "positive_le_0_1": 2,
+        "above_0_1": 87
+      },
+      "V": {
+        "zero": 45,
+        "positive_le_0_1": 49,
+        "above_0_1": 6
+      },
+      "Cr": {
+        "zero": 38,
+        "positive_le_0_1": 57,
+        "above_0_1": 5
+      },
+      "Mn": {
+        "zero": 11,
+        "positive_le_0_1": 4,
+        "above_0_1": 85
+      },
+      "Fe": {
+        "zero": 0,
+        "positive_le_0_1": 0,
+        "above_0_1": 100
+      },
+      "Co": {
+        "zero": 36,
+        "positive_le_0_1": 62,
+        "above_0_1": 2
+      },
+      "Ni": {
+        "zero": 31,
+        "positive_le_0_1": 66,
+        "above_0_1": 3
+      },
+      "Cu": {
+        "zero": 35,
+        "positive_le_0_1": 60,
+        "above_0_1": 5
+      },
+      "Zn": {
+        "zero": 27,
+        "positive_le_0_1": 55,
+        "above_0_1": 18
+      },
+      "As": {
+        "zero": 25,
+        "positive_le_0_1": 64,
+        "above_0_1": 11
+      },
+      "Se": {
+        "zero": 30,
+        "positive_le_0_1": 70,
+        "above_0_1": 0
+      },
+      "Rb": {
+        "zero": 30,
+        "positive_le_0_1": 68,
+        "above_0_1": 2
+      },
+      "Sr": {
+        "zero": 32,
+        "positive_le_0_1": 58,
+        "above_0_1": 10
+      },
+      "Y": {
+        "zero": 38,
+        "positive_le_0_1": 61,
+        "above_0_1": 1
+      },
+      "Zr": {
+        "zero": 44,
+        "positive_le_0_1": 46,
+        "above_0_1": 10
+      },
+      "Nb": {
+        "zero": 31,
+        "positive_le_0_1": 63,
+        "above_0_1": 6
+      },
+      "Mo": {
+        "zero": 36,
+        "positive_le_0_1": 62,
+        "above_0_1": 2
+      },
+      "Cd": {
+        "zero": 36,
+        "positive_le_0_1": 63,
+        "above_0_1": 1
+      },
+      "Sn": {
+        "zero": 41,
+        "positive_le_0_1": 56,
+        "above_0_1": 3
+      },
+      "Sb": {
+        "zero": 30,
+        "positive_le_0_1": 64,
+        "above_0_1": 6
+      },
+      "Ba": {
+        "zero": 32,
+        "positive_le_0_1": 51,
+        "above_0_1": 17
+      },
+      "W": {
+        "zero": 34,
+        "positive_le_0_1": 65,
+        "above_0_1": 1
+      },
+      "Pb": {
+        "zero": 43,
+        "positive_le_0_1": 48,
+        "above_0_1": 9
+      }
+    }
+  }
+}

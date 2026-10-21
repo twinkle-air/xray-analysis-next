@@ -1,0 +1,21 @@
+{
+  "source_kind": "USGS June 2022 information sheets, tables 1 and selected entries of table 2",
+  "value_status": "Literature multi-laboratory estimates, not USGS metrologically traceable certified values",
+  "uncertainty_basis": "95 percent confidence level as reported in sheet notes; not a per-specimen sampling distribution",
+  "materials": [
+    {
+      "id": "BHVO-2",
+      "compounds_percent": {"Al2O3": 13.44, "CaO": 11.40, "Fe2O3T": 12.39, "K2O": 0.5130, "MgO": 7.257, "MnO": 0.1690, "Na2O": 2.219, "P2O5": 0.2685, "SiO2": 49.60, "TiO2": 2.731},
+      "compound_uncertainty_percent": {"Al2O3": 0.06, "CaO": 0.06, "Fe2O3T": 0.09, "K2O": 0.0037, "MgO": 0.042, "MnO": 0.0019, "Na2O": 0.048, "P2O5": 0.0050, "SiO2": 0.14, "TiO2": 0.018},
+      "trace_ppm": {"Ba": 130.9, "Co": 44.89, "Cr": 287.2, "Cu": 129.3, "Mo": 4.07, "Nb": 18.10, "Ni": 119.8, "Pb": 1.653, "Rb": 9.261, "Sb": 0.1034, "Sc": 31.83, "Sn": 1.776, "Sr": 394.1, "V": 318.2, "W": 0.251, "Y": 25.91, "Zn": 103.9, "Zr": 171.2},
+      "trace_uncertainty_ppm": {"Ba": 1, "Co": 0.32, "Cr": 3.1, "Cu": 1.4, "Mo": 0.16, "Nb": 0.20, "Ni": 1.2, "Pb": 0.038, "Rb": 0.096, "Sb": 0.0079, "Sc": 0.34, "Sn": 0.059, "Sr": 1.7, "V": 2.3, "W": 0.035, "Y": 0.28, "Zn": 1.0, "Zr": 1.3}
+    },
+    {
+      "id": "BCR-2",
+      "compounds_percent": {"Al2O3": 13.48, "CaO": 7.114, "Fe2O3T": 13.77, "K2O": 1.774, "MgO": 3.599, "MnO": 0.1966, "Na2O": 3.120, "P2O5": 0.3593, "SiO2": 54.00, "TiO2": 2.265},
+      "compound_uncertainty_percent": {"Al2O3": 0.12, "CaO": 0.075, "Fe2O3T": 0.19, "K2O": 0.019, "MgO": 0.044, "MnO": 0.0030, "Na2O": 0.042, "P2O5": 0.0095, "SiO2": 0.20, "TiO2": 0.024},
+      "trace_ppm": {"Ba": 683.9, "Co": 37.33, "Cr": 15.85, "Cu": 19.66, "Mo": 250.6, "Nb": 12.44, "Ni": 12.57, "Pb": 10.59, "Rb": 46.02, "Sb": 0.302, "Sc": 33.53, "Sn": 2.28, "Sr": 337.4, "V": 417.6, "W": 0.465, "Y": 36.07, "Zn": 129.5, "Zr": 186.5},
+      "trace_uncertainty_ppm": {"Ba": 4.7, "Co": 0.37, "Cr": 0.38, "Cu": 0.72, "Mo": 6.7, "Nb": 0.20, "Ni": 0.30, "Pb": 0.17, "Rb": 0.56, "Sb": 0.029, "Sc": 0.40, "Sn": 0.13, "Sr": 6.7, "V": 4.5, "W": 0.050, "Y": 0.37, "Zn": 1.8, "Zr": 1.5}
+    }
+  ]
+}

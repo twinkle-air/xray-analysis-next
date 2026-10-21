@@ -1,0 +1,2774 @@
+{
+  "status": "passed",
+  "errors": [],
+  "formulas": 250,
+  "unique_compositions_12dp": 250,
+  "parent_families": 210,
+  "interference_families": 10,
+  "matrix_scenario_counts": {
+    "silicate_oxide/routine": 90,
+    "silicate_oxide/sparse_boundary": 30,
+    "silicate_oxide/interference": 30,
+    "iron_oxide/routine": 60,
+    "iron_oxide/sparse_boundary": 20,
+    "iron_oxide/interference": 20
+  },
+  "first_round_compositions_compared": 2600,
+  "exact_first_round_overlaps": [],
+  "nearest_within_member": [
+    {
+      "formula_id": "R2_A_0001",
+      "nearest_formula_id": "R2_A_0079",
+      "L1_element_mass_percentage_points": 12.202949602981638,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0002",
+      "nearest_formula_id": "R2_A_0087",
+      "L1_element_mass_percentage_points": 6.3836800176598825,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0003",
+      "nearest_formula_id": "R2_A_0008",
+      "L1_element_mass_percentage_points": 10.609192400441692,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0004",
+      "nearest_formula_id": "R2_A_0062",
+      "L1_element_mass_percentage_points": 8.569089480825994,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0005",
+      "nearest_formula_id": "R2_A_0027",
+      "L1_element_mass_percentage_points": 9.996821146384823,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0006",
+      "nearest_formula_id": "R2_A_0037",
+      "L1_element_mass_percentage_points": 11.008041193540011,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0007",
+      "nearest_formula_id": "R2_A_0080",
+      "L1_element_mass_percentage_points": 9.949501079622475,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0008",
+      "nearest_formula_id": "R2_A_0057",
+      "L1_element_mass_percentage_points": 9.236982255411691,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0009",
+      "nearest_formula_id": "R2_A_0050",
+      "L1_element_mass_percentage_points": 11.514714887970944,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0010",
+      "nearest_formula_id": "R2_A_0003",
+      "L1_element_mass_percentage_points": 12.680268572903765,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0011",
+      "nearest_formula_id": "R2_A_0002",
+      "L1_element_mass_percentage_points": 11.44604935026975,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0012",
+      "nearest_formula_id": "R2_A_0045",
+      "L1_element_mass_percentage_points": 8.171307228189097,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0013",
+      "nearest_formula_id": "R2_A_0017",
+      "L1_element_mass_percentage_points": 6.885505386374799,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0014",
+      "nearest_formula_id": "R2_A_0060",
+      "L1_element_mass_percentage_points": 10.928253742926609,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0015",
+      "nearest_formula_id": "R2_A_0046",
+      "L1_element_mass_percentage_points": 8.055243583412523,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0016",
+      "nearest_formula_id": "R2_A_0087",
+      "L1_element_mass_percentage_points": 6.742648530124355,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0017",
+      "nearest_formula_id": "R2_A_0013",
+      "L1_element_mass_percentage_points": 6.885505386374799,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0018",
+      "nearest_formula_id": "R2_A_0041",
+      "L1_element_mass_percentage_points": 7.9496930449646195,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0019",
+      "nearest_formula_id": "R2_A_0031",
+      "L1_element_mass_percentage_points": 7.295382410452475,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0020",
+      "nearest_formula_id": "R2_A_0029",
+      "L1_element_mass_percentage_points": 11.249083502212208,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0021",
+      "nearest_formula_id": "R2_A_0005",
+      "L1_element_mass_percentage_points": 11.518562025239458,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0022",
+      "nearest_formula_id": "R2_A_0013",
+      "L1_element_mass_percentage_points": 10.687245948994311,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0023",
+      "nearest_formula_id": "R2_A_0026",
+      "L1_element_mass_percentage_points": 12.747142013510908,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0024",
+      "nearest_formula_id": "R2_A_0046",
+      "L1_element_mass_percentage_points": 8.142379256897287,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0025",
+      "nearest_formula_id": "R2_A_0088",
+      "L1_element_mass_percentage_points": 7.6564886324426205,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0026",
+      "nearest_formula_id": "R2_A_0047",
+      "L1_element_mass_percentage_points": 7.951940076870105,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0027",
+      "nearest_formula_id": "R2_A_0045",
+      "L1_element_mass_percentage_points": 7.315243490788427,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0028",
+      "nearest_formula_id": "R2_A_0017",
+      "L1_element_mass_percentage_points": 7.503174766029528,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0029",
+      "nearest_formula_id": "R2_A_0020",
+      "L1_element_mass_percentage_points": 11.249083502212208,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0030",
+      "nearest_formula_id": "R2_A_0058",
+      "L1_element_mass_percentage_points": 10.251990616717794,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0031",
+      "nearest_formula_id": "R2_A_0019",
+      "L1_element_mass_percentage_points": 7.295382410452475,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0032",
+      "nearest_formula_id": "R2_A_0085",
+      "L1_element_mass_percentage_points": 7.181338291826822,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0033",
+      "nearest_formula_id": "R2_A_0078",
+      "L1_element_mass_percentage_points": 9.741278226075309,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0034",
+      "nearest_formula_id": "R2_A_0134",
+      "L1_element_mass_percentage_points": 9.988467257231378,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0035",
+      "nearest_formula_id": "R2_A_0044",
+      "L1_element_mass_percentage_points": 6.041402234771129,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0036",
+      "nearest_formula_id": "R2_A_0057",
+      "L1_element_mass_percentage_points": 8.824326534555818,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0037",
+      "nearest_formula_id": "R2_A_0015",
+      "L1_element_mass_percentage_points": 8.412569858633239,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0038",
+      "nearest_formula_id": "R2_A_0024",
+      "L1_element_mass_percentage_points": 11.55575550264649,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0039",
+      "nearest_formula_id": "R2_A_0060",
+      "L1_element_mass_percentage_points": 8.974150802149618,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0040",
+      "nearest_formula_id": "R2_A_0072",
+      "L1_element_mass_percentage_points": 10.67746380965553,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0041",
+      "nearest_formula_id": "R2_A_0018",
+      "L1_element_mass_percentage_points": 7.9496930449646195,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0042",
+      "nearest_formula_id": "R2_A_0026",
+      "L1_element_mass_percentage_points": 8.526847113546307,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0043",
+      "nearest_formula_id": "R2_A_0034",
+      "L1_element_mass_percentage_points": 10.741481125912117,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0044",
+      "nearest_formula_id": "R2_A_0035",
+      "L1_element_mass_percentage_points": 6.041402234771129,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0045",
+      "nearest_formula_id": "R2_A_0027",
+      "L1_element_mass_percentage_points": 7.315243490788427,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0046",
+      "nearest_formula_id": "R2_A_0015",
+      "L1_element_mass_percentage_points": 8.055243583412523,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0047",
+      "nearest_formula_id": "R2_A_0026",
+      "L1_element_mass_percentage_points": 7.951940076870105,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0048",
+      "nearest_formula_id": "R2_A_0069",
+      "L1_element_mass_percentage_points": 10.762834982700891,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0049",
+      "nearest_formula_id": "R2_A_0084",
+      "L1_element_mass_percentage_points": 10.400751669764665,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0050",
+      "nearest_formula_id": "R2_A_0009",
+      "L1_element_mass_percentage_points": 11.514714887970944,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0051",
+      "nearest_formula_id": "R2_A_0055",
+      "L1_element_mass_percentage_points": 9.900116435428199,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0052",
+      "nearest_formula_id": "R2_A_0140",
+      "L1_element_mass_percentage_points": 10.742706820004175,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0053",
+      "nearest_formula_id": "R2_A_0060",
+      "L1_element_mass_percentage_points": 9.371162491628514,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0054",
+      "nearest_formula_id": "R2_A_0057",
+      "L1_element_mass_percentage_points": 11.983750278814853,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0055",
+      "nearest_formula_id": "R2_A_0051",
+      "L1_element_mass_percentage_points": 9.900116435428199,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0056",
+      "nearest_formula_id": "R2_A_0014",
+      "L1_element_mass_percentage_points": 11.823924576448448,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0057",
+      "nearest_formula_id": "R2_A_0036",
+      "L1_element_mass_percentage_points": 8.824326534555818,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0058",
+      "nearest_formula_id": "R2_A_0074",
+      "L1_element_mass_percentage_points": 8.367806730421115,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0059",
+      "nearest_formula_id": "R2_A_0117",
+      "L1_element_mass_percentage_points": 10.470933429491023,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0060",
+      "nearest_formula_id": "R2_A_0039",
+      "L1_element_mass_percentage_points": 8.974150802149618,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0061",
+      "nearest_formula_id": "R2_A_0059",
+      "L1_element_mass_percentage_points": 12.210631698711023,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0062",
+      "nearest_formula_id": "R2_A_0004",
+      "L1_element_mass_percentage_points": 8.569089480825994,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0063",
+      "nearest_formula_id": "R2_A_0074",
+      "L1_element_mass_percentage_points": 9.301253438848372,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0064",
+      "nearest_formula_id": "R2_A_0027",
+      "L1_element_mass_percentage_points": 10.491579328001857,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0065",
+      "nearest_formula_id": "R2_A_0082",
+      "L1_element_mass_percentage_points": 9.422700041373243,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0066",
+      "nearest_formula_id": "R2_A_0072",
+      "L1_element_mass_percentage_points": 9.495445137680711,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0067",
+      "nearest_formula_id": "R2_A_0065",
+      "L1_element_mass_percentage_points": 10.661335931884551,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0068",
+      "nearest_formula_id": "R2_A_0078",
+      "L1_element_mass_percentage_points": 9.991453555640145,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0069",
+      "nearest_formula_id": "R2_A_0048",
+      "L1_element_mass_percentage_points": 10.762834982700891,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0070",
+      "nearest_formula_id": "R2_A_0077",
+      "L1_element_mass_percentage_points": 9.9267479914809,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0071",
+      "nearest_formula_id": "R2_A_0058",
+      "L1_element_mass_percentage_points": 8.716270309343592,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0072",
+      "nearest_formula_id": "R2_A_0066",
+      "L1_element_mass_percentage_points": 9.495445137680711,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0073",
+      "nearest_formula_id": "R2_A_0054",
+      "L1_element_mass_percentage_points": 12.586680462496636,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0074",
+      "nearest_formula_id": "R2_A_0058",
+      "L1_element_mass_percentage_points": 8.367806730421115,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0075",
+      "nearest_formula_id": "R2_A_0130",
+      "L1_element_mass_percentage_points": 11.85068048949958,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0076",
+      "nearest_formula_id": "R2_A_0041",
+      "L1_element_mass_percentage_points": 10.235715963418262,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0077",
+      "nearest_formula_id": "R2_A_0084",
+      "L1_element_mass_percentage_points": 7.811792897931067,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0078",
+      "nearest_formula_id": "R2_A_0033",
+      "L1_element_mass_percentage_points": 9.741278226075309,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0079",
+      "nearest_formula_id": "R2_A_0001",
+      "L1_element_mass_percentage_points": 12.202949602981638,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0080",
+      "nearest_formula_id": "R2_A_0007",
+      "L1_element_mass_percentage_points": 9.949501079622475,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0081",
+      "nearest_formula_id": "R2_A_0123",
+      "L1_element_mass_percentage_points": 12.741777574780643,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0082",
+      "nearest_formula_id": "R2_A_0065",
+      "L1_element_mass_percentage_points": 9.422700041373243,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0083",
+      "nearest_formula_id": "R2_A_0145",
+      "L1_element_mass_percentage_points": 7.559300937608182,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0084",
+      "nearest_formula_id": "R2_A_0077",
+      "L1_element_mass_percentage_points": 7.811792897931067,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0085",
+      "nearest_formula_id": "R2_A_0032",
+      "L1_element_mass_percentage_points": 7.181338291826822,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0086",
+      "nearest_formula_id": "R2_A_0005",
+      "L1_element_mass_percentage_points": 11.884052064478293,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0087",
+      "nearest_formula_id": "R2_A_0002",
+      "L1_element_mass_percentage_points": 6.3836800176598825,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0088",
+      "nearest_formula_id": "R2_A_0025",
+      "L1_element_mass_percentage_points": 7.6564886324426205,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0089",
+      "nearest_formula_id": "R2_A_0065",
+      "L1_element_mass_percentage_points": 11.199141728128534,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0090",
+      "nearest_formula_id": "R2_A_0012",
+      "L1_element_mass_percentage_points": 8.850761346133092,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0091",
+      "nearest_formula_id": "R2_A_0108",
+      "L1_element_mass_percentage_points": 3.543448448205791,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0092",
+      "nearest_formula_id": "R2_A_0109",
+      "L1_element_mass_percentage_points": 13.060464946898842,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0093",
+      "nearest_formula_id": "R2_A_0068",
+      "L1_element_mass_percentage_points": 10.040894904649322,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0094",
+      "nearest_formula_id": "R2_A_0121",
+      "L1_element_mass_percentage_points": 10.456182586230602,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0095",
+      "nearest_formula_id": "R2_A_0119",
+      "L1_element_mass_percentage_points": 12.18158871990767,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0096",
+      "nearest_formula_id": "R2_A_0110",
+      "L1_element_mass_percentage_points": 9.449933502458933,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0097",
+      "nearest_formula_id": "R2_A_0095",
+      "L1_element_mass_percentage_points": 14.089953168077585,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0098",
+      "nearest_formula_id": "R2_A_0112",
+      "L1_element_mass_percentage_points": 9.669131241106399,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0099",
+      "nearest_formula_id": "R2_A_0104",
+      "L1_element_mass_percentage_points": 2.3188224519051057,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0100",
+      "nearest_formula_id": "R2_A_0099",
+      "L1_element_mass_percentage_points": 9.187608236294372,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0101",
+      "nearest_formula_id": "R2_A_0032",
+      "L1_element_mass_percentage_points": 10.302494784243699,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0102",
+      "nearest_formula_id": "R2_A_0105",
+      "L1_element_mass_percentage_points": 11.16717414681469,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0103",
+      "nearest_formula_id": "R2_A_0075",
+      "L1_element_mass_percentage_points": 12.971076807006407,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0104",
+      "nearest_formula_id": "R2_A_0099",
+      "L1_element_mass_percentage_points": 2.3188224519051057,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0105",
+      "nearest_formula_id": "R2_A_0102",
+      "L1_element_mass_percentage_points": 11.16717414681469,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0106",
+      "nearest_formula_id": "R2_A_0050",
+      "L1_element_mass_percentage_points": 15.261094354467419,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0107",
+      "nearest_formula_id": "R2_A_0114",
+      "L1_element_mass_percentage_points": 18.23159352724143,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0108",
+      "nearest_formula_id": "R2_A_0091",
+      "L1_element_mass_percentage_points": 3.543448448205791,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0109",
+      "nearest_formula_id": "R2_A_0126",
+      "L1_element_mass_percentage_points": 9.820662191800782,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0110",
+      "nearest_formula_id": "R2_A_0096",
+      "L1_element_mass_percentage_points": 9.449933502458933,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0111",
+      "nearest_formula_id": "R2_A_0113",
+      "L1_element_mass_percentage_points": 11.577942241974686,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0112",
+      "nearest_formula_id": "R2_A_0098",
+      "L1_element_mass_percentage_points": 9.669131241106399,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0113",
+      "nearest_formula_id": "R2_A_0111",
+      "L1_element_mass_percentage_points": 11.577942241974686,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0114",
+      "nearest_formula_id": "R2_A_0150",
+      "L1_element_mass_percentage_points": 13.921849721490085,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0115",
+      "nearest_formula_id": "R2_A_0086",
+      "L1_element_mass_percentage_points": 12.0713246498506,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0116",
+      "nearest_formula_id": "R2_A_0118",
+      "L1_element_mass_percentage_points": 12.942237395849316,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0117",
+      "nearest_formula_id": "R2_A_0059",
+      "L1_element_mass_percentage_points": 10.470933429491023,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0118",
+      "nearest_formula_id": "R2_A_0100",
+      "L1_element_mass_percentage_points": 10.037899667362494,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0119",
+      "nearest_formula_id": "R2_A_0095",
+      "L1_element_mass_percentage_points": 12.18158871990767,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0120",
+      "nearest_formula_id": "R2_A_0150",
+      "L1_element_mass_percentage_points": 10.865605069943152,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0121",
+      "nearest_formula_id": "R2_A_0122",
+      "L1_element_mass_percentage_points": 0.020000000000005118,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0122",
+      "nearest_formula_id": "R2_A_0124",
+      "L1_element_mass_percentage_points": 0.019999999999990907,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0123",
+      "nearest_formula_id": "R2_A_0124",
+      "L1_element_mass_percentage_points": 0.019999999999990907,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0124",
+      "nearest_formula_id": "R2_A_0122",
+      "L1_element_mass_percentage_points": 0.019999999999990907,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0125",
+      "nearest_formula_id": "R2_A_0124",
+      "L1_element_mass_percentage_points": 0.17999999999999633,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0126",
+      "nearest_formula_id": "R2_A_0127",
+      "L1_element_mass_percentage_points": 0.01999999999999446,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0127",
+      "nearest_formula_id": "R2_A_0126",
+      "L1_element_mass_percentage_points": 0.01999999999999446,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0128",
+      "nearest_formula_id": "R2_A_0126",
+      "L1_element_mass_percentage_points": 0.01999999999999446,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0129",
+      "nearest_formula_id": "R2_A_0127",
+      "L1_element_mass_percentage_points": 0.02000000000000867,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0130",
+      "nearest_formula_id": "R2_A_0129",
+      "L1_element_mass_percentage_points": 0.17999999999999278,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0131",
+      "nearest_formula_id": "R2_A_0132",
+      "L1_element_mass_percentage_points": 0.020000000000001565,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0132",
+      "nearest_formula_id": "R2_A_0133",
+      "L1_element_mass_percentage_points": 0.02,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0133",
+      "nearest_formula_id": "R2_A_0132",
+      "L1_element_mass_percentage_points": 0.02,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0134",
+      "nearest_formula_id": "R2_A_0132",
+      "L1_element_mass_percentage_points": 0.020000000000001565,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0135",
+      "nearest_formula_id": "R2_A_0134",
+      "L1_element_mass_percentage_points": 0.17999999999999633,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0136",
+      "nearest_formula_id": "R2_A_0138",
+      "L1_element_mass_percentage_points": 0.020000000000001565,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0137",
+      "nearest_formula_id": "R2_A_0139",
+      "L1_element_mass_percentage_points": 0.020000000000001565,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0138",
+      "nearest_formula_id": "R2_A_0136",
+      "L1_element_mass_percentage_points": 0.020000000000001565,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0139",
+      "nearest_formula_id": "R2_A_0137",
+      "L1_element_mass_percentage_points": 0.020000000000001565,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0140",
+      "nearest_formula_id": "R2_A_0139",
+      "L1_element_mass_percentage_points": 0.9538744032317288,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0141",
+      "nearest_formula_id": "R2_A_0143",
+      "L1_element_mass_percentage_points": 0.01999999999999446,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0142",
+      "nearest_formula_id": "R2_A_0144",
+      "L1_element_mass_percentage_points": 0.019999999999996305,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0143",
+      "nearest_formula_id": "R2_A_0141",
+      "L1_element_mass_percentage_points": 0.01999999999999446,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0144",
+      "nearest_formula_id": "R2_A_0142",
+      "L1_element_mass_percentage_points": 0.019999999999996305,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0145",
+      "nearest_formula_id": "R2_A_0144",
+      "L1_element_mass_percentage_points": 0.9538744032317314,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0146",
+      "nearest_formula_id": "R2_A_0148",
+      "L1_element_mass_percentage_points": 0.020000000000007612,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0147",
+      "nearest_formula_id": "R2_A_0149",
+      "L1_element_mass_percentage_points": 0.020000000000007616,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0148",
+      "nearest_formula_id": "R2_A_0146",
+      "L1_element_mass_percentage_points": 0.020000000000007612,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0149",
+      "nearest_formula_id": "R2_A_0147",
+      "L1_element_mass_percentage_points": 0.020000000000007616,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0150",
+      "nearest_formula_id": "R2_A_0149",
+      "L1_element_mass_percentage_points": 0.9538744032317332,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0151",
+      "nearest_formula_id": "R2_A_0156",
+      "L1_element_mass_percentage_points": 8.87279371713883,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0152",
+      "nearest_formula_id": "R2_A_0183",
+      "L1_element_mass_percentage_points": 13.151778505498537,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0153",
+      "nearest_formula_id": "R2_A_0185",
+      "L1_element_mass_percentage_points": 9.118650669650544,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0154",
+      "nearest_formula_id": "R2_A_0160",
+      "L1_element_mass_percentage_points": 9.621989917464195,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0155",
+      "nearest_formula_id": "R2_A_0210",
+      "L1_element_mass_percentage_points": 10.010005073387067,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0156",
+      "nearest_formula_id": "R2_A_0151",
+      "L1_element_mass_percentage_points": 8.87279371713883,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0157",
+      "nearest_formula_id": "R2_A_0187",
+      "L1_element_mass_percentage_points": 14.689213493921725,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0158",
+      "nearest_formula_id": "R2_A_0155",
+      "L1_element_mass_percentage_points": 10.947342221377557,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0159",
+      "nearest_formula_id": "R2_A_0165",
+      "L1_element_mass_percentage_points": 8.952349828769695,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0160",
+      "nearest_formula_id": "R2_A_0154",
+      "L1_element_mass_percentage_points": 9.621989917464195,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0161",
+      "nearest_formula_id": "R2_A_0158",
+      "L1_element_mass_percentage_points": 15.945441281733666,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0162",
+      "nearest_formula_id": "R2_A_0171",
+      "L1_element_mass_percentage_points": 8.668638610055288,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0163",
+      "nearest_formula_id": "R2_A_0188",
+      "L1_element_mass_percentage_points": 10.625315822896924,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0164",
+      "nearest_formula_id": "R2_A_0209",
+      "L1_element_mass_percentage_points": 7.541350532536227,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0165",
+      "nearest_formula_id": "R2_A_0159",
+      "L1_element_mass_percentage_points": 8.952349828769695,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0166",
+      "nearest_formula_id": "R2_A_0164",
+      "L1_element_mass_percentage_points": 11.581731745320234,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0167",
+      "nearest_formula_id": "R2_A_0169",
+      "L1_element_mass_percentage_points": 6.640468551231513,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0168",
+      "nearest_formula_id": "R2_A_0210",
+      "L1_element_mass_percentage_points": 11.013400647908542,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0169",
+      "nearest_formula_id": "R2_A_0167",
+      "L1_element_mass_percentage_points": 6.640468551231513,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0170",
+      "nearest_formula_id": "R2_A_0210",
+      "L1_element_mass_percentage_points": 10.722675735831894,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0171",
+      "nearest_formula_id": "R2_A_0197",
+      "L1_element_mass_percentage_points": 7.3079287305185785,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0172",
+      "nearest_formula_id": "R2_A_0179",
+      "L1_element_mass_percentage_points": 9.056382006746249,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0173",
+      "nearest_formula_id": "R2_A_0177",
+      "L1_element_mass_percentage_points": 15.951629181140232,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0174",
+      "nearest_formula_id": "R2_A_0206",
+      "L1_element_mass_percentage_points": 11.69308061802526,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0175",
+      "nearest_formula_id": "R2_A_0245",
+      "L1_element_mass_percentage_points": 9.192623313636808,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0176",
+      "nearest_formula_id": "R2_A_0207",
+      "L1_element_mass_percentage_points": 12.538485257052695,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0177",
+      "nearest_formula_id": "R2_A_0162",
+      "L1_element_mass_percentage_points": 8.921980618645716,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0178",
+      "nearest_formula_id": "R2_A_0245",
+      "L1_element_mass_percentage_points": 8.794192453009314,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0179",
+      "nearest_formula_id": "R2_A_0172",
+      "L1_element_mass_percentage_points": 9.056382006746249,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0180",
+      "nearest_formula_id": "R2_A_0156",
+      "L1_element_mass_percentage_points": 10.446628035901416,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0181",
+      "nearest_formula_id": "R2_A_0250",
+      "L1_element_mass_percentage_points": 7.222384513263323,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0182",
+      "nearest_formula_id": "R2_A_0204",
+      "L1_element_mass_percentage_points": 8.49077463919943,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0183",
+      "nearest_formula_id": "R2_A_0203",
+      "L1_element_mass_percentage_points": 8.948638542291873,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0184",
+      "nearest_formula_id": "R2_A_0167",
+      "L1_element_mass_percentage_points": 8.73425959726763,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0185",
+      "nearest_formula_id": "R2_A_0192",
+      "L1_element_mass_percentage_points": 8.634526523507601,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0186",
+      "nearest_formula_id": "R2_A_0160",
+      "L1_element_mass_percentage_points": 11.169834767124856,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0187",
+      "nearest_formula_id": "R2_A_0191",
+      "L1_element_mass_percentage_points": 9.506465777678784,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0188",
+      "nearest_formula_id": "R2_A_0222",
+      "L1_element_mass_percentage_points": 8.792438196049625,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0189",
+      "nearest_formula_id": "R2_A_0180",
+      "L1_element_mass_percentage_points": 13.806070105151248,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0190",
+      "nearest_formula_id": "R2_A_0196",
+      "L1_element_mass_percentage_points": 6.506907550461013,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0191",
+      "nearest_formula_id": "R2_A_0187",
+      "L1_element_mass_percentage_points": 9.506465777678784,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0192",
+      "nearest_formula_id": "R2_A_0185",
+      "L1_element_mass_percentage_points": 8.634526523507601,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0193",
+      "nearest_formula_id": "R2_A_0164",
+      "L1_element_mass_percentage_points": 9.642914978019261,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0194",
+      "nearest_formula_id": "R2_A_0206",
+      "L1_element_mass_percentage_points": 12.518172081994754,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0195",
+      "nearest_formula_id": "R2_A_0241",
+      "L1_element_mass_percentage_points": 11.99167023162207,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0196",
+      "nearest_formula_id": "R2_A_0190",
+      "L1_element_mass_percentage_points": 6.506907550461013,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0197",
+      "nearest_formula_id": "R2_A_0171",
+      "L1_element_mass_percentage_points": 7.3079287305185785,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0198",
+      "nearest_formula_id": "R2_A_0172",
+      "L1_element_mass_percentage_points": 9.273500063861288,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0199",
+      "nearest_formula_id": "R2_A_0164",
+      "L1_element_mass_percentage_points": 11.542186742290562,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0200",
+      "nearest_formula_id": "R2_A_0163",
+      "L1_element_mass_percentage_points": 11.997769099590945,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0201",
+      "nearest_formula_id": "R2_A_0159",
+      "L1_element_mass_percentage_points": 10.044974686582067,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0202",
+      "nearest_formula_id": "R2_A_0208",
+      "L1_element_mass_percentage_points": 9.011389644840085,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0203",
+      "nearest_formula_id": "R2_A_0183",
+      "L1_element_mass_percentage_points": 8.948638542291873,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0204",
+      "nearest_formula_id": "R2_A_0182",
+      "L1_element_mass_percentage_points": 8.49077463919943,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0205",
+      "nearest_formula_id": "R2_A_0192",
+      "L1_element_mass_percentage_points": 11.69574247264979,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0206",
+      "nearest_formula_id": "R2_A_0246",
+      "L1_element_mass_percentage_points": 11.438588019560596,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0207",
+      "nearest_formula_id": "R2_A_0190",
+      "L1_element_mass_percentage_points": 10.958590342819589,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0208",
+      "nearest_formula_id": "R2_A_0202",
+      "L1_element_mass_percentage_points": 9.011389644840085,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0209",
+      "nearest_formula_id": "R2_A_0221",
+      "L1_element_mass_percentage_points": 7.39535793387896,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0210",
+      "nearest_formula_id": "R2_A_0155",
+      "L1_element_mass_percentage_points": 10.010005073387067,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0211",
+      "nearest_formula_id": "R2_A_0226",
+      "L1_element_mass_percentage_points": 7.5028133114661095,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0212",
+      "nearest_formula_id": "R2_A_0208",
+      "L1_element_mass_percentage_points": 14.704457649847946,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0213",
+      "nearest_formula_id": "R2_A_0216",
+      "L1_element_mass_percentage_points": 3.597797236156193,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0214",
+      "nearest_formula_id": "R2_A_0228",
+      "L1_element_mass_percentage_points": 3.983299195267486,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0215",
+      "nearest_formula_id": "R2_A_0214",
+      "L1_element_mass_percentage_points": 10.004401680443557,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0216",
+      "nearest_formula_id": "R2_A_0224",
+      "L1_element_mass_percentage_points": 2.753653683331192,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0217",
+      "nearest_formula_id": "R2_A_0226",
+      "L1_element_mass_percentage_points": 3.5542877558805905,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0218",
+      "nearest_formula_id": "R2_A_0204",
+      "L1_element_mass_percentage_points": 9.958320750470326,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0219",
+      "nearest_formula_id": "R2_A_0224",
+      "L1_element_mass_percentage_points": 10.909800749313838,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0220",
+      "nearest_formula_id": "R2_A_0223",
+      "L1_element_mass_percentage_points": 8.586471331159169,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0221",
+      "nearest_formula_id": "R2_A_0209",
+      "L1_element_mass_percentage_points": 7.39535793387896,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0222",
+      "nearest_formula_id": "R2_A_0188",
+      "L1_element_mass_percentage_points": 8.792438196049625,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0223",
+      "nearest_formula_id": "R2_A_0220",
+      "L1_element_mass_percentage_points": 8.586471331159169,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0224",
+      "nearest_formula_id": "R2_A_0216",
+      "L1_element_mass_percentage_points": 2.753653683331192,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0225",
+      "nearest_formula_id": "R2_A_0226",
+      "L1_element_mass_percentage_points": 5.843050836376399,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0226",
+      "nearest_formula_id": "R2_A_0217",
+      "L1_element_mass_percentage_points": 3.5542877558805905,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0227",
+      "nearest_formula_id": "R2_A_0230",
+      "L1_element_mass_percentage_points": 9.378613980965167,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0228",
+      "nearest_formula_id": "R2_A_0214",
+      "L1_element_mass_percentage_points": 3.983299195267486,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0229",
+      "nearest_formula_id": "R2_A_0225",
+      "L1_element_mass_percentage_points": 7.690936759184392,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0230",
+      "nearest_formula_id": "R2_A_0227",
+      "L1_element_mass_percentage_points": 9.378613980965167,
+      "same_parent_family": false
+    },
+    {
+      "formula_id": "R2_A_0231",
+      "nearest_formula_id": "R2_A_0233",
+      "L1_element_mass_percentage_points": 0.020000000000013746,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0232",
+      "nearest_formula_id": "R2_A_0234",
+      "L1_element_mass_percentage_points": 0.019999999999998012,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0233",
+      "nearest_formula_id": "R2_A_0234",
+      "L1_element_mass_percentage_points": 0.019999999999998012,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0234",
+      "nearest_formula_id": "R2_A_0232",
+      "L1_element_mass_percentage_points": 0.019999999999998012,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0235",
+      "nearest_formula_id": "R2_A_0234",
+      "L1_element_mass_percentage_points": 0.18000000000000496,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0236",
+      "nearest_formula_id": "R2_A_0237",
+      "L1_element_mass_percentage_points": 0.020000000000005118,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0237",
+      "nearest_formula_id": "R2_A_0239",
+      "L1_element_mass_percentage_points": 0.019999999999998012,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0238",
+      "nearest_formula_id": "R2_A_0239",
+      "L1_element_mass_percentage_points": 0.019999999999998012,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0239",
+      "nearest_formula_id": "R2_A_0237",
+      "L1_element_mass_percentage_points": 0.019999999999998012,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0240",
+      "nearest_formula_id": "R2_A_0239",
+      "L1_element_mass_percentage_points": 0.18000000000000776,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0241",
+      "nearest_formula_id": "R2_A_0243",
+      "L1_element_mass_percentage_points": 0.019999999999998012,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0242",
+      "nearest_formula_id": "R2_A_0244",
+      "L1_element_mass_percentage_points": 0.020000000000005118,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0243",
+      "nearest_formula_id": "R2_A_0241",
+      "L1_element_mass_percentage_points": 0.019999999999998012,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0244",
+      "nearest_formula_id": "R2_A_0242",
+      "L1_element_mass_percentage_points": 0.020000000000005118,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0245",
+      "nearest_formula_id": "R2_A_0244",
+      "L1_element_mass_percentage_points": 1.2589855979962503,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0246",
+      "nearest_formula_id": "R2_A_0248",
+      "L1_element_mass_percentage_points": 0.020000000000005118,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0247",
+      "nearest_formula_id": "R2_A_0249",
+      "L1_element_mass_percentage_points": 0.019999999999998012,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0248",
+      "nearest_formula_id": "R2_A_0246",
+      "L1_element_mass_percentage_points": 0.020000000000005118,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0249",
+      "nearest_formula_id": "R2_A_0247",
+      "L1_element_mass_percentage_points": 0.019999999999998012,
+      "same_parent_family": true
+    },
+    {
+      "formula_id": "R2_A_0250",
+      "nearest_formula_id": "R2_A_0249",
+      "L1_element_mass_percentage_points": 1.2589855979962588,
+      "same_parent_family": true
+    }
+  ],
+  "nearest_first_round": [
+    {
+      "formula_id": "R2_A_0001",
+      "nearest_first_round_id": "A-part-20261018/A00445",
+      "L1_element_mass_percentage_points": 6.647342248755153
+    },
+    {
+      "formula_id": "R2_A_0002",
+      "nearest_first_round_id": "A-part-20261018/A00203",
+      "L1_element_mass_percentage_points": 7.0263288435701785
+    },
+    {
+      "formula_id": "R2_A_0003",
+      "nearest_first_round_id": "A-part-20261018/A00800",
+      "L1_element_mass_percentage_points": 5.998330468356503
+    },
+    {
+      "formula_id": "R2_A_0004",
+      "nearest_first_round_id": "A-part-20261018/A00209",
+      "L1_element_mass_percentage_points": 6.26106848280952
+    },
+    {
+      "formula_id": "R2_A_0005",
+      "nearest_first_round_id": "A-part-20261018/A02204",
+      "L1_element_mass_percentage_points": 6.885923691212309
+    },
+    {
+      "formula_id": "R2_A_0006",
+      "nearest_first_round_id": "A-part-20261018/A00143",
+      "L1_element_mass_percentage_points": 7.657720287017368
+    },
+    {
+      "formula_id": "R2_A_0007",
+      "nearest_first_round_id": "A-part-20261018/A01231",
+      "L1_element_mass_percentage_points": 5.812903207996492
+    },
+    {
+      "formula_id": "R2_A_0008",
+      "nearest_first_round_id": "A-part-20261018/A01467",
+      "L1_element_mass_percentage_points": 7.406487414575644
+    },
+    {
+      "formula_id": "R2_A_0009",
+      "nearest_first_round_id": "A-part-20261018/A00893",
+      "L1_element_mass_percentage_points": 5.144594046819428
+    },
+    {
+      "formula_id": "R2_A_0010",
+      "nearest_first_round_id": "A-part-20261018/A01351",
+      "L1_element_mass_percentage_points": 5.564576346135145
+    },
+    {
+      "formula_id": "R2_A_0011",
+      "nearest_first_round_id": "A-part-20261018/A01074",
+      "L1_element_mass_percentage_points": 7.914928341001227
+    },
+    {
+      "formula_id": "R2_A_0012",
+      "nearest_first_round_id": "A-part-20261018/A00436",
+      "L1_element_mass_percentage_points": 5.619930191339016
+    },
+    {
+      "formula_id": "R2_A_0013",
+      "nearest_first_round_id": "A-part-20261018/A00434",
+      "L1_element_mass_percentage_points": 5.345368703882855
+    },
+    {
+      "formula_id": "R2_A_0014",
+      "nearest_first_round_id": "A-part-20261018/A02395",
+      "L1_element_mass_percentage_points": 6.477934850970571
+    },
+    {
+      "formula_id": "R2_A_0015",
+      "nearest_first_round_id": "A-part-20261018/A01382",
+      "L1_element_mass_percentage_points": 5.117327741398255
+    },
+    {
+      "formula_id": "R2_A_0016",
+      "nearest_first_round_id": "A-part-20261018/A01403",
+      "L1_element_mass_percentage_points": 7.614956352055318
+    },
+    {
+      "formula_id": "R2_A_0017",
+      "nearest_first_round_id": "A-part-20261018/A01148",
+      "L1_element_mass_percentage_points": 6.140064490760327
+    },
+    {
+      "formula_id": "R2_A_0018",
+      "nearest_first_round_id": "A-part-20261018/A01100",
+      "L1_element_mass_percentage_points": 6.185120632939386
+    },
+    {
+      "formula_id": "R2_A_0019",
+      "nearest_first_round_id": "A-part-20261018/A02226",
+      "L1_element_mass_percentage_points": 7.798631398508861
+    },
+    {
+      "formula_id": "R2_A_0020",
+      "nearest_first_round_id": "A-part-20261018/A01328",
+      "L1_element_mass_percentage_points": 6.274368670619695
+    },
+    {
+      "formula_id": "R2_A_0021",
+      "nearest_first_round_id": "A-part-20261018/A00654",
+      "L1_element_mass_percentage_points": 7.601432722042348
+    },
+    {
+      "formula_id": "R2_A_0022",
+      "nearest_first_round_id": "A-part-20261018/A00784",
+      "L1_element_mass_percentage_points": 4.130906074861084
+    },
+    {
+      "formula_id": "R2_A_0023",
+      "nearest_first_round_id": "A-part-20261018/A01258",
+      "L1_element_mass_percentage_points": 5.45566813970517
+    },
+    {
+      "formula_id": "R2_A_0024",
+      "nearest_first_round_id": "A-part-20261018/A00814",
+      "L1_element_mass_percentage_points": 4.789957124507506
+    },
+    {
+      "formula_id": "R2_A_0025",
+      "nearest_first_round_id": "A-part-20261018/A00033",
+      "L1_element_mass_percentage_points": 7.92184859580296
+    },
+    {
+      "formula_id": "R2_A_0026",
+      "nearest_first_round_id": "A-part-20261018/A00749",
+      "L1_element_mass_percentage_points": 6.033486165499184
+    },
+    {
+      "formula_id": "R2_A_0027",
+      "nearest_first_round_id": "A-part-20261018/A00172",
+      "L1_element_mass_percentage_points": 5.950407184870627
+    },
+    {
+      "formula_id": "R2_A_0028",
+      "nearest_first_round_id": "A-part-20261018/A00518",
+      "L1_element_mass_percentage_points": 5.831526234633691
+    },
+    {
+      "formula_id": "R2_A_0029",
+      "nearest_first_round_id": "A-part-20261018/A00550",
+      "L1_element_mass_percentage_points": 7.5319991353877365
+    },
+    {
+      "formula_id": "R2_A_0030",
+      "nearest_first_round_id": "A-part-20261018/A00079",
+      "L1_element_mass_percentage_points": 6.7810416015857875
+    },
+    {
+      "formula_id": "R2_A_0031",
+      "nearest_first_round_id": "A-part-20261018/A02226",
+      "L1_element_mass_percentage_points": 5.921616245848774
+    },
+    {
+      "formula_id": "R2_A_0032",
+      "nearest_first_round_id": "A-part-20261018/A00580",
+      "L1_element_mass_percentage_points": 6.903417571299486
+    },
+    {
+      "formula_id": "R2_A_0033",
+      "nearest_first_round_id": "A-part-20261018/A01991",
+      "L1_element_mass_percentage_points": 5.667216922659086
+    },
+    {
+      "formula_id": "R2_A_0034",
+      "nearest_first_round_id": "A-part-20261018/A00355",
+      "L1_element_mass_percentage_points": 5.521265278882631
+    },
+    {
+      "formula_id": "R2_A_0035",
+      "nearest_first_round_id": "A-part-20261018/A01500",
+      "L1_element_mass_percentage_points": 5.340635259528519
+    },
+    {
+      "formula_id": "R2_A_0036",
+      "nearest_first_round_id": "A-part-20261018/A01282",
+      "L1_element_mass_percentage_points": 6.073862708079103
+    },
+    {
+      "formula_id": "R2_A_0037",
+      "nearest_first_round_id": "A-part-20261018/A00045",
+      "L1_element_mass_percentage_points": 7.751806367014679
+    },
+    {
+      "formula_id": "R2_A_0038",
+      "nearest_first_round_id": "A-part-20261018/A00881",
+      "L1_element_mass_percentage_points": 6.983689554049037
+    },
+    {
+      "formula_id": "R2_A_0039",
+      "nearest_first_round_id": "A-part-20261018/A00002",
+      "L1_element_mass_percentage_points": 5.281300467074627
+    },
+    {
+      "formula_id": "R2_A_0040",
+      "nearest_first_round_id": "A-part-20261018/A00043",
+      "L1_element_mass_percentage_points": 4.500174151184132
+    },
+    {
+      "formula_id": "R2_A_0041",
+      "nearest_first_round_id": "A-part-20261018/A00773",
+      "L1_element_mass_percentage_points": 5.668522842464447
+    },
+    {
+      "formula_id": "R2_A_0042",
+      "nearest_first_round_id": "A-part-20261018/A00570",
+      "L1_element_mass_percentage_points": 4.859371612969568
+    },
+    {
+      "formula_id": "R2_A_0043",
+      "nearest_first_round_id": "A-part-20261018/A01318",
+      "L1_element_mass_percentage_points": 5.492651234205081
+    },
+    {
+      "formula_id": "R2_A_0044",
+      "nearest_first_round_id": "A-part-20261018/A01965",
+      "L1_element_mass_percentage_points": 7.540619119261776
+    },
+    {
+      "formula_id": "R2_A_0045",
+      "nearest_first_round_id": "A-part-20261018/A02114",
+      "L1_element_mass_percentage_points": 6.0184102802532315
+    },
+    {
+      "formula_id": "R2_A_0046",
+      "nearest_first_round_id": "A-part-20261018/A01020",
+      "L1_element_mass_percentage_points": 5.139004426448301
+    },
+    {
+      "formula_id": "R2_A_0047",
+      "nearest_first_round_id": "A-part-20261018/A00485",
+      "L1_element_mass_percentage_points": 4.712690345196305
+    },
+    {
+      "formula_id": "R2_A_0048",
+      "nearest_first_round_id": "A-part-20261018/A00778",
+      "L1_element_mass_percentage_points": 5.926333634630159
+    },
+    {
+      "formula_id": "R2_A_0049",
+      "nearest_first_round_id": "A-part-20261018/A00258",
+      "L1_element_mass_percentage_points": 6.429537930453434
+    },
+    {
+      "formula_id": "R2_A_0050",
+      "nearest_first_round_id": "A-part-20261018/A02405",
+      "L1_element_mass_percentage_points": 7.688024743501591
+    },
+    {
+      "formula_id": "R2_A_0051",
+      "nearest_first_round_id": "A-part-20261018/A00963",
+      "L1_element_mass_percentage_points": 6.516631902090459
+    },
+    {
+      "formula_id": "R2_A_0052",
+      "nearest_first_round_id": "A-part-20261018/A00928",
+      "L1_element_mass_percentage_points": 5.946586760785037
+    },
+    {
+      "formula_id": "R2_A_0053",
+      "nearest_first_round_id": "A-part-20261018/A02375",
+      "L1_element_mass_percentage_points": 8.095890541204716
+    },
+    {
+      "formula_id": "R2_A_0054",
+      "nearest_first_round_id": "A-part-20261018/A00507",
+      "L1_element_mass_percentage_points": 7.391242829481498
+    },
+    {
+      "formula_id": "R2_A_0055",
+      "nearest_first_round_id": "A-part-20261018/A00454",
+      "L1_element_mass_percentage_points": 6.809262077389125
+    },
+    {
+      "formula_id": "R2_A_0056",
+      "nearest_first_round_id": "A-part-20261018/A02463",
+      "L1_element_mass_percentage_points": 5.068678005113951
+    },
+    {
+      "formula_id": "R2_A_0057",
+      "nearest_first_round_id": "A-part-20261018/A01992",
+      "L1_element_mass_percentage_points": 4.46533088072504
+    },
+    {
+      "formula_id": "R2_A_0058",
+      "nearest_first_round_id": "A-part-20261018/A01410",
+      "L1_element_mass_percentage_points": 5.762343416362655
+    },
+    {
+      "formula_id": "R2_A_0059",
+      "nearest_first_round_id": "A-part-20261018/A02497",
+      "L1_element_mass_percentage_points": 6.482180139927185
+    },
+    {
+      "formula_id": "R2_A_0060",
+      "nearest_first_round_id": "A-part-20261018/A02321",
+      "L1_element_mass_percentage_points": 5.720592803926613
+    },
+    {
+      "formula_id": "R2_A_0061",
+      "nearest_first_round_id": "A-part-20261018/A00522",
+      "L1_element_mass_percentage_points": 6.347199520381202
+    },
+    {
+      "formula_id": "R2_A_0062",
+      "nearest_first_round_id": "A-part-20261018/A01208",
+      "L1_element_mass_percentage_points": 6.168515488998082
+    },
+    {
+      "formula_id": "R2_A_0063",
+      "nearest_first_round_id": "A-part-20261018/A00851",
+      "L1_element_mass_percentage_points": 6.110763331974438
+    },
+    {
+      "formula_id": "R2_A_0064",
+      "nearest_first_round_id": "A-part-20261018/A00721",
+      "L1_element_mass_percentage_points": 6.1834202701392025
+    },
+    {
+      "formula_id": "R2_A_0065",
+      "nearest_first_round_id": "A-part-20261018/A01972",
+      "L1_element_mass_percentage_points": 6.784376850923798
+    },
+    {
+      "formula_id": "R2_A_0066",
+      "nearest_first_round_id": "A-part-20261018/A01156",
+      "L1_element_mass_percentage_points": 4.225056186923468
+    },
+    {
+      "formula_id": "R2_A_0067",
+      "nearest_first_round_id": "A-part-20261018/A00337",
+      "L1_element_mass_percentage_points": 5.2520810418735575
+    },
+    {
+      "formula_id": "R2_A_0068",
+      "nearest_first_round_id": "A-part-20261018/A00378",
+      "L1_element_mass_percentage_points": 4.095859467373713
+    },
+    {
+      "formula_id": "R2_A_0069",
+      "nearest_first_round_id": "A-part-20261018/A01440",
+      "L1_element_mass_percentage_points": 6.404453464872396
+    },
+    {
+      "formula_id": "R2_A_0070",
+      "nearest_first_round_id": "A-part-20261018/A01158",
+      "L1_element_mass_percentage_points": 6.953453688076276
+    },
+    {
+      "formula_id": "R2_A_0071",
+      "nearest_first_round_id": "A-part-20261018/A01412",
+      "L1_element_mass_percentage_points": 5.774426274906885
+    },
+    {
+      "formula_id": "R2_A_0072",
+      "nearest_first_round_id": "A-part-20261018/A00827",
+      "L1_element_mass_percentage_points": 6.520992595584893
+    },
+    {
+      "formula_id": "R2_A_0073",
+      "nearest_first_round_id": "A-part-20261018/A02246",
+      "L1_element_mass_percentage_points": 5.675550480782313
+    },
+    {
+      "formula_id": "R2_A_0074",
+      "nearest_first_round_id": "A-part-20261018/A00289",
+      "L1_element_mass_percentage_points": 3.6745005839284515
+    },
+    {
+      "formula_id": "R2_A_0075",
+      "nearest_first_round_id": "A-part-20261018/A00539",
+      "L1_element_mass_percentage_points": 4.135957321395341
+    },
+    {
+      "formula_id": "R2_A_0076",
+      "nearest_first_round_id": "A-part-20261018/A00224",
+      "L1_element_mass_percentage_points": 6.225003263771771
+    },
+    {
+      "formula_id": "R2_A_0077",
+      "nearest_first_round_id": "A-part-20261018/A01036",
+      "L1_element_mass_percentage_points": 7.52919340424688
+    },
+    {
+      "formula_id": "R2_A_0078",
+      "nearest_first_round_id": "A-part-20261018/A00283",
+      "L1_element_mass_percentage_points": 7.688954696196791
+    },
+    {
+      "formula_id": "R2_A_0079",
+      "nearest_first_round_id": "A-part-20261018/A00282",
+      "L1_element_mass_percentage_points": 5.463507881663364
+    },
+    {
+      "formula_id": "R2_A_0080",
+      "nearest_first_round_id": "A-part-20261018/A01370",
+      "L1_element_mass_percentage_points": 5.757286571669516
+    },
+    {
+      "formula_id": "R2_A_0081",
+      "nearest_first_round_id": "A-part-20261018/A01918",
+      "L1_element_mass_percentage_points": 7.84629960327055
+    },
+    {
+      "formula_id": "R2_A_0082",
+      "nearest_first_round_id": "A-part-20261018/A01091",
+      "L1_element_mass_percentage_points": 6.937885622384454
+    },
+    {
+      "formula_id": "R2_A_0083",
+      "nearest_first_round_id": "A-part-20261018/A00824",
+      "L1_element_mass_percentage_points": 5.407388149705885
+    },
+    {
+      "formula_id": "R2_A_0084",
+      "nearest_first_round_id": "A-part-20261018/A00844",
+      "L1_element_mass_percentage_points": 6.817629688388539
+    },
+    {
+      "formula_id": "R2_A_0085",
+      "nearest_first_round_id": "A-part-20261018/A01435",
+      "L1_element_mass_percentage_points": 5.529571959241853
+    },
+    {
+      "formula_id": "R2_A_0086",
+      "nearest_first_round_id": "A-part-20261018/A02450",
+      "L1_element_mass_percentage_points": 5.3698332613031114
+    },
+    {
+      "formula_id": "R2_A_0087",
+      "nearest_first_round_id": "A-part-20261018/A00203",
+      "L1_element_mass_percentage_points": 7.024107215591944
+    },
+    {
+      "formula_id": "R2_A_0088",
+      "nearest_first_round_id": "A-part-20261018/A00129",
+      "L1_element_mass_percentage_points": 5.806591952079129
+    },
+    {
+      "formula_id": "R2_A_0089",
+      "nearest_first_round_id": "A-part-20261018/A01956",
+      "L1_element_mass_percentage_points": 8.503159541208984
+    },
+    {
+      "formula_id": "R2_A_0090",
+      "nearest_first_round_id": "A-part-20261018/A00555",
+      "L1_element_mass_percentage_points": 6.457641675871381
+    },
+    {
+      "formula_id": "R2_A_0091",
+      "nearest_first_round_id": "A-part-20261018/A01827",
+      "L1_element_mass_percentage_points": 10.847338235146008
+    },
+    {
+      "formula_id": "R2_A_0092",
+      "nearest_first_round_id": "A-part-20261018/A01971",
+      "L1_element_mass_percentage_points": 8.0452149347365
+    },
+    {
+      "formula_id": "R2_A_0093",
+      "nearest_first_round_id": "A-part-20261018/A01454",
+      "L1_element_mass_percentage_points": 10.847105062363202
+    },
+    {
+      "formula_id": "R2_A_0094",
+      "nearest_first_round_id": "A-part-20261018/A00694",
+      "L1_element_mass_percentage_points": 4.249088971339832
+    },
+    {
+      "formula_id": "R2_A_0095",
+      "nearest_first_round_id": "A-part-20261018/A01898",
+      "L1_element_mass_percentage_points": 11.399348059153553
+    },
+    {
+      "formula_id": "R2_A_0096",
+      "nearest_first_round_id": "A-part-20261018/A01857",
+      "L1_element_mass_percentage_points": 8.760352530990307
+    },
+    {
+      "formula_id": "R2_A_0097",
+      "nearest_first_round_id": "A-part-20261018/A00136",
+      "L1_element_mass_percentage_points": 15.947076021146307
+    },
+    {
+      "formula_id": "R2_A_0098",
+      "nearest_first_round_id": "A-part-20261018/A00136",
+      "L1_element_mass_percentage_points": 6.8818049201575855
+    },
+    {
+      "formula_id": "R2_A_0099",
+      "nearest_first_round_id": "A-part-20261018/A01766",
+      "L1_element_mass_percentage_points": 3.619904000362404
+    },
+    {
+      "formula_id": "R2_A_0100",
+      "nearest_first_round_id": "A-part-20261018/A01806",
+      "L1_element_mass_percentage_points": 8.302652105084572
+    },
+    {
+      "formula_id": "R2_A_0101",
+      "nearest_first_round_id": "A-part-20261018/A00580",
+      "L1_element_mass_percentage_points": 8.513209006542422
+    },
+    {
+      "formula_id": "R2_A_0102",
+      "nearest_first_round_id": "A-part-20261018/A00648",
+      "L1_element_mass_percentage_points": 16.97119750509632
+    },
+    {
+      "formula_id": "R2_A_0103",
+      "nearest_first_round_id": "A-part-20261018/A01451",
+      "L1_element_mass_percentage_points": 9.063388049781182
+    },
+    {
+      "formula_id": "R2_A_0104",
+      "nearest_first_round_id": "A-part-20261018/A01766",
+      "L1_element_mass_percentage_points": 4.245479610625277
+    },
+    {
+      "formula_id": "R2_A_0105",
+      "nearest_first_round_id": "A-part-20261018/A01881",
+      "L1_element_mass_percentage_points": 13.106153096589608
+    },
+    {
+      "formula_id": "R2_A_0106",
+      "nearest_first_round_id": "A-part-20261018/A02409",
+      "L1_element_mass_percentage_points": 7.709712384566078
+    },
+    {
+      "formula_id": "R2_A_0107",
+      "nearest_first_round_id": "A-part-20261018/A00988",
+      "L1_element_mass_percentage_points": 13.66864099474741
+    },
+    {
+      "formula_id": "R2_A_0108",
+      "nearest_first_round_id": "A-part-20261018/A01820",
+      "L1_element_mass_percentage_points": 8.275337119530631
+    },
+    {
+      "formula_id": "R2_A_0109",
+      "nearest_first_round_id": "A-part-20261018/A00783",
+      "L1_element_mass_percentage_points": 8.159713183957706
+    },
+    {
+      "formula_id": "R2_A_0110",
+      "nearest_first_round_id": "A-part-20261018/A01855",
+      "L1_element_mass_percentage_points": 11.76840156417097
+    },
+    {
+      "formula_id": "R2_A_0111",
+      "nearest_first_round_id": "A-part-20261018/A00292",
+      "L1_element_mass_percentage_points": 8.18116626992797
+    },
+    {
+      "formula_id": "R2_A_0112",
+      "nearest_first_round_id": "A-part-20261018/A01369",
+      "L1_element_mass_percentage_points": 8.706675057056351
+    },
+    {
+      "formula_id": "R2_A_0113",
+      "nearest_first_round_id": "A-part-20261018/A00729",
+      "L1_element_mass_percentage_points": 9.89694779621437
+    },
+    {
+      "formula_id": "R2_A_0114",
+      "nearest_first_round_id": "A-part-20261018/A00680",
+      "L1_element_mass_percentage_points": 7.680908276822587
+    },
+    {
+      "formula_id": "R2_A_0115",
+      "nearest_first_round_id": "A-part-20261018/A01272",
+      "L1_element_mass_percentage_points": 7.43611616969138
+    },
+    {
+      "formula_id": "R2_A_0116",
+      "nearest_first_round_id": "A-part-20261018/A01880",
+      "L1_element_mass_percentage_points": 5.841191215839046
+    },
+    {
+      "formula_id": "R2_A_0117",
+      "nearest_first_round_id": "A-part-20261018/A01916",
+      "L1_element_mass_percentage_points": 4.712930954711967
+    },
+    {
+      "formula_id": "R2_A_0118",
+      "nearest_first_round_id": "A-part-20261018/A01806",
+      "L1_element_mass_percentage_points": 6.175146134993021
+    },
+    {
+      "formula_id": "R2_A_0119",
+      "nearest_first_round_id": "A-part-20261018/A01949",
+      "L1_element_mass_percentage_points": 8.353583125607019
+    },
+    {
+      "formula_id": "R2_A_0120",
+      "nearest_first_round_id": "A-part-20261018/A01946",
+      "L1_element_mass_percentage_points": 4.674671510309417
+    },
+    {
+      "formula_id": "R2_A_0121",
+      "nearest_first_round_id": "A-part-20261018/A01996",
+      "L1_element_mass_percentage_points": 7.003398286979924
+    },
+    {
+      "formula_id": "R2_A_0122",
+      "nearest_first_round_id": "A-part-20261018/A01996",
+      "L1_element_mass_percentage_points": 7.02339828697993
+    },
+    {
+      "formula_id": "R2_A_0123",
+      "nearest_first_round_id": "A-part-20261018/A01996",
+      "L1_element_mass_percentage_points": 7.02339828697993
+    },
+    {
+      "formula_id": "R2_A_0124",
+      "nearest_first_round_id": "A-part-20261018/A01996",
+      "L1_element_mass_percentage_points": 7.043398286979921
+    },
+    {
+      "formula_id": "R2_A_0125",
+      "nearest_first_round_id": "A-part-20261018/A01996",
+      "L1_element_mass_percentage_points": 7.223398286979918
+    },
+    {
+      "formula_id": "R2_A_0126",
+      "nearest_first_round_id": "A-part-20261018/A00370",
+      "L1_element_mass_percentage_points": 6.9053376598944896
+    },
+    {
+      "formula_id": "R2_A_0127",
+      "nearest_first_round_id": "A-part-20261018/A00370",
+      "L1_element_mass_percentage_points": 6.914302675784113
+    },
+    {
+      "formula_id": "R2_A_0128",
+      "nearest_first_round_id": "A-part-20261018/A00370",
+      "L1_element_mass_percentage_points": 6.914116183504185
+    },
+    {
+      "formula_id": "R2_A_0129",
+      "nearest_first_round_id": "A-part-20261018/A00370",
+      "L1_element_mass_percentage_points": 6.923081199393807
+    },
+    {
+      "formula_id": "R2_A_0130",
+      "nearest_first_round_id": "A-part-20261018/A00370",
+      "L1_element_mass_percentage_points": 7.007224983717323
+    },
+    {
+      "formula_id": "R2_A_0131",
+      "nearest_first_round_id": "A-part-20261018/A00816",
+      "L1_element_mass_percentage_points": 3.5464458589186396
+    },
+    {
+      "formula_id": "R2_A_0132",
+      "nearest_first_round_id": "A-part-20261018/A00816",
+      "L1_element_mass_percentage_points": 3.5629142940598024
+    },
+    {
+      "formula_id": "R2_A_0133",
+      "nearest_first_round_id": "A-part-20261018/A00816",
+      "L1_element_mass_percentage_points": 3.5491234216762644
+    },
+    {
+      "formula_id": "R2_A_0134",
+      "nearest_first_round_id": "A-part-20261018/A00816",
+      "L1_element_mass_percentage_points": 3.5655918568174263
+    },
+    {
+      "formula_id": "R2_A_0135",
+      "nearest_first_round_id": "A-part-20261018/A00816",
+      "L1_element_mass_percentage_points": 3.7455918568174225
+    },
+    {
+      "formula_id": "R2_A_0136",
+      "nearest_first_round_id": "A-part-20261018/A00772",
+      "L1_element_mass_percentage_points": 5.692798050901188
+    },
+    {
+      "formula_id": "R2_A_0137",
+      "nearest_first_round_id": "A-part-20261018/A00772",
+      "L1_element_mass_percentage_points": 5.5868120060976665
+    },
+    {
+      "formula_id": "R2_A_0138",
+      "nearest_first_round_id": "A-part-20261018/A00772",
+      "L1_element_mass_percentage_points": 5.672798050901187
+    },
+    {
+      "formula_id": "R2_A_0139",
+      "nearest_first_round_id": "A-part-20261018/A00772",
+      "L1_element_mass_percentage_points": 5.566812006097665
+    },
+    {
+      "formula_id": "R2_A_0140",
+      "nearest_first_round_id": "A-part-20261018/A00607",
+      "L1_element_mass_percentage_points": 5.052988852478484
+    },
+    {
+      "formula_id": "R2_A_0141",
+      "nearest_first_round_id": "A-part-20261018/A01290",
+      "L1_element_mass_percentage_points": 5.86147251797583
+    },
+    {
+      "formula_id": "R2_A_0142",
+      "nearest_first_round_id": "A-part-20261018/A01290",
+      "L1_element_mass_percentage_points": 5.920348757417623
+    },
+    {
+      "formula_id": "R2_A_0143",
+      "nearest_first_round_id": "A-part-20261018/A01290",
+      "L1_element_mass_percentage_points": 5.861472517975825
+    },
+    {
+      "formula_id": "R2_A_0144",
+      "nearest_first_round_id": "A-part-20261018/A01290",
+      "L1_element_mass_percentage_points": 5.920348757417617
+    },
+    {
+      "formula_id": "R2_A_0145",
+      "nearest_first_round_id": "A-part-20261018/A01290",
+      "L1_element_mass_percentage_points": 6.613773462786037
+    },
+    {
+      "formula_id": "R2_A_0146",
+      "nearest_first_round_id": "A-part-20261018/A01921",
+      "L1_element_mass_percentage_points": 5.024836231393083
+    },
+    {
+      "formula_id": "R2_A_0147",
+      "nearest_first_round_id": "A-part-20261018/A01921",
+      "L1_element_mass_percentage_points": 5.08371247083487
+    },
+    {
+      "formula_id": "R2_A_0148",
+      "nearest_first_round_id": "A-part-20261018/A01921",
+      "L1_element_mass_percentage_points": 5.044836231393088
+    },
+    {
+      "formula_id": "R2_A_0149",
+      "nearest_first_round_id": "A-part-20261018/A01921",
+      "L1_element_mass_percentage_points": 5.103712470834875
+    },
+    {
+      "formula_id": "R2_A_0150",
+      "nearest_first_round_id": "A-part-20261018/A01921",
+      "L1_element_mass_percentage_points": 5.633598625811008
+    },
+    {
+      "formula_id": "R2_A_0151",
+      "nearest_first_round_id": "B-source/B00015",
+      "L1_element_mass_percentage_points": 10.774699480631968
+    },
+    {
+      "formula_id": "R2_A_0152",
+      "nearest_first_round_id": "B-source/B00128",
+      "L1_element_mass_percentage_points": 10.251033466674121
+    },
+    {
+      "formula_id": "R2_A_0153",
+      "nearest_first_round_id": "B-source/B00721",
+      "L1_element_mass_percentage_points": 9.115431284619124
+    },
+    {
+      "formula_id": "R2_A_0154",
+      "nearest_first_round_id": "B-source/B00024",
+      "L1_element_mass_percentage_points": 12.094048150685177
+    },
+    {
+      "formula_id": "R2_A_0155",
+      "nearest_first_round_id": "B-source/B00106",
+      "L1_element_mass_percentage_points": 13.839130647544033
+    },
+    {
+      "formula_id": "R2_A_0156",
+      "nearest_first_round_id": "B-source/B00851",
+      "L1_element_mass_percentage_points": 8.728195036185738
+    },
+    {
+      "formula_id": "R2_A_0157",
+      "nearest_first_round_id": "B-source/B00244",
+      "L1_element_mass_percentage_points": 12.803710339743146
+    },
+    {
+      "formula_id": "R2_A_0158",
+      "nearest_first_round_id": "B-source/B01455",
+      "L1_element_mass_percentage_points": 12.510916690449333
+    },
+    {
+      "formula_id": "R2_A_0159",
+      "nearest_first_round_id": "B-source/B00831",
+      "L1_element_mass_percentage_points": 11.26505767587254
+    },
+    {
+      "formula_id": "R2_A_0160",
+      "nearest_first_round_id": "B-source/B00593",
+      "L1_element_mass_percentage_points": 12.045201682067077
+    },
+    {
+      "formula_id": "R2_A_0161",
+      "nearest_first_round_id": "B-source/B00106",
+      "L1_element_mass_percentage_points": 15.233221103169166
+    },
+    {
+      "formula_id": "R2_A_0162",
+      "nearest_first_round_id": "B-source/B00101",
+      "L1_element_mass_percentage_points": 7.015184884448893
+    },
+    {
+      "formula_id": "R2_A_0163",
+      "nearest_first_round_id": "B-source/B00825",
+      "L1_element_mass_percentage_points": 7.313277188552963
+    },
+    {
+      "formula_id": "R2_A_0164",
+      "nearest_first_round_id": "B-source/B01196",
+      "L1_element_mass_percentage_points": 9.569003273388443
+    },
+    {
+      "formula_id": "R2_A_0165",
+      "nearest_first_round_id": "B-source/B01172",
+      "L1_element_mass_percentage_points": 4.983633084794255
+    },
+    {
+      "formula_id": "R2_A_0166",
+      "nearest_first_round_id": "B-source/B00409",
+      "L1_element_mass_percentage_points": 10.02327239610488
+    },
+    {
+      "formula_id": "R2_A_0167",
+      "nearest_first_round_id": "B-source/B00015",
+      "L1_element_mass_percentage_points": 7.426899962966471
+    },
+    {
+      "formula_id": "R2_A_0168",
+      "nearest_first_round_id": "B-source/B00300",
+      "L1_element_mass_percentage_points": 7.10836906161616
+    },
+    {
+      "formula_id": "R2_A_0169",
+      "nearest_first_round_id": "B-source/B00015",
+      "L1_element_mass_percentage_points": 8.003776245035063
+    },
+    {
+      "formula_id": "R2_A_0170",
+      "nearest_first_round_id": "B-source/B00300",
+      "L1_element_mass_percentage_points": 8.496933530852136
+    },
+    {
+      "formula_id": "R2_A_0171",
+      "nearest_first_round_id": "B-source/B01490",
+      "L1_element_mass_percentage_points": 6.389893541348006
+    },
+    {
+      "formula_id": "R2_A_0172",
+      "nearest_first_round_id": "B-source/B00718",
+      "L1_element_mass_percentage_points": 6.93788418833118
+    },
+    {
+      "formula_id": "R2_A_0173",
+      "nearest_first_round_id": "B-source/B01406",
+      "L1_element_mass_percentage_points": 11.195171288152267
+    },
+    {
+      "formula_id": "R2_A_0174",
+      "nearest_first_round_id": "B-source/B00836",
+      "L1_element_mass_percentage_points": 5.05820838657527
+    },
+    {
+      "formula_id": "R2_A_0175",
+      "nearest_first_round_id": "B-source/B00721",
+      "L1_element_mass_percentage_points": 9.548239937036845
+    },
+    {
+      "formula_id": "R2_A_0176",
+      "nearest_first_round_id": "B-source/B00024",
+      "L1_element_mass_percentage_points": 12.121797691288346
+    },
+    {
+      "formula_id": "R2_A_0177",
+      "nearest_first_round_id": "B-source/B00825",
+      "L1_element_mass_percentage_points": 9.621656664142618
+    },
+    {
+      "formula_id": "R2_A_0178",
+      "nearest_first_round_id": "B-source/B00721",
+      "L1_element_mass_percentage_points": 6.8374735355554135
+    },
+    {
+      "formula_id": "R2_A_0179",
+      "nearest_first_round_id": "B-source/B01199",
+      "L1_element_mass_percentage_points": 7.798396681396418
+    },
+    {
+      "formula_id": "R2_A_0180",
+      "nearest_first_round_id": "B-source/B00128",
+      "L1_element_mass_percentage_points": 9.786567641542035
+    },
+    {
+      "formula_id": "R2_A_0181",
+      "nearest_first_round_id": "B-source/B00836",
+      "L1_element_mass_percentage_points": 11.09073484789057
+    },
+    {
+      "formula_id": "R2_A_0182",
+      "nearest_first_round_id": "B-source/B00302",
+      "L1_element_mass_percentage_points": 7.953276568952672
+    },
+    {
+      "formula_id": "R2_A_0183",
+      "nearest_first_round_id": "B-source/B00128",
+      "L1_element_mass_percentage_points": 10.36627142781167
+    },
+    {
+      "formula_id": "R2_A_0184",
+      "nearest_first_round_id": "B-source/B00015",
+      "L1_element_mass_percentage_points": 11.785072165122475
+    },
+    {
+      "formula_id": "R2_A_0185",
+      "nearest_first_round_id": "B-source/B01202",
+      "L1_element_mass_percentage_points": 8.063627287604504
+    },
+    {
+      "formula_id": "R2_A_0186",
+      "nearest_first_round_id": "B-source/B00593",
+      "L1_element_mass_percentage_points": 7.1968138154061325
+    },
+    {
+      "formula_id": "R2_A_0187",
+      "nearest_first_round_id": "B-source/B00302",
+      "L1_element_mass_percentage_points": 10.55903459186291
+    },
+    {
+      "formula_id": "R2_A_0188",
+      "nearest_first_round_id": "B-source/B01197",
+      "L1_element_mass_percentage_points": 8.420567484085062
+    },
+    {
+      "formula_id": "R2_A_0189",
+      "nearest_first_round_id": "B-source/B00242",
+      "L1_element_mass_percentage_points": 11.073060180412389
+    },
+    {
+      "formula_id": "R2_A_0190",
+      "nearest_first_round_id": "B-source/B00218",
+      "L1_element_mass_percentage_points": 9.847583518040917
+    },
+    {
+      "formula_id": "R2_A_0191",
+      "nearest_first_round_id": "B-source/B00852",
+      "L1_element_mass_percentage_points": 11.677833771286792
+    },
+    {
+      "formula_id": "R2_A_0192",
+      "nearest_first_round_id": "B-source/B01487",
+      "L1_element_mass_percentage_points": 7.984444401083753
+    },
+    {
+      "formula_id": "R2_A_0193",
+      "nearest_first_round_id": "B-source/B00059",
+      "L1_element_mass_percentage_points": 7.925012600416898
+    },
+    {
+      "formula_id": "R2_A_0194",
+      "nearest_first_round_id": "B-source/B00836",
+      "L1_element_mass_percentage_points": 10.413294663860071
+    },
+    {
+      "formula_id": "R2_A_0195",
+      "nearest_first_round_id": "B-source/B01188",
+      "L1_element_mass_percentage_points": 9.90352673615174
+    },
+    {
+      "formula_id": "R2_A_0196",
+      "nearest_first_round_id": "B-source/B00218",
+      "L1_element_mass_percentage_points": 10.114062552542853
+    },
+    {
+      "formula_id": "R2_A_0197",
+      "nearest_first_round_id": "B-source/B01197",
+      "L1_element_mass_percentage_points": 9.63247908338295
+    },
+    {
+      "formula_id": "R2_A_0198",
+      "nearest_first_round_id": "B-source/B00718",
+      "L1_element_mass_percentage_points": 7.703662308655513
+    },
+    {
+      "formula_id": "R2_A_0199",
+      "nearest_first_round_id": "B-source/B00593",
+      "L1_element_mass_percentage_points": 8.520128248293402
+    },
+    {
+      "formula_id": "R2_A_0200",
+      "nearest_first_round_id": "B-source/B00825",
+      "L1_element_mass_percentage_points": 9.264192822257634
+    },
+    {
+      "formula_id": "R2_A_0201",
+      "nearest_first_round_id": "B-source/B00983",
+      "L1_element_mass_percentage_points": 14.72413363289713
+    },
+    {
+      "formula_id": "R2_A_0202",
+      "nearest_first_round_id": "B-source/B00165",
+      "L1_element_mass_percentage_points": 7.601253348726048
+    },
+    {
+      "formula_id": "R2_A_0203",
+      "nearest_first_round_id": "B-source/B00825",
+      "L1_element_mass_percentage_points": 12.276482303054816
+    },
+    {
+      "formula_id": "R2_A_0204",
+      "nearest_first_round_id": "B-source/B00302",
+      "L1_element_mass_percentage_points": 12.706910667134322
+    },
+    {
+      "formula_id": "R2_A_0205",
+      "nearest_first_round_id": "B-source/B01486",
+      "L1_element_mass_percentage_points": 9.55603470305225
+    },
+    {
+      "formula_id": "R2_A_0206",
+      "nearest_first_round_id": "B-source/B00836",
+      "L1_element_mass_percentage_points": 9.417225175065756
+    },
+    {
+      "formula_id": "R2_A_0207",
+      "nearest_first_round_id": "B-source/B00218",
+      "L1_element_mass_percentage_points": 9.93888197779694
+    },
+    {
+      "formula_id": "R2_A_0208",
+      "nearest_first_round_id": "B-source/B01304",
+      "L1_element_mass_percentage_points": 7.092892078304553
+    },
+    {
+      "formula_id": "R2_A_0209",
+      "nearest_first_round_id": "B-source/B00059",
+      "L1_element_mass_percentage_points": 10.101209747749463
+    },
+    {
+      "formula_id": "R2_A_0210",
+      "nearest_first_round_id": "B-source/B00300",
+      "L1_element_mass_percentage_points": 10.124415516535068
+    },
+    {
+      "formula_id": "R2_A_0211",
+      "nearest_first_round_id": "B-source/B01196",
+      "L1_element_mass_percentage_points": 12.68020961176883
+    },
+    {
+      "formula_id": "R2_A_0212",
+      "nearest_first_round_id": "B-source/B01301",
+      "L1_element_mass_percentage_points": 10.302571295691962
+    },
+    {
+      "formula_id": "R2_A_0213",
+      "nearest_first_round_id": "B-source/B01196",
+      "L1_element_mass_percentage_points": 29.57747852236039
+    },
+    {
+      "formula_id": "R2_A_0214",
+      "nearest_first_round_id": "B-source/B00996",
+      "L1_element_mass_percentage_points": 6.0393401145155305
+    },
+    {
+      "formula_id": "R2_A_0215",
+      "nearest_first_round_id": "B-source/B00999",
+      "L1_element_mass_percentage_points": 11.380419818550225
+    },
+    {
+      "formula_id": "R2_A_0216",
+      "nearest_first_round_id": "B-source/B01196",
+      "L1_element_mass_percentage_points": 27.074836917516468
+    },
+    {
+      "formula_id": "R2_A_0217",
+      "nearest_first_round_id": "B-source/B00996",
+      "L1_element_mass_percentage_points": 14.994660545047468
+    },
+    {
+      "formula_id": "R2_A_0218",
+      "nearest_first_round_id": "B-source/B00831",
+      "L1_element_mass_percentage_points": 13.708880075968015
+    },
+    {
+      "formula_id": "R2_A_0219",
+      "nearest_first_round_id": "B-source/B01122",
+      "L1_element_mass_percentage_points": 21.45509290929238
+    },
+    {
+      "formula_id": "R2_A_0220",
+      "nearest_first_round_id": "B-source/B00059",
+      "L1_element_mass_percentage_points": 22.11534474395343
+    },
+    {
+      "formula_id": "R2_A_0221",
+      "nearest_first_round_id": "B-source/B00059",
+      "L1_element_mass_percentage_points": 10.669461129461247
+    },
+    {
+      "formula_id": "R2_A_0222",
+      "nearest_first_round_id": "B-source/B01197",
+      "L1_element_mass_percentage_points": 11.871013482370534
+    },
+    {
+      "formula_id": "R2_A_0223",
+      "nearest_first_round_id": "B-source/B01196",
+      "L1_element_mass_percentage_points": 25.957017854342237
+    },
+    {
+      "formula_id": "R2_A_0224",
+      "nearest_first_round_id": "B-source/B01196",
+      "L1_element_mass_percentage_points": 28.72231949820978
+    },
+    {
+      "formula_id": "R2_A_0225",
+      "nearest_first_round_id": "B-source/B00996",
+      "L1_element_mass_percentage_points": 12.131683883071657
+    },
+    {
+      "formula_id": "R2_A_0226",
+      "nearest_first_round_id": "B-source/B00808",
+      "L1_element_mass_percentage_points": 14.323763247180437
+    },
+    {
+      "formula_id": "R2_A_0227",
+      "nearest_first_round_id": "B-source/B01196",
+      "L1_element_mass_percentage_points": 17.034155832304897
+    },
+    {
+      "formula_id": "R2_A_0228",
+      "nearest_first_round_id": "B-source/B00996",
+      "L1_element_mass_percentage_points": 4.621367325672781
+    },
+    {
+      "formula_id": "R2_A_0229",
+      "nearest_first_round_id": "B-source/B00996",
+      "L1_element_mass_percentage_points": 8.95468226241467
+    },
+    {
+      "formula_id": "R2_A_0230",
+      "nearest_first_round_id": "B-source/B01075",
+      "L1_element_mass_percentage_points": 17.991767950097522
+    },
+    {
+      "formula_id": "R2_A_0231",
+      "nearest_first_round_id": "B-source/B00721",
+      "L1_element_mass_percentage_points": 8.68010152632673
+    },
+    {
+      "formula_id": "R2_A_0232",
+      "nearest_first_round_id": "B-source/B00721",
+      "L1_element_mass_percentage_points": 8.692788718773201
+    },
+    {
+      "formula_id": "R2_A_0233",
+      "nearest_first_round_id": "B-source/B00721",
+      "L1_element_mass_percentage_points": 8.693101726900405
+    },
+    {
+      "formula_id": "R2_A_0234",
+      "nearest_first_round_id": "B-source/B00721",
+      "L1_element_mass_percentage_points": 8.705788919346874
+    },
+    {
+      "formula_id": "R2_A_0235",
+      "nearest_first_round_id": "B-source/B00721",
+      "L1_element_mass_percentage_points": 8.831687479146492
+    },
+    {
+      "formula_id": "R2_A_0236",
+      "nearest_first_round_id": "B-source/B00530",
+      "L1_element_mass_percentage_points": 12.870432381320299
+    },
+    {
+      "formula_id": "R2_A_0237",
+      "nearest_first_round_id": "B-source/B00530",
+      "L1_element_mass_percentage_points": 12.864421110186932
+    },
+    {
+      "formula_id": "R2_A_0238",
+      "nearest_first_round_id": "B-source/B00530",
+      "L1_element_mass_percentage_points": 12.864421110186932
+    },
+    {
+      "formula_id": "R2_A_0239",
+      "nearest_first_round_id": "B-source/B00530",
+      "L1_element_mass_percentage_points": 12.858409839053554
+    },
+    {
+      "formula_id": "R2_A_0240",
+      "nearest_first_round_id": "B-source/B00530",
+      "L1_element_mass_percentage_points": 12.942983207934287
+    },
+    {
+      "formula_id": "R2_A_0241",
+      "nearest_first_round_id": "B-source/B00018",
+      "L1_element_mass_percentage_points": 8.626340046332903
+    },
+    {
+      "formula_id": "R2_A_0242",
+      "nearest_first_round_id": "B-source/B00018",
+      "L1_element_mass_percentage_points": 8.520354001529375
+    },
+    {
+      "formula_id": "R2_A_0243",
+      "nearest_first_round_id": "B-source/B00018",
+      "L1_element_mass_percentage_points": 8.626062658138006
+    },
+    {
+      "formula_id": "R2_A_0244",
+      "nearest_first_round_id": "B-source/B00018",
+      "L1_element_mass_percentage_points": 8.52007661333447
+    },
+    {
+      "formula_id": "R2_A_0245",
+      "nearest_first_round_id": "B-source/B00018",
+      "L1_element_mass_percentage_points": 7.5662022101027455
+    },
+    {
+      "formula_id": "R2_A_0246",
+      "nearest_first_round_id": "B-source/B00836",
+      "L1_element_mass_percentage_points": 10.753448240412652
+    },
+    {
+      "formula_id": "R2_A_0247",
+      "nearest_first_round_id": "B-source/B00836",
+      "L1_element_mass_percentage_points": 10.647462195609126
+    },
+    {
+      "formula_id": "R2_A_0248",
+      "nearest_first_round_id": "B-source/B00836",
+      "L1_element_mass_percentage_points": 10.744782096365839
+    },
+    {
+      "formula_id": "R2_A_0249",
+      "nearest_first_round_id": "B-source/B00836",
+      "L1_element_mass_percentage_points": 10.63879605156232
+    },
+    {
+      "formula_id": "R2_A_0250",
+      "nearest_first_round_id": "B-source/B00836",
+      "L1_element_mass_percentage_points": 10.621278987052406
+    }
+  ],
+  "distance_caveat": "L1 is descriptive, no scientifically validated near-neighbour threshold is assumed; global connected groups remain pending",
+  "cross_member_check": "pending_B_C_D_candidate_files"
+}

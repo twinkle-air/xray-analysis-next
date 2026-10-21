@@ -1,0 +1,212 @@
+{
+  "round_id": "round2-20261021",
+  "owner": "A",
+  "scope": "A production only; not global shared-input approval",
+  "batch_seeds": {
+    "P1": 202610210101,
+    "P2": 202610210102,
+    "P3": 202610210103
+  },
+  "split_seed": 20261021,
+  "replicates": 2,
+  "jitter": {},
+  "target_elements": [
+    "Na",
+    "Mg",
+    "Al",
+    "Si",
+    "P",
+    "S",
+    "Cl",
+    "K",
+    "Ca",
+    "Ti",
+    "V",
+    "Cr",
+    "Mn",
+    "Fe",
+    "Co",
+    "Ni",
+    "Cu",
+    "Zn",
+    "As",
+    "Se",
+    "Rb",
+    "Sr",
+    "Y",
+    "Zr",
+    "Nb",
+    "Mo",
+    "Cd",
+    "Sn",
+    "Sb",
+    "Ba",
+    "W",
+    "Pb"
+  ],
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "role_clarification_verbatim": "我就是A，项目的主负责人",
+  "execution_basis": "User requested A data construction and clarified coordinator identity; proceed with reversible A-only production, retain all cross-member checks before any global training release.",
+  "cross_member_confirmation": "pending",
+  "software_version": "0.2.1",
+  "physics_version": "0.2.0",
+  "version": "A-sharded-production-v2",
+  "batches": {
+    "P1_S01": {
+      "profile_id": "P1",
+      "samples": "shards/S01.json",
+      "seed": 20261021010101
+    },
+    "P2_S01": {
+      "profile_id": "P2",
+      "samples": "shards/S01.json",
+      "seed": 20261021010201
+    },
+    "P3_S01": {
+      "profile_id": "P3",
+      "samples": "shards/S01.json",
+      "seed": 20261021010301
+    },
+    "P1_S02": {
+      "profile_id": "P1",
+      "samples": "shards/S02.json",
+      "seed": 20261021010102
+    },
+    "P2_S02": {
+      "profile_id": "P2",
+      "samples": "shards/S02.json",
+      "seed": 20261021010202
+    },
+    "P3_S02": {
+      "profile_id": "P3",
+      "samples": "shards/S02.json",
+      "seed": 20261021010302
+    },
+    "P1_S03": {
+      "profile_id": "P1",
+      "samples": "shards/S03.json",
+      "seed": 20261021010103
+    },
+    "P2_S03": {
+      "profile_id": "P2",
+      "samples": "shards/S03.json",
+      "seed": 20261021010203
+    },
+    "P3_S03": {
+      "profile_id": "P3",
+      "samples": "shards/S03.json",
+      "seed": 20261021010303
+    },
+    "P1_S04": {
+      "profile_id": "P1",
+      "samples": "shards/S04.json",
+      "seed": 20261021010104
+    },
+    "P2_S04": {
+      "profile_id": "P2",
+      "samples": "shards/S04.json",
+      "seed": 20261021010204
+    },
+    "P3_S04": {
+      "profile_id": "P3",
+      "samples": "shards/S04.json",
+      "seed": 20261021010304
+    },
+    "P1_S05": {
+      "profile_id": "P1",
+      "samples": "shards/S05.json",
+      "seed": 20261021010105
+    },
+    "P2_S05": {
+      "profile_id": "P2",
+      "samples": "shards/S05.json",
+      "seed": 20261021010205
+    },
+    "P3_S05": {
+      "profile_id": "P3",
+      "samples": "shards/S05.json",
+      "seed": 20261021010305
+    },
+    "P1_S06": {
+      "profile_id": "P1",
+      "samples": "shards/S06.json",
+      "seed": 20261021010106
+    },
+    "P2_S06": {
+      "profile_id": "P2",
+      "samples": "shards/S06.json",
+      "seed": 20261021010206
+    },
+    "P3_S06": {
+      "profile_id": "P3",
+      "samples": "shards/S06.json",
+      "seed": 20261021010306
+    },
+    "P1_S07": {
+      "profile_id": "P1",
+      "samples": "shards/S07.json",
+      "seed": 20261021010107
+    },
+    "P2_S07": {
+      "profile_id": "P2",
+      "samples": "shards/S07.json",
+      "seed": 20261021010207
+    },
+    "P3_S07": {
+      "profile_id": "P3",
+      "samples": "shards/S07.json",
+      "seed": 20261021010307
+    },
+    "P1_S08": {
+      "profile_id": "P1",
+      "samples": "shards/S08.json",
+      "seed": 20261021010108
+    },
+    "P2_S08": {
+      "profile_id": "P2",
+      "samples": "shards/S08.json",
+      "seed": 20261021010208
+    },
+    "P3_S08": {
+      "profile_id": "P3",
+      "samples": "shards/S08.json",
+      "seed": 20261021010308
+    },
+    "P1_S09": {
+      "profile_id": "P1",
+      "samples": "shards/S09.json",
+      "seed": 20261021010109
+    },
+    "P2_S09": {
+      "profile_id": "P2",
+      "samples": "shards/S09.json",
+      "seed": 20261021010209
+    },
+    "P3_S09": {
+      "profile_id": "P3",
+      "samples": "shards/S09.json",
+      "seed": 20261021010309
+    },
+    "P1_S10": {
+      "profile_id": "P1",
+      "samples": "shards/S10.json",
+      "seed": 20261021010110
+    },
+    "P2_S10": {
+      "profile_id": "P2",
+      "samples": "shards/S10.json",
+      "seed": 20261021010210
+    },
+    "P3_S10": {
+      "profile_id": "P3",
+      "samples": "shards/S10.json",
+      "seed": 20261021010310
+    }
+  },
+  "workers": 15,
+  "reason": "Native 500-record batches are serial. Partition into ten whole-family shards per profile for independent parallel CLI calls; unchanged physical solver. Cancelled v1 partial batches are preserved and excluded."
+}
