@@ -1,0 +1,25 @@
+{
+  "profile": "P1_S03",
+  "stage": "pack",
+  "argv": [
+    "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\.venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_v2\\P1_S03_dataset\\reproducibility\\generator\\fp_competition\\app.py",
+    "pack",
+    "--dataset",
+    "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_v2\\P1_S03_dataset",
+    "--out",
+    "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_v2\\P1_S03_dataset.zip"
+  ],
+  "started_at": "2026-10-21T15:06:33.137678+08:00",
+  "cwd": "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "exit_code": 0,
+  "seconds": 8.81631489999927,
+  "finished_at": "2026-10-21T15:06:41.953508+08:00",
+  "log": "P1_S03_pack.log"
+}

@@ -1,0 +1,30 @@
+{
+  "compiled_sources": 4,
+  "failure_paths": {
+    "frozen_input_tampering_refused": true,
+    "existing_production_directory_refused": true,
+    "premature_success_summary_refused": true
+  },
+  "existing_outputs_modified_by_tests": false,
+  "final_compiled_sources": [
+    {
+      "file": "build_candidates.py",
+      "sha256": "85ba690930bae5a771e09ab70ecf33af7cb32d60b48d53526c23478c47a6d65b"
+    },
+    {
+      "file": "run_sharded_production.py",
+      "sha256": "abea85058e505e4e794d82d7af4d4a64860347a5412d7b71aae1dec2761c2334"
+    },
+    {
+      "file": "finalize_production.py",
+      "sha256": "471a6e0f6dd3155847cff9a65ee1e0991eae8caecfaa2be4b0d48535eb422e3c"
+    }
+  ],
+  "successful_full_workflow": {
+    "native_generation_batches": 30,
+    "native_audit_reports": 30,
+    "native_full_replay_spectra": 1500,
+    "native_packages": 30,
+    "finalizer_status": "passed"
+  }
+}

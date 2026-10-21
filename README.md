@@ -38,6 +38,12 @@
 ## 按轮次访问数据
 
 - [第一轮归档](datasets/round1/README.md)：原 A/B/C 交付完整迁入，保留 pilot/失败身份及原始哈希。
-- [第二轮工作区](datasets/round2/README.md)：10 GB 方案、四人任务、开发共享与个人目录；当前仅规划，未生成新谱。
+- [第二轮工作区](datasets/round2/README.md)：10 GB 工作空间预算、四人任务、开发共享与个人目录；A 已交付 250 配方、1,500 谱及全量自检，仍待合库去重与全局划分。
 
 不再向 datasets/A-part-20261018、datasets/B-part、datasets/C-part-20261018 新增交付。第二轮须按已验收的本轮权威索引加载，不要递归拼接两轮数据。
+
+## 第二轮成员 A 数据
+
+[第二轮 A 交付与自检](datasets/round2/member_A/README.md)：250 独立配方、P1/P2/P3 各 500，共 1,500 条合成谱；30 个封存分片、完整 audit/replay、双哈希与实际索引齐全。单人自检通过，跨成员去重、全局家族划分及训练放行仍为 pending；不据此证明真实定量准确度。
+
+第二轮 A 的大文件采用可校验传输分块：[先运行恢复脚本](datasets/round2/member_A/README.md) 后得到原始 ZIP 与完整文件。

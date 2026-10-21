@@ -1,0 +1,11 @@
+{
+  "started_at": "2026-10-21T14:57:01.076322+08:00",
+  "finished_at": "2026-10-21T15:14:45.636897+08:00",
+  "wall_seconds_generation_audit_replay_pack": 1064.560575,
+  "parallel_workers": 15,
+  "command_count": 120,
+  "all_command_exit_codes_zero": true,
+  "generation_command_seconds_total": 8444.479047400002,
+  "replay_command_seconds_total": 6391.341603000012,
+  "note": "Command elapsed durations overlap under parallel execution; their sum is not wall time. Excludes candidate preparation, cancelled v1 and final packaging."
+}

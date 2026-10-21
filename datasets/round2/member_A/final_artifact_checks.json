@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "actual_records": 1500,
+  "formulas": 250,
+  "parent_families": 210,
+  "sealed_shards": 30,
+  "profiles": {
+    "P1": 500,
+    "P2": 500,
+    "P3": 500
+  },
+  "noise_pairs_checked": 750,
+  "pairs_expected_arrays_exactly_equal": true,
+  "child_seeds_unique": 1500,
+  "actual_blind_and_full_hashes_checked": 1500,
+  "frozen_inputs_byte_identity": true,
+  "all_replays_full": true,
+  "replay_total": 1500,
+  "replay_same_environment": true,
+  "replay_maximum_absolute_array_difference": 0.0,
+  "sealed_bundles_modified": false,
+  "cross_member_checks": "pending",
+  "scientific_accuracy_verified": false
+}

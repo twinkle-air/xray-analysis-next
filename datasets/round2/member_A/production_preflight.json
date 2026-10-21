@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-21T14:56:30.394612+08:00",
+  "compiled_sources": [
+    "datasets\\round2\\member_A\\run_sharded_production.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\app.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\core.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\dataset.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\minerals.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\robustness.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\version.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\__init__.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\基于基本参数法的能谱生成模型_比赛研究版.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\public_data\\build_references.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\public_data\\fetch_usgs.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\tests\\check_public_sources.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\tests\\test_core.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\tests\\test_dataset.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\tests\\test_expansion.py",
+    "datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\tests\\test_robustness.py"
+  ],
+  "frozen_files_checked": 51,
+  "cross_member_confirmation": "pending; no global training approval",
+  "spectra_planned": 1500,
+  "conditions": [
+    "P1",
+    "P2",
+    "P3"
+  ],
+  "free_bytes": 84536156160
+}

@@ -1,0 +1,385 @@
+{
+  "profile": "P3_S07",
+  "status": "selfcheck_passed",
+  "stage": "complete",
+  "started_at": "2026-10-21T15:06:42.056732+08:00",
+  "expected_spectra": 50,
+  "completed_commands": [
+    {
+      "profile": "P3_S07",
+      "stage": "generation",
+      "argv": [
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\.venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_inputs_v2\\generator\\fp_competition\\app.py",
+        "batch",
+        "--samples",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_inputs_v2\\shards\\S07.json",
+        "--profile",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_inputs_v2\\profiles\\P3.json",
+        "--design-ranges",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_inputs_v2\\design_ranges.json",
+        "--replicates",
+        "2",
+        "--seed",
+        "20261021010307",
+        "--split-seed",
+        "20261021",
+        "--closure",
+        "strict",
+        "--legacy-al",
+        "reject",
+        "--targets",
+        "Na",
+        "Mg",
+        "Al",
+        "Si",
+        "P",
+        "S",
+        "Cl",
+        "K",
+        "Ca",
+        "Ti",
+        "V",
+        "Cr",
+        "Mn",
+        "Fe",
+        "Co",
+        "Ni",
+        "Cu",
+        "Zn",
+        "As",
+        "Se",
+        "Rb",
+        "Sr",
+        "Y",
+        "Zr",
+        "Nb",
+        "Mo",
+        "Cd",
+        "Sn",
+        "Sb",
+        "Ba",
+        "W",
+        "Pb",
+        "--out",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_v2\\P3_S07_dataset"
+      ],
+      "started_at": "2026-10-21T15:06:42.059732+08:00",
+      "cwd": "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "exit_code": 0,
+      "seconds": 193.94096189999982,
+      "finished_at": "2026-10-21T15:09:56.001159+08:00",
+      "log": "P3_S07_generation.log"
+    },
+    {
+      "profile": "P3_S07",
+      "stage": "audit",
+      "argv": [
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\.venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_v2\\P3_S07_dataset\\reproducibility\\generator\\fp_competition\\app.py",
+        "audit",
+        "--dataset",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_v2\\P3_S07_dataset",
+        "--out",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_v2\\P3_S07_audit.json"
+      ],
+      "started_at": "2026-10-21T15:09:56.006158+08:00",
+      "cwd": "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "exit_code": 0,
+      "seconds": 6.465379100000064,
+      "finished_at": "2026-10-21T15:10:02.472421+08:00",
+      "log": "P3_S07_audit.log"
+    },
+    {
+      "profile": "P3_S07",
+      "stage": "replay",
+      "argv": [
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\.venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_v2\\P3_S07_dataset\\reproducibility\\generator\\fp_competition\\app.py",
+        "replay",
+        "--dataset",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_v2\\P3_S07_dataset",
+        "--out",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_v2\\P3_S07_replay.json"
+      ],
+      "started_at": "2026-10-21T15:10:02.478619+08:00",
+      "cwd": "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "exit_code": 0,
+      "seconds": 197.41005629999927,
+      "finished_at": "2026-10-21T15:13:19.888725+08:00",
+      "log": "P3_S07_replay.log"
+    },
+    {
+      "profile": "P3_S07",
+      "stage": "pack",
+      "argv": [
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\.venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_v2\\P3_S07_dataset\\reproducibility\\generator\\fp_competition\\app.py",
+        "pack",
+        "--dataset",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_v2\\P3_S07_dataset",
+        "--out",
+        "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\datasets\\round2\\member_A\\production_v2\\P3_S07_dataset.zip"
+      ],
+      "started_at": "2026-10-21T15:13:19.896292+08:00",
+      "cwd": "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "exit_code": 0,
+      "seconds": 8.14134550000017,
+      "finished_at": "2026-10-21T15:13:28.036962+08:00",
+      "log": "P3_S07_pack.log"
+    }
+  ],
+  "audit": {
+    "status": "passed",
+    "check_type": "bundle_integrity_and_synthetic_flow",
+    "spectra_checked": 50,
+    "family_count": 25,
+    "target_coverage": {
+      "Na": {
+        "positive": 44,
+        "zero": 6,
+        "min_percent": 0.0,
+        "max_percent": 3.2920267805921046
+      },
+      "Mg": {
+        "positive": 46,
+        "zero": 4,
+        "min_percent": 0.0,
+        "max_percent": 7.147972603228493
+      },
+      "Al": {
+        "positive": 46,
+        "zero": 4,
+        "min_percent": 0.0,
+        "max_percent": 13.16582792520959
+      },
+      "Si": {
+        "positive": 48,
+        "zero": 2,
+        "min_percent": 0.0,
+        "max_percent": 34.255360472634536
+      },
+      "P": {
+        "positive": 42,
+        "zero": 8,
+        "min_percent": 0.0,
+        "max_percent": 0.4000793648030451
+      },
+      "S": {
+        "positive": 44,
+        "zero": 6,
+        "min_percent": 0.0,
+        "max_percent": 0.5872972681395772
+      },
+      "Cl": {
+        "positive": 42,
+        "zero": 8,
+        "min_percent": 0.0,
+        "max_percent": 0.5568692160690674
+      },
+      "K": {
+        "positive": 46,
+        "zero": 4,
+        "min_percent": 0.0,
+        "max_percent": 3.391203752391994
+      },
+      "Ca": {
+        "positive": 46,
+        "zero": 4,
+        "min_percent": 0.0,
+        "max_percent": 10.34775027738094
+      },
+      "Ti": {
+        "positive": 46,
+        "zero": 4,
+        "min_percent": 0.0,
+        "max_percent": 2.370231212696387
+      },
+      "V": {
+        "positive": 30,
+        "zero": 20,
+        "min_percent": 0.0,
+        "max_percent": 0.07056223987371392
+      },
+      "Cr": {
+        "positive": 28,
+        "zero": 22,
+        "min_percent": 0.0,
+        "max_percent": 0.08827202810922119
+      },
+      "Mn": {
+        "positive": 46,
+        "zero": 4,
+        "min_percent": 0.0,
+        "max_percent": 2.826332578780068
+      },
+      "Fe": {
+        "positive": 46,
+        "zero": 4,
+        "min_percent": 0.0,
+        "max_percent": 58.10890217342435
+      },
+      "Co": {
+        "positive": 32,
+        "zero": 18,
+        "min_percent": 0.0,
+        "max_percent": 0.04221413529667152
+      },
+      "Ni": {
+        "positive": 32,
+        "zero": 18,
+        "min_percent": 0.0,
+        "max_percent": 0.10103859134739407
+      },
+      "Cu": {
+        "positive": 34,
+        "zero": 16,
+        "min_percent": 0.0,
+        "max_percent": 0.1887128217627222
+      },
+      "Zn": {
+        "positive": 22,
+        "zero": 28,
+        "min_percent": 0.0,
+        "max_percent": 0.18468864758543954
+      },
+      "As": {
+        "positive": 28,
+        "zero": 22,
+        "min_percent": 0.0,
+        "max_percent": 0.10000000000000002
+      },
+      "Se": {
+        "positive": 38,
+        "zero": 12,
+        "min_percent": 0.0,
+        "max_percent": 0.00581094561959945
+      },
+      "Rb": {
+        "positive": 42,
+        "zero": 8,
+        "min_percent": 0.0,
+        "max_percent": 0.09004711435406283
+      },
+      "Sr": {
+        "positive": 38,
+        "zero": 12,
+        "min_percent": 0.0,
+        "max_percent": 0.11928748793321371
+      },
+      "Y": {
+        "positive": 36,
+        "zero": 14,
+        "min_percent": 0.0,
+        "max_percent": 0.035960947250276355
+      },
+      "Zr": {
+        "positive": 32,
+        "zero": 18,
+        "min_percent": 0.0,
+        "max_percent": 0.13172068552771488
+      },
+      "Nb": {
+        "positive": 20,
+        "zero": 30,
+        "min_percent": 0.0,
+        "max_percent": 0.14520469648903925
+      },
+      "Mo": {
+        "positive": 36,
+        "zero": 14,
+        "min_percent": 0.0,
+        "max_percent": 0.09359003938782572
+      },
+      "Cd": {
+        "positive": 40,
+        "zero": 10,
+        "min_percent": 0.0,
+        "max_percent": 0.022531979261028814
+      },
+      "Sn": {
+        "positive": 28,
+        "zero": 22,
+        "min_percent": 0.0,
+        "max_percent": 0.14133628819103214
+      },
+      "Sb": {
+        "positive": 36,
+        "zero": 14,
+        "min_percent": 0.0,
+        "max_percent": 0.13771541619113797
+      },
+      "Ba": {
+        "positive": 42,
+        "zero": 8,
+        "min_percent": 0.0,
+        "max_percent": 0.24888024634074965
+      },
+      "W": {
+        "positive": 36,
+        "zero": 14,
+        "min_percent": 0.0,
+        "max_percent": 0.07765424940269251
+      },
+      "Pb": {
+        "positive": 26,
+        "zero": 24,
+        "min_percent": 0.0,
+        "max_percent": 0.2614239982577155
+      }
+    },
+    "errors": [],
+    "tolerances": {
+      "rtol": 1e-12,
+      "atol_counts": 1e-08
+    },
+    "complete_physics_recalculation": false,
+    "physical_calibration_verified": false,
+    "concentration_accuracy_verified": false
+  },
+  "replay": {
+    "status": "passed",
+    "scope": "all_records",
+    "spectra_recalculated": 50,
+    "complete_physics_recalculation": true,
+    "same_environment": true,
+    "maximum_absolute_array_difference": 0.0,
+    "errors": [],
+    "rtol": 1e-12,
+    "atol_counts": 1e-08,
+    "file_byte_identity_tested": false,
+    "physical_calibration_verified": false,
+    "concentration_accuracy_verified": false
+  },
+  "finished_at": "2026-10-21T15:13:28.071960+08:00",
+  "spectra": 50,
+  "archive_sha256": "4bbff09733b015e6c5ab968f4846a88cfc65164388662c5972baf32e99826126",
+  "archive_bytes": 10830841,
+  "dataset_bytes": 54038218,
+  "independent_person_review": false,
+  "global_inclusion": "pending_cross_member_checks"
+}

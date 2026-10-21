@@ -1,0 +1,19 @@
+{
+  "ranges_sources": {
+    "silicate_oxide": "fp_competition/mineral_design_ranges.json",
+    "iron_oxide": "datasets/research-round1-20261020/B-source/B_design_ranges.json"
+  },
+  "assumption": "Design ranges are synthetic engineering assumptions, not certified ore population distributions",
+  "historical_sources": [
+    {
+      "path": ".collaboration-upload\\datasets\\A-part-20261018\\A_samples.json",
+      "sha256": "b1fcc884112de2aca0b07594af16fd4867b7805ee117931ca7c8a679c7ec868e",
+      "samples": 2500
+    },
+    {
+      "path": "datasets\\research-round1-20261020\\B-source\\B_pilot_samples.json",
+      "sha256": "ed3c26bc86c99d4af175b47fd1aea61bac9e4492d0b924c28fc565489e6702fe",
+      "samples": 100
+    }
+  ]
+}

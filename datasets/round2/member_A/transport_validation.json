@@ -1,0 +1,10 @@
+{
+  "syntax": "passed",
+  "normal_restore": "passed",
+  "idempotent_existing_file": "passed",
+  "conflict_refused": "passed",
+  "corrupt_part_refused": "passed",
+  "path_traversal_refused": "passed",
+  "real_original_files_verified": 34,
+  "real_pieces_verified": 344
+}

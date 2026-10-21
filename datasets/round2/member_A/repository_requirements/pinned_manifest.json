@@ -1,0 +1,75 @@
+{
+  "commit": "351eff645aeb7ad98a35b93371ad5cc9262a75a1",
+  "files": [
+    {
+      "path": "CONTRIBUTING.md",
+      "git_blob": "ce3dd6aa4fd34b0c284e11fc7886e8ef8ee0414d",
+      "sha256": "06ed9141e06744a0e441dbc8192825f5c7ee64a8ae2e3ef5edb9065754b9c834"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "5af8fa6ccc0fe79bd2ee06d8936648c14ba9b8d9",
+      "sha256": "534044fd421d51af3c5676a167153513e4cf2b5e0bc84176914ef2a94c5f87f7"
+    },
+    {
+      "path": "datasets/round2/README.md",
+      "git_blob": "a4c6443126167427c63ff2b71de3a1247e70a5eb",
+      "sha256": "5b5cc7c46cb66cd00cd336bcba6ec3af4a06004b32c47d2d02182e6b152325d0"
+    },
+    {
+      "path": "datasets/round2/member_A/README.md",
+      "git_blob": "bc2ed386dd07e37f4d4587b6700b6581de3df091",
+      "sha256": "0e5652d0411873bdc3d55ba7275eb9289d54e0e27d07393b36b8b861ba2f8ac1"
+    },
+    {
+      "path": "datasets/round2/member_B/README.md",
+      "git_blob": "55c652f2d8b4a56702da944e4476aa50bb48f06e",
+      "sha256": "e4f36f7559bfcaeccaff942720ec30e240590e97d3a8e3b84376b52bf996bab2"
+    },
+    {
+      "path": "datasets/round2/member_C/README.md",
+      "git_blob": "4c19194a73003e22d514c2eaff1eb38f0cf139f1",
+      "sha256": "370c88f186cc88fa0368fcef51c1714ca2035bc78f78c6397e5fda351b8af0a3"
+    },
+    {
+      "path": "datasets/round2/member_D/README.md",
+      "git_blob": "49cdfb07328da510d6624bc3b3aa11eb2b65d1ad",
+      "sha256": "8b2bfb79a5d7219f58290aeaef2d3ce4539cb8f70c84d0053e8ec15977e788cd"
+    },
+    {
+      "path": "datasets/round2/planning/A_任务清单.md",
+      "git_blob": "b55f9b3d1657c005271083474efc42380e1e1246",
+      "sha256": "77be1a9749f325db1293de1343ebca0dca4ac0a13d26c1fdd9160157ca2beb44"
+    },
+    {
+      "path": "datasets/round2/planning/B_任务清单.md",
+      "git_blob": "ca35c2359c91def86c1f0634f5c3a19d088b4e72",
+      "sha256": "5c6d24f8fac61f9875137359140423dbca4430e4d7296086b928f3fe7c7166d5"
+    },
+    {
+      "path": "datasets/round2/planning/C_任务清单.md",
+      "git_blob": "fa3d393dd6e8fe125ed2e23835200b7552aeb0f1",
+      "sha256": "0ee47bdfaca98e239f9a238f08649e6f8eb6189bc2995ef5769d553183b4d7f0"
+    },
+    {
+      "path": "datasets/round2/planning/D_任务清单.md",
+      "git_blob": "f5fc81c8b80d72acbd6e9afe051a1653afd65509",
+      "sha256": "d943db687beae707e22befbf6942309c54788daa8c42ded5f217946d0fc1185d"
+    },
+    {
+      "path": "datasets/round2/planning/任务数量核对.json",
+      "git_blob": "d59e6dcbaef0178b43b7135aae5cab5aea6a445c",
+      "sha256": "75c4ed0b3c8180622ef27930b183d5f03a80e954aca84a543bce9dbe56d2eff9"
+    },
+    {
+      "path": "datasets/round2/planning/第二轮简化方案.md",
+      "git_blob": "b6420aae8d7a1375a486fadbe9e2e681f16901fb",
+      "sha256": "569f5dcd4a58aeb896f40b70b040cc111c482e112d7b41d3d83bdb3fee1bd934"
+    },
+    {
+      "path": "datasets/round2/shared/README.md",
+      "git_blob": "08de8893d771a91bbd09be23b618a7d5c041b6e1",
+      "sha256": "d69909904671c464eb7f88ad219ba6f19d5031e68c5680522dde2bb4492e95cf"
+    }
+  ]
+}
