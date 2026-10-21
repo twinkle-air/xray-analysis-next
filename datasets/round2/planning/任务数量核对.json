@@ -17,5 +17,8 @@
   "total_spectra": 6000,
   "peak_budget_bytes": 10000000000,
   "evaluation": "internal_family_holdout_not_independently_blinded",
-  "extra_pilot_spectra": 0
+  "extra_pilot_spectra": 0,
+  "owner_review": "quantity_version_integrity_actual_selfcheck_reports_global_grouping_only",
+  "owner_repeats_full_physics_replay": false,
+  "exception_checks": "only_on_missing_evidence_mismatch_or_failure"
 }
