@@ -1,0 +1,878 @@
+{
+  "schema": "D-production-run/v1",
+  "started_at_utc": "2026-10-22T07:53:32.405912+00:00",
+  "finished_at_utc": "2026-10-22T08:54:35.153142+00:00",
+  "workers": 6,
+  "batches": {
+    "P1_S01": {
+      "generate": {
+        "status": "existing_complete",
+        "seconds": 0.0
+      },
+      "status": "existing_complete",
+      "audit": {
+        "status": "existing_passed",
+        "seconds": 0.0
+      },
+      "replay": {
+        "status": "existing_passed",
+        "seconds": 0.0
+      },
+      "pack": {
+        "status": "existing_passed",
+        "seconds": 0.0,
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P1_S01.zip",
+        "sha256": "26bfbc7dd5d06ffd66f40cd3e853e61346e0d7fee63d6c90b99f9cd619847273"
+      }
+    },
+    "P1_S04": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 331.375,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S04.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 7.141,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S04.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 384.844,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S04.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.343,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S04.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P1_S04.zip",
+        "sha256": "2afa7676bb1a2223f5db680f96053f2de5bf7cc66cfc3a4c2e5cf3945df1d7d7"
+      }
+    },
+    "P1_S07": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 332.25,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S07.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 7.141,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S07.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 385.625,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S07.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.422,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S07.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P1_S07.zip",
+        "sha256": "449570fef91a8ab081df495fcad534ff32043f564b602cced176bdf083d349d7"
+      }
+    },
+    "P1_S06": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 350.469,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S06.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 7.141,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S06.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 395.625,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S06.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.359,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S06.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P1_S06.zip",
+        "sha256": "abbabc54e503c7b3ec83c45ce5bc24c8a4e60da6b59c202e1efa41051da0d274"
+      }
+    },
+    "P1_S05": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 360.328,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S05.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 7.329,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S05.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 402.188,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S05.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.406,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S05.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P1_S05.zip",
+        "sha256": "a71b76aa33d0047b1fb93c035fb2c6e5f8109ae96eb07b84f95c4ec56838f565"
+      }
+    },
+    "P1_S03": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 369.937,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S03.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 7.188,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S03.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 406.891,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S03.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.343,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S03.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P1_S03.zip",
+        "sha256": "2804e2b87e66a8fffb7defe075c9fdd67e99a4578221411eb045f6e3b5d3f691"
+      }
+    },
+    "P1_S02": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 380.672,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S02.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 7.125,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S02.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 414.766,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S02.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.39,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S02.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P1_S02.zip",
+        "sha256": "f58f8c4ed3c1ba48e946c6e123de6c68ee63d604b80db390d0a01cb410fd38fb"
+      }
+    },
+    "P1_S09": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 396.75,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S09.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.438,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S09.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 360.86,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S09.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.125,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S09.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P1_S09.zip",
+        "sha256": "8fef59e62518417ca20476ac3d5771fbb908a2ed60cf3b79a01e39eb3759d9b8"
+      }
+    },
+    "P1_S10": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 424.75,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S10.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.406,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S10.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 384.219,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S10.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.172,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S10.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P1_S10.zip",
+        "sha256": "92e6c551a8102bb3e71ce76faf869515730b5740c3d32b2c3e44e8c841e09cb3"
+      }
+    },
+    "P1_S08": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 449.735,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S08.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.485,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S08.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 401.203,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S08.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.25,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P1_S08.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P1_S08.zip",
+        "sha256": "80a9d64eb07adbde860ccc58d9388894e6ce7d7e0b60d017b5c4d719f0c05625"
+      }
+    },
+    "P2_S01": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 449.281,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S01.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.516,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S01.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 399.859,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S01.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.328,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S01.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P2_S01.zip",
+        "sha256": "548441050df8e0a611c36fa47f8327eca15afe484d596d3e31659e41f40bc5b5"
+      }
+    },
+    "P2_S03": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 441.656,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S03.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.343,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S03.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 394.562,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S03.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.36,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S03.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P2_S03.zip",
+        "sha256": "0b9476e59095db93d9caa63d7ac78c052fa04b3dcdfadc163dc1361e93a0a3a5"
+      }
+    },
+    "P2_S02": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 455.032,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S02.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.437,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S02.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 401.344,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S02.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.313,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S02.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P2_S02.zip",
+        "sha256": "7490e7942ee8b674244394d8f8d818d4eccbee45e844c972338669b388ba84af"
+      }
+    },
+    "P2_S04": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 384.063,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S04.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.313,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S04.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 301.375,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S04.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.391,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S04.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P2_S04.zip",
+        "sha256": "26a2ea113b985fa5f19284b4eb9f86440fb9544b7e713a84c4399783b9ab2b35"
+      }
+    },
+    "P2_S06": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 399.515,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S06.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.344,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S06.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 312.422,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S06.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.094,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S06.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P2_S06.zip",
+        "sha256": "ca6ef3e9e6c22f6809666e481f102d3c7ecfd6e244c17d72104d17ebd9e748ca"
+      }
+    },
+    "P2_S09": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 358.296,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S09.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.266,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S09.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 290.172,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S09.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.063,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S09.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P2_S09.zip",
+        "sha256": "a299f390d551d8f3aa10cdeaf74d952cab04866f624f1d69c066bfd59a75b94d"
+      }
+    },
+    "P2_S05": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 408.375,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S05.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.296,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S05.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 319.719,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S05.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.063,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S05.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P2_S05.zip",
+        "sha256": "d1ed3a2adb84206ad8b4d62f7388a7bd4cfbb838ebd18d7e61da0d695980f831"
+      }
+    },
+    "P2_S07": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 380.766,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S07.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.266,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S07.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 301.156,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S07.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.156,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S07.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P2_S07.zip",
+        "sha256": "aadac379bd89fd89b35f43205940c60f2003370446c34a321c758e53f568ca83"
+      }
+    },
+    "P2_S08": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 411.531,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S08.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.297,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S08.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 330.64,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S08.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.172,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S08.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P2_S08.zip",
+        "sha256": "042ed4b2770ff399b5f30b16e487656404a9964b063063140b4b5a7b16c5b9ee"
+      }
+    },
+    "P2_S10": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 477.5,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S10.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.359,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S10.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 312.422,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S10.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.156,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P2_S10.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P2_S10.zip",
+        "sha256": "d93419fa92cae4aca96c842c4897816b603460bed8ac8f97d8007f87d20f5108"
+      }
+    },
+    "P3_S04": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 403.063,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S04.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.343,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S04.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 257.922,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S04.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.078,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S04.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P3_S04.zip",
+        "sha256": "8ec30dd470df4380da36a8ce02d399e003b0b779743b11b57f67811ce6dcb15b"
+      }
+    },
+    "P3_S03": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 424.406,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S03.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.359,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S03.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 272.14,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S03.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.078,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S03.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P3_S03.zip",
+        "sha256": "6f0fa94bdb202a46478543ff927c398619307d25b6731116acd72caee2ae7572"
+      }
+    },
+    "P3_S01": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 429.781,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S01.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.391,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S01.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 274.297,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S01.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 8.907,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S01.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P3_S01.zip",
+        "sha256": "a11ae2c90ed72b24ac565422a0504daba66e18b68e395df03aa30fe603495b76"
+      }
+    },
+    "P3_S02": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 440.313,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S02.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.297,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S02.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 283.032,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S02.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.078,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S02.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P3_S02.zip",
+        "sha256": "31585ced94f5907bc86fda2090c41a216c89844eb3dc12b4461fa43c862fde03"
+      }
+    },
+    "P3_S05": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 420.39,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S05.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.406,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S05.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 270.782,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S05.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.141,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S05.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P3_S05.zip",
+        "sha256": "9cb0d1a056251388acae0c98fbc307d0d6497c0aba59b25a6e02c236219a76fa"
+      }
+    },
+    "P3_S07": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 300.89,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S07.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.11,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S07.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 253.36,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S07.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 8.812,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S07.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P3_S07.zip",
+        "sha256": "4854a639c38e240de9edf848ac0e2d2c933821dfd85c875da0c1fbebad09d692"
+      }
+    },
+    "P3_S09": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 292.969,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S09.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.109,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S09.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 254.734,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S09.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 8.828,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S09.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P3_S09.zip",
+        "sha256": "089e79d50389b04771ee60bfb33b5cfb9bd9f8365a281dec701c75b97b542e60"
+      }
+    },
+    "P3_S06": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 317.687,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S06.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.047,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S06.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 267.218,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S06.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 8.906,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S06.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P3_S06.zip",
+        "sha256": "51eb6142fc2b0e34674313f71e37c859846931ea8683fe326d6b83aacd8359f8"
+      }
+    },
+    "P3_S10": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 305.0,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S10.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.047,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S10.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 265.828,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S10.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 8.953,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S10.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P3_S10.zip",
+        "sha256": "5836f6a49dbeb9aefecb3512d8c432a57159efb62706e2a50f395e9d1a0d6bae"
+      }
+    },
+    "P3_S08": {
+      "generate": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 324.094,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S08.generate.log"
+      },
+      "status": "passed",
+      "audit": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 6.063,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S08.audit.log"
+      },
+      "replay": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 280.391,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S08.replay.log"
+      },
+      "pack": {
+        "status": "passed",
+        "returncode": 0,
+        "seconds": 9.0,
+        "log": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\logs\\P3_S08.pack.log",
+        "zip": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\production\\zips\\P3_S08.zip",
+        "sha256": "e7be5106207ccdf5b7c4af7a4f41933d852002be89cec3e1a4f2265dfbd3b8b6"
+      }
+    }
+  },
+  "totals": {
+    "batches": 30,
+    "spectra": 1500,
+    "generate_passed": 30,
+    "audit_passed": 30,
+    "replay_passed": 30,
+    "pack_passed": 30
+  }
+}

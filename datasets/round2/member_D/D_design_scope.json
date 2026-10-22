@@ -1,0 +1,21 @@
+{
+  "owner": "D",
+  "status": "coordinator_confirmed_no_A_dedup",
+  "scope_note": "A freeze manifest is A-only; D does not claim a global freeze. The coordinator confirmed the D candidate set on 2026-10-22 and waived the A cross-member dedup response before spectra generation.",
+  "cross_member_dedup": "waived_by_coordinator",
+  "frozen_inputs": {
+    "P1.json": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221",
+    "P2.json": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03",
+    "P3.json": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351",
+    "design_ranges.json": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d",
+    "A_run_config.json": "4ddfc93fa2c308cb565fabcc28b58c0f569fd3e48d81a064c515f16db56ffae3"
+  },
+  "candidate_count": 250,
+  "backup_count": 30,
+  "generated_at_utc": "2026-10-22T07:40:24.625261+00:00",
+  "design_time_no_spectra_generated": true,
+  "no_spectra_generated": false,
+  "spectra_generated": 1500,
+  "batches_generated": 30,
+  "spectra_generation_finished_at_utc": "2026-10-22T08:54:35.153142+00:00"
+}

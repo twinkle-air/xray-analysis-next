@@ -1,0 +1,71 @@
+{
+  "owner": "D",
+  "round_id": "round2-20261021",
+  "status": "coordinator_confirmed_no_A_dedup",
+  "acceptance_note": "Coordinator confirmed the D candidate set on 2026-10-22 and waived the A cross-member dedup response before spectra generation.",
+  "design_seeds": {
+    "silicate_routine": 2026102201,
+    "silicate_sparse_boundary": 2026102202,
+    "silicate_interference_bases": 2026102203,
+    "iron_routine": 2026102204,
+    "iron_sparse_boundary": 2026102205,
+    "iron_interference_bases": 2026102206,
+    "backup_silicate_routine": 2026102207,
+    "backup_silicate_sparse_boundary": 2026102208,
+    "backup_silicate_interference_bases": 2026102209,
+    "backup_iron_routine": 2026102210,
+    "backup_iron_sparse_boundary": 2026102211,
+    "backup_iron_interference_bases": 2026102212
+  },
+  "batch_roots": {
+    "P1": 202610220101,
+    "P2": 202610220102,
+    "P3": 202610220103
+  },
+  "batch_seeds": {
+    "P1_S01": 20261022010101,
+    "P1_S02": 20261022010102,
+    "P1_S03": 20261022010103,
+    "P1_S04": 20261022010104,
+    "P1_S05": 20261022010105,
+    "P1_S06": 20261022010106,
+    "P1_S07": 20261022010107,
+    "P1_S08": 20261022010108,
+    "P1_S09": 20261022010109,
+    "P1_S10": 20261022010110,
+    "P2_S01": 20261022010201,
+    "P2_S02": 20261022010202,
+    "P2_S03": 20261022010203,
+    "P2_S04": 20261022010204,
+    "P2_S05": 20261022010205,
+    "P2_S06": 20261022010206,
+    "P2_S07": 20261022010207,
+    "P2_S08": 20261022010208,
+    "P2_S09": 20261022010209,
+    "P2_S10": 20261022010210,
+    "P3_S01": 20261022010301,
+    "P3_S02": 20261022010302,
+    "P3_S03": 20261022010303,
+    "P3_S04": 20261022010304,
+    "P3_S05": 20261022010305,
+    "P3_S06": 20261022010306,
+    "P3_S07": 20261022010307,
+    "P3_S08": 20261022010308,
+    "P3_S09": 20261022010309,
+    "P3_S10": 20261022010310
+  },
+  "split_seed": 20261022,
+  "replicates": 2,
+  "jitter": {},
+  "seed_derivation": "batch_seed = batch_root * 100 + shard_index (S01=1 ... S10=10)",
+  "not_reused": {
+    "A_batch_seeds": {
+      "P1": 202610210101,
+      "P2": 202610210102,
+      "P3": 202610210103
+    },
+    "A_split_seed": 20261021,
+    "note": "A's seeds are A-only and are not reused by D."
+  },
+  "generated_at_utc": "2026-10-22T07:25:22.095563+00:00"
+}

@@ -1,0 +1,378 @@
+{
+  "status": "passed_with_missing_inputs",
+  "checked_at_utc": "2026-10-22T04:18:18.350285+00:00",
+  "host": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "manifest": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\frozen_inputs\\freeze_manifest.json",
+  "manifest_scope": "A-only production freeze; global use pending",
+  "generator_root": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1",
+  "counts": {
+    "total": 51,
+    "matched": 40,
+    "reconstructed_matched": 0,
+    "missing": 11,
+    "mismatch_or_error": 0
+  },
+  "physics_baseline": {
+    "status": "matched",
+    "files": {
+      "core.py": {
+        "expected_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+        "actual_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+        "status": "matched"
+      },
+      "minerals.py": {
+        "expected_sha256": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+        "actual_sha256": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+        "status": "matched"
+      },
+      "robustness.py": {
+        "expected_sha256": "8878e652ce4b1554e97d383e2428718f1f140d10624007206eea908d59b9f634",
+        "actual_sha256": "8878e652ce4b1554e97d383e2428718f1f140d10624007206eea908d59b9f634",
+        "status": "matched"
+      }
+    }
+  },
+  "results": {
+    "A_run_config.json": {
+      "expected_sha256": "4ddfc93fa2c308cb565fabcc28b58c0f569fd3e48d81a064c515f16db56ffae3",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\frozen_inputs\\A_run_config.json",
+      "actual_sha256": "4ddfc93fa2c308cb565fabcc28b58c0f569fd3e48d81a064c515f16db56ffae3",
+      "bytes": 5043,
+      "status": "matched"
+    },
+    "A_samples.json": {
+      "expected_sha256": "2d5388eb7775805bf569485bfbc2cecba01e414ee7987e309eeae3c2a0609435",
+      "status": "missing",
+      "note": "Not present locally and not reconstructable from cached PR patch"
+    },
+    "design_ranges.json": {
+      "expected_sha256": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\frozen_inputs\\design_ranges.json",
+      "actual_sha256": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d",
+      "bytes": 15473,
+      "status": "matched"
+    },
+    "generator/fp_competition/CHANGELOG_0.2.1.md": {
+      "expected_sha256": "48721907e5c47d3c7f361fd899f3f0993f3740dcccde53ab9d862d93259291b6",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\CHANGELOG_0.2.1.md",
+      "actual_sha256": "48721907e5c47d3c7f361fd899f3f0993f3740dcccde53ab9d862d93259291b6",
+      "bytes": 1853,
+      "status": "matched"
+    },
+    "generator/fp_competition/README.md": {
+      "expected_sha256": "cac9d9985b15b9f7204ed5cfdb5a04f45868b9ca619d0564754e1b3f39b6ceff",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\README.md",
+      "actual_sha256": "cac9d9985b15b9f7204ed5cfdb5a04f45868b9ca619d0564754e1b3f39b6ceff",
+      "bytes": 19461,
+      "status": "matched"
+    },
+    "generator/fp_competition/REFERENCES.md": {
+      "expected_sha256": "ed170446c1a648fdef9bb6f6376d26e679419750836f260a25da3277e12fb92d",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\REFERENCES.md",
+      "actual_sha256": "ed170446c1a648fdef9bb6f6376d26e679419750836f260a25da3277e12fb92d",
+      "bytes": 8092,
+      "status": "matched"
+    },
+    "generator/fp_competition/VALIDATION.md": {
+      "expected_sha256": "dc9594fd80db240bf3391c1100a560054b896fbe66e778d4d69aab3630608103",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\VALIDATION.md",
+      "actual_sha256": "dc9594fd80db240bf3391c1100a560054b896fbe66e778d4d69aab3630608103",
+      "bytes": 7223,
+      "status": "matched"
+    },
+    "generator/fp_competition/__init__.py": {
+      "expected_sha256": "3338a26d3706620d0b1eb836a6e39beb4ae15d61a4c04d9441215ec17ffeafa1",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\__init__.py",
+      "actual_sha256": "3338a26d3706620d0b1eb836a6e39beb4ae15d61a4c04d9441215ec17ffeafa1",
+      "bytes": 76,
+      "status": "matched"
+    },
+    "generator/fp_competition/app.py": {
+      "expected_sha256": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\app.py",
+      "actual_sha256": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+      "bytes": 26395,
+      "status": "matched"
+    },
+    "generator/fp_competition/core.py": {
+      "expected_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\core.py",
+      "actual_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "bytes": 22109,
+      "status": "matched"
+    },
+    "generator/fp_competition/dataset.py": {
+      "expected_sha256": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\dataset.py",
+      "actual_sha256": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+      "bytes": 31774,
+      "status": "matched"
+    },
+    "generator/fp_competition/default_profile.json": {
+      "expected_sha256": "68e83da80e9938af58ff1a41210075934351420f5a8e0741f8ba2706a978df97",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\default_profile.json",
+      "actual_sha256": "68e83da80e9938af58ff1a41210075934351420f5a8e0741f8ba2706a978df97",
+      "bytes": 1009,
+      "status": "matched"
+    },
+    "generator/fp_competition/example_composition.json": {
+      "expected_sha256": "2446ca21420d269d223f2c70e222b514c441c9ad081a20ec9e889973ac9a3277",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\example_composition.json",
+      "actual_sha256": "2446ca21420d269d223f2c70e222b514c441c9ad081a20ec9e889973ac9a3277",
+      "bytes": 45,
+      "status": "matched"
+    },
+    "generator/fp_competition/jitter_example.json": {
+      "expected_sha256": "01ffbc70f7d4958d259f29c3e419a3c582f51eac61e0365e92b5ea0bd8e34aad",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\jitter_example.json",
+      "actual_sha256": "01ffbc70f7d4958d259f29c3e419a3c582f51eac61e0365e92b5ea0bd8e34aad",
+      "bytes": 182,
+      "status": "matched"
+    },
+    "generator/fp_competition/legacy_presets.json": {
+      "expected_sha256": "b85d0515ae5737c318ebc2e9d1db0a3957c45ad806267274c7c94d10426e1a6d",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\legacy_presets.json",
+      "actual_sha256": "b85d0515ae5737c318ebc2e9d1db0a3957c45ad806267274c7c94d10426e1a6d",
+      "bytes": 5094,
+      "status": "matched"
+    },
+    "generator/fp_competition/mineral_design_ranges.json": {
+      "expected_sha256": "4e2c0abe739c1153f320f4188994f6e0358464b8989388c5b54e2f74c38d3486",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\mineral_design_ranges.json",
+      "actual_sha256": "4e2c0abe739c1153f320f4188994f6e0358464b8989388c5b54e2f74c38d3486",
+      "bytes": 990,
+      "status": "matched"
+    },
+    "generator/fp_competition/mineral_jitter_example.json": {
+      "expected_sha256": "3a17fab72ed80e7b38816d600ce66a1d526f77d6d2a6bc8d431e774b2c0e1ef6",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\mineral_jitter_example.json",
+      "actual_sha256": "3a17fab72ed80e7b38816d600ce66a1d526f77d6d2a6bc8d431e774b2c0e1ef6",
+      "bytes": 247,
+      "status": "matched"
+    },
+    "generator/fp_competition/minerals.py": {
+      "expected_sha256": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\minerals.py",
+      "actual_sha256": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "bytes": 5340,
+      "status": "matched"
+    },
+    "generator/fp_competition/physics_baseline.json": {
+      "expected_sha256": "0e2d67fa5ccaa818c71bb51011a56a934e242c20071c365ac695e6de9d599c86",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\physics_baseline.json",
+      "actual_sha256": "0e2d67fa5ccaa818c71bb51011a56a934e242c20071c365ac695e6de9d599c86",
+      "bytes": 394,
+      "status": "matched"
+    },
+    "generator/fp_competition/public_data/BCR-2-USGS-2022.pdf": {
+      "expected_sha256": "a9b30e232851bd4b6dad80f97b4265da2b873762d6011c7b8e5e6d4af23beeed",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\public_data\\BCR-2-USGS-2022.pdf",
+      "actual_sha256": "a9b30e232851bd4b6dad80f97b4265da2b873762d6011c7b8e5e6d4af23beeed",
+      "bytes": 293589,
+      "status": "matched"
+    },
+    "generator/fp_competition/public_data/BHVO-2-USGS-2022.pdf": {
+      "expected_sha256": "0c571e9c4fc925e19451a07f46648f73a127d76d68a66812a0c700e3de303e4f",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\public_data\\BHVO-2-USGS-2022.pdf",
+      "actual_sha256": "0c571e9c4fc925e19451a07f46648f73a127d76d68a66812a0c700e3de303e4f",
+      "bytes": 436062,
+      "status": "matched"
+    },
+    "generator/fp_competition/public_data/build_references.py": {
+      "expected_sha256": "4db9eae853f3a72f0137423de656a459886b79129935eb22b4b7616b95db6284",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\public_data\\build_references.py",
+      "actual_sha256": "4db9eae853f3a72f0137423de656a459886b79129935eb22b4b7616b95db6284",
+      "bytes": 1450,
+      "status": "matched"
+    },
+    "generator/fp_competition/public_data/download_manifest.json": {
+      "expected_sha256": "8511e235ceada3f0401c03147c281f31e07b9119b3912c52f0a66e832d10ed2d",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\public_data\\download_manifest.json",
+      "actual_sha256": "8511e235ceada3f0401c03147c281f31e07b9119b3912c52f0a66e832d10ed2d",
+      "bytes": 1268,
+      "status": "matched"
+    },
+    "generator/fp_competition/public_data/fetch_usgs.py": {
+      "expected_sha256": "b0dbfa5f211655f7cbe71c157f00ff70296552192326ef3776e4ae25d62c6e78",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\public_data\\fetch_usgs.py",
+      "actual_sha256": "b0dbfa5f211655f7cbe71c157f00ff70296552192326ef3776e4ae25d62c6e78",
+      "bytes": 1948,
+      "status": "matched"
+    },
+    "generator/fp_competition/public_data/reference_samples.json": {
+      "expected_sha256": "e793c1bf22422378e06170446b44f5f3d02017ad01ca47360c54aff933279866",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\public_data\\reference_samples.json",
+      "actual_sha256": "e793c1bf22422378e06170446b44f5f3d02017ad01ca47360c54aff933279866",
+      "bytes": 17855,
+      "status": "matched"
+    },
+    "generator/fp_competition/public_data/usgs_compositions.json": {
+      "expected_sha256": "7054d3f9cd5016337f6477f9aa3241d386c0910a274e311ead7e96000e0168ec",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\public_data\\usgs_compositions.json",
+      "actual_sha256": "7054d3f9cd5016337f6477f9aa3241d386c0910a274e311ead7e96000e0168ec",
+      "bytes": 2145,
+      "status": "matched"
+    },
+    "generator/fp_competition/requirements-lock.txt": {
+      "expected_sha256": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\requirements-lock.txt",
+      "actual_sha256": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0",
+      "bytes": 267,
+      "status": "matched"
+    },
+    "generator/fp_competition/requirements.txt": {
+      "expected_sha256": "cc53b69124590b58924efdddf4e8db17def9f5bc56ccb8d89d73330b9394b446",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\requirements.txt",
+      "actual_sha256": "cc53b69124590b58924efdddf4e8db17def9f5bc56ccb8d89d73330b9394b446",
+      "bytes": 81,
+      "status": "matched"
+    },
+    "generator/fp_competition/robustness.py": {
+      "expected_sha256": "8878e652ce4b1554e97d383e2428718f1f140d10624007206eea908d59b9f634",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\robustness.py",
+      "actual_sha256": "8878e652ce4b1554e97d383e2428718f1f140d10624007206eea908d59b9f634",
+      "bytes": 7882,
+      "status": "matched"
+    },
+    "generator/fp_competition/steel_design_ranges.json": {
+      "expected_sha256": "a3ba8134b7da2ff8087f927771554a7a788b5a04fba8bcdb148293a6e6df1652",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\steel_design_ranges.json",
+      "actual_sha256": "a3ba8134b7da2ff8087f927771554a7a788b5a04fba8bcdb148293a6e6df1652",
+      "bytes": 254,
+      "status": "matched"
+    },
+    "generator/fp_competition/tests/check_public_sources.py": {
+      "expected_sha256": "a620e7a13adadf3c32c462b577a7952e68be9e8074d6a1935b3b2aa0dece5748",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\tests\\check_public_sources.py",
+      "actual_sha256": "a620e7a13adadf3c32c462b577a7952e68be9e8074d6a1935b3b2aa0dece5748",
+      "bytes": 1509,
+      "status": "matched"
+    },
+    "generator/fp_competition/tests/test_core.py": {
+      "expected_sha256": "de29ad04433a75c3721fa3bcea7abe9aad8041404d2ab9782800a452525f4852",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\tests\\test_core.py",
+      "actual_sha256": "de29ad04433a75c3721fa3bcea7abe9aad8041404d2ab9782800a452525f4852",
+      "bytes": 10060,
+      "status": "matched"
+    },
+    "generator/fp_competition/tests/test_dataset.py": {
+      "expected_sha256": "a50150c016d881ce2d5e036bffb5d8d202dbbb5d654ba07254cbd1651599da68",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\tests\\test_dataset.py",
+      "actual_sha256": "a50150c016d881ce2d5e036bffb5d8d202dbbb5d654ba07254cbd1651599da68",
+      "bytes": 6911,
+      "status": "matched"
+    },
+    "generator/fp_competition/tests/test_expansion.py": {
+      "expected_sha256": "9fcc5f41901ce504e3186532e038ca8096b5db15d76b8b881fa57774986ffe0a",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\tests\\test_expansion.py",
+      "actual_sha256": "9fcc5f41901ce504e3186532e038ca8096b5db15d76b8b881fa57774986ffe0a",
+      "bytes": 5987,
+      "status": "matched"
+    },
+    "generator/fp_competition/tests/test_robustness.py": {
+      "expected_sha256": "271afb9e0a761fd38473fed38aec3da103224b4fe6f449e3b55fbe6bfc70e4fa",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\tests\\test_robustness.py",
+      "actual_sha256": "271afb9e0a761fd38473fed38aec3da103224b4fe6f449e3b55fbe6bfc70e4fa",
+      "bytes": 3042,
+      "status": "matched"
+    },
+    "generator/fp_competition/version.py": {
+      "expected_sha256": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\version.py",
+      "actual_sha256": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+      "bytes": 94,
+      "status": "matched"
+    },
+    "generator/fp_competition/启动生成器.cmd": {
+      "expected_sha256": "3a165cea09b98ed34bfd48f3bcb61c06f56c04b39ccdbb6c206a6ef80548dc99",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\启动生成器.cmd",
+      "actual_sha256": "3a165cea09b98ed34bfd48f3bcb61c06f56c04b39ccdbb6c206a6ef80548dc99",
+      "bytes": 307,
+      "status": "matched"
+    },
+    "generator/fp_competition/基于基本参数法的能谱生成模型_比赛研究版.py": {
+      "expected_sha256": "59f6f399367d3443056c0894de600c91474b1f0ef41d545e415a35654dfb0bf1",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\fp-spectrum-generator-competition-v0.2.1\\fp_competition\\基于基本参数法的能谱生成模型_比赛研究版.py",
+      "actual_sha256": "59f6f399367d3443056c0894de600c91474b1f0ef41d545e415a35654dfb0bf1",
+      "bytes": 130,
+      "status": "matched"
+    },
+    "profiles/P1.json": {
+      "expected_sha256": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\frozen_inputs\\P1.json",
+      "actual_sha256": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221",
+      "bytes": 1000,
+      "status": "matched"
+    },
+    "profiles/P2.json": {
+      "expected_sha256": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\frozen_inputs\\P2.json",
+      "actual_sha256": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03",
+      "bytes": 968,
+      "status": "matched"
+    },
+    "profiles/P3.json": {
+      "expected_sha256": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351",
+      "path": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\frozen_inputs\\P3.json",
+      "actual_sha256": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351",
+      "bytes": 985,
+      "status": "matched"
+    },
+    "shards/S01.json": {
+      "expected_sha256": "8178d6479ffb9c8d5eba50626b87176064cb6a5cabad24e9467c789de197abcf",
+      "status": "missing",
+      "note": "Not present locally and not reconstructable from cached PR patch"
+    },
+    "shards/S02.json": {
+      "expected_sha256": "390586087c56ba5d805ffc6b1f313754782d75fcd8c3eff3400964e6c3d9e94a",
+      "status": "missing",
+      "note": "Not present locally and not reconstructable from cached PR patch"
+    },
+    "shards/S03.json": {
+      "expected_sha256": "7cf7d78b7235160b9204ce2c238892c2fda35486585f315a1fcbf6a8a5163186",
+      "status": "missing",
+      "note": "Not present locally and not reconstructable from cached PR patch"
+    },
+    "shards/S04.json": {
+      "expected_sha256": "87168c8c19fcb45d548c77f356a7d1a96fa58909d6e29731fa4dc218063cfac9",
+      "status": "missing",
+      "note": "Not present locally and not reconstructable from cached PR patch"
+    },
+    "shards/S05.json": {
+      "expected_sha256": "7950ae7fa5192f33437bfd39c142bfaa8a90d4ac6743105d4d674ea48d36c1ed",
+      "status": "missing",
+      "note": "Not present locally and not reconstructable from cached PR patch"
+    },
+    "shards/S06.json": {
+      "expected_sha256": "a8e27a85bc0290cc96e7df304d3b0c5a2e1cef7bcfdfc0e7b76e4117a7091a06",
+      "status": "missing",
+      "note": "Not present locally and not reconstructable from cached PR patch"
+    },
+    "shards/S07.json": {
+      "expected_sha256": "aa68621ac751b273a20eba8db23871f75ac4cf73141f1a9453aa542972c937f7",
+      "status": "missing",
+      "note": "Not present locally and not reconstructable from cached PR patch"
+    },
+    "shards/S08.json": {
+      "expected_sha256": "69f10cd18899d14dd8e21a7cab9c31ee844e7434621be62d2eb1f7d47c1197ef",
+      "status": "missing",
+      "note": "Not present locally and not reconstructable from cached PR patch"
+    },
+    "shards/S09.json": {
+      "expected_sha256": "37455955f4fca67032b3d5b4abf3bb7459b536e896b4156d67ee1f9ef5016752",
+      "status": "missing",
+      "note": "Not present locally and not reconstructable from cached PR patch"
+    },
+    "shards/S10.json": {
+      "expected_sha256": "f6b3a6e7285a68d8252f9e43a4e649bc32fad1352daf7d25c615de4cae254a34",
+      "status": "missing",
+      "note": "Not present locally and not reconstructable from cached PR patch"
+    }
+  },
+  "notes": [
+    "Some manifest entries are absent locally; see results."
+  ]
+}

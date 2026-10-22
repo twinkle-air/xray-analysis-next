@@ -1,0 +1,72 @@
+{
+  "captured_at_utc": "2026-10-22T04:19:14.504573+00:00",
+  "owner": "D",
+  "round_id": "round2-20261021",
+  "python": {
+    "version": "3.12.10",
+    "implementation": "CPython",
+    "compiler": "MSC v.1943 64 bit (AMD64)",
+    "executable": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\.venv\\Scripts\\python.exe",
+    "build": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "platform": {
+    "system": "Windows",
+    "release": "11",
+    "version": "10.0.26200",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD"
+  },
+  "packages": {
+    "contourpy": "1.3.3",
+    "cycler": "0.12.1",
+    "et_xmlfile": "2.0.0",
+    "fonttools": "4.66.0",
+    "kiwisolver": "1.5.1",
+    "matplotlib": "3.11.2",
+    "numpy": "2.4.6",
+    "openpyxl": "3.1.5",
+    "packaging": "26.3",
+    "pillow": "12.3.0",
+    "pip": "25.0.1",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "2.9.0.post0",
+    "scipy": "1.17.1",
+    "six": "1.17.0",
+    "xraylib": "4.3.0"
+  },
+  "pip_freeze": [
+    "contourpy==1.3.3",
+    "cycler==0.12.1",
+    "et_xmlfile==2.0.0",
+    "fonttools==4.66.0",
+    "kiwisolver==1.5.1",
+    "matplotlib==3.11.2",
+    "numpy==2.4.6",
+    "openpyxl==3.1.5",
+    "packaging==26.3",
+    "pillow==12.3.0",
+    "pip==25.0.1",
+    "pyparsing==3.3.3",
+    "python-dateutil==2.9.0.post0",
+    "scipy==1.17.1",
+    "six==1.17.0",
+    "xraylib==4.3.0"
+  ],
+  "thread_environment": {
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null
+  },
+  "reference_environment_A": {
+    "python": "3.12.14",
+    "source": "datasets/round2/member_A/code_verification.json (PR #14)",
+    "note": "A reported a dedicated Python 3.12.14 virtual environment; D uses 3.12.10 on Windows."
+  },
+  "software_version": "0.2.1",
+  "physics_version": "0.2.0",
+  "frozen_manifest_scope": "A-only production freeze; global use pending",
+  "notes": [
+    "D uses the byte-identical A-frozen P1/P2/P3, design_ranges and generator source.",
+    "Platform and patch-level Python difference from A is recorded; independent replay by A must use the package lock and sealed generator snapshot."
+  ]
+}

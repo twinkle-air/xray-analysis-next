@@ -1,0 +1,3768 @@
+{
+  "schema": "D-coverage/v1",
+  "description": "Routine/sparse traces are gated on log10 span and nonzero fraction; compounds and balances on linear span. Interference groups are controlled families and are not gated on population span or nonzero fraction.",
+  "coverage": {
+    "silicate_oxide": {
+      "routine": {
+        "n": 90,
+        "population_gate": true,
+        "variables": {
+          "Al2O3": {
+            "kind": "compound",
+            "declared_range": [
+              5,
+              25
+            ],
+            "observed_min": 5.1229925548120026,
+            "observed_max": 24.948306049864822,
+            "positive_min": 5.1229925548120026,
+            "positive_max": 24.948306049864822,
+            "positive_count": 90,
+            "median": 14.56262773248942,
+            "q1": 10.06523836374592,
+            "q3": 18.59941120432461,
+            "span_fraction": 0.9912656747526409,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Fe2O3T": {
+            "kind": "compound",
+            "declared_range": [
+              1,
+              20
+            ],
+            "observed_min": 1.292798214638393,
+            "observed_max": 19.953785733429022,
+            "positive_min": 1.292798214638393,
+            "positive_max": 19.953785733429022,
+            "positive_count": 90,
+            "median": 11.322325328270704,
+            "q1": 6.247411210701786,
+            "q3": 16.255303756272056,
+            "span_fraction": 0.9821572378310858,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "CaO": {
+            "kind": "compound",
+            "declared_range": [
+              0.1,
+              15
+            ],
+            "observed_min": 0.25068412943769336,
+            "observed_max": 14.816371649821367,
+            "positive_min": 0.25068412943769336,
+            "positive_max": 14.816371649821367,
+            "positive_count": 90,
+            "median": 6.483479440033024,
+            "q1": 3.5480129897844073,
+            "q3": 9.945392391915993,
+            "span_fraction": 0.977562920831119,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "MgO": {
+            "kind": "compound",
+            "declared_range": [
+              0.1,
+              12
+            ],
+            "observed_min": 0.2797453538301906,
+            "observed_max": 11.937464627217762,
+            "positive_min": 0.2797453538301906,
+            "positive_max": 11.937464627217762,
+            "positive_count": 90,
+            "median": 5.8102238372566815,
+            "q1": 3.4103958575014093,
+            "q3": 8.849986797036786,
+            "span_fraction": 0.9796402750745858,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Na2O": {
+            "kind": "compound",
+            "declared_range": [
+              0.05,
+              5
+            ],
+            "observed_min": 0.1281002207933026,
+            "observed_max": 4.957599972627071,
+            "positive_min": 0.1281002207933026,
+            "positive_max": 4.957599972627071,
+            "positive_count": 90,
+            "median": 2.43801561482469,
+            "q1": 1.464465234305939,
+            "q3": 3.8108490588878903,
+            "span_fraction": 0.9756565155219734,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "K2O": {
+            "kind": "compound",
+            "declared_range": [
+              0.05,
+              5
+            ],
+            "observed_min": 0.23009598245708002,
+            "observed_max": 4.961036014617843,
+            "positive_min": 0.23009598245708002,
+            "positive_max": 4.961036014617843,
+            "positive_count": 90,
+            "median": 2.389437242036522,
+            "q1": 1.1093661677727882,
+            "q3": 3.70297404366343,
+            "span_fraction": 0.9557454610425784,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "TiO2": {
+            "kind": "compound",
+            "declared_range": [
+              0.01,
+              4
+            ],
+            "observed_min": 0.014964731308986599,
+            "observed_max": 3.9853060730000327,
+            "positive_min": 0.014964731308986599,
+            "positive_max": 3.9853060730000327,
+            "positive_count": 90,
+            "median": 2.017670011275394,
+            "q1": 0.9471343597367315,
+            "q3": 2.7547425649169646,
+            "span_fraction": 0.9950730179676807,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "MnO": {
+            "kind": "compound",
+            "declared_range": [
+              0.005,
+              1
+            ],
+            "observed_min": 0.010770304017153873,
+            "observed_max": 0.9915015555406848,
+            "positive_min": 0.010770304017153873,
+            "positive_max": 0.9915015555406848,
+            "positive_count": 90,
+            "median": 0.544902514666722,
+            "q1": 0.30034354381434575,
+            "q3": 0.7896487305344799,
+            "span_fraction": 0.9856595492698803,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "P2O5": {
+            "kind": "compound",
+            "declared_range": [
+              0.01,
+              1
+            ],
+            "observed_min": 0.015542028537345912,
+            "observed_max": 0.9973893481185914,
+            "positive_min": 0.015542028537345912,
+            "positive_max": 0.9973893481185914,
+            "positive_count": 90,
+            "median": 0.4765861259364592,
+            "q1": 0.21471414629253968,
+            "q3": 0.70261261058611,
+            "span_fraction": 0.9917649692739854,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "CaSO4": {
+            "kind": "compound",
+            "declared_range": [
+              0,
+              2
+            ],
+            "observed_min": 0.00412429937386416,
+            "observed_max": 1.9940390243127473,
+            "positive_min": 0.00412429937386416,
+            "positive_max": 1.9940390243127473,
+            "positive_count": 90,
+            "median": 0.9717405616329775,
+            "q1": 0.4801906576765465,
+            "q3": 1.5394808995500937,
+            "span_fraction": 0.9949573624694416,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "NaCl": {
+            "kind": "compound",
+            "declared_range": [
+              0,
+              1
+            ],
+            "observed_min": 0.01784490605470146,
+            "observed_max": 0.9933190064478162,
+            "positive_min": 0.01784490605470146,
+            "positive_max": 0.9933190064478162,
+            "positive_count": 90,
+            "median": 0.4644129663848216,
+            "q1": 0.29549607309462045,
+            "q3": 0.7517031623766145,
+            "span_fraction": 0.9754741003931148,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "SiO2": {
+            "kind": "balance",
+            "declared_range": [
+              25,
+              85
+            ],
+            "observed_min": 32.954831152640956,
+            "observed_max": 76.71297554670991,
+            "positive_min": 32.954831152640956,
+            "positive_max": 76.71297554670991,
+            "positive_count": 90,
+            "median": 50.875098270385195,
+            "q1": 44.68114984033063,
+            "q3": 57.80256010682509,
+            "span_fraction": 0.729302406567816,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "V": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 979.7218634703846,
+            "positive_min": 1.1315175758370835,
+            "positive_max": 979.7218634703846,
+            "positive_count": 75,
+            "median": 32.043249045222616,
+            "q1": 3.4838520135453708,
+            "q3": 187.8544786049639,
+            "span_fraction": 0.980702566036421,
+            "log_span_fraction": 0.9791471652139704,
+            "nonzero_fraction": 0.8333333333333334,
+            "range_ok": true
+          },
+          "Cr": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 907.0833676789201,
+            "positive_min": 1.1158377307450051,
+            "positive_max": 907.0833676789201,
+            "positive_count": 69,
+            "median": 18.612496560800118,
+            "q1": 1.18025173186515,
+            "q3": 164.49472418430494,
+            "span_fraction": 0.9079913590379581,
+            "log_span_fraction": 0.9700153870973333,
+            "nonzero_fraction": 0.7666666666666667,
+            "range_ok": true
+          },
+          "Co": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 440.5040543518327,
+            "positive_min": 1.0155934256118764,
+            "positive_max": 440.5040543518327,
+            "positive_count": 68,
+            "median": 7.125338091414095,
+            "q1": 1.0333841725848956,
+            "q3": 63.347152764019036,
+            "span_fraction": 0.8827736560156968,
+            "log_span_fraction": 0.9771246160201341,
+            "nonzero_fraction": 0.7555555555555555,
+            "range_ok": true
+          },
+          "Ni": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 979.7814037113862,
+            "positive_min": 1.0184311041647074,
+            "positive_max": 979.7814037113862,
+            "positive_count": 66,
+            "median": 8.381831956981538,
+            "q1": 0.0,
+            "q3": 96.00315511782432,
+            "span_fraction": 0.9807621658772635,
+            "log_span_fraction": 0.9943991791752228,
+            "nonzero_fraction": 0.7333333333333333,
+            "range_ok": true
+          },
+          "Cu": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 957.3888183144365,
+            "positive_min": 1.0965925656727502,
+            "positive_max": 957.3888183144365,
+            "positive_count": 68,
+            "median": 8.596964267972611,
+            "q1": 1.1300335396178087,
+            "q3": 100.2663968072741,
+            "span_fraction": 0.9583471654799165,
+            "log_span_fraction": 0.9803476845428746,
+            "nonzero_fraction": 0.7555555555555555,
+            "range_ok": true
+          },
+          "Zn": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              2000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1808.7460623656284,
+            "positive_min": 1.1842571635497219,
+            "positive_max": 1808.7460623656284,
+            "positive_count": 68,
+            "median": 10.544705268185137,
+            "q1": 1.262792295253855,
+            "q3": 206.53175416132012,
+            "span_fraction": 0.9048254439047666,
+            "log_span_fraction": 0.9645267030003944,
+            "nonzero_fraction": 0.7555555555555555,
+            "range_ok": true
+          },
+          "As": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 921.3674020900368,
+            "positive_min": 1.0160027287499371,
+            "positive_max": 921.3674020900368,
+            "positive_count": 64,
+            "median": 4.9535067448253525,
+            "q1": 0.0,
+            "q3": 84.2983813217161,
+            "span_fraction": 0.9222896917818186,
+            "log_span_fraction": 0.9858459895058029,
+            "nonzero_fraction": 0.7111111111111111,
+            "range_ok": true
+          },
+          "Se": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 499.51306657701963,
+            "positive_min": 1.013942812913188,
+            "positive_max": 499.51306657701963,
+            "positive_count": 63,
+            "median": 5.129920700176446,
+            "q1": 0.0,
+            "q3": 66.70239822205045,
+            "span_fraction": 1.0010281895331055,
+            "log_span_fraction": 0.9976151597679629,
+            "nonzero_fraction": 0.7,
+            "range_ok": true
+          },
+          "Rb": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 426.37793317200004,
+            "positive_min": 1.0523436187234894,
+            "positive_max": 426.37793317200004,
+            "positive_count": 67,
+            "median": 6.632827178902671,
+            "q1": 0.26308590468087234,
+            "q3": 54.52643913633469,
+            "span_fraction": 0.8544647959358719,
+            "log_span_fraction": 0.9661601069927811,
+            "nonzero_fraction": 0.7444444444444445,
+            "range_ok": true
+          },
+          "Sr": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              2000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1632.5266935106285,
+            "positive_min": 1.0012478051490656,
+            "positive_max": 1632.5266935106285,
+            "positive_count": 65,
+            "median": 31.68149861330613,
+            "q1": 0.0,
+            "q3": 200.09474589036353,
+            "span_fraction": 0.8166716825966126,
+            "log_span_fraction": 0.9731261813197216,
+            "nonzero_fraction": 0.7222222222222222,
+            "range_ok": true
+          },
+          "Y": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 499.87850569174805,
+            "positive_min": 1.1284436990837627,
+            "positive_max": 499.87850569174805,
+            "positive_count": 63,
+            "median": 4.38125768478547,
+            "q1": 0.0,
+            "q3": 30.07915248578878,
+            "span_fraction": 1.001760532448393,
+            "log_span_fraction": 0.9805164795251912,
+            "nonzero_fraction": 0.7,
+            "range_ok": true
+          },
+          "Zr": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              2000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1958.8524849677765,
+            "positive_min": 1.1978110881676878,
+            "positive_max": 1958.8524849677765,
+            "positive_count": 72,
+            "median": 8.977969494747557,
+            "q1": 1.796808161186224,
+            "q3": 165.4519205563671,
+            "span_fraction": 0.9799162005841804,
+            "log_span_fraction": 0.9735183888214307,
+            "nonzero_fraction": 0.8,
+            "range_ok": true
+          },
+          "Nb": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 426.1191544237327,
+            "positive_min": 1.0460479640238012,
+            "positive_max": 426.1191544237327,
+            "positive_count": 67,
+            "median": 6.289868411084049,
+            "q1": 0.2615119910059503,
+            "q3": 50.66491357279466,
+            "span_fraction": 0.8539462012499653,
+            "log_span_fraction": 0.9670279602355407,
+            "nonzero_fraction": 0.7444444444444445,
+            "range_ok": true
+          },
+          "Mo": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 913.61260076354,
+            "positive_min": 1.207320439411122,
+            "positive_max": 913.61260076354,
+            "positive_count": 70,
+            "median": 13.225120819943935,
+            "q1": 1.3399701886517619,
+            "q3": 141.89633877242244,
+            "span_fraction": 0.9145271278914314,
+            "log_span_fraction": 0.9596465092416103,
+            "nonzero_fraction": 0.7777777777777778,
+            "range_ok": true
+          },
+          "Cd": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 441.5185599401871,
+            "positive_min": 1.032296809383506,
+            "positive_max": 441.5185599401871,
+            "positive_count": 68,
+            "median": 8.38084541375816,
+            "q1": 1.043386424402903,
+            "q3": 69.05317342065506,
+            "span_fraction": 0.8848067333470684,
+            "log_span_fraction": 0.9748698115602396,
+            "nonzero_fraction": 0.7555555555555555,
+            "range_ok": true
+          },
+          "Sn": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 840.8409267532348,
+            "positive_min": 1.0504261735277112,
+            "positive_max": 840.8409267532348,
+            "positive_count": 70,
+            "median": 10.620300828691676,
+            "q1": 1.1817249500049207,
+            "q3": 103.49167816806653,
+            "span_fraction": 0.8416826093625974,
+            "log_span_fraction": 0.9677827692178438,
+            "nonzero_fraction": 0.7777777777777778,
+            "range_ok": true
+          },
+          "Sb": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 938.542032920427,
+            "positive_min": 1.0064781808945304,
+            "positive_max": 938.542032920427,
+            "positive_count": 62,
+            "median": 8.100944637959888,
+            "q1": 0.0,
+            "q3": 63.65505779140065,
+            "span_fraction": 0.9394815144348618,
+            "log_span_fraction": 0.9898831210053546,
+            "nonzero_fraction": 0.6888888888888889,
+            "range_ok": true
+          },
+          "Ba": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              3000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 2068.0853312429817,
+            "positive_min": 1.4046324817889233,
+            "positive_max": 2068.0853312429817,
+            "positive_count": 66,
+            "median": 19.943434655198118,
+            "q1": 0.0,
+            "q3": 129.52088212198643,
+            "span_fraction": 0.6895916409613143,
+            "log_span_fraction": 0.9111001644704454,
+            "nonzero_fraction": 0.7333333333333333,
+            "range_ok": true
+          },
+          "W": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 953.6623376997843,
+            "positive_min": 1.1792973384378864,
+            "positive_max": 953.6623376997843,
+            "positive_count": 62,
+            "median": 5.19108717787282,
+            "q1": 0.0,
+            "q3": 69.34846135682693,
+            "span_fraction": 0.9546169546544387,
+            "log_span_fraction": 0.9692571044380993,
+            "nonzero_fraction": 0.6888888888888889,
+            "range_ok": true
+          },
+          "Pb": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              2000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1294.0640616380438,
+            "positive_min": 1.2198146511516268,
+            "positive_max": 1294.0640616380438,
+            "positive_count": 74,
+            "median": 14.542239528506638,
+            "q1": 3.2923714248798204,
+            "q3": 209.06179327024662,
+            "span_fraction": 0.6473557086733586,
+            "log_span_fraction": 0.9165811685751865,
+            "nonzero_fraction": 0.8222222222222222,
+            "range_ok": true
+          }
+        },
+        "checks": {
+          "range_ok": true,
+          "nonzero_ok": true,
+          "span_ok": true,
+          "span_metric": "log10_for_traces_linear_for_compounds"
+        }
+      },
+      "sparse_boundary": {
+        "n": 30,
+        "population_gate": true,
+        "variables": {
+          "Al2O3": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              25
+            ],
+            "observed_min": 0.1807453938407616,
+            "observed_max": 24.387566540136007,
+            "positive_min": 0.1807453938407616,
+            "positive_max": 24.387566540136007,
+            "positive_count": 30,
+            "median": 10.156569116424066,
+            "q1": 4.315671283382899,
+            "q3": 17.163777578365256,
+            "span_fraction": 0.9682728458518097,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Fe2O3T": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              20
+            ],
+            "observed_min": 1.0120493171769884,
+            "observed_max": 19.946920962309775,
+            "positive_min": 1.0120493171769884,
+            "positive_max": 19.946920962309775,
+            "positive_count": 30,
+            "median": 8.232527886221252,
+            "q1": 4.431476667679854,
+            "q3": 15.625918939322421,
+            "span_fraction": 0.9467435822566393,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "CaO": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              15
+            ],
+            "observed_min": 0.4151042164402269,
+            "observed_max": 14.45505729720989,
+            "positive_min": 0.4151042164402269,
+            "positive_max": 14.45505729720989,
+            "positive_count": 30,
+            "median": 6.935972772673239,
+            "q1": 4.511460034938728,
+            "q3": 10.60355377694454,
+            "span_fraction": 0.9359968720513109,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "MgO": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              12
+            ],
+            "observed_min": 0.9951452991115608,
+            "observed_max": 11.633390778995448,
+            "positive_min": 0.9951452991115608,
+            "positive_max": 11.633390778995448,
+            "positive_count": 30,
+            "median": 4.918593281581788,
+            "q1": 2.7217362065758337,
+            "q3": 8.350096807361405,
+            "span_fraction": 0.8865204566569905,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Na2O": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              5
+            ],
+            "observed_min": 0.05762092967190546,
+            "observed_max": 4.922351839579636,
+            "positive_min": 0.05762092967190546,
+            "positive_max": 4.922351839579636,
+            "positive_count": 30,
+            "median": 2.0226625705503896,
+            "q1": 0.8788422547968066,
+            "q3": 3.233675919564907,
+            "span_fraction": 0.972946181981546,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "K2O": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              5
+            ],
+            "observed_min": 0.055726472599439414,
+            "observed_max": 4.555117072416782,
+            "positive_min": 0.055726472599439414,
+            "positive_max": 4.555117072416782,
+            "positive_count": 30,
+            "median": 1.4962132017567789,
+            "q1": 0.8266570125965534,
+            "q3": 3.1016516814312243,
+            "span_fraction": 0.8998781199634684,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "TiO2": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              4
+            ],
+            "observed_min": 0.020668697355664456,
+            "observed_max": 3.9650786220353758,
+            "positive_min": 0.020668697355664456,
+            "positive_max": 3.9650786220353758,
+            "positive_count": 30,
+            "median": 2.5158088249407755,
+            "q1": 1.574813883989762,
+            "q3": 3.2072872975786324,
+            "span_fraction": 0.9861024811699278,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "MnO": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              1
+            ],
+            "observed_min": 0.012166183327047109,
+            "observed_max": 0.9436932867032312,
+            "positive_min": 0.012166183327047109,
+            "positive_max": 0.9436932867032312,
+            "positive_count": 30,
+            "median": 0.39821870513536034,
+            "q1": 0.21809339675737932,
+            "q3": 0.6372516687310291,
+            "span_fraction": 0.931527103376184,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "P2O5": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              1
+            ],
+            "observed_min": 0.01820125066500944,
+            "observed_max": 0.9580659647863938,
+            "positive_min": 0.01820125066500944,
+            "positive_max": 0.9580659647863938,
+            "positive_count": 30,
+            "median": 0.5488718026145348,
+            "q1": 0.3175102906921695,
+            "q3": 0.7429331481124228,
+            "span_fraction": 0.9398647141213844,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "CaSO4": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              2
+            ],
+            "observed_min": 0.12711909477482664,
+            "observed_max": 1.9795016818230802,
+            "positive_min": 0.12711909477482664,
+            "positive_max": 1.9795016818230802,
+            "positive_count": 30,
+            "median": 1.065581502704029,
+            "q1": 0.6111271849731653,
+            "q3": 1.5163512082883719,
+            "span_fraction": 0.9261912935241268,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "NaCl": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              1
+            ],
+            "observed_min": 0.03993848285827051,
+            "observed_max": 0.9898836992412524,
+            "positive_min": 0.03993848285827051,
+            "positive_max": 0.9898836992412524,
+            "positive_count": 30,
+            "median": 0.4092874437526573,
+            "q1": 0.22159366354620788,
+            "q3": 0.7417801659110907,
+            "span_fraction": 0.9499452163829819,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "SiO2": {
+            "kind": "balance",
+            "declared_range": [
+              25,
+              100
+            ],
+            "observed_min": 35.44754281503704,
+            "observed_max": 76.12361021483358,
+            "positive_min": 35.44754281503704,
+            "positive_max": 76.12361021483358,
+            "positive_count": 30,
+            "median": 59.972529295451444,
+            "q1": 51.30170205449359,
+            "q3": 62.18994317232122,
+            "span_fraction": 0.5423475653306205,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "V": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 694.9180459798944,
+            "positive_min": 1.3139047472342325,
+            "positive_max": 694.9180459798944,
+            "positive_count": 23,
+            "median": 14.451247465353767,
+            "q1": 1.336514711749961,
+            "q3": 50.87299106494822,
+            "span_fraction": 0.6956136596395339,
+            "log_span_fraction": 0.9077899026754235,
+            "nonzero_fraction": 0.7666666666666667,
+            "range_ok": true
+          },
+          "Cr": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 656.6146572987723,
+            "positive_min": 1.0458931452406368,
+            "positive_max": 656.6146572987723,
+            "positive_count": 26,
+            "median": 46.266652411319676,
+            "q1": 2.305160486081895,
+            "q3": 151.079855495414,
+            "span_fraction": 0.6572719292280003,
+            "log_span_fraction": 0.9326077521337215,
+            "nonzero_fraction": 0.8666666666666667,
+            "range_ok": true
+          },
+          "Co": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 396.09019011970514,
+            "positive_min": 1.4227117783554684,
+            "positive_max": 396.09019011970514,
+            "positive_count": 22,
+            "median": 4.256272360753814,
+            "q1": 0.3556779445888671,
+            "q3": 19.65373473699526,
+            "span_fraction": 0.7937679160715534,
+            "log_span_fraction": 0.9057815224203296,
+            "nonzero_fraction": 0.7333333333333333,
+            "range_ok": true
+          },
+          "Ni": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 669.2800144552851,
+            "positive_min": 1.3273278950986247,
+            "positive_max": 669.2800144552851,
+            "positive_count": 26,
+            "median": 25.741112875111483,
+            "q1": 1.9962719415660337,
+            "q3": 70.36315675849586,
+            "span_fraction": 0.6699499644197049,
+            "log_span_fraction": 0.9008765450006876,
+            "nonzero_fraction": 0.8666666666666667,
+            "range_ok": true
+          },
+          "Cu": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 849.2151302784416,
+            "positive_min": 1.7188202017624528,
+            "positive_max": 849.2151302784416,
+            "positive_count": 23,
+            "median": 8.5663718253744,
+            "q1": 1.9124082029025302,
+            "q3": 139.66488615916666,
+            "span_fraction": 0.8500651954739156,
+            "log_span_fraction": 0.8979290912894852,
+            "nonzero_fraction": 0.7666666666666667,
+            "range_ok": true
+          },
+          "Zn": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              2000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1400.4326336542988,
+            "positive_min": 1.908808852471663,
+            "positive_max": 1400.4326336542988,
+            "positive_count": 26,
+            "median": 144.8152365693753,
+            "q1": 7.728781252341823,
+            "q3": 651.6793205545622,
+            "span_fraction": 0.7005666001272131,
+            "log_span_fraction": 0.8680623277245838,
+            "nonzero_fraction": 0.8666666666666667,
+            "range_ok": true
+          },
+          "As": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 753.0876983230321,
+            "positive_min": 1.034076036181805,
+            "positive_max": 753.0876983230321,
+            "positive_count": 23,
+            "median": 28.625775240672148,
+            "q1": 1.5278438209830465,
+            "q3": 175.53927787482843,
+            "span_fraction": 0.753841539862895,
+            "log_span_fraction": 0.9540976932066595,
+            "nonzero_fraction": 0.7666666666666667,
+            "range_ok": true
+          },
+          "Se": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 456.43183215198684,
+            "positive_min": 1.5258166726890092,
+            "positive_max": 456.43183215198684,
+            "positive_count": 27,
+            "median": 34.183964485070206,
+            "q1": 3.469483007819459,
+            "q3": 193.75278813457595,
+            "span_fraction": 0.9146930504047832,
+            "log_span_fraction": 0.9173401575202028,
+            "nonzero_fraction": 0.9,
+            "range_ok": true
+          },
+          "Rb": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 348.34007421006265,
+            "positive_min": 1.2080256217958374,
+            "positive_max": 348.34007421006265,
+            "positive_count": 24,
+            "median": 7.766259695327796,
+            "q1": 1.5554011613254466,
+            "q3": 47.85444004346693,
+            "span_fraction": 0.6980763010221697,
+            "log_span_fraction": 0.9114318760337055,
+            "nonzero_fraction": 0.8,
+            "range_ok": true
+          },
+          "Sr": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              2000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1803.2666073052576,
+            "positive_min": 1.1542274684697167,
+            "positive_max": 1803.2666073052576,
+            "positive_count": 20,
+            "median": 19.705930254908335,
+            "q1": 0.0,
+            "q3": 328.55023427595836,
+            "span_fraction": 0.9020843458255415,
+            "log_span_fraction": 0.9675066689010257,
+            "nonzero_fraction": 0.6666666666666666,
+            "range_ok": true
+          },
+          "Y": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 285.7864951621178,
+            "positive_min": 1.216304676428013,
+            "positive_max": 285.7864951621178,
+            "positive_count": 22,
+            "median": 6.055296660076514,
+            "q1": 0.30407616910700325,
+            "q3": 68.79275300053474,
+            "span_fraction": 0.5727184271785928,
+            "log_span_fraction": 0.87848302205502,
+            "nonzero_fraction": 0.7333333333333333,
+            "range_ok": true
+          },
+          "Zr": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              2000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1133.2146267320713,
+            "positive_min": 1.2313636140266013,
+            "positive_max": 1133.2146267320713,
+            "positive_count": 23,
+            "median": 19.944103487381838,
+            "q1": 1.3049208037910551,
+            "q3": 138.1932516453739,
+            "span_fraction": 0.5668907587454084,
+            "log_span_fraction": 0.8978791041010407,
+            "nonzero_fraction": 0.7666666666666667,
+            "range_ok": true
+          },
+          "Nb": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 466.5293013707291,
+            "positive_min": 1.572366329272242,
+            "positive_max": 466.5293013707291,
+            "positive_count": 24,
+            "median": 30.730886942691903,
+            "q1": 2.216427145799785,
+            "q3": 218.3949959177236,
+            "span_fraction": 0.9349284596607798,
+            "log_span_fraction": 0.9160254417486501,
+            "nonzero_fraction": 0.8,
+            "range_ok": true
+          },
+          "Mo": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 978.977339485031,
+            "positive_min": 1.0865752921057585,
+            "positive_max": 978.977339485031,
+            "positive_count": 24,
+            "median": 10.82039885102439,
+            "q1": 1.4091801700985276,
+            "q3": 215.75140057930858,
+            "span_fraction": 0.9799572967818129,
+            "log_span_fraction": 0.9849042713215423,
+            "nonzero_fraction": 0.8,
+            "range_ok": true
+          },
+          "Cd": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 216.36354673784035,
+            "positive_min": 1.0857881056578673,
+            "positive_max": 216.36354673784035,
+            "positive_count": 22,
+            "median": 5.203028636194228,
+            "q1": 0.27144702641446683,
+            "q3": 56.571875208949734,
+            "span_fraction": 0.43359428203976025,
+            "log_span_fraction": 0.8519690876397371,
+            "nonzero_fraction": 0.7333333333333333,
+            "range_ok": true
+          },
+          "Sn": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 678.349590536956,
+            "positive_min": 1.0190780415469372,
+            "positive_max": 678.349590536956,
+            "positive_count": 21,
+            "median": 5.473814990551785,
+            "q1": 0.0,
+            "q3": 64.09548619687581,
+            "span_fraction": 0.6790286191561121,
+            "log_span_fraction": 0.9410820411344392,
+            "nonzero_fraction": 0.7,
+            "range_ok": true
+          },
+          "Sb": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 641.422313740964,
+            "positive_min": 1.1358368023319017,
+            "positive_max": 641.422313740964,
+            "positive_count": 22,
+            "median": 9.05148455709396,
+            "q1": 0.2839592005829754,
+            "q3": 137.32487698447522,
+            "span_fraction": 0.6420643781190831,
+            "log_span_fraction": 0.9172760426230475,
+            "nonzero_fraction": 0.7333333333333333,
+            "range_ok": true
+          },
+          "Ba": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              3000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 2813.572381753,
+            "positive_min": 1.4405081588836937,
+            "positive_max": 2813.572381753,
+            "positive_count": 24,
+            "median": 37.21230720060815,
+            "q1": 1.8636319389025837,
+            "q3": 390.59466328202734,
+            "span_fraction": 0.9381701839789931,
+            "log_span_fraction": 0.9463985086438098,
+            "nonzero_fraction": 0.8,
+            "range_ok": true
+          },
+          "W": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 749.4960088290993,
+            "positive_min": 1.1308434918080454,
+            "positive_max": 749.4960088290993,
+            "positive_count": 22,
+            "median": 7.018282513546305,
+            "q1": 0.28271087295201136,
+            "q3": 101.09676932349545,
+            "span_fraction": 0.7502462550841835,
+            "log_span_fraction": 0.9404556071911331,
+            "nonzero_fraction": 0.7333333333333333,
+            "range_ok": true
+          },
+          "Pb": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              2000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1768.5236682462162,
+            "positive_min": 1.258294987227164,
+            "positive_max": 1768.5236682462162,
+            "positive_count": 23,
+            "median": 24.26918608346743,
+            "q1": 1.4565413165192604,
+            "q3": 414.6997871802846,
+            "span_fraction": 0.8847041862162162,
+            "log_span_fraction": 0.9535897626007818,
+            "nonzero_fraction": 0.7666666666666667,
+            "range_ok": true
+          }
+        },
+        "checks": {
+          "range_ok": true,
+          "nonzero_ok": true,
+          "span_ok": true,
+          "span_metric": "log10_for_traces_linear_for_compounds"
+        }
+      },
+      "interference": {
+        "n": 30,
+        "population_gate": false,
+        "variables": {
+          "Al2O3": {
+            "kind": "compound",
+            "declared_range": [
+              5,
+              25
+            ],
+            "observed_min": 11.658727162370997,
+            "observed_max": 21.379380075659014,
+            "positive_min": 11.658727162370997,
+            "positive_max": 21.379380075659014,
+            "positive_count": 30,
+            "median": 15.654348232037076,
+            "q1": 14.312426941448136,
+            "q3": 20.57087033398792,
+            "span_fraction": 0.48603264566440085,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Fe2O3T": {
+            "kind": "compound",
+            "declared_range": [
+              1,
+              20
+            ],
+            "observed_min": 3.4101568282126973,
+            "observed_max": 18.985389257053452,
+            "positive_min": 3.4101568282126973,
+            "positive_max": 18.985389257053452,
+            "positive_count": 30,
+            "median": 10.850764772798524,
+            "q1": 6.795461268088778,
+            "q3": 16.82190823507734,
+            "span_fraction": 0.819749075202145,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "CaO": {
+            "kind": "compound",
+            "declared_range": [
+              0.1,
+              15
+            ],
+            "observed_min": 0.6526336105092421,
+            "observed_max": 12.94394610059129,
+            "positive_min": 0.6526336105092421,
+            "positive_max": 12.94394610059129,
+            "positive_count": 30,
+            "median": 6.80160430770308,
+            "q1": 2.7485009047651303,
+            "q3": 10.237158985261882,
+            "span_fraction": 0.8249203013477885,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "MgO": {
+            "kind": "compound",
+            "declared_range": [
+              0.1,
+              12
+            ],
+            "observed_min": 0.5258109502470444,
+            "observed_max": 11.746421855778024,
+            "positive_min": 0.5258109502470444,
+            "positive_max": 11.746421855778024,
+            "positive_count": 30,
+            "median": 4.931376805853561,
+            "q1": 2.8011556446065304,
+            "q3": 9.66711237640908,
+            "span_fraction": 0.9429084794563849,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Na2O": {
+            "kind": "compound",
+            "declared_range": [
+              0.05,
+              5
+            ],
+            "observed_min": 0.5518722149559161,
+            "observed_max": 3.6608873458078315,
+            "positive_min": 0.5518722149559161,
+            "positive_max": 3.6608873458078315,
+            "positive_count": 30,
+            "median": 2.6903912100705227,
+            "q1": 1.9371400325051935,
+            "q3": 3.62757173844864,
+            "span_fraction": 0.6280838648185687,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "K2O": {
+            "kind": "compound",
+            "declared_range": [
+              0.05,
+              5
+            ],
+            "observed_min": 1.1115279049308924,
+            "observed_max": 4.335128269082381,
+            "positive_min": 1.1115279049308924,
+            "positive_max": 4.335128269082381,
+            "positive_count": 30,
+            "median": 2.8036720188815782,
+            "q1": 1.9804767462327808,
+            "q3": 3.3765918575526888,
+            "span_fraction": 0.6512323967982805,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "TiO2": {
+            "kind": "compound",
+            "declared_range": [
+              0.01,
+              4
+            ],
+            "observed_min": 1.138040034875575,
+            "observed_max": 2.567277891395356,
+            "positive_min": 1.138040034875575,
+            "positive_max": 2.567277891395356,
+            "positive_count": 30,
+            "median": 1.9490055618270348,
+            "q1": 1.2496801009944343,
+            "q3": 2.519465844867675,
+            "span_fraction": 0.3582049765713737,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "MnO": {
+            "kind": "compound",
+            "declared_range": [
+              0.005,
+              1
+            ],
+            "observed_min": 0.06961301073858665,
+            "observed_max": 0.8397110410113081,
+            "positive_min": 0.06961301073858665,
+            "positive_max": 0.8397110410113081,
+            "positive_count": 30,
+            "median": 0.3905490075525375,
+            "q1": 0.13748939071086005,
+            "q3": 0.8156036745001936,
+            "span_fraction": 0.7739678696208256,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "P2O5": {
+            "kind": "compound",
+            "declared_range": [
+              0.01,
+              1
+            ],
+            "observed_min": 0.06059932249536619,
+            "observed_max": 0.7745876867827124,
+            "positive_min": 0.06059932249536619,
+            "positive_max": 0.7745876867827124,
+            "positive_count": 30,
+            "median": 0.44299458839639616,
+            "q1": 0.3054596029853578,
+            "q3": 0.7687835995571641,
+            "span_fraction": 0.7212003679670164,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "CaSO4": {
+            "kind": "compound",
+            "declared_range": [
+              0,
+              2
+            ],
+            "observed_min": 0.39782410768215426,
+            "observed_max": 1.875035381307862,
+            "positive_min": 0.39782410768215426,
+            "positive_max": 1.875035381307862,
+            "positive_count": 30,
+            "median": 1.0552700252937055,
+            "q1": 0.5608649901064291,
+            "q3": 1.37760106381808,
+            "span_fraction": 0.7386056368128538,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "NaCl": {
+            "kind": "compound",
+            "declared_range": [
+              0,
+              1
+            ],
+            "observed_min": 0.03195928073060361,
+            "observed_max": 0.752266631702305,
+            "positive_min": 0.03195928073060361,
+            "positive_max": 0.752266631702305,
+            "positive_count": 30,
+            "median": 0.2818309566084038,
+            "q1": 0.13138646880048988,
+            "q3": 0.6731088999067223,
+            "span_fraction": 0.7203073509717014,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "SiO2": {
+            "kind": "balance",
+            "declared_range": [
+              25,
+              85
+            ],
+            "observed_min": 29.307102144565594,
+            "observed_max": 62.274751024818855,
+            "positive_min": 29.307102144565594,
+            "positive_max": 62.274751024818855,
+            "positive_count": 30,
+            "median": 55.183293472263856,
+            "q1": 40.26049472367082,
+            "q3": 58.24511656724913,
+            "span_fraction": 0.5494608146708877,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "V": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 158.11388300841895,
+            "positive_min": 3.8534201456822403,
+            "positive_max": 158.11388300841895,
+            "positive_count": 18,
+            "median": 3.8534201456822403,
+            "q1": 0.0,
+            "q3": 26.09285083460522,
+            "span_fraction": 0.15827215516358253,
+            "log_span_fraction": 0.5377078802643754,
+            "nonzero_fraction": 0.6,
+            "range_ok": true
+          },
+          "Cr": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 522.4323893790611,
+            "positive_min": 8.788332843242914,
+            "positive_max": 522.4323893790611,
+            "positive_count": 18,
+            "median": 8.788332843242914,
+            "q1": 0.0,
+            "q3": 25.91429524840855,
+            "span_fraction": 0.5229553447237849,
+            "log_span_fraction": 0.5913745324808809,
+            "nonzero_fraction": 0.6,
+            "range_ok": true
+          },
+          "Co": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 231.70604177618011,
+            "positive_min": 29.25762118424122,
+            "positive_max": 231.70604177618011,
+            "positive_count": 15,
+            "median": 14.62881059212061,
+            "q1": 0.0,
+            "q3": 105.21351725107426,
+            "span_fraction": 0.46434076508252525,
+            "log_span_fraction": 0.3329782636549658,
+            "nonzero_fraction": 0.5,
+            "range_ok": true
+          },
+          "Ni": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 3.1239446069074024,
+            "observed_max": 684.8673993818537,
+            "positive_min": 3.1239446069074024,
+            "positive_max": 684.8673993818537,
+            "positive_count": 30,
+            "median": 84.79642984402088,
+            "q1": 35.38978824470254,
+            "q3": 465.7407832299986,
+            "span_fraction": 0.6824258806556018,
+            "log_span_fraction": 0.7803010564115755,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Cu": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 663.8496166967593,
+            "positive_min": 5.090220875161997,
+            "positive_max": 663.8496166967593,
+            "positive_count": 25,
+            "median": 22.802001500922692,
+            "q1": 5.090220875161997,
+            "q3": 126.18462591864134,
+            "span_fraction": 0.6645141308275869,
+            "log_span_fraction": 0.7051110270517146,
+            "nonzero_fraction": 0.8333333333333334,
+            "range_ok": true
+          },
+          "Zn": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              2000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 452.70321675956274,
+            "positive_min": 2.81511403902388,
+            "positive_max": 452.70321675956274,
+            "positive_count": 18,
+            "median": 2.81511403902388,
+            "q1": 0.0,
+            "q3": 31.634583692777703,
+            "span_fraction": 0.22646484080018145,
+            "log_span_fraction": 0.6683724748749579,
+            "nonzero_fraction": 0.6,
+            "range_ok": true
+          },
+          "As": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 188.0301546543197,
+            "positive_min": 37.60603093086394,
+            "positive_max": 188.0301546543197,
+            "positive_count": 8,
+            "median": 0.0,
+            "q1": 0.0,
+            "q3": 28.204523198147953,
+            "span_fraction": 0.18821837302734704,
+            "log_span_fraction": 0.23299000144533957,
+            "nonzero_fraction": 0.26666666666666666,
+            "range_ok": true
+          },
+          "Se": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 100.49506063227552,
+            "positive_min": 7.552399461643941,
+            "positive_max": 100.49506063227552,
+            "positive_count": 15,
+            "median": 3.7761997308219706,
+            "q1": 0.0,
+            "q3": 65.30653760454399,
+            "span_fraction": 0.20139290707870847,
+            "log_span_fraction": 0.4164773088026961,
+            "nonzero_fraction": 0.5,
+            "range_ok": true
+          },
+          "Rb": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 1.0855614775512115,
+            "observed_max": 40.46351796920625,
+            "positive_min": 1.0855614775512115,
+            "positive_max": 40.46351796920625,
+            "positive_count": 30,
+            "median": 3.783171849463132,
+            "q1": 2.727001315581711,
+            "q3": 29.028700732286875,
+            "span_fraction": 0.07891374046423856,
+            "log_span_fraction": 0.5822255202577609,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Sr": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              2000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 297.8311084710262,
+            "positive_min": 1.0077249633803056,
+            "positive_max": 297.8311084710262,
+            "positive_count": 23,
+            "median": 7.139887873730683,
+            "q1": 1.0077249633803056,
+            "q3": 267.7640501348883,
+            "span_fraction": 0.14899004926014317,
+            "log_span_fraction": 0.7484415603800457,
+            "nonzero_fraction": 0.7666666666666667,
+            "range_ok": true
+          },
+          "Y": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 225.16732873858817,
+            "positive_min": 22.25555095705527,
+            "positive_max": 225.16732873858817,
+            "positive_count": 23,
+            "median": 50.726603922141464,
+            "q1": 22.25555095705527,
+            "q3": 187.56277564413747,
+            "span_fraction": 0.45123713174065766,
+            "log_span_fraction": 0.3723891054314837,
+            "nonzero_fraction": 0.7666666666666667,
+            "range_ok": true
+          },
+          "Zr": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              2000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 721.6752495088476,
+            "positive_min": 1.605898836631699,
+            "positive_max": 721.6752495088476,
+            "positive_count": 21,
+            "median": 37.60603093086394,
+            "q1": 0.0,
+            "q3": 153.78502269839063,
+            "span_fraction": 0.36101813382133446,
+            "log_span_fraction": 0.8035745300826259,
+            "nonzero_fraction": 0.7,
+            "range_ok": true
+          },
+          "Nb": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 111.80339887498948,
+            "positive_min": 2.636399951928563,
+            "positive_max": 111.80339887498948,
+            "positive_count": 23,
+            "median": 15.584079868857467,
+            "q1": 2.636399951928563,
+            "q3": 21.60051918290632,
+            "span_fraction": 0.22405490756510918,
+            "log_span_fraction": 0.6029869575579364,
+            "nonzero_fraction": 0.7666666666666667,
+            "range_ok": true
+          },
+          "Mo": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 50.52721424962386,
+            "positive_min": 1.8488647353701706,
+            "positive_max": 50.52721424962386,
+            "positive_count": 28,
+            "median": 10.912549990783099,
+            "q1": 4.143999438391351,
+            "q3": 36.34540456788925,
+            "span_fraction": 0.05057779204166553,
+            "log_span_fraction": 0.4788734052372592,
+            "nonzero_fraction": 0.9333333333333333,
+            "range_ok": true
+          },
+          "Cd": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              500
+            ],
+            "observed_min": 0.0,
+            "observed_max": 203.64404529632066,
+            "positive_min": 5.844531762482111,
+            "positive_max": 203.64404529632066,
+            "positive_count": 20,
+            "median": 16.651519195269728,
+            "q1": 0.0,
+            "q3": 32.06721217578204,
+            "span_fraction": 0.40810429919102337,
+            "log_span_fraction": 0.5713742612399904,
+            "nonzero_fraction": 0.6666666666666666,
+            "range_ok": true
+          },
+          "Sn": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 768.2708327703049,
+            "positive_min": 1.8197415369652128,
+            "positive_max": 768.2708327703049,
+            "positive_count": 25,
+            "median": 42.270407100002586,
+            "q1": 1.8197415369652128,
+            "q3": 108.53156801891063,
+            "span_fraction": 0.7690398726429478,
+            "log_span_fraction": 0.8751682124387666,
+            "nonzero_fraction": 0.8333333333333334,
+            "range_ok": true
+          },
+          "Sb": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 208.5960627507773,
+            "positive_min": 10.581000624084265,
+            "positive_max": 208.5960627507773,
+            "positive_count": 20,
+            "median": 10.933892972707394,
+            "q1": 0.0,
+            "q3": 98.23505100685281,
+            "span_fraction": 0.2088048676183957,
+            "log_span_fraction": 0.4315931222866792,
+            "nonzero_fraction": 0.6666666666666666,
+            "range_ok": true
+          },
+          "Ba": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              3000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 173.14338927623936,
+            "positive_min": 128.8949693128929,
+            "positive_max": 173.14338927623936,
+            "positive_count": 15,
+            "median": 64.44748465644645,
+            "q1": 0.0,
+            "q3": 156.83321540374936,
+            "span_fraction": 0.05773370766130022,
+            "log_span_fraction": 0.036860936885330466,
+            "nonzero_fraction": 0.5,
+            "range_ok": true
+          },
+          "W": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              1000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 188.0301546543197,
+            "positive_min": 1.5083829810962788,
+            "positive_max": 188.0301546543197,
+            "positive_count": 23,
+            "median": 11.158131466352806,
+            "q1": 1.5083829810962788,
+            "q3": 32.060256034075394,
+            "span_fraction": 0.18821837302734704,
+            "log_span_fraction": 0.698571959861061,
+            "nonzero_fraction": 0.7666666666666667,
+            "range_ok": true
+          },
+          "Pb": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              2000
+            ],
+            "observed_min": 0.0,
+            "observed_max": 616.7777573291982,
+            "positive_min": 27.334585284795057,
+            "positive_max": 616.7777573291982,
+            "positive_count": 18,
+            "median": 27.334585284795057,
+            "q1": 0.0,
+            "q3": 208.33300172538324,
+            "span_fraction": 0.30854315023971896,
+            "log_span_fraction": 0.40999815694758046,
+            "nonzero_fraction": 0.6,
+            "range_ok": true
+          }
+        },
+        "checks": {
+          "range_ok": true,
+          "nonzero_ok": true,
+          "span_ok": true,
+          "span_metric": "not_applicable_controlled_family"
+        }
+      }
+    },
+    "iron_oxide": {
+      "routine": {
+        "n": 60,
+        "population_gate": true,
+        "variables": {
+          "SiO2": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              25.0
+            ],
+            "observed_min": 0.7834695682888554,
+            "observed_max": 24.133289973258996,
+            "positive_min": 0.7834695682888554,
+            "positive_max": 24.133289973258996,
+            "positive_count": 60,
+            "median": 9.4423167487943,
+            "q1": 3.6427933743521104,
+            "q3": 16.902631794590935,
+            "span_fraction": 0.9339928161988057,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Al2O3": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              20.0
+            ],
+            "observed_min": 1.6292289233804924,
+            "observed_max": 19.97463911526509,
+            "positive_min": 1.6292289233804924,
+            "positive_max": 19.97463911526509,
+            "positive_count": 60,
+            "median": 10.93182521582564,
+            "q1": 6.724566973962044,
+            "q3": 13.22370248320781,
+            "span_fraction": 0.91727050959423,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "CaO": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              14.0
+            ],
+            "observed_min": 0.05835993651995297,
+            "observed_max": 13.828529137048086,
+            "positive_min": 0.05835993651995297,
+            "positive_max": 13.828529137048086,
+            "positive_count": 60,
+            "median": 7.596604882905026,
+            "q1": 4.653315519708787,
+            "q3": 10.865611530385399,
+            "span_fraction": 0.9835835143234382,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "MgO": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              12.0
+            ],
+            "observed_min": 0.08781456033150814,
+            "observed_max": 11.867315321379756,
+            "positive_min": 0.08781456033150814,
+            "positive_max": 11.867315321379756,
+            "positive_count": 60,
+            "median": 6.803744588368329,
+            "q1": 3.0677501511207392,
+            "q3": 9.401923140029737,
+            "span_fraction": 0.9816250634206872,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "TiO2": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              3.0
+            ],
+            "observed_min": 0.0070478869034468206,
+            "observed_max": 2.8975530543797285,
+            "positive_min": 0.0070478869034468206,
+            "positive_max": 2.8975530543797285,
+            "positive_count": 60,
+            "median": 1.1097650020148273,
+            "q1": 0.39383554642559326,
+            "q3": 1.8124426718346145,
+            "span_fraction": 0.963501722492094,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "MnO": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              4.0
+            ],
+            "observed_min": 0.38913592764993554,
+            "observed_max": 3.93695368485693,
+            "positive_min": 0.38913592764993554,
+            "positive_max": 3.93695368485693,
+            "positive_count": 60,
+            "median": 2.05967918039143,
+            "q1": 0.9945247555365905,
+            "q3": 2.8855896751728145,
+            "span_fraction": 0.8869544393017487,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "P2O5": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              1.0
+            ],
+            "observed_min": 0.0076584896783206124,
+            "observed_max": 0.9587885784164523,
+            "positive_min": 0.0076584896783206124,
+            "positive_max": 0.9587885784164523,
+            "positive_count": 60,
+            "median": 0.3883382995840337,
+            "q1": 0.17099135750342878,
+            "q3": 0.7199014519468045,
+            "span_fraction": 0.9511300887381317,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "K2O": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              2.0
+            ],
+            "observed_min": 0.07126709813947096,
+            "observed_max": 1.934164152407617,
+            "positive_min": 0.07126709813947096,
+            "positive_max": 1.934164152407617,
+            "positive_count": 60,
+            "median": 1.1476022857185693,
+            "q1": 0.433856084799205,
+            "q3": 1.578649066160535,
+            "span_fraction": 0.931448527134073,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Na2O": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              2.0
+            ],
+            "observed_min": 0.0034887263162421966,
+            "observed_max": 1.981451467779051,
+            "positive_min": 0.0034887263162421966,
+            "positive_max": 1.981451467779051,
+            "positive_count": 60,
+            "median": 1.0431172432314542,
+            "q1": 0.5322595287071318,
+            "q3": 1.6404702828790436,
+            "span_fraction": 0.9889813707314044,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "CaSO4": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              3.0
+            ],
+            "observed_min": 0.08008357969302904,
+            "observed_max": 2.9876989380744394,
+            "positive_min": 0.08008357969302904,
+            "positive_max": 2.9876989380744394,
+            "positive_count": 60,
+            "median": 1.4889801065668422,
+            "q1": 0.6933820048591817,
+            "q3": 2.158194691238402,
+            "span_fraction": 0.9692051194604702,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "NaCl": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              0.5
+            ],
+            "observed_min": 0.004506426351666926,
+            "observed_max": 0.4945601099828374,
+            "positive_min": 0.004506426351666926,
+            "positive_max": 0.4945601099828374,
+            "positive_count": 60,
+            "median": 0.256033619080731,
+            "q1": 0.1342935205108185,
+            "q3": 0.3680379250888242,
+            "span_fraction": 0.9801073672623409,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Fe2O3T": {
+            "kind": "balance",
+            "declared_range": [
+              40.0,
+              75.0
+            ],
+            "observed_min": 40.882608168856784,
+            "observed_max": 74.51496411522253,
+            "positive_min": 40.882608168856784,
+            "positive_max": 74.51496411522253,
+            "positive_count": 60,
+            "median": 57.48639571913235,
+            "q1": 52.0350308799066,
+            "q3": 63.031595035248884,
+            "span_fraction": 0.9609244556104498,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "V": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              3000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 2796.172104269914,
+            "positive_min": 1.6635764767510448,
+            "positive_max": 2796.172104269914,
+            "positive_count": 45,
+            "median": 12.781301776123847,
+            "q1": 1.2476823575632836,
+            "q3": 598.6631407148082,
+            "span_fraction": 0.9323681574757966,
+            "log_span_fraction": 0.9276412559914411,
+            "nonzero_fraction": 0.75,
+            "range_ok": true
+          },
+          "Cr": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 2330.041520380263,
+            "positive_min": 1.4541259808904137,
+            "positive_max": 2330.041520380263,
+            "positive_count": 41,
+            "median": 11.737424063792208,
+            "q1": 0.0,
+            "q3": 66.44444065276967,
+            "span_fraction": 0.9323895639776963,
+            "log_span_fraction": 0.9431483833755396,
+            "nonzero_fraction": 0.6833333333333333,
+            "range_ok": true
+          },
+          "Co": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1471.3379283760605,
+            "positive_min": 1.311809629653771,
+            "positive_max": 1471.3379283760605,
+            "positive_count": 47,
+            "median": 83.00223513407542,
+            "q1": 3.4934268842615603,
+            "q3": 373.26338937611354,
+            "span_fraction": 0.9815463164616814,
+            "log_span_fraction": 0.9602499950558355,
+            "nonzero_fraction": 0.7833333333333333,
+            "range_ok": true
+          },
+          "Ni": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1342.4725263754322,
+            "positive_min": 1.053251089782734,
+            "positive_max": 1342.4725263754322,
+            "positive_count": 42,
+            "median": 14.481942975584479,
+            "q1": 0.0,
+            "q3": 120.09538638845419,
+            "span_fraction": 0.6715720492123223,
+            "log_span_fraction": 0.9407286494132175,
+            "nonzero_fraction": 0.7,
+            "range_ok": true
+          },
+          "Cu": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1580.432322250567,
+            "positive_min": 1.0060291508767063,
+            "positive_max": 1580.432322250567,
+            "positive_count": 45,
+            "median": 7.81838769120494,
+            "q1": 0.7545218631575297,
+            "q3": 81.07527791596556,
+            "span_fraction": 0.7906114668587129,
+            "log_span_fraction": 0.9682327461997233,
+            "nonzero_fraction": 0.75,
+            "range_ok": true
+          },
+          "Zn": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              3000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 2640.816568670495,
+            "positive_min": 1.1234599808826862,
+            "positive_max": 2640.816568670495,
+            "positive_count": 49,
+            "median": 22.714747712102042,
+            "q1": 2.80382980605525,
+            "q3": 194.86655997699205,
+            "span_fraction": 0.8805657114606519,
+            "log_span_fraction": 0.9695320876881802,
+            "nonzero_fraction": 0.8166666666666667,
+            "range_ok": true
+          },
+          "As": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 959.4857001896083,
+            "positive_min": 1.0280851549862768,
+            "positive_max": 959.4857001896083,
+            "positive_count": 45,
+            "median": 46.19504352710294,
+            "q1": 0.7710638662397076,
+            "q3": 151.8666750263151,
+            "span_fraction": 0.479982841515562,
+            "log_span_fraction": 0.8997220328964235,
+            "nonzero_fraction": 0.75,
+            "range_ok": true
+          },
+          "Se": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1381.0585719653805,
+            "positive_min": 1.4790110183325709,
+            "positive_max": 1381.0585719653805,
+            "positive_count": 38,
+            "median": 4.113911606882379,
+            "q1": 0.0,
+            "q3": 152.7422407561478,
+            "span_fraction": 0.9213199279288729,
+            "log_span_fraction": 0.9351874509003316,
+            "nonzero_fraction": 0.6333333333333333,
+            "range_ok": true
+          },
+          "Rb": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1758.0199742776585,
+            "positive_min": 1.1462914001684728,
+            "positive_max": 1758.0199742776585,
+            "positive_count": 48,
+            "median": 33.024340730818665,
+            "q1": 1.9515807883846312,
+            "q3": 369.4523927112666,
+            "span_fraction": 0.8794497119948267,
+            "log_span_fraction": 0.9650711369208322,
+            "nonzero_fraction": 0.8,
+            "range_ok": true
+          },
+          "Sr": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              3000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 2388.672331564936,
+            "positive_min": 1.2778885914792975,
+            "positive_max": 2388.672331564936,
+            "positive_count": 42,
+            "median": 11.942570263525075,
+            "q1": 0.0,
+            "q3": 139.7340068940782,
+            "span_fraction": 0.7964896070573311,
+            "log_span_fraction": 0.9409115605891624,
+            "nonzero_fraction": 0.7,
+            "range_ok": true
+          },
+          "Y": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1177.5266439204759,
+            "positive_min": 1.2645941188945495,
+            "positive_max": 1177.5266439204759,
+            "positive_count": 43,
+            "median": 9.681509203060859,
+            "q1": 0.0,
+            "q3": 154.66211608986538,
+            "span_fraction": 0.7855414569182627,
+            "log_span_fraction": 0.934802983535147,
+            "nonzero_fraction": 0.7166666666666667,
+            "range_ok": true
+          },
+          "Zr": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              4000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 2954.9140919129704,
+            "positive_min": 1.8313232405996802,
+            "positive_max": 2954.9140919129704,
+            "positive_count": 40,
+            "median": 16.32805980252637,
+            "q1": 0.0,
+            "q3": 158.5312510665047,
+            "span_fraction": 0.7389132512910653,
+            "log_span_fraction": 0.890540374118846,
+            "nonzero_fraction": 0.6666666666666666,
+            "range_ok": true
+          },
+          "Nb": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1798.0501039519704,
+            "positive_min": 1.508934199848319,
+            "positive_max": 1798.0501039519704,
+            "positive_count": 41,
+            "median": 10.147816213107276,
+            "q1": 0.0,
+            "q3": 105.38032639629982,
+            "span_fraction": 0.8994747893706705,
+            "log_span_fraction": 0.9318702016159864,
+            "nonzero_fraction": 0.6833333333333333,
+            "range_ok": true
+          },
+          "Mo": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1499.4534470864644,
+            "positive_min": 1.235768069602521,
+            "positive_max": 1499.4534470864644,
+            "positive_count": 47,
+            "median": 9.454619580662843,
+            "q1": 1.4734261037457137,
+            "q3": 155.7239367537204,
+            "span_fraction": 1.0003024997241257,
+            "log_span_fraction": 0.9710035908589775,
+            "nonzero_fraction": 0.7833333333333333,
+            "range_ok": true
+          },
+          "Cd": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1200.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 911.4156193290847,
+            "positive_min": 1.008361840674712,
+            "positive_max": 911.4156193290847,
+            "positive_count": 46,
+            "median": 4.743323921394858,
+            "q1": 1.0325853067588948,
+            "q3": 51.15368949384658,
+            "span_fraction": 0.7601464715004876,
+            "log_span_fraction": 0.9600279517297281,
+            "nonzero_fraction": 0.7666666666666667,
+            "range_ok": true
+          },
+          "Sn": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1485.8967882855904,
+            "positive_min": 1.0200223806563382,
+            "positive_max": 1485.8967882855904,
+            "positive_count": 40,
+            "median": 5.559133657017988,
+            "q1": 0.0,
+            "q3": 33.02159101355442,
+            "span_fraction": 0.991258697989053,
+            "log_span_fraction": 0.9959974966407306,
+            "nonzero_fraction": 0.6666666666666666,
+            "range_ok": true
+          },
+          "Sb": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1419.3735467345214,
+            "positive_min": 1.1398957873415876,
+            "positive_max": 1419.3735467345214,
+            "positive_count": 42,
+            "median": 9.862735859487884,
+            "q1": 0.0,
+            "q3": 29.43996207351823,
+            "span_fraction": 0.9468802846794673,
+            "log_span_fraction": 0.9745411280026642,
+            "nonzero_fraction": 0.7,
+            "range_ok": true
+          },
+          "Ba": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              4000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 3737.762078760956,
+            "positive_min": 1.1291750833967225,
+            "positive_max": 3737.762078760956,
+            "positive_count": 50,
+            "median": 52.57443800895716,
+            "q1": 1.7504590541350011,
+            "q3": 263.75991566222535,
+            "span_fraction": 0.9346741882372983,
+            "log_span_fraction": 0.9771770530550934,
+            "nonzero_fraction": 0.8333333333333334,
+            "range_ok": true
+          },
+          "W": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1913.8409951071508,
+            "positive_min": 2.5310828270385004,
+            "positive_max": 1913.8409951071508,
+            "positive_count": 41,
+            "median": 15.72402031380544,
+            "q1": 0.0,
+            "q3": 229.2314936034539,
+            "span_fraction": 0.9573991971521515,
+            "log_span_fraction": 0.8720306993982977,
+            "nonzero_fraction": 0.6833333333333333,
+            "range_ok": true
+          },
+          "Pb": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              3000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1597.7956181823386,
+            "positive_min": 1.0576641312879427,
+            "positive_max": 1597.7956181823386,
+            "positive_count": 46,
+            "median": 5.337123923755713,
+            "q1": 1.1859568580658855,
+            "q3": 116.79288520330093,
+            "span_fraction": 0.5327761314379255,
+            "log_span_fraction": 0.9143119312219031,
+            "nonzero_fraction": 0.7666666666666667,
+            "range_ok": true
+          }
+        },
+        "checks": {
+          "range_ok": true,
+          "nonzero_ok": true,
+          "span_ok": true,
+          "span_metric": "log10_for_traces_linear_for_compounds"
+        }
+      },
+      "sparse_boundary": {
+        "n": 20,
+        "population_gate": true,
+        "variables": {
+          "SiO2": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              25.0
+            ],
+            "observed_min": 0.8659389866170653,
+            "observed_max": 23.715479463366222,
+            "positive_min": 0.8659389866170653,
+            "positive_max": 23.715479463366222,
+            "positive_count": 20,
+            "median": 7.691920459302766,
+            "q1": 2.656739049520096,
+            "q3": 16.703254678082228,
+            "span_fraction": 0.9139816190699662,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Al2O3": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              20.0
+            ],
+            "observed_min": 0.13965624078384975,
+            "observed_max": 18.256207134754202,
+            "positive_min": 0.13965624078384975,
+            "positive_max": 18.256207134754202,
+            "positive_count": 20,
+            "median": 9.270316337918896,
+            "q1": 3.89953806043687,
+            "q3": 14.899794299938058,
+            "span_fraction": 0.9058275446985176,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "CaO": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              14.0
+            ],
+            "observed_min": 0.018078280146560655,
+            "observed_max": 11.71564956685333,
+            "positive_min": 0.018078280146560655,
+            "positive_max": 11.71564956685333,
+            "positive_count": 20,
+            "median": 5.3951105718079715,
+            "q1": 4.337733251794663,
+            "q3": 8.626163602471067,
+            "span_fraction": 0.8355408061933406,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "MgO": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              12.0
+            ],
+            "observed_min": 0.01104542072988135,
+            "observed_max": 11.822957625423502,
+            "positive_min": 0.01104542072988135,
+            "positive_max": 11.822957625423502,
+            "positive_count": 20,
+            "median": 7.145318103501808,
+            "q1": 2.8556830314274766,
+            "q3": 9.175198967249749,
+            "span_fraction": 0.9843260170578016,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "TiO2": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              3.0
+            ],
+            "observed_min": 0.3215166415295596,
+            "observed_max": 2.807479502047206,
+            "positive_min": 0.3215166415295596,
+            "positive_max": 2.807479502047206,
+            "positive_count": 20,
+            "median": 1.7245204272752668,
+            "q1": 0.8630705843757965,
+            "q3": 2.3613479378936715,
+            "span_fraction": 0.8286542868392154,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "MnO": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              4.0
+            ],
+            "observed_min": 0.09289871007371442,
+            "observed_max": 3.955794010798043,
+            "positive_min": 0.09289871007371442,
+            "positive_max": 3.955794010798043,
+            "positive_count": 20,
+            "median": 2.06660103149036,
+            "q1": 0.8849203785479598,
+            "q3": 2.5260534940104633,
+            "span_fraction": 0.9657238251810821,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "P2O5": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              1.0
+            ],
+            "observed_min": 0.054999431809605315,
+            "observed_max": 0.9974769593706888,
+            "positive_min": 0.054999431809605315,
+            "positive_max": 0.9974769593706888,
+            "positive_count": 20,
+            "median": 0.45913758117559245,
+            "q1": 0.29197363590046704,
+            "q3": 0.8041768922684481,
+            "span_fraction": 0.9424775275610835,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "K2O": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              2.0
+            ],
+            "observed_min": 0.11443406048739835,
+            "observed_max": 1.9513650302516192,
+            "positive_min": 0.11443406048739835,
+            "positive_max": 1.9513650302516192,
+            "positive_count": 20,
+            "median": 1.4925378258252548,
+            "q1": 0.6850222852588723,
+            "q3": 1.7118497846250411,
+            "span_fraction": 0.9184654848821104,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Na2O": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              2.0
+            ],
+            "observed_min": 0.03399550189873213,
+            "observed_max": 1.8939762190051546,
+            "positive_min": 0.03399550189873213,
+            "positive_max": 1.8939762190051546,
+            "positive_count": 20,
+            "median": 1.078522077660245,
+            "q1": 0.5692293109815307,
+            "q3": 1.6238329219577892,
+            "span_fraction": 0.9299903585532112,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "CaSO4": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              3.0
+            ],
+            "observed_min": 0.11232423104502576,
+            "observed_max": 2.9978508125732786,
+            "positive_min": 0.11232423104502576,
+            "positive_max": 2.9978508125732786,
+            "positive_count": 20,
+            "median": 1.5282675942403512,
+            "q1": 0.941267863550464,
+            "q3": 1.9185460917878876,
+            "span_fraction": 0.9618421938427509,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "NaCl": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              0.5
+            ],
+            "observed_min": 0.017141185904478162,
+            "observed_max": 0.4884465677574871,
+            "positive_min": 0.017141185904478162,
+            "positive_max": 0.4884465677574871,
+            "positive_count": 20,
+            "median": 0.27444390048558653,
+            "q1": 0.08471641883447113,
+            "q3": 0.41118581788929226,
+            "span_fraction": 0.9426107637060179,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Fe2O3T": {
+            "kind": "balance",
+            "declared_range": [
+              40,
+              100
+            ],
+            "observed_min": 43.619644558820575,
+            "observed_max": 76.09062944949177,
+            "positive_min": 43.619644558820575,
+            "positive_max": 76.09062944949177,
+            "positive_count": 20,
+            "median": 59.87820085247482,
+            "q1": 53.71456386207667,
+            "q3": 68.41094859409104,
+            "span_fraction": 0.5411830815111867,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "V": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              3000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 2266.5276737601694,
+            "positive_min": 1.2313161202465428,
+            "positive_max": 2266.5276737601694,
+            "positive_count": 15,
+            "median": 14.275740764432246,
+            "q1": 0.923487090184907,
+            "q3": 428.1514855586613,
+            "span_fraction": 0.7557611449683792,
+            "log_span_fraction": 0.9389926958645786,
+            "nonzero_fraction": 0.75,
+            "range_ok": true
+          },
+          "Cr": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1396.9267196201283,
+            "positive_min": 1.817546404991045,
+            "positive_max": 1396.9267196201283,
+            "positive_count": 17,
+            "median": 12.794410840147185,
+            "q1": 2.5996286459056592,
+            "q3": 155.80166651493823,
+            "span_fraction": 0.5589942855622763,
+            "log_span_fraction": 0.8492463401555888,
+            "nonzero_fraction": 0.85,
+            "range_ok": true
+          },
+          "Co": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1231.4237454188506,
+            "positive_min": 4.983213090068845,
+            "positive_max": 1231.4237454188506,
+            "positive_count": 16,
+            "median": 27.85879712021999,
+            "q1": 6.15370747835521,
+            "q3": 111.1265932624475,
+            "span_fraction": 0.8214968281646768,
+            "log_span_fraction": 0.753409732256028,
+            "nonzero_fraction": 0.8,
+            "range_ok": true
+          },
+          "Ni": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1997.4857527669476,
+            "positive_min": 1.40981750198064,
+            "positive_max": 1997.4857527669476,
+            "positive_count": 15,
+            "median": 100.68059928850019,
+            "q1": 1.05736312648548,
+            "q3": 554.3356210567852,
+            "span_fraction": 0.9992424976322899,
+            "log_span_fraction": 0.9546477301757431,
+            "nonzero_fraction": 0.75,
+            "range_ok": true
+          },
+          "Cu": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 301.48877598273606,
+            "positive_min": 1.9790946811435095,
+            "positive_max": 301.48877598273606,
+            "positive_count": 13,
+            "median": 4.2561678398725675,
+            "q1": 0.0,
+            "q3": 34.93134355937584,
+            "span_fraction": 0.1508197978903132,
+            "log_span_fraction": 0.661249543271214,
+            "nonzero_fraction": 0.65,
+            "range_ok": true
+          },
+          "Zn": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              3000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 2316.244921688576,
+            "positive_min": 1.593777374871758,
+            "positive_max": 2316.244921688576,
+            "positive_count": 15,
+            "median": 17.082573481934375,
+            "q1": 1.1953330311538186,
+            "q3": 165.81383800773372,
+            "span_fraction": 0.7723390869251671,
+            "log_span_fraction": 0.9094755664703758,
+            "nonzero_fraction": 0.75,
+            "range_ok": true
+          },
+          "As": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1555.0946519357408,
+            "positive_min": 1.8711418422404464,
+            "positive_max": 1555.0946519357408,
+            "positive_count": 14,
+            "median": 11.642950986597398,
+            "q1": 0.0,
+            "q3": 119.55307366606468,
+            "span_fraction": 0.7779362941149278,
+            "log_span_fraction": 0.8844664002219815,
+            "nonzero_fraction": 0.7,
+            "range_ok": true
+          },
+          "Se": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 500.92489479075834,
+            "positive_min": 1.4398915347550116,
+            "positive_max": 500.92489479075834,
+            "positive_count": 14,
+            "median": 9.398733743977488,
+            "q1": 0.0,
+            "q3": 129.80598158202093,
+            "span_fraction": 0.33417271166828444,
+            "log_span_fraction": 0.8001794123305443,
+            "nonzero_fraction": 0.7,
+            "range_ok": true
+          },
+          "Rb": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1043.591480459336,
+            "positive_min": 1.0409447690498213,
+            "positive_max": 1043.591480459336,
+            "positive_count": 16,
+            "median": 10.56902201634994,
+            "q1": 1.3224431602321323,
+            "q3": 41.62811795977633,
+            "span_fraction": 0.522056768613975,
+            "log_span_fraction": 0.909141341287604,
+            "nonzero_fraction": 0.8,
+            "range_ok": true
+          },
+          "Sr": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              3000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1552.5316047015124,
+            "positive_min": 1.9792587834901545,
+            "positive_max": 1552.5316047015124,
+            "positive_count": 14,
+            "median": 13.86878018643409,
+            "q1": 0.0,
+            "q3": 84.00838345124056,
+            "span_fraction": 0.5176830959324816,
+            "log_span_fraction": 0.8324523813994049,
+            "nonzero_fraction": 0.7,
+            "range_ok": true
+          },
+          "Y": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1377.632349884628,
+            "positive_min": 1.0760012187548347,
+            "positive_max": 1377.632349884628,
+            "positive_count": 12,
+            "median": 1.5254763967595744,
+            "q1": 0.0,
+            "q3": 183.15615255891663,
+            "span_fraction": 0.9190342560938145,
+            "log_span_fraction": 0.9783473822834873,
+            "nonzero_fraction": 0.6,
+            "range_ok": true
+          },
+          "Zr": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              4000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 2817.2897537339827,
+            "positive_min": 2.738056113523991,
+            "positive_max": 2817.2897537339827,
+            "positive_count": 13,
+            "median": 7.6527240555808715,
+            "q1": 0.0,
+            "q3": 50.06016900116493,
+            "span_fraction": 0.7044985630742643,
+            "log_span_fraction": 0.8362962245874594,
+            "nonzero_fraction": 0.65,
+            "range_ok": true
+          },
+          "Nb": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1543.3814006553341,
+            "positive_min": 1.1007666003466758,
+            "positive_max": 1543.3814006553341,
+            "positive_count": 17,
+            "median": 41.35328393394575,
+            "q1": 2.1623937188071247,
+            "q3": 130.27845640364194,
+            "span_fraction": 0.7720767386970155,
+            "log_span_fraction": 0.9532715615212534,
+            "nonzero_fraction": 0.85,
+            "range_ok": true
+          },
+          "Mo": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1303.8069020172973,
+            "positive_min": 1.0433307450801939,
+            "positive_max": 1303.8069020172973,
+            "positive_count": 15,
+            "median": 5.7097379513361695,
+            "q1": 0.7824980588101453,
+            "q3": 156.9053787773248,
+            "span_fraction": 0.8697844576499648,
+            "log_span_fraction": 0.9750322071117546,
+            "nonzero_fraction": 0.75,
+            "range_ok": true
+          },
+          "Cd": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1200.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 546.5617321653564,
+            "positive_min": 1.4240815152465807,
+            "positive_max": 546.5617321653564,
+            "positive_count": 17,
+            "median": 68.90643639927488,
+            "q1": 5.010325715434306,
+            "q3": 310.21469996079355,
+            "span_fraction": 0.4558479834573448,
+            "log_span_fraction": 0.83921801455527,
+            "nonzero_fraction": 0.85,
+            "range_ok": true
+          },
+          "Sn": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1366.40013700476,
+            "positive_min": 2.1552007263722137,
+            "positive_max": 1366.40013700476,
+            "positive_count": 14,
+            "median": 50.930886485641295,
+            "q1": 0.0,
+            "q3": 227.02657011094004,
+            "span_fraction": 0.911541118749006,
+            "log_span_fraction": 0.8822448549457726,
+            "nonzero_fraction": 0.7,
+            "range_ok": true
+          },
+          "Sb": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1391.8981416190893,
+            "positive_min": 2.5737246073079354,
+            "positive_max": 1391.8981416190893,
+            "positive_count": 13,
+            "median": 58.209599606808226,
+            "q1": 0.0,
+            "q3": 343.8592990062308,
+            "span_fraction": 0.9285511284983918,
+            "log_span_fraction": 0.8605059355136405,
+            "nonzero_fraction": 0.65,
+            "range_ok": true
+          },
+          "Ba": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              4000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 2550.814838758873,
+            "positive_min": 1.4324253427308644,
+            "positive_max": 2550.814838758873,
+            "positive_count": 14,
+            "median": 42.79361606876007,
+            "q1": 0.0,
+            "q3": 368.4073296042427,
+            "span_fraction": 0.6378631754835892,
+            "log_span_fraction": 0.9024299835450308,
+            "nonzero_fraction": 0.7,
+            "range_ok": true
+          },
+          "W": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1684.9875420318067,
+            "positive_min": 1.0269854070095064,
+            "positive_max": 1684.9875420318067,
+            "positive_count": 17,
+            "median": 20.008807015818107,
+            "q1": 1.8095397398726905,
+            "q3": 250.14625687227385,
+            "span_fraction": 0.8429152286302185,
+            "log_span_fraction": 0.9739482603813172,
+            "nonzero_fraction": 0.85,
+            "range_ok": true
+          },
+          "Pb": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              3000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 331.8838166261855,
+            "positive_min": 1.0892189123716938,
+            "positive_max": 331.8838166261855,
+            "positive_count": 11,
+            "median": 1.0913007971783484,
+            "q1": 0.0,
+            "q3": 11.607322734252179,
+            "span_fraction": 0.1106648271511122,
+            "log_span_fraction": 0.7143469325149667,
+            "nonzero_fraction": 0.55,
+            "range_ok": true
+          }
+        },
+        "checks": {
+          "range_ok": true,
+          "nonzero_ok": true,
+          "span_ok": true,
+          "span_metric": "log10_for_traces_linear_for_compounds"
+        }
+      },
+      "interference": {
+        "n": 20,
+        "population_gate": false,
+        "variables": {
+          "SiO2": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              25.0
+            ],
+            "observed_min": 8.985487433153484,
+            "observed_max": 23.403975902127122,
+            "positive_min": 8.985487433153484,
+            "positive_max": 23.403975902127122,
+            "positive_count": 20,
+            "median": 20.121626203267546,
+            "q1": 15.954506783820655,
+            "q3": 22.325298354900816,
+            "span_fraction": 0.5767395387589456,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Al2O3": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              20.0
+            ],
+            "observed_min": 0.23895889907527668,
+            "observed_max": 6.641307783549124,
+            "positive_min": 0.23895889907527668,
+            "positive_max": 6.641307783549124,
+            "positive_count": 20,
+            "median": 5.391693301819275,
+            "q1": 3.272964734990583,
+            "q3": 6.534641888394431,
+            "span_fraction": 0.32011744422369237,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "CaO": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              14.0
+            ],
+            "observed_min": 3.8251391685339873,
+            "observed_max": 11.439091388978673,
+            "positive_min": 3.8251391685339873,
+            "positive_max": 11.439091388978673,
+            "positive_count": 20,
+            "median": 6.701251464577622,
+            "q1": 4.42615914388886,
+            "q3": 9.441775692355737,
+            "span_fraction": 0.5438537300317633,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "MgO": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              12.0
+            ],
+            "observed_min": 2.273380168318001,
+            "observed_max": 11.730978698971319,
+            "positive_min": 2.273380168318001,
+            "positive_max": 11.730978698971319,
+            "positive_count": 20,
+            "median": 7.528165646867324,
+            "q1": 3.4409855489090377,
+            "q3": 11.352352638214278,
+            "span_fraction": 0.7881332108877764,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "TiO2": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              3.0
+            ],
+            "observed_min": 0.0630707671550147,
+            "observed_max": 1.4793138826723244,
+            "positive_min": 0.0630707671550147,
+            "positive_max": 1.4793138826723244,
+            "positive_count": 20,
+            "median": 1.116161243218597,
+            "q1": 0.7214448435656211,
+            "q3": 1.3383931837191092,
+            "span_fraction": 0.4720810385057699,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "MnO": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              4.0
+            ],
+            "observed_min": 0.35491978211885167,
+            "observed_max": 3.2240405192771844,
+            "positive_min": 0.35491978211885167,
+            "positive_max": 3.2240405192771844,
+            "positive_count": 20,
+            "median": 2.048742915867808,
+            "q1": 1.5377381297472321,
+            "q3": 2.4301163194034894,
+            "span_fraction": 0.7172801842895832,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "P2O5": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              1.0
+            ],
+            "observed_min": 0.08014986346330566,
+            "observed_max": 0.9118550991590655,
+            "positive_min": 0.08014986346330566,
+            "positive_max": 0.9118550991590655,
+            "positive_count": 20,
+            "median": 0.5861580176951904,
+            "q1": 0.21561825246522293,
+            "q3": 0.9116200147331555,
+            "span_fraction": 0.8317052356957598,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "K2O": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              2.0
+            ],
+            "observed_min": 0.1245605799022842,
+            "observed_max": 0.7347848334161278,
+            "positive_min": 0.1245605799022842,
+            "positive_max": 0.7347848334161278,
+            "positive_count": 20,
+            "median": 0.3442693577820901,
+            "q1": 0.24861841219175335,
+            "q3": 0.4826219778109848,
+            "span_fraction": 0.3051121267569218,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Na2O": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              2.0
+            ],
+            "observed_min": 0.19225560063076697,
+            "observed_max": 1.4826652725303928,
+            "positive_min": 0.19225560063076697,
+            "positive_max": 1.4826652725303928,
+            "positive_count": 20,
+            "median": 0.974321013389196,
+            "q1": 0.759261428987106,
+            "q3": 1.120950309386978,
+            "span_fraction": 0.6452048359498129,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "CaSO4": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              3.0
+            ],
+            "observed_min": 0.2510942835857467,
+            "observed_max": 2.1380297354763966,
+            "positive_min": 0.2510942835857467,
+            "positive_max": 2.1380297354763966,
+            "positive_count": 20,
+            "median": 1.1955992299842158,
+            "q1": 0.2602875164370304,
+            "q3": 2.130392333304829,
+            "span_fraction": 0.62897848396355,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "NaCl": {
+            "kind": "compound",
+            "declared_range": [
+              0.0,
+              0.5
+            ],
+            "observed_min": 0.30130088502429814,
+            "observed_max": 0.4790281118468976,
+            "positive_min": 0.30130088502429814,
+            "positive_max": 0.4790281118468976,
+            "positive_count": 20,
+            "median": 0.41222952919097233,
+            "q1": 0.3468439584985341,
+            "q3": 0.4665825845057234,
+            "span_fraction": 0.3554544536451989,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Fe2O3T": {
+            "kind": "balance",
+            "declared_range": [
+              40.0,
+              75.0
+            ],
+            "observed_min": 46.820818853268655,
+            "observed_max": 69.9332196787897,
+            "positive_min": 46.820818853268655,
+            "positive_max": 69.9332196787897,
+            "positive_count": 20,
+            "median": 53.90687922532574,
+            "q1": 50.58107426688488,
+            "q3": 59.467142439351235,
+            "span_fraction": 0.6603543093006012,
+            "log_span_fraction": null,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "V": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              3000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 2339.1347086893043,
+            "positive_min": 23.324860179203682,
+            "positive_max": 2339.1347086893043,
+            "positive_count": 18,
+            "median": 88.54221511082135,
+            "q1": 23.324860179203682,
+            "q3": 781.027765808346,
+            "span_fraction": 0.7799715600831292,
+            "log_span_fraction": 0.5755439737388369,
+            "nonzero_fraction": 0.9,
+            "range_ok": true
+          },
+          "Cr": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 119.55015007292458,
+            "positive_min": 50.95492478544331,
+            "positive_max": 119.55015007292458,
+            "positive_count": 18,
+            "median": 60.63017781667449,
+            "q1": 50.95492478544331,
+            "q3": 81.58398651603892,
+            "span_fraction": 0.04783919570745281,
+            "log_span_fraction": 0.10899661554309417,
+            "nonzero_fraction": 0.9,
+            "range_ok": true
+          },
+          "Co": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 213.00015223253183,
+            "positive_min": 41.61791450287817,
+            "positive_max": 213.00015223253183,
+            "positive_count": 8,
+            "median": 0.0,
+            "q1": 0.0,
+            "q3": 209.3172174439261,
+            "span_fraction": 0.1420948313759385,
+            "log_span_fraction": 0.2232617208747103,
+            "nonzero_fraction": 0.4,
+            "range_ok": true
+          },
+          "Ni": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1505.633605704943,
+            "positive_min": 6.346530238244232,
+            "positive_max": 1505.633605704943,
+            "positive_count": 13,
+            "median": 6.346530238244232,
+            "q1": 0.0,
+            "q3": 407.6218373033944,
+            "span_fraction": 0.7531933995522476,
+            "log_span_fraction": 0.7195278289357139,
+            "nonzero_fraction": 0.65,
+            "range_ok": true
+          },
+          "Cu": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 247.46160019198828,
+            "positive_min": 49.49232003839766,
+            "positive_max": 247.46160019198828,
+            "positive_count": 13,
+            "median": 54.7215017190845,
+            "q1": 0.0,
+            "q3": 204.42164301084404,
+            "span_fraction": 0.12379269644421625,
+            "log_span_fraction": 0.21174300301849433,
+            "nonzero_fraction": 0.65,
+            "range_ok": true
+          },
+          "Zn": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              3000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 60.330706631507766,
+            "positive_min": 36.89900963883594,
+            "positive_max": 60.330706631507766,
+            "positive_count": 13,
+            "median": 36.89900963883594,
+            "q1": 0.0,
+            "q3": 52.20191668667518,
+            "span_fraction": 0.020116941190899556,
+            "log_span_fraction": 0.06140818409484435,
+            "nonzero_fraction": 0.65,
+            "range_ok": true
+          },
+          "As": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 468.86935173430265,
+            "positive_min": 18.739547027840256,
+            "positive_max": 468.86935173430265,
+            "positive_count": 15,
+            "median": 28.01377350049306,
+            "q1": 14.054660270880191,
+            "q3": 145.18333791343505,
+            "span_fraction": 0.23455195184307287,
+            "log_span_fraction": 0.42359286597013046,
+            "nonzero_fraction": 0.75,
+            "range_ok": true
+          },
+          "Se": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 230.28896757984535,
+            "positive_min": 17.975739530182974,
+            "positive_max": 230.28896757984535,
+            "positive_count": 8,
+            "median": 0.0,
+            "q1": 0.0,
+            "q3": 17.975739530182974,
+            "span_fraction": 0.15362839731810898,
+            "log_span_fraction": 0.34872624113835676,
+            "nonzero_fraction": 0.4,
+            "range_ok": true
+          },
+          "Rb": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 170.70287037263944,
+            "positive_min": 14.02352281780307,
+            "positive_max": 170.70287037263944,
+            "positive_count": 15,
+            "median": 46.9753405784348,
+            "q1": 10.517642113352302,
+            "q3": 102.62108634745977,
+            "span_fraction": 0.08539413225244594,
+            "log_span_fraction": 0.32880152552137293,
+            "nonzero_fraction": 0.75,
+            "range_ok": true
+          },
+          "Sr": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              3000.0
+            ],
+            "observed_min": 32.71961256355473,
+            "observed_max": 1649.2367728652803,
+            "positive_min": 32.71961256355473,
+            "positive_max": 1649.2367728652803,
+            "positive_count": 20,
+            "median": 437.52065790470306,
+            "q1": 37.20153809898764,
+            "q3": 1039.5685451152756,
+            "span_fraction": 0.5390187263426894,
+            "log_span_fraction": 0.4896219408064526,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Y": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 536.8491720728621,
+            "positive_min": 3.5546027299392287,
+            "positive_max": 536.8491720728621,
+            "positive_count": 15,
+            "median": 5.413504282417331,
+            "q1": 2.6659520474544216,
+            "q3": 139.6665973943871,
+            "span_fraction": 0.35813820685314346,
+            "log_span_fraction": 0.6860826846126871,
+            "nonzero_fraction": 0.75,
+            "range_ok": true
+          },
+          "Zr": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              4000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 3826.035325000491,
+            "positive_min": 18.24243738798502,
+            "positive_max": 3826.035325000491,
+            "positive_count": 10,
+            "median": 9.12121869399251,
+            "q1": 0.0,
+            "q3": 970.1906592911115,
+            "span_fraction": 0.9567480182546864,
+            "log_span_fraction": 0.6445384354278261,
+            "nonzero_fraction": 0.5,
+            "range_ok": true
+          },
+          "Nb": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 188.35155232345,
+            "positive_min": 8.494648654274847,
+            "positive_max": 188.35155232345,
+            "positive_count": 10,
+            "median": 4.247324327137424,
+            "q1": 0.0,
+            "q3": 53.458874571568636,
+            "span_fraction": 0.09422288760552776,
+            "log_span_fraction": 0.4076981381021865,
+            "nonzero_fraction": 0.5,
+            "range_ok": true
+          },
+          "Mo": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 386.6265322822401,
+            "positive_min": 35.4841257471652,
+            "positive_max": 386.6265322822401,
+            "positive_count": 15,
+            "median": 44.08381138902246,
+            "q1": 26.613094310373903,
+            "q3": 136.16925584371978,
+            "span_fraction": 0.25792297016827226,
+            "log_span_fraction": 0.32658304185889375,
+            "nonzero_fraction": 0.75,
+            "range_ok": true
+          },
+          "Cd": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1200.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 601.0298441777617,
+            "positive_min": 1.259890437754882,
+            "positive_max": 601.0298441777617,
+            "positive_count": 10,
+            "median": 0.629945218877441,
+            "q1": 0.0,
+            "q3": 151.20237887275658,
+            "span_fraction": 0.5012759334259898,
+            "log_span_fraction": 0.869894638756908,
+            "nonzero_fraction": 0.5,
+            "range_ok": true
+          },
+          "Sn": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 14.671830616838559,
+            "observed_max": 662.5546546499664,
+            "positive_min": 14.671830616838559,
+            "positive_max": 662.5546546499664,
+            "positive_count": 20,
+            "median": 450.25000067326357,
+            "q1": 233.6978671206655,
+            "q3": 610.9837552059312,
+            "span_fraction": 0.43221002270388786,
+            "log_span_fraction": 0.5209980664571264,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Sb": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              1500.0
+            ],
+            "observed_min": 23.74130460280089,
+            "observed_max": 1060.402503023114,
+            "positive_min": 23.74130460280089,
+            "positive_max": 1060.402503023114,
+            "positive_count": 20,
+            "median": 119.2402264731921,
+            "q1": 91.65360468381233,
+            "q3": 358.2426869324545,
+            "span_fraction": 0.6915685112877338,
+            "log_span_fraction": 0.5194958297874,
+            "nonzero_fraction": 1.0,
+            "range_ok": true
+          },
+          "Ba": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              4000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 1558.1099964303903,
+            "positive_min": 10.815089075789027,
+            "positive_max": 1558.1099964303903,
+            "positive_count": 15,
+            "median": 422.77427341814087,
+            "q1": 8.11131680684177,
+            "q3": 1015.5775924279671,
+            "span_fraction": 0.38962490533393107,
+            "log_span_fraction": 0.599259317820271,
+            "nonzero_fraction": 0.75,
+            "range_ok": true
+          },
+          "W": {
+            "kind": "trace",
+            "declared_range": [
+              1.0,
+              2000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 3.962317480514756,
+            "positive_min": 2.1951742977869753,
+            "positive_max": 3.962317480514756,
+            "positive_count": 10,
+            "median": 1.0975871488934876,
+            "q1": 0.0,
+            "q3": 2.6369600934689204,
+            "span_fraction": 0.0019821498151649606,
+            "log_span_fraction": 0.07769704051262215,
+            "nonzero_fraction": 0.5,
+            "range_ok": true
+          },
+          "Pb": {
+            "kind": "trace",
+            "declared_range": [
+              1,
+              3000.0
+            ],
+            "observed_min": 0.0,
+            "observed_max": 2006.1551997200459,
+            "positive_min": 46.05779351596907,
+            "positive_max": 2006.1551997200459,
+            "positive_count": 13,
+            "median": 359.0118544487045,
+            "q1": 0.0,
+            "q3": 1005.5132364660914,
+            "span_fraction": 0.6689413803668042,
+            "log_span_fraction": 0.47138459641172875,
+            "nonzero_fraction": 0.65,
+            "range_ok": true
+          }
+        },
+        "checks": {
+          "range_ok": true,
+          "nonzero_ok": true,
+          "span_ok": true,
+          "span_metric": "not_applicable_controlled_family"
+        }
+      }
+    }
+  },
+  "checks": {
+    "silicate_oxide/routine": {
+      "range_ok": true,
+      "nonzero_ok": true,
+      "span_ok": true,
+      "span_metric": "log10_for_traces_linear_for_compounds"
+    },
+    "silicate_oxide/sparse_boundary": {
+      "range_ok": true,
+      "nonzero_ok": true,
+      "span_ok": true,
+      "span_metric": "log10_for_traces_linear_for_compounds"
+    },
+    "silicate_oxide/interference": {
+      "range_ok": true,
+      "nonzero_ok": true,
+      "span_ok": true,
+      "span_metric": "not_applicable_controlled_family"
+    },
+    "iron_oxide/routine": {
+      "range_ok": true,
+      "nonzero_ok": true,
+      "span_ok": true,
+      "span_metric": "log10_for_traces_linear_for_compounds"
+    },
+    "iron_oxide/sparse_boundary": {
+      "range_ok": true,
+      "nonzero_ok": true,
+      "span_ok": true,
+      "span_metric": "log10_for_traces_linear_for_compounds"
+    },
+    "iron_oxide/interference": {
+      "range_ok": true,
+      "nonzero_ok": true,
+      "span_ok": true,
+      "span_metric": "not_applicable_controlled_family"
+    }
+  }
+}
