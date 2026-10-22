@@ -1,0 +1,32 @@
+{
+  "schema": "member_D-git-delivery-verification/v1",
+  "repository": "twinkle-air/xray-analysis-next",
+  "branch": "feat/round2-D-delivery-20261022",
+  "verified_tree_commit": "0360e67b8b7f72dfcd598943f0e4da23eef49832",
+  "verified_path": "datasets/round2/member_D",
+  "command": "python scripts/verify_delivery_D.py --root datasets/round2/member_D",
+  "verified_at_utc": "2026-10-22T13:59:36Z",
+  "resubmitted_file": {
+    "path": "reports/generator_tests_D.log",
+    "sha256": "ecae450a2c22e68a8d11d5d51a8ba28e29210328366be1fa2199584f21b7bc99",
+    "bytes": 6393,
+    "reason": "listed in SHA256SUMS but previously excluded by the repository *.log ignore rule; added with a forced add, original CRLF bytes preserved"
+  },
+  "result": {
+    "status": "passed",
+    "root": "datasets/round2/member_D",
+    "batches": 30,
+    "spectra": 1500,
+    "hashes_verified": 165,
+    "files_on_disk": 166,
+    "unit_tests": {
+      "status": "passed",
+      "tests_run": 47,
+      "seconds": 11.509,
+      "log": "reports/generator_tests_D.log",
+      "utf8_mode_note": "Run with PYTHONUTF8=1. The default cp936 locale mis-decodes the UTF-8 temp path containing the non-ASCII user name; without UTF-8 mode one robustness test reports a false JSON escape error."
+    },
+    "errors": []
+  },
+  "note": "Verifier executed against a clean export of the commit tree (tracked files only), so ignored and untracked files cannot mask a missing artifact. The commit that adds this evidence file does not modify datasets/round2/member_D."
+}
