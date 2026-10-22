@@ -1,0 +1,45 @@
+{
+  "main": "301ee8be557f1317d1696da6d0c5302d12a590ab",
+  "plan_ref": "301ee8be557f1317d1696da6d0c5302d12a590ab",
+  "pr19": {
+    "state": "closed",
+    "merged": true
+  },
+  "round3_blob_paths": [
+    "datasets/round3/README.md",
+    "datasets/round3/member_A/README.md",
+    "datasets/round3/member_B/README.md",
+    "datasets/round3/member_C/README.md",
+    "datasets/round3/member_D/README.md",
+    "datasets/round3/planning/A_任务清单.md",
+    "datasets/round3/planning/B_任务清单.md",
+    "datasets/round3/planning/C_任务清单.md",
+    "datasets/round3/planning/D_任务清单.md",
+    "datasets/round3/planning/方案数量核对.json",
+    "datasets/round3/planning/第三轮数据构建方案.md",
+    "datasets/round3/planning/第三轮数量与状态.json",
+    "datasets/round3/shared/README.md",
+    "datasets/round3/shared/templates/README.md",
+    "datasets/round3/shared/templates/candidate_registry.template.csv",
+    "datasets/round3/shared/templates/delivery_manifest.template.json",
+    "datasets/round3/shared/templates/freeze_checklist.template.json",
+    "datasets/round3/shared/templates/selfcheck_summary.template.json"
+  ],
+  "reference_profiles": [
+    {
+      "path": "datasets/round2/member_A/production_inputs_v2/profiles/P1.json",
+      "git_blob": "1ea7e466af9c52997a072a31932145edc4b39319",
+      "sha256": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221"
+    },
+    {
+      "path": "datasets/round2/member_A/production_inputs_v2/profiles/P2.json",
+      "git_blob": "b6c5410cebe8ac491b57323d6ecf38955da58a73",
+      "sha256": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03"
+    },
+    {
+      "path": "datasets/round2/member_A/production_inputs_v2/profiles/P3.json",
+      "git_blob": "5670ef9a81ba52a23de3d2283c6ef78d7e1e37c8",
+      "sha256": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351"
+    }
+  ]
+}

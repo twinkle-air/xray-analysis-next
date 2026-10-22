@@ -1,0 +1,32 @@
+{
+  "repository_commit": "301ee8be557f1317d1696da6d0c5302d12a590ab",
+  "pr19_merged": true,
+  "generator_source_sha256": {
+    "core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+    "dataset.py": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+    "app.py": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+    "version.py": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+    "requirements-lock.txt": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "implementation": "CPython",
+    "system": "Windows",
+    "machine": "AMD64",
+    "packages": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "xraylib": "4.3.0",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5"
+    },
+    "bit_generator": "PCG64",
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "physics_core_unchanged_from_round2": true
+}

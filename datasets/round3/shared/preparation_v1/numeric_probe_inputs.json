@@ -1,0 +1,26 @@
+{
+  "scope": "two fixed mathematical homogeneous mixtures for configuration QA, not CRM, third-round recipes or training spectra",
+  "materials": {
+    "silicate_numeric_probe": {
+      "Si": 28.0,
+      "O": 45.0,
+      "Al": 8.0,
+      "Fe": 10.0,
+      "Ca": 5.0,
+      "Na": 2.0,
+      "Zn": 1.0,
+      "Ba": 1.0
+    },
+    "iron_numeric_probe": {
+      "Fe": 45.0,
+      "O": 35.0,
+      "Si": 8.0,
+      "Al": 5.0,
+      "Ca": 4.0,
+      "Na": 1.0,
+      "Zn": 1.0,
+      "Ba": 1.0
+    }
+  },
+  "poisson": false
+}
