@@ -1,0 +1,422 @@
+{
+  "schema": "D-design-checks/v1",
+  "owner": "D",
+  "generated_at_utc": "2026-10-22T07:40:24.617741+00:00",
+  "status": "selfcheck_passed",
+  "acceptance": "coordinator_direct_confirmation_no_A_dedup",
+  "acceptance_note": "Coordinator confirmed the candidate set on 2026-10-22 and waived the A cross-member dedup response before spectra generation.",
+  "cross_member_dedup": "waived_by_coordinator",
+  "counts": {
+    "silicate_oxide": {
+      "routine": 90,
+      "sparse_boundary": 30,
+      "interference": 30,
+      "total": 150
+    },
+    "iron_oxide": {
+      "routine": 60,
+      "sparse_boundary": 20,
+      "interference": 20,
+      "total": 100
+    },
+    "total": 250,
+    "backups": 30
+  },
+  "hard_checks": {
+    "candidate_count_250": true,
+    "quota_match": true,
+    "id_unique": true,
+    "vector_unique": true,
+    "closure_ok": true,
+    "recompute_ok": true,
+    "range_ok": true,
+    "shards_ok": true,
+    "groups_ok": true,
+    "coverage_ok": true,
+    "backup_ok": true
+  },
+  "max_closure_deviation_percent": 1.4210854715202004e-14,
+  "max_recompute_deviation_percent": 0.0,
+  "range_violation_count": 0,
+  "duplicate_groups": [],
+  "dedup": {
+    "exact_duplicate_groups": 0,
+    "min_non_group_normalised_distance": 0.6096443952283855,
+    "near_pair_count_below_0_01": 0,
+    "nearest_pairs": []
+  },
+  "shards": {
+    "S01": {
+      "checks": {
+        "count_25": true,
+        "routine_15": true,
+        "sparse_5": true,
+        "interference_5": true,
+        "family_pure": true,
+        "one_group": true,
+        "variants_v0_v4": true
+      },
+      "counts": {
+        "routine": 15,
+        "sparse_boundary": 5,
+        "interference": 5
+      },
+      "group_ids": [
+        "D-SIL-I-01"
+      ]
+    },
+    "S02": {
+      "checks": {
+        "count_25": true,
+        "routine_15": true,
+        "sparse_5": true,
+        "interference_5": true,
+        "family_pure": true,
+        "one_group": true,
+        "variants_v0_v4": true
+      },
+      "counts": {
+        "routine": 15,
+        "sparse_boundary": 5,
+        "interference": 5
+      },
+      "group_ids": [
+        "D-SIL-I-02"
+      ]
+    },
+    "S03": {
+      "checks": {
+        "count_25": true,
+        "routine_15": true,
+        "sparse_5": true,
+        "interference_5": true,
+        "family_pure": true,
+        "one_group": true,
+        "variants_v0_v4": true
+      },
+      "counts": {
+        "routine": 15,
+        "sparse_boundary": 5,
+        "interference": 5
+      },
+      "group_ids": [
+        "D-SIL-I-03"
+      ]
+    },
+    "S04": {
+      "checks": {
+        "count_25": true,
+        "routine_15": true,
+        "sparse_5": true,
+        "interference_5": true,
+        "family_pure": true,
+        "one_group": true,
+        "variants_v0_v4": true
+      },
+      "counts": {
+        "routine": 15,
+        "sparse_boundary": 5,
+        "interference": 5
+      },
+      "group_ids": [
+        "D-SIL-I-04"
+      ]
+    },
+    "S05": {
+      "checks": {
+        "count_25": true,
+        "routine_15": true,
+        "sparse_5": true,
+        "interference_5": true,
+        "family_pure": true,
+        "one_group": true,
+        "variants_v0_v4": true
+      },
+      "counts": {
+        "routine": 15,
+        "sparse_boundary": 5,
+        "interference": 5
+      },
+      "group_ids": [
+        "D-SIL-I-05"
+      ]
+    },
+    "S06": {
+      "checks": {
+        "count_25": true,
+        "routine_15": true,
+        "sparse_5": true,
+        "interference_5": true,
+        "family_pure": true,
+        "one_group": true,
+        "variants_v0_v4": true
+      },
+      "counts": {
+        "routine": 15,
+        "sparse_boundary": 5,
+        "interference": 5
+      },
+      "group_ids": [
+        "D-SIL-I-06"
+      ]
+    },
+    "S07": {
+      "checks": {
+        "count_25": true,
+        "routine_15": true,
+        "sparse_5": true,
+        "interference_5": true,
+        "family_pure": true,
+        "one_group": true,
+        "variants_v0_v4": true
+      },
+      "counts": {
+        "routine": 15,
+        "sparse_boundary": 5,
+        "interference": 5
+      },
+      "group_ids": [
+        "D-FE-I-01"
+      ]
+    },
+    "S08": {
+      "checks": {
+        "count_25": true,
+        "routine_15": true,
+        "sparse_5": true,
+        "interference_5": true,
+        "family_pure": true,
+        "one_group": true,
+        "variants_v0_v4": true
+      },
+      "counts": {
+        "routine": 15,
+        "sparse_boundary": 5,
+        "interference": 5
+      },
+      "group_ids": [
+        "D-FE-I-02"
+      ]
+    },
+    "S09": {
+      "checks": {
+        "count_25": true,
+        "routine_15": true,
+        "sparse_5": true,
+        "interference_5": true,
+        "family_pure": true,
+        "one_group": true,
+        "variants_v0_v4": true
+      },
+      "counts": {
+        "routine": 15,
+        "sparse_boundary": 5,
+        "interference": 5
+      },
+      "group_ids": [
+        "D-FE-I-03"
+      ]
+    },
+    "S10": {
+      "checks": {
+        "count_25": true,
+        "routine_15": true,
+        "sparse_5": true,
+        "interference_5": true,
+        "family_pure": true,
+        "one_group": true,
+        "variants_v0_v4": true
+      },
+      "counts": {
+        "routine": 15,
+        "sparse_boundary": 5,
+        "interference": 5
+      },
+      "group_ids": [
+        "D-FE-I-04"
+      ]
+    }
+  },
+  "groups": {
+    "D-SIL-I-01": {
+      "checks": {
+        "count_5": true,
+        "pair_levels": true,
+        "shared_non_pair": true,
+        "parent_ids": true,
+        "balanced": true
+      },
+      "pair": [
+        "V",
+        "Cr"
+      ],
+      "common_level_ppm": 31.622776601683793
+    },
+    "D-SIL-I-02": {
+      "checks": {
+        "count_5": true,
+        "pair_levels": true,
+        "shared_non_pair": true,
+        "parent_ids": true,
+        "balanced": true
+      },
+      "pair": [
+        "As",
+        "Pb"
+      ],
+      "common_level_ppm": 37.60603093086394
+    },
+    "D-SIL-I-03": {
+      "checks": {
+        "count_5": true,
+        "pair_levels": true,
+        "shared_non_pair": true,
+        "parent_ids": true,
+        "balanced": true
+      },
+      "pair": [
+        "Sr",
+        "Zr"
+      ],
+      "common_level_ppm": 44.721359549995796
+    },
+    "D-SIL-I-04": {
+      "checks": {
+        "count_5": true,
+        "pair_levels": true,
+        "shared_non_pair": true,
+        "parent_ids": true,
+        "balanced": true
+      },
+      "pair": [
+        "Nb",
+        "Y"
+      ],
+      "common_level_ppm": 22.360679774997898
+    },
+    "D-SIL-I-05": {
+      "checks": {
+        "count_5": true,
+        "pair_levels": true,
+        "shared_non_pair": true,
+        "parent_ids": true,
+        "balanced": true
+      },
+      "pair": [
+        "Zr",
+        "Mo"
+      ],
+      "common_level_ppm": 37.60603093086394
+    },
+    "D-SIL-I-06": {
+      "checks": {
+        "count_5": true,
+        "pair_levels": true,
+        "shared_non_pair": true,
+        "parent_ids": true,
+        "balanced": true
+      },
+      "pair": [
+        "W",
+        "Zn"
+      ],
+      "common_level_ppm": 37.60603093086394
+    },
+    "D-FE-I-01": {
+      "checks": {
+        "count_5": true,
+        "pair_levels": true,
+        "shared_non_pair": true,
+        "parent_ids": true,
+        "balanced": true
+      },
+      "pair": [
+        "Co",
+        "Ni"
+      ],
+      "common_level_ppm": 41.61791450287817
+    },
+    "D-FE-I-02": {
+      "checks": {
+        "count_5": true,
+        "pair_levels": true,
+        "shared_non_pair": true,
+        "parent_ids": true,
+        "balanced": true
+      },
+      "pair": [
+        "Cu",
+        "Zn"
+      ],
+      "common_level_ppm": 49.49232003839766
+    },
+    "D-FE-I-03": {
+      "checks": {
+        "count_5": true,
+        "pair_levels": true,
+        "shared_non_pair": true,
+        "parent_ids": true,
+        "balanced": true
+      },
+      "pair": [
+        "V",
+        "Cr"
+      ],
+      "common_level_ppm": 52.33175696960528
+    },
+    "D-FE-I-04": {
+      "checks": {
+        "count_5": true,
+        "pair_levels": true,
+        "shared_non_pair": true,
+        "parent_ids": true,
+        "balanced": true
+      },
+      "pair": [
+        "Se",
+        "Pb"
+      ],
+      "common_level_ppm": 46.05779351596907
+    }
+  },
+  "coverage": {
+    "silicate_oxide/routine": {
+      "range_ok": true,
+      "nonzero_ok": true,
+      "span_ok": true,
+      "span_metric": "log10_for_traces_linear_for_compounds"
+    },
+    "silicate_oxide/sparse_boundary": {
+      "range_ok": true,
+      "nonzero_ok": true,
+      "span_ok": true,
+      "span_metric": "log10_for_traces_linear_for_compounds"
+    },
+    "silicate_oxide/interference": {
+      "range_ok": true,
+      "nonzero_ok": true,
+      "span_ok": true,
+      "span_metric": "not_applicable_controlled_family"
+    },
+    "iron_oxide/routine": {
+      "range_ok": true,
+      "nonzero_ok": true,
+      "span_ok": true,
+      "span_metric": "log10_for_traces_linear_for_compounds"
+    },
+    "iron_oxide/sparse_boundary": {
+      "range_ok": true,
+      "nonzero_ok": true,
+      "span_ok": true,
+      "span_metric": "log10_for_traces_linear_for_compounds"
+    },
+    "iron_oxide/interference": {
+      "range_ok": true,
+      "nonzero_ok": true,
+      "span_ok": true,
+      "span_metric": "not_applicable_controlled_family"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

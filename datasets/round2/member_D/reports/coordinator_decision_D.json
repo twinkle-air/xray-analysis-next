@@ -1,0 +1,9 @@
+{
+  "schema": "D-coordinator-decision/v1",
+  "decision": "waive_A_cross_member_dedup_and_proceed_to_spectra",
+  "decided_by": "coordinator",
+  "decided_at_utc": "2026-10-22T00:00:00+00:00",
+  "scope": "D candidate set 250 + 30 backups",
+  "effect": "D spectra were generated without an A cross-member dedup response.",
+  "source": "Coordinator selected '你直接确认，立即出谱' in the build session."
+}

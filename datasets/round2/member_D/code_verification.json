@@ -1,0 +1,91 @@
+{
+  "schema": "D-code-verification/v1",
+  "generated_at_utc": "2026-10-22T09:04:55.115548+00:00",
+  "software_version": "0.2.1",
+  "physical_model_version": "0.2.0",
+  "python": {
+    "version": "3.12.10",
+    "implementation": "CPython",
+    "compiler": "MSC v.1943 64 bit (AMD64)",
+    "executable": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\.venv\\Scripts\\python.exe",
+    "build": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "compile": {
+    "scripts\\assemble_delivery_D.py": {
+      "status": "passed",
+      "stderr": null
+    },
+    "scripts\\build_candidates_D.py": {
+      "status": "passed",
+      "stderr": null
+    },
+    "scripts\\make_D_configs.py": {
+      "status": "passed",
+      "stderr": null
+    },
+    "scripts\\run_batches_D.py": {
+      "status": "passed",
+      "stderr": null
+    },
+    "scripts\\verify_delivery_D.py": {
+      "status": "passed",
+      "stderr": null
+    },
+    "scripts\\verify_freeze_D.py": {
+      "status": "passed",
+      "stderr": null
+    },
+    "fp-spectrum-generator-competition-v0.2.1\\fp_competition\\core.py": {
+      "status": "passed",
+      "stderr": null
+    },
+    "fp-spectrum-generator-competition-v0.2.1\\fp_competition\\dataset.py": {
+      "status": "passed",
+      "stderr": null
+    },
+    "fp-spectrum-generator-competition-v0.2.1\\fp_competition\\app.py": {
+      "status": "passed",
+      "stderr": null
+    },
+    "fp-spectrum-generator-competition-v0.2.1\\fp_competition\\minerals.py": {
+      "status": "passed",
+      "stderr": null
+    },
+    "fp-spectrum-generator-competition-v0.2.1\\fp_competition\\version.py": {
+      "status": "passed",
+      "stderr": null
+    }
+  },
+  "unit_tests": {
+    "status": "passed",
+    "tests_run": 47,
+    "seconds": 11.509,
+    "log": "reports/generator_tests_D.log",
+    "utf8_mode_note": "Run with PYTHONUTF8=1. The default cp936 locale mis-decodes the UTF-8 temp path containing the non-ASCII user name; without UTF-8 mode one robustness test reports a false JSON escape error."
+  },
+  "source_sha256": {
+    "round2-D-work\\scripts\\assemble_delivery_D.py": "4d965b2b59b3062b86c489dd6c4c0e963b8b6c0111d29e78f2403865b0fb0133",
+    "round2-D-work\\scripts\\build_candidates_D.py": "37e40d2904751f862c0b752535282d84c9e368f5720074994a5b563295aa19fb",
+    "round2-D-work\\scripts\\make_D_configs.py": "b63ccf06815e11ec6684a00a7bbe5287b3beb7da607d07116c8e3f255a912899",
+    "round2-D-work\\scripts\\run_batches_D.py": "4b931c3afd58c824fb28cff6aab00d0e46c00cae05d0a1b6423dfc1ea22c66ad",
+    "round2-D-work\\scripts\\verify_delivery_D.py": "3b57a4409c4630c9b6ccca345575cfb36f589ba1ba072a96dd16c9a67af13e5a",
+    "round2-D-work\\scripts\\verify_freeze_D.py": "8bd04dbad5882ad4b63e94180b315e55b774cc39ffd1ad72d7736994f9f517d3",
+    "fp-spectrum-generator-competition-v0.2.1\\fp_competition\\core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "fp-spectrum-generator-competition-v0.2.1\\fp_competition\\dataset.py": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+    "fp-spectrum-generator-competition-v0.2.1\\fp_competition\\app.py": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+    "fp-spectrum-generator-competition-v0.2.1\\fp_competition\\minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+    "fp-spectrum-generator-competition-v0.2.1\\fp_competition\\version.py": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130"
+  },
+  "freeze_verification": {
+    "report": "reports/freeze_verification_D.json",
+    "total": null,
+    "matched": null,
+    "mismatch": null,
+    "physics_baseline_matched": null
+  },
+  "pending": [],
+  "limitations": [
+    "Synthetic data; no real-device calibration or concentration-accuracy proof.",
+    "A cross-member dedup was waived by the coordinator before spectra generation."
+  ]
+}

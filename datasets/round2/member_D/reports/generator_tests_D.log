@@ -1,0 +1,52 @@
+test_absorption_edge_is_preserved (test_core.ForwardModelTests.test_absorption_edge_is_preserved) ... ok
+test_al_alias_requires_explicit_choice (test_core.ForwardModelTests.test_al_alias_requires_explicit_choice) ... ok
+test_area_conservation_for_different_peak_widths (test_core.ForwardModelTests.test_area_conservation_for_different_peak_widths) ... ok
+test_bad_batch_fails_before_any_output (test_core.ForwardModelTests.test_bad_batch_fails_before_any_output) ... ok
+test_batch_grouping_repeatability_blind_inputs_and_overwrite_protection (test_core.ForwardModelTests.test_batch_grouping_repeatability_blind_inputs_and_overwrite_protection) ... ok
+test_below_edge_does_not_generate_K_lines (test_core.ForwardModelTests.test_below_edge_does_not_generate_K_lines) ... ok
+test_composition_design_is_closed_reproducible_and_within_ranges (test_core.ForwardModelTests.test_composition_design_is_closed_reproducible_and_within_ranges) ... ok
+test_excel_and_csv_samples_preserve_percentages (test_core.ForwardModelTests.test_excel_and_csv_samples_preserve_percentages) ... ok
+test_incident_grid_covers_voltage_not_detector_window (test_core.ForwardModelTests.test_incident_grid_covers_voltage_not_detector_window) ... ok
+test_invalid_inputs_rejected (test_core.ForwardModelTests.test_invalid_inputs_rejected) ... ok
+test_original_composition_is_not_mutated_or_silently_closed (test_core.ForwardModelTests.test_original_composition_is_not_mutated_or_silently_closed) ... ok
+test_poisson_reproducibility_and_expected_signal (test_core.ForwardModelTests.test_poisson_reproducibility_and_expected_signal) ... ok
+test_response_escape_and_window_accounting (test_core.ForwardModelTests.test_response_escape_and_window_accounting) ... ok
+test_secondary_enhances_and_converges (test_core.ForwardModelTests.test_secondary_enhances_and_converges) ... ok
+test_secondary_kernel_against_independent_quadrature (test_core.ForwardModelTests.test_secondary_kernel_against_independent_quadrature) ... ok
+test_silicon_width_obeys_fano_term (test_core.ForwardModelTests.test_silicon_width_obeys_fano_term) ... ok
+test_thin_slab_primary_increases_with_thickness (test_core.ForwardModelTests.test_thin_slab_primary_increases_with_thickness) ... ok
+test_three_or_more_compositions_populate_all_splits (test_core.ForwardModelTests.test_three_or_more_compositions_populate_all_splits) ... ok
+test_time_scaling_and_rate_single_conversion (test_core.ForwardModelTests.test_time_scaling_and_rate_single_conversion) ... ok
+test_truncation_not_renormalized (test_core.ForwardModelTests.test_truncation_not_renormalized) ... ok
+test_zero_element_does_not_emit (test_core.ForwardModelTests.test_zero_element_does_not_emit) ... ok
+test_complete_bundle_hashes_sources_and_qc (test_dataset.DatasetTests.test_complete_bundle_hashes_sources_and_qc) ... ok
+test_complete_physical_replay_and_subset_are_distinct (test_dataset.DatasetTests.test_complete_physical_replay_and_subset_are_distinct) ... ok
+test_failed_generation_never_claims_completion (test_dataset.DatasetTests.test_failed_generation_never_claims_completion) ... ok
+test_hash_tampering_is_rejected (test_dataset.DatasetTests.test_hash_tampering_is_rejected) ... ok
+test_path_escape_and_report_overwrite_are_rejected (test_dataset.DatasetTests.test_path_escape_and_report_overwrite_are_rejected) ... ok
+test_preflight_writes_nothing_and_existing_bundle_is_preserved (test_dataset.DatasetTests.test_preflight_writes_nothing_and_existing_bundle_is_preserved) ... ok
+test_resealed_blind_leak_is_still_rejected (test_dataset.DatasetTests.test_resealed_blind_leak_is_still_rejected) ... ok
+test_resealed_component_error_is_rejected (test_dataset.DatasetTests.test_resealed_component_error_is_rejected) ... ok
+test_solver_support_is_reused_without_recalculating_all_targets (test_dataset.DatasetTests.test_solver_support_is_reused_without_recalculating_all_targets) ... ok
+test_split_seed_is_separate_and_legacy_default_is_retained (test_dataset.DatasetTests.test_split_seed_is_separate_and_legacy_default_is_retained) ... ok
+test_window_centers_and_edges_are_not_confused (test_dataset.DatasetTests.test_window_centers_and_edges_are_not_confused) ... ok
+test_zip_package_has_external_hash (test_dataset.DatasetTests.test_zip_package_has_external_hash) ... ok
+test_batch_dense_zero_labels_and_source_provenance_are_hidden (test_expansion.ExpansionTests.test_batch_dense_zero_labels_and_source_provenance_are_hidden) ... ok
+test_compound_closure_duplicates_and_reporting_convention (test_expansion.ExpansionTests.test_compound_closure_duplicates_and_reporting_convention) ... ok
+test_exit_air_reduces_low_energy_more_and_is_not_renormalized (test_expansion.ExpansionTests.test_exit_air_reduces_low_energy_more_and_is_not_renormalized) ... ok
+test_individual_line_codes_do_not_double_count_shell_rates (test_expansion.ExpansionTests.test_individual_line_codes_do_not_double_count_shell_rates) ... ok
+test_lead_M_interference_with_sulfur_is_present (test_expansion.ExpansionTests.test_lead_M_interference_with_sulfur_is_present) ... ok
+test_mineral_design_reproducible_closed_with_exact_absence (test_expansion.ExpansionTests.test_mineral_design_reproducible_closed_with_exact_absence) ... ok
+test_negative_air_path_and_false_calibration_are_rejected (test_expansion.ExpansionTests.test_negative_air_path_and_false_calibration_are_rejected) ... ok
+test_sio2_mass_conversion_and_ppm_units (test_expansion.ExpansionTests.test_sio2_mass_conversion_and_ppm_units) ... ok
+test_support_distinguishes_matrix_only_and_unexcitable_targets (test_expansion.ExpansionTests.test_support_distinguishes_matrix_only_and_unexcitable_targets) ... ok
+test_central_area_centroid_and_variance (test_robustness.RobustnessTests.test_central_area_centroid_and_variance) ... ok
+test_edge_loss_not_folded_back (test_robustness.RobustnessTests.test_edge_loss_not_folded_back) ... ok
+test_input_validation (test_robustness.RobustnessTests.test_input_validation) ... ok
+test_integral_does_not_require_gaussian_shape (test_robustness.RobustnessTests.test_integral_does_not_require_gaussian_shape) ... ok
+test_source_integrity_unknown_units_and_derived_metadata (test_robustness.RobustnessTests.test_source_integrity_unknown_units_and_derived_metadata) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 11.509s
+
+OK

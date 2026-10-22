@@ -1,0 +1,419 @@
+{
+  "round_id": "round2-20261021",
+  "owner": "D",
+  "scope": "D production only; uses byte-identical A-frozen P1/P2/P3 and design_ranges; coordinator confirmed the D candidate set on 2026-10-22 and waived the A cross-member dedup response before spectra generation",
+  "seed_manifest": "D_seed_manifest.json",
+  "design_seeds": {
+    "silicate_routine": 2026102201,
+    "silicate_sparse_boundary": 2026102202,
+    "silicate_interference_bases": 2026102203,
+    "iron_routine": 2026102204,
+    "iron_sparse_boundary": 2026102205,
+    "iron_interference_bases": 2026102206,
+    "backup_silicate_routine": 2026102207,
+    "backup_silicate_sparse_boundary": 2026102208,
+    "backup_silicate_interference_bases": 2026102209,
+    "backup_iron_routine": 2026102210,
+    "backup_iron_sparse_boundary": 2026102211,
+    "backup_iron_interference_bases": 2026102212
+  },
+  "batch_seeds": {
+    "P1_S01": 20261022010101,
+    "P1_S02": 20261022010102,
+    "P1_S03": 20261022010103,
+    "P1_S04": 20261022010104,
+    "P1_S05": 20261022010105,
+    "P1_S06": 20261022010106,
+    "P1_S07": 20261022010107,
+    "P1_S08": 20261022010108,
+    "P1_S09": 20261022010109,
+    "P1_S10": 20261022010110,
+    "P2_S01": 20261022010201,
+    "P2_S02": 20261022010202,
+    "P2_S03": 20261022010203,
+    "P2_S04": 20261022010204,
+    "P2_S05": 20261022010205,
+    "P2_S06": 20261022010206,
+    "P2_S07": 20261022010207,
+    "P2_S08": 20261022010208,
+    "P2_S09": 20261022010209,
+    "P2_S10": 20261022010210,
+    "P3_S01": 20261022010301,
+    "P3_S02": 20261022010302,
+    "P3_S03": 20261022010303,
+    "P3_S04": 20261022010304,
+    "P3_S05": 20261022010305,
+    "P3_S06": 20261022010306,
+    "P3_S07": 20261022010307,
+    "P3_S08": 20261022010308,
+    "P3_S09": 20261022010309,
+    "P3_S10": 20261022010310
+  },
+  "split_seed": 20261022,
+  "replicates": 2,
+  "jitter": {},
+  "target_elements": [
+    "Na",
+    "Mg",
+    "Al",
+    "Si",
+    "P",
+    "S",
+    "Cl",
+    "K",
+    "Ca",
+    "Ti",
+    "V",
+    "Cr",
+    "Mn",
+    "Fe",
+    "Co",
+    "Ni",
+    "Cu",
+    "Zn",
+    "As",
+    "Se",
+    "Rb",
+    "Sr",
+    "Y",
+    "Zr",
+    "Nb",
+    "Mo",
+    "Cd",
+    "Sn",
+    "Sb",
+    "Ba",
+    "W",
+    "Pb"
+  ],
+  "target_count": 32,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "workers": 6,
+  "max_concurrency": 6,
+  "software_version": "0.2.1",
+  "physics_version": "0.2.0",
+  "closure": "strict",
+  "legacy_al": "reject",
+  "frozen_inputs": {
+    "P1.json": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221",
+    "P2.json": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03",
+    "P3.json": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351",
+    "design_ranges.json": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d",
+    "A_run_config.json": "4ddfc93fa2c308cb565fabcc28b58c0f569fd3e48d81a064c515f16db56ffae3"
+  },
+  "frozen_manifest_scope": "A-only production freeze; global use pending",
+  "cross_member_confirmation": "waived_by_coordinator",
+  "acceptance": "coordinator_direct_confirmation_no_A_dedup",
+  "design_counts": {
+    "silicate_oxide": {
+      "routine": 90,
+      "sparse_boundary": 30,
+      "interference": 30,
+      "total": 150
+    },
+    "iron_oxide": {
+      "routine": 60,
+      "sparse_boundary": 20,
+      "interference": 20,
+      "total": 100
+    },
+    "total": 250
+  },
+  "backup_counts": {
+    "silicate_oxide": {
+      "routine": 5,
+      "sparse_boundary": 5,
+      "interference": 5,
+      "total": 15
+    },
+    "iron_oxide": {
+      "routine": 5,
+      "sparse_boundary": 5,
+      "interference": 5,
+      "total": 15
+    },
+    "total": 30,
+    "note": "Not counted in the 250; used only to replace candidates excluded by A."
+  },
+  "batch_count": 30,
+  "spectra_total": 1500,
+  "batches": {
+    "P1_S01": {
+      "profile_id": "P1",
+      "family": "silicate_oxide",
+      "samples": "shards/S01.json",
+      "seed": 20261022010101,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P1_S02": {
+      "profile_id": "P1",
+      "family": "silicate_oxide",
+      "samples": "shards/S02.json",
+      "seed": 20261022010102,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P1_S03": {
+      "profile_id": "P1",
+      "family": "silicate_oxide",
+      "samples": "shards/S03.json",
+      "seed": 20261022010103,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P1_S04": {
+      "profile_id": "P1",
+      "family": "silicate_oxide",
+      "samples": "shards/S04.json",
+      "seed": 20261022010104,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P1_S05": {
+      "profile_id": "P1",
+      "family": "silicate_oxide",
+      "samples": "shards/S05.json",
+      "seed": 20261022010105,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P1_S06": {
+      "profile_id": "P1",
+      "family": "silicate_oxide",
+      "samples": "shards/S06.json",
+      "seed": 20261022010106,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P1_S07": {
+      "profile_id": "P1",
+      "family": "iron_oxide",
+      "samples": "shards/S07.json",
+      "seed": 20261022010107,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P1_S08": {
+      "profile_id": "P1",
+      "family": "iron_oxide",
+      "samples": "shards/S08.json",
+      "seed": 20261022010108,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P1_S09": {
+      "profile_id": "P1",
+      "family": "iron_oxide",
+      "samples": "shards/S09.json",
+      "seed": 20261022010109,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P1_S10": {
+      "profile_id": "P1",
+      "family": "iron_oxide",
+      "samples": "shards/S10.json",
+      "seed": 20261022010110,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P2_S01": {
+      "profile_id": "P2",
+      "family": "silicate_oxide",
+      "samples": "shards/S01.json",
+      "seed": 20261022010201,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P2_S02": {
+      "profile_id": "P2",
+      "family": "silicate_oxide",
+      "samples": "shards/S02.json",
+      "seed": 20261022010202,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P2_S03": {
+      "profile_id": "P2",
+      "family": "silicate_oxide",
+      "samples": "shards/S03.json",
+      "seed": 20261022010203,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P2_S04": {
+      "profile_id": "P2",
+      "family": "silicate_oxide",
+      "samples": "shards/S04.json",
+      "seed": 20261022010204,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P2_S05": {
+      "profile_id": "P2",
+      "family": "silicate_oxide",
+      "samples": "shards/S05.json",
+      "seed": 20261022010205,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P2_S06": {
+      "profile_id": "P2",
+      "family": "silicate_oxide",
+      "samples": "shards/S06.json",
+      "seed": 20261022010206,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P2_S07": {
+      "profile_id": "P2",
+      "family": "iron_oxide",
+      "samples": "shards/S07.json",
+      "seed": 20261022010207,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P2_S08": {
+      "profile_id": "P2",
+      "family": "iron_oxide",
+      "samples": "shards/S08.json",
+      "seed": 20261022010208,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P2_S09": {
+      "profile_id": "P2",
+      "family": "iron_oxide",
+      "samples": "shards/S09.json",
+      "seed": 20261022010209,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P2_S10": {
+      "profile_id": "P2",
+      "family": "iron_oxide",
+      "samples": "shards/S10.json",
+      "seed": 20261022010210,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P3_S01": {
+      "profile_id": "P3",
+      "family": "silicate_oxide",
+      "samples": "shards/S01.json",
+      "seed": 20261022010301,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P3_S02": {
+      "profile_id": "P3",
+      "family": "silicate_oxide",
+      "samples": "shards/S02.json",
+      "seed": 20261022010302,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P3_S03": {
+      "profile_id": "P3",
+      "family": "silicate_oxide",
+      "samples": "shards/S03.json",
+      "seed": 20261022010303,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P3_S04": {
+      "profile_id": "P3",
+      "family": "silicate_oxide",
+      "samples": "shards/S04.json",
+      "seed": 20261022010304,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P3_S05": {
+      "profile_id": "P3",
+      "family": "silicate_oxide",
+      "samples": "shards/S05.json",
+      "seed": 20261022010305,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P3_S06": {
+      "profile_id": "P3",
+      "family": "silicate_oxide",
+      "samples": "shards/S06.json",
+      "seed": 20261022010306,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P3_S07": {
+      "profile_id": "P3",
+      "family": "iron_oxide",
+      "samples": "shards/S07.json",
+      "seed": 20261022010307,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P3_S08": {
+      "profile_id": "P3",
+      "family": "iron_oxide",
+      "samples": "shards/S08.json",
+      "seed": 20261022010308,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P3_S09": {
+      "profile_id": "P3",
+      "family": "iron_oxide",
+      "samples": "shards/S09.json",
+      "seed": 20261022010309,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    },
+    "P3_S10": {
+      "profile_id": "P3",
+      "family": "iron_oxide",
+      "samples": "shards/S10.json",
+      "seed": 20261022010310,
+      "recipes": 25,
+      "replicates": 2,
+      "spectra": 50
+    }
+  },
+  "version": "D-sharded-production-v1",
+  "reason": "Ten whole-family shards per profile, 25 recipes per shard, two independent replicates, 30 independent CLI batches; unchanged physical solver.",
+  "generated_at_utc": "2026-10-22T07:25:22.095563+00:00"
+}
