@@ -1,0 +1,26 @@
+{
+  "is_template": true,
+  "usable_for_generation": false,
+  "production_started": false,
+  "round_id": "round3",
+  "status": "pending",
+  "owner": "A",
+  "candidate_registry": null,
+  "global_family_closure": null,
+  "historical_exposure_registry": null,
+  "authoritative_usage_index": null,
+  "family_profile_mapping": null,
+  "development_profile_allowlist": null,
+  "heldout_profile_exclusion_evidence": null,
+  "profile_files_and_sha256": [],
+  "profile_validation_reports": [],
+  "window_budget_registration": null,
+  "seed_manifest": null,
+  "generator_and_dependencies": null,
+  "producer_commands": null,
+  "pilot_reports": [],
+  "quantity_freeze": null,
+  "unresolved_items": [
+    "all evidence pending"
+  ]
+}

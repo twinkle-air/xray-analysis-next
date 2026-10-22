@@ -1,0 +1,14 @@
+{
+  "status": "passed_document_quantity_check",
+  "categories_total": 1000,
+  "design_families": 420,
+  "per_member_recipes": 250,
+  "per_member_base_spectra": 1500,
+  "new_train_validation_holdout_recipes": [
+    700,
+    150,
+    150
+  ],
+  "new_total_spectra": 6900,
+  "actual_production": false
+}

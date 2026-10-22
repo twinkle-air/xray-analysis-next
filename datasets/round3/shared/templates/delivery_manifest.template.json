@@ -1,0 +1,18 @@
+{
+  "is_template": true,
+  "usable_for_generation": false,
+  "production_started": false,
+  "round_id": "round3",
+  "status": "pending",
+  "member": null,
+  "hash_algorithm": "sha256",
+  "path_base": "member directory",
+  "files": [],
+  "file_entry_fields": [
+    "path",
+    "size_bytes",
+    "sha256",
+    "role"
+  ],
+  "coverage_completed": false
+}
