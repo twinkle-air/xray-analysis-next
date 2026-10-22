@@ -1,0 +1,1830 @@
+{
+  "design_families": [
+    {
+      "design_family_id": "R3_A_ladder_0001",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "silicate_oxide",
+      "target": "Na",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 6579322154760161003,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1990053123522575546,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_ladder_0001_V01",
+        "R3_A_ladder_0001_V02",
+        "R3_A_ladder_0001_V03",
+        "R3_A_ladder_0001_V04",
+        "R3_A_ladder_0001_V05",
+        "R3_A_ladder_0001_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0005",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "silicate_oxide",
+      "target": "Na",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 2602824403557078372,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1180594458310446624,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_ladder_0005_V01",
+        "R3_A_ladder_0005_V02",
+        "R3_A_ladder_0005_V03",
+        "R3_A_ladder_0005_V04",
+        "R3_A_ladder_0005_V05",
+        "R3_A_ladder_0005_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0007",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "iron_oxide",
+      "target": "Na",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 6207999073242037005,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1457043725019502231,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_ladder_0007_V01",
+        "R3_A_ladder_0007_V02",
+        "R3_A_ladder_0007_V03",
+        "R3_A_ladder_0007_V04",
+        "R3_A_ladder_0007_V05",
+        "R3_A_ladder_0007_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0013",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "silicate_oxide",
+      "target": "Cu",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 4607882143076625225,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 4677637775969883442,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_ladder_0013_V01",
+        "R3_A_ladder_0013_V02",
+        "R3_A_ladder_0013_V03",
+        "R3_A_ladder_0013_V04",
+        "R3_A_ladder_0013_V05",
+        "R3_A_ladder_0013_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0017",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "iron_oxide",
+      "target": "Cu",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 8518573846821661866,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6653399099731333340,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_ladder_0017_V01",
+        "R3_A_ladder_0017_V02",
+        "R3_A_ladder_0017_V03",
+        "R3_A_ladder_0017_V04",
+        "R3_A_ladder_0017_V05",
+        "R3_A_ladder_0017_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0021",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "silicate_oxide",
+      "target": "Zn",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 810304480680700208,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6682910401014313301,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_ladder_0021_V01",
+        "R3_A_ladder_0021_V02",
+        "R3_A_ladder_0021_V03",
+        "R3_A_ladder_0021_V04",
+        "R3_A_ladder_0021_V05",
+        "R3_A_ladder_0021_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0025",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "silicate_oxide",
+      "target": "Zn",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 3246254008818988885,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6294808963933731844,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_ladder_0025_V01",
+        "R3_A_ladder_0025_V02",
+        "R3_A_ladder_0025_V03",
+        "R3_A_ladder_0025_V04",
+        "R3_A_ladder_0025_V05",
+        "R3_A_ladder_0025_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0027",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "iron_oxide",
+      "target": "Zn",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 3525722909819327606,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 7666937294399694284,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_ladder_0027_V01",
+        "R3_A_ladder_0027_V02",
+        "R3_A_ladder_0027_V03",
+        "R3_A_ladder_0027_V04",
+        "R3_A_ladder_0027_V05",
+        "R3_A_ladder_0027_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0033",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "silicate_oxide",
+      "target": "Cd",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 6447861597657579763,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5460056819791758548,
+      "background_attempt": 1,
+      "sample_ids": [
+        "R3_A_ladder_0033_V01",
+        "R3_A_ladder_0033_V02",
+        "R3_A_ladder_0033_V03",
+        "R3_A_ladder_0033_V04",
+        "R3_A_ladder_0033_V05",
+        "R3_A_ladder_0033_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0037",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "iron_oxide",
+      "target": "Cd",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 2530614372933514849,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 2692620304059852367,
+      "background_attempt": 1,
+      "sample_ids": [
+        "R3_A_ladder_0037_V01",
+        "R3_A_ladder_0037_V02",
+        "R3_A_ladder_0037_V03",
+        "R3_A_ladder_0037_V04",
+        "R3_A_ladder_0037_V05",
+        "R3_A_ladder_0037_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0041",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "silicate_oxide",
+      "target": "Co",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 1659439169099194874,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1242819339932938802,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_ladder_0041_V01",
+        "R3_A_ladder_0041_V02",
+        "R3_A_ladder_0041_V03",
+        "R3_A_ladder_0041_V04",
+        "R3_A_ladder_0041_V05",
+        "R3_A_ladder_0041_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0045",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "silicate_oxide",
+      "target": "Co",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 6931167609184679596,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 8918787118468812811,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_ladder_0045_V01",
+        "R3_A_ladder_0045_V02",
+        "R3_A_ladder_0045_V03",
+        "R3_A_ladder_0045_V04",
+        "R3_A_ladder_0045_V05",
+        "R3_A_ladder_0045_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0047",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "iron_oxide",
+      "target": "Co",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 4960935904417148159,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6158648875551652791,
+      "background_attempt": 1,
+      "sample_ids": [
+        "R3_A_ladder_0047_V01",
+        "R3_A_ladder_0047_V02",
+        "R3_A_ladder_0047_V03",
+        "R3_A_ladder_0047_V04",
+        "R3_A_ladder_0047_V05",
+        "R3_A_ladder_0047_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0053",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "silicate_oxide",
+      "target": "Rb",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 7631484730333850522,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1179114523018754703,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_ladder_0053_V01",
+        "R3_A_ladder_0053_V02",
+        "R3_A_ladder_0053_V03",
+        "R3_A_ladder_0053_V04",
+        "R3_A_ladder_0053_V05",
+        "R3_A_ladder_0053_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_ladder_0057",
+      "owner": "A",
+      "category": "ladder",
+      "matrix": "iron_oxide",
+      "target": "Rb",
+      "interferent": null,
+      "variants": 6,
+      "design_seed": 7607911674973789289,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 2384667319366228512,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_ladder_0057_V01",
+        "R3_A_ladder_0057_V02",
+        "R3_A_ladder_0057_V03",
+        "R3_A_ladder_0057_V04",
+        "R3_A_ladder_0057_V05",
+        "R3_A_ladder_0057_V06"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_interference_0061",
+      "owner": "A",
+      "category": "interference",
+      "matrix": "silicate_oxide",
+      "target": "Na",
+      "interferent": "Zn",
+      "variants": 5,
+      "design_seed": 3829152796831539702,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 2324721444243394871,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_interference_0061_V01",
+        "R3_A_interference_0061_V02",
+        "R3_A_interference_0061_V03",
+        "R3_A_interference_0061_V04",
+        "R3_A_interference_0061_V05"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_interference_0064",
+      "owner": "A",
+      "category": "interference",
+      "matrix": "iron_oxide",
+      "target": "Na",
+      "interferent": "Zn",
+      "variants": 5,
+      "design_seed": 1654346077012519541,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 8788736038622893747,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_interference_0064_V01",
+        "R3_A_interference_0064_V02",
+        "R3_A_interference_0064_V03",
+        "R3_A_interference_0064_V04",
+        "R3_A_interference_0064_V05"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_interference_0067",
+      "owner": "A",
+      "category": "interference",
+      "matrix": "silicate_oxide",
+      "target": "Cu",
+      "interferent": "Ni",
+      "variants": 5,
+      "design_seed": 4903380874060051816,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 3469706375317095530,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_interference_0067_V01",
+        "R3_A_interference_0067_V02",
+        "R3_A_interference_0067_V03",
+        "R3_A_interference_0067_V04",
+        "R3_A_interference_0067_V05"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_interference_0073",
+      "owner": "A",
+      "category": "interference",
+      "matrix": "silicate_oxide",
+      "target": "Zn",
+      "interferent": "W",
+      "variants": 5,
+      "design_seed": 3119244414288939085,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6144887845254759347,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_interference_0073_V01",
+        "R3_A_interference_0073_V02",
+        "R3_A_interference_0073_V03",
+        "R3_A_interference_0073_V04",
+        "R3_A_interference_0073_V05"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_interference_0074",
+      "owner": "A",
+      "category": "interference",
+      "matrix": "iron_oxide",
+      "target": "Zn",
+      "interferent": "W",
+      "variants": 5,
+      "design_seed": 8270962628132698944,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6620210365910349541,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_interference_0074_V01",
+        "R3_A_interference_0074_V02",
+        "R3_A_interference_0074_V03",
+        "R3_A_interference_0074_V04",
+        "R3_A_interference_0074_V05"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_interference_0081",
+      "owner": "A",
+      "category": "interference",
+      "matrix": "silicate_oxide",
+      "target": "Co",
+      "interferent": "Fe",
+      "variants": 5,
+      "design_seed": 1321962258637295785,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5832422065094305962,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_interference_0081_V01",
+        "R3_A_interference_0081_V02",
+        "R3_A_interference_0081_V03",
+        "R3_A_interference_0081_V04",
+        "R3_A_interference_0081_V05"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_interference_0084",
+      "owner": "A",
+      "category": "interference",
+      "matrix": "iron_oxide",
+      "target": "Co",
+      "interferent": "Fe",
+      "variants": 5,
+      "design_seed": 5980294505533153133,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5019714646832587221,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_interference_0084_V01",
+        "R3_A_interference_0084_V02",
+        "R3_A_interference_0084_V03",
+        "R3_A_interference_0084_V04",
+        "R3_A_interference_0084_V05"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_interference_0087",
+      "owner": "A",
+      "category": "interference",
+      "matrix": "silicate_oxide",
+      "target": "Rb",
+      "interferent": "Y",
+      "variants": 5,
+      "design_seed": 1210349603521488728,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5411587306891496082,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_interference_0087_V01",
+        "R3_A_interference_0087_V02",
+        "R3_A_interference_0087_V03",
+        "R3_A_interference_0087_V04",
+        "R3_A_interference_0087_V05"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_interference_0093",
+      "owner": "A",
+      "category": "interference",
+      "matrix": "silicate_oxide",
+      "target": "As",
+      "interferent": "Pb",
+      "variants": 5,
+      "design_seed": 7293433074075914535,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 2169046331836995513,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_interference_0093_V01",
+        "R3_A_interference_0093_V02",
+        "R3_A_interference_0093_V03",
+        "R3_A_interference_0093_V04",
+        "R3_A_interference_0093_V05"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_interference_0094",
+      "owner": "A",
+      "category": "interference",
+      "matrix": "iron_oxide",
+      "target": "As",
+      "interferent": "Pb",
+      "variants": 5,
+      "design_seed": 6702324768569002237,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1126362107589309999,
+      "background_attempt": 3,
+      "sample_ids": [
+        "R3_A_interference_0094_V01",
+        "R3_A_interference_0094_V02",
+        "R3_A_interference_0094_V03",
+        "R3_A_interference_0094_V04",
+        "R3_A_interference_0094_V05"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0101",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Na",
+      "interferent": "Zn",
+      "variants": 2,
+      "design_seed": 1625571705812042999,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 540977727275685222,
+      "background_attempt": 1,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0101_V01",
+        "R3_A_paired_negative_spike_0101_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0105",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Na",
+      "interferent": "Zn",
+      "variants": 2,
+      "design_seed": 7384659727130012059,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5058104748009020195,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0105_V01",
+        "R3_A_paired_negative_spike_0105_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0109",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Na",
+      "interferent": "Zn",
+      "variants": 2,
+      "design_seed": 932644488531278100,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 790685310857176609,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0109_V01",
+        "R3_A_paired_negative_spike_0109_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0113",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Na",
+      "interferent": "Zn",
+      "variants": 2,
+      "design_seed": 7915255141450190422,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 8434016590395792795,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0113_V01",
+        "R3_A_paired_negative_spike_0113_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0117",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Na",
+      "interferent": "Zn",
+      "variants": 2,
+      "design_seed": 2585963968617152729,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 8810658268717020710,
+      "background_attempt": 2,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0117_V01",
+        "R3_A_paired_negative_spike_0117_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0121",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Na",
+      "interferent": "Zn",
+      "variants": 2,
+      "design_seed": 1231785936772441493,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1257528980005064025,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0121_V01",
+        "R3_A_paired_negative_spike_0121_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0125",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "iron_oxide",
+      "target": "Na",
+      "interferent": "Zn",
+      "variants": 2,
+      "design_seed": 6378289391711512869,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 3926781647812805899,
+      "background_attempt": 1,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0125_V01",
+        "R3_A_paired_negative_spike_0125_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0129",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "iron_oxide",
+      "target": "Na",
+      "interferent": "Zn",
+      "variants": 2,
+      "design_seed": 7935260304250956746,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 4782726333457447193,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0129_V01",
+        "R3_A_paired_negative_spike_0129_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0133",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "iron_oxide",
+      "target": "Na",
+      "interferent": "Zn",
+      "variants": 2,
+      "design_seed": 7039459535048031010,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 3179965958503588185,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0133_V01",
+        "R3_A_paired_negative_spike_0133_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0137",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "iron_oxide",
+      "target": "Na",
+      "interferent": "Zn",
+      "variants": 2,
+      "design_seed": 7658696293980543612,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1618663132817902615,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0137_V01",
+        "R3_A_paired_negative_spike_0137_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0141",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Cu",
+      "interferent": "Ni",
+      "variants": 2,
+      "design_seed": 3245374005815322584,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6415916116585200007,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0141_V01",
+        "R3_A_paired_negative_spike_0141_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0145",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Cu",
+      "interferent": "Ni",
+      "variants": 2,
+      "design_seed": 6458647522919944715,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 2293538104347615377,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0145_V01",
+        "R3_A_paired_negative_spike_0145_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0149",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Cu",
+      "interferent": "Ni",
+      "variants": 2,
+      "design_seed": 3212360767719990335,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6624550910402309275,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0149_V01",
+        "R3_A_paired_negative_spike_0149_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0153",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Cu",
+      "interferent": "Ni",
+      "variants": 2,
+      "design_seed": 5937432577161720275,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5203919157947924907,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0153_V01",
+        "R3_A_paired_negative_spike_0153_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0157",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Cu",
+      "interferent": "Ni",
+      "variants": 2,
+      "design_seed": 8879951077066100564,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 7025734535581266307,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0157_V01",
+        "R3_A_paired_negative_spike_0157_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0159",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "iron_oxide",
+      "target": "Cu",
+      "interferent": "Ni",
+      "variants": 2,
+      "design_seed": 2906181726257409849,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1453102429010323367,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0159_V01",
+        "R3_A_paired_negative_spike_0159_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0163",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "iron_oxide",
+      "target": "Cu",
+      "interferent": "Ni",
+      "variants": 2,
+      "design_seed": 8457906621510631526,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 2285200419989425022,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0163_V01",
+        "R3_A_paired_negative_spike_0163_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0167",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "iron_oxide",
+      "target": "Cu",
+      "interferent": "Ni",
+      "variants": 2,
+      "design_seed": 8958072677053442006,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1111983747407946066,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0167_V01",
+        "R3_A_paired_negative_spike_0167_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0173",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Zn",
+      "interferent": "W",
+      "variants": 2,
+      "design_seed": 7530893955981816290,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 2485435135409811169,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0173_V01",
+        "R3_A_paired_negative_spike_0173_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0177",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Zn",
+      "interferent": "W",
+      "variants": 2,
+      "design_seed": 1935970223772019402,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6091358191975994832,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0177_V01",
+        "R3_A_paired_negative_spike_0177_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0181",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Zn",
+      "interferent": "W",
+      "variants": 2,
+      "design_seed": 5738161098168018194,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 4035466173979652797,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0181_V01",
+        "R3_A_paired_negative_spike_0181_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0183",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "iron_oxide",
+      "target": "Zn",
+      "interferent": "W",
+      "variants": 2,
+      "design_seed": 2757105545709913878,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6104949845980508173,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0183_V01",
+        "R3_A_paired_negative_spike_0183_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0187",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "iron_oxide",
+      "target": "Zn",
+      "interferent": "W",
+      "variants": 2,
+      "design_seed": 615952267261439114,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5692961040170711565,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0187_V01",
+        "R3_A_paired_negative_spike_0187_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0193",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Cd",
+      "interferent": "K",
+      "variants": 2,
+      "design_seed": 5688643015193111422,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 4649696728705061091,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0193_V01",
+        "R3_A_paired_negative_spike_0193_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0197",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "iron_oxide",
+      "target": "Cd",
+      "interferent": "K",
+      "variants": 2,
+      "design_seed": 2019198294230476847,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 7499645089912348199,
+      "background_attempt": 1,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0197_V01",
+        "R3_A_paired_negative_spike_0197_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0201",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Co",
+      "interferent": "Zn",
+      "variants": 2,
+      "design_seed": 8435280301972613999,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5897758223840564350,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0201_V01",
+        "R3_A_paired_negative_spike_0201_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0205",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Co",
+      "interferent": "Zn",
+      "variants": 2,
+      "design_seed": 6924235652367599647,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 257561669824687914,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0205_V01",
+        "R3_A_paired_negative_spike_0205_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0207",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "iron_oxide",
+      "target": "Co",
+      "interferent": "Zn",
+      "variants": 2,
+      "design_seed": 4770586994887202704,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5026516329411710415,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0207_V01",
+        "R3_A_paired_negative_spike_0207_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0213",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "silicate_oxide",
+      "target": "Rb",
+      "interferent": "Y",
+      "variants": 2,
+      "design_seed": 7514749037736730402,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 666645670260004628,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0213_V01",
+        "R3_A_paired_negative_spike_0213_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_paired_negative_spike_0217",
+      "owner": "A",
+      "category": "paired_negative_spike",
+      "matrix": "iron_oxide",
+      "target": "Rb",
+      "interferent": "Y",
+      "variants": 2,
+      "design_seed": 9145073370471810090,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 8100784046132966664,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_paired_negative_spike_0217_V01",
+        "R3_A_paired_negative_spike_0217_V02"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0221",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 5439525024502758345,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 8824570796310591494,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0221_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0225",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 3813718205159928222,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 8878948259664509669,
+      "background_attempt": 2,
+      "sample_ids": [
+        "R3_A_routine_0225_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0229",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 8003176789514815719,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 4846290946792259190,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0229_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0233",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 1959036009926798148,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5097919261496059603,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0233_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0237",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 6722680266409851487,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 3528418333084783145,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0237_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0241",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 6261131350365034055,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 7681802775775013509,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0241_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0245",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 8663309656432257711,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 3473447691004641961,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0245_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0249",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 927842628723326225,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5814679790427348009,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0249_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0253",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 7658023503654414416,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5008023856771966362,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0253_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0257",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 2765377948463953321,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 3383574049822203571,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0257_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0261",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 4593716798972706788,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 4942534030669825554,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0261_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0265",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 1080906105479398611,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 3094889664931479658,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0265_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0269",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 2961963809240002117,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5662952256170142698,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0269_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0273",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 7970474119661884033,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 198085032498493150,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0273_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0277",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 1393877215738799762,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1597373266477205424,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0277_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0281",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 6057331427681783105,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6555356559192649709,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0281_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0285",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 7478965693891390997,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6396422325467000485,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0285_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0289",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 7182601294003062604,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 4285201436335551235,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0289_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0293",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 5934144672177151473,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1123332958373306611,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0293_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0297",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 1958696698180865582,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 4402158055291598398,
+      "background_attempt": 1,
+      "sample_ids": [
+        "R3_A_routine_0297_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0301",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 2397893426814895986,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6259092396702959727,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0301_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0305",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 1592465442245667236,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 796768098386610755,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0305_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0309",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 4444750622949686938,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1813046079296916598,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0309_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0313",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 3059418129563439994,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 169185295700119328,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0313_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0317",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 7690156425111388330,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 3393686869642741231,
+      "background_attempt": 1,
+      "sample_ids": [
+        "R3_A_routine_0317_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0321",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 8132350457445251005,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 7874192095020750209,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0321_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0325",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 3807447392036075719,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 187563227967795859,
+      "background_attempt": 2,
+      "sample_ids": [
+        "R3_A_routine_0325_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0329",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 7610700731624826548,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5199832518102682079,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0329_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0333",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 2418174550076742744,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 2468874375970215657,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0333_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0337",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "silicate_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 1546223545272048340,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1000511094476428289,
+      "background_attempt": 1,
+      "sample_ids": [
+        "R3_A_routine_0337_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0341",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 2319918340688285999,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 4966601548211386277,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0341_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0345",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 2815592539554372798,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 3211788092821384612,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0345_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0349",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 5743694816914837278,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 2164106339846423414,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0349_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0353",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 360463724968151458,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 2528367028630180322,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0353_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0357",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 6754652518382225779,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 4196131882864168665,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0357_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0361",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 4013573367226590675,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5894645140700408123,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0361_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0365",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 1995253791216688088,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1240518324397264482,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0365_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0369",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 5595311548588689611,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 3497724022855851465,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0369_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0373",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 2017356310396382343,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 4388028196659287149,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0373_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0377",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 3162819415768912401,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 4929559443021407097,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0377_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0381",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 7337192371652078353,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 3894091156746554741,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0381_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0385",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 4611560092949087062,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 6747899308786865739,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0385_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0389",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 5870806609611207271,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 2607553492756732113,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0389_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0393",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 6299329988521718713,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 3096591662437440723,
+      "background_attempt": 1,
+      "sample_ids": [
+        "R3_A_routine_0393_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0397",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 4569835232223514665,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1822404335439508556,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0397_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0401",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 3027700415678506938,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1138499600440000024,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0401_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0405",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 4368178504566759983,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1494484478685122898,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0405_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0409",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 2303655301277146245,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 4706535466614732219,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0409_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0413",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 2722902089321760660,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 5964306036735550038,
+      "background_attempt": 0,
+      "sample_ids": [
+        "R3_A_routine_0413_V01"
+      ]
+    },
+    {
+      "design_family_id": "R3_A_routine_0417",
+      "owner": "A",
+      "category": "routine",
+      "matrix": "iron_oxide",
+      "target": null,
+      "interferent": null,
+      "variants": 1,
+      "design_seed": 8034910868590672619,
+      "status": "assigned_design_pending_candidates_and_global_freeze",
+      "background_seed": 1241671024147781043,
+      "background_attempt": 1,
+      "sample_ids": [
+        "R3_A_routine_0417_V01"
+      ]
+    }
+  ],
+  "status": "pending_global_connected_closure"
+}

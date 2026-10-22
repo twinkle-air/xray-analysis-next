@@ -1,0 +1,23 @@
+{
+  "builder_sha256": "27d06fbd0879ed67a6a9b2e8ffba343a44a3f28f92b1c78e9753bf363ec71cdd",
+  "ranges": {
+    "path": "datasets/round3/member_A/inputs/design_ranges.json",
+    "sha256": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d"
+  },
+  "historical_sources": [
+    {
+      "path": "outputs/model-round2-20261022/authoritative_index.json",
+      "sha256": "25f1dcc90983beb0e5f4fadfdcb3a9b364b393b448451887be53ca4075fcffce"
+    },
+    {
+      "path": "datasets/round2/member_A/inputs/first_round_compositions_available.json",
+      "sha256": "4f878d3f87e8cf93686e1c52824e074634f1b61b190d533d5fb0a0c70012f739"
+    },
+    {
+      "path": "datasets/research-round1-20261020/research_index.json",
+      "sha256": "2ebebb9a2f84794cd858e6e6c09128f7bf57f5286f105ae4f9ad2d9d757a7bfb"
+    }
+  ],
+  "seed": 202610230301,
+  "rebuilt_exactly_with_final_builder": true
+}

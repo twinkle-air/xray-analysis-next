@@ -1,0 +1,16 @@
+{
+  "status": "candidate_checks_passed_pending_global_freeze",
+  "round_id": "round3",
+  "owner": "A",
+  "candidate_recipes": 250,
+  "design_families": 105,
+  "planned_base_spectra": 1500,
+  "actual_training_spectra": 0,
+  "production_started": false,
+  "eligible_for_training": false,
+  "candidate_report": "reports/verification.json",
+  "production_readiness": "reports/production_readiness.json",
+  "production_audit": "pending_not_generated",
+  "production_replay": "pending_not_generated",
+  "scientific_accuracy_verified": false
+}
