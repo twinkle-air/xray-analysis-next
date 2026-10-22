@@ -1,0 +1,34 @@
+{
+  "is_template": true,
+  "usable_for_generation": false,
+  "production_started": false,
+  "round_id": "round3",
+  "status": "pending",
+  "member": null,
+  "expected_recipe_count": 250,
+  "expected_base_spectra": 1500,
+  "assigned_holdout_recipe_count": null,
+  "actual_recipe_count": null,
+  "actual_base_spectra": null,
+  "actual_extra_T_spectra": null,
+  "actual_family_count": null,
+  "audit": {
+    "covered_spectra": null,
+    "report_paths": [],
+    "exit_codes": []
+  },
+  "physical_replay": {
+    "covered_spectra": null,
+    "maximum_array_difference": null,
+    "report_paths": [],
+    "exit_codes": []
+  },
+  "manifest_path": null,
+  "source_and_environment_evidence": null,
+  "unresolved_errors": null,
+  "missing_items": [
+    "not yet generated or checked"
+  ],
+  "eligible_for_training": false,
+  "scientific_accuracy_verified": false
+}

@@ -1,0 +1,132 @@
+{
+  "status": "proposed_v1_pending_global_freeze",
+  "production_started": false,
+  "executable_generator_config": false,
+  "baseline_model_sha256": "31185fd25766a495e4191a8882240fe10a15791ef861885a1b7bd41f0453bd7e",
+  "members": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "new_distinct_recipes": 1000,
+  "nominal_design_families_before_global_closure": 420,
+  "categories": [
+    {
+      "name": "ladder",
+      "recipes": 360,
+      "families": 60,
+      "variants_per_family": 6,
+      "silicate": 216,
+      "iron": 144
+    },
+    {
+      "name": "interference",
+      "recipes": 200,
+      "families": 40,
+      "variants_per_family": 5,
+      "silicate": 120,
+      "iron": 80
+    },
+    {
+      "name": "paired_negative_spike",
+      "recipes": 240,
+      "families": 120,
+      "variants_per_family": 2,
+      "silicate": 144,
+      "iron": 96
+    },
+    {
+      "name": "routine",
+      "recipes": 200,
+      "families": 200,
+      "variants_per_family": 1,
+      "silicate": 120,
+      "iron": 80
+    }
+  ],
+  "per_member": {
+    "ladder_recipes": 90,
+    "interference_recipes": 50,
+    "paired_recipes": 60,
+    "routine_recipes": 50,
+    "total_recipes": 250,
+    "silicate": 150,
+    "iron": 100,
+    "base_spectra": 1500,
+    "extra_holdout_spectra": "6 * assigned heldout recipes; assigned centrally after whole-family split"
+  },
+  "nominal_new_split": {
+    "train": {
+      "ladder": 42,
+      "interference": 28,
+      "paired_negative_spike": 84,
+      "routine": 140,
+      "recipe_count": 700,
+      "family_count": 294,
+      "base_spectra": 4200,
+      "additional_condition_spectra": 0
+    },
+    "validation": {
+      "ladder": 9,
+      "interference": 6,
+      "paired_negative_spike": 18,
+      "routine": 30,
+      "recipe_count": 150,
+      "family_count": 63,
+      "base_spectra": 900,
+      "additional_condition_spectra": 0
+    },
+    "internal_holdout": {
+      "ladder": 9,
+      "interference": 6,
+      "paired_negative_spike": 18,
+      "routine": 30,
+      "recipe_count": 150,
+      "family_count": 63,
+      "base_spectra": 900,
+      "additional_condition_spectra": 900
+    }
+  },
+  "base_spectra": 6000,
+  "additional_condition_spectra": 900,
+  "nominal_total_new_spectra": 6900,
+  "actual_total_formula": "6000 + 6 * actual globally frozen heldout recipe count",
+  "historical_round2_development_spectra": 6000,
+  "nominal_combined_train_spectra": 10200,
+  "nominal_combined_total_spectra": 12900,
+  "development_profiles": {
+    "anchors": [
+      "P1",
+      "P2",
+      "P3"
+    ],
+    "proposed_additions": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "full_config_hashes_status": "pending"
+  },
+  "heldout_profiles": [
+    "T1",
+    "T2",
+    "T3"
+  ],
+  "heldout_role": "excluded from fitting, calibration, response-dictionary construction and hyperparameter selection",
+  "scope": "internal synthetic fresh-family holdout with paired seen/unfitted-condition comparison; not external independently blinded real-device validation",
+  "real_measured_track": "recommended separately, actual availability pending; not counted as synthetic training spectra",
+  "pending": [
+    "actual candidate recipes and ancestry",
+    "full profiles/validation/hashes/window budgets",
+    "global family closure/use/profile mapping",
+    "all seeds",
+    "producer commands",
+    "90-spectrum-per-member training pilot",
+    "runtime/disk budget from pilot"
+  ],
+  "quantity_consistency_checked": true
+}
