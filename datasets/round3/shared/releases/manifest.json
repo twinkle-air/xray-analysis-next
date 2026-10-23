@@ -2,8 +2,8 @@
   "files": [
     {
       "path": "datasets/round3/shared/handoffs/20261024/member_B.md",
-      "sha256": "3047e58a95adea218d7f215df4c974016f5d148e6b4fe8a4e57966dc7240223f",
-      "bytes": 1730
+      "sha256": "9e088d2baeefd385774fe514f8890179aa80dc00d92d9481d2cb6d57db8ae2d9",
+      "bytes": 2063
     },
     {
       "path": "datasets/round3/shared/handoffs/20261024/member_B_pilot_commands.json",
@@ -12,8 +12,8 @@
     },
     {
       "path": "datasets/round3/shared/handoffs/20261024/member_C.md",
-      "sha256": "ca520139df1f9d0b7d4595683dc7d472e786cef98c2b506d3af76e33f4ea0c64",
-      "bytes": 1730
+      "sha256": "7d8696d1187760c743e7d1fab758b5be2b6099c4b9582f48071e409bdfe49f38",
+      "bytes": 2063
     },
     {
       "path": "datasets/round3/shared/handoffs/20261024/member_C_pilot_commands.json",
@@ -22,8 +22,8 @@
     },
     {
       "path": "datasets/round3/shared/handoffs/20261024/member_D.md",
-      "sha256": "9501a4d2bf8d84fe7d0a161fb761dc9b86d11ceaedf0f39e5f14128890debb50",
-      "bytes": 1730
+      "sha256": "1786fd8f67e844752c0f1c4bfe2a52afd31cbbc33dec68999d6334930ccd1301",
+      "bytes": 2063
     },
     {
       "path": "datasets/round3/shared/handoffs/20261024/member_D_pilot_commands.json",
@@ -39,6 +39,11 @@
       "path": "datasets/round3/shared/production_tools/run_member_pilot.ps1",
       "sha256": "2ac4e66b040a2a288bc33b9d2b1842e7623753515cff6302ef2824d8dc6e318f",
       "bytes": 1554
+    },
+    {
+      "path": "datasets/round3/shared/releases/byte_policy_test.json",
+      "sha256": "d7b61e2e680353dfbba486988de3864ae6a478ed1a40e1f0f24ed3fb6122e2ab",
+      "bytes": 188
     },
     {
       "path": "datasets/round3/shared/releases/owner_release_v2.json",
