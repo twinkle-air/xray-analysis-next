@@ -1,0 +1,33 @@
+{
+  "builder_sha256": "4427e051912ee1a40e390f80b7f15c847a7bcb5b856af2b26415cef4db015d44",
+  "ranges": {
+    "path": "inputs/design_ranges.json",
+    "sha256": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d"
+  },
+  "allocation": {
+    "path": "inputs/design_allocation.json",
+    "sha256": "c07a57c83e3f007bb7dc1667807b3111ec4ee5e9a82baa8dfd1af2c7d950d4d4"
+  },
+  "generator_sources": [
+    {
+      "path": "datasets/round3/member_A/inputs/generator/fp_competition/__init__.py",
+      "sha256": "3338a26d3706620d0b1eb836a6e39beb4ae15d61a4c04d9441215ec17ffeafa1"
+    },
+    {
+      "path": "datasets/round3/member_A/inputs/generator/fp_competition/core.py",
+      "sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0"
+    },
+    {
+      "path": "datasets/round3/member_A/inputs/generator/fp_competition/minerals.py",
+      "sha256": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662"
+    }
+  ],
+  "historical_sources": [
+    {
+      "path": "datasets/round3/member_A/inputs/historical_compositions.json",
+      "sha256": "8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473",
+      "rows": 3800
+    }
+  ],
+  "seed": 202610230301
+}

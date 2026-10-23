@@ -1,0 +1,165 @@
+{
+  "targets": {
+    "Na": {
+      "zero": 70,
+      "positive_below_10ppm": 0,
+      "positive_at_least_10ppm": 180
+    },
+    "Mg": {
+      "zero": 0,
+      "positive_below_10ppm": 0,
+      "positive_at_least_10ppm": 250
+    },
+    "Al": {
+      "zero": 0,
+      "positive_below_10ppm": 0,
+      "positive_at_least_10ppm": 250
+    },
+    "Si": {
+      "zero": 0,
+      "positive_below_10ppm": 0,
+      "positive_at_least_10ppm": 250
+    },
+    "P": {
+      "zero": 0,
+      "positive_below_10ppm": 0,
+      "positive_at_least_10ppm": 250
+    },
+    "S": {
+      "zero": 0,
+      "positive_below_10ppm": 0,
+      "positive_at_least_10ppm": 250
+    },
+    "Cl": {
+      "zero": 101,
+      "positive_below_10ppm": 0,
+      "positive_at_least_10ppm": 149
+    },
+    "K": {
+      "zero": 0,
+      "positive_below_10ppm": 0,
+      "positive_at_least_10ppm": 250
+    },
+    "Ca": {
+      "zero": 0,
+      "positive_below_10ppm": 0,
+      "positive_at_least_10ppm": 250
+    },
+    "Ti": {
+      "zero": 2,
+      "positive_below_10ppm": 2,
+      "positive_at_least_10ppm": 246
+    },
+    "V": {
+      "zero": 70,
+      "positive_below_10ppm": 66,
+      "positive_at_least_10ppm": 114
+    },
+    "Cr": {
+      "zero": 72,
+      "positive_below_10ppm": 68,
+      "positive_at_least_10ppm": 110
+    },
+    "Mn": {
+      "zero": 0,
+      "positive_below_10ppm": 0,
+      "positive_at_least_10ppm": 250
+    },
+    "Fe": {
+      "zero": 0,
+      "positive_below_10ppm": 0,
+      "positive_at_least_10ppm": 250
+    },
+    "Co": {
+      "zero": 92,
+      "positive_below_10ppm": 75,
+      "positive_at_least_10ppm": 83
+    },
+    "Ni": {
+      "zero": 57,
+      "positive_below_10ppm": 57,
+      "positive_at_least_10ppm": 136
+    },
+    "Cu": {
+      "zero": 94,
+      "positive_below_10ppm": 56,
+      "positive_at_least_10ppm": 100
+    },
+    "Zn": {
+      "zero": 114,
+      "positive_below_10ppm": 34,
+      "positive_at_least_10ppm": 102
+    },
+    "As": {
+      "zero": 59,
+      "positive_below_10ppm": 59,
+      "positive_at_least_10ppm": 132
+    },
+    "Se": {
+      "zero": 104,
+      "positive_below_10ppm": 40,
+      "positive_at_least_10ppm": 106
+    },
+    "Rb": {
+      "zero": 96,
+      "positive_below_10ppm": 55,
+      "positive_at_least_10ppm": 99
+    },
+    "Sr": {
+      "zero": 76,
+      "positive_below_10ppm": 26,
+      "positive_at_least_10ppm": 148
+    },
+    "Y": {
+      "zero": 48,
+      "positive_below_10ppm": 62,
+      "positive_at_least_10ppm": 140
+    },
+    "Zr": {
+      "zero": 49,
+      "positive_below_10ppm": 71,
+      "positive_at_least_10ppm": 130
+    },
+    "Nb": {
+      "zero": 68,
+      "positive_below_10ppm": 60,
+      "positive_at_least_10ppm": 122
+    },
+    "Mo": {
+      "zero": 58,
+      "positive_below_10ppm": 76,
+      "positive_at_least_10ppm": 116
+    },
+    "Cd": {
+      "zero": 101,
+      "positive_below_10ppm": 48,
+      "positive_at_least_10ppm": 101
+    },
+    "Sn": {
+      "zero": 67,
+      "positive_below_10ppm": 62,
+      "positive_at_least_10ppm": 121
+    },
+    "Sb": {
+      "zero": 70,
+      "positive_below_10ppm": 43,
+      "positive_at_least_10ppm": 137
+    },
+    "Ba": {
+      "zero": 36,
+      "positive_below_10ppm": 48,
+      "positive_at_least_10ppm": 166
+    },
+    "W": {
+      "zero": 60,
+      "positive_below_10ppm": 45,
+      "positive_at_least_10ppm": 145
+    },
+    "Pb": {
+      "zero": 45,
+      "positive_below_10ppm": 46,
+      "positive_at_least_10ppm": 159
+    }
+  },
+  "scope": "composition labels, not measured detection limits"
+}
