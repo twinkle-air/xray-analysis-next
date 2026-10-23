@@ -48,3 +48,8 @@ python -X utf8 -B datasets/round3/member_C/verify_candidates.py                 
 6. 第二轮遗留的公共输入清单成员会签仍未完成；若后续统一条件与此不同，需另起版本。
 
 以上任一项未冻结前，本目录不是可执行的出谱输入，也不能当作已验收训练数据。候选检查属于合成侧核对，不证明真实设备上的95%/5%准确度。大文件交付沿用第二轮无损办法：仅以ZIP上传并核对SHA/CRC与integrity，`transport_parts` 不作谱加载；本轮尚无密封批次，故未上传任何谱数据。
+
+## 传输与体积
+
+本目录 3.8 MB、26 个交付文件（`delivery_manifest.json` 逐项记录大小与SHA-256，不含自身）。4.3 MB的历史比对快照**不在C目录重复保存**：`build_candidates.py` 与 `verify_candidates.py` 直接读取仓库内A已发布的 `../member_A/inputs/historical_compositions.json`（同一份快照，保证A与C对同一历史群体筛查），其SHA-256 `8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473` 记入 `candidates/input_identity.json` 并在 `reports/verification.json` 复核。候选主表保持原文件形式，因为A的全局去重与连通闭包要按同一路径结构直读各成员登记册；一旦进入出谱阶段，密封批次与其完整结果一律只走无损ZIP。
+

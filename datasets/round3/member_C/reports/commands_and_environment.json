@@ -12,9 +12,9 @@
     "xraylib": "4.3.0",
     "bit_generator": "PCG64 (numpy.random.default_rng default)",
     "thread_environment": {
-      "OMP_NUM_THREADS": "1",
-      "OPENBLAS_NUM_THREADS": "1",
-      "MKL_NUM_THREADS": "1"
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null
     },
     "matches_shared_source_identity_environment": true
   },

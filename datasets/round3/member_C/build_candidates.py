@@ -183,10 +183,17 @@ def construct(specs, families):
     return samples, built
 
 def historical():
-    if (INPUTS/'historical_compositions.json').exists():
-        archived=read(INPUTS/'historical_compositions.json')
-        return archived['rows'],archived['sources']
-    raise ValueError('C uses the published historical snapshot in inputs/; it must not be rebuilt from local outputs')
+    """Historical comparison snapshot: C reuses the archive already published in the repository.
+
+    No duplicate copy is committed (the bytes are identical to member A's published
+    snapshot), so the archive is read from its repository path and its SHA-256 is
+    recorded in candidates/input_identity.json.
+    """
+    for candidate in (INPUTS/'historical_compositions.json', ROOT/'datasets/round3/member_A/inputs/historical_compositions.json'):
+        if candidate.exists():
+            archived = read(candidate)
+            return archived['rows'], archived['sources'], candidate
+    raise ValueError('Historical snapshot is not available in this checkout; it must not be rebuilt from local outputs')
 
 def verify(samples, families, specs, history):
     errors=[]; ids=[r['id'] for r in samples]
@@ -270,7 +277,7 @@ def main():
     if args.out.exists(): raise ValueError('Refusing to overwrite candidates')
     ranges=INPUTS/'design_ranges.json'; specs=read(ranges)
     families=assignment('C'); samples,built=construct(specs,families)
-    history,sources=historical(); report=verify(samples,built,specs,history)
+    history,sources,archive=historical(); report=verify(samples,built,specs,history)
     report['member_A_cross_check']=cross_member(samples,ROOT/'datasets/round3/member_A/candidates_v1/A_samples.json')
     if report['errors']: raise ValueError(report['errors'])
     args.out.mkdir(parents=True)
@@ -278,11 +285,13 @@ def main():
     write(args.out/'family_registry.json',{'design_families':built,'status':'pending_global_connected_closure','source_allocation':{'path':ALLOCATION.relative_to(ROOT).as_posix(),'sha256':sha(ALLOCATION),'production_approved':False}})
     write(args.out/'original_backgrounds.json',{'status':'candidate_pending_global_freeze','note':'one fresh independent background board per design family; every variant of a family shares it','backgrounds':{f['design_family_id']:{'matrix_type':f['matrix'],'background_seed':f['background_seed'],'background_attempt':f['background_attempt'],'compounds_percent':next(r['provenance']['original_compounds_percent'] for r in samples if r['provenance']['parent_family']==f['design_family_id']),'trace_ppm':next(r['provenance']['original_trace_ppm'] for r in samples if r['provenance']['parent_family']==f['design_family_id']),'composition_percent':next(r['provenance']['original_composition_percent'] for r in samples if r['provenance']['parent_family']==f['design_family_id'])} for f in built}})
     write(args.out/'candidate_checks.json',report)
-    archive=INPUTS/'historical_compositions.json'
+    archive_relative=archive.relative_to(ROOT).as_posix()
     write(args.out/'input_identity.json',{'builder_sha256':sha(__file__),'owner':'C','seed':SEED,
         'ranges':{'path':ranges.relative_to(ROOT).as_posix(),'sha256':sha(ranges)},
         'shared_allocation':{'path':ALLOCATION.relative_to(ROOT).as_posix(),'sha256':sha(ALLOCATION)},
-        'historical_archive':{'path':archive.relative_to(ROOT).as_posix(),'sha256':sha(archive),'provenance':'byte-identical copy of the snapshot published under member_A/inputs','status':read(archive)['status'],'coverage_limit':read(archive)['coverage_limit']},
+        'historical_archive':{'path':archive_relative,'sha256':sha(archive),
+            'location':'member_C inputs copy' if archive_relative.startswith('datasets/round3/member_C') else 'read from the repository copy already published under member_A/inputs; C does not re-upload identical bytes',
+            'provenance':'the same historical snapshot member A screened against, so C and A are compared against one historical population','status':read(archive)['status'],'coverage_limit':read(archive)['coverage_limit']},
         'historical_sources':sources,
         'generator_source_sha256':{name:sha(INPUTS/'generator/fp_competition'/name) for name in ['core.py','minerals.py','dataset.py','app.py','version.py','requirements-lock.txt']},
         'source_manifest':{'path':(INPUTS/'source_manifest.json').relative_to(ROOT).as_posix(),'sha256':sha(INPUTS/'source_manifest.json')},

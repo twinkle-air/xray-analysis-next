@@ -21,7 +21,7 @@ def main():
     manifest = build.read(HERE/'inputs/source_manifest.json')
     for relative, digest in manifest['files'].items():
         if build.sha(HERE/'inputs'/relative) != digest: raise ValueError('Source input changed: '+relative)
-    specs = build.read(HERE/'inputs/design_ranges.json'); history, sources = build.historical()
+    specs = build.read(HERE/'inputs/design_ranges.json'); history, sources, archive = build.historical()
     rebuilt, rebuilt_families = build.construct(specs, build.assignment('C'))
     if saved != rebuilt or families != rebuilt_families: raise ValueError('Deterministic candidate rebuild differs')
     report = build.verify(saved, families, specs, history)
