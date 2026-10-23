@@ -15,8 +15,22 @@ import xraylib as xl
 from scipy.spatial.distance import cdist
 
 HERE = pathlib.Path(__file__).resolve().parent
-ROOT = HERE.parents[1]
-sys.path.insert(0, str(ROOT / "fp-spectrum-generator-competition-v0.2.1"))
+ROOT = HERE.parents[2]
+A_INPUTS = ROOT / "datasets/round3/member_A/inputs"
+GENERATOR = A_INPUTS / "generator"
+SOURCE_SHA256 = {
+    "__init__.py": "3338a26d3706620d0b1eb836a6e39beb4ae15d61a4c04d9441215ec17ffeafa1",
+    "core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+}
+HISTORY_SHA256 = "8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473"
+for name, expected in SOURCE_SHA256.items():
+    source = GENERATOR / "fp_competition" / name
+    if not source.is_file():
+        raise FileNotFoundError(f"Required A generator source missing: {source}")
+    if hashlib.sha256(source.read_bytes()).hexdigest() != expected:
+        raise ValueError(f"A generator source SHA-256 mismatch: {source}")
+sys.path.insert(0, str(GENERATOR))
 from fp_competition.core import TARGET_ELEMENTS  # noqa: E402
 from fp_competition.minerals import components_to_elements, design_minerals  # noqa: E402
 
@@ -203,16 +217,16 @@ def construct(specs, assignments):
 
 
 def local_history():
-    files = [ROOT / "datasets/A-part-20261018/A_samples.json", ROOT / "datasets/B-part-20261021/B2_candidates.json"]
-    rows, sources = [], []
-    for path in files:
-        if not path.exists():
-            continue
-        j = read(path)
-        sources.append({"path": str(path.relative_to(ROOT)).replace("\\", "/"), "sha256": digest(path)})
-        for r in j["samples"]:
-            rows.append({"id": path.parent.name + "/" + r["id"], "composition_percent": r["composition_percent"]})
-    return rows, sources
+    path = A_INPUTS / "historical_compositions.json"
+    if not path.is_file():
+        raise FileNotFoundError(f"Required A historical snapshot missing: {path}")
+    actual = digest(path)
+    if actual != HISTORY_SHA256:
+        raise ValueError(f"A historical snapshot SHA-256 mismatch: {path}")
+    rows = read(path)["rows"]
+    if len(rows) != 3800 or len({r["id"] for r in rows}) != 3800:
+        raise ValueError("Expected 3,800 unique rows in A historical snapshot")
+    return rows, [{"path": path.relative_to(ROOT).as_posix(), "sha256": actual, "rows": len(rows)}]
 
 
 def verify(samples, families, specs, history):
@@ -287,7 +301,7 @@ def verify(samples, families, specs, history):
         "category_counts": category_counts, "matrix_counts": matrix_counts,
         "historical_rows_compared": len(history), "historical_nearest": near,
         "cross_design_family_near_edges": edges,
-        "historical_coverage": "Local first-round A 2500 and second-round B 250 only; A's 3800-row repository snapshot and other members remain for global review",
+        "historical_coverage": "A's sealed 3800-row repository snapshot; unavailable or unrecorded lineage and C/D candidates remain for global review",
         "cross_member_confirmation": "pending_A_global_review", "production_started": False,
         "eligible_for_training": False,
     }
@@ -301,6 +315,12 @@ def main():
         raise ValueError("Refusing to overwrite an existing candidate directory")
     range_path = HERE / "inputs/design_ranges.json"
     allocation_path = HERE / "inputs/design_allocation.json"
+    for path, expected in ((range_path, "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d"),
+                           (allocation_path, "c07a57c83e3f007bb7dc1667807b3111ec4ee5e9a82baa8dfd1af2c7d950d4d4")):
+        if not path.is_file():
+            raise FileNotFoundError(f"Required B design input missing: {path}")
+        if digest(path) != expected:
+            raise ValueError(f"B design input SHA-256 mismatch: {path}")
     specs, allocation = read(range_path), read(allocation_path)
     assignments = allocation["families"]
     for row in assignments:
@@ -320,6 +340,8 @@ def main():
     write(args.out / "input_identity.json", {
         "builder_sha256": digest(__file__), "ranges": {"path": "inputs/design_ranges.json", "sha256": digest(range_path)},
         "allocation": {"path": "inputs/design_allocation.json", "sha256": digest(allocation_path)},
+        "generator_sources": [{"path": (GENERATOR / "fp_competition" / name).relative_to(ROOT).as_posix(),
+                               "sha256": expected} for name, expected in SOURCE_SHA256.items()],
         "historical_sources": sources, "seed": SEED,
     })
     with (args.out / "formula_registry.csv").open("w", encoding="utf-8", newline="") as f:

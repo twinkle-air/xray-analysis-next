@@ -14,14 +14,14 @@
   },
   "target_count": 32,
   "targets_with_positive_candidate": 32,
-  "historical_rows_compared": 2750,
-  "minimum_local_historical_L1_percentage_points": 2.935606466579367,
+  "historical_rows_compared": 3800,
+  "minimum_local_historical_L1_percentage_points": 2.9356064665780197,
   "local_historical_pairs_within_0_5": 0,
   "cross_B_design_family_edges_within_0_5": 0,
   "independent_byte_identical_rebuilds": 2,
   "production_started": false,
   "pending_A_review": [
-    "Global historical and B/C/D candidate connected-family closure",
+    "Remaining historical lineage and C/D candidate connected-family closure",
     "Final use split and family/profile assignment",
     "Production profile, source, dependency, noise-seed and command freeze",
     "90-spectrum pilot and subsequent sealed production"

@@ -1,37 +1,97 @@
 {
   "status": "passed",
-  "semantic_equal_to_initial_B_samples": true,
+  "verification_scope": "isolated repository-layout copy of the committed B files and SHA-256 verified A source/history inputs; not a full Git clone",
+  "member_B_path": "datasets/round3/member_B",
   "independent_rebuilds": 2,
+  "working_directory": "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛",
+  "python_executable": "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\work\\venv313\\Scripts\\python.exe",
+  "python_version": "3.13.14",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "xraylib": "4.3.0"
+  },
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\work\\venv313\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part-20261023\\work\\review_checkout\\datasets\\round3\\member_B\\build_candidates.py",
+        "--out",
+        "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part-20261023\\work\\review_checkout\\datasets\\round3\\member_B\\review_rebuild_1"
+      ],
+      "exit_code": 0,
+      "candidate_count": 250,
+      "historical_rows_compared": 3800
+    },
+    {
+      "argv": [
+        "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part\\work\\venv313\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part-20261023\\work\\review_checkout\\datasets\\round3\\member_B\\build_candidates.py",
+        "--out",
+        "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part-20261023\\work\\review_checkout\\datasets\\round3\\member_B\\review_rebuild_2"
+      ],
+      "exit_code": 0,
+      "candidate_count": 250,
+      "historical_rows_compared": 3800
+    }
+  ],
+  "required_inputs": {
+    "A_historical_snapshot_sha256": "8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473",
+    "A_generator_init_sha256": "3338a26d3706620d0b1eb836a6e39beb4ae15d61a4c04d9441215ec17ffeafa1",
+    "A_generator_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "A_generator_minerals_sha256": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662"
+  },
+  "failure_case": {
+    "missing": "datasets/round3/member_A/inputs/historical_compositions.json",
+    "exit_code": 1,
+    "error": "FileNotFoundError: Required A historical snapshot missing",
+    "output_directory_created": false
+  },
   "files": [
     {
       "file": "B_samples.json",
       "sha256": "bb61407dc09323e31706f506fd38e28145963fd577e7096604b8f24c7e8e2cf8",
+      "original_pr_sha256": "bb61407dc09323e31706f506fd38e28145963fd577e7096604b8f24c7e8e2cf8",
+      "unchanged_from_original_pr": true,
       "byte_identical": true
     },
     {
       "file": "family_registry.json",
       "sha256": "1b4e0f6a719282ff827da888cb118865e577ff236da2b4faeeef966fd607851e",
+      "original_pr_sha256": "1b4e0f6a719282ff827da888cb118865e577ff236da2b4faeeef966fd607851e",
+      "unchanged_from_original_pr": true,
       "byte_identical": true
     },
     {
       "file": "candidate_checks.json",
-      "sha256": "0bf7da9390fde8459fbca78621c964c4e210e0407806f48181cfe0663a59d4e9",
+      "sha256": "8ebdfbe5297d71ebdb8d6c96238a1309ae33a1e4da164b28283953030426ef64",
+      "original_pr_sha256": "0bf7da9390fde8459fbca78621c964c4e210e0407806f48181cfe0663a59d4e9",
+      "unchanged_from_original_pr": false,
       "byte_identical": true
     },
     {
       "file": "formula_registry.csv",
       "sha256": "daf9ee82672e602e335e498a4d78c9e2f1065c2db44ef1e5baaed7825c09e5c8",
+      "original_pr_sha256": "daf9ee82672e602e335e498a4d78c9e2f1065c2db44ef1e5baaed7825c09e5c8",
+      "unchanged_from_original_pr": true,
       "byte_identical": true
     },
     {
       "file": "coverage.json",
       "sha256": "7afcf5edc213e97c588b19ed6e6a2954cf2452d18ec37751775ab35641198336",
+      "original_pr_sha256": "7afcf5edc213e97c588b19ed6e6a2954cf2452d18ec37751775ab35641198336",
+      "unchanged_from_original_pr": true,
       "byte_identical": true
     },
     {
       "file": "input_identity.json",
-      "sha256": "87032e49894f105a542028629f81e4627b014f52d8ab707143296dfd0fc23690",
+      "sha256": "cc44fa8f9fbdbe349f6b5adfa9631ed5a3d87204736c5e682eb8cce96a6bc1c2",
+      "original_pr_sha256": "87032e49894f105a542028629f81e4627b014f52d8ab707143296dfd0fc23690",
+      "unchanged_from_original_pr": false,
       "byte_identical": true
     }
-  ]
+  ],
+  "note": "The local Python 3.13 venv printed a missing base-interpreter location notice, but both rebuild commands exited 0."
 }

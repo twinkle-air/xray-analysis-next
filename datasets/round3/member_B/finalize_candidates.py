@@ -28,6 +28,7 @@ def main():
     coverage = read(CANDIDATES / "coverage.json")["targets"]
     rebuild = read(HERE / "rebuild_verification.json")
     assert checks["status"] == "passed_local_candidate_checks" and not checks["errors"]
+    assert checks["historical_rows_compared"] == 3800 and len(checks["historical_nearest"]) == 250
     assert len(samples) == 250 and len(families) == 105
     assert rebuild["status"] == "passed" and all(r["byte_identical"] for r in rebuild["files"])
     nearest = checks["historical_nearest"]
@@ -46,7 +47,7 @@ def main():
         "independent_byte_identical_rebuilds": rebuild["independent_rebuilds"],
         "production_started": False,
         "pending_A_review": [
-            "Global historical and B/C/D candidate connected-family closure",
+            "Remaining historical lineage and C/D candidate connected-family closure",
             "Final use split and family/profile assignment",
             "Production profile, source, dependency, noise-seed and command freeze",
             "90-spectrum pilot and subsequent sealed production",
