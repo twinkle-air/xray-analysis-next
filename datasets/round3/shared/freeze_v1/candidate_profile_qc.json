@@ -1,0 +1,15 @@
+{
+  "status": "passed_static_and_pinned_probe_preflight_only",
+  "static_candidate_profile_pairs_checked": 3450,
+  "forward_pairs_checked": 0,
+  "full_candidate_forward_QC_complete": false,
+  "prior_probe_checks_verified": 24,
+  "prior_probe_source_sha256": "60cce1303e29a16e4482750dddbdf90a2ad3149521338e7da001c3a6e8d0f9c9",
+  "rows": [],
+  "errors": [],
+  "seconds": 0.125,
+  "spectra_saved": 0,
+  "T_scope": "physical_QC_only",
+  "budget_sha256": "8e451a488167dd8abf7757fdef2dea6300630d2d6e855750f6ac97d140ddb4d0",
+  "remaining_QC": "Pilot checks every saved spectrum; bulk producer must check each batch without loosening the registered window budget."
+}

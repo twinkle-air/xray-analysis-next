@@ -1,0 +1,11 @@
+{
+  "measured_pilot_spectra": 90,
+  "measured_wall_seconds_four_workers": 283.375,
+  "measured_generate_seconds_sum": 398.7530000000006,
+  "measured_native_ZIP_bytes": 25174773,
+  "measured_native_expanded_bytes": 107552824,
+  "linear_6900_spectrum_ZIP_estimate_bytes": 1930065930,
+  "linear_6900_spectrum_expanded_estimate_bytes": 8245716507,
+  "linear_generate_only_serial_estimate_seconds": 30571.063333333383,
+  "estimate_limit": "Extrapolation from one A 15-recipe/8-profile pilot only; batching/profile/matrix/hardware change cost. Not observed full-production time or space. Pilot time includes full replay and pack; per-batch CPU/wall sums overlap."
+}

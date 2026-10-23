@@ -1,0 +1,32 @@
+{
+  "frozen_records": 6900,
+  "frozen_families": 420,
+  "whole_family_profiles_and_usage_checked": true,
+  "new_seeds_unique": 6900,
+  "round2_seed_rows_compared": 6000,
+  "round2_seed_collision_count": 0,
+  "first_round_seed_coverage": "not complete; no full-all-history seed claim",
+  "failure_cases": {
+    "bulk_not_released": {
+      "rejected": true,
+      "message": "Bulk production has not been released"
+    },
+    "T_not_released": {
+      "rejected": true,
+      "message": "Bulk production has not been released"
+    },
+    "B_pilot_not_released": {
+      "rejected": true,
+      "message": "Member pilot is not released"
+    },
+    "A_confirmed_training_pilot": {
+      "accepted": true
+    },
+    "tampered_freeze_input": {
+      "rejected": true,
+      "message": "Frozen input missing or changed: release.json"
+    }
+  },
+  "pilot_member_A_only": true,
+  "bulk_production_approved": false
+}
