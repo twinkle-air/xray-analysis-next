@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-23",
+  "status": "partial_candidate_review_pending_D_and_global_freeze",
+  "production_approved": false,
+  "production_started": false,
+  "spectra_generated": 0,
+  "candidate_count": 750,
+  "design_family_count": 315,
+  "available_members": [
+    "A",
+    "B",
+    "C"
+  ],
+  "missing_members": [
+    "D"
+  ],
+  "reviewed_PR_heads": {
+    "22": "15ec0ebd799343463f8cca9f38bf1a7c55e54c6e",
+    "23": "cdd83557a45de549ee2dd8958f0deca9edd67fc5"
+  },
+  "member_counts": {
+    "A": {
+      "recipes": 250,
+      "families": 105,
+      "categories": {
+        "ladder": 90,
+        "interference": 50,
+        "paired_negative_spike": 60,
+        "routine": 50
+      },
+      "matrix": {
+        "silicate_oxide": 150,
+        "iron_oxide": 100
+      }
+    },
+    "B": {
+      "recipes": 250,
+      "families": 105,
+      "categories": {
+        "ladder": 90,
+        "interference": 50,
+        "paired_negative_spike": 60,
+        "routine": 50
+      },
+      "matrix": {
+        "silicate_oxide": 150,
+        "iron_oxide": 100
+      }
+    },
+    "C": {
+      "recipes": 250,
+      "families": 105,
+      "categories": {
+        "ladder": 90,
+        "interference": 50,
+        "paired_negative_spike": 60,
+        "routine": 50
+      },
+      "matrix": {
+        "silicate_oxide": 150,
+        "iron_oxide": 100
+      }
+    }
+  },
+  "historical_rows": 3800,
+  "historical_min_L1_by_member": {
+    "A": 3.6702391626502546,
+    "B": 2.9356064665780197,
+    "C": 4.370103960478903
+  },
+  "historical_near_edges": 0,
+  "explicit_historical_links": 0,
+  "pairwise": {
+    "AB": {
+      "min_L1": 4.52715150424385,
+      "pairs_L1_le_0_5": 0
+    },
+    "AC": {
+      "min_L1": 5.1416939796930805,
+      "pairs_L1_le_0_5": 0
+    },
+    "BC": {
+      "min_L1": 5.682137054279951,
+      "pairs_L1_le_0_5": 0
+    }
+  },
+  "cross_design_near_edges": 0,
+  "available_family_components": 315,
+  "original_background_history_min_L1": 3.38288865006255,
+  "design_seeds_unique": 315,
+  "background_seeds_unique": 315,
+  "history_coverage_limit": "Accepted round2 plus known local round1 candidate/pilot/research records; undocumented or unavailable lineage cannot be ruled out.",
+  "review_environment": {
+    "python": "3.12.14",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "xraylib": "4.3.0"
+  },
+  "B_review": {
+    "manifest_entries_verified": 14,
+    "two_full_entrypoint_rebuilds_six_files_byte_equal": true,
+    "missing_and_tampered_history_rejected_before_output": true
+  },
+  "C_review": {
+    "manifest_entries_verified": 26,
+    "candidate_rebuild_exact": true,
+    "verification_exit_code": 0,
+    "failure_cases_rejected": 6,
+    "exact_zero_labels_verified": 1498
+  },
+  "next_tasks": [
+    "Receive and review D 250 candidates / 105 families before final global closure",
+    "Resolve unavailable historical lineage conservatively: affected families train-only or downgrade; no independent-blind claim",
+    "Re-run four-member union and freeze whole-family usage plus anchor/development/T assignment and long-exposure coverage",
+    "Freeze production source/dependencies/profile hashes, all count-noise seeds, exact commands and total counts",
+    "Run A pilot from confirmed training families: 1 ladder + 1 interference + 1 pair + 2 routine = 15 recipes x 6 = 90 spectra; included in base quota; then decide batch production"
+  ],
+  "T_model_access": false,
+  "global_closure_complete": false,
+  "final_use_assigned": false,
+  "noise_seeds_frozen": false
+}

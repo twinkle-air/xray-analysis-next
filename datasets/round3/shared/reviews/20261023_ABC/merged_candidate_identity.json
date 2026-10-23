@@ -1,0 +1,21 @@
+{
+  "verified_main": "7982624a0d8c616be2680ecc7994bb809971f609",
+  "merged_PRs": [
+    {
+      "pr": 22,
+      "head": "15ec0ebd799343463f8cca9f38bf1a7c55e54c6e",
+      "review_url": "https://github.com/twinkle-air/xray-analysis-next/pull/22#pullrequestreview-5626758946",
+      "merge_commit_sha": "fd1d1e57d4276fa418c6282aa7f5c4ed93df90c1",
+      "merged": true
+    },
+    {
+      "pr": 23,
+      "head": "cdd83557a45de549ee2dd8958f0deca9edd67fc5",
+      "review_url": "https://github.com/twinkle-air/xray-analysis-next/pull/23#pullrequestreview-5626759880",
+      "merge_commit_sha": "7982624a0d8c616be2680ecc7994bb809971f609",
+      "merged": true
+    }
+  ],
+  "reviewed_member_blobs_verified": 42,
+  "D_candidate_absent_at_verified_main": true
+}
