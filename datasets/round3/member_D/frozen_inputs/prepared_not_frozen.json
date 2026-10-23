@@ -1,0 +1,281 @@
+{
+  "status": "prepared_not_frozen",
+  "round_id": "round3",
+  "member": "D",
+  "production_approved": false,
+  "production_started": false,
+  "note": "D copies the identity of member A's prepared shared inputs only. Nothing here is approved or frozen; D changes no profile, seed, label, core or usage. Exact per-family condition assignment (1 anchor + 2 development profiles), the count-noise sub-seeds, the held-out T list and the production commands are A's freeze steps and are still pending.",
+  "shared_preparation_manifest": {
+    "path": "datasets/round3/shared/preparation_v1/preparation_manifest.json",
+    "sha256": "74dc1ea6e1811ed49ca8a28bbddbcd60e9eb39b4532cddd6eb882cc4be72f170",
+    "production_approved": false
+  },
+  "design_allocation": {
+    "path": "datasets/round3/shared/preparation_v1/design_allocation.json",
+    "sha256": "c07a57c83e3f007bb7dc1667807b3111ec4ee5e9a82baa8dfd1af2c7d950d4d4",
+    "families": 420,
+    "D_owned_families": 105,
+    "status": "design_assigned_pending_actual_candidates"
+  },
+  "profiles": [
+    {
+      "path": "development_profiles/P1.json",
+      "profile_id": "P1",
+      "role": "development_anchor",
+      "sha256": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221",
+      "registry_sha256": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221",
+      "hash_matches_registry": true,
+      "registry_status": "prepared_pending_global_freeze",
+      "model_forbidden": false
+    },
+    {
+      "path": "development_profiles/P2.json",
+      "profile_id": "P2",
+      "role": "development_anchor",
+      "sha256": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03",
+      "registry_sha256": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03",
+      "hash_matches_registry": true,
+      "registry_status": "prepared_pending_global_freeze",
+      "model_forbidden": false
+    },
+    {
+      "path": "development_profiles/P3.json",
+      "profile_id": "P3",
+      "role": "development_anchor",
+      "sha256": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351",
+      "registry_sha256": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351",
+      "hash_matches_registry": true,
+      "registry_status": "prepared_pending_global_freeze",
+      "model_forbidden": false
+    },
+    {
+      "path": "development_profiles/D1.json",
+      "profile_id": "D1",
+      "role": "development",
+      "sha256": "4f0accd43f895b11248b7c44f7ee3d55c1c1b5cf94eb2a3d8438652cc37202d1",
+      "registry_sha256": "4f0accd43f895b11248b7c44f7ee3d55c1c1b5cf94eb2a3d8438652cc37202d1",
+      "hash_matches_registry": true,
+      "registry_status": "prepared_pending_global_freeze",
+      "model_forbidden": false
+    },
+    {
+      "path": "development_profiles/D2.json",
+      "profile_id": "D2",
+      "role": "development",
+      "sha256": "f26ddacc79d3b9dea091aca881a3976584b5582b2181bdffd6c9fa14968e3488",
+      "registry_sha256": "f26ddacc79d3b9dea091aca881a3976584b5582b2181bdffd6c9fa14968e3488",
+      "hash_matches_registry": true,
+      "registry_status": "prepared_pending_global_freeze",
+      "model_forbidden": false
+    },
+    {
+      "path": "development_profiles/D3.json",
+      "profile_id": "D3",
+      "role": "development",
+      "sha256": "a1ebd6212b45187a96bd905055989220b6d589a01894025d39c1e67a66901775",
+      "registry_sha256": "a1ebd6212b45187a96bd905055989220b6d589a01894025d39c1e67a66901775",
+      "hash_matches_registry": true,
+      "registry_status": "prepared_pending_global_freeze",
+      "model_forbidden": false
+    },
+    {
+      "path": "development_profiles/D4.json",
+      "profile_id": "D4",
+      "role": "development",
+      "sha256": "fb0413c4915fa30ea2a526b466c690026cba95ee6dcb11e366146e251c0c581c",
+      "registry_sha256": "fb0413c4915fa30ea2a526b466c690026cba95ee6dcb11e366146e251c0c581c",
+      "hash_matches_registry": true,
+      "registry_status": "prepared_pending_global_freeze",
+      "model_forbidden": false
+    },
+    {
+      "path": "development_profiles/D5.json",
+      "profile_id": "D5",
+      "role": "development",
+      "sha256": "51b0d63f272a009783d9609171efbd70b739b1dcb2b216957b9cedaa8e442402",
+      "registry_sha256": "51b0d63f272a009783d9609171efbd70b739b1dcb2b216957b9cedaa8e442402",
+      "hash_matches_registry": true,
+      "registry_status": "prepared_pending_global_freeze",
+      "model_forbidden": false
+    },
+    {
+      "path": "development_profiles/D6.json",
+      "profile_id": "D6",
+      "role": "development",
+      "sha256": "63c583d0e7bfe8d1ac43a330b2d5c7a844bf3cfffc871d25e02e86769df838a2",
+      "registry_sha256": "63c583d0e7bfe8d1ac43a330b2d5c7a844bf3cfffc871d25e02e86769df838a2",
+      "hash_matches_registry": true,
+      "registry_status": "prepared_pending_global_freeze",
+      "model_forbidden": false
+    },
+    {
+      "path": "heldout_profiles_qc_only/T1.json",
+      "profile_id": "T1",
+      "role": "heldout_qc_only_excluded_from_model",
+      "sha256": "5d8b67f13287315f34e8c262b15864910dce3ee7272d5b02b69f0e4ca5ab2cd3",
+      "registry_sha256": "5d8b67f13287315f34e8c262b15864910dce3ee7272d5b02b69f0e4ca5ab2cd3",
+      "hash_matches_registry": true,
+      "registry_status": "prepared_pending_global_freeze",
+      "model_forbidden": true
+    },
+    {
+      "path": "heldout_profiles_qc_only/T2.json",
+      "profile_id": "T2",
+      "role": "heldout_qc_only_excluded_from_model",
+      "sha256": "8f20475a9a09a0fe086d79f4dbd3323ce119c74fd091cd624af72c56cdfbcca7",
+      "registry_sha256": "8f20475a9a09a0fe086d79f4dbd3323ce119c74fd091cd624af72c56cdfbcca7",
+      "hash_matches_registry": true,
+      "registry_status": "prepared_pending_global_freeze",
+      "model_forbidden": true
+    },
+    {
+      "path": "heldout_profiles_qc_only/T3.json",
+      "profile_id": "T3",
+      "role": "heldout_qc_only_excluded_from_model",
+      "sha256": "254a366758ac90e0cc1ff5ccc738a99068969e33471f688fa55caf28aebf7402",
+      "registry_sha256": "254a366758ac90e0cc1ff5ccc738a99068969e33471f688fa55caf28aebf7402",
+      "hash_matches_registry": true,
+      "registry_status": "prepared_pending_global_freeze",
+      "model_forbidden": true
+    }
+  ],
+  "round2_anchor_profile_identity": [
+    {
+      "profile_id": "P1",
+      "round3_copy_sha256": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221",
+      "registry_sha256": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221",
+      "registry_source_sha256": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221",
+      "round2_A_baseline_path": "datasets/round2/member_A/production_inputs_v2/profiles/P1.json",
+      "round2_A_baseline_sha256": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221",
+      "round2_A_git_blob": "1ea7e466af9c52997a072a31932145edc4b39319",
+      "exact_source_bytes_preserved": true,
+      "all_recorded_hashes_equal": true
+    },
+    {
+      "profile_id": "P2",
+      "round3_copy_sha256": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03",
+      "registry_sha256": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03",
+      "registry_source_sha256": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03",
+      "round2_A_baseline_path": "datasets/round2/member_A/production_inputs_v2/profiles/P2.json",
+      "round2_A_baseline_sha256": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03",
+      "round2_A_git_blob": "b6c5410cebe8ac491b57323d6ecf38955da58a73",
+      "exact_source_bytes_preserved": true,
+      "all_recorded_hashes_equal": true
+    },
+    {
+      "profile_id": "P3",
+      "round3_copy_sha256": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351",
+      "registry_sha256": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351",
+      "registry_source_sha256": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351",
+      "round2_A_baseline_path": "datasets/round2/member_A/production_inputs_v2/profiles/P3.json",
+      "round2_A_baseline_sha256": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351",
+      "round2_A_git_blob": "5670ef9a81ba52a23de3d2283c6ef78d7e1e37c8",
+      "exact_source_bytes_preserved": true,
+      "all_recorded_hashes_equal": true
+    }
+  ],
+  "profile_registry": {
+    "path": "datasets/round3/shared/preparation_v1/profile_registry.json",
+    "sha256": "df16363e0973f8cc02241b9393d684005d1be558da97a773a006332e7f24d6a1",
+    "development_allowlist": [
+      "P1",
+      "P2",
+      "P3",
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "model_forbidden": [
+      "T1",
+      "T2",
+      "T3"
+    ]
+  },
+  "source_identity": {
+    "path": "datasets/round3/shared/preparation_v1/source_identity.json",
+    "sha256": "d7d0ba6744b76925ede9572ce5b3182a694ef4d4e8a6923f0fd146ed662f8ede",
+    "generator_source_sha256": {
+      "core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "dataset.py": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+      "app.py": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+      "version.py": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+      "requirements-lock.txt": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0"
+    },
+    "environment": {
+      "python": "3.12.14",
+      "implementation": "CPython",
+      "system": "Windows",
+      "machine": "AMD64",
+      "packages": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "xraylib": "4.3.0",
+        "matplotlib": "3.11.2",
+        "openpyxl": "3.1.5"
+      },
+      "bit_generator": "PCG64",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      }
+    },
+    "physics_core_unchanged_from_round2": true
+  },
+  "window_budget": {
+    "path": "datasets/round3/shared/preparation_v1/window_budget.json",
+    "sha256": "8e451a488167dd8abf7757fdef2dea6300630d2d6e855750f6ac97d140ddb4d0",
+    "values": {
+      "status": "preregistered_engineering_guardrail_not_accuracy_limit",
+      "maximum_lost_fraction_49kV": 0.5,
+      "maximum_lost_fraction_20kV": 0.1,
+      "conservation_rtol": 1e-09,
+      "conservation_atol": 1e-07,
+      "nonnegative_tolerance": 1e-12,
+      "policy": "Retain known out-of-window lines and their mass accounting; Ba K exclusion does not exclude L/M. No post-hoc loosening or deletion of failed cases. Full candidate/pilot validation remains pending."
+    }
+  },
+  "d_local_generator_copies": {
+    "status": "candidate_source_inputs_not_production_freeze",
+    "round_id": "round3",
+    "owner": "D",
+    "production_approved": false,
+    "files": {
+      "design_ranges.json": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d",
+      "generator/fp_competition/core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "generator/fp_competition/minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "generator/fp_competition/dataset.py": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+      "generator/fp_competition/app.py": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+      "generator/fp_competition/version.py": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+      "generator/fp_competition/requirements-lock.txt": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0",
+      "generator/fp_competition/__init__.py": "3338a26d3706620d0b1eb836a6e39beb4ae15d61a4c04d9441215ec17ffeafa1"
+    },
+    "provenance": {
+      "design_ranges.json": "byte-identical copy of datasets/round3/member_A/inputs/design_ranges.json (sha 5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d)",
+      "generator/fp_competition": "byte-identical copies of datasets/round3/member_A/inputs/generator/fp_competition; physics core unchanged from round 2",
+      "source_of_truth": "datasets/round3/shared/preparation_v1/source_identity.json records the shared generator hashes",
+      "historical_compositions.json": "NOT copied into member_D: build_candidates.py reads datasets/round3/member_A/inputs/historical_compositions.json straight from the repository and records its SHA-256 in candidates/input_identity.json, so the 4.3 MB snapshot is uploaded once instead of twice"
+    },
+    "copy_verified": true,
+    "note": "D did not modify any generator source; only the seven modules/lock above are carried so candidate construction and verification run from a fresh clone."
+  },
+  "d_inputs_historical_archive": {
+    "path": "datasets/round3/member_A/inputs/historical_compositions.json",
+    "sha256": "8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473",
+    "location": "read from the repository copy already published under member_A/inputs; D does not re-upload identical bytes",
+    "provenance": "the same historical snapshot members A/B/C screened against, so D is compared against one historical population",
+    "status": "available_historical_evidence_snapshot",
+    "coverage_limit": "Accepted round2 plus known local round1 candidate/pilot/research records; undocumented or unavailable lineage cannot be ruled out."
+  },
+  "pending_from_A": [
+    "per-family profile assignment (1 anchor + 2 development, centrally assigned)",
+    "count-noise sub-seeds and global collision check",
+    "usage split at family level and the new held-out recipe list",
+    "frozen production source/dependency snapshot and exact commands",
+    "shared sign-off of the common input list that is still open from round 2"
+  ]
+}

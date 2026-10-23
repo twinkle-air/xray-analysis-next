@@ -1,0 +1,1558 @@
+{
+  "status": "passed_member_d_candidate_checks",
+  "errors": [],
+  "candidate_count": 250,
+  "design_family_count": 105,
+  "category_counts": {
+    "ladder": 90,
+    "interference": 50,
+    "paired_negative_spike": 60,
+    "routine": 50
+  },
+  "matrix_counts": {
+    "silicate_oxide": 150,
+    "iron_oxide": 100
+  },
+  "exact_zero_labels_verified": 1553,
+  "exact_zero_label_conflicts": 0,
+  "historical_rows_compared": 3800,
+  "historical_nearest": [
+    {
+      "sample_id": "R3_D_ladder_0004_V01",
+      "historical_id": "round1_available/A-part-20261018/A00769",
+      "minimum_L1_percentage_points": 5.368157915529271,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0004_V02",
+      "historical_id": "round1_available/A-part-20261018/A00769",
+      "minimum_L1_percentage_points": 5.366329818288835,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0004_V03",
+      "historical_id": "round1_available/A-part-20261018/A00769",
+      "minimum_L1_percentage_points": 5.359825208527592,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0004_V04",
+      "historical_id": "round1_available/A-part-20261018/A00769",
+      "minimum_L1_percentage_points": 5.347738634984485,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0004_V05",
+      "historical_id": "round1_available/A-part-20261018/A00769",
+      "minimum_L1_percentage_points": 5.280955826149195,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0004_V06",
+      "historical_id": "round1_available/A-part-20261018/A00769",
+      "minimum_L1_percentage_points": 5.19051343333048,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0010_V01",
+      "historical_id": "round2/B/B2-FEO-REG-039",
+      "minimum_L1_percentage_points": 8.362115191330508,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0010_V02",
+      "historical_id": "round2/B/B2-FEO-REG-039",
+      "minimum_L1_percentage_points": 8.359880575127448,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0010_V03",
+      "historical_id": "round2/B/B2-FEO-REG-039",
+      "minimum_L1_percentage_points": 8.346644267535114,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0010_V04",
+      "historical_id": "round2/B/B2-FEO-REG-039",
+      "minimum_L1_percentage_points": 8.309049366202135,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0010_V05",
+      "historical_id": "round2/B/B2-FEO-REG-039",
+      "minimum_L1_percentage_points": 8.190663518166435,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0010_V06",
+      "historical_id": "round1_available/B-source/B01197",
+      "minimum_L1_percentage_points": 7.83582159249974,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0012_V01",
+      "historical_id": "round2/A/R2_A_0033",
+      "minimum_L1_percentage_points": 6.873728268773823,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0012_V02",
+      "historical_id": "round2/A/R2_A_0033",
+      "minimum_L1_percentage_points": 6.873681511918794,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0012_V03",
+      "historical_id": "round2/A/R2_A_0033",
+      "minimum_L1_percentage_points": 6.8736098390304505,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0012_V04",
+      "historical_id": "round2/A/R2_A_0033",
+      "minimum_L1_percentage_points": 6.873361193423994,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0012_V05",
+      "historical_id": "round2/A/R2_A_0033",
+      "minimum_L1_percentage_points": 6.871993190815801,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0012_V06",
+      "historical_id": "round2/A/R2_A_0033",
+      "minimum_L1_percentage_points": 6.879310128531667,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0016_V01",
+      "historical_id": "round1_available/A-part-20261018/A01478",
+      "minimum_L1_percentage_points": 5.516365058530998,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0016_V02",
+      "historical_id": "round1_available/A-part-20261018/A01478",
+      "minimum_L1_percentage_points": 5.516345046647794,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0016_V03",
+      "historical_id": "round1_available/A-part-20261018/A01478",
+      "minimum_L1_percentage_points": 5.516283463711205,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0016_V04",
+      "historical_id": "round1_available/A-part-20261018/A01478",
+      "minimum_L1_percentage_points": 5.516236231178476,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0016_V05",
+      "historical_id": "round1_available/A-part-20261018/A01478",
+      "minimum_L1_percentage_points": 5.523707597595586,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0016_V06",
+      "historical_id": "round1_available/A-part-20261018/A01478",
+      "minimum_L1_percentage_points": 5.524575387813196,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0020_V01",
+      "historical_id": "round1_available/B-source/B01199",
+      "minimum_L1_percentage_points": 6.731216231495834,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0020_V02",
+      "historical_id": "round1_available/B-source/B01199",
+      "minimum_L1_percentage_points": 6.731191195042544,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0020_V03",
+      "historical_id": "round1_available/B-source/B01199",
+      "minimum_L1_percentage_points": 6.731384133040509,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0020_V04",
+      "historical_id": "round1_available/B-source/B01199",
+      "minimum_L1_percentage_points": 6.732038447704451,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0020_V05",
+      "historical_id": "round1_available/B-source/B01199",
+      "minimum_L1_percentage_points": 6.734145723137747,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0020_V06",
+      "historical_id": "round1_available/B-source/B01199",
+      "minimum_L1_percentage_points": 6.74330004734815,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0024_V01",
+      "historical_id": "round1_available/A-part-20261018/A00675",
+      "minimum_L1_percentage_points": 7.905954083296967,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0024_V02",
+      "historical_id": "round1_available/A-part-20261018/A00675",
+      "minimum_L1_percentage_points": 7.905961040329956,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0024_V03",
+      "historical_id": "round1_available/A-part-20261018/A00675",
+      "minimum_L1_percentage_points": 7.905969244824165,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0024_V04",
+      "historical_id": "round1_available/A-part-20261018/A00675",
+      "minimum_L1_percentage_points": 7.906041340519169,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0024_V05",
+      "historical_id": "round1_available/A-part-20261018/A00675",
+      "minimum_L1_percentage_points": 7.906117512463365,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0024_V06",
+      "historical_id": "round1_available/A-part-20261018/A00675",
+      "minimum_L1_percentage_points": 7.906639167110853,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0030_V01",
+      "historical_id": "round2/B/B2-FEO-EDG-002",
+      "minimum_L1_percentage_points": 9.835884180698088,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0030_V02",
+      "historical_id": "round2/B/B2-FEO-EDG-002",
+      "minimum_L1_percentage_points": 9.83590480240415,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0030_V03",
+      "historical_id": "round2/B/B2-FEO-EDG-002",
+      "minimum_L1_percentage_points": 9.83597228808962,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0030_V04",
+      "historical_id": "round2/B/B2-FEO-EDG-002",
+      "minimum_L1_percentage_points": 9.836058100757644,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0030_V05",
+      "historical_id": "round2/B/B2-FEO-EDG-002",
+      "minimum_L1_percentage_points": 9.836966928479585,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0030_V06",
+      "historical_id": "round2/B/B2-FEO-EDG-002",
+      "minimum_L1_percentage_points": 9.842581781306354,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0032_V01",
+      "historical_id": "round1_available/A-part-20261018/A01452",
+      "minimum_L1_percentage_points": 4.895916509842612,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0032_V02",
+      "historical_id": "round1_available/A-part-20261018/A01452",
+      "minimum_L1_percentage_points": 4.89600888432043,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0032_V03",
+      "historical_id": "round1_available/A-part-20261018/A01452",
+      "minimum_L1_percentage_points": 4.896120926983901,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0032_V04",
+      "historical_id": "round1_available/A-part-20261018/A01452",
+      "minimum_L1_percentage_points": 4.896377719072056,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0032_V05",
+      "historical_id": "round1_available/A-part-20261018/A01452",
+      "minimum_L1_percentage_points": 4.897627505425104,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0032_V06",
+      "historical_id": "round1_available/A-part-20261018/A01452",
+      "minimum_L1_percentage_points": 4.901393378945812,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0036_V01",
+      "historical_id": "round1_available/A-part-20261018/A00501",
+      "minimum_L1_percentage_points": 6.2220704721719,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0036_V02",
+      "historical_id": "round1_available/A-part-20261018/A00501",
+      "minimum_L1_percentage_points": 6.221829386714697,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0036_V03",
+      "historical_id": "round1_available/A-part-20261018/A00501",
+      "minimum_L1_percentage_points": 6.221498758576493,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0036_V04",
+      "historical_id": "round1_available/A-part-20261018/A00501",
+      "minimum_L1_percentage_points": 6.220474853675833,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0036_V05",
+      "historical_id": "round1_available/A-part-20261018/A00501",
+      "minimum_L1_percentage_points": 6.221321972082392,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0036_V06",
+      "historical_id": "round1_available/A-part-20261018/A00501",
+      "minimum_L1_percentage_points": 6.222103573777566,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0040_V01",
+      "historical_id": "round2/A/R2_A_0172",
+      "minimum_L1_percentage_points": 6.062943936860887,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0040_V02",
+      "historical_id": "round2/A/R2_A_0172",
+      "minimum_L1_percentage_points": 6.062790908350431,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0040_V03",
+      "historical_id": "round2/A/R2_A_0172",
+      "minimum_L1_percentage_points": 6.062508024635933,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0040_V04",
+      "historical_id": "round2/A/R2_A_0172",
+      "minimum_L1_percentage_points": 6.061408916930787,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0040_V05",
+      "historical_id": "round2/A/R2_A_0172",
+      "minimum_L1_percentage_points": 6.05845403265462,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0040_V06",
+      "historical_id": "round2/A/R2_A_0172",
+      "minimum_L1_percentage_points": 6.044173655169616,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0044_V01",
+      "historical_id": "round1_available/A-part-20261018/A01158",
+      "minimum_L1_percentage_points": 6.497207298600391,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0044_V02",
+      "historical_id": "round1_available/A-part-20261018/A01158",
+      "minimum_L1_percentage_points": 6.497260319865401,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0044_V03",
+      "historical_id": "round1_available/A-part-20261018/A01158",
+      "minimum_L1_percentage_points": 6.49742787625707,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0044_V04",
+      "historical_id": "round1_available/A-part-20261018/A01158",
+      "minimum_L1_percentage_points": 6.497842348998738,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0044_V05",
+      "historical_id": "round1_available/A-part-20261018/A01158",
+      "minimum_L1_percentage_points": 6.501091118208978,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0044_V06",
+      "historical_id": "round1_available/A-part-20261018/A01158",
+      "minimum_L1_percentage_points": 6.5056301482784935,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0050_V01",
+      "historical_id": "round2/B/B2-FEO-REG-053",
+      "minimum_L1_percentage_points": 8.675647871656835,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0050_V02",
+      "historical_id": "round2/B/B2-FEO-REG-053",
+      "minimum_L1_percentage_points": 8.675575817399467,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0050_V03",
+      "historical_id": "round2/B/B2-FEO-REG-053",
+      "minimum_L1_percentage_points": 8.67523452049644,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0050_V04",
+      "historical_id": "round2/B/B2-FEO-REG-053",
+      "minimum_L1_percentage_points": 8.674160805374445,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0050_V05",
+      "historical_id": "round2/B/B2-FEO-REG-053",
+      "minimum_L1_percentage_points": 8.673427277664928,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0050_V06",
+      "historical_id": "round2/B/B2-FEO-REG-053",
+      "minimum_L1_percentage_points": 8.676981089539712,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0052_V01",
+      "historical_id": "round1_available/A-part-20261018/A01398",
+      "minimum_L1_percentage_points": 6.14482656147842,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0052_V02",
+      "historical_id": "round1_available/A-part-20261018/A01398",
+      "minimum_L1_percentage_points": 6.144532770017559,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0052_V03",
+      "historical_id": "round1_available/A-part-20261018/A01398",
+      "minimum_L1_percentage_points": 6.144336340190223,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0052_V04",
+      "historical_id": "round1_available/A-part-20261018/A01398",
+      "minimum_L1_percentage_points": 6.1432145347758915,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0052_V05",
+      "historical_id": "round1_available/A-part-20261018/A01398",
+      "minimum_L1_percentage_points": 6.140160023768746,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0052_V06",
+      "historical_id": "round1_available/A-part-20261018/A01398",
+      "minimum_L1_percentage_points": 6.143250242715469,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0056_V01",
+      "historical_id": "round1_available/A-part-20261018/A01114",
+      "minimum_L1_percentage_points": 5.859542423329553,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0056_V02",
+      "historical_id": "round1_available/A-part-20261018/A01114",
+      "minimum_L1_percentage_points": 5.859384644126752,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0056_V03",
+      "historical_id": "round1_available/A-part-20261018/A01114",
+      "minimum_L1_percentage_points": 5.859180754893003,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0056_V04",
+      "historical_id": "round1_available/A-part-20261018/A01114",
+      "minimum_L1_percentage_points": 5.8580111032983515,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0056_V05",
+      "historical_id": "round1_available/A-part-20261018/A01114",
+      "minimum_L1_percentage_points": 5.857753962738941,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0056_V06",
+      "historical_id": "round1_available/A-part-20261018/A01114",
+      "minimum_L1_percentage_points": 5.851717747619818,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0060_V01",
+      "historical_id": "round2/A/R2_A_0177",
+      "minimum_L1_percentage_points": 8.984005593449922,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0060_V02",
+      "historical_id": "round2/A/R2_A_0177",
+      "minimum_L1_percentage_points": 8.983867790815983,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0060_V03",
+      "historical_id": "round2/A/R2_A_0177",
+      "minimum_L1_percentage_points": 8.983597707841335,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0060_V04",
+      "historical_id": "round2/A/R2_A_0177",
+      "minimum_L1_percentage_points": 8.982983485710825,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0060_V05",
+      "historical_id": "round2/A/R2_A_0177",
+      "minimum_L1_percentage_points": 8.982513004055608,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_ladder_0060_V06",
+      "historical_id": "round2/A/R2_A_0177",
+      "minimum_L1_percentage_points": 8.979601462427146,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0066_V01",
+      "historical_id": "round1_available/A-part-20261018/A00512",
+      "minimum_L1_percentage_points": 7.038147974614012,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0066_V02",
+      "historical_id": "round1_available/A-part-20261018/A00512",
+      "minimum_L1_percentage_points": 7.0386338431556625,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0066_V03",
+      "historical_id": "round1_available/A-part-20261018/A00512",
+      "minimum_L1_percentage_points": 6.913231867915431,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0066_V04",
+      "historical_id": "round1_available/A-part-20261018/A00512",
+      "minimum_L1_percentage_points": 6.913717736457088,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0066_V05",
+      "historical_id": "round1_available/A-part-20261018/A00512",
+      "minimum_L1_percentage_points": 6.919409568713475,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0070_V01",
+      "historical_id": "round2/C/C-F-001",
+      "minimum_L1_percentage_points": 7.028462107488356,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0070_V02",
+      "historical_id": "round2/C/C-F-001",
+      "minimum_L1_percentage_points": 7.029598873003316,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0070_V03",
+      "historical_id": "round2/C/C-F-001",
+      "minimum_L1_percentage_points": 7.311914526163062,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0070_V04",
+      "historical_id": "round2/C/C-F-001",
+      "minimum_L1_percentage_points": 7.313103212372761,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0070_V05",
+      "historical_id": "round2/C/C-F-001",
+      "minimum_L1_percentage_points": 7.336242818826891,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0072_V01",
+      "historical_id": "round2/D/D-SIL-R-060",
+      "minimum_L1_percentage_points": 5.408696447551724,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0072_V02",
+      "historical_id": "round2/D/D-SIL-R-060",
+      "minimum_L1_percentage_points": 5.408124990517718,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0072_V03",
+      "historical_id": "round2/D/D-SIL-R-060",
+      "minimum_L1_percentage_points": 5.435733533559101,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0072_V04",
+      "historical_id": "round2/D/D-SIL-R-060",
+      "minimum_L1_percentage_points": 5.435162076525099,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0072_V05",
+      "historical_id": "round2/D/D-SIL-R-060",
+      "minimum_L1_percentage_points": 5.42788795959625,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0078_V01",
+      "historical_id": "round1_available/A-part-20261018/A01237",
+      "minimum_L1_percentage_points": 5.362223089306197,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0078_V02",
+      "historical_id": "round1_available/A-part-20261018/A01237",
+      "minimum_L1_percentage_points": 5.361190673881655,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0078_V03",
+      "historical_id": "round1_available/A-part-20261018/A00122",
+      "minimum_L1_percentage_points": 5.646014306423334,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0078_V04",
+      "historical_id": "round1_available/A-part-20261018/A00122",
+      "minimum_L1_percentage_points": 5.644896471370421,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0078_V05",
+      "historical_id": "round1_available/A-part-20261018/A00122",
+      "minimum_L1_percentage_points": 5.651417094571225,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0080_V01",
+      "historical_id": "round1_research/B00193",
+      "minimum_L1_percentage_points": 10.045332374657049,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0080_V02",
+      "historical_id": "round1_research/B00193",
+      "minimum_L1_percentage_points": 10.043358383523417,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0080_V03",
+      "historical_id": "round1_research/B00769",
+      "minimum_L1_percentage_points": 8.670123055602602,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0080_V04",
+      "historical_id": "round1_research/B00769",
+      "minimum_L1_percentage_points": 8.669019148136009,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0080_V05",
+      "historical_id": "round1_research/B00769",
+      "minimum_L1_percentage_points": 8.657172103042257,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0086_V01",
+      "historical_id": "round1_available/A-part-20261018/A00857",
+      "minimum_L1_percentage_points": 4.067440627475501,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0086_V02",
+      "historical_id": "round1_available/A-part-20261018/A00857",
+      "minimum_L1_percentage_points": 4.066586453117128,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0086_V03",
+      "historical_id": "round1_available/A-part-20261018/A00857",
+      "minimum_L1_percentage_points": 4.1101538061769896,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0086_V04",
+      "historical_id": "round1_available/A-part-20261018/A00857",
+      "minimum_L1_percentage_points": 4.109299631818618,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0086_V05",
+      "historical_id": "round1_available/A-part-20261018/A00857",
+      "minimum_L1_percentage_points": 4.114278659404042,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0090_V01",
+      "historical_id": "round1_research/B00086",
+      "minimum_L1_percentage_points": 8.179606940716269,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0090_V02",
+      "historical_id": "round1_research/B00086",
+      "minimum_L1_percentage_points": 8.179683470273465,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0090_V03",
+      "historical_id": "round1_research/B00086",
+      "minimum_L1_percentage_points": 8.355091738780281,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0090_V04",
+      "historical_id": "round1_research/B00086",
+      "minimum_L1_percentage_points": 8.355168268337483,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0090_V05",
+      "historical_id": "round1_research/B00086",
+      "minimum_L1_percentage_points": 8.380397239292172,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0092_V01",
+      "historical_id": "round2/A/R2_A_0014",
+      "minimum_L1_percentage_points": 6.64807859014599,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0092_V02",
+      "historical_id": "round2/A/R2_A_0014",
+      "minimum_L1_percentage_points": 6.649968216665137,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0092_V03",
+      "historical_id": "round2/A/R2_A_0014",
+      "minimum_L1_percentage_points": 6.744117297480592,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0092_V04",
+      "historical_id": "round2/A/R2_A_0014",
+      "minimum_L1_percentage_points": 6.746006923999739,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0092_V05",
+      "historical_id": "round2/A/R2_A_0014",
+      "minimum_L1_percentage_points": 6.7693220005660555,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0098_V01",
+      "historical_id": "round1_available/A-part-20261018/A00743",
+      "minimum_L1_percentage_points": 5.619966237860602,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0098_V02",
+      "historical_id": "round1_available/A-part-20261018/A00743",
+      "minimum_L1_percentage_points": 5.619832430942533,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0098_V03",
+      "historical_id": "round1_available/A-part-20261018/A00743",
+      "minimum_L1_percentage_points": 5.586547769247165,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0098_V04",
+      "historical_id": "round1_available/A-part-20261018/A00743",
+      "minimum_L1_percentage_points": 5.586413962329082,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0098_V05",
+      "historical_id": "round1_available/A-part-20261018/A00613",
+      "minimum_L1_percentage_points": 5.406485373689234,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0100_V01",
+      "historical_id": "round1_available/B-source/B00018",
+      "minimum_L1_percentage_points": 6.93043309415704,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0100_V02",
+      "historical_id": "round1_available/B-source/B00018",
+      "minimum_L1_percentage_points": 6.930148217422427,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0100_V03",
+      "historical_id": "round1_available/B-source/B00018",
+      "minimum_L1_percentage_points": 7.188686935118168,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0100_V04",
+      "historical_id": "round1_available/B-source/B00018",
+      "minimum_L1_percentage_points": 7.188402058383561,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_interference_0100_V05",
+      "historical_id": "round1_research/B00018",
+      "minimum_L1_percentage_points": 6.999311230997442,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0104_V01",
+      "historical_id": "round1_available/A-part-20261018/A00845",
+      "minimum_L1_percentage_points": 7.614193726785262,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0104_V02",
+      "historical_id": "round1_available/A-part-20261018/A00845",
+      "minimum_L1_percentage_points": 7.452408675345541,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0108_V01",
+      "historical_id": "round1_available/A-part-20261018/A02418",
+      "minimum_L1_percentage_points": 8.466472788893807,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0108_V02",
+      "historical_id": "round1_available/A-part-20261018/A02418",
+      "minimum_L1_percentage_points": 6.889665663639382,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0112_V01",
+      "historical_id": "round1_available/A-part-20261018/A00878",
+      "minimum_L1_percentage_points": 7.228845689953761,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0112_V02",
+      "historical_id": "round1_available/A-part-20261018/A02000",
+      "minimum_L1_percentage_points": 6.255087897877838,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0116_V01",
+      "historical_id": "round1_available/A-part-20261018/A00616",
+      "minimum_L1_percentage_points": 6.438701328612448,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0116_V02",
+      "historical_id": "round1_available/A-part-20261018/A00616",
+      "minimum_L1_percentage_points": 6.4550354827599055,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0120_V01",
+      "historical_id": "round1_available/A-part-20261018/A01406",
+      "minimum_L1_percentage_points": 6.39597869765104,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0120_V02",
+      "historical_id": "round1_available/A-part-20261018/A01406",
+      "minimum_L1_percentage_points": 6.1435478243166415,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0124_V01",
+      "historical_id": "round2/B/B2-SIL-REG-070",
+      "minimum_L1_percentage_points": 5.019870255157625,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0124_V02",
+      "historical_id": "round2/B/B2-SIL-REG-070",
+      "minimum_L1_percentage_points": 4.650377886516176,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0128_V01",
+      "historical_id": "round1_research/B01188",
+      "minimum_L1_percentage_points": 7.408991509255221,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0128_V02",
+      "historical_id": "round1_research/B01188",
+      "minimum_L1_percentage_points": 6.662591113458058,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0132_V01",
+      "historical_id": "round2/D/D-FE-R-016",
+      "minimum_L1_percentage_points": 11.369185171301382,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0132_V02",
+      "historical_id": "round2/D/D-FE-R-016",
+      "minimum_L1_percentage_points": 10.866726996249131,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0136_V01",
+      "historical_id": "round1_available/B-source/B00106",
+      "minimum_L1_percentage_points": 8.977667500614443,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0136_V02",
+      "historical_id": "round1_available/B-source/B00106",
+      "minimum_L1_percentage_points": 8.784681591027246,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0140_V01",
+      "historical_id": "round1_research/B01285",
+      "minimum_L1_percentage_points": 9.173089323978369,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0140_V02",
+      "historical_id": "round1_research/B00244",
+      "minimum_L1_percentage_points": 8.927773301690355,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0144_V01",
+      "historical_id": "round1_available/A-part-20261018/A01086",
+      "minimum_L1_percentage_points": 6.530918427346209,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0144_V02",
+      "historical_id": "round1_available/A-part-20261018/A01086",
+      "minimum_L1_percentage_points": 6.54409453115195,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0148_V01",
+      "historical_id": "round1_available/A-part-20261018/A01269",
+      "minimum_L1_percentage_points": 8.140394537399953,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0148_V02",
+      "historical_id": "round1_available/A-part-20261018/A01269",
+      "minimum_L1_percentage_points": 8.147235511886953,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0152_V01",
+      "historical_id": "round1_available/A-part-20261018/A00674",
+      "minimum_L1_percentage_points": 5.003678626168849,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0152_V02",
+      "historical_id": "round1_available/A-part-20261018/A00674",
+      "minimum_L1_percentage_points": 5.000658065594334,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0156_V01",
+      "historical_id": "round1_available/A-part-20261018/A00663",
+      "minimum_L1_percentage_points": 4.231954979503918,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0156_V02",
+      "historical_id": "round1_available/A-part-20261018/A00663",
+      "minimum_L1_percentage_points": 4.230325818067426,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0162_V01",
+      "historical_id": "round2/B/B2-FEO-REG-054",
+      "minimum_L1_percentage_points": 8.242298111465425,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0162_V02",
+      "historical_id": "round2/B/B2-FEO-REG-054",
+      "minimum_L1_percentage_points": 8.2419901303184,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0166_V01",
+      "historical_id": "round2/D/D-FE-R-023",
+      "minimum_L1_percentage_points": 7.614879103707664,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0166_V02",
+      "historical_id": "round2/D/D-FE-R-023",
+      "minimum_L1_percentage_points": 7.618660952696123,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0170_V01",
+      "historical_id": "round1_research/B00530",
+      "minimum_L1_percentage_points": 8.400228573111837,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0170_V02",
+      "historical_id": "round1_research/B00530",
+      "minimum_L1_percentage_points": 8.411436773783569,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0172_V01",
+      "historical_id": "round1_available/A-part-20261018/A02450",
+      "minimum_L1_percentage_points": 6.107152057897315,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0172_V02",
+      "historical_id": "round1_available/A-part-20261018/A02450",
+      "minimum_L1_percentage_points": 6.108276689182464,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0176_V01",
+      "historical_id": "round1_available/A-part-20261018/A00675",
+      "minimum_L1_percentage_points": 5.302295797536218,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0176_V02",
+      "historical_id": "round1_available/A-part-20261018/A00675",
+      "minimum_L1_percentage_points": 5.305079913924065,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0180_V01",
+      "historical_id": "round1_available/A-part-20261018/A01232",
+      "minimum_L1_percentage_points": 5.792227111596327,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0180_V02",
+      "historical_id": "round1_available/A-part-20261018/A01232",
+      "minimum_L1_percentage_points": 5.797053232273924,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0186_V01",
+      "historical_id": "round2/D/D-FE-R-034",
+      "minimum_L1_percentage_points": 7.914101841741252,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0186_V02",
+      "historical_id": "round2/D/D-FE-R-034",
+      "minimum_L1_percentage_points": 7.916910227769473,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0190_V01",
+      "historical_id": "round2/B/B2-FEO-REG-042",
+      "minimum_L1_percentage_points": 8.146512658410806,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0190_V02",
+      "historical_id": "round2/B/B2-FEO-REG-042",
+      "minimum_L1_percentage_points": 8.163297742566867,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0192_V01",
+      "historical_id": "round2/D/D-SIL-R-028",
+      "minimum_L1_percentage_points": 7.011884020430725,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0192_V02",
+      "historical_id": "round2/D/D-SIL-R-028",
+      "minimum_L1_percentage_points": 7.008401580166992,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0196_V01",
+      "historical_id": "round1_available/A-part-20261018/A00549",
+      "minimum_L1_percentage_points": 6.499771565001474,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0196_V02",
+      "historical_id": "round1_available/A-part-20261018/A00549",
+      "minimum_L1_percentage_points": 6.498975516048923,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0200_V01",
+      "historical_id": "round2/A/R2_A_0157",
+      "minimum_L1_percentage_points": 10.315543145559511,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0200_V02",
+      "historical_id": "round2/A/R2_A_0157",
+      "minimum_L1_percentage_points": 10.316347029908115,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0204_V01",
+      "historical_id": "round1_available/A-part-20261018/A00853",
+      "minimum_L1_percentage_points": 6.719823113861627,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0204_V02",
+      "historical_id": "round1_available/A-part-20261018/A00853",
+      "minimum_L1_percentage_points": 6.722340881101073,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0210_V01",
+      "historical_id": "round2/D/D-FE-S-003",
+      "minimum_L1_percentage_points": 8.227970699574094,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0210_V02",
+      "historical_id": "round2/D/D-FE-S-003",
+      "minimum_L1_percentage_points": 8.226459431247072,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0212_V01",
+      "historical_id": "round1_available/A-part-20261018/A00664",
+      "minimum_L1_percentage_points": 5.744927965315386,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0212_V02",
+      "historical_id": "round1_available/A-part-20261018/A00664",
+      "minimum_L1_percentage_points": 5.748824488750043,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0216_V01",
+      "historical_id": "round1_available/A-part-20261018/A00714",
+      "minimum_L1_percentage_points": 5.393442118853478,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0216_V02",
+      "historical_id": "round1_available/A-part-20261018/A00714",
+      "minimum_L1_percentage_points": 5.393039955150699,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0220_V01",
+      "historical_id": "round1_research/B01188",
+      "minimum_L1_percentage_points": 7.3873468139435445,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_paired_negative_spike_0220_V02",
+      "historical_id": "round1_research/B01188",
+      "minimum_L1_percentage_points": 7.395503988314304,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0224_V01",
+      "historical_id": "round2/B/B2-SIL-REG-034",
+      "minimum_L1_percentage_points": 6.16669391127581,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0228_V01",
+      "historical_id": "round1_available/A-part-20261018/A00561",
+      "minimum_L1_percentage_points": 6.625188343139758,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0232_V01",
+      "historical_id": "round1_available/A-part-20261018/A00334",
+      "minimum_L1_percentage_points": 4.760252276770829,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0236_V01",
+      "historical_id": "round1_available/A-part-20261018/A00511",
+      "minimum_L1_percentage_points": 6.120647346941255,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0240_V01",
+      "historical_id": "round1_available/A-part-20261018/A01237",
+      "minimum_L1_percentage_points": 4.684917963014382,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0244_V01",
+      "historical_id": "round1_available/A-part-20261018/A00859",
+      "minimum_L1_percentage_points": 8.396248221160533,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0248_V01",
+      "historical_id": "round1_available/A-part-20261018/A00448",
+      "minimum_L1_percentage_points": 6.3858673544119755,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0252_V01",
+      "historical_id": "round1_available/A-part-20261018/A01372",
+      "minimum_L1_percentage_points": 4.847078079077351,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0256_V01",
+      "historical_id": "round1_available/A-part-20261018/A01947",
+      "minimum_L1_percentage_points": 8.804565006864921,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0260_V01",
+      "historical_id": "round2/D/D-SIL-R-010",
+      "minimum_L1_percentage_points": 5.78352123302007,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0264_V01",
+      "historical_id": "round1_available/A-part-20261018/A00472",
+      "minimum_L1_percentage_points": 5.291658133233072,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0268_V01",
+      "historical_id": "round1_available/A-part-20261018/A01220",
+      "minimum_L1_percentage_points": 8.793967282786905,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0272_V01",
+      "historical_id": "round1_available/A-part-20261018/A00319",
+      "minimum_L1_percentage_points": 5.519626139805967,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0276_V01",
+      "historical_id": "round1_available/A-part-20261018/A01428",
+      "minimum_L1_percentage_points": 5.704894960600413,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0280_V01",
+      "historical_id": "round2/D/D-SIL-R-023",
+      "minimum_L1_percentage_points": 8.495284771352827,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0284_V01",
+      "historical_id": "round1_available/A-part-20261018/A01994",
+      "minimum_L1_percentage_points": 6.591160655380158,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0288_V01",
+      "historical_id": "round1_available/A-part-20261018/A00596",
+      "minimum_L1_percentage_points": 5.688326680127312,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0292_V01",
+      "historical_id": "round2/B/B2-SIL-REG-074",
+      "minimum_L1_percentage_points": 6.816372475202127,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0296_V01",
+      "historical_id": "round1_available/A-part-20261018/A00965",
+      "minimum_L1_percentage_points": 6.175825959900772,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0300_V01",
+      "historical_id": "round1_available/A-part-20261018/A01971",
+      "minimum_L1_percentage_points": 5.50589613373536,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0304_V01",
+      "historical_id": "round1_available/A-part-20261018/A01245",
+      "minimum_L1_percentage_points": 5.74880475998574,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0308_V01",
+      "historical_id": "round1_available/A-part-20261018/A01366",
+      "minimum_L1_percentage_points": 6.312675225232232,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0312_V01",
+      "historical_id": "round1_available/A-part-20261018/A01280",
+      "minimum_L1_percentage_points": 6.533172144124209,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0316_V01",
+      "historical_id": "round2/D/D-SIL-R-036",
+      "minimum_L1_percentage_points": 4.80246309533075,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0320_V01",
+      "historical_id": "round1_available/A-part-20261018/A00647",
+      "minimum_L1_percentage_points": 5.935123577771466,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0324_V01",
+      "historical_id": "round1_available/A-part-20261018/A00470",
+      "minimum_L1_percentage_points": 4.1388682906442575,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0328_V01",
+      "historical_id": "round2/D/D-SIL-S-005",
+      "minimum_L1_percentage_points": 5.544450247506046,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0332_V01",
+      "historical_id": "round2/B/B2-SIL-REG-047",
+      "minimum_L1_percentage_points": 6.446922673723086,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0336_V01",
+      "historical_id": "round1_available/A-part-20261018/A01922",
+      "minimum_L1_percentage_points": 6.801794526712533,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0340_V01",
+      "historical_id": "round1_available/A-part-20261018/A00378",
+      "minimum_L1_percentage_points": 7.048995169900933,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0344_V01",
+      "historical_id": "round1_available/B-source/B00398",
+      "minimum_L1_percentage_points": 6.055020632116213,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0348_V01",
+      "historical_id": "round1_available/B-source/B00808",
+      "minimum_L1_percentage_points": 8.746676868786453,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0352_V01",
+      "historical_id": "round2/B/B2-FEO-REG-050",
+      "minimum_L1_percentage_points": 9.506706277206757,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0356_V01",
+      "historical_id": "round1_available/B-source/B00244",
+      "minimum_L1_percentage_points": 8.176974263098616,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0360_V01",
+      "historical_id": "round1_available/B-source/B00398",
+      "minimum_L1_percentage_points": 6.910580968687241,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0364_V01",
+      "historical_id": "round2/A/R2_A_0164",
+      "minimum_L1_percentage_points": 8.028474233509868,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0368_V01",
+      "historical_id": "round2/D/D-FE-S-005",
+      "minimum_L1_percentage_points": 4.424725215825158,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0372_V01",
+      "historical_id": "round2/B/B2-FEO-REG-047",
+      "minimum_L1_percentage_points": 5.884202018815735,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0376_V01",
+      "historical_id": "round2/D/D-FE-I-04-V4",
+      "minimum_L1_percentage_points": 8.027398283304258,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0380_V01",
+      "historical_id": "round1_available/B-source/B01301",
+      "minimum_L1_percentage_points": 2.906359122930519,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0384_V01",
+      "historical_id": "round2/A/R2_A_0190",
+      "minimum_L1_percentage_points": 6.562361649541879,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0388_V01",
+      "historical_id": "round2/B/B2-FEO-REG-033",
+      "minimum_L1_percentage_points": 5.848751436320285,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0392_V01",
+      "historical_id": "round2/C/C-S-012",
+      "minimum_L1_percentage_points": 6.498230160504041,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0396_V01",
+      "historical_id": "round2/B/B2-FEO-REG-040",
+      "minimum_L1_percentage_points": 7.39383294118842,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0400_V01",
+      "historical_id": "round1_research/B00677",
+      "minimum_L1_percentage_points": 7.184324747980074,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0404_V01",
+      "historical_id": "round2/D/D-FE-R-026",
+      "minimum_L1_percentage_points": 8.755510983092424,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0408_V01",
+      "historical_id": "round2/B/B2-FEO-REG-047",
+      "minimum_L1_percentage_points": 7.201942824047024,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0412_V01",
+      "historical_id": "round2/D/D-FE-R-037",
+      "minimum_L1_percentage_points": 9.101267802853153,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0416_V01",
+      "historical_id": "round1_available/B-source/B00086",
+      "minimum_L1_percentage_points": 10.211452856759845,
+      "requires_train_only": false
+    },
+    {
+      "sample_id": "R3_D_routine_0420_V01",
+      "historical_id": "round1_available/B-source/B00128",
+      "minimum_L1_percentage_points": 8.293833861747853,
+      "requires_train_only": false
+    }
+  ],
+  "cross_design_family_near_edges": [],
+  "historical_coverage": "same published snapshot as members A/B/C: accepted round-2 recipes plus available round-1 candidate/pilot/research records; undocumented or missing historical ancestry not ruled out",
+  "cross_member_confirmation": "pending_A_global_closure",
+  "production_started": false,
+  "eligible_for_training": false,
+  "cross_member_checks": {
+    "A": {
+      "status": "passed_pairwise_cross_member_screen",
+      "compared_owner": "A",
+      "other_candidate_count": 250,
+      "minimum_L1_percentage_points": 4.435711424558101,
+      "pairs_within_L1_0_5": 0,
+      "near_duplicate_edges": [],
+      "exact_composition_matches": [],
+      "note": "pairwise D-vs-A screen only; global four-member closure and historical connected components remain pending in A's freeze step"
+    },
+    "B": {
+      "status": "passed_pairwise_cross_member_screen",
+      "compared_owner": "B",
+      "other_candidate_count": 250,
+      "minimum_L1_percentage_points": 5.596896657184906,
+      "pairs_within_L1_0_5": 0,
+      "near_duplicate_edges": [],
+      "exact_composition_matches": [],
+      "note": "pairwise D-vs-B screen only; global four-member closure and historical connected components remain pending in A's freeze step"
+    },
+    "C": {
+      "status": "passed_pairwise_cross_member_screen",
+      "compared_owner": "C",
+      "other_candidate_count": 250,
+      "minimum_L1_percentage_points": 4.475151116954075,
+      "pairs_within_L1_0_5": 0,
+      "near_duplicate_edges": [],
+      "exact_composition_matches": [],
+      "note": "pairwise D-vs-C screen only; global four-member closure and historical connected components remain pending in A's freeze step"
+    }
+  }
+}

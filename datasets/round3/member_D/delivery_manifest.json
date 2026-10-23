@@ -1,0 +1,177 @@
+{
+  "is_template": false,
+  "usable_for_generation": false,
+  "production_started": false,
+  "round_id": "round3",
+  "status": "candidate_stage_delivery_not_spectral_dataset",
+  "member": "D",
+  "hash_algorithm": "sha256",
+  "path_base": "datasets/round3/member_D",
+  "files": [
+    {
+      "path": "build_candidates.py",
+      "size_bytes": 27584,
+      "sha256": "f710b83b9c079fb351655865d8716e250ea9a684bcde7882b22e558dddc911ee",
+      "role": "executable_source"
+    },
+    {
+      "path": "candidates/candidate_checks.json",
+      "size_bytes": 56363,
+      "sha256": "0f1f00cca15127d984658d66dd9bb88394d75cdf0d4e7b5378101bc52c1ffea2",
+      "role": "candidate_records"
+    },
+    {
+      "path": "candidates/candidate_registry.csv",
+      "size_bytes": 133757,
+      "sha256": "a3c08e26cc13ff6aed6457fd21480e41710b56f0d6ee69ea10735710cf343446",
+      "role": "candidate_registry"
+    },
+    {
+      "path": "candidates/coverage.json",
+      "size_bytes": 3714,
+      "sha256": "0bbd9bb2103d1b16e6ae25456e9ebd96c70b90bbf6b130a9a9f41fb746b84140",
+      "role": "candidate_records"
+    },
+    {
+      "path": "candidates/D_samples.json",
+      "size_bytes": 3126611,
+      "sha256": "f7120fdf413cb3d1bd46229f1029d0fa8448a2281038d366a193a2547f1d44a1",
+      "role": "candidate_records"
+    },
+    {
+      "path": "candidates/family_registry.json",
+      "size_bytes": 57552,
+      "sha256": "f1bb487e122cdee974b3916ff6719459b0fb16e0dbd688effd6e673c9380b5bf",
+      "role": "candidate_records"
+    },
+    {
+      "path": "candidates/formula_registry.csv",
+      "size_bytes": 47259,
+      "sha256": "176a7c3331510c178abbf16aba95805a16d3948a9329906404d8c55deba7244a",
+      "role": "candidate_registry"
+    },
+    {
+      "path": "candidates/input_identity.json",
+      "size_bytes": 2580,
+      "sha256": "8691c64cd2652e72f3dede38ac7d48df99a8a2ad5addd2c4c3dcd815e192d2d3",
+      "role": "candidate_records"
+    },
+    {
+      "path": "candidates/original_backgrounds.json",
+      "size_bytes": 254736,
+      "sha256": "0357e403075ca6205bda308ecafeaedfacf714172a230909982da044d913486e",
+      "role": "candidate_records"
+    },
+    {
+      "path": "frozen_inputs/prepared_not_frozen.json",
+      "size_bytes": 14021,
+      "sha256": "a315376a6ab97065f441d49d9a2aa0fdede53d7e80c60839d3c8c3f30008afa9",
+      "role": "prepared_input_identity"
+    },
+    {
+      "path": "inputs/design_ranges.json",
+      "size_bytes": 15473,
+      "sha256": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d",
+      "role": "candidate_input_snapshot"
+    },
+    {
+      "path": "inputs/generator/fp_competition/__init__.py",
+      "size_bytes": 76,
+      "sha256": "3338a26d3706620d0b1eb836a6e39beb4ae15d61a4c04d9441215ec17ffeafa1",
+      "role": "frozen_generator_source_copy"
+    },
+    {
+      "path": "inputs/generator/fp_competition/app.py",
+      "size_bytes": 26395,
+      "sha256": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+      "role": "frozen_generator_source_copy"
+    },
+    {
+      "path": "inputs/generator/fp_competition/core.py",
+      "size_bytes": 22109,
+      "sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "role": "frozen_generator_source_copy"
+    },
+    {
+      "path": "inputs/generator/fp_competition/dataset.py",
+      "size_bytes": 31774,
+      "sha256": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+      "role": "frozen_generator_source_copy"
+    },
+    {
+      "path": "inputs/generator/fp_competition/minerals.py",
+      "size_bytes": 5340,
+      "sha256": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "role": "frozen_generator_source_copy"
+    },
+    {
+      "path": "inputs/generator/fp_competition/requirements-lock.txt",
+      "size_bytes": 267,
+      "sha256": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0",
+      "role": "frozen_generator_source_copy"
+    },
+    {
+      "path": "inputs/generator/fp_competition/version.py",
+      "size_bytes": 94,
+      "sha256": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+      "role": "frozen_generator_source_copy"
+    },
+    {
+      "path": "inputs/repository_source.json",
+      "size_bytes": 20100,
+      "sha256": "e19ba884708ecf262931928b0dbe03ba01ebb6314121d0f9e833191e665c82e9",
+      "role": "candidate_input_snapshot"
+    },
+    {
+      "path": "inputs/source_manifest.json",
+      "size_bytes": 2012,
+      "sha256": "2d88232b687330a0ae4bc195d34d12c257601378bbe9db7a780249be84a9b8c6",
+      "role": "candidate_input_snapshot"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 6765,
+      "sha256": "1f448df72118dc05c65b89f4b6e9f09603e0ca51addbcb3dc93e9f55fd52b53c",
+      "role": "delivery_readme"
+    },
+    {
+      "path": "reports/commands_and_environment.json",
+      "size_bytes": 2396,
+      "sha256": "51fef899ab629c8d2a8ee4fc8206abfb87d4c6ff6e928787539a02f4e64bcef2",
+      "role": "report"
+    },
+    {
+      "path": "reports/production_readiness.json",
+      "size_bytes": 1540,
+      "sha256": "edf2e50ad906d54ddca69e3d893eee9a1e6df552b989bd8c610a5e8a8e192a9e",
+      "role": "report"
+    },
+    {
+      "path": "reports/verification.json",
+      "size_bytes": 5815,
+      "sha256": "577a73a1064efd62218d3ebc2385a45824340649691a7486bc624ab99ed71b03",
+      "role": "report"
+    },
+    {
+      "path": "selfcheck_summary.json",
+      "size_bytes": 3467,
+      "sha256": "cc39bc5c48291c6c9ce0094fc190a0b76dc9ca7ddbce8a696af5f73adb56892b",
+      "role": "delivery_document"
+    },
+    {
+      "path": "verify_candidates.py",
+      "size_bytes": 9984,
+      "sha256": "da5ad062f027bafcd86eafec19daa6fcd48705b9c2f7d83badc24a70077d8908",
+      "role": "executable_source"
+    }
+  ],
+  "file_count": 26,
+  "coverage_completed": false,
+  "self_excluded": true,
+  "not_delivered_yet": [
+    "sealed/ batches and their ZIPs",
+    "full audit and full physical replay reports",
+    "pilot 90-spectrum run",
+    "held-out T challenge spectra"
+  ]
+}
