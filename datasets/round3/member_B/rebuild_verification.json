@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "semantic_equal_to_initial_B_samples": true,
+  "independent_rebuilds": 2,
+  "files": [
+    {
+      "file": "B_samples.json",
+      "sha256": "bb61407dc09323e31706f506fd38e28145963fd577e7096604b8f24c7e8e2cf8",
+      "byte_identical": true
+    },
+    {
+      "file": "family_registry.json",
+      "sha256": "1b4e0f6a719282ff827da888cb118865e577ff236da2b4faeeef966fd607851e",
+      "byte_identical": true
+    },
+    {
+      "file": "candidate_checks.json",
+      "sha256": "0bf7da9390fde8459fbca78621c964c4e210e0407806f48181cfe0663a59d4e9",
+      "byte_identical": true
+    },
+    {
+      "file": "formula_registry.csv",
+      "sha256": "daf9ee82672e602e335e498a4d78c9e2f1065c2db44ef1e5baaed7825c09e5c8",
+      "byte_identical": true
+    },
+    {
+      "file": "coverage.json",
+      "sha256": "7afcf5edc213e97c588b19ed6e6a2954cf2452d18ec37751775ab35641198336",
+      "byte_identical": true
+    },
+    {
+      "file": "input_identity.json",
+      "sha256": "87032e49894f105a542028629f81e4627b014f52d8ab707143296dfd0fc23690",
+      "byte_identical": true
+    }
+  ]
+}

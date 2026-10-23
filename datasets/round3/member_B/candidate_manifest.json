@@ -1,0 +1,75 @@
+{
+  "status": "candidate_handoff_pr_pending_A_review",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3016,
+      "sha256": "1809d890fc6a33c88e545fcb07387f5ade172ff6d80c8b5f0372452bc799fa5c"
+    },
+    {
+      "path": "A_review_request.md",
+      "bytes": 1385,
+      "sha256": "47dcd1bc4530d88efe2b98a50c28b49ed7207654d97b93d8259088dbaf733dc6"
+    },
+    {
+      "path": "build_candidates.py",
+      "bytes": 19561,
+      "sha256": "8b34945cfcf16b2bc4ddf0d7ed93db00b04a44c2309b8008fd1cd0ccae401a01"
+    },
+    {
+      "path": "finalize_candidates.py",
+      "bytes": 3150,
+      "sha256": "0d9a9b813a4086b959b9f4f3777a06cd4955a418ee81780d3dd0d783b88031ed"
+    },
+    {
+      "path": "rebuild_verification.json",
+      "bytes": 1126,
+      "sha256": "f610087f178f4b13f9cfbe4bde8a92c007fc72954785eaf82abc8952ed649cc5"
+    },
+    {
+      "path": "selfcheck_summary.json",
+      "bytes": 972,
+      "sha256": "f21d930ac40519c7f32e516b7020c755b23134d0ad45957d177f59618e7b9f3e"
+    },
+    {
+      "path": "inputs/design_allocation.json",
+      "bytes": 144551,
+      "sha256": "c07a57c83e3f007bb7dc1667807b3111ec4ee5e9a82baa8dfd1af2c7d950d4d4"
+    },
+    {
+      "path": "inputs/design_ranges.json",
+      "bytes": 15473,
+      "sha256": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d"
+    },
+    {
+      "path": "candidates/B_samples.json",
+      "bytes": 3111637,
+      "sha256": "bb61407dc09323e31706f506fd38e28145963fd577e7096604b8f24c7e8e2cf8"
+    },
+    {
+      "path": "candidates/candidate_checks.json",
+      "bytes": 49422,
+      "sha256": "0bf7da9390fde8459fbca78621c964c4e210e0407806f48181cfe0663a59d4e9"
+    },
+    {
+      "path": "candidates/coverage.json",
+      "bytes": 3681,
+      "sha256": "7afcf5edc213e97c588b19ed6e6a2954cf2452d18ec37751775ab35641198336"
+    },
+    {
+      "path": "candidates/family_registry.json",
+      "bytes": 57329,
+      "sha256": "1b4e0f6a719282ff827da888cb118865e577ff236da2b4faeeef966fd607851e"
+    },
+    {
+      "path": "candidates/formula_registry.csv",
+      "bytes": 47271,
+      "sha256": "daf9ee82672e602e335e498a4d78c9e2f1065c2db44ef1e5baaed7825c09e5c8"
+    },
+    {
+      "path": "candidates/input_identity.json",
+      "bytes": 767,
+      "sha256": "87032e49894f105a542028629f81e4627b014f52d8ab707143296dfd0fc23690"
+    }
+  ]
+}
