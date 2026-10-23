@@ -1,0 +1,261 @@
+{
+  "member": "B",
+  "pilot_spectra": 90,
+  "pilot_is_part_of_base_1500": true,
+  "final_base_spectra": 1500,
+  "assigned_holdout_recipes": 41,
+  "final_T_spectra": 246,
+  "final_total_spectra": 1746,
+  "bulk_production_approved": false,
+  "commands": [
+    {
+      "batch_id": "R3_B_pilot_D1_001",
+      "spectra": 10,
+      "profile": "D1",
+      "families": [
+        "R3_B_interference_0088"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_B_pilot_D1_001",
+        "--out",
+        "work/round3/member_B_pilot_v1/sealed/R3_B_pilot_D1_001",
+        "--qc-out",
+        "work/round3/member_B_pilot_v1/qc/R3_B_pilot_D1_001"
+      ]
+    },
+    {
+      "batch_id": "R3_B_pilot_D2_001",
+      "spectra": 4,
+      "profile": "D2",
+      "families": [
+        "R3_B_routine_0374",
+        "R3_B_routine_0418"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_B_pilot_D2_001",
+        "--out",
+        "work/round3/member_B_pilot_v1/sealed/R3_B_pilot_D2_001",
+        "--qc-out",
+        "work/round3/member_B_pilot_v1/qc/R3_B_pilot_D2_001"
+      ]
+    },
+    {
+      "batch_id": "R3_B_pilot_D3_001",
+      "spectra": 22,
+      "profile": "D3",
+      "families": [
+        "R3_B_interference_0088",
+        "R3_B_ladder_0006"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_B_pilot_D3_001",
+        "--out",
+        "work/round3/member_B_pilot_v1/sealed/R3_B_pilot_D3_001",
+        "--qc-out",
+        "work/round3/member_B_pilot_v1/qc/R3_B_pilot_D3_001"
+      ]
+    },
+    {
+      "batch_id": "R3_B_pilot_D4_001",
+      "spectra": 4,
+      "profile": "D4",
+      "families": [
+        "R3_B_paired_negative_spike_0188"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_B_pilot_D4_001",
+        "--out",
+        "work/round3/member_B_pilot_v1/sealed/R3_B_pilot_D4_001",
+        "--qc-out",
+        "work/round3/member_B_pilot_v1/qc/R3_B_pilot_D4_001"
+      ]
+    },
+    {
+      "batch_id": "R3_B_pilot_D5_001",
+      "spectra": 14,
+      "profile": "D5",
+      "families": [
+        "R3_B_ladder_0006",
+        "R3_B_routine_0374"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_B_pilot_D5_001",
+        "--out",
+        "work/round3/member_B_pilot_v1/sealed/R3_B_pilot_D5_001",
+        "--qc-out",
+        "work/round3/member_B_pilot_v1/qc/R3_B_pilot_D5_001"
+      ]
+    },
+    {
+      "batch_id": "R3_B_pilot_D6_001",
+      "spectra": 6,
+      "profile": "D6",
+      "families": [
+        "R3_B_paired_negative_spike_0188",
+        "R3_B_routine_0418"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_B_pilot_D6_001",
+        "--out",
+        "work/round3/member_B_pilot_v1/sealed/R3_B_pilot_D6_001",
+        "--qc-out",
+        "work/round3/member_B_pilot_v1/qc/R3_B_pilot_D6_001"
+      ]
+    },
+    {
+      "batch_id": "R3_B_pilot_P1_001",
+      "spectra": 14,
+      "profile": "P1",
+      "families": [
+        "R3_B_ladder_0006",
+        "R3_B_routine_0374"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_B_pilot_P1_001",
+        "--out",
+        "work/round3/member_B_pilot_v1/sealed/R3_B_pilot_P1_001",
+        "--qc-out",
+        "work/round3/member_B_pilot_v1/qc/R3_B_pilot_P1_001"
+      ]
+    },
+    {
+      "batch_id": "R3_B_pilot_P2_001",
+      "spectra": 6,
+      "profile": "P2",
+      "families": [
+        "R3_B_paired_negative_spike_0188",
+        "R3_B_routine_0418"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_B_pilot_P2_001",
+        "--out",
+        "work/round3/member_B_pilot_v1/sealed/R3_B_pilot_P2_001",
+        "--qc-out",
+        "work/round3/member_B_pilot_v1/qc/R3_B_pilot_P2_001"
+      ]
+    },
+    {
+      "batch_id": "R3_B_pilot_P3_001",
+      "spectra": 10,
+      "profile": "P3",
+      "families": [
+        "R3_B_interference_0088"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_B_pilot_P3_001",
+        "--out",
+        "work/round3/member_B_pilot_v1/sealed/R3_B_pilot_P3_001",
+        "--qc-out",
+        "work/round3/member_B_pilot_v1/qc/R3_B_pilot_P3_001"
+      ]
+    }
+  ]
+}

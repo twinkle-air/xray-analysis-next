@@ -1,0 +1,64 @@
+{
+  "files": [
+    {
+      "path": "datasets/round3/shared/handoffs/20261024/member_B.md",
+      "sha256": "9e088d2baeefd385774fe514f8890179aa80dc00d92d9481d2cb6d57db8ae2d9",
+      "bytes": 2063
+    },
+    {
+      "path": "datasets/round3/shared/handoffs/20261024/member_B_pilot_commands.json",
+      "sha256": "f0d0cfdfeb210da6e35c52852b833d22e294c6ab3cf0756ac3a0b75dc4c35c97",
+      "bytes": 7089
+    },
+    {
+      "path": "datasets/round3/shared/handoffs/20261024/member_C.md",
+      "sha256": "7d8696d1187760c743e7d1fab758b5be2b6099c4b9582f48071e409bdfe49f38",
+      "bytes": 2063
+    },
+    {
+      "path": "datasets/round3/shared/handoffs/20261024/member_C_pilot_commands.json",
+      "sha256": "6b179e55771b980289c74051a4e5160ba17111bcfa013f41a5e0086743322cc0",
+      "bytes": 6387
+    },
+    {
+      "path": "datasets/round3/shared/handoffs/20261024/member_D.md",
+      "sha256": "1786fd8f67e844752c0f1c4bfe2a52afd31cbbc33dec68999d6334930ccd1301",
+      "bytes": 2063
+    },
+    {
+      "path": "datasets/round3/shared/handoffs/20261024/member_D_pilot_commands.json",
+      "sha256": "4bcda4fe111fc6bea0e7a42afe87ae9359d6daa82f9b09d1c72dd2c6041eac08",
+      "bytes": 7089
+    },
+    {
+      "path": "datasets/round3/shared/production_tools/run_batch.py",
+      "sha256": "ece61e9afaa264f716d0fa2f34d29b422b0c65f9214de186fda6982f650c38ca",
+      "bytes": 8645
+    },
+    {
+      "path": "datasets/round3/shared/production_tools/run_member_pilot.ps1",
+      "sha256": "2ac4e66b040a2a288bc33b9d2b1842e7623753515cff6302ef2824d8dc6e318f",
+      "bytes": 1554
+    },
+    {
+      "path": "datasets/round3/shared/releases/byte_policy_test.json",
+      "sha256": "d7b61e2e680353dfbba486988de3864ae6a478ed1a40e1f0f24ed3fb6122e2ab",
+      "bytes": 188
+    },
+    {
+      "path": "datasets/round3/shared/releases/owner_release_v2.json",
+      "sha256": "a57131d64c4d55347d608657caf9ae6af8fde5c0400450ff93e55060451025bd",
+      "bytes": 992
+    },
+    {
+      "path": "datasets/round3/shared/releases/README.md",
+      "sha256": "67d4b51361d943f845fff61e1952d3f39effea158a11e4ea3526f295e8173853",
+      "bytes": 675
+    },
+    {
+      "path": "datasets/round3/shared/releases/release_tests.json",
+      "sha256": "adfe17655ee6ab1cf65cf95f4e9d9a1b34843d455032b54bda4a6ecf49015933",
+      "bytes": 1322
+    }
+  ]
+}

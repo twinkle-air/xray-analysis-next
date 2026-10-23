@@ -4,17 +4,26 @@ import argparse,csv,hashlib,json,pathlib,subprocess,sys,time,zipfile
 def read(p):return json.loads(pathlib.Path(p).read_text(encoding='utf-8-sig'))
 def write(p,v):pathlib.Path(p).write_text(json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()
-def validate(freeze,repo,batch_id,heldout=False):
+def validate(freeze,repo,batch_id,heldout=False,owner_release=None):
  for rel,digest in read(freeze/'freeze_manifest.json')['files'].items():
   p=(freeze/rel).resolve()
   if not p.is_relative_to(freeze) or not p.is_file() or sha(p)!=digest:raise ValueError('Frozen input missing or changed: '+rel)
  release=read(freeze/'release.json');plan=read(freeze/'batch_plan.json')
+ if owner_release is not None:
+  release=read(owner_release)
+  if release.get('freeze_manifest_sha256')!=sha(freeze/'freeze_manifest.json'):raise ValueError('Owner release targets a different freeze')
+  if release.get('runner_sha256')!=sha(pathlib.Path(__file__)):raise ValueError('Owner release targets a different runner version')
+  for item in release['pilot_evidence']:
+   path=(repo/item['path']).resolve()
+   if not path.is_relative_to(repo) or sha(path)!=item['sha256']:raise ValueError('Owner release pilot evidence changed')
+   evidence=read(path)
+   if evidence.get('status')!='passed' or evidence.get('spectra')!=90:raise ValueError('Owner release requires a passed 90-spectrum pilot')
  batches=[b for b in plan['batches'] if b['batch_id']==batch_id]
  if len(batches)!=1:raise ValueError('Unknown batch ID')
  batch=batches[0]
  if batch['phase']=='pilot':
   if not release['pilot_authorized'] or batch['member'] not in release['pilot_members']:raise ValueError('Member pilot is not released')
- elif not release['batch_production_approved']:raise ValueError('Bulk production has not been released')
+ elif not release['batch_production_approved'] or batch['member'] not in release.get('bulk_members',[]):raise ValueError('Member bulk production has not been released')
  if batch['profile_id'].startswith('T') and (not heldout or batch['phase']!='challenge'):raise ValueError('T profiles require explicit heldout physical-QC mode')
  identity=read(freeze/'input_identity.json')
  for rel,entry in identity['files'].items():
@@ -35,11 +44,11 @@ def validate(freeze,repo,batch_id,heldout=False):
   if batch['profile_id'] not in allowed:raise ValueError('Family/profile assignment mismatch')
  return batch,rows,profile_path
 def main():
- parser=argparse.ArgumentParser();parser.add_argument('--repository',type=pathlib.Path,required=True);parser.add_argument('--freeze',type=pathlib.Path,required=True);parser.add_argument('--batch',required=True);parser.add_argument('--out',type=pathlib.Path,required=True);parser.add_argument('--qc-out',type=pathlib.Path,required=True);parser.add_argument('--heldout-qc',action='store_true');args=parser.parse_args()
+ parser=argparse.ArgumentParser();parser.add_argument('--repository',type=pathlib.Path,required=True);parser.add_argument('--freeze',type=pathlib.Path,required=True);parser.add_argument('--batch',required=True);parser.add_argument('--out',type=pathlib.Path,required=True);parser.add_argument('--qc-out',type=pathlib.Path,required=True);parser.add_argument('--heldout-qc',action='store_true');parser.add_argument('--release',type=pathlib.Path);args=parser.parse_args()
  repo=args.repository.resolve();freeze=args.freeze.resolve();out=args.out.resolve();qc=args.qc_out.resolve()
  if out.exists() or qc.exists():raise ValueError('Use new output and QC directories; never append to sealed data')
  if qc.is_relative_to(out) or out.is_relative_to(qc):raise ValueError('Sealed output and external QC must be disjoint')
- batch,rows,profile_path=validate(freeze,repo,args.batch,args.heldout_qc)
+ batch,rows,profile_path=validate(freeze,repo,args.batch,args.heldout_qc,args.release)
  sys.path.insert(0,str(freeze/'generator'))
  from fp_competition.core import Profile,TARGET_ELEMENTS
  from fp_competition.dataset import generate_dataset,make_plan

@@ -1,0 +1,428 @@
+{
+  "batches": [
+    {
+      "batch_id": "R3_A_base_D1_001",
+      "phase": "base",
+      "spectra": 46,
+      "generate_seconds": 216.0,
+      "all_actions_seconds": 453.21900000000096,
+      "zip_bytes": 10470327,
+      "maximum_window_lost_fraction": 0.020189270647141336
+    },
+    {
+      "batch_id": "R3_A_base_D1_002",
+      "phase": "base",
+      "spectra": 50,
+      "generate_seconds": 261.2340000000004,
+      "all_actions_seconds": 543.2340000000004,
+      "zip_bytes": 11565645,
+      "maximum_window_lost_fraction": 0.01935646151525019
+    },
+    {
+      "batch_id": "R3_A_base_D1_003",
+      "phase": "base",
+      "spectra": 26,
+      "generate_seconds": 124.89099999999962,
+      "all_actions_seconds": 267.29699999999866,
+      "zip_bytes": 6271938,
+      "maximum_window_lost_fraction": 0.018445137945617376
+    },
+    {
+      "batch_id": "R3_A_base_D2_001",
+      "phase": "base",
+      "spectra": 42,
+      "generate_seconds": 207.32900000000154,
+      "all_actions_seconds": 433.8600000000006,
+      "zip_bytes": 9675381,
+      "maximum_window_lost_fraction": 0.02632614433540101
+    },
+    {
+      "batch_id": "R3_A_base_D2_002",
+      "phase": "base",
+      "spectra": 50,
+      "generate_seconds": 237.81200000000172,
+      "all_actions_seconds": 496.57800000000134,
+      "zip_bytes": 11482440,
+      "maximum_window_lost_fraction": 0.03448299564281424
+    },
+    {
+      "batch_id": "R3_A_base_D2_003",
+      "phase": "base",
+      "spectra": 30,
+      "generate_seconds": 154.09400000000096,
+      "all_actions_seconds": 325.4379999999983,
+      "zip_bytes": 7192722,
+      "maximum_window_lost_fraction": 0.020264810973326712
+    },
+    {
+      "batch_id": "R3_A_base_D3_001",
+      "phase": "base",
+      "spectra": 40,
+      "generate_seconds": 193.375,
+      "all_actions_seconds": 407.6090000000004,
+      "zip_bytes": 9244749,
+      "maximum_window_lost_fraction": 0.015029202022051588
+    },
+    {
+      "batch_id": "R3_A_base_D3_002",
+      "phase": "base",
+      "spectra": 50,
+      "generate_seconds": 226.93799999999828,
+      "all_actions_seconds": 476.6409999999996,
+      "zip_bytes": 11363944,
+      "maximum_window_lost_fraction": 0.0373399210940534
+    },
+    {
+      "batch_id": "R3_A_base_D3_003",
+      "phase": "base",
+      "spectra": 28,
+      "generate_seconds": 149.25,
+      "all_actions_seconds": 315.71900000000096,
+      "zip_bytes": 6711951,
+      "maximum_window_lost_fraction": 0.01723341467043472
+    },
+    {
+      "batch_id": "R3_A_base_D4_001",
+      "phase": "base",
+      "spectra": 46,
+      "generate_seconds": 244.71900000000096,
+      "all_actions_seconds": 509.84400000000096,
+      "zip_bytes": 10617794,
+      "maximum_window_lost_fraction": 0.013979001105375739
+    },
+    {
+      "batch_id": "R3_A_base_D4_002",
+      "phase": "base",
+      "spectra": 48,
+      "generate_seconds": 203.79699999999866,
+      "all_actions_seconds": 426.29699999999866,
+      "zip_bytes": 10766028,
+      "maximum_window_lost_fraction": 0.015247729940532424
+    },
+    {
+      "batch_id": "R3_A_base_D4_003",
+      "phase": "base",
+      "spectra": 42,
+      "generate_seconds": 207.45400000000154,
+      "all_actions_seconds": 433.4380000000019,
+      "zip_bytes": 9673901,
+      "maximum_window_lost_fraction": 0.037175447806949286
+    },
+    {
+      "batch_id": "R3_A_base_D5_001",
+      "phase": "base",
+      "spectra": 42,
+      "generate_seconds": 210.59400000000096,
+      "all_actions_seconds": 441.0,
+      "zip_bytes": 9633636,
+      "maximum_window_lost_fraction": 0.026883253894054084
+    },
+    {
+      "batch_id": "R3_A_base_D5_002",
+      "phase": "base",
+      "spectra": 48,
+      "generate_seconds": 230.89099999999962,
+      "all_actions_seconds": 484.0,
+      "zip_bytes": 10974964,
+      "maximum_window_lost_fraction": 0.014038874469608671
+    },
+    {
+      "batch_id": "R3_A_base_D5_003",
+      "phase": "base",
+      "spectra": 48,
+      "generate_seconds": 195.88999999999942,
+      "all_actions_seconds": 412.8590000000004,
+      "zip_bytes": 10734710,
+      "maximum_window_lost_fraction": 0.02362507413010481
+    },
+    {
+      "batch_id": "R3_A_base_D5_004",
+      "phase": "base",
+      "spectra": 42,
+      "generate_seconds": 226.31200000000172,
+      "all_actions_seconds": 472.71800000000076,
+      "zip_bytes": 9823655,
+      "maximum_window_lost_fraction": 0.03526943785810162
+    },
+    {
+      "batch_id": "R3_A_base_D6_001",
+      "phase": "base",
+      "spectra": 48,
+      "generate_seconds": 241.82800000000134,
+      "all_actions_seconds": 507.07800000000134,
+      "zip_bytes": 11565462,
+      "maximum_window_lost_fraction": 0.028676639205865863
+    },
+    {
+      "batch_id": "R3_A_base_D6_002",
+      "phase": "base",
+      "spectra": 46,
+      "generate_seconds": 234.56299999999828,
+      "all_actions_seconds": 491.78199999999924,
+      "zip_bytes": 11087171,
+      "maximum_window_lost_fraction": 0.021932829569764584
+    },
+    {
+      "batch_id": "R3_A_base_P1_001",
+      "phase": "base",
+      "spectra": 40,
+      "generate_seconds": 186.48400000000038,
+      "all_actions_seconds": 392.375,
+      "zip_bytes": 9215236,
+      "maximum_window_lost_fraction": 0.009599086407683073
+    },
+    {
+      "batch_id": "R3_A_base_P1_002",
+      "phase": "base",
+      "spectra": 48,
+      "generate_seconds": 225.23500000000058,
+      "all_actions_seconds": 472.82900000000154,
+      "zip_bytes": 10823006,
+      "maximum_window_lost_fraction": 0.02061724507792476
+    },
+    {
+      "batch_id": "R3_A_base_P1_003",
+      "phase": "base",
+      "spectra": 48,
+      "generate_seconds": 235.51599999999962,
+      "all_actions_seconds": 493.4379999999983,
+      "zip_bytes": 10837518,
+      "maximum_window_lost_fraction": 0.025724269510886577
+    },
+    {
+      "batch_id": "R3_A_base_P1_004",
+      "phase": "base",
+      "spectra": 50,
+      "generate_seconds": 265.34400000000096,
+      "all_actions_seconds": 553.5469999999987,
+      "zip_bytes": 11475299,
+      "maximum_window_lost_fraction": 0.03734058024596364
+    },
+    {
+      "batch_id": "R3_A_base_P1_005",
+      "phase": "base",
+      "spectra": 24,
+      "generate_seconds": 116.73399999999674,
+      "all_actions_seconds": 247.65599999999904,
+      "zip_bytes": 5809864,
+      "maximum_window_lost_fraction": 0.029598062115882673
+    },
+    {
+      "batch_id": "R3_A_base_P2_001",
+      "phase": "base",
+      "spectra": 50,
+      "generate_seconds": 233.0,
+      "all_actions_seconds": 488.5779999999977,
+      "zip_bytes": 11910202,
+      "maximum_window_lost_fraction": 0.015215455413236103
+    },
+    {
+      "batch_id": "R3_A_base_P2_002",
+      "phase": "base",
+      "spectra": 48,
+      "generate_seconds": 219.14099999999962,
+      "all_actions_seconds": 459.35899999999674,
+      "zip_bytes": 11446492,
+      "maximum_window_lost_fraction": 0.012880298706238531
+    },
+    {
+      "batch_id": "R3_A_base_P2_003",
+      "phase": "base",
+      "spectra": 48,
+      "generate_seconds": 218.17199999999866,
+      "all_actions_seconds": 458.53099999999904,
+      "zip_bytes": 11444706,
+      "maximum_window_lost_fraction": 0.015455975278741733
+    },
+    {
+      "batch_id": "R3_A_base_P2_004",
+      "phase": "base",
+      "spectra": 50,
+      "generate_seconds": 262.5,
+      "all_actions_seconds": 548.0780000000013,
+      "zip_bytes": 12059894,
+      "maximum_window_lost_fraction": 0.03062514354339776
+    },
+    {
+      "batch_id": "R3_A_base_P2_005",
+      "phase": "base",
+      "spectra": 12,
+      "generate_seconds": 59.15599999999904,
+      "all_actions_seconds": 127.875,
+      "zip_bytes": 3359186,
+      "maximum_window_lost_fraction": 0.003159017875095257
+    },
+    {
+      "batch_id": "R3_A_base_P3_001",
+      "phase": "base",
+      "spectra": 50,
+      "generate_seconds": 196.71800000000076,
+      "all_actions_seconds": 416.875,
+      "zip_bytes": 11141874,
+      "maximum_window_lost_fraction": 0.0062321384738979425
+    },
+    {
+      "batch_id": "R3_A_base_P3_002",
+      "phase": "base",
+      "spectra": 46,
+      "generate_seconds": 171.84400000000096,
+      "all_actions_seconds": 365.0470000000023,
+      "zip_bytes": 10255580,
+      "maximum_window_lost_fraction": 0.003255452560378903
+    },
+    {
+      "batch_id": "R3_A_base_P3_003",
+      "phase": "base",
+      "spectra": 48,
+      "generate_seconds": 174.73399999999674,
+      "all_actions_seconds": 370.7029999999977,
+      "zip_bytes": 10647683,
+      "maximum_window_lost_fraction": 0.006216370923784082
+    },
+    {
+      "batch_id": "R3_A_base_P3_004",
+      "phase": "base",
+      "spectra": 50,
+      "generate_seconds": 215.07800000000134,
+      "all_actions_seconds": 450.4060000000027,
+      "zip_bytes": 11208635,
+      "maximum_window_lost_fraction": 0.005002575963602376
+    },
+    {
+      "batch_id": "R3_A_base_P3_005",
+      "phase": "base",
+      "spectra": 26,
+      "generate_seconds": 118.43800000000192,
+      "all_actions_seconds": 251.68800000000192,
+      "zip_bytes": 6159859,
+      "maximum_window_lost_fraction": 0.006736611857597264
+    },
+    {
+      "batch_id": "R3_A_challenge_T1_001",
+      "phase": "challenge",
+      "spectra": 42,
+      "generate_seconds": 166.46900000000096,
+      "all_actions_seconds": 351.1880000000019,
+      "zip_bytes": 9678917,
+      "maximum_window_lost_fraction": 0.010542735531775288
+    },
+    {
+      "batch_id": "R3_A_challenge_T1_002",
+      "phase": "challenge",
+      "spectra": 42,
+      "generate_seconds": 219.21799999999712,
+      "all_actions_seconds": 428.40599999999904,
+      "zip_bytes": 9874133,
+      "maximum_window_lost_fraction": 0.02922450064022397
+    },
+    {
+      "batch_id": "R3_A_challenge_T2_001",
+      "phase": "challenge",
+      "spectra": 42,
+      "generate_seconds": 164.90599999999904,
+      "all_actions_seconds": 326.54699999999866,
+      "zip_bytes": 10146471,
+      "maximum_window_lost_fraction": 0.01109572755467005
+    },
+    {
+      "batch_id": "R3_A_challenge_T2_002",
+      "phase": "challenge",
+      "spectra": 42,
+      "generate_seconds": 212.75,
+      "all_actions_seconds": 402.8119999999981,
+      "zip_bytes": 10344587,
+      "maximum_window_lost_fraction": 0.03177485764993256
+    },
+    {
+      "batch_id": "R3_A_challenge_T3_001",
+      "phase": "challenge",
+      "spectra": 42,
+      "generate_seconds": 139.92199999999866,
+      "all_actions_seconds": 283.28099999999904,
+      "zip_bytes": 9536482,
+      "maximum_window_lost_fraction": 0.0023436727661339963
+    },
+    {
+      "batch_id": "R3_A_challenge_T3_002",
+      "phase": "challenge",
+      "spectra": 42,
+      "generate_seconds": 180.04699999999866,
+      "all_actions_seconds": 350.28099999999904,
+      "zip_bytes": 9696117,
+      "maximum_window_lost_fraction": 0.00642547350622661
+    },
+    {
+      "batch_id": "R3_A_pilot_D1_001",
+      "phase": "pilot",
+      "spectra": 12,
+      "generate_seconds": 52.26599999999962,
+      "all_actions_seconds": 121.125,
+      "zip_bytes": 3305026,
+      "maximum_window_lost_fraction": 0.020734252661579963
+    },
+    {
+      "batch_id": "R3_A_pilot_D3_001",
+      "phase": "pilot",
+      "spectra": 16,
+      "generate_seconds": 72.73500000000058,
+      "all_actions_seconds": 156.68799999999828,
+      "zip_bytes": 4148810,
+      "maximum_window_lost_fraction": 0.020303707559799787
+    },
+    {
+      "batch_id": "R3_A_pilot_D4_001",
+      "phase": "pilot",
+      "spectra": 14,
+      "generate_seconds": 64.625,
+      "all_actions_seconds": 140.03199999999924,
+      "zip_bytes": 3712238,
+      "maximum_window_lost_fraction": 0.003103849579504297
+    },
+    {
+      "batch_id": "R3_A_pilot_D5_001",
+      "phase": "pilot",
+      "spectra": 12,
+      "generate_seconds": 54.86000000000058,
+      "all_actions_seconds": 122.93800000000192,
+      "zip_bytes": 3298472,
+      "maximum_window_lost_fraction": 0.0023934817333759596
+    },
+    {
+      "batch_id": "R3_A_pilot_D6_001",
+      "phase": "pilot",
+      "spectra": 6,
+      "generate_seconds": 29.110000000000582,
+      "all_actions_seconds": 62.4529999999977,
+      "zip_bytes": 2048786,
+      "maximum_window_lost_fraction": 0.008618205483558426
+    },
+    {
+      "batch_id": "R3_A_pilot_P1_001",
+      "phase": "pilot",
+      "spectra": 2,
+      "generate_seconds": 7.687999999998283,
+      "all_actions_seconds": 21.937999999998283,
+      "zip_bytes": 1101271,
+      "maximum_window_lost_fraction": 0.003200780813232771
+    },
+    {
+      "batch_id": "R3_A_pilot_P2_001",
+      "phase": "pilot",
+      "spectra": 16,
+      "generate_seconds": 69.86000000000058,
+      "all_actions_seconds": 140.75,
+      "zip_bytes": 4338630,
+      "maximum_window_lost_fraction": 0.02066749464961715
+    },
+    {
+      "batch_id": "R3_A_pilot_P3_001",
+      "phase": "pilot",
+      "spectra": 12,
+      "generate_seconds": 47.60900000000038,
+      "all_actions_seconds": 98.96800000000076,
+      "zip_bytes": 3221540,
+      "maximum_window_lost_fraction": 0.0007160346426854222
+    }
+  ],
+  "source": "actual run summaries; parallel batch times overlap; no fabricated full-run estimate"
+}

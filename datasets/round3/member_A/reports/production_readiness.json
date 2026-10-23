@@ -1,23 +1,10 @@
 {
-  "status": "pending_global_freeze",
-  "production_approved": false,
-  "production_started": false,
-  "actual_training_spectra": 0,
-  "A_candidates_checked": true,
-  "repository_snapshot": "301ee8be557f1317d1696da6d0c5302d12a590ab",
-  "B_C_D_candidates_in_snapshot": {
-    "B": false,
-    "C": false,
-    "D": false
-  },
-  "pending": [
-    "B/C/D actual candidate recipes and provenance",
-    "global historical-family connected closure and final use split",
-    "family/profile mapping with long-exposure ladder coverage",
-    "all count-noise seeds and global collision check",
-    "formal production source/dependency snapshots, exact commands and profile freeze",
-    "full candidate profile window QC and 90-spectrum A training pilot",
-    "final frozen count and measured runtime/disk budget"
-  ],
-  "note": "24 deterministic probe forward checks are parameter QA, not production spectra or the required 90-spectrum pilot."
+  "status": "A_production_complete_pending_global_member_acceptance",
+  "A_actual_spectra": 1752,
+  "A_base": 1500,
+  "A_T": 252,
+  "A_complete_QC": true,
+  "B_C_D_production_acceptance": "pending_actual_deliveries",
+  "training_inclusion_approved": false,
+  "T_model_access": false
 }
