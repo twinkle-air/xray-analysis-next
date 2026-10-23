@@ -1,5 +1,7 @@
-# Owner release v2（2026-10-24）
+# 当前放行：owner release v3（2026-10-24）
 
-基于已合并PR #28与A的90谱全量QC，允许A继续1,410基础谱+252挑战谱；B/C/D只允许各自90谱试片。固定freeze_v1的配方、母族用途、profile和噪声种子完全不变，不改sealed输入。run_batch.py新增可选--release与按成员批量门禁；release固定runner摘要、freeze_manifest摘要和已通过的A试片证据摘要，9项门禁测试通过。
+owner 明确要求取消 B/C/D 分阶段试产，直接全量生产、自检、提交PR，之后统一审查。当前入口为 `owner_release_v3.json` 和 `../production_tools/run_member_full.ps1`；B/C/D分别1,746/1,686/1,716谱，含各自1,500基础谱与246/186/216留出T谱。
 
-训练入库未批准；B/C/D的批量仍拒绝。每人试片通过后须另发布版本化release，不能把A通过当作全员生产通过。已有freeze_v1/release.json保留原试片授权，默认不传--release仍保持旧门禁。
+既有phase=pilot的90谱纳入全量基础谱，无需单独提交或等A放行。不更改freeze_v1、物理核心、用途、profile、种子或预算；不取消逐批全量audit/replay/窗口预算及ZIP SHA/CRC。T仅留出QC，训练入库仍未批准。A既有1752谱不重新生产。各成员完成后提交本人完整PR，由owner统一审查，再决定数据合并与后续任务。
+
+v2及旧试片脚本保留历史身份；只允许A批量的旧规则已被v3替代。使用旧release会继续触发旧门禁，不应修改旧release绕过。

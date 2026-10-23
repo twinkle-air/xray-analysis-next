@@ -1,34 +1,54 @@
 {
   "files": [
     {
+      "path": "datasets/round3/shared/README.md",
+      "sha256": "ae33709597837016c61747448ac68533c680163b01c5e50be25f304579e0bf66",
+      "bytes": 3936
+    },
+    {
       "path": "datasets/round3/shared/handoffs/20261024/member_B.md",
-      "sha256": "9e088d2baeefd385774fe514f8890179aa80dc00d92d9481d2cb6d57db8ae2d9",
-      "bytes": 2063
+      "sha256": "7e987cf99e315e29e4b27f80c67f80ef7aa071bc7942085226846ee351667f5c",
+      "bytes": 2044
+    },
+    {
+      "path": "datasets/round3/shared/handoffs/20261024/member_B_full_commands.json",
+      "sha256": "e4fd547a3ea0eb0bcb5aaecc8f5f6167f5a4328b2b06a15f6fa29b48d048941a",
+      "bytes": 34524
     },
     {
       "path": "datasets/round3/shared/handoffs/20261024/member_B_pilot_commands.json",
-      "sha256": "f0d0cfdfeb210da6e35c52852b833d22e294c6ab3cf0756ac3a0b75dc4c35c97",
-      "bytes": 7089
+      "sha256": "ed1bfeaea308b4d7a748e410c73c34be2112a9c9d9f4d0ee0b1793f0932b4d0c",
+      "bytes": 7287
     },
     {
       "path": "datasets/round3/shared/handoffs/20261024/member_C.md",
-      "sha256": "7d8696d1187760c743e7d1fab758b5be2b6099c4b9582f48071e409bdfe49f38",
-      "bytes": 2063
+      "sha256": "989e1933a69928f54bcd150bb9f13ed0a0dec2908feb3f16674feb66429e71b8",
+      "bytes": 2044
+    },
+    {
+      "path": "datasets/round3/shared/handoffs/20261024/member_C_full_commands.json",
+      "sha256": "31b5c7b82a950b053f5be0fadc567c0d956b98a677eeeeda4b0f3cdca4f8f00f",
+      "bytes": 33162
     },
     {
       "path": "datasets/round3/shared/handoffs/20261024/member_C_pilot_commands.json",
-      "sha256": "6b179e55771b980289c74051a4e5160ba17111bcfa013f41a5e0086743322cc0",
-      "bytes": 6387
+      "sha256": "744602390c49eaa3dd1225727ea8db28a902299af2ff9b8ce77bd026dbaf344d",
+      "bytes": 6585
     },
     {
       "path": "datasets/round3/shared/handoffs/20261024/member_D.md",
-      "sha256": "1786fd8f67e844752c0f1c4bfe2a52afd31cbbc33dec68999d6334930ccd1301",
-      "bytes": 2063
+      "sha256": "d412fba64f22e3c80c277d78e7302fb8980b4b2cd53a70a319a8c39014b5c806",
+      "bytes": 2044
+    },
+    {
+      "path": "datasets/round3/shared/handoffs/20261024/member_D_full_commands.json",
+      "sha256": "2052df567c38ddf983a50550ee75c46b81a476a8771de83f3e354d81011a9df7",
+      "bytes": 33167
     },
     {
       "path": "datasets/round3/shared/handoffs/20261024/member_D_pilot_commands.json",
-      "sha256": "4bcda4fe111fc6bea0e7a42afe87ae9359d6daa82f9b09d1c72dd2c6041eac08",
-      "bytes": 7089
+      "sha256": "47205acbcf65cdd932c9a5640910782e487171dd6e4278609069596dd2e73ee1",
+      "bytes": 7287
     },
     {
       "path": "datasets/round3/shared/production_tools/run_batch.py",
@@ -36,9 +56,19 @@
       "bytes": 8645
     },
     {
+      "path": "datasets/round3/shared/production_tools/run_member_full.ps1",
+      "sha256": "ca8cfe09071de4eb27affeb5e7a11968143d87eec75fd5da2d3cd426e75c3d95",
+      "bytes": 2076
+    },
+    {
       "path": "datasets/round3/shared/production_tools/run_member_pilot.ps1",
       "sha256": "2ac4e66b040a2a288bc33b9d2b1842e7623753515cff6302ef2824d8dc6e318f",
       "bytes": 1554
+    },
+    {
+      "path": "datasets/round3/shared/releases/README.md",
+      "sha256": "0a39d69b4dd04c576bb8e1802b6fe1bd32e0759952d7fc16f44711d36279de07",
+      "bytes": 902
     },
     {
       "path": "datasets/round3/shared/releases/byte_policy_test.json",
@@ -51,14 +81,20 @@
       "bytes": 992
     },
     {
-      "path": "datasets/round3/shared/releases/README.md",
-      "sha256": "67d4b51361d943f845fff61e1952d3f39effea158a11e4ea3526f295e8173853",
-      "bytes": 675
+      "path": "datasets/round3/shared/releases/owner_release_v3.json",
+      "sha256": "653bff0957d3f9d8a0a506934976aff06d36756777bb3a0095106ff302ca47b2",
+      "bytes": 1378
     },
     {
       "path": "datasets/round3/shared/releases/release_tests.json",
       "sha256": "adfe17655ee6ab1cf65cf95f4e9d9a1b34843d455032b54bda4a6ecf49015933",
       "bytes": 1322
+    },
+    {
+      "path": "datasets/round3/shared/releases/release_v3_validation.json",
+      "sha256": "15ace05151ee9edbc12b3013e582bb6a4d0e2964bc81c76bc333611cd9659348",
+      "bytes": 607
     }
-  ]
+  ],
+  "current_owner_release": "owner_release_v3.json"
 }
