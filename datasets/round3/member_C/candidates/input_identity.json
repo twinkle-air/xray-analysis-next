@@ -1,0 +1,50 @@
+{
+  "builder_sha256": "834a7e13d4e8af1eb4a4dca33030ad4b321b476fa935b03b3f92ea07cd02da7c",
+  "owner": "C",
+  "seed": 202610230301,
+  "ranges": {
+    "path": "datasets/round3/member_C/inputs/design_ranges.json",
+    "sha256": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d"
+  },
+  "shared_allocation": {
+    "path": "datasets/round3/shared/preparation_v1/design_allocation.json",
+    "sha256": "c07a57c83e3f007bb7dc1667807b3111ec4ee5e9a82baa8dfd1af2c7d950d4d4"
+  },
+  "historical_archive": {
+    "path": "datasets/round3/member_A/inputs/historical_compositions.json",
+    "sha256": "8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473",
+    "location": "read from the repository copy already published under member_A/inputs; C does not re-upload identical bytes",
+    "provenance": "the same historical snapshot member A screened against, so C and A are compared against one historical population",
+    "status": "available_historical_evidence_snapshot",
+    "coverage_limit": "Accepted round2 plus known local round1 candidate/pilot/research records; undocumented or unavailable lineage cannot be ruled out."
+  },
+  "historical_sources": [
+    {
+      "path": "outputs/model-round2-20261022/authoritative_index.json",
+      "sha256": "25f1dcc90983beb0e5f4fadfdcb3a9b364b393b448451887be53ca4075fcffce"
+    },
+    {
+      "path": "datasets/round2/member_A/inputs/first_round_compositions_available.json",
+      "sha256": "4f878d3f87e8cf93686e1c52824e074634f1b61b190d533d5fb0a0c70012f739"
+    },
+    {
+      "path": "datasets/research-round1-20261020/research_index.json",
+      "sha256": "2ebebb9a2f84794cd858e6e6c09128f7bf57f5286f105ae4f9ad2d9d757a7bfb"
+    }
+  ],
+  "generator_source_sha256": {
+    "core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+    "dataset.py": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+    "app.py": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+    "version.py": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+    "requirements-lock.txt": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0"
+  },
+  "source_manifest": {
+    "path": "datasets/round3/member_C/inputs/source_manifest.json",
+    "sha256": "2fc9ddbb495b494263d50712b790db0737864fabf73467c04b886082899ae54c"
+  },
+  "spectra_generated": 0,
+  "production_started": false,
+  "rebuilt_exactly_with_final_builder": true
+}

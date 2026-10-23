@@ -1,0 +1,44 @@
+{
+  "status": "candidate_stage_only_no_spectra",
+  "round_id": "round3",
+  "member": "C",
+  "working_directory": "repository root (datasets/round3/... paths are relative to it)",
+  "interpreter_used": {
+    "path": "C:\\Users\\TianT\\Documents\\Qoder\\2026-10-21\\ddc06964\\C_r3\\venv\\Scripts\\python.exe",
+    "python": "3.12.14",
+    "implementation": "CPython",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "xraylib": "4.3.0",
+    "bit_generator": "PCG64 (numpy.random.default_rng default)",
+    "thread_environment": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null
+    },
+    "matches_shared_source_identity_environment": true
+  },
+  "commands": [
+    {
+      "order": 1,
+      "command": "python -X utf8 -B datasets/round3/member_C/build_candidates.py --out datasets/round3/member_C/candidates",
+      "exit_code": 0,
+      "seconds": 2,
+      "stdout_summary": "status=passed_member_candidate_checks, errors=[], candidate_count=250, design_family_count=105"
+    },
+    {
+      "order": 2,
+      "command": "python -X utf8 -B datasets/round3/member_C/verify_candidates.py",
+      "exit_code": 0,
+      "seconds": 4,
+      "stdout_summary": "status=passed_candidate_and_preparation_checks_pending_global_freeze, candidate_rebuild_exact=true, 6/6 failure cases rejected"
+    }
+  ],
+  "input_snapshot_writers": [
+    "helper scripts that only hashed C's own copied inputs and the read-only git state are kept out of the repository; their output is inputs/source_manifest.json and inputs/repository_source.json, both hash-checked by verify_candidates.py"
+  ],
+  "not_run": [
+    "no batch/audit/replay/pack command has been run; the sealed generator command set is issued by A after the global freeze"
+  ],
+  "environment_caveat": "This machine's previously used CPython 3.15 install now has its scipy and numpy.random extension modules blocked by Windows Smart App Control, so candidate construction ran in a project-local CPython 3.12.14 virtualenv carrying exactly the versions recorded in shared/preparation_v1/source_identity.json. No spectrum generation has been attempted."
+}

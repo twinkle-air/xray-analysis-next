@@ -1,0 +1,24 @@
+{
+  "status": "candidate_source_inputs_not_production_freeze",
+  "round_id": "round3",
+  "owner": "C",
+  "production_approved": false,
+  "files": {
+    "design_ranges.json": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d",
+    "generator/fp_competition/core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "generator/fp_competition/minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+    "generator/fp_competition/dataset.py": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+    "generator/fp_competition/app.py": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+    "generator/fp_competition/version.py": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+    "generator/fp_competition/requirements-lock.txt": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0",
+    "generator/fp_competition/__init__.py": "3338a26d3706620d0b1eb836a6e39beb4ae15d61a4c04d9441215ec17ffeafa1"
+  },
+  "provenance": {
+    "design_ranges.json": "byte-identical copy of datasets/round3/member_A/inputs/design_ranges.json (sha 5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d)",
+    "generator/fp_competition": "byte-identical copies of datasets/round3/member_A/inputs/generator/fp_competition; physics core unchanged from round 2",
+    "source_of_truth": "datasets/round3/shared/preparation_v1/source_identity.json records the shared generator hashes",
+    "historical_compositions.json": "NOT copied into member_C: build_candidates.py reads datasets/round3/member_A/inputs/historical_compositions.json straight from the repository and records its SHA-256 in candidates/input_identity.json, so the 4.3 MB snapshot is uploaded once instead of twice"
+  },
+  "copy_verified": true,
+  "note": "C did not modify any generator source; only the seven modules/lock above are carried so candidate construction and verification run from a fresh clone."
+}
