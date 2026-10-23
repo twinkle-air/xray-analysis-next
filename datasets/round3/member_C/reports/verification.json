@@ -1,0 +1,157 @@
+{
+  "status": "passed_candidate_and_preparation_checks_pending_global_freeze",
+  "round_id": "round3",
+  "owner": "C",
+  "compiled_sources": [
+    "datasets/round3/member_C/build_candidates.py",
+    "datasets/round3/member_C/verify_candidates.py",
+    "datasets/round3/shared/prepare_inputs.py",
+    "datasets/round3/member_C/inputs/generator/fp_competition/__init__.py",
+    "datasets/round3/member_C/inputs/generator/fp_competition/app.py",
+    "datasets/round3/member_C/inputs/generator/fp_competition/core.py",
+    "datasets/round3/member_C/inputs/generator/fp_competition/dataset.py",
+    "datasets/round3/member_C/inputs/generator/fp_competition/minerals.py",
+    "datasets/round3/member_C/inputs/generator/fp_competition/version.py"
+  ],
+  "candidate_rebuild_exact": true,
+  "C_recipes": 250,
+  "C_design_families": 105,
+  "global_design_assignments": {
+    "A": {
+      "families": 105,
+      "recipes": 250,
+      "category_families": {
+        "ladder": 15,
+        "interference": 10,
+        "paired_negative_spike": 30,
+        "routine": 50
+      },
+      "matrix_families": {
+        "silicate_oxide": 63,
+        "iron_oxide": 42
+      }
+    },
+    "B": {
+      "families": 105,
+      "recipes": 250,
+      "category_families": {
+        "ladder": 15,
+        "interference": 10,
+        "paired_negative_spike": 30,
+        "routine": 50
+      },
+      "matrix_families": {
+        "silicate_oxide": 63,
+        "iron_oxide": 42
+      }
+    },
+    "C": {
+      "families": 105,
+      "recipes": 250,
+      "category_families": {
+        "ladder": 15,
+        "interference": 10,
+        "paired_negative_spike": 30,
+        "routine": 50
+      },
+      "matrix_families": {
+        "silicate_oxide": 63,
+        "iron_oxide": 42
+      }
+    },
+    "D": {
+      "families": 105,
+      "recipes": 250,
+      "category_families": {
+        "ladder": 15,
+        "interference": 10,
+        "paired_negative_spike": 30,
+        "routine": 50
+      },
+      "matrix_families": {
+        "silicate_oxide": 63,
+        "iron_oxide": 42
+      }
+    }
+  },
+  "design_seeds_unique": 420,
+  "failure_cases": {
+    "missing_variant": {
+      "rejected": true,
+      "errors": [
+        "250 distinct IDs required",
+        "Category quota mismatch",
+        "Matrix quota mismatch",
+        "Category/matrix quota mismatch",
+        "Incomplete family R3_C_ladder_0003"
+      ]
+    },
+    "duplicate_ID_and_composition": {
+      "rejected": true,
+      "errors": [
+        "250 distinct IDs required",
+        "Duplicate actual composition",
+        "Invalid ladder",
+        "Invalid ladder bin metadata"
+      ]
+    },
+    "Na_zero_contaminated_by_unrecorded_source": {
+      "rejected": true,
+      "errors": [
+        "R3_C_ladder_0003_V01: conversion mismatch",
+        "R3_C_ladder_0003_V01: actual ppm mismatch",
+        "R3_C_ladder_0003_V01: compensation/provenance mismatch",
+        "Invalid ladder"
+      ]
+    },
+    "mass_compensation_ledger_tampered": {
+      "rejected": true,
+      "errors": [
+        "R3_C_ladder_0003_V01: compensation/provenance mismatch"
+      ]
+    },
+    "paired_original_background_tampered": {
+      "rejected": true,
+      "errors": [
+        "R3_C_ladder_0003_V02: original background mismatch",
+        "R3_C_ladder_0003_V02: compensation/provenance mismatch"
+      ]
+    },
+    "family_split_moves_a_matched_variant_out": {
+      "rejected": true,
+      "errors": [
+        "Incomplete family R3_C_ladder_0003"
+      ]
+    }
+  },
+  "prepared_files_hash_checked": 31,
+  "profile_numeric_checks": 24,
+  "generator_source_hash_checked": 6,
+  "historical_rows_compared": 3800,
+  "historical_minimum_L1_percentage_points": 4.370103960478903,
+  "historical_L1_le_0_5_matches": 0,
+  "cross_design_family_near_edges": 0,
+  "member_A_cross_minimum_L1_percentage_points": 5.1416939796930805,
+  "member_A_cross_pairs_within_L1_0_5": 0,
+  "exact_zero_labels_verified": 1498,
+  "environment": {
+    "python": "3.12.14",
+    "implementation": "CPython",
+    "system": "Windows",
+    "machine": "AMD64",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "xraylib": "4.3.0",
+    "bit_generator": "PCG64 (numpy.random.default_rng default)",
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "physics_source_unchanged": true,
+  "production_started": false,
+  "training_spectra_generated": 0,
+  "eligible_for_training": false,
+  "scientific_accuracy_verified": false
+}

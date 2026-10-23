@@ -1,0 +1,33 @@
+{
+  "status": "pending_global_freeze",
+  "production_approved": false,
+  "production_started": false,
+  "actual_training_spectra": 0,
+  "C_candidates_checked": true,
+  "repository_snapshot": "1131a44969825dd424e38d3a487e1eb53eef2b77",
+  "other_member_candidates_in_snapshot": {
+    "A": true,
+    "B": false,
+    "D": false
+  },
+  "pending": [
+    "B/D actual candidate recipes and provenance",
+    "global historical-family connected closure and final use split",
+    "per-family profile mapping (1 anchor + 2 development conditions) and long-exposure ladder coverage",
+    "all count-noise sub-seeds and global collision check",
+    "formal production source/dependency snapshot, exact commands and profile freeze",
+    "C 15-recipe x 6 = 90-spectrum pilot from confirmed training families",
+    "assigned held-out T1/T2/T3 challenge spectra",
+    "full-batch audit, full physical replay and pack"
+  ],
+  "window_budget_carried_forward": {
+    "status": "preregistered_engineering_guardrail_not_accuracy_limit",
+    "maximum_lost_fraction_49kV": 0.5,
+    "maximum_lost_fraction_20kV": 0.1,
+    "conservation_rtol": 1e-09,
+    "conservation_atol": 1e-07,
+    "nonnegative_tolerance": 1e-12,
+    "policy": "Retain known out-of-window lines and their mass accounting; Ba K exclusion does not exclude L/M. No post-hoc loosening or deletion of failed cases. Full candidate/pilot validation remains pending."
+  },
+  "note": "No spectra were generated; candidate-stage checks only. 24 probe forward checks in shared preparation are parameter QA, not the C pilot."
+}
