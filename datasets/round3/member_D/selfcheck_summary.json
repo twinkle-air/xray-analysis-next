@@ -1,0 +1,103 @@
+{
+  "is_template": false,
+  "usable_for_generation": false,
+  "production_started": false,
+  "round_id": "round3",
+  "member": "D",
+  "status": "candidate_checks_passed_pending_global_freeze",
+  "expected_recipe_count": 250,
+  "expected_base_spectra": 1500,
+  "assigned_holdout_recipe_count": null,
+  "actual_recipe_count": 250,
+  "actual_family_count": 105,
+  "actual_base_spectra": 0,
+  "actual_extra_T_spectra": 0,
+  "category_recipes": {
+    "ladder": 90,
+    "interference": 50,
+    "paired_negative_spike": 60,
+    "routine": 50
+  },
+  "matrix_recipes": {
+    "silicate_oxide": 150,
+    "iron_oxide": 100
+  },
+  "candidate_checks": {
+    "status": "passed_member_d_candidate_checks",
+    "errors": 0,
+    "exact_zero_labels_verified": 1553,
+    "historical_rows_compared": 3800,
+    "historical_minimum_L1_percentage_points": 2.906359122930519,
+    "historical_L1_le_0_5_matches": 0,
+    "cross_design_family_near_edges": 0,
+    "cross_member_minimum_L1_percentage_points": {
+      "A": 4.435711424558101,
+      "B": 5.596896657184906,
+      "C": 4.475151116954075
+    },
+    "cross_member_pairs_within_L1_0_5": {
+      "A": 0,
+      "B": 0,
+      "C": 0
+    }
+  },
+  "verification": {
+    "status": "passed_candidate_and_preparation_checks_pending_global_freeze",
+    "deterministic_rebuild_exact": true,
+    "failure_cases_rejected": 6,
+    "compiled_sources": 9,
+    "prepared_files_hash_checked": 31,
+    "generator_source_hash_checked": 6,
+    "path": "reports/verification.json"
+  },
+  "audit": {
+    "covered_spectra": 0,
+    "report_paths": [],
+    "exit_codes": [],
+    "status": "pending_not_generated"
+  },
+  "physical_replay": {
+    "covered_spectra": 0,
+    "maximum_array_difference": null,
+    "report_paths": [],
+    "exit_codes": [],
+    "status": "pending_not_generated"
+  },
+  "pilot": {
+    "status": "pending_confirmed_training_families",
+    "planned_spectra": 90,
+    "note": "1 ladder + 1 interference + 1 paired + 2 routine families = 15 recipes x 6 spectra, counted inside the 1,500"
+  },
+  "sealed": "not_started",
+  "manifest_path": "delivery_manifest.json",
+  "source_and_environment_evidence": [
+    "inputs/source_manifest.json",
+    "inputs/repository_source.json",
+    "candidates/input_identity.json",
+    "frozen_inputs/prepared_not_frozen.json",
+    "reports/commands_and_environment.json"
+  ],
+  "unresolved_errors": 0,
+  "missing_items": [
+    "A global candidate dedup / usage / connected-closure freeze",
+    "per-family profile assignment (1 anchor + 2 development) and long-exposure ladder coverage",
+    "count-noise sub-seed manifest and global collision check",
+    "15-recipe x 6 = 90-spectrum pilot and measured runtime/disk budget",
+    "base 1,500 spectra, full audit, full physical replay and pack",
+    "held-out T1/T2/T3 challenge spectra once A issues the new held-out list",
+    "shared sign-off of the common input list that has been open since round 2"
+  ],
+  "eligible_for_training": false,
+  "scientific_accuracy_verified": false,
+  "evidence_paths": [
+    "candidates/D_samples.json",
+    "candidates/family_registry.json",
+    "candidates/original_backgrounds.json",
+    "candidates/formula_registry.csv",
+    "candidates/candidate_registry.csv",
+    "candidates/candidate_checks.json",
+    "candidates/coverage.json",
+    "reports/verification.json",
+    "reports/production_readiness.json"
+  ]
+}
