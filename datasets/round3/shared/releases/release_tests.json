@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "runner_compiled": true,
+  "cases": {
+    "A_base_allowed": {
+      "accepted": true,
+      "expected": true,
+      "result": "accepted"
+    },
+    "A_T_requires_explicit_mode": {
+      "accepted": false,
+      "expected": false,
+      "result": "T profiles require explicit heldout physical-QC mode"
+    },
+    "A_T_QC_allowed": {
+      "accepted": true,
+      "expected": true,
+      "result": "accepted"
+    },
+    "B_pilot_allowed": {
+      "accepted": true,
+      "expected": true,
+      "result": "accepted"
+    },
+    "C_pilot_allowed": {
+      "accepted": true,
+      "expected": true,
+      "result": "accepted"
+    },
+    "D_pilot_allowed": {
+      "accepted": true,
+      "expected": true,
+      "result": "accepted"
+    },
+    "B_bulk_blocked": {
+      "accepted": false,
+      "expected": false,
+      "result": "Member bulk production has not been released"
+    },
+    "C_bulk_blocked": {
+      "accepted": false,
+      "expected": false,
+      "result": "Member bulk production has not been released"
+    },
+    "D_bulk_blocked": {
+      "accepted": false,
+      "expected": false,
+      "result": "Member bulk production has not been released"
+    }
+  },
+  "physics_core_unchanged": true,
+  "freeze_manifest_unchanged": true
+}

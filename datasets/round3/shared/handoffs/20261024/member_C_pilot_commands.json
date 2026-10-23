@@ -1,0 +1,235 @@
+{
+  "member": "C",
+  "pilot_spectra": 90,
+  "pilot_is_part_of_base_1500": true,
+  "final_base_spectra": 1500,
+  "assigned_holdout_recipes": 31,
+  "final_T_spectra": 186,
+  "final_total_spectra": 1686,
+  "bulk_production_approved": false,
+  "commands": [
+    {
+      "batch_id": "R3_C_pilot_D1_001",
+      "spectra": 14,
+      "profile": "D1",
+      "families": [
+        "R3_C_interference_0071",
+        "R3_C_routine_0239",
+        "R3_C_routine_0291"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_C_pilot_D1_001",
+        "--out",
+        "work/round3/member_C_pilot_v1/sealed/R3_C_pilot_D1_001",
+        "--qc-out",
+        "work/round3/member_C_pilot_v1/qc/R3_C_pilot_D1_001"
+      ]
+    },
+    {
+      "batch_id": "R3_C_pilot_D3_001",
+      "spectra": 4,
+      "profile": "D3",
+      "families": [
+        "R3_C_paired_negative_spike_0185"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_C_pilot_D3_001",
+        "--out",
+        "work/round3/member_C_pilot_v1/sealed/R3_C_pilot_D3_001",
+        "--qc-out",
+        "work/round3/member_C_pilot_v1/qc/R3_C_pilot_D3_001"
+      ]
+    },
+    {
+      "batch_id": "R3_C_pilot_D4_001",
+      "spectra": 2,
+      "profile": "D4",
+      "families": [
+        "R3_C_routine_0239"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_C_pilot_D4_001",
+        "--out",
+        "work/round3/member_C_pilot_v1/sealed/R3_C_pilot_D4_001",
+        "--qc-out",
+        "work/round3/member_C_pilot_v1/qc/R3_C_pilot_D4_001"
+      ]
+    },
+    {
+      "batch_id": "R3_C_pilot_D5_001",
+      "spectra": 12,
+      "profile": "D5",
+      "families": [
+        "R3_C_ladder_0003"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_C_pilot_D5_001",
+        "--out",
+        "work/round3/member_C_pilot_v1/sealed/R3_C_pilot_D5_001",
+        "--qc-out",
+        "work/round3/member_C_pilot_v1/qc/R3_C_pilot_D5_001"
+      ]
+    },
+    {
+      "batch_id": "R3_C_pilot_D6_001",
+      "spectra": 28,
+      "profile": "D6",
+      "families": [
+        "R3_C_interference_0071",
+        "R3_C_ladder_0003",
+        "R3_C_paired_negative_spike_0185",
+        "R3_C_routine_0291"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_C_pilot_D6_001",
+        "--out",
+        "work/round3/member_C_pilot_v1/sealed/R3_C_pilot_D6_001",
+        "--qc-out",
+        "work/round3/member_C_pilot_v1/qc/R3_C_pilot_D6_001"
+      ]
+    },
+    {
+      "batch_id": "R3_C_pilot_P1_001",
+      "spectra": 4,
+      "profile": "P1",
+      "families": [
+        "R3_C_routine_0239",
+        "R3_C_routine_0291"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_C_pilot_P1_001",
+        "--out",
+        "work/round3/member_C_pilot_v1/sealed/R3_C_pilot_P1_001",
+        "--qc-out",
+        "work/round3/member_C_pilot_v1/qc/R3_C_pilot_P1_001"
+      ]
+    },
+    {
+      "batch_id": "R3_C_pilot_P2_001",
+      "spectra": 22,
+      "profile": "P2",
+      "families": [
+        "R3_C_interference_0071",
+        "R3_C_ladder_0003"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_C_pilot_P2_001",
+        "--out",
+        "work/round3/member_C_pilot_v1/sealed/R3_C_pilot_P2_001",
+        "--qc-out",
+        "work/round3/member_C_pilot_v1/qc/R3_C_pilot_P2_001"
+      ]
+    },
+    {
+      "batch_id": "R3_C_pilot_P3_001",
+      "spectra": 4,
+      "profile": "P3",
+      "families": [
+        "R3_C_paired_negative_spike_0185"
+      ],
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "datasets/round3/shared/production_tools/run_batch.py",
+        "--repository",
+        ".",
+        "--freeze",
+        "datasets/round3/shared/freeze_v1",
+        "--release",
+        "datasets/round3/shared/releases/owner_release_v2.json",
+        "--batch",
+        "R3_C_pilot_P3_001",
+        "--out",
+        "work/round3/member_C_pilot_v1/sealed/R3_C_pilot_P3_001",
+        "--qc-out",
+        "work/round3/member_C_pilot_v1/qc/R3_C_pilot_P3_001"
+      ]
+    }
+  ]
+}
