@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "validated_BCD_batches": 146,
+  "validated_spectra": 5148,
+  "T_without_explicit_QC_rejected": 3,
+  "runner_compilation": "passed",
+  "runner_unchanged": true,
+  "freeze_unchanged": true,
+  "separate_pilot_review_required": false,
+  "data_generated_in_this_change": 0,
+  "powershell_AST": "passed",
+  "powershell_plan_execution": {
+    "B": {
+      "batches": 50,
+      "spectra": 1746
+    },
+    "C": {
+      "batches": 48,
+      "spectra": 1686
+    },
+    "D": {
+      "batches": 48,
+      "spectra": 1716
+    }
+  },
+  "heldout_flags_verified": true
+}

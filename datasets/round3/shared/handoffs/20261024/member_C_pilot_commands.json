@@ -231,5 +231,8 @@
         "work/round3/member_C_pilot_v1/qc/R3_C_pilot_P3_001"
       ]
     }
-  ]
+  ],
+  "status": "superseded",
+  "superseded_by": "member_C_full_commands.json",
+  "note": "Historical pilot-only commands. Use full commands with owner_release_v3; separate pilot review is waived."
 }

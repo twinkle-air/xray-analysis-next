@@ -1,3 +1,5 @@
+> **当前执行更新（2026-10-24，owner明确授权）**：B/C/D取消独立试片等待环节，直接按冻结计划完成全量生产和自检，提交完整PR后统一审查。B=1746、C=1686、D=1716谱；原90谱计入各自基础1500条。当前release为 `datasets/round3/shared/releases/owner_release_v3.json`，入口为 `datasets/round3/shared/production_tools/run_member_full.ps1`。下文旧试片门禁仅为原阶段记录，本条覆盖相关执行顺序。冻结输入和全部QC保持，T仅留出QC，训练入库仍未批准。
+
 # 第三轮公共准备区（A维护）
 
 A已完成候选与公共输入准备，详见下方preparation_v1；目前没有已冻结配置、可执行生产清单或已验收训练谱。以[第三轮方案](../planning/第三轮数据构建方案.md)为准，B/C/D不各自另造最终主表。
