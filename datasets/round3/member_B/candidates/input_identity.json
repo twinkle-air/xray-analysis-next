@@ -1,0 +1,22 @@
+{
+  "builder_sha256": "8b34945cfcf16b2bc4ddf0d7ed93db00b04a44c2309b8008fd1cd0ccae401a01",
+  "ranges": {
+    "path": "inputs/design_ranges.json",
+    "sha256": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d"
+  },
+  "allocation": {
+    "path": "inputs/design_allocation.json",
+    "sha256": "c07a57c83e3f007bb7dc1667807b3111ec4ee5e9a82baa8dfd1af2c7d950d4d4"
+  },
+  "historical_sources": [
+    {
+      "path": "datasets/A-part-20261018/A_samples.json",
+      "sha256": "b1fcc884112de2aca0b07594af16fd4867b7805ee117931ca7c8a679c7ec868e"
+    },
+    {
+      "path": "datasets/B-part-20261021/B2_candidates.json",
+      "sha256": "3792a372e194376614a003d6b92a2fa3861d85aa47259be681149d31f6becbd6"
+    }
+  ],
+  "seed": 202610230301
+}
