@@ -25,3 +25,7 @@ A的inputs包含未改物理核心的生成器源码快照，preparation_v1提�
 ## 四方全局计划及 A 试片（2026-10-24）
 
 四方候选现已齐备：[全局输入v1](freeze_v1/README.md)、[四方复核与状态](reviews/20261024_ABCD/README.md)、[A的90谱试片](../member_A/pilot_v1/README.md)。1,000配方/420族与整族700/150/150用途、6,900条计划记录已固定；A实际90谱全量QC通过。仅试片放行，批量生产/训练入库仍为false。前置3,450组合为静态核验，不宣称全部正向计算完成；旧阶段报告保留原时点。
+
+## A全量交付与成员试片release v2（2026-10-24）
+
+[A完整1752谱](../member_A/production_v1/README.md)包含1500基础谱（含原90试片）及252条T挑战谱，全部完成逐批完整QC；[release v2](releases/README.md)只允许A批量与B/C/D试片，[B交接](handoffs/20261024/member_B.md)、[C交接](handoffs/20261024/member_C.md)、[D交接](handoffs/20261024/member_D.md)已具备确切命令。其他成员批量及全局训练入库仍未批准，不把A完成当作全体6900谱已完成。
