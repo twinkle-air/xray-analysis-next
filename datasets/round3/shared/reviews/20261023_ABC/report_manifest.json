@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "path": "candidate_registry.csv",
+      "bytes": 520111,
+      "sha256": "3fc051fb5c20e6667c1337a7d7ae869ccaaef8bd892140079164ac327b253665"
+    },
+    {
+      "path": "family_components.json",
+      "bytes": 14929,
+      "sha256": "ce96203b21e436091d7353ba34ea9812af3a50575dc34b608a966a68e9031f8d"
+    },
+    {
+      "path": "historical_nearest.csv",
+      "bytes": 61903,
+      "sha256": "008dc89700901523c6a6f18c3d618aa55d517094d2bd9e91fdfb06b6e5b3fefd"
+    },
+    {
+      "path": "merged_candidate_identity.json",
+      "bytes": 772,
+      "sha256": "5425bf217dac40bdb82910867b3d20dfab694dac14f8336ef14e65471df1efd2"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2095,
+      "sha256": "49987b5455bbef7ef2308fa4ea709a39c2d0abe7b2e1a95396f1bca4ccb05aad"
+    },
+    {
+      "path": "source_hashes.json",
+      "bytes": 1223,
+      "sha256": "387eed26099a1178369ac646d6209fe1ad8a38271e4fab653757d5198f997ac2"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 3607,
+      "sha256": "edb1718570820524f12c2a3a8c200b01112acf6ac31a349f1974009a09af1b6a"
+    }
+  ]
+}

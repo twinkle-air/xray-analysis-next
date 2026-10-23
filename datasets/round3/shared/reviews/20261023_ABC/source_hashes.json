@@ -1,0 +1,30 @@
+{
+  "datasets/round3/member_A/candidates_v1/A_samples.json": {
+    "sha256": "ba95f56fb8974e7b6319fb474f1c609ec2a24c40c77db77e6a96e9782963755a",
+    "bytes": 3130542
+  },
+  "datasets/round3/member_A/candidates_v1/family_registry.json": {
+    "sha256": "0dae3b1806ec255f1f3213bdb269267b814c8c5993cf622656a6da00b5488d35",
+    "bytes": 57340
+  },
+  "datasets/round3/member_B/candidates/B_samples.json": {
+    "sha256": "bb61407dc09323e31706f506fd38e28145963fd577e7096604b8f24c7e8e2cf8",
+    "bytes": 3111637
+  },
+  "datasets/round3/member_B/candidates/family_registry.json": {
+    "sha256": "1b4e0f6a719282ff827da888cb118865e577ff236da2b4faeeef966fd607851e",
+    "bytes": 57329
+  },
+  "datasets/round3/member_C/candidates/C_samples.json": {
+    "sha256": "ad78e2e8d1279d9adaad67676bb99cad7426906ebde1a1bac2e370142536c168",
+    "bytes": 3140042
+  },
+  "datasets/round3/member_C/candidates/family_registry.json": {
+    "sha256": "05c7752b27b08f6338e7819338b51eecbab552262895b6742ff2938fcb1552c3",
+    "bytes": 57548
+  },
+  "datasets/round3/member_A/inputs/historical_compositions.json": {
+    "sha256": "8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473",
+    "bytes": 4260937
+  }
+}
