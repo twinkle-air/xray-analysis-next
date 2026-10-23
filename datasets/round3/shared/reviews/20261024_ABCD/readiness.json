@@ -1,0 +1,58 @@
+{
+  "status": "ABCD_known_history_plan_fixed_A_pilot_passed_pending_review_and_member_pilots",
+  "candidate_recipes": 1000,
+  "design_families": 420,
+  "usage_recipes": {
+    "train": 700,
+    "validation": 150,
+    "internal_holdout": 150
+  },
+  "base_spectra": 6000,
+  "T_challenge_spectra": 900,
+  "total_spectra": 6900,
+  "members": {
+    "A": {
+      "base": 1500,
+      "holdout_recipes": 42,
+      "T_challenge": 252,
+      "total": 1752,
+      "pilot_included": 90,
+      "pilot_completed": 90
+    },
+    "B": {
+      "base": 1500,
+      "holdout_recipes": 41,
+      "T_challenge": 246,
+      "total": 1746,
+      "pilot_included": 90,
+      "pilot_completed": 0
+    },
+    "C": {
+      "base": 1500,
+      "holdout_recipes": 31,
+      "T_challenge": 186,
+      "total": 1686,
+      "pilot_included": 90,
+      "pilot_completed": 0
+    },
+    "D": {
+      "base": 1500,
+      "holdout_recipes": 36,
+      "T_challenge": 216,
+      "total": 1716,
+      "pilot_included": 90,
+      "pilot_completed": 0
+    }
+  },
+  "actual_spectra_generated": 90,
+  "A_pilot_status": "passed",
+  "B_C_D_pilots": "pending_owner_release",
+  "bulk_production_approved": false,
+  "training_inclusion_approved": false,
+  "full_candidate_forward_QC_complete": false,
+  "candidate_profile_static_pairs_checked": 3450,
+  "prior_numeric_probe_checks_verified": 24,
+  "first_round_noise_seed_registry_complete": false,
+  "known_lineage_only_not_external_blind": true,
+  "model_or_physics_core_changed": false
+}

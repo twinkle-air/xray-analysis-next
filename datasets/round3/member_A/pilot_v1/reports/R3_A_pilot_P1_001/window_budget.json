@@ -1,0 +1,18 @@
+{
+  "budget_sha256": "8e451a488167dd8abf7757fdef2dea6300630d2d6e855750f6ac97d140ddb4d0",
+  "rows": [
+    {
+      "id": "S000001",
+      "lost_fraction": 0.003200780813232771,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "id": "S000002",
+      "lost_fraction": 0.003200780813232771,
+      "budget": 0.5,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

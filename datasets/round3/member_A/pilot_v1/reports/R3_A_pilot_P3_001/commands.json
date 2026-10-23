@@ -1,0 +1,53 @@
+[
+  {
+    "action": "audit",
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-B",
+      "<sealed>/reproducibility/generator/fp_competition/app.py",
+      "audit",
+      "--dataset",
+      "<sealed>",
+      "--out",
+      "audit.json"
+    ],
+    "exit_code": 0,
+    "seconds": 2.3590000000003783
+  },
+  {
+    "action": "replay",
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-B",
+      "<sealed>/reproducibility/generator/fp_competition/app.py",
+      "replay",
+      "--dataset",
+      "<sealed>",
+      "--out",
+      "replay.json"
+    ],
+    "exit_code": 0,
+    "seconds": 46.06199999999808
+  },
+  {
+    "action": "pack",
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-B",
+      "<sealed>/reproducibility/generator/fp_competition/app.py",
+      "pack",
+      "--dataset",
+      "<sealed>",
+      "--out",
+      "R3_A_pilot_P3_001.zip"
+    ],
+    "exit_code": 0,
+    "seconds": 2.7809999999990396
+  }
+]

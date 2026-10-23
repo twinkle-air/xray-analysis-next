@@ -1,0 +1,13 @@
+{
+  "status": "pilot_only_after_owner_global_freeze",
+  "pilot_authorized": true,
+  "batch_production_approved": false,
+  "training_inclusion_approved": false,
+  "pilot_members": [
+    "A"
+  ],
+  "member_B_C_D_pilots": "pending_A_pilot_QC_and_owner_release",
+  "formal_total_spectra": 6900,
+  "external_independent_blindness": false,
+  "note": "A global known-lineage split/profile/noise plan fixed before pilot. This release permits only A pilot; bulk production requires a later explicit versioned owner release."
+}

@@ -1,0 +1,26 @@
+{
+  "sources": [
+    {
+      "id": "BHVO-2",
+      "landing_page": "https://www.usgs.gov/media/files/bhvo-2-geochemical-reference-material-information-sheet",
+      "download_url": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/files/USGS-BHVO-2-IS_2022-508.pdf",
+      "file": "BHVO-2-USGS-2022.pdf",
+      "sha256": "0c571e9c4fc925e19451a07f46648f73a127d76d68a66812a0c700e3de303e4f",
+      "bytes": 436062,
+      "license": "Public Domain (USGS landing page)",
+      "sheet_revision": "June 2022",
+      "data_kind": "Published composition estimates; not measured XRF spectra"
+    },
+    {
+      "id": "BCR-2",
+      "landing_page": "https://www.usgs.gov/media/files/bcr-2-geochemical-reference-material-information-sheet-0",
+      "download_url": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/files/USGS%20BCR-2%20IS_2022.pdf",
+      "file": "BCR-2-USGS-2022.pdf",
+      "sha256": "a9b30e232851bd4b6dad80f97b4265da2b873762d6011c7b8e5e6d4af23beeed",
+      "bytes": 293589,
+      "license": "Public Domain (USGS landing page)",
+      "sheet_revision": "June 2022",
+      "data_kind": "Published composition estimates; not measured XRF spectra"
+    }
+  ]
+}

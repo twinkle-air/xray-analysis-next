@@ -1,0 +1,69 @@
+{
+  "development_allowlist": [
+    "P1",
+    "P2",
+    "P3",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6"
+  ],
+  "model_forbidden": [
+    "T1",
+    "T2",
+    "T3"
+  ],
+  "files": {
+    "P1": {
+      "path": "profiles/development/P1.json",
+      "sha256": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221"
+    },
+    "P2": {
+      "path": "profiles/development/P2.json",
+      "sha256": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03"
+    },
+    "P3": {
+      "path": "profiles/development/P3.json",
+      "sha256": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351"
+    },
+    "D1": {
+      "path": "profiles/development/D1.json",
+      "sha256": "4f0accd43f895b11248b7c44f7ee3d55c1c1b5cf94eb2a3d8438652cc37202d1"
+    },
+    "D2": {
+      "path": "profiles/development/D2.json",
+      "sha256": "f26ddacc79d3b9dea091aca881a3976584b5582b2181bdffd6c9fa14968e3488"
+    },
+    "D3": {
+      "path": "profiles/development/D3.json",
+      "sha256": "a1ebd6212b45187a96bd905055989220b6d589a01894025d39c1e67a66901775"
+    },
+    "D4": {
+      "path": "profiles/development/D4.json",
+      "sha256": "fb0413c4915fa30ea2a526b466c690026cba95ee6dcb11e366146e251c0c581c"
+    },
+    "D5": {
+      "path": "profiles/development/D5.json",
+      "sha256": "51b0d63f272a009783d9609171efbd70b739b1dcb2b216957b9cedaa8e442402"
+    },
+    "D6": {
+      "path": "profiles/development/D6.json",
+      "sha256": "63c583d0e7bfe8d1ac43a330b2d5c7a844bf3cfffc871d25e02e86769df838a2"
+    },
+    "T1": {
+      "path": "profiles/heldout_qc_only/T1.json",
+      "sha256": "5d8b67f13287315f34e8c262b15864910dce3ee7272d5b02b69f0e4ca5ab2cd3"
+    },
+    "T2": {
+      "path": "profiles/heldout_qc_only/T2.json",
+      "sha256": "8f20475a9a09a0fe086d79f4dbd3323ce119c74fd091cd624af72c56cdfbcca7"
+    },
+    "T3": {
+      "path": "profiles/heldout_qc_only/T3.json",
+      "sha256": "254a366758ac90e0cc1ff5ccc738a99068969e33471f688fa55caf28aebf7402"
+    }
+  },
+  "T_access": "physical_QC_only_not_model_fit_dictionary_or_selection"
+}

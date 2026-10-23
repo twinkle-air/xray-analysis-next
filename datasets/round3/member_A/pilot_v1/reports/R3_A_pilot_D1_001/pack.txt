@@ -1,0 +1,1 @@
+{"archive": "C:\\Users\\Twinkle\\Desktop\\通用X射线谱分析\\outputs\\pr25-26-review-20261024\\A_pilot\\qc\\R3_A_pilot_D1_001\\R3_A_pilot_D1_001.zip", "sha256": "777518119a5a52370743bfbe9a2b0e8163173f9084694beaf9d7d2db779dbeaf", "qc": "passed", "physics_replay_required_separately": true}
