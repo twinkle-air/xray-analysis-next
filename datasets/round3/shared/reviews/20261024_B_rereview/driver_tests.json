@@ -1,0 +1,18 @@
+{
+  "status": "passed_original_control_flow_cases",
+  "no_actual_production": true,
+  "cases": {
+    "complete": {
+      "exit": 0,
+      "summary_written": false
+    },
+    "incomplete": {
+      "exit": 3,
+      "summary_written": false
+    },
+    "child_failure": {
+      "exit": 1,
+      "summary_written": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "status": "changes_required",
+  "head": "281f305df420a80af97fb69f78fb05886007c6fb",
+  "old_head": "6a7a945a5b15fad8d1cc642494d8da8a50589968",
+  "changed_files": 20,
+  "native_archives_unchanged": 50,
+  "manifest_entries_verified": 426,
+  "manifest_bytes_verified": 436694081,
+  "all_listed_paths_SHA_sizes_passed": true,
+  "source_compilation": "passed",
+  "summary_change_only_full_delivery": true,
+  "training_inclusion_approved": false,
+  "review_url": "https://github.com/twinkle-air/xray-analysis-next/pull/35#pullrequestreview-5638499547",
+  "resolved_original_issues": [
+    "README/manifest identity",
+    "full_delivery reference",
+    "manifest creation ordering",
+    "failed/incomplete driver exit paths"
+  ],
+  "remaining_issues": [
+    "QC identity not bound to frozen batch",
+    "window row failure accepted as complete",
+    "missing replay command accepted as complete"
+  ]
+}
