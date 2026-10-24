@@ -1,34 +1,120 @@
-# 第三轮 B：候选阶段交接包
+# 第三轮成员 B：全量生产交付
 
-状态：**250 个候选配方和 105 个设计族已重建并通过本地自检；正式谱 0 条；等待 A 全局复核与生产冻结。** 本目录作为候选阶段交接包，通过任务分支 PR 提交给 A 复核；是否合并由仓库协作者审查决定。
+状态：**成员 B 的 1,746 条谱已在本地完成全量生成与自检，等待 owner 统一复核。** 生产放行不等于数据审查通过；`training_inclusion_approved` 仍为 `false`。
 
-## 候选与依据
+## 数量
 
-- 配额：90 梯度、50 干扰、60 负例/加标配对、50 常规；硅酸盐/氧化物 150、富铁氧化物 100。
-- `candidates/B_samples.json` 保留全部完整元素质量百分数、原始底板化合物/痕量 ppm、原始元素组成、控制元素、换算、补偿和族关系。氧作为基体元素参与模拟；32 个目标元素均保留。
-- `candidates/family_registry.json` 保留 A 分配的 B 族 ID、设计种子、底板种子、完整族成员。`candidates/formula_registry.csv` 为供复核的配方索引。
-- `inputs/design_allocation.json` 来自仓库 `datasets/round3/shared/preparation_v1/design_allocation.json`；`inputs/design_ranges.json` 来自 `datasets/round3/member_A/inputs/design_ranges.json`。复建脚本固定使用仓库内 `datasets/round3/member_A/inputs/generator/fp_competition` 的封存源码与 `datasets/round3/member_A/inputs/historical_compositions.json` 的历史快照，并逐项校验 SHA-256。设计输入对应的 `main` 提交为 `1131a44969825dd424e38d3a487e1eb53eef2b77`。
-- 分配中的 `design_seed` 和记录中的 `background_seed` 只用于候选设计，**不是**已冻结的计数噪声种子。
+| 项目 | 数量 |
+| --- | --- |
+| 候选配方 | 250（硅酸盐/氧化物 150、富铁氧化物 100） |
+| 设计族（合并前） | 105 |
+| 基础谱 | 1,500（其中 pilot 批次 90 条计入基础谱） |
+| 追加 T 挑战谱 | 246（41 个留出配方 × 6 谱） |
+| 合计 | 1,746 |
+| 原生密封批次 | 50 |
 
-## 本地检查
+## 执行
 
-`selfcheck_summary.json` 给出汇总；`candidates/candidate_checks.json` 保留每条候选的历史最近邻及全部检查结果。250 个配方均完成严格闭合、原始与采用组成的独立重算、控制浓度和范围检查；105 族完整，32 个目标元素均至少有一个正值候选。在隔离的仓库目录结构中，从正式 `member_B` 路径两次执行复建；更新后的六份候选文件分别与两次输出字节一致，见 `rebuild_verification.json`。该验证使用与仓库封存文件 SHA-256 一致的输入副本，未将本地镜像误写为完整 Git 克隆。
-
-历史近邻现使用 A 封存的 3,800 条历史组成快照（SHA-256 `8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473`）；最小完整元素组成 L1 距离为 2.9356064665780197 质量百分点，未发现 L1≤0.5 的匹配。**这不是全局去重结论**：未记录或不可用的亲缘关系及尚未提交的 C/D 实际候选仍须 A 统一复核。
-
-## 文件与复建
-
-- `build_candidates.py`：从两份设计输入及 A 封存源码、历史快照构建 B 候选；缺失或哈希不符会报错，遇到已存在输出目录会拒绝覆盖。
-- `finalize_candidates.py`：生成自检汇总和 `candidate_manifest.json`，其中列出交接文件大小与 SHA-256。
-- `A_review_request.md`：交给 A 的具体复核事项及待冻结项。
-
-在协作仓库检出目录根部，使用具备 `numpy`、`scipy`、`xraylib` 的 Python 环境运行（本次验证：Python 3.13.14、numpy 2.4.6、scipy 1.17.1、xraylib 4.3.0）：
+冻结依据为已合并 PR #31 的 `owner_release_v3`，配方/族用途/profile/噪声种子/物理核心全部按 `freeze_v1`，未自选家族、未换种子、未加 jitter。
 
 ```powershell
-python -B datasets/round3/member_B/build_candidates.py --out "$env:TEMP/round3-b-candidates-rebuild-new"
+# 官方入口（本仓库根目录）
+powershell -NoProfile -File datasets/round3/shared/production_tools/run_member_full.ps1 -Member B -Python python
 ```
 
-实际隔离复建命令、环境、退出码、六文件哈希与缺失历史快照时退出码 1 的记录见 `rebuild_verification.json`。四份配方相关文件（`B_samples.json`、`family_registry.json`、`formula_registry.csv`、`coverage.json`）相对初版 PR 保持原 SHA-256；历史检查及输入身份因改用 A 的 3,800 条封存快照而更新。
+本机实际执行：`run_batch.py` 逐批调用（T 批次显式 `--heldout-qc`），每批独立 sealed/QC 目录，2–3 批并发以适配本机可用内存；批次顺序与 `batch_plan.json` 一致，已完成的冻结批次不重跑、不覆盖。
 
-正式 90 谱试片、1,500 基础谱和 T 留出谱尚未开始。A 需先确认全局候选闭包、用途/条件与噪声种子、profile、源码/依赖身份和真实命令；不得把本地候选自检写成训练谱验收或真实设备精度验证。
+- 冻结清单：`freeze_manifest_sha256 = 4931661432f0a1e0cd4526053499509f978f86f2d59a6b0acc404c3360b85817`
+- owner 放行：`owner_release_sha256 = 653bff0957d3f9d8a0a506934976aff06d36756777bb3a0095106ff302ca47b2`
+- 运行器：`runner_sha256 = ece61e9afaa264f716d0fa2f34d29b422b0c65f9214de186fda6982f650c38ca`
+- 物理核心：`physics_core_sha256 = e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0`
 
+## 自检范围与结果
+
+- audit：覆盖 1,746 条谱，全部 `passed`；
+- 完整物理 replay：覆盖 1,746 条谱，最大绝对数组差 `0.0`；
+- 窗外预算：50 批全部通过 `window_budget.json`；
+- 归档：每个原生 ZIP 的 SHA-256 与批内 `summary.json` 一致，CRC 校验通过；
+- 外置记录索引：`reports/external_record_index.csv`，1,746 行；`record_uid`（`batch_id:native_id`）全局唯一，`opaque_blind_id` 全部唯一。
+
+逐批证据在 `reports/<batch>/`，含 `audit.json`、`replay.json`、`window_budget.json`、`commands.json`（真实命令与退出码）、`summary.json`。
+
+## 环境
+
+- Python 3.14.7（CPython），Windows AMD64
+- numpy 2.5.1、scipy 1.18.1、xraylib 4.3.0
+- 生成器 0.2.1 / 物理核心 0.2.0
+
+## 目录
+
+```text
+production_v1/            50 个原生无损 ZIP + 各自 .sha256
+reports/<batch>/          逐批 audit / replay / window_budget / commands / summary
+reports/external_record_index.csv   覆盖全部 1,746 条谱的外置索引
+delivery_manifest.json    全部交付文件的大小与 SHA-256
+selfcheck_summary.json    实际检查范围与结果
+environment.json          解释器、依赖与冻结身份
+```
+
+## 边界与未决
+
+- T 谱只用于留出物理 QC，**未**用于训练、校正拟合、响应字典或选参；`training_inclusion_approved = false`。
+- 原生生成器 split 未当作研究划分；外部盲 ID 由隔离索引映射。用途统计：train 1014 条、validation 240 条、internal_holdout 492 条（其中 246 条为内部留出的基础谱，另 246 条为 T 挑战谱）。
+- 合成数据的自检通过**不代表**真实设备准确度；`scientific_accuracy_verified = false`、`concentration_accuracy_verified = false`。
+- 本交付不含展开后的谱目录，只含原生密封 ZIP 与其 QC 证据。
+- 已冻结候选、换算/补偿账目与输入身份保持在 `candidates/`、`inputs/`，未重写。
+
+## 批次表
+
+| batch | phase | profile | spectra | zip sha256（前 12 位） |
+| --- | --- | --- | ---: | --- |
+| R3_B_base_D1_001 | base | D1 | 40 | `25823a76de19` |
+| R3_B_base_D1_002 | base | D1 | 48 | `4b4cace73d29` |
+| R3_B_base_D1_003 | base | D1 | 38 | `40e15bce16a6` |
+| R3_B_base_D2_001 | base | D2 | 42 | `56d2c1f47a9d` |
+| R3_B_base_D2_002 | base | D2 | 48 | `664879c67262` |
+| R3_B_base_D2_003 | base | D2 | 34 | `01069a5ee8ba` |
+| R3_B_base_D3_001 | base | D3 | 42 | `a06da31ca1b3` |
+| R3_B_base_D3_002 | base | D3 | 48 | `b91a64a88fcb` |
+| R3_B_base_D3_003 | base | D3 | 50 | `f42e4e4259cb` |
+| R3_B_base_D3_004 | base | D3 | 10 | `4753141d7689` |
+| R3_B_base_D4_001 | base | D4 | 50 | `0444f28527fe` |
+| R3_B_base_D4_002 | base | D4 | 50 | `fe19a514c08c` |
+| R3_B_base_D4_003 | base | D4 | 14 | `dc666f6cb0df` |
+| R3_B_base_D5_001 | base | D5 | 46 | `6f02414201a2` |
+| R3_B_base_D5_002 | base | D5 | 48 | `a1d7f1d7aa93` |
+| R3_B_base_D5_003 | base | D5 | 50 | `d8f2e00b2d08` |
+| R3_B_base_D5_004 | base | D5 | 6 | `4e505b4e8327` |
+| R3_B_base_D6_001 | base | D6 | 48 | `b7f61cec7768` |
+| R3_B_base_D6_002 | base | D6 | 50 | `b4dfc5ba3324` |
+| R3_B_base_D6_003 | base | D6 | 14 | `c89e530a944c` |
+| R3_B_base_P1_001 | base | P1 | 40 | `c92df1d4e097` |
+| R3_B_base_P1_002 | base | P1 | 48 | `fb7074e333a2` |
+| R3_B_base_P1_003 | base | P1 | 48 | `bad5f435cff1` |
+| R3_B_base_P1_004 | base | P1 | 50 | `8701aa75b878` |
+| R3_B_base_P1_005 | base | P1 | 36 | `ffdca7d255cf` |
+| R3_B_base_P2_001 | base | P2 | 42 | `3ee2d53f46d6` |
+| R3_B_base_P2_002 | base | P2 | 48 | `76d56abe68c8` |
+| R3_B_base_P2_003 | base | P2 | 48 | `0bead240b312` |
+| R3_B_base_P2_004 | base | P2 | 50 | `212a7ef63a73` |
+| R3_B_base_P2_005 | base | P2 | 18 | `796073643988` |
+| R3_B_base_P3_001 | base | P3 | 40 | `59ce984d0312` |
+| R3_B_base_P3_002 | base | P3 | 48 | `647079df5e60` |
+| R3_B_base_P3_003 | base | P3 | 48 | `77cd684b4465` |
+| R3_B_base_P3_004 | base | P3 | 50 | `53b9e8a6fa9f` |
+| R3_B_base_P3_005 | base | P3 | 20 | `f2c0300f7cc2` |
+| R3_B_challenge_T1_001 | challenge | T1 | 50 | `0cf270152bbe` |
+| R3_B_challenge_T1_002 | challenge | T1 | 32 | `ee62ac4e09c7` |
+| R3_B_challenge_T2_001 | challenge | T2 | 50 | `a244913310b8` |
+| R3_B_challenge_T2_002 | challenge | T2 | 32 | `5b6056a32aeb` |
+| R3_B_challenge_T3_001 | challenge | T3 | 50 | `02d3140d8986` |
+| R3_B_challenge_T3_002 | challenge | T3 | 32 | `4a1e7272bc4f` |
+| R3_B_pilot_D1_001 | pilot | D1 | 10 | `7e6ab03f93d8` |
+| R3_B_pilot_D2_001 | pilot | D2 | 4 | `6a2a1d5019c8` |
+| R3_B_pilot_D3_001 | pilot | D3 | 22 | `103b99728acb` |
+| R3_B_pilot_D4_001 | pilot | D4 | 4 | `b29e5fb60f35` |
+| R3_B_pilot_D5_001 | pilot | D5 | 14 | `5002fe45ca36` |
+| R3_B_pilot_D6_001 | pilot | D6 | 6 | `9ff9e0855818` |
+| R3_B_pilot_P1_001 | pilot | P1 | 14 | `845aa51e5776` |
+| R3_B_pilot_P2_001 | pilot | P2 | 6 | `1e4f0c6baf90` |
+| R3_B_pilot_P3_001 | pilot | P3 | 10 | `b6c81865210e` |

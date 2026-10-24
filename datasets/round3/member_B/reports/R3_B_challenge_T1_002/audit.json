@@ -1,0 +1,208 @@
+{
+  "status": "passed",
+  "check_type": "bundle_integrity_and_synthetic_flow",
+  "spectra_checked": 32,
+  "family_count": 16,
+  "target_coverage": {
+    "Na": {
+      "positive": 20,
+      "zero": 12,
+      "min_percent": 0.0,
+      "max_percent": 3.4807948281365517
+    },
+    "Mg": {
+      "positive": 32,
+      "zero": 0,
+      "min_percent": 0.2644550001354916,
+      "max_percent": 5.916656049451845
+    },
+    "Al": {
+      "positive": 32,
+      "zero": 0,
+      "min_percent": 3.2475755838686093,
+      "max_percent": 13.111805719513244
+    },
+    "Si": {
+      "positive": 32,
+      "zero": 0,
+      "min_percent": 5.056262007370462,
+      "max_percent": 30.449197643980213
+    },
+    "P": {
+      "positive": 32,
+      "zero": 0,
+      "min_percent": 0.16152132605236597,
+      "max_percent": 0.3932419322057028
+    },
+    "S": {
+      "positive": 32,
+      "zero": 0,
+      "min_percent": 0.17612694208041238,
+      "max_percent": 0.5515422614170962
+    },
+    "Cl": {
+      "positive": 20,
+      "zero": 12,
+      "min_percent": 0.0,
+      "max_percent": 0.5282619942358108
+    },
+    "K": {
+      "positive": 32,
+      "zero": 0,
+      "min_percent": 0.6166349211027098,
+      "max_percent": 3.29324979981999
+    },
+    "Ca": {
+      "positive": 32,
+      "zero": 0,
+      "min_percent": 0.9339319951634024,
+      "max_percent": 9.232101276667219
+    },
+    "Ti": {
+      "positive": 32,
+      "zero": 0,
+      "min_percent": 0.09441258184106664,
+      "max_percent": 2.3215198952363334
+    },
+    "V": {
+      "positive": 32,
+      "zero": 0,
+      "min_percent": 0.00014047132128987175,
+      "max_percent": 0.13345810306109837
+    },
+    "Cr": {
+      "positive": 26,
+      "zero": 6,
+      "min_percent": 0.0,
+      "max_percent": 0.09143018614417454
+    },
+    "Mn": {
+      "positive": 32,
+      "zero": 0,
+      "min_percent": 0.041021345300167426,
+      "max_percent": 2.959798053523006
+    },
+    "Fe": {
+      "positive": 32,
+      "zero": 0,
+      "min_percent": 5.290466788434854,
+      "max_percent": 40.98548563556698
+    },
+    "Co": {
+      "positive": 18,
+      "zero": 14,
+      "min_percent": 0.0,
+      "max_percent": 0.014762048986793843
+    },
+    "Ni": {
+      "positive": 32,
+      "zero": 0,
+      "min_percent": 0.00013822261989405923,
+      "max_percent": 0.09118278356979304
+    },
+    "Cu": {
+      "positive": 26,
+      "zero": 6,
+      "min_percent": 0.0,
+      "max_percent": 0.04176626794050846
+    },
+    "Zn": {
+      "positive": 18,
+      "zero": 14,
+      "min_percent": 0.0,
+      "max_percent": 0.18117181832771062
+    },
+    "As": {
+      "positive": 26,
+      "zero": 6,
+      "min_percent": 0.0,
+      "max_percent": 0.07872601743860208
+    },
+    "Se": {
+      "positive": 24,
+      "zero": 8,
+      "min_percent": 0.0,
+      "max_percent": 0.03540488824271217
+    },
+    "Rb": {
+      "positive": 12,
+      "zero": 20,
+      "min_percent": 0.0,
+      "max_percent": 0.012018534794218624
+    },
+    "Sr": {
+      "positive": 22,
+      "zero": 10,
+      "min_percent": 0.0,
+      "max_percent": 0.28938064263132723
+    },
+    "Y": {
+      "positive": 22,
+      "zero": 10,
+      "min_percent": 0.0,
+      "max_percent": 0.04698478516842341
+    },
+    "Zr": {
+      "positive": 26,
+      "zero": 6,
+      "min_percent": 0.0,
+      "max_percent": 0.1538070887970422
+    },
+    "Nb": {
+      "positive": 26,
+      "zero": 6,
+      "min_percent": 0.0,
+      "max_percent": 0.04416318957190075
+    },
+    "Mo": {
+      "positive": 20,
+      "zero": 12,
+      "min_percent": 0.0,
+      "max_percent": 0.14589100513515293
+    },
+    "Cd": {
+      "positive": 22,
+      "zero": 10,
+      "min_percent": 0.0,
+      "max_percent": 0.018833310959092943
+    },
+    "Sn": {
+      "positive": 22,
+      "zero": 10,
+      "min_percent": 0.0,
+      "max_percent": 0.04479077410707498
+    },
+    "Sb": {
+      "positive": 16,
+      "zero": 16,
+      "min_percent": 0.0,
+      "max_percent": 0.06517112378067351
+    },
+    "Ba": {
+      "positive": 26,
+      "zero": 6,
+      "min_percent": 0.0,
+      "max_percent": 0.16610021767671784
+    },
+    "W": {
+      "positive": 28,
+      "zero": 4,
+      "min_percent": 0.0,
+      "max_percent": 0.0577566703494197
+    },
+    "Pb": {
+      "positive": 26,
+      "zero": 6,
+      "min_percent": 0.0,
+      "max_percent": 0.17066556794429324
+    }
+  },
+  "errors": [],
+  "tolerances": {
+    "rtol": 1e-12,
+    "atol_counts": 1e-08
+  },
+  "complete_physics_recalculation": false,
+  "physical_calibration_verified": false,
+  "concentration_accuracy_verified": false
+}

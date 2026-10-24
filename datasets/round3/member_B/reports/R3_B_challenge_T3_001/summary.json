@@ -1,0 +1,17 @@
+{
+  "status": "passed_batch_QC",
+  "batch_id": "R3_B_challenge_T3_001",
+  "spectra": 50,
+  "generate_seconds": 98.97588589999941,
+  "all_actions_seconds": 210.48219929999323,
+  "archive_bytes": 11705048,
+  "archive_sha256": "02d3140d8986c7382826d91d3661a855fbd2accf036f03440ede2582e2910226",
+  "zip_crc_checked": true,
+  "audit": "passed",
+  "replay": "all_records_passed",
+  "freeze_manifest_sha256": "4931661432f0a1e0cd4526053499509f978f86f2d59a6b0acc404c3360b85817",
+  "native_split_ignored_for_research_usage": true,
+  "external_blind_ids": "record_plan opaque IDs; export with these names only",
+  "training_inclusion_approved": false,
+  "scientific_accuracy_verified": false
+}

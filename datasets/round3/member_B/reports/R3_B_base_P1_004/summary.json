@@ -1,0 +1,17 @@
+{
+  "status": "passed_batch_QC",
+  "batch_id": "R3_B_base_P1_004",
+  "spectra": 50,
+  "generate_seconds": 115.99360620000516,
+  "all_actions_seconds": 244.33035460000247,
+  "archive_bytes": 11719755,
+  "archive_sha256": "8701aa75b87820d48b5e906fe54afc73cef9fdf98e941b94c35c0ef9df824e59",
+  "zip_crc_checked": true,
+  "audit": "passed",
+  "replay": "all_records_passed",
+  "freeze_manifest_sha256": "4931661432f0a1e0cd4526053499509f978f86f2d59a6b0acc404c3360b85817",
+  "native_split_ignored_for_research_usage": true,
+  "external_blind_ids": "record_plan opaque IDs; export with these names only",
+  "training_inclusion_approved": false,
+  "scientific_accuracy_verified": false
+}

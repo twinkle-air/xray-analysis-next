@@ -1,0 +1,20 @@
+{
+  "python": "3.14.7",
+  "implementation": "CPython",
+  "system": "Windows",
+  "machine": "AMD64",
+  "packages": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.1",
+    "xraylib": "4.3.0"
+  },
+  "freeze_manifest_sha256": "4931661432f0a1e0cd4526053499509f978f86f2d59a6b0acc404c3360b85817",
+  "owner_release_sha256": "653bff0957d3f9d8a0a506934976aff06d36756777bb3a0095106ff302ca47b2",
+  "runner_sha256": "ece61e9afaa264f716d0fa2f34d29b422b0c65f9214de186fda6982f650c38ca",
+  "generator_version": "0.2.1",
+  "physics_core_version": "0.2.0",
+  "physics_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+  "command": "powershell -NoProfile -File datasets/round3/shared/production_tools/run_member_full.ps1 -Member B -Python python",
+  "note": "Batches executed through run_batch.py with --heldout-qc for T profiles; 2-3 concurrent batches per run, capped by available memory on this host.",
+  "generated_at": "2026-10-24T20:26:54+0800"
+}
