@@ -1,0 +1,2 @@
+{"batch_id": "R3_B_base_D1_001", "state": "incomplete", "problems": ["window budget row S000001 is not passed", "window budget row S000001 lost_fraction 0.99 outside 0..0.5"]}
+exit=3

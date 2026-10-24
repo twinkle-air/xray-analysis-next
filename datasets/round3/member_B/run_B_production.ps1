@@ -55,7 +55,7 @@ function Get-BatchState([string]$batchId) {
   # Redirect every stream to a file: under $ErrorActionPreference = 'Stop' a harmless warning on
   # stderr becomes a terminating NativeCommandError and would abort the classification loop.
   $stateFile = Join-Path ([System.IO.Path]::GetTempPath()) ('batch-state-' + [guid]::NewGuid().ToString('N') + '.json')
-  & $Python -X utf8 -B $verifyScript --batch $batchId --plan $planPath --sealed $sealed --qc $qc *> $stateFile
+  & $Python -X utf8 -B $verifyScript --batch $batchId --plan $planPath --freeze $freeze --sealed $sealed --qc $qc *> $stateFile
   $code = $LASTEXITCODE
   $line = ''
   try { $line = (Get-Content -LiteralPath $stateFile -ErrorAction Stop | Select-Object -Last 1) } catch { }

@@ -47,8 +47,7 @@ def log(msg: str) -> None:
 
 def state_of(batch: dict) -> dict:
     batch_id = batch['batch_id']
-    return inspect_batch(batch_id, int(batch['spectra']),
-                         OUT / 'sealed' / batch_id, OUT / 'qc' / batch_id)
+    return inspect_batch(batch, FREEZE, OUT / 'sealed' / batch_id, OUT / 'qc' / batch_id)
 
 
 def run_batch(batch: dict, runner: pathlib.Path) -> dict:

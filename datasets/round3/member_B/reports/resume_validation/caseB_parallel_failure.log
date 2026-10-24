@@ -1,4 +1,4 @@
-[21:50:51] plan: total=50 complete=0 pending=50 incomplete=0 workers=1
-[21:50:51] FAIL R3_B_base_D1_001 spectra=40 0.0s :: stub runner: simulated batch failure
-[21:50:51] end: run=1 failed=1 wall_min=0.0
+[22:02:30] plan: total=50 complete=0 pending=50 incomplete=0 workers=1
+[22:02:30] FAIL R3_B_base_D1_001 spectra=40 0.0s :: stub runner: simulated batch failure
+[22:02:30] end: run=1 failed=1 wall_min=0.0
 caseB_parallel_exit=1

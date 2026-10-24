@@ -1,0 +1,2 @@
+{"batch_id": "R3_B_base_D1_001", "state": "incomplete", "problems": ["summary freeze_manifest_sha256 differs from the frozen manifest"]}
+exit=3

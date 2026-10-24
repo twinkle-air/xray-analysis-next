@@ -1,12 +1,13 @@
 {
-    "generated_at":  "2026-10-24T21:51:08+08:00",
+    "generated_at":  "2026-10-24T22:02:49+08:00",
     "all_expected":  true,
     "delivery_untouched":  true,
-    "isolation":  "drivers copied to a temporary harness directory; synthetic roots live under that harness",
+    "isolation":  "drivers copied to a temporary harness directory; negative cases mutate a copied batch, never the delivery",
     "real_tree":  "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part-20261024_work\\repo\\work\\round3\\member_B_production_v1",
-    "synthetic_root_failure":  "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\dsh-tasfws\\b-resume-harness-a30987dc\\root-fail",
-    "synthetic_root_incomplete":  "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\dsh-tasfws\\b-resume-harness-a30987dc\\root-incomplete",
-    "note":  "Cases B and C use a stub runner and a fabricated sealed directory to exercise driver control flow; they are not produced spectra.",
+    "synthetic_root_failure":  "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\dsh-tasfws\\b-resume-harness-360e52de\\root-fail",
+    "synthetic_root_incomplete":  "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\dsh-tasfws\\b-resume-harness-360e52de\\root-incomplete",
+    "synthetic_negative_root":  "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\dsh-tasfws\\b-resume-harness-360e52de\\root-negative",
+    "note":  "Cases B/C/N* use a stub runner, a fabricated sealed directory or a mutated copy of real QC; they exercise control flow and the verifier, and are not produced spectra.",
     "cases":  [
                   {
                       "case":  "A_complete_parallel_verify",
@@ -35,6 +36,46 @@
                   },
                   {
                       "case":  "C_incomplete_sealed_ps1",
+                      "exit":  3,
+                      "expected":  3
+                  },
+                  {
+                      "case":  "N0_control_complete",
+                      "exit":  0,
+                      "expected":  0
+                  },
+                  {
+                      "case":  "N1_summary_batch_id",
+                      "exit":  3,
+                      "expected":  3
+                  },
+                  {
+                      "case":  "N2_summary_freeze_sha",
+                      "exit":  3,
+                      "expected":  3
+                  },
+                  {
+                      "case":  "N3_index_batch_id",
+                      "exit":  3,
+                      "expected":  3
+                  },
+                  {
+                      "case":  "N4_window_row_fails",
+                      "exit":  3,
+                      "expected":  3
+                  },
+                  {
+                      "case":  "N5_missing_replay_action",
+                      "exit":  3,
+                      "expected":  3
+                  },
+                  {
+                      "case":  "N6_index_recipe_mismatch",
+                      "exit":  3,
+                      "expected":  3
+                  },
+                  {
+                      "case":  "N7_command_uses_limit",
                       "exit":  3,
                       "expected":  3
                   }

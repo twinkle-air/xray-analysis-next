@@ -357,7 +357,7 @@ powershell -NoProfile -File datasets/round3/member_B/run_B_production.ps1 -Membe
 - 窗外预算：{summary['native_sealed_batches']} 批全部通过 `window_budget.json`；
 - 归档：每个原生 ZIP 的 SHA-256 与批内 `summary.json` 一致，CRC 校验通过；
 - 外置记录索引：`reports/external_record_index.csv`，{index_rows:,} 行；`record_uid`（`batch_id:native_id`）全局唯一，`opaque_blind_id` 全部唯一。
-- 续跑判定：`verify_batch_qc.py` 只在 summary、audit、完整 replay、窗口预算、谱数、归档 SHA-256 与 CRC、外置记录索引全部通过时才把批次当作完成；缺项的 sealed 目录会让驱动脚本以非零退出并保留证据。成功、失败、不完整 sealed 三类路径的复现记录见 `reports/resume_validation/resume_validation_summary.json`。
+- 续跑判定：`verify_batch_qc.py` 把完成度绑定到冻结批次——summary 必须指向本批次与本冻结清单，外置索引每行必须复现冻结的配方 / profile / 用途 / repeat / noise seed，窗口预算逐行必须通过且不超过该 profile 的冻结上限，audit / replay / pack 三个必需动作必须存在、退出码 0 且不带 `--limit`，replay 必须为 `all_records` 且无错误；另校验谱数、归档 SHA-256 / 大小 / sidecar / CRC。任一不符即 `incomplete`，驱动以非零退出并保留证据。三类续跑路径（成功、失败、不完整 sealed）与 7 个身份 / 证据负例（改批次号、冻结哈希、索引批次号、索引配方、单行预算、缺 replay 动作、命令带 `--limit`）的复现记录见 `reports/resume_validation/resume_validation_summary.json`。
 
 逐批证据在 `reports/<batch>/`，含 `audit.json`、`replay.json`、`window_budget.json`、`commands.json`（真实命令与退出码）、`summary.json`。
 
