@@ -45,6 +45,7 @@
   "wall_seconds_estimate": 2640,
   "batch_seconds_sum": 24088.2,
   "action_seconds_sum": {
+    "generate": 12119.6,
     "audit": 282.2,
     "replay": 11210.3,
     "pack": 376.6
@@ -2281,5 +2282,6 @@
       "reason": "sequential run stopped to switch to 10-way parallel execution; partial R3_C_base_D1_001 preserved at work/round3/member_C_production_v1_failed_attempt2_partial"
     }
   ],
-  "no_failed_spectra_in_delivery": true
+  "no_failed_spectra_in_delivery": true,
+  "driver_failure_behavior": "stop scheduling new batches after the first failure, drain running ones, record not_started, always write parallel_run.json; fault-injection self-test in reports/script_selftest.json"
 }

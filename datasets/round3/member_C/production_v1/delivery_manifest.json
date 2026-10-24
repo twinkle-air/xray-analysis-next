@@ -505,8 +505,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4528,
-      "sha256": "33e294dc5be249f55d4471095ceef1e4808eff2c20212084b39b465ffc0c3c95"
+      "bytes": 4931,
+      "sha256": "1a117e87d5581c7d7e634808ecfb12103569edc02612acdbafaefbcf5dbafeb0"
     },
     {
       "path": "reports/C_all_batch_QC.zip",
@@ -515,18 +515,23 @@
     },
     {
       "path": "reports/commands_and_environment.json",
-      "bytes": 74921,
-      "sha256": "d45e4afb6c71528c56e3e8b2d87c2c4ca8b93117f871eb312b3720ebfe85f843"
+      "bytes": 75163,
+      "sha256": "96641d55409b47623ac7563b53ef97e4cfde26b37aa211eb0a66683ea6c9dc72"
     },
     {
       "path": "reports/run_parallel.py",
-      "bytes": 3289,
-      "sha256": "60f022a1dc35319407e98911e96a39bee8c58460f7c350fc7d5798c74db3b2f2"
+      "bytes": 5534,
+      "sha256": "6fd77a12e22d9f4bd81542e457f18cea3472c0cf72e9969348867ce52ed5fb22"
+    },
+    {
+      "path": "reports/script_selftest.json",
+      "bytes": 368,
+      "sha256": "4c811918232567ef8b6bc79d4b3b6d722a46cd38baa0dbc1be9b087cd662c676"
     },
     {
       "path": "selfcheck_summary.json",
-      "bytes": 1297,
-      "sha256": "0d3f62513e5a9d39e08144af357898fd1c4d00bb4580067b176f5f817ce240fa"
+      "bytes": 1502,
+      "sha256": "013b67f9793e9071f0a081babbb670fe3bc265aee1193d6cbfb9cdcef4b84552"
     },
     {
       "path": "verification.json",
@@ -534,6 +539,6 @@
       "sha256": "86f172ae2236d6d6ee9a701c3d233debc1ee7eabf2436a20129ecfd85b0fa994"
     }
   ],
-  "count": 106,
-  "bytes": 413596647
+  "count": 107,
+  "bytes": 413600110
 }

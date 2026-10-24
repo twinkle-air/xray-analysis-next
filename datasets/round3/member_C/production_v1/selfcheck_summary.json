@@ -20,23 +20,26 @@
     "physics_core_unchanged": true,
     "family_profile_usage_consistent": true,
     "T_challenge_only_in_heldout_QC": true,
-    "delivery_manifest_self_excluded": true
+    "delivery_manifest_self_excluded": true,
+    "driver_fault_injection_passed": true
   },
   "artifacts": {
     "archive_bytes": 398833953,
     "qc_archive_bytes": 488106,
     "blind_archive_bytes": 13315678,
-    "delivery_bytes_before_manifest": 413615144
+    "delivery_bytes_before_manifest": 413618761
   },
   "timing": {
     "batch_seconds_sum": 24088.2,
     "workers": 10,
     "wall_seconds_approx": 2640,
     "actions_seconds": {
+      "generate": 12119.6,
       "audit": 282.2,
       "replay": 11210.3,
       "pack": 376.6
-    }
+    },
+    "actions_seconds_note": "generate + audit + replay + pack from per-batch QC records; batch wall sum includes process overhead"
   },
   "not_verified": [
     "real-device accuracy",

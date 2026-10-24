@@ -24,7 +24,7 @@
 - `actual_record_index.csv`：1,686 行外置记录索引，`global_record_id = batch_id/native_id`；含配方/族/用途/profile/repeat/noise_seed、blind/full 哈希、归档路径与哈希；`eligible_for_training=false`。
 - `archive_index.json`：每批 SHA-256、字节数、谱数、audit/replay 成员路径。
 - `reports/C_all_batch_QC.zip`：48 批的 `audit.json`、`replay.json`、`window_budget.json`、`commands.json`、`summary.json`、`external_record_index.csv`、stdout/stderr 日志、`parallel_run.json`。
-- `reports/commands_and_environment.json`：48 批真实 argv、退出码、每批耗时、依赖/环境、冻结身份。
+- `reports/commands_and_environment.json`：48 批真实 argv、退出码、每批耗时、依赖/环境、冻结身份；`reports/script_selftest.json` 为并发驱动的故障注入自测记录。
 - `verification.json` / `selfcheck_summary.json` / `delivery_manifest.json`。
 
 ## 执行
@@ -35,11 +35,11 @@
 powershell -NoProfile -File datasets/round3/shared/production_tools/run_member_full.ps1 -Member C -Python <venv>/Scripts/python.exe
 ```
 
-实际执行使用同一份冻结命令清单 `shared/handoffs/20261024/member_C_full_commands.json` 的 48 条 argv，仅替换解释器路径与输出根目录，并以 10 个并发批次运行（驱动脚本随交付保存为 `reports/run_parallel.py`）。每批仍独立执行生成 → 窗口预算 → audit → replay → pack；未修改物理核心、未传 `--limit`、未放宽预算、未删除难谱。
+实际执行使用同一份冻结命令清单 `shared/handoffs/20261024/member_C_full_commands.json` 的 48 条 argv，仅替换解释器路径与输出根目录，并以 10 个并发批次运行（驱动脚本随交付保存为 `reports/run_parallel.py`）。每批仍独立执行生成 → 窗口预算 → audit → replay → pack；未修改物理核心、未传 `--limit`、未放宽预算、未删除难谱。驱动脚本在任一批失败后立即停止调度新批次、等待在跑批次结束、把未开始批次记为 `not_started`，并**始终写出汇总** `parallel_run.json`；该故障路径已用故障注入自测（`reports/script_selftest.json`，1 失败 + 1 通过 + 4 未开始，退出码 0，约 0.03 s 完成）。
 
 环境：Python 3.12.14（项目本地 venv），numpy 2.4.6、scipy 1.17.1、xraylib 4.3.0、matplotlib 3.11.2、openpyxl 3.1.5，与 `requirements-lock.txt` 一致。
 
-耗时：48 批动作累计 6.69 小时（生成 0.00 h、replay 3.11 h、audit 4.7 min、pack 6.3 min）；10 并发墙钟约 44 分钟（15:12–15:56，本机 16 逻辑核）。
+耗时：48 批动作累计 6.66 小时（生成 3.37 h、replay 3.11 h、audit 4.7 min、pack 6.3 min）；10 并发墙钟约 44 分钟（15:12–15:56，本机 16 逻辑核）。
 
 ## 核验结果
 
