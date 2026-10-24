@@ -1,3 +1,5 @@
+> **D后续复核（2026-10-24）**：[PR #34](https://github.com/twinkle-air/xray-analysis-next/pull/34) 修复提交0935bd9已批准合并。成功日志与QC ZIP原件一致，两层manifest全部通过；50个ZIP及原核验数据未改变。D完成1716谱交付；B仍待其原PR修复。详细证据见 [D增量复核](D_PR34_rereview.json)。下文保留首轮Request changes的历史记录。
+
 # 第三轮B/D全量交付审查（2026-10-24）
 
 结论：两份PR均Request changes，暂不合并。修复交付/辅助脚本后复审，不要求重生成谱。

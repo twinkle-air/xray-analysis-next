@@ -1,14 +1,16 @@
 # 第三轮成员D任务清单
 
-## 当前优先任务：修复PR复核项（2026-10-24）
+## 当前状态：全量交付复核通过，已合并
 
-[PR #34](https://github.com/twinkle-air/xray-analysis-next/pull/34) 已完成负责人四项数据/证据复核，当前 **Request changes，暂不合并**。[完整复核意见](https://github.com/twinkle-air/xray-analysis-next/pull/34#pullrequestreview-5638394197)。成员已声明全量生产完成，下一步是修复交付/辅助脚本，不是重新领取生产任务。
+2026-10-24，[PR #34](https://github.com/twinkle-air/xray-analysis-next/pull/34) 的修复提交 `0935bd960c14733a00f3303562f3d215a3bc51a8` 已[批准](https://github.com/twinkle-air/xray-analysis-next/pull/34#pullrequestreview-5638442251)并合并，合并提交 `2b8450c3226d302aaff5cf264616600e225d18fc`。
 
-1. 从已提交 `production_v1/reports/D_all_batch_QC.zip` 恢复 `failed_attempts/R3_D_base_D5_001/successful_rerun.log` 原字节，放到 `production_v1/reports/failed_attempts/R3_D_base_D5_001/successful_rerun.log`。
-2. 核对1054字节、SHA-256 `3d78ed6302a217e7954866a4ef0c74f432afc3fe6ad73cc3a84dcac3f2ce1f97`；确保被*.log忽略的文件也实际纳入Git（必要时git add -f）。
-3. 完整验证成员根目录及production_v1两层manifest；在原PR #34追加修复提交，再请求复审。48批、1716谱及实际成功重跑证据已核验，不需要重新生产或重跑物理计算。
+- D任务完成：250配方/105设计族、1500基础谱+216T谱=1716谱，48原生批次；9个原试片批次/90谱已计入基础1500条。
+- 缺失的成功重跑日志已补交，与QC ZIP原件完全一致；根清单140文件、production清单113文件，全部路径/大小/SHA匹配。
+- 原50个ZIP及数据、自检、冻结身份和分组未变，沿用上一轮实际四项核验，不重生成或重复物理回放。
+- D现在无需重跑或补交数据，保留本地可恢复归档与证据；等待B/C修复并统一复核后，再领取下一项任务。
+- 训练入库仍未批准，T只作留出物理QC；不得提前用T训练、字典、校正或选参。
 
-下方生产命令保留用于溯源和必要的缺失批次恢复，**不要因任务清单仍含生产步骤而重跑已通过的数据**。训练入库仍未批准。
+下方生产说明只用于溯源和必要恢复，不构成要求D重复生产。
 
 更新日期：2026-10-24。当前执行依据为已合并 PR #31 的 [owner_release_v3](../shared/releases/owner_release_v3.json)。公共输入与全局分配已冻结，**现在直接完成本人全量生产、自检和上传，提交完整 PR 后由 owner 统一审查**。不再先交90谱试片等待放行。生产已授权不代表你的数据已验收通过。
 
