@@ -1,0 +1,42 @@
+{
+    "generated_at":  "2026-10-24T21:51:08+08:00",
+    "all_expected":  true,
+    "delivery_untouched":  true,
+    "isolation":  "drivers copied to a temporary harness directory; synthetic roots live under that harness",
+    "real_tree":  "C:\\Users\\Lenovo\\Desktop\\兴智杯AI开发大赛\\datasets\\B-part-20261024_work\\repo\\work\\round3\\member_B_production_v1",
+    "synthetic_root_failure":  "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\dsh-tasfws\\b-resume-harness-a30987dc\\root-fail",
+    "synthetic_root_incomplete":  "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\dsh-tasfws\\b-resume-harness-a30987dc\\root-incomplete",
+    "note":  "Cases B and C use a stub runner and a fabricated sealed directory to exercise driver control flow; they are not produced spectra.",
+    "cases":  [
+                  {
+                      "case":  "A_complete_parallel_verify",
+                      "exit":  0,
+                      "expected":  0
+                  },
+                  {
+                      "case":  "A_complete_ps1_verify",
+                      "exit":  0,
+                      "expected":  0
+                  },
+                  {
+                      "case":  "B_failure_parallel",
+                      "exit":  1,
+                      "expected":  1
+                  },
+                  {
+                      "case":  "B_failure_ps1",
+                      "exit":  1,
+                      "expected":  1
+                  },
+                  {
+                      "case":  "C_incomplete_sealed_parallel",
+                      "exit":  3,
+                      "expected":  3
+                  },
+                  {
+                      "case":  "C_incomplete_sealed_ps1",
+                      "exit":  3,
+                      "expected":  3
+                  }
+              ]
+}

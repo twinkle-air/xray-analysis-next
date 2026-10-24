@@ -41,7 +41,7 @@
   "native_archive_bytes": 432279718,
   "unresolved_errors": null,
   "missing_items": null,
-  "full_delivery": "production_v1/README.md",
+  "full_delivery": "README.md",
   "batches": [
     {
       "batch_id": "R3_B_base_D1_001",

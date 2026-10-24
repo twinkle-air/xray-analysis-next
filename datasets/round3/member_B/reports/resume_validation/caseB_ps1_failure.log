@@ -1,0 +1,16 @@
+[21:50:59] plan: total=50 complete=0 pending=50 incomplete=0
+stub runner: simulated batch failure
+[21:50:59] FAILED R3_B_base_D1_001 code=23; keeping its sealed output and logs
+powershell.exe : Member B: 1 batch failure(s); sealed output and logs were kept
+At C:\Users\Lenovo\Desktop\兴智杯AI开发大赛\datasets\B-part-20261024\validate_resume_paths.ps1:76 char:8
++ $psB = & powershell -NoProfile -ExecutionPolicy Bypass -File $ps1 -Me ...
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Member B: 1 bat... logs were kept:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+At C:\Users\Lenovo\AppData\Local\Temp\dsh-tasfws\b-resume-harness-a30987dc\run_B_production.ps1:141 char:3
++   throw ('Member ' + $Member + ': ' + $failed + ' batch failure(s); s ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Member B: 1 bat... logs were kept:String) [], RuntimeException
+    + FullyQualifiedErrorId : Member B: 1 batch failure(s); sealed output and logs were kept
+caseB_ps1_exit=1

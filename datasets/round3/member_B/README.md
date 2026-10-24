@@ -18,8 +18,11 @@
 冻结依据为已合并 PR #31 的 `owner_release_v3`，配方/族用途/profile/噪声种子/物理核心全部按 `freeze_v1`，未自选家族、未换种子、未加 jitter。
 
 ```powershell
-# 官方入口（本仓库根目录）
+# 干净工作树上的官方全量入口（不做续跑判定，已完成的批次会因目录存在而失败）
 powershell -NoProfile -File datasets/round3/shared/production_tools/run_member_full.ps1 -Member B -Python python
+
+# 本次交付实际使用的驱动：跳过前校验完整 QC，失败以非零退出；-VerifyOnly 只判定不生成
+powershell -NoProfile -File datasets/round3/member_B/run_B_production.ps1 -Member B -Python python
 ```
 
 本机实际执行：`run_batch.py` 逐批调用（T 批次显式 `--heldout-qc`），每批独立 sealed/QC 目录，2–3 批并发以适配本机可用内存；批次顺序与 `batch_plan.json` 一致，已完成的冻结批次不重跑、不覆盖。
@@ -36,6 +39,7 @@ powershell -NoProfile -File datasets/round3/shared/production_tools/run_member_f
 - 窗外预算：50 批全部通过 `window_budget.json`；
 - 归档：每个原生 ZIP 的 SHA-256 与批内 `summary.json` 一致，CRC 校验通过；
 - 外置记录索引：`reports/external_record_index.csv`，1,746 行；`record_uid`（`batch_id:native_id`）全局唯一，`opaque_blind_id` 全部唯一。
+- 续跑判定：`verify_batch_qc.py` 只在 summary、audit、完整 replay、窗口预算、谱数、归档 SHA-256 与 CRC、外置记录索引全部通过时才把批次当作完成；缺项的 sealed 目录会让驱动脚本以非零退出并保留证据。成功、失败、不完整 sealed 三类路径的复现记录见 `reports/resume_validation/resume_validation_summary.json`。
 
 逐批证据在 `reports/<batch>/`，含 `audit.json`、`replay.json`、`window_budget.json`、`commands.json`（真实命令与退出码）、`summary.json`。
 
@@ -51,6 +55,8 @@ powershell -NoProfile -File datasets/round3/shared/production_tools/run_member_f
 production_v1/            50 个原生无损 ZIP + 各自 .sha256
 reports/<batch>/          逐批 audit / replay / window_budget / commands / summary
 reports/external_record_index.csv   覆盖全部 1,746 条谱的外置索引
+reports/resume_validation/           成功 / 失败 / 不完整 sealed 三类续跑验证证据
+verify_batch_qc.py        批次完成度判定（续跑跳过与失败停止共用）
 delivery_manifest.json    全部交付文件的大小与 SHA-256
 selfcheck_summary.json    实际检查范围与结果
 environment.json          解释器、依赖与冻结身份

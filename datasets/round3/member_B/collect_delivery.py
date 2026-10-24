@@ -183,7 +183,8 @@ def main() -> None:
         'generator_version': '0.2.1',
         'physics_core_version': '0.2.0',
         'physics_core_sha256': read_json(FREEZE / 'input_identity.json')['physics_core_sha256'],
-        'command': 'powershell -NoProfile -File datasets/round3/shared/production_tools/run_member_full.ps1 -Member B -Python python',
+        'command': 'powershell -NoProfile -File datasets/round3/member_B/run_B_production.ps1 -Member B -Python python',
+        'shared_entry': 'datasets/round3/shared/production_tools/run_member_full.ps1 (no QC-gated resume)',
         'note': 'Batches executed through run_batch.py with --heldout-qc for T profiles; 2-3 concurrent batches per run, capped by available memory on this host.',
         'generated_at': time.strftime('%Y-%m-%dT%H:%M:%S%z'),
     }
@@ -229,11 +230,15 @@ def main() -> None:
         'native_archive_bytes': archive_bytes,
         'unresolved_errors': None,
         'missing_items': None,
-        'full_delivery': 'production_v1/README.md',
+        'full_delivery': 'README.md',
         'batches': rows,
     }
     (DELIVERY / 'selfcheck_summary.json').write_text(
         json.dumps(summary, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+    # Generate the README before snapshotting the manifest: the manifest hashes what is on
+    # disk, so writing README afterwards recorded the previous run's size and SHA-256.
+    write_readme(summary, env, index_path, len(record_rows))
 
     files = []
     for path in sorted(DELIVERY.rglob('*')):
@@ -266,7 +271,6 @@ def main() -> None:
     (DELIVERY / 'delivery_manifest.json').write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-    write_readme(summary, env, index_path, len(record_rows))
     print(json.dumps({k: summary[k] for k in (
         'total_actual_spectra', 'actual_base_spectra', 'actual_T_spectra',
         'native_sealed_batches', 'all_spectra_audited', 'all_spectra_full_physics_replayed',
@@ -332,8 +336,11 @@ def write_readme(summary: dict, env: dict, index_path: Path, index_rows: int) ->
 冻结依据为已合并 PR #31 的 `owner_release_v3`，配方/族用途/profile/噪声种子/物理核心全部按 `freeze_v1`，未自选家族、未换种子、未加 jitter。
 
 ```powershell
-# 官方入口（本仓库根目录）
+# 干净工作树上的官方全量入口（不做续跑判定，已完成的批次会因目录存在而失败）
 powershell -NoProfile -File datasets/round3/shared/production_tools/run_member_full.ps1 -Member B -Python python
+
+# 本次交付实际使用的驱动：跳过前校验完整 QC，失败以非零退出；-VerifyOnly 只判定不生成
+powershell -NoProfile -File datasets/round3/member_B/run_B_production.ps1 -Member B -Python python
 ```
 
 本机实际执行：`run_batch.py` 逐批调用（T 批次显式 `--heldout-qc`），每批独立 sealed/QC 目录，2–3 批并发以适配本机可用内存；批次顺序与 `batch_plan.json` 一致，已完成的冻结批次不重跑、不覆盖。
@@ -350,6 +357,7 @@ powershell -NoProfile -File datasets/round3/shared/production_tools/run_member_f
 - 窗外预算：{summary['native_sealed_batches']} 批全部通过 `window_budget.json`；
 - 归档：每个原生 ZIP 的 SHA-256 与批内 `summary.json` 一致，CRC 校验通过；
 - 外置记录索引：`reports/external_record_index.csv`，{index_rows:,} 行；`record_uid`（`batch_id:native_id`）全局唯一，`opaque_blind_id` 全部唯一。
+- 续跑判定：`verify_batch_qc.py` 只在 summary、audit、完整 replay、窗口预算、谱数、归档 SHA-256 与 CRC、外置记录索引全部通过时才把批次当作完成；缺项的 sealed 目录会让驱动脚本以非零退出并保留证据。成功、失败、不完整 sealed 三类路径的复现记录见 `reports/resume_validation/resume_validation_summary.json`。
 
 逐批证据在 `reports/<batch>/`，含 `audit.json`、`replay.json`、`window_budget.json`、`commands.json`（真实命令与退出码）、`summary.json`。
 
@@ -365,6 +373,8 @@ powershell -NoProfile -File datasets/round3/shared/production_tools/run_member_f
 production_v1/            {summary['native_sealed_batches']} 个原生无损 ZIP + 各自 .sha256
 reports/<batch>/          逐批 audit / replay / window_budget / commands / summary
 reports/external_record_index.csv   覆盖全部 {index_rows:,} 条谱的外置索引
+reports/resume_validation/           成功 / 失败 / 不完整 sealed 三类续跑验证证据
+verify_batch_qc.py        批次完成度判定（续跑跳过与失败停止共用）
 delivery_manifest.json    全部交付文件的大小与 SHA-256
 selfcheck_summary.json    实际检查范围与结果
 environment.json          解释器、依赖与冻结身份
