@@ -88,7 +88,7 @@ $firstBatch = (Read-Json (Join-Path $rootC 'datasets/round3/shared/freeze_v1/bat
 $sealedC = Join-Path $rootC ('work/sealed/' + $firstBatch.batch_id)
 New-Item -ItemType Directory -Force -Path $sealedC | Out-Null
 Write-Utf8 (Join-Path $sealedC 'manifest.json') '{"spectrum_count": 0}'
-Copy-Item $sealedC (Join-Path $synthetic ('sealed_' + $firstBatch.batch_id)) -Recurse -Force -ErrorAction SilentlyContinue
+Copy-Item (Join-Path $sealedC 'manifest.json') (Join-Path $synthetic ('sealed_' + $firstBatch.batch_id + '_manifest.json')) -Force -ErrorAction SilentlyContinue
 $env:B_REPO_ROOT = $rootC
 $env:B_OUTPUT_ROOT = (Join-Path $rootC 'work')
 $logC = & python -X utf8 -B $parallel --verify-only 2>&1

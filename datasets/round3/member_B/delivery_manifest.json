@@ -29,7 +29,7 @@
     {
       "path": "environment.json",
       "size_bytes": 1069,
-      "sha256": "60ef2c113ee5f8137b1740f5e5c8c85548f2a0cf57e96812b57413ec8df85bbf",
+      "sha256": "b2788cf56d31ef49f4ede884280b5da9a7cc237adf466e4b3328a25239e3fa61",
       "role": "environment_evidence"
     },
     {
@@ -2571,13 +2571,7 @@
       "role": "qc_report"
     },
     {
-      "path": "reports/resume_validation/synthetic/sealed_R3_B_base_D1_001/manifest.json",
-      "size_bytes": 21,
-      "sha256": "93fa65ca0081d4d839921db3678057f0a44b64be253c2442194fba1dc2c04974",
-      "role": "qc_report"
-    },
-    {
-      "path": "reports/resume_validation/synthetic/sealed_R3_B_base_D1_001/R3_B_base_D1_001/manifest.json",
+      "path": "reports/resume_validation/synthetic/sealed_R3_B_base_D1_001_manifest.json",
       "size_bytes": 21,
       "sha256": "93fa65ca0081d4d839921db3678057f0a44b64be253c2442194fba1dc2c04974",
       "role": "qc_report"
@@ -2608,8 +2602,8 @@
     },
     {
       "path": "validate_resume_paths.ps1",
-      "size_bytes": 11357,
-      "sha256": "35259021affaf3216e682de0416f2016bb5048db706947e29dbff9a7110215b2",
+      "size_bytes": 11597,
+      "sha256": "c5dc906b033cb9af008bc385ba6424bf002fe6b67898f74d1365276a6923d3c9",
       "role": "delivery_document"
     },
     {

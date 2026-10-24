@@ -17,5 +17,5 @@
   "command": "powershell -NoProfile -File datasets/round3/member_B/run_B_production.ps1 -Member B -Python python",
   "shared_entry": "datasets/round3/shared/production_tools/run_member_full.ps1 (no QC-gated resume)",
   "note": "Batches executed through run_batch.py with --heldout-qc for T profiles; 2-3 concurrent batches per run, capped by available memory on this host.",
-  "generated_at": "2026-10-24T22:03:13+0800"
+  "generated_at": "2026-10-24T22:04:16+0800"
 }
