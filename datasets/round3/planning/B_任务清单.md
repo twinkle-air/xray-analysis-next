@@ -1,15 +1,19 @@
 # 第三轮成员B任务清单
 
-## 当前优先任务：修复PR复核项（2026-10-24）
+## 当前优先任务：补强QC验证器（第二次复核，2026-10-24）
 
-[PR #35](https://github.com/twinkle-air/xray-analysis-next/pull/35) 已完成负责人四项数据/证据复核，当前 **Request changes，暂不合并**。[完整复核意见](https://github.com/twinkle-air/xray-analysis-next/pull/35#pullrequestreview-5638394051)。成员已声明全量生产完成，下一步是修复交付/辅助脚本，不是重新领取生产任务。
+[PR #35](https://github.com/twinkle-air/xray-analysis-next/pull/35) 修复提交 `281f305df420a80af97fb69f78fb05886007c6fb` 已复核，仍为Request changes，暂不合并。[详细意见](https://github.com/twinkle-air/xray-analysis-next/pull/35#pullrequestreview-5638499547)。
 
-1. 修正 `run_B_parallel.py` 与 `run_B_production.ps1` 的续跑判断：不能仅因sealed目录存在就跳过；必须核对通过的summary/audit/replay与数量、冻结身份和ZIP哈希/CRC。缺项保留失败证据并非零停止。
-2. PowerShell批次失败时throw或明确exit 1，不能break后正常返回；验证成功、子进程失败、不完整sealed续跑三类行为。
-3. 修正selfcheck_summary.json中不存在的full_delivery入口；更新README后重新生成delivery_manifest中所有受影响文件的大小/SHA-256。
-4. 在原PR #35追加修复提交，再请求复审。50个原生ZIP、1746谱和既有QC不需要因此重新生成。
+已通过：README/manifest与full_delivery修正、collect_delivery写入顺序、失败/不完整驱动退出、源码编译及PowerShell语法、426项清单。50个谱ZIP及1746谱原始数据/全量QC未改，仍不要求重生成。
 
-下方生产命令保留用于溯源和必要的缺失批次恢复，**不要因任务清单仍含生产步骤而重跑已通过的数据**。训练入库仍未批准。
+现在只需完成以下修复：
+
+1. `verify_batch_qc.py` 的complete必须绑定冻结批次：核对summary批次号/冻结摘要、索引本批ID及配方/profile/repeat/seed与冻结记录一致；不能只看数量与顶层passed。
+2. 逐行检查窗口passed、有限损失值、冻结预算及ID覆盖；audit/replay/pack动作必须齐全、退出码0且无--limit，replay须all_records且无错误。
+3. 补负例：错误summary批次、错误freeze哈希、错误索引批次号、窗口任一行失败、缺replay动作。这5个内存负例当前都错误返回complete；修正后必须incomplete/非零，原真实完成批次仍应通过。
+4. 重新验证双驱动成功/失败/不完整路径，更新受影响manifest，在原PR #35追加提交并请求复审。无需重跑/重生成1746谱，不改物理核心。
+
+[本轮复核证据](../shared/reviews/20261024_B_rereview/README.md)。目前A/C/D已合并5154谱，B1746谱尚未合并；训练入库仍未批准。下方生产命令供溯源和必要恢复，不要求重复生产。
 
 更新日期：2026-10-24。当前执行依据为已合并 PR #31 的 [owner_release_v3](../shared/releases/owner_release_v3.json)。公共输入与全局分配已冻结，**现在直接完成本人全量生产、自检和上传，提交完整 PR 后由 owner 统一审查**。不再先交90谱试片等待放行。生产已授权不代表你的数据已验收通过。
 

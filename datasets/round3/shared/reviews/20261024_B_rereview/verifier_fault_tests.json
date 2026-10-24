@@ -1,0 +1,36 @@
+{
+  "no_real_files_changed": true,
+  "baseline_uses_actual_passed_batch_QC": "R3_B_base_D1_001",
+  "results": {
+    "valid_QC": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "complete",
+      "problems": []
+    },
+    "wrong_summary_batch_id": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "complete",
+      "problems": []
+    },
+    "wrong_freeze_identity": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "complete",
+      "problems": []
+    },
+    "wrong_index_batch_ids": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "complete",
+      "problems": []
+    },
+    "missing_replay_command": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "complete",
+      "problems": []
+    },
+    "failed_window_row_under_passed_summary": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "complete",
+      "problems": []
+    }
+  }
+}
