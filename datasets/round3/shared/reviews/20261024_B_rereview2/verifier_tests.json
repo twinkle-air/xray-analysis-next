@@ -1,0 +1,372 @@
+{
+  "status": "passed",
+  "no_actual_files_or_spectra_modified": true,
+  "all_real_batches_accepted": 50,
+  "spectra_accepted": 1746,
+  "original_five_false_complete_cases_now_rejected": true,
+  "negative_cases": {
+    "wrong_summary_batch_id": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "incomplete",
+      "problems": [
+        "summary batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'"
+      ]
+    },
+    "wrong_freeze_identity": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "incomplete",
+      "problems": [
+        "summary freeze_manifest_sha256 differs from the frozen manifest"
+      ]
+    },
+    "wrong_index_batch_ids": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "incomplete",
+      "problems": [
+        "index row S000001 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000002 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000003 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000004 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000005 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000006 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000007 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000008 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000009 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000010 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000011 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000012 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000013 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000014 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000015 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000016 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000017 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000018 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000019 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000020 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000021 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000022 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000023 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000024 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000025 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000026 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000027 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000028 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000029 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000030 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000031 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000032 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000033 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000034 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000035 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000036 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000037 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000038 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000039 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'",
+        "index row S000040 batch_id 'R3_B_base_P1_001' != 'R3_B_base_D1_001'"
+      ]
+    },
+    "missing_replay_command": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "incomplete",
+      "problems": [
+        "missing required replay action"
+      ]
+    },
+    "failed_window_row_under_passed_summary": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "incomplete",
+      "problems": [
+        "window budget row S000001 is not passed",
+        "window budget row S000001 lost_fraction 0.99 outside 0..0.5"
+      ]
+    },
+    "wrong_index_recipe": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "incomplete",
+      "problems": [
+        "index row S000001 recipe_id 'NONEXISTENT_RECIPE' != frozen 'R3_B_interference_0065_V01'",
+        "index row S000002 recipe_id 'NONEXISTENT_RECIPE' != frozen 'R3_B_interference_0065_V01'"
+      ]
+    },
+    "command_limit": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "incomplete",
+      "problems": [
+        "audit command used --limit"
+      ]
+    },
+    "replay_scope": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "incomplete",
+      "problems": [
+        "replay scope 'limited_records' is not all_records"
+      ]
+    },
+    "replay_errors": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "incomplete",
+      "problems": [
+        "replay reports 1 error(s)"
+      ]
+    },
+    "nonfinite_window_loss": {
+      "batch_id": "R3_B_base_D1_001",
+      "state": "incomplete",
+      "problems": [
+        "window budget row S000001 lost_fraction is not a finite number"
+      ]
+    }
+  },
+  "baselines": [
+    {
+      "batch_id": "R3_B_base_D1_001",
+      "spectra": 40,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D1_002",
+      "spectra": 48,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D1_003",
+      "spectra": 38,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D2_001",
+      "spectra": 42,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D2_002",
+      "spectra": 48,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D2_003",
+      "spectra": 34,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D3_001",
+      "spectra": 42,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D3_002",
+      "spectra": 48,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D3_003",
+      "spectra": 50,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D3_004",
+      "spectra": 10,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D4_001",
+      "spectra": 50,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D4_002",
+      "spectra": 50,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D4_003",
+      "spectra": 14,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D5_001",
+      "spectra": 46,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D5_002",
+      "spectra": 48,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D5_003",
+      "spectra": 50,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D5_004",
+      "spectra": 6,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D6_001",
+      "spectra": 48,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D6_002",
+      "spectra": 50,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_D6_003",
+      "spectra": 14,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P1_001",
+      "spectra": 40,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P1_002",
+      "spectra": 48,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P1_003",
+      "spectra": 48,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P1_004",
+      "spectra": 50,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P1_005",
+      "spectra": 36,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P2_001",
+      "spectra": 42,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P2_002",
+      "spectra": 48,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P2_003",
+      "spectra": 48,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P2_004",
+      "spectra": 50,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P2_005",
+      "spectra": 18,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P3_001",
+      "spectra": 40,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P3_002",
+      "spectra": 48,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P3_003",
+      "spectra": 48,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P3_004",
+      "spectra": 50,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_base_P3_005",
+      "spectra": 20,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_challenge_T1_001",
+      "spectra": 50,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_challenge_T1_002",
+      "spectra": 32,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_challenge_T2_001",
+      "spectra": 50,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_challenge_T2_002",
+      "spectra": 32,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_challenge_T3_001",
+      "spectra": 50,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_challenge_T3_002",
+      "spectra": 32,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_pilot_D1_001",
+      "spectra": 10,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_pilot_D2_001",
+      "spectra": 4,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_pilot_D3_001",
+      "spectra": 22,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_pilot_D4_001",
+      "spectra": 4,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_pilot_D5_001",
+      "spectra": 14,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_pilot_D6_001",
+      "spectra": 6,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_pilot_P1_001",
+      "spectra": 14,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_pilot_P2_001",
+      "spectra": 6,
+      "state": "complete"
+    },
+    {
+      "batch_id": "R3_B_pilot_P3_001",
+      "spectra": 10,
+      "state": "complete"
+    }
+  ]
+}

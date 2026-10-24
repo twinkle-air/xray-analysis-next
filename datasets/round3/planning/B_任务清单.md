@@ -1,19 +1,15 @@
 # 第三轮成员B任务清单
 
-## 当前优先任务：补强QC验证器（第二次复核，2026-10-24）
+## 当前状态：全量交付复核通过，已合并
 
-[PR #35](https://github.com/twinkle-air/xray-analysis-next/pull/35) 修复提交 `281f305df420a80af97fb69f78fb05886007c6fb` 已复核，仍为Request changes，暂不合并。[详细意见](https://github.com/twinkle-air/xray-analysis-next/pull/35#pullrequestreview-5638499547)。
+[PR #35](https://github.com/twinkle-air/xray-analysis-next/pull/35) 最新head `d66d9a372eed2a69a4484c2c3e28fcd6f76ea3aa` 已[批准](https://github.com/twinkle-air/xray-analysis-next/pull/35#pullrequestreview-5638540110)并合并，merge `67a215a4c169d7ba6ac010e79a565dfbda9489a1`。
 
-已通过：README/manifest与full_delivery修正、collect_delivery写入顺序、失败/不完整驱动退出、源码编译及PowerShell语法、426项清单。50个谱ZIP及1746谱原始数据/全量QC未改，仍不要求重生成。
+- B完成1746谱：1500基础+246T，250配方/105族，50原生批次。
+- 原5个错误放行案例及额外5个负例均拒绝；50真实批次全部通过。434项清单核验通过、数据ZIP未变、失败/不完整返回正常。
+- B无需重跑或追加数据；保留可恢复归档与证据，等待负责人后续任务。
+- 全员6900谱已合并，统一实际索引见[accepted_v1](../shared/accepted_v1/README.md)。本轮训练入库仍未批准，T仍仅留出QC。
 
-现在只需完成以下修复：
-
-1. `verify_batch_qc.py` 的complete必须绑定冻结批次：核对summary批次号/冻结摘要、索引本批ID及配方/profile/repeat/seed与冻结记录一致；不能只看数量与顶层passed。
-2. 逐行检查窗口passed、有限损失值、冻结预算及ID覆盖；audit/replay/pack动作必须齐全、退出码0且无--limit，replay须all_records且无错误。
-3. 补负例：错误summary批次、错误freeze哈希、错误索引批次号、窗口任一行失败、缺replay动作。这5个内存负例当前都错误返回complete；修正后必须incomplete/非零，原真实完成批次仍应通过。
-4. 重新验证双驱动成功/失败/不完整路径，更新受影响manifest，在原PR #35追加提交并请求复审。无需重跑/重生成1746谱，不改物理核心。
-
-[本轮复核证据](../shared/reviews/20261024_B_rereview/README.md)。目前A/C/D已合并5154谱，B1746谱尚未合并；训练入库仍未批准。下方生产命令供溯源和必要恢复，不要求重复生产。
+下方生产说明只供溯源/必要恢复，不要求重复生产。此前修复任务已完成，历史版本保留在Git中。
 
 更新日期：2026-10-24。当前执行依据为已合并 PR #31 的 [owner_release_v3](../shared/releases/owner_release_v3.json)。公共输入与全局分配已冻结，**现在直接完成本人全量生产、自检和上传，提交完整 PR 后由 owner 统一审查**。不再先交90谱试片等待放行。生产已授权不代表你的数据已验收通过。
 

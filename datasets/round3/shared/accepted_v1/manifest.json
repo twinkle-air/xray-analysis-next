@@ -1,0 +1,25 @@
+{
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "actual_record_index.csv",
+      "bytes": 3414557,
+      "sha256": "3da5365fe82812409c0b21a5c6b65a79457966a390dd4fe6be44efce9cc5a08f"
+    },
+    {
+      "path": "archive_index.json",
+      "bytes": 64609,
+      "sha256": "f2bfd5347ae64e07bcaac417798477a96a6aa7312d3adf649264f38cf1bdf6c4"
+    },
+    {
+      "path": "closure_verification.json",
+      "bytes": 2259,
+      "sha256": "b417bee6d8698733c51c6c6380247705d10aa95d7b712295e035942f3cf96f5a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1710,
+      "sha256": "3fac57b08779a43df90aeba2a7617ca38f826b3af61fda8051b450a5f1098e51"
+    }
+  ]
+}
