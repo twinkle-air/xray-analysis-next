@@ -1,0 +1,12 @@
+{
+  "fault_injection": "passed",
+  "items": 6,
+  "elapsed_seconds": 0.031,
+  "passed": 1,
+  "failed": 1,
+  "not_started": 4,
+  "all_items_accounted_for": true,
+  "command": "python -X utf8 -B reports/run_parallel.py --self-test",
+  "exit_code": 0,
+  "purpose": "fault injection: a failing batch must stop scheduling and still produce a complete summary"
+}

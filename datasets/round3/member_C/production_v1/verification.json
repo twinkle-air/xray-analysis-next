@@ -1,0 +1,34 @@
+{
+  "status": "full_member_delivery_self_checked_pending_owner_review",
+  "member": "C",
+  "round_id": "round3",
+  "batches": 48,
+  "spectra_total": 1686,
+  "spectra_base": 1500,
+  "spectra_challenge_T": 186,
+  "recipes": 250,
+  "design_families": 105,
+  "family_usage": {
+    "train": 72,
+    "internal_holdout": 17,
+    "validation": 16
+  },
+  "record_plan_rows_matched": 1686,
+  "global_record_ids_unique": 1686,
+  "noise_seeds_unique": 1686,
+  "archives": 48,
+  "archive_bytes": 398833953,
+  "archive_sha256_verified": 48,
+  "zip_crc_verified": 48,
+  "zip_members_hash_verified": 5484,
+  "physics_core_unchanged": true,
+  "family_profile_usage_consistent": true,
+  "T_physical_QC_only": true,
+  "training_inclusion_approved": false,
+  "scientific_accuracy_verified": false,
+  "errors": [],
+  "environment": {
+    "python": "3.12.14",
+    "executable": "C:\\Users\\TianT\\Documents\\Qoder\\2026-10-21\\ddc06964\\C_r3\\venv\\Scripts\\python.exe"
+  }
+}
