@@ -1,0 +1,24 @@
+{
+  "PR": 34,
+  "member": "D",
+  "status": "changes_required",
+  "head": "50f8d3a234184b0becf4d17cc626dfdaceeb3b3e",
+  "spectra": 1716,
+  "base_spectra": 1500,
+  "T_spectra": 216,
+  "native_batches": 48,
+  "manifest_files": 140,
+  "actual_full_replay_evidence": 1716,
+  "issues": [
+    "Missing manifest file: production_v1/reports/failed_attempts/R3_D_base_D5_001/successful_rerun.log"
+  ],
+  "notes": [
+    "Missing standalone rerun log is byte-identical to existing QC ZIP members; restore without regeneration"
+  ],
+  "training_inclusion_approved": false,
+  "review_url": "https://github.com/twinkle-air/xray-analysis-next/pull/34#pullrequestreview-5638394197",
+  "opaque_blind_export_verified_records": 1716,
+  "batch_integrity_files_verified": 5544,
+  "maximum_window_loss": 0.03835668407981862,
+  "owner_recomputed_all_physics": false
+}
