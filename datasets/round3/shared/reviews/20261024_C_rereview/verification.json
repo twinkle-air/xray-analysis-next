@@ -1,0 +1,31 @@
+{
+  "status": "passed_approved_merged",
+  "head": "2f1ab9d0ce9a726e92a9abccf5a93793d4e1adc8",
+  "previous_head": "8f152d97c563133d2bb6b261d258c81b8d417bf6",
+  "changed_files": 6,
+  "archives_unchanged": 50,
+  "manifest_files": 107,
+  "manifest_bytes": 413600110,
+  "all_paths_sizes_SHA256_verified": true,
+  "prior_data_checks": {
+    "assertions": 41893,
+    "audit_evidence_spectra": 1686,
+    "replay_evidence_spectra": 1686,
+    "native_ZIPs": 48,
+    "integrity_members": 5484,
+    "records": 1686,
+    "opaque_blind_records": 1686
+  },
+  "prior_data_evidence_reused": true,
+  "timing_seconds": {
+    "generate": 12119.6,
+    "audit": 282.2,
+    "replay": 11210.3,
+    "pack": 376.6
+  },
+  "actions_hours": 6.663527777777778,
+  "source_compiled": true,
+  "training_inclusion_approved": false,
+  "merge_commit": "2821079d08576735642d8257bf3a7eaae6a9b629",
+  "approval_url": "https://github.com/twinkle-air/xray-analysis-next/pull/33#pullrequestreview-5638472714"
+}
