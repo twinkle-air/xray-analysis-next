@@ -1,7 +1,7 @@
 {
   "self_excluded": true,
   "file_count": 113,
-  "total_bytes": 420432081,
+  "total_bytes": 420432080,
   "files": [
     {
       "path": "actual_record_index.csv",
@@ -565,8 +565,8 @@
     },
     {
       "path": "selfcheck_summary.json",
-      "bytes": 2953,
-      "sha256": "0465288b682958ce66777ac2dd294c7019ff6598700b0a268392129d45e24f1d"
+      "bytes": 2952,
+      "sha256": "a27f49ea946187638473a0d6d17c06a5a0bdcfa412d9f2e4e8f4cda7debe86d9"
     }
   ]
 }

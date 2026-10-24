@@ -12,7 +12,7 @@
   "actual_T_spectra": 216,
   "total_actual_spectra": 1716,
   "native_sealed_batches": 48,
-  "former_pilot_batches_included_in_base": 10,
+  "former_pilot_batches_included_in_base": 9,
   "former_pilot_spectra_included_in_base": 90,
   "all_spectra_audited": 1716,
   "all_spectra_full_physics_replayed": 1716,

@@ -5,7 +5,7 @@
   "hash_algorithm": "sha256",
   "self_excluded": true,
   "file_count": 140,
-  "total_bytes": 424324308,
+  "total_bytes": 424324306,
   "dossier_role": "candidate inputs + full native production package",
   "files": [
     {
@@ -616,7 +616,7 @@
     {
       "path": "production_v1/delivery_manifest.json",
       "size_bytes": 19804,
-      "sha256": "9ccc3e2fd4515e9b5d3e62ad591f54780591aa5deb0263643ffaa8c63446b5f4"
+      "sha256": "8d64e8120863ed8f45fbcb777211f3e0c55c64e7135c72f10344ed3ddcc9a373"
     },
     {
       "path": "production_v1/frozen_identity.json",
@@ -675,8 +675,8 @@
     },
     {
       "path": "production_v1/selfcheck_summary.json",
-      "size_bytes": 2953,
-      "sha256": "0465288b682958ce66777ac2dd294c7019ff6598700b0a268392129d45e24f1d"
+      "size_bytes": 2952,
+      "sha256": "a27f49ea946187638473a0d6d17c06a5a0bdcfa412d9f2e4e8f4cda7debe86d9"
     },
     {
       "path": "README.md",
@@ -700,8 +700,8 @@
     },
     {
       "path": "selfcheck_summary.json",
-      "size_bytes": 3258,
-      "sha256": "6552ec0972d242dd198c2527a508df0cd4febb52be2495d0d70b9ea0d628947f"
+      "size_bytes": 3257,
+      "sha256": "24700ce375313d1d3b73610af3081006741248804e4db6d5ae3d6bebf9e284a9"
     },
     {
       "path": "verify_candidates.py",
