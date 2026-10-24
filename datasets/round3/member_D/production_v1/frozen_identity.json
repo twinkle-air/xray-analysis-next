@@ -1,0 +1,63 @@
+{
+  "round_id": "round3",
+  "member": "D",
+  "production_approved_by_owner_release": true,
+  "freeze_directory": "datasets/round3/shared/freeze_v1",
+  "freeze_manifest_sha256": "4931661432f0a1e0cd4526053499509f978f86f2d59a6b0acc404c3360b85817",
+  "owner_release": {
+    "path": "datasets/round3/shared/releases/owner_release_v3.json",
+    "sha256": "653bff0957d3f9d8a0a506934976aff06d36756777bb3a0095106ff302ca47b2",
+    "batch_production_approved": true,
+    "training_inclusion_approved": false,
+    "separate_member_pilot_review_required": false
+  },
+  "hashes": {
+    "release.json": "375b05822050f53334d376611953bd3190234bf011668e31ec0e20c6197e3c09",
+    "batch_plan.json": "639cf0928e54909fc0aa56fa49404b8134176a3f4d8a644bda1ee88d95671985",
+    "family_assignments.json": "cfad1896e1fc15ad46d51b5a05d26a083fe0324272b1a6328ce664507ca99b4b",
+    "record_plan.csv": "68cf848cc5cea4c41ea80fdbd4248fa6428bcde9252d989b5c677d80b39a0abd",
+    "profile_registry.json": "b011ef14895e0d54b8caf4fab4d139683dd0d54f8a7e3a31838d5743aafe5d4e",
+    "input_identity.json": "a441834681c9a36967be96ae3a26873ef5d19685b436abe63b906d36e45ed020",
+    "window_budget.json": "8e451a488167dd8abf7757fdef2dea6300630d2d6e855750f6ac97d140ddb4d0"
+  },
+  "profiles_used": {
+    "development_allowlist": [
+      "P1",
+      "P2",
+      "P3",
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "model_forbidden_heldout": [
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "heldout_use": "physical QC only; excluded from training, calibration, response dictionaries and hyper-parameter selection"
+  },
+  "generator_source_sha256": {
+    "core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+    "dataset.py": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+    "app.py": "6f515db4d5f9d26af9ec261fdb60e62bf1c848b9e7b9ab3930961c8d393159c8",
+    "version.py": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+    "requirements-lock.txt": "58dd77fc58fbcccfa311b84128624bf25c3f8d19379b2dd2beb224a90772fae0"
+  },
+  "physics_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+  "quota": {
+    "recipes": 250,
+    "design_families": 105,
+    "base_spectra": 1500,
+    "T_spectra": 216,
+    "total_spectra": 1716,
+    "native_batches": 48,
+    "heldout_recipes_with_T": 36
+  },
+  "training_inclusion_approved": false,
+  "scientific_accuracy_verified": false,
+  "external_independently_blinded": false
+}

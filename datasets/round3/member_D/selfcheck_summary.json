@@ -1,103 +1,76 @@
 {
-  "is_template": false,
-  "usable_for_generation": false,
-  "production_started": false,
+  "status": "passed_member_full_delivery_pending_coordinator_acceptance",
+  "production_started": true,
   "round_id": "round3",
   "member": "D",
-  "status": "candidate_checks_passed_pending_global_freeze",
-  "expected_recipe_count": 250,
+  "candidate_recipes": 250,
+  "design_families": 105,
   "expected_base_spectra": 1500,
-  "assigned_holdout_recipe_count": null,
-  "actual_recipe_count": 250,
-  "actual_family_count": 105,
-  "actual_base_spectra": 0,
-  "actual_extra_T_spectra": 0,
-  "category_recipes": {
-    "ladder": 90,
-    "interference": 50,
-    "paired_negative_spike": 60,
-    "routine": 50
+  "expected_T_spectra": 216,
+  "expected_total_spectra": 1716,
+  "actual_base_spectra": 1500,
+  "actual_T_spectra": 216,
+  "total_actual_spectra": 1716,
+  "native_sealed_batches": 48,
+  "former_pilot_batches_included_in_base": 10,
+  "former_pilot_spectra_included_in_base": 90,
+  "all_spectra_audited": 1716,
+  "all_spectra_full_physics_replayed": 1716,
+  "maximum_absolute_replay_array_difference": 0.0,
+  "all_window_budgets_passed": true,
+  "maximum_window_lost_fraction": 0.03835668407981862,
+  "all_ZIP_SHA_CRC_and_internal_integrity_passed": true,
+  "source_versions": {
+    "generator": "0.2.1",
+    "physics_core": "0.2.0"
   },
-  "matrix_recipes": {
-    "silicate_oxide": 150,
-    "iron_oxide": 100
+  "physics_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+  "freeze_manifest_sha256": "4931661432f0a1e0cd4526053499509f978f86f2d59a6b0acc404c3360b85817",
+  "owner_release_sha256": "653bff0957d3f9d8a0a506934976aff06d36756777bb3a0095106ff302ca47b2",
+  "native_generator_split_used_as_research_split": false,
+  "usage_families": {
+    "train": 66,
+    "internal_holdout": 16,
+    "validation": 23
   },
-  "candidate_checks": {
-    "status": "passed_member_d_candidate_checks",
-    "errors": 0,
-    "exact_zero_labels_verified": 1553,
-    "historical_rows_compared": 3800,
-    "historical_minimum_L1_percentage_points": 2.906359122930519,
-    "historical_L1_le_0_5_matches": 0,
-    "cross_design_family_near_edges": 0,
-    "cross_member_minimum_L1_percentage_points": {
-      "A": 4.435711424558101,
-      "B": 5.596896657184906,
-      "C": 4.475151116954075
-    },
-    "cross_member_pairs_within_L1_0_5": {
-      "A": 0,
-      "B": 0,
-      "C": 0
-    }
-  },
-  "verification": {
-    "status": "passed_candidate_and_preparation_checks_pending_global_freeze",
-    "deterministic_rebuild_exact": true,
-    "failure_cases_rejected": 6,
-    "compiled_sources": 9,
-    "prepared_files_hash_checked": 31,
-    "generator_source_hash_checked": 6,
-    "path": "reports/verification.json"
-  },
-  "audit": {
-    "covered_spectra": 0,
-    "report_paths": [],
-    "exit_codes": [],
-    "status": "pending_not_generated"
-  },
-  "physical_replay": {
-    "covered_spectra": 0,
-    "maximum_array_difference": null,
-    "report_paths": [],
-    "exit_codes": [],
-    "status": "pending_not_generated"
-  },
-  "pilot": {
-    "status": "pending_confirmed_training_families",
-    "planned_spectra": 90,
-    "note": "1 ladder + 1 interference + 1 paired + 2 routine families = 15 recipes x 6 spectra, counted inside the 1,500"
-  },
-  "sealed": "not_started",
+  "heldout_recipes_with_T": 36,
+  "T_use": "heldout physical QC only; never training, calibration, dictionaries or selection",
+  "eligible_for_training": false,
+  "training_inclusion_approved": false,
+  "concentration_accuracy_verified": false,
+  "scientific_accuracy_verified": false,
+  "external_independently_blinded": false,
+  "history_coverage_limit": "known historical snapshot only; undocumented lineage not excluded; first-round noise registry incomplete",
+  "environment_caveat": "The frozen source identity records CPython 3.12.14. Production ran on CPython 3.12.10 with exactly the frozen package versions (numpy 2.4.6, scipy 1.17.1, xraylib 4.3.0). PCG64 seeds and all outputs are version-pinned per batch; the patch-level interpreter difference is recorded, not hidden.",
+  "production_wall_seconds_4_workers": 6709.5945925712585,
+  "sum_batch_all_actions_seconds": 28467.52100000158,
+  "native_archive_bytes": 405137106,
+  "blind_archive_bytes": 13809934,
+  "QC_bundle_sha256": "d7ca692ca7f08e7e12b2b45a52fa2aa2f13bfa57cb0d186c0f4a0ad929c8bf94",
+  "failure_evidence": "reports/failed_attempts/R3_D_base_D5_001",
+  "run_metadata_reconstructed_from_summary": [
+    "R3_D_pilot_D5_001",
+    "R3_D_pilot_P2_001",
+    "R3_D_pilot_P3_001"
+  ],
   "manifest_path": "delivery_manifest.json",
-  "source_and_environment_evidence": [
-    "inputs/source_manifest.json",
-    "inputs/repository_source.json",
-    "candidates/input_identity.json",
-    "frozen_inputs/prepared_not_frozen.json",
-    "reports/commands_and_environment.json"
+  "evidence_paths": [
+    "actual_record_index.csv",
+    "archive_index.json",
+    "batch_metrics.json",
+    "frozen_identity.json",
+    "reports/delivery_verification.json",
+    "reports/commands_and_environment.json",
+    "reports/D_all_batch_QC.zip"
   ],
   "unresolved_errors": 0,
-  "missing_items": [
-    "A global candidate dedup / usage / connected-closure freeze",
-    "per-family profile assignment (1 anchor + 2 development) and long-exposure ladder coverage",
-    "count-noise sub-seed manifest and global collision check",
-    "15-recipe x 6 = 90-spectrum pilot and measured runtime/disk budget",
-    "base 1,500 spectra, full audit, full physical replay and pack",
-    "held-out T1/T2/T3 challenge spectra once A issues the new held-out list",
-    "shared sign-off of the common input list that has been open since round 2"
-  ],
-  "eligible_for_training": false,
-  "scientific_accuracy_verified": false,
-  "evidence_paths": [
-    "candidates/D_samples.json",
-    "candidates/family_registry.json",
-    "candidates/original_backgrounds.json",
-    "candidates/formula_registry.csv",
-    "candidates/candidate_registry.csv",
+  "full_delivery": "production_v1/README.md",
+  "actual_training_spectra": 0,
+  "actual_synthetic_spectra_generated": 1716,
+  "production_complete": true,
+  "candidate_stage_evidence": [
     "candidates/candidate_checks.json",
-    "candidates/coverage.json",
     "reports/verification.json",
-    "reports/production_readiness.json"
+    "candidates/coverage.json"
   ]
 }
