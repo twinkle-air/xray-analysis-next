@@ -1,7 +1,7 @@
 {
-  "status": "proposed_v1_pending_global_freeze",
-  "production_started": false,
-  "executable_generator_config": false,
+  "status": "all_member_synthetic_deliveries_merged_pending_model_readiness",
+  "production_started": true,
+  "executable_generator_config": true,
   "baseline_model_sha256": "31185fd25766a495e4191a8882240fe10a15791ef861885a1b7bd41f0453bd7e",
   "members": [
     "A",
@@ -109,7 +109,7 @@
       "D5",
       "D6"
     ],
-    "full_config_hashes_status": "pending"
+    "full_config_hashes_status": "frozen_in_shared/freeze_v1/profile_registry.json"
   },
   "heldout_profiles": [
     "T1",
@@ -120,13 +120,40 @@
   "scope": "internal synthetic fresh-family holdout with paired seen/unfitted-condition comparison; not external independently blinded real-device validation",
   "real_measured_track": "recommended separately, actual availability pending; not counted as synthetic training spectra",
   "pending": [
-    "actual candidate recipes and ancestry",
-    "full profiles/validation/hashes/window budgets",
-    "global family closure/use/profile mapping",
-    "all seeds",
-    "producer commands",
-    "90-spectrum-per-member training pilot",
-    "runtime/disk budget from pilot"
+    "model input contract readiness",
+    "development profile whitelist and T-exclusion verification",
+    "training plan and owner approval"
   ],
-  "quantity_consistency_checked": true
+  "quantity_consistency_checked": true,
+  "production_complete": true,
+  "actual_merged_spectra": 6900,
+  "actual_base_spectra": 6000,
+  "actual_T_spectra": 900,
+  "actual_per_member": {
+    "A": {
+      "records": 1752,
+      "base": 1500,
+      "T": 252
+    },
+    "B": {
+      "records": 1746,
+      "base": 1500,
+      "T": 246
+    },
+    "C": {
+      "records": 1686,
+      "base": 1500,
+      "T": 186
+    },
+    "D": {
+      "records": 1716,
+      "base": 1500,
+      "T": 216
+    }
+  },
+  "actual_native_batches": 193,
+  "training_inclusion_approved": false,
+  "actual_training_spectra": 0,
+  "training_started": false,
+  "accepted_index": "../shared/accepted_v1/actual_record_index.csv"
 }

@@ -1,0 +1,74 @@
+{
+  "status": "passed_all_merged_member_data_closure",
+  "source_main": "67a215a4c169d7ba6ac010e79a565dfbda9489a1",
+  "per_member": {
+    "A": {
+      "records": 1752,
+      "base": 1500,
+      "T": 252
+    },
+    "B": {
+      "records": 1746,
+      "base": 1500,
+      "T": 246
+    },
+    "C": {
+      "records": 1686,
+      "base": 1500,
+      "T": 186
+    },
+    "D": {
+      "records": 1716,
+      "base": 1500,
+      "T": 216
+    }
+  },
+  "total_spectra": 6900,
+  "base_spectra": 6000,
+  "T_spectra": 900,
+  "recipes": 1000,
+  "design_families": 420,
+  "native_archives": 193,
+  "usage_spectra": {
+    "train": 4200,
+    "validation": 900,
+    "internal_holdout": 1800
+  },
+  "global_IDs_opaque_IDs_seeds_unique": true,
+  "all_record_plan_fields_match": true,
+  "whole_family_usage_matches_frozen_known_closure": true,
+  "source_indices": [
+    {
+      "member": "A",
+      "path": "datasets/round3/member_A/production_v1/actual_record_index.csv",
+      "git_blob": "28e4dcb6dd7943b8bb117baafa6e0b9bb4ac5098",
+      "sha256": "fbf807695e6098a108ded03d1f63e3e86173a10f65fc4fff0255015c29cc2ec2",
+      "records": 1752
+    },
+    {
+      "member": "B",
+      "path": "datasets/round3/member_B/reports/external_record_index.csv",
+      "git_blob": "d17571d22ee129b5f81f47ee691f60fa331c712b",
+      "sha256": "9e3593c091092a6f9a8711e5c7fce60182f1f5c0af7c078baf74e035ef93c09f",
+      "records": 1746
+    },
+    {
+      "member": "C",
+      "path": "datasets/round3/member_C/production_v1/actual_record_index.csv",
+      "git_blob": "b726a607297424c165a4c1ab9646bd72c8235359",
+      "sha256": "904dba801748b2fdc68dfa233c93d8cd14e091fe60498a9c36f3e72a0bcb761a",
+      "records": 1686
+    },
+    {
+      "member": "D",
+      "path": "datasets/round3/member_D/production_v1/actual_record_index.csv",
+      "git_blob": "9ba14c4d48ad38797398d180e09cc45ff6e10a31",
+      "sha256": "b94540d2e1a657550a31382054dec5c6ff2cf50ec3da22aaa9a97d72b142b644",
+      "records": 1716
+    }
+  ],
+  "scope": "known frozen ancestry only; no new historical discovery or external independent blindness",
+  "training_inclusion_approved": false,
+  "training_started": false,
+  "model_readiness_assessed": false
+}

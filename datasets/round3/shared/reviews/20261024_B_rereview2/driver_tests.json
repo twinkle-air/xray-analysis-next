@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "no_actual_production": true,
+  "cases": {
+    "complete": {
+      "exit": 0,
+      "chunk_written": false
+    },
+    "incomplete": {
+      "exit": 3,
+      "chunk_written": false
+    },
+    "child_failure": {
+      "exit": 1,
+      "chunk_written": true
+    }
+  },
+  "powershell_AST_passed": true,
+  "producer_dual_driver_cases": 14
+}
