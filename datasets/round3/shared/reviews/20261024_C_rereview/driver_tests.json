@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "source_compiled": true,
+  "no_real_subprocesses_or_production": true,
+  "script_selftest_passed": true,
+  "main_cases": {
+    "success": {
+      "returned_exit_code": 0,
+      "summary_persisted": true,
+      "passed": 3,
+      "failed": 0,
+      "not_started": 0,
+      "subprocess_calls": 3
+    },
+    "child_failure": {
+      "returned_exit_code": 1,
+      "summary_persisted": true,
+      "passed": 0,
+      "failed": 1,
+      "not_started": 2,
+      "subprocess_calls": 1
+    },
+    "worker_exception": {
+      "returned_exit_code": 1,
+      "summary_persisted": true,
+      "passed": 0,
+      "failed": 1,
+      "not_started": 2,
+      "subprocess_calls": 1
+    },
+    "running_batch_drained": {
+      "passed": 1,
+      "failed": 1,
+      "not_started": 4,
+      "all_items_accounted_for": true
+    }
+  }
+}
