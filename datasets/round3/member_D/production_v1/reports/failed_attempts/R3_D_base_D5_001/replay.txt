@@ -1,0 +1,50 @@
+1/42
+2/42
+3/42
+4/42
+5/42
+6/42
+7/42
+8/42
+9/42
+10/42
+11/42
+12/42
+13/42
+14/42
+15/42
+16/42
+17/42
+18/42
+19/42
+20/42
+21/42
+22/42
+23/42
+24/42
+25/42
+26/42
+27/42
+28/42
+29/42
+30/42
+31/42
+32/42
+33/42
+34/42
+35/42
+36/42
+Traceback (most recent call last):
+  File "C:\Users\陈\Desktop\AI开发\repo-xray\work\round3\member_D_production_v1\sealed\R3_D_base_D5_001\reproducibility\generator\fp_competition\app.py", line 436, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\陈\Desktop\AI开发\repo-xray\work\round3\member_D_production_v1\sealed\R3_D_base_D5_001\reproducibility\generator\fp_competition\app.py", line 398, in main
+    dataset_tools.replay_dataset(args.dataset,args.limit,lambda i,n:print(f'{i}/{n}',flush=True)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\陈\Desktop\AI开发\repo-xray\work\round3\member_D_production_v1\sealed\R3_D_base_D5_001\reproducibility\generator\fp_competition\dataset.py", line 399, in replay_dataset
+    result=simulate(label['composition']['original_percent'],Profile.from_dict(label['profile']),seed=label['seed'],
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\陈\Desktop\AI开发\repo-xray\work\round3\member_D_production_v1\sealed\R3_D_base_D5_001\reproducibility\generator\fp_competition\core.py", line 333, in simulate
+    cs=np.array([line_cs(atomic,code,float(e)) for e in ein])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MemoryError
