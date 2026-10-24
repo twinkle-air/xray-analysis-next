@@ -1,0 +1,64 @@
+{
+  "batches_run": 8,
+  "batches_failed": 0,
+  "wall_seconds": 916.5,
+  "workers": 2,
+  "results": [
+    {
+      "batch_id": "R3_B_base_D1_001",
+      "spectra": 40,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 220.6
+    },
+    {
+      "batch_id": "R3_B_base_D1_002",
+      "spectra": 48,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 249.2
+    },
+    {
+      "batch_id": "R3_B_base_D1_003",
+      "spectra": 38,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 185.6
+    },
+    {
+      "batch_id": "R3_B_base_D2_001",
+      "spectra": 42,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 220.6
+    },
+    {
+      "batch_id": "R3_B_base_D2_002",
+      "spectra": 48,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 271.6
+    },
+    {
+      "batch_id": "R3_B_base_D2_003",
+      "spectra": 34,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 169.9
+    },
+    {
+      "batch_id": "R3_B_base_D3_001",
+      "spectra": 42,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 215.0
+    },
+    {
+      "batch_id": "R3_B_base_D3_002",
+      "spectra": 48,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 238.7
+    }
+  ]
+}

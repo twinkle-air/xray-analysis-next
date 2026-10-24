@@ -1,0 +1,3 @@
+[22:02:30] plan: total=50 complete=50 pending=0 incomplete=0
+[22:02:30] verify-only: all 50 batches carry complete QC evidence
+caseA_ps1_exit=0

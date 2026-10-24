@@ -1,0 +1,246 @@
+{
+  "budget_sha256": "8e451a488167dd8abf7757fdef2dea6300630d2d6e855750f6ac97d140ddb4d0",
+  "rows": [
+    {
+      "id": "S000001",
+      "lost_fraction": 0.002859512390936784,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000002",
+      "lost_fraction": 0.002859512390936784,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000003",
+      "lost_fraction": 0.0028595658492486958,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000004",
+      "lost_fraction": 0.0028595658492486958,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000005",
+      "lost_fraction": 0.0028599642056139833,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000006",
+      "lost_fraction": 0.0028599642056139833,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000007",
+      "lost_fraction": 0.0028600078441161922,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000008",
+      "lost_fraction": 0.0028600078441161922,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000009",
+      "lost_fraction": 0.002861004281192726,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000010",
+      "lost_fraction": 0.002861004281192726,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000011",
+      "lost_fraction": 0.005228764457271549,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000012",
+      "lost_fraction": 0.005228764457271549,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000013",
+      "lost_fraction": 0.00522847210487035,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000014",
+      "lost_fraction": 0.00522847210487035,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000015",
+      "lost_fraction": 0.0025559708019527077,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000016",
+      "lost_fraction": 0.0025559708019527077,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000017",
+      "lost_fraction": 0.002555885987026747,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000018",
+      "lost_fraction": 0.002555885987026747,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000019",
+      "lost_fraction": 0.0025528587983154744,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000020",
+      "lost_fraction": 0.0025528587983154744,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000021",
+      "lost_fraction": 0.0006786657433561031,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000022",
+      "lost_fraction": 0.0006786657433561031,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000023",
+      "lost_fraction": 0.0006786623218120584,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000024",
+      "lost_fraction": 0.0006786623218120584,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000025",
+      "lost_fraction": 0.0006835782345192679,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000026",
+      "lost_fraction": 0.0006835782345192679,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000027",
+      "lost_fraction": 0.000683574831341722,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000028",
+      "lost_fraction": 0.000683574831341722,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000029",
+      "lost_fraction": 0.0006834516594721743,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000030",
+      "lost_fraction": 0.0006834516594721743,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000031",
+      "lost_fraction": 0.0027439063927701744,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000032",
+      "lost_fraction": 0.0027439063927701744,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000033",
+      "lost_fraction": 0.002743885683132844,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000034",
+      "lost_fraction": 0.002743885683132844,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000035",
+      "lost_fraction": 0.002754471596798911,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000036",
+      "lost_fraction": 0.002754471596798911,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000037",
+      "lost_fraction": 0.0027544505246665184,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000038",
+      "lost_fraction": 0.0027544505246665184,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000039",
+      "lost_fraction": 0.0027236984706738893,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "id": "S000040",
+      "lost_fraction": 0.0027236984706738893,
+      "budget": 0.1,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

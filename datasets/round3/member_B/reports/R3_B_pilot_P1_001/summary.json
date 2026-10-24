@@ -1,0 +1,17 @@
+{
+  "status": "passed_pilot_QC",
+  "batch_id": "R3_B_pilot_P1_001",
+  "spectra": 14,
+  "generate_seconds": 41.7730881000025,
+  "all_actions_seconds": 90.02195200000278,
+  "archive_bytes": 4166382,
+  "archive_sha256": "845aa51e577625248ab083b1c6dbcb12af0abf5e7df9e6de6be0857d62ec7173",
+  "zip_crc_checked": true,
+  "audit": "passed",
+  "replay": "all_records_passed",
+  "freeze_manifest_sha256": "4931661432f0a1e0cd4526053499509f978f86f2d59a6b0acc404c3360b85817",
+  "native_split_ignored_for_research_usage": true,
+  "external_blind_ids": "record_plan opaque IDs; export with these names only",
+  "training_inclusion_approved": false,
+  "scientific_accuracy_verified": false
+}

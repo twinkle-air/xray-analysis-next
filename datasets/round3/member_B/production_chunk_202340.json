@@ -1,0 +1,295 @@
+{
+  "batches_run": 41,
+  "batches_failed": 0,
+  "wall_seconds": 2751.0,
+  "workers": 3,
+  "results": [
+    {
+      "batch_id": "R3_B_base_D3_003",
+      "spectra": 50,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 288.3
+    },
+    {
+      "batch_id": "R3_B_base_D3_004",
+      "spectra": 10,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 53.7
+    },
+    {
+      "batch_id": "R3_B_base_D4_001",
+      "spectra": 50,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 325.1
+    },
+    {
+      "batch_id": "R3_B_base_D4_002",
+      "spectra": 50,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 311.6
+    },
+    {
+      "batch_id": "R3_B_base_D4_003",
+      "spectra": 14,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 131.7
+    },
+    {
+      "batch_id": "R3_B_base_D5_001",
+      "spectra": 46,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 503.4
+    },
+    {
+      "batch_id": "R3_B_base_D5_002",
+      "spectra": 48,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 427.9
+    },
+    {
+      "batch_id": "R3_B_base_D5_003",
+      "spectra": 50,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 454.2
+    },
+    {
+      "batch_id": "R3_B_base_D5_004",
+      "spectra": 6,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 48.0
+    },
+    {
+      "batch_id": "R3_B_base_D6_001",
+      "spectra": 48,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 286.4
+    },
+    {
+      "batch_id": "R3_B_base_D6_002",
+      "spectra": 50,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 268.4
+    },
+    {
+      "batch_id": "R3_B_base_D6_003",
+      "spectra": 14,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 84.2
+    },
+    {
+      "batch_id": "R3_B_base_P1_001",
+      "spectra": 40,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 226.6
+    },
+    {
+      "batch_id": "R3_B_base_P1_002",
+      "spectra": 48,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 286.6
+    },
+    {
+      "batch_id": "R3_B_base_P1_003",
+      "spectra": 48,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 217.4
+    },
+    {
+      "batch_id": "R3_B_base_P1_004",
+      "spectra": 50,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 245.2
+    },
+    {
+      "batch_id": "R3_B_base_P1_005",
+      "spectra": 36,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 185.1
+    },
+    {
+      "batch_id": "R3_B_base_P2_001",
+      "spectra": 42,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 253.0
+    },
+    {
+      "batch_id": "R3_B_base_P2_002",
+      "spectra": 48,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 254.0
+    },
+    {
+      "batch_id": "R3_B_base_P2_003",
+      "spectra": 48,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 276.9
+    },
+    {
+      "batch_id": "R3_B_base_P2_004",
+      "spectra": 50,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 305.9
+    },
+    {
+      "batch_id": "R3_B_base_P2_005",
+      "spectra": 18,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 145.5
+    },
+    {
+      "batch_id": "R3_B_base_P3_001",
+      "spectra": 40,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 173.6
+    },
+    {
+      "batch_id": "R3_B_base_P3_002",
+      "spectra": 48,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 200.6
+    },
+    {
+      "batch_id": "R3_B_base_P3_003",
+      "spectra": 48,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 186.9
+    },
+    {
+      "batch_id": "R3_B_base_P3_004",
+      "spectra": 50,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 197.8
+    },
+    {
+      "batch_id": "R3_B_base_P3_005",
+      "spectra": 20,
+      "phase": "base",
+      "exit_code": 0,
+      "seconds": 86.5
+    },
+    {
+      "batch_id": "R3_B_challenge_T1_001",
+      "spectra": 50,
+      "phase": "challenge",
+      "exit_code": 0,
+      "seconds": 265.8
+    },
+    {
+      "batch_id": "R3_B_challenge_T1_002",
+      "spectra": 32,
+      "phase": "challenge",
+      "exit_code": 0,
+      "seconds": 170.9
+    },
+    {
+      "batch_id": "R3_B_challenge_T2_001",
+      "spectra": 50,
+      "phase": "challenge",
+      "exit_code": 0,
+      "seconds": 267.5
+    },
+    {
+      "batch_id": "R3_B_challenge_T2_002",
+      "spectra": 32,
+      "phase": "challenge",
+      "exit_code": 0,
+      "seconds": 169.6
+    },
+    {
+      "batch_id": "R3_B_challenge_T3_001",
+      "spectra": 50,
+      "phase": "challenge",
+      "exit_code": 0,
+      "seconds": 211.3
+    },
+    {
+      "batch_id": "R3_B_challenge_T3_002",
+      "spectra": 32,
+      "phase": "challenge",
+      "exit_code": 0,
+      "seconds": 135.2
+    },
+    {
+      "batch_id": "R3_B_pilot_D1_001",
+      "spectra": 10,
+      "phase": "pilot",
+      "exit_code": 0,
+      "seconds": 66.6
+    },
+    {
+      "batch_id": "R3_B_pilot_D3_001",
+      "spectra": 22,
+      "phase": "pilot",
+      "exit_code": 0,
+      "seconds": 144.2
+    },
+    {
+      "batch_id": "R3_B_pilot_D4_001",
+      "spectra": 4,
+      "phase": "pilot",
+      "exit_code": 0,
+      "seconds": 31.9
+    },
+    {
+      "batch_id": "R3_B_pilot_D5_001",
+      "spectra": 14,
+      "phase": "pilot",
+      "exit_code": 0,
+      "seconds": 90.9
+    },
+    {
+      "batch_id": "R3_B_pilot_D6_001",
+      "spectra": 6,
+      "phase": "pilot",
+      "exit_code": 0,
+      "seconds": 41.4
+    },
+    {
+      "batch_id": "R3_B_pilot_P1_001",
+      "spectra": 14,
+      "phase": "pilot",
+      "exit_code": 0,
+      "seconds": 90.8
+    },
+    {
+      "batch_id": "R3_B_pilot_P2_001",
+      "spectra": 6,
+      "phase": "pilot",
+      "exit_code": 0,
+      "seconds": 41.3
+    },
+    {
+      "batch_id": "R3_B_pilot_P3_001",
+      "spectra": 10,
+      "phase": "pilot",
+      "exit_code": 0,
+      "seconds": 57.7
+    }
+  ]
+}

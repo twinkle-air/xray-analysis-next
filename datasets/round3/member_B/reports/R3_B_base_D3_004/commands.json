@@ -1,0 +1,53 @@
+[
+  {
+    "action": "audit",
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-B",
+      "<sealed>/reproducibility/generator/fp_competition/app.py",
+      "audit",
+      "--dataset",
+      "<sealed>",
+      "--out",
+      "audit.json"
+    ],
+    "exit_code": 0,
+    "seconds": 1.6968644999942626
+  },
+  {
+    "action": "replay",
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-B",
+      "<sealed>/reproducibility/generator/fp_competition/app.py",
+      "replay",
+      "--dataset",
+      "<sealed>",
+      "--out",
+      "replay.json"
+    ],
+    "exit_code": 0,
+    "seconds": 24.6208043000006
+  },
+  {
+    "action": "pack",
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-B",
+      "<sealed>/reproducibility/generator/fp_competition/app.py",
+      "pack",
+      "--dataset",
+      "<sealed>",
+      "--out",
+      "R3_B_base_D3_004.zip"
+    ],
+    "exit_code": 0,
+    "seconds": 1.9168925999983912
+  }
+]

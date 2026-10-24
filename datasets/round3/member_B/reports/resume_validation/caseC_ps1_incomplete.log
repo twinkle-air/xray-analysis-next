@@ -1,0 +1,4 @@
+[22:02:39] INCOMPLETE R3_B_base_D1_001: sealed batch directory exists without QC evidence
+[22:02:46] plan: total=50 complete=0 pending=49 incomplete=1
+[22:02:46] stop: a sealed batch directory exists without complete QC evidence
+caseC_ps1_exit=3
