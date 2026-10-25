@@ -1,0 +1,81 @@
+{
+  "schema": "round4-D-candidate-checks/1",
+  "status": "passed_D_local_candidate_checks",
+  "errors": [],
+  "candidate_count": 1000,
+  "design_family_count_before_global_merge": 320,
+  "category_counts": {
+    "element_gradient": 400,
+    "matrix_interference": 200,
+    "routine_coverage": 200,
+    "zero_spike": 200
+  },
+  "matrix_counts": {
+    "iron_oxide": 500,
+    "silicate_oxide": 500
+  },
+  "nominal_role_recipe_counts": {
+    "sealed_test_nominal": 100,
+    "train_nominal": 800,
+    "validation_nominal": 100
+  },
+  "nominal_role_family_counts": {
+    "sealed_test_nominal": 32,
+    "train_nominal": 256,
+    "validation_nominal": 32
+  },
+  "variants": {
+    "element_gradient": "one true zero plus nine strictly increasing positive levels spanning trace to major",
+    "zero_spike": "one true zero plus four distinct positive levels near detection thresholds",
+    "matrix_interference": "five paired low-level target/interferent controls with xraylib line-table evidence",
+    "routine_coverage": "one composition per family"
+  },
+  "line_interference_pairs": 40,
+  "line_window_eV": 150.0,
+  "line_evidence_file": "line_interference_evidence.csv",
+  "line_window_status": "candidate_screen_only; detector profile and public round4 energy window not frozen",
+  "matrix_status": "draft_50_50_silicate_iron; requires Round4 public scope review",
+  "exact_zero_labels_verified": 5100,
+  "exact_zero_label_conflicts": 0,
+  "historical_rows_compared": 4800,
+  "historical_source_count": 5,
+  "historical_nearest_threshold_L1_percentage_points": 0.5,
+  "distance_summary": {
+    "candidate_to_history_min_L1_pp": 3.3548908560752526,
+    "background_to_history_min_L1_pp": 3.354951686677696,
+    "candidate_history_links_at_0_5pp": 0,
+    "background_history_links_at_0_5pp": 0,
+    "cross_family_candidate_edges_at_0_5pp": 0
+  },
+  "cross_member_round4_A": {
+    "member": "A",
+    "path": "datasets/round4/member_A/candidates_v1/A_samples.json",
+    "other_candidate_count": 2000,
+    "minimum_L1_percentage_points": 2.7666061500025423,
+    "pairs_at_0_5pp": 0,
+    "exact_composition_matches": 0,
+    "status": "pairwise_screen_only; global four-member closure pending"
+  },
+  "cross_member_round4_C": {
+    "member": "C",
+    "path": "datasets/round4/member_C/candidates/C_samples.json",
+    "other_candidate_count": 1000,
+    "minimum_L1_percentage_points": 2.6808107878561183,
+    "pairs_at_0_5pp": 0,
+    "exact_composition_matches": 0,
+    "status": "pairwise_screen_only; global four-member closure pending"
+  },
+  "cross_member_round4_B": {
+    "status": "pending_B_round4_candidate_publication_and_A_global_closure"
+  },
+  "cross_member_confirmation": "pairwise_A_and_C_screens_done; pending_B_round4_merge_and_A_global_closure",
+  "global_family_closure": "pending_all_round4_candidates_and_round1_2_3_history",
+  "role_and_stage_assignments": "pending_global_freeze",
+  "production_started": false,
+  "spectra_generated": 0,
+  "noise_seeds_allocated": false,
+  "eligible_for_training": false,
+  "scientific_accuracy_validated": false,
+  "range_status": "draft_using_round3_validated_ranges; requires Round4 public scope review and global freeze",
+  "round3_candidate_source_mode": "repository_tree"
+}
