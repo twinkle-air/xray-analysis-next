@@ -1,0 +1,24 @@
+{
+  "schema": "round4-B-candidate-input-identity/1",
+  "member": "B",
+  "builder_sha256": "1b583e64aa9a68849ad916db192228e03c895af6d184986cb38a07bb109a2518",
+  "source_manifest_sha256": "596843f47397be8687cf6eb38483a6646c66de090ab358b12b4e3f30fd10569b",
+  "generator_version": "0.2.1",
+  "candidate_rng": "sha256-derived NumPy default_rng seed; candidate-design-only, not production or spectrum noise",
+  "noise_seeds_allocated": false,
+  "range_status": "draft_using_round3_validated_ranges; requires Round4 public scope review and global freeze",
+  "historical_archive": {
+    "path": "datasets/round3/member_A/inputs/historical_compositions.json",
+    "sha256": "8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473",
+    "bytes": 4260937,
+    "status": "available_historical_evidence_snapshot",
+    "coverage_limit": "Accepted round2 plus known local round1 candidate/pilot/research records; undocumented or unavailable lineage cannot be ruled out."
+  },
+  "spectra_generated": 0,
+  "production_started": false,
+  "runtime": {
+    "python": "3.14.7",
+    "numpy": "2.5.1",
+    "xraylib": "4.3.0"
+  }
+}

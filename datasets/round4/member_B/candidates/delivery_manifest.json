@@ -1,0 +1,77 @@
+{
+  "schema": "round4-B-candidate-delivery/1",
+  "status": "candidate_only_not_production_release",
+  "member": "B",
+  "round_id": "round4",
+  "candidate_count": 1000,
+  "design_family_count_before_global_merge": 320,
+  "production_started": false,
+  "eligible_for_training": false,
+  "files": [
+    {
+      "path": "B_samples.json",
+      "bytes": 9400042,
+      "sha256": "8aa831adcf28f65920eb3873db7ecbcf0298a7c2b1b2a791f265fd172eadc144"
+    },
+    {
+      "path": "candidate_checks.json",
+      "bytes": 3548,
+      "sha256": "46389f2034c1db9d0d98747a614579561bd8ddb57091e3bc456ef75d599b0e7b"
+    },
+    {
+      "path": "candidate_registry.csv",
+      "bytes": 3952041,
+      "sha256": "f9c4b624592f50dc3eac1960dc7e6493272eaed5571b3beed20c293563242e11"
+    },
+    {
+      "path": "coverage.json",
+      "bytes": 7693,
+      "sha256": "9bc091fa498b305b035c963b2ae01d1c815f0c40546ca702ab29e37cab4cb400"
+    },
+    {
+      "path": "cross_family_near_edges.csv",
+      "bytes": 46,
+      "sha256": "727142ec40c20c4e1aecdd1836253598f75948fa4c3c90df79114c62c6524f0b"
+    },
+    {
+      "path": "cross_member_near_edges.csv",
+      "bytes": 50,
+      "sha256": "9fc5645e8e5b21e38146fabaa8516852422a6ad516c0bbf0f7e9a3fd4524d570"
+    },
+    {
+      "path": "family_registry.json",
+      "bytes": 1041867,
+      "sha256": "67f22166931887d5b0ab7101850b9ce81ea2c5623c5d9eeec06d8ef28029fe7b"
+    },
+    {
+      "path": "input_identity.json",
+      "bytes": 1142,
+      "sha256": "927b452f44b2ec55e63e26db2bfad469cbd5af3c8b8a546d89344c4d6c92b3e2"
+    },
+    {
+      "path": "line_interference_evidence.csv",
+      "bytes": 10302,
+      "sha256": "313b6035f54780bf1265932150914ea4180399b205da37c2a0f6d75a6eb43820"
+    },
+    {
+      "path": "nearest_history.csv",
+      "bytes": 139537,
+      "sha256": "8474a31cd95158e5e4bda107e09a087c1c50deab079478ac69137f0fcbd46451"
+    },
+    {
+      "path": "original_background_nearest_history.csv",
+      "bytes": 22411,
+      "sha256": "f8fcb33fc8db035b2afa27d59f30417a30bbb21735d373cd69af6b426beecea8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4031,
+      "sha256": "67c1cbc21ba0076ec21ae7d1c520da5848bd4b1f31b4458506cc666bf0e93476"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 2593,
+      "sha256": "596843f47397be8687cf6eb38483a6646c66de090ab358b12b4e3f30fd10569b"
+    }
+  ]
+}
