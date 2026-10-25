@@ -1,7 +1,7 @@
 {
   "schema": "round4-D-candidate-input-identity/1",
   "member": "D",
-  "builder_sha256": "238d41c92be32d9a4cbe76a0a54963dd9f58a979dd5d30252d553cc15466e7f1",
+  "builder_sha256": "475d665741cf295bcca8d8588a043e1070aaf5111e52d8ab9383b00177230467",
   "source_manifest_sha256": "63e01a61acb1f4433a2edfcfb48e95590e3ce5e266a91cda2277953e63e851a3",
   "generator_version": "0.2.1",
   "candidate_rng": "sha256-derived NumPy default_rng seed; candidate-design-only, not production or spectrum noise",

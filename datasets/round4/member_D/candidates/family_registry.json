@@ -392,7 +392,7 @@
         "R4_D_ELEMENT_GRADIENT_0006_GRADIENT_10"
       ],
       "nearest_historical_source": "round1_available/A-part-20261018/A01184",
-      "minimum_candidate_history_L1_percentage_points": 4.888004871104663,
+      "minimum_candidate_history_L1_percentage_points": 4.934806696198559,
       "nearest_original_background_history_source": "round1_available/A-part-20261018/A01184",
       "minimum_original_background_history_L1_percentage_points": 5.0367547928996625,
       "historical_train_only_constraint_pending": false,
@@ -2504,7 +2504,7 @@
         "R4_D_ELEMENT_GRADIENT_0038_GRADIENT_10"
       ],
       "nearest_historical_source": "round2/D/D-SIL-R-019",
-      "minimum_candidate_history_L1_percentage_points": 5.568222500499855,
+      "minimum_candidate_history_L1_percentage_points": 5.507765902029504,
       "nearest_original_background_history_source": "round2/D/D-SIL-R-019",
       "minimum_original_background_history_L1_percentage_points": 6.062750704381743,
       "historical_train_only_constraint_pending": false,
@@ -3002,7 +3002,7 @@
         "R4_D_ZERO_SPIKE_0006_SPIKE_04"
       ],
       "nearest_historical_source": "round1_available/A-part-20261018/A00736",
-      "minimum_candidate_history_L1_percentage_points": 5.038321042683425,
+      "minimum_candidate_history_L1_percentage_points": 5.091857571102729,
       "nearest_original_background_history_source": "round1_available/A-part-20261018/A00852",
       "minimum_original_background_history_L1_percentage_points": 5.056106380647096,
       "historical_train_only_constraint_pending": false,
@@ -4954,7 +4954,7 @@
         "R4_D_ZERO_SPIKE_0038_SPIKE_04"
       ],
       "nearest_historical_source": "round2/B/B2-FEO-REG-042",
-      "minimum_candidate_history_L1_percentage_points": 8.065355587860049,
+      "minimum_candidate_history_L1_percentage_points": 7.985077890769827,
       "nearest_original_background_history_source": "round1_research/B00548",
       "minimum_original_background_history_L1_percentage_points": 7.697042357728242,
       "historical_train_only_constraint_pending": false,
@@ -5538,7 +5538,7 @@
         "R4_D_MATRIX_INTERFERENCE_0006_TARGET_HIGH_INTERFERENT_HIGH"
       ],
       "nearest_historical_source": "round3/R3_C_routine_0363_V01",
-      "minimum_candidate_history_L1_percentage_points": 4.957049781625729,
+      "minimum_candidate_history_L1_percentage_points": 4.956273534218547,
       "nearest_original_background_history_source": "round3/R3_C_routine_0363_V01",
       "minimum_original_background_history_L1_percentage_points": 6.187425604361535,
       "historical_train_only_constraint_pending": false,
@@ -8155,8 +8155,8 @@
         "R4_D_MATRIX_INTERFERENCE_0040_TARGET_LOW_INTERFERENT_HIGH",
         "R4_D_MATRIX_INTERFERENCE_0040_TARGET_HIGH_INTERFERENT_HIGH"
       ],
-      "nearest_historical_source": "round3/R3_C_routine_0359_V01",
-      "minimum_candidate_history_L1_percentage_points": 6.636518758225265,
+      "nearest_historical_source": "round2/B/B2-FEO-REG-025",
+      "minimum_candidate_history_L1_percentage_points": 6.839167803911575,
       "nearest_original_background_history_source": "round3/R3_C_routine_0359_V01",
       "minimum_original_background_history_L1_percentage_points": 6.978736124005441,
       "historical_train_only_constraint_pending": false,

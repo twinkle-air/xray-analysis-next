@@ -43,7 +43,7 @@ LINE_WINDOW_EV = 150.0
 FOCUS = ("Na", "Mg", "Al", "Si", "P", "S", "Cl", "K")
 CARRIERS = {
     "Na": "Na2O", "Mg": "MgO", "Al": "Al2O3", "Si": "SiO2", "Fe": "Fe2O3T",
-    "P": "P2O5", "S": "SO3", "K": "K2O", "Ca": "CaO", "Ti": "TiO2", "Mn": "MnO",
+    "P": "P2O5", "K": "K2O", "Ca": "CaO", "Ti": "TiO2", "Mn": "MnO",
 }
 REGISTRY_FIELDS = [
     "candidate_id", "member", "design_family_id", "parent_family_id",
@@ -866,7 +866,7 @@ def readme_text(checks: dict) -> str:
 - 基体按硅酸盐/氧化物与富铁氧化物各半配置：{checks['matrix_counts']['silicate_oxide']} / {checks['matrix_counts']['iron_oxide']} 个配方。
 - 名义用途预算（仅候选阶段，A 全局冻结后才生效）：训练 {roles['train_nominal']}、验证 {roles['validation_nominal']}、封存测试 {roles['sealed_test_nominal']} 个配方；对应 256/32/32 个完整族。
 
-每个配方记录完整 used composition、原始氧化物/痕量背景、换算结果、受控元素值、移除/加入的载体和质量补偿比例。D 的主题是测量条件与样品状态变化（增益/零点、分辨率、低能响应、本底与计数水平、允许的基体状态），但候选阶段只固定组成：真实增益/零点、分辨率、本底和计数条件实例必须等 A 的公共第四轮 profile 冻结后再分配。为支撑该主题，梯度和零/加标族在覆盖全部 32 个目标元素之外，重点复测 Na、Mg、Al、Si、P、S、Cl、K 这些低能分析线元素；全部配方保留完整 32 个目标元素标签和 O 基体闭合，真实标签是实际 used_percent。
+每个配方记录完整 used composition、原始氧化物/痕量背景、换算结果、受控元素值、移除/加入的载体和质量补偿比例。受控 S 和 Cl 以痕量形式加入，避免通过 CaSO4/NaCl 载体同时引入未受控的 Ca/Na；移除的载体与缩放比例逐条记录在补偿账目中。D 的主题是测量条件与样品状态变化（增益/零点、分辨率、低能响应、本底与计数水平、允许的基体状态），但候选阶段只固定组成：真实增益/零点、分辨率、本底和计数条件实例必须等 A 的公共第四轮 profile 冻结后再分配。为支撑该主题，梯度和零/加标族在覆盖全部 32 个目标元素之外，重点复测 Na、Mg、Al、Si、P、S、Cl、K 这些低能分析线元素；全部配方保留完整 32 个目标元素标签和 O 基体闭合，真实标签是实际 used_percent。
 
 ## 干扰控制的线表证据
 
