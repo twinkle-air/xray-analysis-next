@@ -1,0 +1,214 @@
+{
+  "round_id": "round4",
+  "plan_version": "1.0",
+  "status": "planning_published_not_frozen",
+  "usable_for_generation": false,
+  "production_started": false,
+  "actual_spectra": 0,
+  "new_recipes_target": 5000,
+  "nominal_design_families_before_merge": 1600,
+  "conditions_per_recipe": 10,
+  "noise_realizations_per_condition": 2,
+  "new_spectra_target": 100000,
+  "new_role_spectra_targets": {
+    "train": 80000,
+    "validation": 10000,
+    "sealed_test": 10000
+  },
+  "existing_effective_spectra_reference": 13500,
+  "existing_training_spectra_reference": 10800,
+  "combined_training_if_all_new_train_accepted": 90800,
+  "members": {
+    "A": {
+      "member": "A",
+      "units": 2,
+      "recipes_target": 2000,
+      "design_families_before_global_merge_target": 640,
+      "spectra_target": 40000,
+      "recipe_types": {
+        "ladder": 800,
+        "negative_spike": 400,
+        "interference": 400,
+        "routine": 400
+      },
+      "family_types": {
+        "ladder_10_variants": 80,
+        "negative_spike_5_variants": 80,
+        "interference_5_variants": 80,
+        "routine_1_variant": 400
+      },
+      "roles_target": {
+        "train": {
+          "recipes": 1600,
+          "families_before_merge": 512,
+          "spectra": 32000
+        },
+        "validation": {
+          "recipes": 200,
+          "families_before_merge": 64,
+          "spectra": 4000
+        },
+        "sealed_test": {
+          "recipes": 200,
+          "families_before_merge": 64,
+          "spectra": 4000
+        }
+      },
+      "training_cumulative_targets": {
+        "stage1": 8000,
+        "stage2": 16000,
+        "stage3": 32000
+      },
+      "pilot_train_spectra_included_in_stage1": 400,
+      "theme": "主量基体与低能元素响应：Na/Mg/Al/Si/Fe；同时负责共同配置、全局去重与冻结、阶段模型比较。"
+    },
+    "B": {
+      "member": "B",
+      "units": 1,
+      "recipes_target": 1000,
+      "design_families_before_global_merge_target": 320,
+      "spectra_target": 20000,
+      "recipe_types": {
+        "ladder": 400,
+        "negative_spike": 200,
+        "interference": 200,
+        "routine": 200
+      },
+      "family_types": {
+        "ladder_10_variants": 40,
+        "negative_spike_5_variants": 40,
+        "interference_5_variants": 40,
+        "routine_1_variant": 200
+      },
+      "roles_target": {
+        "train": {
+          "recipes": 800,
+          "families_before_merge": 256,
+          "spectra": 16000
+        },
+        "validation": {
+          "recipes": 100,
+          "families_before_merge": 32,
+          "spectra": 2000
+        },
+        "sealed_test": {
+          "recipes": 100,
+          "families_before_merge": 32,
+          "spectra": 2000
+        }
+      },
+      "training_cumulative_targets": {
+        "stage1": 4000,
+        "stage2": 8000,
+        "stage3": 16000
+      },
+      "pilot_train_spectra_included_in_stage1": 400,
+      "theme": "重叠峰及吸收/增强干扰：V/Cr、Mn/Fe、Co/Ni、As/Pb等组合须依据实际线表和能窗核实，不能仅凭元素名假设干扰。"
+    },
+    "C": {
+      "member": "C",
+      "units": 1,
+      "recipes_target": 1000,
+      "design_families_before_global_merge_target": 320,
+      "spectra_target": 20000,
+      "recipe_types": {
+        "ladder": 400,
+        "negative_spike": 200,
+        "interference": 200,
+        "routine": 200
+      },
+      "family_types": {
+        "ladder_10_variants": 40,
+        "negative_spike_5_variants": 40,
+        "interference_5_variants": 40,
+        "routine_1_variant": 200
+      },
+      "roles_target": {
+        "train": {
+          "recipes": 800,
+          "families_before_merge": 256,
+          "spectra": 16000
+        },
+        "validation": {
+          "recipes": 100,
+          "families_before_merge": 32,
+          "spectra": 2000
+        },
+        "sealed_test": {
+          "recipes": 100,
+          "families_before_merge": 32,
+          "spectra": 2000
+        }
+      },
+      "training_cumulative_targets": {
+        "stage1": 4000,
+        "stage2": 8000,
+        "stage3": 16000
+      },
+      "pilot_train_spectra_included_in_stage1": 400,
+      "theme": "零含量—加标配对、低含量梯度和计数统计：覆盖检出阈值附近，真实标签为实际组成。"
+    },
+    "D": {
+      "member": "D",
+      "units": 1,
+      "recipes_target": 1000,
+      "design_families_before_global_merge_target": 320,
+      "spectra_target": 20000,
+      "recipe_types": {
+        "ladder": 400,
+        "negative_spike": 200,
+        "interference": 200,
+        "routine": 200
+      },
+      "family_types": {
+        "ladder_10_variants": 40,
+        "negative_spike_5_variants": 40,
+        "interference_5_variants": 40,
+        "routine_1_variant": 200
+      },
+      "roles_target": {
+        "train": {
+          "recipes": 800,
+          "families_before_merge": 256,
+          "spectra": 16000
+        },
+        "validation": {
+          "recipes": 100,
+          "families_before_merge": 32,
+          "spectra": 2000
+        },
+        "sealed_test": {
+          "recipes": 100,
+          "families_before_merge": 32,
+          "spectra": 2000
+        }
+      },
+      "training_cumulative_targets": {
+        "stage1": 4000,
+        "stage2": 8000,
+        "stage3": 16000
+      },
+      "pilot_train_spectra_included_in_stage1": 400,
+      "theme": "测量条件与样品状态变化：增益/零点、分辨率、低能响应、背景/计数水平及允许的基体状态；未见条件测试配置只作QC。"
+    }
+  },
+  "training_stage_cumulative_new": {
+    "stage1": 20000,
+    "stage2": 40000,
+    "stage3": 80000
+  },
+  "test_condition_spectra_targets": {
+    "in_distribution": 5000,
+    "unseen_response_conditions": 5000
+  },
+  "freeze_prerequisites": [
+    "all four candidate registries",
+    "historical provenance and cross-round family closure",
+    "complete generator/profile QA and source hashes",
+    "global role and stage assignments",
+    "seed/opaque-ID registry",
+    "actual command and production release"
+  ],
+  "counts_are_targets_not_delivered": true,
+  "strict_external_blind_validation_established": false
+}
