@@ -1,0 +1,30 @@
+{
+  "status": "approved_for_full_production",
+  "approved_on": "2026-10-25",
+  "approved_by": "twinkle-air (project owner A)",
+  "approval_mode": "explicit_owner_instruction",
+  "owner_statement": "正式放行 release吧，无需太过复杂",
+  "additional_collaborator_review_waived": true,
+  "formal_collaborator_review_claimed": false,
+  "merged_source_PR": "https://github.com/twinkle-air/xray-analysis-next/pull/51",
+  "merged_source_commit": "7de0373f09660d7c6b5ccc276535a6d5f7538d51",
+  "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
+  "production_admission_passed": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "full_quota": {
+    "A": 40000,
+    "B": 20000,
+    "C": 20000,
+    "D": 20000
+  },
+  "pilot_required": false,
+  "pilot_spectra": 0,
+  "release_rejection_cases_passed": 7,
+  "frozen_inputs_changed": false,
+  "production_runner_changed": false,
+  "spectra_generated_by_activation": 0
+}

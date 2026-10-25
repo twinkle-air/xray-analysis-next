@@ -1,0 +1,43 @@
+{
+  "status": "passed_no_spectrum_rejection_checks",
+  "cases": [
+    {
+      "case": "unapproved_release",
+      "rejected": true,
+      "message": "Complete production release is not approved for this member"
+    },
+    {
+      "case": "wrong_freeze_hash",
+      "rejected": true,
+      "message": "Release targets a different freeze"
+    },
+    {
+      "case": "wrong_tool_hash",
+      "rejected": true,
+      "message": "Production tool changed: prepare_conditions.py"
+    },
+    {
+      "case": "missing_collaborator_review_evidence",
+      "rejected": true,
+      "message": "Approved release must bind the collaborator review/merge evidence"
+    },
+    {
+      "case": "sealed_mode_not_requested",
+      "rejected": true,
+      "message": "Full member quota includes sealed-QC records; pass --include-sealed-qc"
+    },
+    {
+      "case": "changed_frozen_input",
+      "rejected": true,
+      "message": "Frozen file changed: scope.json"
+    },
+    {
+      "case": "changed_pinned_candidate",
+      "rejected": true,
+      "message": "Pinned candidate/history source changed: datasets/round4/member_A/candidates_v1/A_samples.json"
+    }
+  ],
+  "case_count": 7,
+  "spectra_generated": 0,
+  "fixtures": "Invalid release objects and hashes were injected only in memory; the real release and all source/input files were left unchanged."
+}

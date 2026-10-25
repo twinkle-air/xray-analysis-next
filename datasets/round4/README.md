@@ -1,6 +1,9 @@
 # 第四轮数据构建工作区
 
-**状态：四方5,000个候选已合并，全局亲缘检查与完整输入名册已准备为[冻结审查版](shared/freeze_v1/README.md)，实际新增谱为0；完整生产release待协作者审查。** 本目录不是已验收数据集。沿用第三轮的planning/shared/member_A～D结构。
+正式放行（2026-10-25）：项目负责人已明确授权ABCD完整生产，追加协作者审查已由负责人豁免。A 40,000谱，B/C/D各20,000谱，不做试片。当前准入以[production_release_v1.json](shared/releases/production_release_v1.json)为准；封存输入内的待审查文字是形成时的历史状态。
+
+
+**状态：四方5,000个候选已合并，全局亲缘检查与完整输入名册已准备为[冻结审查版](shared/freeze_v1/README.md)，实际新增谱为0；完整生产release已由负责人正式放行。** 本目录不是已验收数据集。沿用第三轮的planning/shared/member_A～D结构。
 
 - [唯一当前方案](planning/第四轮数据构建方案.md) · [机器可读分工与数量](planning/ABCD分工与数量.json)
 - [公共准备](shared/README.md) · [成员自检、验收与封存规则](shared/验收与封存规则.md) · [填写模板](shared/templates/README.md)

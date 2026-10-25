@@ -1,8 +1,8 @@
 {
   "round_id": "round4",
   "plan_version": "1.1",
-  "status": "global_freeze_prepared_pending_review",
-  "usable_for_generation": false,
+  "status": "production_release_approved_by_owner",
+  "usable_for_generation": true,
   "production_started": false,
   "actual_spectra": 0,
   "new_recipes_target": 5000,
@@ -218,5 +218,7 @@
   "production_mode": "full_member_quota_after_approved_global_freeze",
   "training_stages_are_production_gates": false,
   "all_member_candidates_merged": true,
-  "actual_candidate_recipes": 5000
+  "actual_candidate_recipes": 5000,
+  "production_release_authorized": true,
+  "production_authorization": "explicit_project_owner_instruction_2026-10-25"
 }

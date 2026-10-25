@@ -1,6 +1,9 @@
 # 第四轮完整配额生产工具
 
-这些是真实工具；当前 release 的 `production_approved=false`，因此目前只能做无产谱预检。没有 400 谱试片，也不需要等待逐阶段生成。
+正式放行（2026-10-25）：项目负责人已明确授权ABCD完整生产，追加协作者审查已由负责人豁免。A 40,000谱，B/C/D各20,000谱，不做试片。当前准入以[production_release_v1.json](../releases/production_release_v1.json)为准；封存输入内的待审查文字是形成时的历史状态。
+
+
+当前 release 已由项目负责人明确授权，`production_approved=true`，可以在本人无产谱预检通过后执行完整配额。没有 400 谱试片，也不需要等待逐阶段生成。
 
 ## 预检
 
@@ -12,9 +15,9 @@ python -B datasets/round4/shared/production_tools/run_member.py --repository . -
 
 `--dry-run` 核对全部冻结文件和源码哈希、依赖版本、本人配额、每条种子/条件、整族用途及封存隔离。报告写在冻结目录之外。失败时先处理真实错误，不能把模板状态改成通过。
 
-## 放行后的全量生产
+## 全量生产
 
-当前命令会因未批准的 release 而拒绝产谱。协作者审查并合并本冻结和工具后，A 登记 PR/合并提交/审查者证据、复核工具和冻结清单哈希，才将完整生产 release 放行。届时执行：
+PR #51 已合并；负责人已明确授权正式放行并豁免追加审查。冻结与工具哈希核对通过后，直接执行：
 
 ```powershell
 python -B datasets/round4/shared/production_tools/run_member.py --repository . --freeze datasets/round4/shared/freeze_v1 --release datasets/round4/shared/releases/production_release_v1.json --member A --out outputs/round4-A-production --workers 4 --minimum-free-gib 10 --include-sealed-qc

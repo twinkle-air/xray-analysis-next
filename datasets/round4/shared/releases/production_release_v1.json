@@ -1,8 +1,8 @@
 {
   "schema": "round4-complete-production-release/1",
-  "status": "pending_collaborator_review",
-  "production_approved": false,
-  "usable_for_generation": false,
+  "status": "approved_for_full_production",
+  "production_approved": true,
+  "usable_for_generation": true,
   "members": [
     "A",
     "B",
@@ -24,10 +24,20 @@
     "prepare_global.py": "bb53d62d2dac144449f2f9656578d8f7ccacce897a9e3b50ebd33fb3259b3f51",
     "run_member.py": "2388be5107711088120b217a6705c202c78b2cd08634b33f5b4973a0325a8468",
     "verify_freeze.py": "b467b156810c5a05f36a9d80e3e97c008f195785fddd2bdc996293b8f418f847",
-    "verify_release_gates.py": "86c7d8bb3f779cd7790be709b406d4b2020cb1dc3cf9cab1bd6b4b4b8fe26bbd"
+    "verify_release_gates.py": "1fc129d8d3d66803316fddff9f63d95209f78f1de29a59512ea1c9fdf79b10a1"
   },
-  "review_evidence": null,
+  "review_evidence": {
+    "pull_request_url": "https://github.com/twinkle-air/xray-analysis-next/pull/51",
+    "merged_commit": "7de0373f09660d7c6b5ccc276535a6d5f7538d51",
+    "reviewed_by": "twinkle-air (explicit owner release authorization; additional collaborator review waived)",
+    "approval_mode": "explicit_project_owner_authorization",
+    "formal_collaborator_approval_claimed": false
+  },
   "model_training_inclusion_approved": false,
   "sealed_data_policy": "generation/physical QC only until final model/metric lock; never training/calibration/dictionary/selection",
-  "remaining_action": "Another collaborator reviews and merges the immutable freeze and tools; owner verifies merge evidence and unchanged hashes before production approval."
+  "remaining_action": "Members pull current main, run no-spectrum preflight, then execute their complete quota without a pilot.",
+  "approved_by": "twinkle-air (project owner A)",
+  "approved_on": "2026-10-25",
+  "authorization_basis": "Explicit owner instruction in this chat: 正式放行 release吧，无需太过复杂",
+  "additional_collaborator_review_required": false
 }
