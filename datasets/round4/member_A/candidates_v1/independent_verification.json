@@ -1,0 +1,11 @@
+{
+  "schema": "round4-A-independent-candidate-review/1",
+  "status": "passed",
+  "errors": [],
+  "candidate_count": 2000,
+  "design_family_count_before_global_merge": 640,
+  "historical_global_closure": "pending all members and global role freeze",
+  "production_started": false,
+  "spectra_generated": 0,
+  "eligible_for_training": false
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "round4-A-candidate-input-identity/1",
+  "builder_sha256": "a80bf3d37a97e2084b12b2cc5e3cb98b711de940f5e31179d1348fc13222c7c6",
+  "source_manifest_sha256": "3651989f973a18355405b5e33ac763a319f1a09158f0e4db2a3eb1bcb0e64e69",
+  "generator_version": "0.2.1",
+  "candidate_rng": "sha256-derived NumPy default_rng seed; candidate-design-only, not production or spectrum noise",
+  "noise_seeds_allocated": false,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.4.6",
+    "xraylib": "4.3.0"
+  }
+}
