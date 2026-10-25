@@ -1,0 +1,58 @@
+{
+  "schema": "round4-A-candidate-checks/1",
+  "status": "passed_A_local_candidate_checks",
+  "errors": [],
+  "candidate_count": 2000,
+  "design_family_count_before_global_merge": 640,
+  "category_counts": {
+    "element_gradient": 800,
+    "matrix_interference": 400,
+    "routine_coverage": 400,
+    "zero_spike": 400
+  },
+  "matrix_counts": {
+    "iron_oxide": 1000,
+    "silicate_oxide": 1000
+  },
+  "recipes_by_focus_element": {
+    "Na": 48,
+    "Mg": 48,
+    "Al": 48,
+    "Si": 48,
+    "Fe": 48
+  },
+  "variants": {
+    "element_gradient": "one true zero plus nine strictly increasing positive levels",
+    "zero_spike": "one true zero plus four distinct positive levels",
+    "matrix_interference": "five paired target/interferent controls",
+    "routine_coverage": "one composition per family"
+  },
+  "historical_rows_compared": 4800,
+  "historical_source_count": 5,
+  "historical_nearest_threshold_L1_percentage_points": 0.5,
+  "distance_summary": {
+    "candidate_to_history_min_L1_pp": 3.0310645736700845,
+    "background_to_history_min_L1_pp": 3.0310645736700845,
+    "candidate_history_links_at_0_5pp": 0,
+    "background_history_links_at_0_5pp": 0,
+    "cross_family_candidate_edges_at_0_5pp": 0
+  },
+  "cross_member_confirmation": "pending_B_C_D",
+  "global_family_closure": "pending_all_round4_candidates_and_round1_2_3_history",
+  "role_and_stage_assignments": "pending_global_freeze",
+  "production_started": false,
+  "spectra_generated": 0,
+  "noise_seeds_allocated": false,
+  "eligible_for_training": false,
+  "scientific_accuracy_validated": false,
+  "range_status": "draft_using_round3_validated_ranges; requires Round4 public scope review and global freeze",
+  "round3_candidate_source_mode": "repository_tree",
+  "output_record_files": [
+    "A_samples.json",
+    "family_registry.json",
+    "candidate_registry.csv",
+    "nearest_history.csv",
+    "original_background_nearest_history.csv",
+    "cross_family_near_edges.csv"
+  ]
+}
