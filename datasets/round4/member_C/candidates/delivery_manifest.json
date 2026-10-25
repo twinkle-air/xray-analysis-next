@@ -1,0 +1,87 @@
+{
+  "schema": "round4-C-candidate-delivery/1",
+  "status": "candidate_only_not_production_release",
+  "member": "C",
+  "round_id": "round4",
+  "candidate_count": 1000,
+  "design_family_count_before_global_merge": 320,
+  "production_started": false,
+  "eligible_for_training": false,
+  "files": [
+    {
+      "path": "C_samples.json",
+      "bytes": 13794733,
+      "sha256": "c70fc543cf3cb07509ce4049702a90e14dee46ba4641bfaa52587777e6254b28"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3880,
+      "sha256": "b90df66d727b4fc254e2a23dbfb8b554b541e50b2077e6e265462f5f1644fa5e"
+    },
+    {
+      "path": "candidate_checks.json",
+      "bytes": 2787,
+      "sha256": "75f29eb84fa945661b36b8806a94b7779de9fc56073ff4bb8f2b36ed042d6d35"
+    },
+    {
+      "path": "candidate_registry.csv",
+      "bytes": 7298048,
+      "sha256": "c54b7b3059f49f31f6ce53ea55d5d2b57209e3e8a6a1e3173fd6744f31d77fd1"
+    },
+    {
+      "path": "coverage.json",
+      "bytes": 12760,
+      "sha256": "f14ae934e6dbdbedd1d889a61d4936a235f7cba2f1e55119d82298c51a52b77a"
+    },
+    {
+      "path": "cross_family_near_edges.csv",
+      "bytes": 71,
+      "sha256": "ae061a470c4304d601111d9550e45063c38a119b3effc9f9608a20616215c72d"
+    },
+    {
+      "path": "cross_member_near_edges.csv",
+      "bytes": 59,
+      "sha256": "429cd7e97f92955c91517a3452f0b5f7a467d468127b6e0fc28cf9b6a90373ca"
+    },
+    {
+      "path": "family_registry.json",
+      "bytes": 746002,
+      "sha256": "73244829881c568d7c8fc762ca7a3cd0ca1b8a42de09c3a581182536565dc753"
+    },
+    {
+      "path": "independent_verification.json",
+      "bytes": 1559,
+      "sha256": "b8916955d5a10757ca03d1284bf11262cf5abbe030c47bc9f30251afeaa7021a"
+    },
+    {
+      "path": "input_identity.json",
+      "bytes": 2488,
+      "sha256": "6de85dbce229069b5e46a3efef376c6ca856ad82ad8fda2ca0c8067cf93d84ef"
+    },
+    {
+      "path": "line_interference_evidence.csv",
+      "bytes": 10295,
+      "sha256": "24b24f081e6bab2d0a6049ad2e179ff628963bd1b365884514367cefb3a4e49a"
+    },
+    {
+      "path": "nearest_history.csv",
+      "bytes": 183554,
+      "sha256": "fe23065df380dae96aee8ef3dc06c20bef49985010dc546e76b5291b1effc606"
+    },
+    {
+      "path": "original_background_nearest_history.csv",
+      "bytes": 44049,
+      "sha256": "40f41aec0c3b44557f8929c1919e4a6dd9126513900de2f424ab58344c1bcc5b"
+    },
+    {
+      "path": "original_backgrounds.json",
+      "bytes": 772935,
+      "sha256": "292cbc23ffa2a6f6c64f1221c9ce966cd7c3bb0293d637c7f7f618cef4668e89"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 3676,
+      "sha256": "af0e77750ba58f2505d0b355dcdbe50e2989849830e18ced829557955d95a296"
+    }
+  ]
+}

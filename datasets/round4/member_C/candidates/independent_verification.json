@@ -1,0 +1,49 @@
+{
+  "schema": "round4-C-independent-candidate-review/1",
+  "status": "passed",
+  "errors": [],
+  "candidate_count": 1000,
+  "design_family_count_before_global_merge": 320,
+  "category_counts": {
+    "element_gradient": 400,
+    "zero_spike": 200,
+    "matrix_interference": 200,
+    "routine_coverage": 200
+  },
+  "matrix_counts": {
+    "iron_oxide": 500,
+    "silicate_oxide": 500
+  },
+  "nominal_role_recipe_counts": {
+    "train_nominal": 800,
+    "validation_nominal": 100,
+    "sealed_test_nominal": 100
+  },
+  "nominal_role_family_counts": {
+    "train_nominal": 256,
+    "validation_nominal": 32,
+    "sealed_test_nominal": 32
+  },
+  "line_interference_pairs": 40,
+  "line_window_eV": 150.0,
+  "historical_rows_compared": 4800,
+  "distance_summary": {
+    "candidate_to_history_min_L1_pp": 3.798179582415719,
+    "background_to_history_min_L1_pp": 3.798179582415719,
+    "candidate_history_links_at_0_5pp": 0,
+    "background_history_links_at_0_5pp": 0,
+    "cross_family_candidate_edges_at_0_5pp": 0
+  },
+  "cross_member_round4_A": {
+    "path": "datasets/round4/member_A/candidates_v1/A_samples.json",
+    "other_candidate_count": 2000,
+    "minimum_L1_percentage_points": 2.9341830448061423,
+    "pairs_at_0_5pp": 0,
+    "exact_composition_matches": 0,
+    "status": "pairwise_screen_only; global four-member closure pending"
+  },
+  "historical_global_closure": "pending all members and global role freeze",
+  "production_started": false,
+  "spectra_generated": 0,
+  "eligible_for_training": false
+}

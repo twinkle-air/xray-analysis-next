@@ -1,0 +1,55 @@
+{
+  "schema": "round4-C-candidate-input-identity/1",
+  "member": "C",
+  "builder_sha256": "963f998033f85997a88c275e16adecda77078ed34efb60fafa267a119ff087e8",
+  "source_manifest_sha256": "f523c65f66cb34bdce5a21de6b11b0b0d5fd4c3acf78e1a675b915b709b18702",
+  "generator_version": "0.2.1",
+  "candidate_rng": "sha256-derived NumPy default_rng seed; candidate-design-only, not production or spectrum noise",
+  "noise_seeds_allocated": false,
+  "range_status": "draft_using_round3_validated_ranges; requires Round4 public scope review and global freeze",
+  "historical_archive": {
+    "path": "datasets/round3/member_A/inputs/historical_compositions.json",
+    "sha256": "8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473",
+    "bytes": 4260937,
+    "status": "available_historical_evidence_snapshot",
+    "coverage_limit": "Accepted round2 plus known local round1 candidate/pilot/research records; undocumented or unavailable lineage cannot be ruled out."
+  },
+  "round3_candidate_sources": [
+    {
+      "path": "datasets/round3/member_A/candidates_v1/A_samples.json",
+      "sha256": "ba95f56fb8974e7b6319fb474f1c609ec2a24c40c77db77e6a96e9782963755a",
+      "bytes": 3130542,
+      "records": 250,
+      "coverage": "Round3 member A candidate compositions; all were visible in the shared repository"
+    },
+    {
+      "path": "datasets/round3/member_B/candidates/B_samples.json",
+      "sha256": "bb61407dc09323e31706f506fd38e28145963fd577e7096604b8f24c7e8e2cf8",
+      "bytes": 3111637,
+      "records": 250,
+      "coverage": "Round3 member B candidate compositions; all were visible in the shared repository"
+    },
+    {
+      "path": "datasets/round3/member_C/candidates/C_samples.json",
+      "sha256": "ad78e2e8d1279d9adaad67676bb99cad7426906ebde1a1bac2e370142536c168",
+      "bytes": 3140042,
+      "records": 250,
+      "coverage": "Round3 member C candidate compositions; all were visible in the shared repository"
+    },
+    {
+      "path": "datasets/round3/member_D/candidates/D_samples.json",
+      "sha256": "f7120fdf413cb3d1bd46229f1029d0fa8448a2281038d366a193a2547f1d44a1",
+      "bytes": 3126611,
+      "records": 250,
+      "coverage": "Round3 member D candidate compositions; all were visible in the shared repository"
+    }
+  ],
+  "spectra_generated": 0,
+  "production_started": false,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "xraylib": "4.3.0"
+  }
+}
