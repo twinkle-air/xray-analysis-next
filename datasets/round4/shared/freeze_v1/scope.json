@@ -1,0 +1,87 @@
+{
+  "targets": [
+    "Na",
+    "Mg",
+    "Al",
+    "Si",
+    "P",
+    "S",
+    "Cl",
+    "K",
+    "Ca",
+    "Ti",
+    "V",
+    "Cr",
+    "Mn",
+    "Fe",
+    "Co",
+    "Ni",
+    "Cu",
+    "Zn",
+    "As",
+    "Se",
+    "Rb",
+    "Sr",
+    "Y",
+    "Zr",
+    "Nb",
+    "Mo",
+    "Cd",
+    "Sn",
+    "Sb",
+    "Ba",
+    "W",
+    "Pb"
+  ],
+  "target_unit": "elemental_mass_percent",
+  "ppm_per_percent": 10000,
+  "matrix_elements": [
+    "O"
+  ],
+  "oxygen_is_prediction_target": false,
+  "composition_labels": "full normalized used_percent, never normalize the 32 targets alone",
+  "source_candidate_files": {
+    "A": {
+      "path": "datasets/round4/member_A/candidates_v1/A_samples.json",
+      "sha256": "d8e7ebfcc417ecb32c5f99a45dede77d5fe74485cf1f253c78dcbb4c811c32d4"
+    },
+    "B": {
+      "path": "datasets/round4/member_B/candidates/B_samples.json",
+      "sha256": "8aa831adcf28f65920eb3873db7ecbcf0298a7c2b1b2a791f265fd172eadc144"
+    },
+    "C": {
+      "path": "datasets/round4/member_C/candidates/C_samples.json",
+      "sha256": "c70fc543cf3cb07509ce4049702a90e14dee46ba4641bfaa52587777e6254b28"
+    },
+    "D": {
+      "path": "datasets/round4/member_D/candidates/D_samples.json",
+      "sha256": "59911b1f8947ac73e7767c768ba6ae2ab5378d4029fc02d3fcdb08d229b0ee63"
+    }
+  },
+  "generator_version": "0.2.2",
+  "physical_model_version": "0.2.0",
+  "physics_core_unchanged": true,
+  "physics_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+  "dataset_wrapper_source_diff": "make_plan accepts a complete profile_override for each input condition; both repeats retain it; native audit/replay reconstruct those explicit jobs",
+  "atomic_library": "xraylib",
+  "environment": {
+    "python": "3.12.14",
+    "implementation": "CPython",
+    "system": "Windows",
+    "machine": "AMD64",
+    "packages": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "xraylib": "4.3.0",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5"
+    },
+    "bit_generator": "PCG64",
+    "thread_environment": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null
+    }
+  },
+  "coverage_limit": "Inherited homogeneous FP model, source >=1keV line cutoff, no newly validated real-device calibration or grain/moisture/container model"
+}

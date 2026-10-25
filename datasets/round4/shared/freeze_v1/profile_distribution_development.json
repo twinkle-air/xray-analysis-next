@@ -1,0 +1,81 @@
+{
+  "status": "frozen_design_proposal_for_review",
+  "ranges": {
+    "gain_relative": [
+      -0.004,
+      0.004
+    ],
+    "zero_offset_keV": [
+      0.0,
+      0.024
+    ],
+    "noise_fwhm_multiplier": [
+      1.0,
+      1.12
+    ],
+    "live_time_multiplier": [
+      1.0,
+      3.0
+    ],
+    "exit_air_offset_cm": [
+      0.0,
+      0.4
+    ]
+  },
+  "anchors": {
+    "P1": {
+      "path": "datasets/round3/shared/preparation_v1/development_profiles/P1.json",
+      "sha256": "e50445c38014adb169d766202df1e84f48b9ea86d72659ca5029ea73bad1f221"
+    },
+    "P2": {
+      "path": "datasets/round3/shared/preparation_v1/development_profiles/P2.json",
+      "sha256": "a60fe0c574b7c9e03f0448632ed34b4f19e634aa0be04b59ab5e625430415e03"
+    },
+    "P3": {
+      "path": "datasets/round3/shared/preparation_v1/development_profiles/P3.json",
+      "sha256": "0e866901f7243eaeb51e323535198c17c52f7eb42abe18a4b4e0b0ad691cd351"
+    },
+    "D1": {
+      "path": "datasets/round3/shared/preparation_v1/development_profiles/D1.json",
+      "sha256": "4f0accd43f895b11248b7c44f7ee3d55c1c1b5cf94eb2a3d8438652cc37202d1"
+    },
+    "D2": {
+      "path": "datasets/round3/shared/preparation_v1/development_profiles/D2.json",
+      "sha256": "f26ddacc79d3b9dea091aca881a3976584b5582b2181bdffd6c9fa14968e3488"
+    },
+    "D3": {
+      "path": "datasets/round3/shared/preparation_v1/development_profiles/D3.json",
+      "sha256": "a1ebd6212b45187a96bd905055989220b6d589a01894025d39c1e67a66901775"
+    },
+    "D4": {
+      "path": "datasets/round3/shared/preparation_v1/development_profiles/D4.json",
+      "sha256": "fb0413c4915fa30ea2a526b466c690026cba95ee6dcb11e366146e251c0c581c"
+    },
+    "D5": {
+      "path": "datasets/round3/shared/preparation_v1/development_profiles/D5.json",
+      "sha256": "51b0d63f272a009783d9609171efbd70b739b1dcb2b216957b9cedaa8e442402"
+    },
+    "D6": {
+      "path": "datasets/round3/shared/preparation_v1/development_profiles/D6.json",
+      "sha256": "63c583d0e7bfe8d1ac43a330b2d5c7a844bf3cfffc871d25e02e86769df838a2"
+    }
+  },
+  "anchor_slots": 2,
+  "internal_slots": 6,
+  "boundary_slots": 2,
+  "source": "P1/P2/P3 regimes and D1/D2 gain +/-0.5%, D3 noise +15%, D4 zero +0.03keV, D5 exposure x3, D6 exit air +0.5cm; development deliberately reserves outer bands for sealed response challenge",
+  "fixed_fields": [
+    "filter_Al_um",
+    "background_counts_channel",
+    "detector_be_um",
+    "detector_si_um",
+    "mass_thickness_g_cm2",
+    "detector_distance_cm",
+    "incident_angle_deg",
+    "exit_angle_deg",
+    "scatter_angle_deg",
+    "source_step_keV",
+    "secondary_layers"
+  ],
+  "scope_limit": "No newly calibrated response, grain/moisture/container effects or inferred real-device parameter distribution. Background/filter/sample geometry and detector window thickness remain at inherited anchor values."
+}

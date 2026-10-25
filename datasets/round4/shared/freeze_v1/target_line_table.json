@@ -1,0 +1,4000 @@
+{
+  "provider": "installed_xraylib",
+  "version": "4.3.0",
+  "minimum_modeled_line_keV": 1.0,
+  "elements": {
+    "Na": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 1.0088
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 1.041
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 1.041
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 1.0714
+      }
+    ],
+    "Mg": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 1.2156
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 1.2536
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 1.2536
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 1.3029
+      }
+    ],
+    "Al": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 1.4419
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 1.4864
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 1.4869
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 1.5589
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 1.5541
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 1.5541
+      }
+    ],
+    "Si": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 1.6902
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 1.7394
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 1.74
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 1.8313
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 1.8359
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 1.8359
+      }
+    ],
+    "P": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 1.9562
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 2.0093
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 2.0102
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 2.1293
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 2.1356
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 2.1356
+      }
+    ],
+    "S": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 2.2428
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 2.3066
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 2.3078
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 2.4562
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 2.464
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 2.464
+      }
+    ],
+    "Cl": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 2.5522
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 2.6208
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 2.6224
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 2.8049
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 2.8156
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 2.8156
+      }
+    ],
+    "K": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 3.2303
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 3.3111
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 3.3138
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 3.5735
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 3.5896
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 3.5896
+      }
+    ],
+    "Ca": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 3.6003
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 3.6881
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 3.6917
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 3.9944
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 4.0127
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 4.0127
+      }
+    ],
+    "Ti": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 4.4027
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 4.5049
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 4.5109
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 4.9061
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 4.9318
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 4.9318
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 4.9627
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 4.9627
+      }
+    ],
+    "V": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 4.8369
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 4.9446
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 4.9522
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 5.3986
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 5.4273
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 5.4273
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 5.4629
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 5.4629
+      }
+    ],
+    "Cr": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 5.2946
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 5.4055
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 5.4147
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 5.9151
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 5.9467
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 5.9467
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 5.9869
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 5.9869
+      }
+    ],
+    "Mn": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 5.77
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 5.8876
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 5.8987
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 6.4551
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 6.4904
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 6.4904
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 6.5357
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 6.5357
+      }
+    ],
+    "Fe": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 6.2659
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 6.3909
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 6.4039
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 7.0191
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 7.058
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 7.058
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 7.1084
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 7.1084
+      }
+    ],
+    "Co": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 6.7833
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 6.9153
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 6.9303
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 7.6082
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 7.6494
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 7.6494
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 7.706
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 7.706
+      }
+    ],
+    "Ni": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 7.3247
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 7.4609
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 7.4781
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 8.221
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 8.2647
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 8.2647
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 8.3292
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 8.3292
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 1.0045
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 1.0045
+      }
+    ],
+    "Cu": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 7.8828
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 8.0279
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 8.0478
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 8.8591
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 8.9053
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 8.9053
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 8.9773
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 8.9773
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 1.0225
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 1.0225
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 1.0945
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 1.0945
+      }
+    ],
+    "Zn": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 8.465
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 8.6158
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 8.6389
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 9.5227
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 9.572
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 9.572
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 9.6505
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 9.6505
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 1.0577
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 1.107
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 1.107
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 1.1855
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 1.1855
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 1.0347
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 1.0347
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 1.0116
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 1.0116
+      }
+    ],
+    "As": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 10.3402
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 10.5081
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 10.5436
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 11.6632
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 11.7203
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 11.7262
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 11.8255
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 11.8255
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 11.8582
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 11.8642
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 11.8642
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 1.323
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 1.3801
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 1.386
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 1.4853
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 1.4853
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 1.518
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 1.524
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 1.524
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 1.1551
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 1.2122
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 1.2181
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 1.3174
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 1.3174
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 1.3501
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 1.3561
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 1.3561
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 1.1196
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 1.1767
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 1.1826
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 1.2819
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 1.2819
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 1.3146
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 1.3206
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 1.3206
+      }
+    ],
+    "Se": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 11.0039
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 11.1816
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 11.222
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 12.4263
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 12.4896
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 12.4959
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 12.6011
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 12.6011
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 12.6458
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 12.6522
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 12.6522
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 1.4224
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 1.4857
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 1.492
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 1.5972
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 1.5972
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 1.6419
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 1.6483
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 1.6483
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 1.2447
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 1.308
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 1.3143
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 1.4195
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 1.4195
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 1.4642
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 1.4706
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 1.4706
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 1.2043
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 1.2676
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 1.2739
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 1.3791
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 1.3791
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 1.4238
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 1.4302
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 1.4302
+      }
+    ],
+    "Rb": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 13.1346
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 13.3358
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 13.3953
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 14.8776
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 14.9523
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 14.9612
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 15.0879
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 15.0894
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 15.1704
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 15.1849
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 15.1857
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 1.743
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 1.8177
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 1.8266
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 1.9533
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 1.9548
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 2.0358
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 2.0503
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 2.0511
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 1.5418
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 1.6165
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 1.6254
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 1.7521
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 1.7536
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 1.8346
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 1.8491
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 1.8499
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 1.4823
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 1.557
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 1.5659
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 1.6926
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 1.6941
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 1.7751
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 1.7896
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 1.7904
+      }
+    ],
+    "Sr": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 13.8883
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 14.0978
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 14.165
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 15.7471
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 15.8248
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 15.8355
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 15.9696
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 15.9715
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 16.0669
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 16.0847
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 16.0847
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 1.8588
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 1.9365
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 1.9472
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 2.0813
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 2.0832
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 2.1786
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 2.1964
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 2.1964
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 1.6493
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 1.727
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 1.7377
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 1.8718
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 1.8737
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 1.9691
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 1.9869
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 1.9869
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 1.5821
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 1.6598
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 1.6705
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 1.8046
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 1.8065
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 1.9019
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 1.9197
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 1.9197
+      }
+    ],
+    "Y": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 14.6659
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 14.8829
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 14.9584
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 16.6448
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 16.726
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 16.7381
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 16.8788
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 16.881
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 16.993
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 17.0128
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 17.0128
+      },
+      {
+        "transition": "KN4_LINE",
+        "energy_keV": 17.036
+      },
+      {
+        "transition": "KN5_LINE",
+        "energy_keV": 17.036
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 1.9789
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 2.0601
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 2.0722
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 2.2129
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 2.2151
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 2.3271
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 2.3469
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 2.3469
+      },
+      {
+        "transition": "L1N4_LINE",
+        "energy_keV": 2.3701
+      },
+      {
+        "transition": "L1N5_LINE",
+        "energy_keV": 2.3701
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 1.7619
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 1.8431
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 1.8552
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 1.9959
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 1.9981
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 2.1101
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 2.1299
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 2.1299
+      },
+      {
+        "transition": "L2N4_LINE",
+        "energy_keV": 2.1531
+      },
+      {
+        "transition": "L2N5_LINE",
+        "energy_keV": 2.1531
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 1.6864
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 1.7676
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 1.7797
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 1.9204
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 1.9226
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 2.0346
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 2.0544
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 2.0544
+      },
+      {
+        "transition": "L3N4_LINE",
+        "energy_keV": 2.0776
+      },
+      {
+        "transition": "L3N5_LINE",
+        "energy_keV": 2.0776
+      }
+    ],
+    "Zr": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 15.466
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 15.6909
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 15.7753
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 17.5673
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 17.6534
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 17.6671
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 17.8152
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 17.8176
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 17.9463
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 17.9689
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 17.9689
+      },
+      {
+        "transition": "KN4_LINE",
+        "energy_keV": 17.9946
+      },
+      {
+        "transition": "KN5_LINE",
+        "energy_keV": 17.9946
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 2.1013
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 2.1874
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 2.2011
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 2.3492
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 2.3516
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 2.4803
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 2.5029
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 2.5029
+      },
+      {
+        "transition": "L1N4_LINE",
+        "energy_keV": 2.5286
+      },
+      {
+        "transition": "L1N5_LINE",
+        "energy_keV": 2.5286
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 1.8764
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 1.9625
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 1.9762
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 2.1243
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 2.1267
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 2.2554
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 2.278
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 2.278
+      },
+      {
+        "transition": "L2N4_LINE",
+        "energy_keV": 2.3037
+      },
+      {
+        "transition": "L2N5_LINE",
+        "energy_keV": 2.3037
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 1.792
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 1.8781
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 1.8918
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 2.0399
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 2.0423
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 2.171
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 2.1936
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 2.1936
+      },
+      {
+        "transition": "L3N4_LINE",
+        "energy_keV": 2.2193
+      },
+      {
+        "transition": "L3N5_LINE",
+        "energy_keV": 2.2193
+      }
+    ],
+    "Nb": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 16.2879
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 16.5209
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 16.6151
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 18.5172
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 18.6072
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 18.6226
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 18.7782
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 18.781
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 18.9275
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 18.9517
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 18.9517
+      },
+      {
+        "transition": "KN4_LINE",
+        "energy_keV": 18.9824
+      },
+      {
+        "transition": "KN5_LINE",
+        "energy_keV": 18.9824
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 2.2293
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 2.3193
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 2.3347
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 2.4903
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 2.4931
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 2.6396
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 2.6638
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 2.6638
+      },
+      {
+        "transition": "L1N4_LINE",
+        "energy_keV": 2.6945
+      },
+      {
+        "transition": "L1N5_LINE",
+        "energy_keV": 2.6945
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 1.9963
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 2.0863
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 2.1017
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 2.2573
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 2.2601
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 2.4066
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 2.4308
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 2.4308
+      },
+      {
+        "transition": "L2N4_LINE",
+        "energy_keV": 2.4615
+      },
+      {
+        "transition": "L2N5_LINE",
+        "energy_keV": 2.4615
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 1.9021
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 1.9921
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 2.0075
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 2.1631
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 2.1659
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 2.3124
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 2.3366
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 2.3366
+      },
+      {
+        "transition": "L3N4_LINE",
+        "energy_keV": 2.3673
+      },
+      {
+        "transition": "L3N5_LINE",
+        "energy_keV": 2.3673
+      }
+    ],
+    "Mo": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 17.134
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 17.3744
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 17.4793
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 19.4949
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 19.5898
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 19.6072
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 19.7692
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 19.7725
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 19.9377
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 19.9647
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 19.9647
+      },
+      {
+        "transition": "KN4_LINE",
+        "energy_keV": 19.9977
+      },
+      {
+        "transition": "KN5_LINE",
+        "energy_keV": 19.9977
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 2.3609
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 2.4558
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 2.4732
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 2.6352
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 2.6385
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 2.8037
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 2.8307
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 2.8307
+      },
+      {
+        "transition": "L1N4_LINE",
+        "energy_keV": 2.8637
+      },
+      {
+        "transition": "L1N5_LINE",
+        "energy_keV": 2.8637
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 2.1205
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 2.2154
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 2.2328
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 2.3948
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 2.3981
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 2.5633
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 2.5903
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 2.5903
+      },
+      {
+        "transition": "L2N4_LINE",
+        "energy_keV": 2.6233
+      },
+      {
+        "transition": "L2N5_LINE",
+        "energy_keV": 2.6233
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 2.0156
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 2.1105
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 2.1279
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 2.2899
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 2.2932
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 2.4584
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 2.4854
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 2.4854
+      },
+      {
+        "transition": "L3N4_LINE",
+        "energy_keV": 2.5184
+      },
+      {
+        "transition": "L3N5_LINE",
+        "energy_keV": 2.5184
+      }
+    ],
+    "Cd": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 22.6932
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 22.9842
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 23.1737
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 25.941
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 26.0605
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 26.0947
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 26.3007
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 26.3075
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 26.6036
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 26.6443
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 26.6443
+      },
+      {
+        "transition": "KN4_LINE",
+        "energy_keV": 26.7019
+      },
+      {
+        "transition": "KN5_LINE",
+        "energy_keV": 26.7019
+      },
+      {
+        "transition": "KO1_LINE",
+        "energy_keV": 26.709
+      },
+      {
+        "transition": "KO2_LINE",
+        "energy_keV": 26.709
+      },
+      {
+        "transition": "KO3_LINE",
+        "energy_keV": 26.709
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 3.2478
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 3.3673
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 3.4015
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 3.6075
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 3.6143
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 3.9104
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 3.9511
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 3.9511
+      },
+      {
+        "transition": "L1N4_LINE",
+        "energy_keV": 4.0087
+      },
+      {
+        "transition": "L1N5_LINE",
+        "energy_keV": 4.0087
+      },
+      {
+        "transition": "L1O1_LINE",
+        "energy_keV": 4.0158
+      },
+      {
+        "transition": "L1O2_LINE",
+        "energy_keV": 4.0158
+      },
+      {
+        "transition": "L1O3_LINE",
+        "energy_keV": 4.0158
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 2.9568
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 3.0763
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 3.1105
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 3.3165
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 3.3233
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 3.6194
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 3.6601
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 3.6601
+      },
+      {
+        "transition": "L2N4_LINE",
+        "energy_keV": 3.7177
+      },
+      {
+        "transition": "L2N5_LINE",
+        "energy_keV": 3.7177
+      },
+      {
+        "transition": "L2O1_LINE",
+        "energy_keV": 3.7248
+      },
+      {
+        "transition": "L2O2_LINE",
+        "energy_keV": 3.7248
+      },
+      {
+        "transition": "L2O3_LINE",
+        "energy_keV": 3.7248
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 2.7673
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 2.8868
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 2.921
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 3.127
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 3.1338
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 3.4299
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 3.4706
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 3.4706
+      },
+      {
+        "transition": "L3N4_LINE",
+        "energy_keV": 3.5282
+      },
+      {
+        "transition": "L3N5_LINE",
+        "energy_keV": 3.5282
+      },
+      {
+        "transition": "L3O1_LINE",
+        "energy_keV": 3.5353
+      },
+      {
+        "transition": "L3O2_LINE",
+        "energy_keV": 3.5353
+      },
+      {
+        "transition": "L3O3_LINE",
+        "energy_keV": 3.5353
+      }
+    ],
+    "Sn": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 24.7354
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 25.044
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 25.2713
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 28.3163
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 28.4437
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 28.4857
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 28.7068
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 28.7153
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 29.0636
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 29.1115
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 29.1115
+      },
+      {
+        "transition": "KN4_LINE",
+        "energy_keV": 29.1762
+      },
+      {
+        "transition": "KN5_LINE",
+        "energy_keV": 29.1762
+      },
+      {
+        "transition": "KO1_LINE",
+        "energy_keV": 29.1992
+      },
+      {
+        "transition": "KO2_LINE",
+        "energy_keV": 29.199
+      },
+      {
+        "transition": "KO3_LINE",
+        "energy_keV": 29.199
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 3.5809
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 3.7083
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 3.7503
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 3.9714
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 3.9799
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 4.3282
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 4.3761
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 4.3761
+      },
+      {
+        "transition": "L1N4_LINE",
+        "energy_keV": 4.4408
+      },
+      {
+        "transition": "L1N5_LINE",
+        "energy_keV": 4.4408
+      },
+      {
+        "transition": "L1O1_LINE",
+        "energy_keV": 4.4638
+      },
+      {
+        "transition": "L1O2_LINE",
+        "energy_keV": 4.4636
+      },
+      {
+        "transition": "L1O3_LINE",
+        "energy_keV": 4.4636
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 3.2723
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 3.3997
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 3.4417
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 3.6628
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 3.6713
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 4.0196
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 4.0675
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 4.0675
+      },
+      {
+        "transition": "L2N4_LINE",
+        "energy_keV": 4.1322
+      },
+      {
+        "transition": "L2N5_LINE",
+        "energy_keV": 4.1322
+      },
+      {
+        "transition": "L2O1_LINE",
+        "energy_keV": 4.1552
+      },
+      {
+        "transition": "L2O2_LINE",
+        "energy_keV": 4.155
+      },
+      {
+        "transition": "L2O3_LINE",
+        "energy_keV": 4.155
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 3.045
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 3.1724
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 3.2144
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 3.4355
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 3.444
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 3.7923
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 3.8402
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 3.8402
+      },
+      {
+        "transition": "L3N4_LINE",
+        "energy_keV": 3.9049
+      },
+      {
+        "transition": "L3N5_LINE",
+        "energy_keV": 3.9049
+      },
+      {
+        "transition": "L3O1_LINE",
+        "energy_keV": 3.9279
+      },
+      {
+        "transition": "L3O2_LINE",
+        "energy_keV": 3.9277
+      },
+      {
+        "transition": "L3O3_LINE",
+        "energy_keV": 3.9277
+      }
+    ],
+    "Sb": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 25.7929
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 26.1108
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 26.359
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 29.5475
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 29.6793
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 29.7256
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 29.9543
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 29.9637
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 30.3392
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 30.3928
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 30.3928
+      },
+      {
+        "transition": "KN4_LINE",
+        "energy_keV": 30.4598
+      },
+      {
+        "transition": "KN5_LINE",
+        "energy_keV": 30.4598
+      },
+      {
+        "transition": "KO1_LINE",
+        "energy_keV": 30.4845
+      },
+      {
+        "transition": "KO2_LINE",
+        "energy_keV": 30.4891
+      },
+      {
+        "transition": "KO3_LINE",
+        "energy_keV": 30.4891
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 3.7546
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 3.8864
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 3.9327
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 4.1614
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 4.1708
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 4.5463
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 4.5999
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 4.5999
+      },
+      {
+        "transition": "L1N4_LINE",
+        "energy_keV": 4.6669
+      },
+      {
+        "transition": "L1N5_LINE",
+        "energy_keV": 4.6669
+      },
+      {
+        "transition": "L1O1_LINE",
+        "energy_keV": 4.6916
+      },
+      {
+        "transition": "L1O2_LINE",
+        "energy_keV": 4.6962
+      },
+      {
+        "transition": "L1O3_LINE",
+        "energy_keV": 4.6962
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 3.4367
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 3.5685
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 3.6148
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 3.8435
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 3.8529
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 4.2284
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 4.282
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 4.282
+      },
+      {
+        "transition": "L2N4_LINE",
+        "energy_keV": 4.349
+      },
+      {
+        "transition": "L2N5_LINE",
+        "energy_keV": 4.349
+      },
+      {
+        "transition": "L2O1_LINE",
+        "energy_keV": 4.3737
+      },
+      {
+        "transition": "L2O2_LINE",
+        "energy_keV": 4.3783
+      },
+      {
+        "transition": "L2O3_LINE",
+        "energy_keV": 4.3783
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 3.1885
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 3.3203
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 3.3666
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 3.5953
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 3.6047
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 3.9802
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 4.0338
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 4.0338
+      },
+      {
+        "transition": "L3N4_LINE",
+        "energy_keV": 4.1008
+      },
+      {
+        "transition": "L3N5_LINE",
+        "energy_keV": 4.1008
+      },
+      {
+        "transition": "L3O1_LINE",
+        "energy_keV": 4.1255
+      },
+      {
+        "transition": "L3O2_LINE",
+        "energy_keV": 4.1301
+      },
+      {
+        "transition": "L3O3_LINE",
+        "energy_keV": 4.1301
+      }
+    ],
+    "Ba": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 31.4518
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 31.817
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 32.1936
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 36.1478
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 36.3039
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 36.3784
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 36.6445
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 36.6599
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 37.1876
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 37.2488
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 37.2609
+      },
+      {
+        "transition": "KN4_LINE",
+        "energy_keV": 37.3481
+      },
+      {
+        "transition": "KN5_LINE",
+        "energy_keV": 37.3507
+      },
+      {
+        "transition": "KO1_LINE",
+        "energy_keV": 37.4115
+      },
+      {
+        "transition": "KO2_LINE",
+        "energy_keV": 37.424
+      },
+      {
+        "transition": "KO3_LINE",
+        "energy_keV": 37.426
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 4.696
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 4.8521
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 4.9266
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 5.1927
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 5.2081
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 5.7358
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 5.797
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 5.8091
+      },
+      {
+        "transition": "L1N4_LINE",
+        "energy_keV": 5.8963
+      },
+      {
+        "transition": "L1N5_LINE",
+        "energy_keV": 5.8989
+      },
+      {
+        "transition": "L1O1_LINE",
+        "energy_keV": 5.9597
+      },
+      {
+        "transition": "L1O2_LINE",
+        "energy_keV": 5.9722
+      },
+      {
+        "transition": "L1O3_LINE",
+        "energy_keV": 5.9742
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 4.3308
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 4.4869
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 4.5614
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 4.8275
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 4.8429
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 5.3706
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 5.4318
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 5.4439
+      },
+      {
+        "transition": "L2N4_LINE",
+        "energy_keV": 5.5311
+      },
+      {
+        "transition": "L2N5_LINE",
+        "energy_keV": 5.5337
+      },
+      {
+        "transition": "L2O1_LINE",
+        "energy_keV": 5.5945
+      },
+      {
+        "transition": "L2O2_LINE",
+        "energy_keV": 5.607
+      },
+      {
+        "transition": "L2O3_LINE",
+        "energy_keV": 5.609
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 3.9542
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 4.1103
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 4.1848
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 4.4509
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 4.4663
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 4.994
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 5.0552
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 5.0673
+      },
+      {
+        "transition": "L3N4_LINE",
+        "energy_keV": 5.1545
+      },
+      {
+        "transition": "L3N5_LINE",
+        "energy_keV": 5.1571
+      },
+      {
+        "transition": "L3O1_LINE",
+        "energy_keV": 5.2179
+      },
+      {
+        "transition": "L3O2_LINE",
+        "energy_keV": 5.2304
+      },
+      {
+        "transition": "L3O3_LINE",
+        "energy_keV": 5.2324
+      },
+      {
+        "transition": "M1N1_LINE",
+        "energy_keV": 1.0398
+      },
+      {
+        "transition": "M1N2_LINE",
+        "energy_keV": 1.101
+      },
+      {
+        "transition": "M1N3_LINE",
+        "energy_keV": 1.1131
+      },
+      {
+        "transition": "M1N4_LINE",
+        "energy_keV": 1.2003
+      },
+      {
+        "transition": "M1N5_LINE",
+        "energy_keV": 1.2029
+      },
+      {
+        "transition": "M1O1_LINE",
+        "energy_keV": 1.2637
+      },
+      {
+        "transition": "M1O2_LINE",
+        "energy_keV": 1.2762
+      },
+      {
+        "transition": "M1O3_LINE",
+        "energy_keV": 1.2782
+      },
+      {
+        "transition": "M2N4_LINE",
+        "energy_keV": 1.0442
+      },
+      {
+        "transition": "M2N5_LINE",
+        "energy_keV": 1.0468
+      },
+      {
+        "transition": "M2O1_LINE",
+        "energy_keV": 1.1076
+      },
+      {
+        "transition": "M2O2_LINE",
+        "energy_keV": 1.1201
+      },
+      {
+        "transition": "M2O3_LINE",
+        "energy_keV": 1.1221
+      },
+      {
+        "transition": "M3O1_LINE",
+        "energy_keV": 1.0331
+      },
+      {
+        "transition": "M3O2_LINE",
+        "energy_keV": 1.0456
+      },
+      {
+        "transition": "M3O3_LINE",
+        "energy_keV": 1.0476
+      }
+    ],
+    "W": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 57.4252
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 57.981
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 59.3182
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 66.7054
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 66.9501
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 67.244
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 67.6534
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 67.7158
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 68.93
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 69.0334
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 69.0997
+      },
+      {
+        "transition": "KN4_LINE",
+        "energy_keV": 69.2662
+      },
+      {
+        "transition": "KN5_LINE",
+        "energy_keV": 69.2796
+      },
+      {
+        "transition": "KN6_LINE",
+        "energy_keV": 69.4871
+      },
+      {
+        "transition": "KN7_LINE",
+        "energy_keV": 69.4892
+      },
+      {
+        "transition": "KO1_LINE",
+        "energy_keV": 69.4479
+      },
+      {
+        "transition": "KO2_LINE",
+        "energy_keV": 69.4782
+      },
+      {
+        "transition": "KO3_LINE",
+        "energy_keV": 69.4894
+      },
+      {
+        "transition": "KO4_LINE",
+        "energy_keV": 69.5189
+      },
+      {
+        "transition": "KO5_LINE",
+        "energy_keV": 69.5189
+      },
+      {
+        "transition": "L1L3_LINE",
+        "energy_keV": 1.893
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 9.2802
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 9.5249
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 9.8188
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 10.2282
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 10.2906
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 11.5048
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 11.6082
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 11.6745
+      },
+      {
+        "transition": "L1N4_LINE",
+        "energy_keV": 11.841
+      },
+      {
+        "transition": "L1N5_LINE",
+        "energy_keV": 11.8544
+      },
+      {
+        "transition": "L1N6_LINE",
+        "energy_keV": 12.0619
+      },
+      {
+        "transition": "L1N7_LINE",
+        "energy_keV": 12.064
+      },
+      {
+        "transition": "L1O1_LINE",
+        "energy_keV": 12.0227
+      },
+      {
+        "transition": "L1O2_LINE",
+        "energy_keV": 12.053
+      },
+      {
+        "transition": "L1O3_LINE",
+        "energy_keV": 12.0642
+      },
+      {
+        "transition": "L1O4_LINE",
+        "energy_keV": 12.0937
+      },
+      {
+        "transition": "L1O5_LINE",
+        "energy_keV": 12.0937
+      },
+      {
+        "transition": "L2L3_LINE",
+        "energy_keV": 1.3372
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 8.7244
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 8.9691
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 9.263
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 9.6724
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 9.7348
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 10.949
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 11.0524
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 11.1187
+      },
+      {
+        "transition": "L2N4_LINE",
+        "energy_keV": 11.2852
+      },
+      {
+        "transition": "L2N5_LINE",
+        "energy_keV": 11.2986
+      },
+      {
+        "transition": "L2N6_LINE",
+        "energy_keV": 11.5061
+      },
+      {
+        "transition": "L2N7_LINE",
+        "energy_keV": 11.5082
+      },
+      {
+        "transition": "L2O1_LINE",
+        "energy_keV": 11.4669
+      },
+      {
+        "transition": "L2O2_LINE",
+        "energy_keV": 11.4972
+      },
+      {
+        "transition": "L2O3_LINE",
+        "energy_keV": 11.5084
+      },
+      {
+        "transition": "L2O4_LINE",
+        "energy_keV": 11.5379
+      },
+      {
+        "transition": "L2O5_LINE",
+        "energy_keV": 11.5379
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 7.3872
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 7.6319
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 7.9258
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 8.3352
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 8.3976
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 9.6118
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 9.7152
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 9.7815
+      },
+      {
+        "transition": "L3N4_LINE",
+        "energy_keV": 9.948
+      },
+      {
+        "transition": "L3N5_LINE",
+        "energy_keV": 9.9614
+      },
+      {
+        "transition": "L3N6_LINE",
+        "energy_keV": 10.1689
+      },
+      {
+        "transition": "L3N7_LINE",
+        "energy_keV": 10.171
+      },
+      {
+        "transition": "L3O1_LINE",
+        "energy_keV": 10.1297
+      },
+      {
+        "transition": "L3O2_LINE",
+        "energy_keV": 10.16
+      },
+      {
+        "transition": "L3O3_LINE",
+        "energy_keV": 10.1712
+      },
+      {
+        "transition": "L3O4_LINE",
+        "energy_keV": 10.2007
+      },
+      {
+        "transition": "L3O5_LINE",
+        "energy_keV": 10.2007
+      },
+      {
+        "transition": "M1M5_LINE",
+        "energy_keV": 1.0104
+      },
+      {
+        "transition": "M1N1_LINE",
+        "energy_keV": 2.2246
+      },
+      {
+        "transition": "M1N2_LINE",
+        "energy_keV": 2.328
+      },
+      {
+        "transition": "M1N3_LINE",
+        "energy_keV": 2.3943
+      },
+      {
+        "transition": "M1N4_LINE",
+        "energy_keV": 2.5608
+      },
+      {
+        "transition": "M1N5_LINE",
+        "energy_keV": 2.5742
+      },
+      {
+        "transition": "M1N6_LINE",
+        "energy_keV": 2.7817
+      },
+      {
+        "transition": "M1N7_LINE",
+        "energy_keV": 2.7838
+      },
+      {
+        "transition": "M1O1_LINE",
+        "energy_keV": 2.7425
+      },
+      {
+        "transition": "M1O2_LINE",
+        "energy_keV": 2.7728
+      },
+      {
+        "transition": "M1O3_LINE",
+        "energy_keV": 2.784
+      },
+      {
+        "transition": "M1O4_LINE",
+        "energy_keV": 2.8135
+      },
+      {
+        "transition": "M1O5_LINE",
+        "energy_keV": 2.8135
+      },
+      {
+        "transition": "M2N1_LINE",
+        "energy_keV": 1.9799
+      },
+      {
+        "transition": "M2N2_LINE",
+        "energy_keV": 2.0833
+      },
+      {
+        "transition": "M2N3_LINE",
+        "energy_keV": 2.1496
+      },
+      {
+        "transition": "M2N4_LINE",
+        "energy_keV": 2.3161
+      },
+      {
+        "transition": "M2N5_LINE",
+        "energy_keV": 2.3295
+      },
+      {
+        "transition": "M2N6_LINE",
+        "energy_keV": 2.537
+      },
+      {
+        "transition": "M2N7_LINE",
+        "energy_keV": 2.5391
+      },
+      {
+        "transition": "M2O1_LINE",
+        "energy_keV": 2.4978
+      },
+      {
+        "transition": "M2O2_LINE",
+        "energy_keV": 2.5281
+      },
+      {
+        "transition": "M2O3_LINE",
+        "energy_keV": 2.5393
+      },
+      {
+        "transition": "M2O4_LINE",
+        "energy_keV": 2.5688
+      },
+      {
+        "transition": "M2O5_LINE",
+        "energy_keV": 2.5688
+      },
+      {
+        "transition": "M3N1_LINE",
+        "energy_keV": 1.686
+      },
+      {
+        "transition": "M3N2_LINE",
+        "energy_keV": 1.7894
+      },
+      {
+        "transition": "M3N3_LINE",
+        "energy_keV": 1.8557
+      },
+      {
+        "transition": "M3N4_LINE",
+        "energy_keV": 2.0222
+      },
+      {
+        "transition": "M3N5_LINE",
+        "energy_keV": 2.0356
+      },
+      {
+        "transition": "M3N6_LINE",
+        "energy_keV": 2.2431
+      },
+      {
+        "transition": "M3N7_LINE",
+        "energy_keV": 2.2452
+      },
+      {
+        "transition": "M3O1_LINE",
+        "energy_keV": 2.2039
+      },
+      {
+        "transition": "M3O2_LINE",
+        "energy_keV": 2.2342
+      },
+      {
+        "transition": "M3O3_LINE",
+        "energy_keV": 2.2454
+      },
+      {
+        "transition": "M3O4_LINE",
+        "energy_keV": 2.2749
+      },
+      {
+        "transition": "M3O5_LINE",
+        "energy_keV": 2.2749
+      },
+      {
+        "transition": "M4N1_LINE",
+        "energy_keV": 1.2766
+      },
+      {
+        "transition": "M4N2_LINE",
+        "energy_keV": 1.38
+      },
+      {
+        "transition": "M4N3_LINE",
+        "energy_keV": 1.4463
+      },
+      {
+        "transition": "M4N4_LINE",
+        "energy_keV": 1.6128
+      },
+      {
+        "transition": "M4N5_LINE",
+        "energy_keV": 1.6262
+      },
+      {
+        "transition": "M4N6_LINE",
+        "energy_keV": 1.8337
+      },
+      {
+        "transition": "M4N7_LINE",
+        "energy_keV": 1.8358
+      },
+      {
+        "transition": "M4O1_LINE",
+        "energy_keV": 1.7945
+      },
+      {
+        "transition": "M4O2_LINE",
+        "energy_keV": 1.8248
+      },
+      {
+        "transition": "M4O3_LINE",
+        "energy_keV": 1.836
+      },
+      {
+        "transition": "M4O4_LINE",
+        "energy_keV": 1.8655
+      },
+      {
+        "transition": "M4O5_LINE",
+        "energy_keV": 1.8655
+      },
+      {
+        "transition": "M5N1_LINE",
+        "energy_keV": 1.2142
+      },
+      {
+        "transition": "M5N2_LINE",
+        "energy_keV": 1.3176
+      },
+      {
+        "transition": "M5N3_LINE",
+        "energy_keV": 1.3839
+      },
+      {
+        "transition": "M5N4_LINE",
+        "energy_keV": 1.5504
+      },
+      {
+        "transition": "M5N5_LINE",
+        "energy_keV": 1.5638
+      },
+      {
+        "transition": "M5N6_LINE",
+        "energy_keV": 1.7713
+      },
+      {
+        "transition": "M5N7_LINE",
+        "energy_keV": 1.7734
+      },
+      {
+        "transition": "M5O1_LINE",
+        "energy_keV": 1.7321
+      },
+      {
+        "transition": "M5O2_LINE",
+        "energy_keV": 1.7624
+      },
+      {
+        "transition": "M5O3_LINE",
+        "energy_keV": 1.7736
+      },
+      {
+        "transition": "M5O4_LINE",
+        "energy_keV": 1.8031
+      },
+      {
+        "transition": "M5O5_LINE",
+        "energy_keV": 1.8031
+      }
+    ],
+    "Pb": [
+      {
+        "transition": "KL1_LINE",
+        "energy_keV": 72.1437
+      },
+      {
+        "transition": "KL2_LINE",
+        "energy_keV": 72.8045
+      },
+      {
+        "transition": "KL3_LINE",
+        "energy_keV": 74.9693
+      },
+      {
+        "transition": "KM1_LINE",
+        "energy_keV": 84.1538
+      },
+      {
+        "transition": "KM2_LINE",
+        "energy_keV": 84.4503
+      },
+      {
+        "transition": "KM3_LINE",
+        "energy_keV": 84.9381
+      },
+      {
+        "transition": "KM4_LINE",
+        "energy_keV": 85.4189
+      },
+      {
+        "transition": "KM5_LINE",
+        "energy_keV": 85.5205
+      },
+      {
+        "transition": "KN1_LINE",
+        "energy_keV": 87.1109
+      },
+      {
+        "transition": "KN2_LINE",
+        "energy_keV": 87.2406
+      },
+      {
+        "transition": "KN3_LINE",
+        "energy_keV": 87.36
+      },
+      {
+        "transition": "KN4_LINE",
+        "energy_keV": 87.5693
+      },
+      {
+        "transition": "KN5_LINE",
+        "energy_keV": 87.5916
+      },
+      {
+        "transition": "KN6_LINE",
+        "energy_keV": 87.8633
+      },
+      {
+        "transition": "KN7_LINE",
+        "energy_keV": 87.8682
+      },
+      {
+        "transition": "KO1_LINE",
+        "energy_keV": 87.8572
+      },
+      {
+        "transition": "KO2_LINE",
+        "energy_keV": 87.8997
+      },
+      {
+        "transition": "KO3_LINE",
+        "energy_keV": 87.9215
+      },
+      {
+        "transition": "KO4_LINE",
+        "energy_keV": 87.9827
+      },
+      {
+        "transition": "KO5_LINE",
+        "energy_keV": 87.9853
+      },
+      {
+        "transition": "KP1_LINE",
+        "energy_keV": 88.0014
+      },
+      {
+        "transition": "KP2_LINE",
+        "energy_keV": 88.0038
+      },
+      {
+        "transition": "KP3_LINE",
+        "energy_keV": 88.0038
+      },
+      {
+        "transition": "L1L3_LINE",
+        "energy_keV": 2.8256
+      },
+      {
+        "transition": "L1M1_LINE",
+        "energy_keV": 12.0101
+      },
+      {
+        "transition": "L1M2_LINE",
+        "energy_keV": 12.3066
+      },
+      {
+        "transition": "L1M3_LINE",
+        "energy_keV": 12.7944
+      },
+      {
+        "transition": "L1M4_LINE",
+        "energy_keV": 13.2752
+      },
+      {
+        "transition": "L1M5_LINE",
+        "energy_keV": 13.3768
+      },
+      {
+        "transition": "L1N1_LINE",
+        "energy_keV": 14.9672
+      },
+      {
+        "transition": "L1N2_LINE",
+        "energy_keV": 15.0969
+      },
+      {
+        "transition": "L1N3_LINE",
+        "energy_keV": 15.2163
+      },
+      {
+        "transition": "L1N4_LINE",
+        "energy_keV": 15.4256
+      },
+      {
+        "transition": "L1N5_LINE",
+        "energy_keV": 15.4479
+      },
+      {
+        "transition": "L1N6_LINE",
+        "energy_keV": 15.7196
+      },
+      {
+        "transition": "L1N7_LINE",
+        "energy_keV": 15.7245
+      },
+      {
+        "transition": "L1O1_LINE",
+        "energy_keV": 15.7135
+      },
+      {
+        "transition": "L1O2_LINE",
+        "energy_keV": 15.756
+      },
+      {
+        "transition": "L1O3_LINE",
+        "energy_keV": 15.7778
+      },
+      {
+        "transition": "L1O4_LINE",
+        "energy_keV": 15.839
+      },
+      {
+        "transition": "L1O5_LINE",
+        "energy_keV": 15.8416
+      },
+      {
+        "transition": "L1P1_LINE",
+        "energy_keV": 15.8577
+      },
+      {
+        "transition": "L1P2_LINE",
+        "energy_keV": 15.8601
+      },
+      {
+        "transition": "L1P3_LINE",
+        "energy_keV": 15.8601
+      },
+      {
+        "transition": "L2L3_LINE",
+        "energy_keV": 2.1648
+      },
+      {
+        "transition": "L2M1_LINE",
+        "energy_keV": 11.3493
+      },
+      {
+        "transition": "L2M2_LINE",
+        "energy_keV": 11.6458
+      },
+      {
+        "transition": "L2M3_LINE",
+        "energy_keV": 12.1336
+      },
+      {
+        "transition": "L2M4_LINE",
+        "energy_keV": 12.6144
+      },
+      {
+        "transition": "L2M5_LINE",
+        "energy_keV": 12.716
+      },
+      {
+        "transition": "L2N1_LINE",
+        "energy_keV": 14.3064
+      },
+      {
+        "transition": "L2N2_LINE",
+        "energy_keV": 14.4361
+      },
+      {
+        "transition": "L2N3_LINE",
+        "energy_keV": 14.5555
+      },
+      {
+        "transition": "L2N4_LINE",
+        "energy_keV": 14.7648
+      },
+      {
+        "transition": "L2N5_LINE",
+        "energy_keV": 14.7871
+      },
+      {
+        "transition": "L2N6_LINE",
+        "energy_keV": 15.0588
+      },
+      {
+        "transition": "L2N7_LINE",
+        "energy_keV": 15.0637
+      },
+      {
+        "transition": "L2O1_LINE",
+        "energy_keV": 15.0527
+      },
+      {
+        "transition": "L2O2_LINE",
+        "energy_keV": 15.0952
+      },
+      {
+        "transition": "L2O3_LINE",
+        "energy_keV": 15.117
+      },
+      {
+        "transition": "L2O4_LINE",
+        "energy_keV": 15.1782
+      },
+      {
+        "transition": "L2O5_LINE",
+        "energy_keV": 15.1808
+      },
+      {
+        "transition": "L2P1_LINE",
+        "energy_keV": 15.1969
+      },
+      {
+        "transition": "L2P2_LINE",
+        "energy_keV": 15.1993
+      },
+      {
+        "transition": "L2P3_LINE",
+        "energy_keV": 15.1993
+      },
+      {
+        "transition": "L3M1_LINE",
+        "energy_keV": 9.1845
+      },
+      {
+        "transition": "L3M2_LINE",
+        "energy_keV": 9.481
+      },
+      {
+        "transition": "L3M3_LINE",
+        "energy_keV": 9.9688
+      },
+      {
+        "transition": "L3M4_LINE",
+        "energy_keV": 10.4496
+      },
+      {
+        "transition": "L3M5_LINE",
+        "energy_keV": 10.5512
+      },
+      {
+        "transition": "L3N1_LINE",
+        "energy_keV": 12.1416
+      },
+      {
+        "transition": "L3N2_LINE",
+        "energy_keV": 12.2713
+      },
+      {
+        "transition": "L3N3_LINE",
+        "energy_keV": 12.3907
+      },
+      {
+        "transition": "L3N4_LINE",
+        "energy_keV": 12.6
+      },
+      {
+        "transition": "L3N5_LINE",
+        "energy_keV": 12.6223
+      },
+      {
+        "transition": "L3N6_LINE",
+        "energy_keV": 12.894
+      },
+      {
+        "transition": "L3N7_LINE",
+        "energy_keV": 12.8989
+      },
+      {
+        "transition": "L3O1_LINE",
+        "energy_keV": 12.8879
+      },
+      {
+        "transition": "L3O2_LINE",
+        "energy_keV": 12.9304
+      },
+      {
+        "transition": "L3O3_LINE",
+        "energy_keV": 12.9522
+      },
+      {
+        "transition": "L3O4_LINE",
+        "energy_keV": 13.0134
+      },
+      {
+        "transition": "L3O5_LINE",
+        "energy_keV": 13.016
+      },
+      {
+        "transition": "L3P1_LINE",
+        "energy_keV": 13.0321
+      },
+      {
+        "transition": "L3P2_LINE",
+        "energy_keV": 13.0345
+      },
+      {
+        "transition": "L3P3_LINE",
+        "energy_keV": 13.0345
+      },
+      {
+        "transition": "M1M4_LINE",
+        "energy_keV": 1.2651
+      },
+      {
+        "transition": "M1M5_LINE",
+        "energy_keV": 1.3667
+      },
+      {
+        "transition": "M1N1_LINE",
+        "energy_keV": 2.9571
+      },
+      {
+        "transition": "M1N2_LINE",
+        "energy_keV": 3.0868
+      },
+      {
+        "transition": "M1N3_LINE",
+        "energy_keV": 3.2062
+      },
+      {
+        "transition": "M1N4_LINE",
+        "energy_keV": 3.4155
+      },
+      {
+        "transition": "M1N5_LINE",
+        "energy_keV": 3.4378
+      },
+      {
+        "transition": "M1N6_LINE",
+        "energy_keV": 3.7095
+      },
+      {
+        "transition": "M1N7_LINE",
+        "energy_keV": 3.7144
+      },
+      {
+        "transition": "M1O1_LINE",
+        "energy_keV": 3.7034
+      },
+      {
+        "transition": "M1O2_LINE",
+        "energy_keV": 3.7459
+      },
+      {
+        "transition": "M1O3_LINE",
+        "energy_keV": 3.7677
+      },
+      {
+        "transition": "M1O4_LINE",
+        "energy_keV": 3.8289
+      },
+      {
+        "transition": "M1O5_LINE",
+        "energy_keV": 3.8315
+      },
+      {
+        "transition": "M1P1_LINE",
+        "energy_keV": 3.8476
+      },
+      {
+        "transition": "M1P2_LINE",
+        "energy_keV": 3.85
+      },
+      {
+        "transition": "M1P3_LINE",
+        "energy_keV": 3.85
+      },
+      {
+        "transition": "M2M5_LINE",
+        "energy_keV": 1.0702
+      },
+      {
+        "transition": "M2N1_LINE",
+        "energy_keV": 2.6606
+      },
+      {
+        "transition": "M2N2_LINE",
+        "energy_keV": 2.7903
+      },
+      {
+        "transition": "M2N3_LINE",
+        "energy_keV": 2.9097
+      },
+      {
+        "transition": "M2N4_LINE",
+        "energy_keV": 3.119
+      },
+      {
+        "transition": "M2N5_LINE",
+        "energy_keV": 3.1413
+      },
+      {
+        "transition": "M2N6_LINE",
+        "energy_keV": 3.413
+      },
+      {
+        "transition": "M2N7_LINE",
+        "energy_keV": 3.4179
+      },
+      {
+        "transition": "M2O1_LINE",
+        "energy_keV": 3.4069
+      },
+      {
+        "transition": "M2O2_LINE",
+        "energy_keV": 3.4494
+      },
+      {
+        "transition": "M2O3_LINE",
+        "energy_keV": 3.4712
+      },
+      {
+        "transition": "M2O4_LINE",
+        "energy_keV": 3.5324
+      },
+      {
+        "transition": "M2O5_LINE",
+        "energy_keV": 3.535
+      },
+      {
+        "transition": "M2P1_LINE",
+        "energy_keV": 3.5511
+      },
+      {
+        "transition": "M2P2_LINE",
+        "energy_keV": 3.5535
+      },
+      {
+        "transition": "M2P3_LINE",
+        "energy_keV": 3.5535
+      },
+      {
+        "transition": "M3N1_LINE",
+        "energy_keV": 2.1728
+      },
+      {
+        "transition": "M3N2_LINE",
+        "energy_keV": 2.3025
+      },
+      {
+        "transition": "M3N3_LINE",
+        "energy_keV": 2.4219
+      },
+      {
+        "transition": "M3N4_LINE",
+        "energy_keV": 2.6312
+      },
+      {
+        "transition": "M3N5_LINE",
+        "energy_keV": 2.6535
+      },
+      {
+        "transition": "M3N6_LINE",
+        "energy_keV": 2.9252
+      },
+      {
+        "transition": "M3N7_LINE",
+        "energy_keV": 2.9301
+      },
+      {
+        "transition": "M3O1_LINE",
+        "energy_keV": 2.9191
+      },
+      {
+        "transition": "M3O2_LINE",
+        "energy_keV": 2.9616
+      },
+      {
+        "transition": "M3O3_LINE",
+        "energy_keV": 2.9834
+      },
+      {
+        "transition": "M3O4_LINE",
+        "energy_keV": 3.0446
+      },
+      {
+        "transition": "M3O5_LINE",
+        "energy_keV": 3.0472
+      },
+      {
+        "transition": "M3P1_LINE",
+        "energy_keV": 3.0633
+      },
+      {
+        "transition": "M3P2_LINE",
+        "energy_keV": 3.0657
+      },
+      {
+        "transition": "M3P3_LINE",
+        "energy_keV": 3.0657
+      },
+      {
+        "transition": "M4N1_LINE",
+        "energy_keV": 1.692
+      },
+      {
+        "transition": "M4N2_LINE",
+        "energy_keV": 1.8217
+      },
+      {
+        "transition": "M4N3_LINE",
+        "energy_keV": 1.9411
+      },
+      {
+        "transition": "M4N4_LINE",
+        "energy_keV": 2.1504
+      },
+      {
+        "transition": "M4N5_LINE",
+        "energy_keV": 2.1727
+      },
+      {
+        "transition": "M4N6_LINE",
+        "energy_keV": 2.4444
+      },
+      {
+        "transition": "M4N7_LINE",
+        "energy_keV": 2.4493
+      },
+      {
+        "transition": "M4O1_LINE",
+        "energy_keV": 2.4383
+      },
+      {
+        "transition": "M4O2_LINE",
+        "energy_keV": 2.4808
+      },
+      {
+        "transition": "M4O3_LINE",
+        "energy_keV": 2.5026
+      },
+      {
+        "transition": "M4O4_LINE",
+        "energy_keV": 2.5638
+      },
+      {
+        "transition": "M4O5_LINE",
+        "energy_keV": 2.5664
+      },
+      {
+        "transition": "M4P1_LINE",
+        "energy_keV": 2.5825
+      },
+      {
+        "transition": "M4P2_LINE",
+        "energy_keV": 2.5849
+      },
+      {
+        "transition": "M4P3_LINE",
+        "energy_keV": 2.5849
+      },
+      {
+        "transition": "M5N1_LINE",
+        "energy_keV": 1.5904
+      },
+      {
+        "transition": "M5N2_LINE",
+        "energy_keV": 1.7201
+      },
+      {
+        "transition": "M5N3_LINE",
+        "energy_keV": 1.8395
+      },
+      {
+        "transition": "M5N4_LINE",
+        "energy_keV": 2.0488
+      },
+      {
+        "transition": "M5N5_LINE",
+        "energy_keV": 2.0711
+      },
+      {
+        "transition": "M5N6_LINE",
+        "energy_keV": 2.3428
+      },
+      {
+        "transition": "M5N7_LINE",
+        "energy_keV": 2.3477
+      },
+      {
+        "transition": "M5O1_LINE",
+        "energy_keV": 2.3367
+      },
+      {
+        "transition": "M5O2_LINE",
+        "energy_keV": 2.3792
+      },
+      {
+        "transition": "M5O3_LINE",
+        "energy_keV": 2.401
+      },
+      {
+        "transition": "M5O4_LINE",
+        "energy_keV": 2.4622
+      },
+      {
+        "transition": "M5O5_LINE",
+        "energy_keV": 2.4648
+      },
+      {
+        "transition": "M5P1_LINE",
+        "energy_keV": 2.4809
+      },
+      {
+        "transition": "M5P2_LINE",
+        "energy_keV": 2.4833
+      },
+      {
+        "transition": "M5P3_LINE",
+        "energy_keV": 2.4833
+      }
+    ]
+  },
+  "scope": "structural modeled transitions only, not a concentration/LOD claim"
+}

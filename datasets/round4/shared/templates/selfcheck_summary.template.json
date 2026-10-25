@@ -11,7 +11,6 @@
   "actual_train": null,
   "actual_validation": null,
   "actual_sealed_test": null,
-  "pilot_counted_once": null,
   "generator_source_sha256": null,
   "frozen_inputs_sha256": null,
   "all_batch_audit_evidence": null,
@@ -21,5 +20,7 @@
   "commands_environment_logs": null,
   "unresolved_errors": null,
   "status": "pending",
-  "scientific_accuracy_validated": false
+  "scientific_accuracy_validated": false,
+  "pilot_required": false,
+  "pilot_spectra": 0
 }

@@ -1,0 +1,60 @@
+{
+  "status": "prepared_pending_review",
+  "members": {
+    "A": {
+      "records": 40000,
+      "roles": {
+        "sealed_test": 4000,
+        "train": 32000,
+        "validation": 4000
+      },
+      "batches": 400,
+      "sealed_condition_groups": {
+        "sealed_challenge": 2000,
+        "sealed_in_distribution": 2000
+      }
+    },
+    "B": {
+      "records": 20000,
+      "roles": {
+        "sealed_test": 2000,
+        "train": 16000,
+        "validation": 2000
+      },
+      "batches": 200,
+      "sealed_condition_groups": {
+        "sealed_challenge": 1000,
+        "sealed_in_distribution": 1000
+      }
+    },
+    "C": {
+      "records": 20000,
+      "roles": {
+        "sealed_test": 2000,
+        "train": 16000,
+        "validation": 2000
+      },
+      "batches": 200,
+      "sealed_condition_groups": {
+        "sealed_challenge": 1000,
+        "sealed_in_distribution": 1000
+      }
+    },
+    "D": {
+      "records": 20000,
+      "roles": {
+        "sealed_test": 2000,
+        "train": 16000,
+        "validation": 2000
+      },
+      "batches": 200,
+      "sealed_condition_groups": {
+        "sealed_challenge": 1000,
+        "sealed_in_distribution": 1000
+      }
+    }
+  },
+  "production_approved": false,
+  "spectra_generated": 0,
+  "no_pilot": true
+}

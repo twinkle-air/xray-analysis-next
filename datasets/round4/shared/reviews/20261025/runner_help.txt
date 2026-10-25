@@ -1,0 +1,20 @@
+usage: run_member.py [-h] --repository REPOSITORY --freeze FREEZE --release
+                     RELEASE --member {A,B,C,D} [--out OUT]
+                     [--workers WORKERS] [--minimum-free-gib MINIMUM_FREE_GIB]
+                     [--include-sealed-qc] [--dry-run]
+                     [--preflight-report PREFLIGHT_REPORT]
+
+Execute a complete approved member quota; --dry-run never calculates spectra.
+
+options:
+  -h, --help            show this help message and exit
+  --repository REPOSITORY
+  --freeze FREEZE
+  --release RELEASE
+  --member {A,B,C,D}
+  --out OUT
+  --workers WORKERS
+  --minimum-free-gib MINIMUM_FREE_GIB
+  --include-sealed-qc
+  --dry-run
+  --preflight-report PREFLIGHT_REPORT

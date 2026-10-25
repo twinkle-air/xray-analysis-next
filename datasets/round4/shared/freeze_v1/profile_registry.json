@@ -1,0 +1,104 @@
+{
+  "condition_files": {
+    "profiles/development/A_train.jsonl.gz": {
+      "sha256": "ccbe5b71755eb2718e0f277a974cd5ebccfd0a1c81d57e1b273ebe556d349e66",
+      "conditions": 16000,
+      "usage": "development"
+    },
+    "profiles/sealed_QC_only/A_sealed_test.jsonl.gz": {
+      "sha256": "0419633c067f72d9cea9d576e68b8bda6f597c5c90feb7603759bff38bba9f08",
+      "conditions": 2000,
+      "usage": "sealed_QC_only"
+    },
+    "profiles/development/A_validation.jsonl.gz": {
+      "sha256": "2365c8d8291a16e120c65be2bc525bfd39583cf4d210e8f435bdb2bab7bc9c31",
+      "conditions": 2000,
+      "usage": "development"
+    },
+    "profiles/development/B_validation.jsonl.gz": {
+      "sha256": "1b12e60997b76bf71ede7cd4bc9628750a86c0c136f9263250b65dd25b110205",
+      "conditions": 1000,
+      "usage": "development"
+    },
+    "profiles/development/B_train.jsonl.gz": {
+      "sha256": "ff672e5a8382dbb80cedddf96239af9de76c2e152a80b332c1997990cf350c15",
+      "conditions": 8000,
+      "usage": "development"
+    },
+    "profiles/sealed_QC_only/B_sealed_test.jsonl.gz": {
+      "sha256": "6b61412d8baca3a32ca39cccbb795d9244d7d50bb564e29b37772189a424c3c2",
+      "conditions": 1000,
+      "usage": "sealed_QC_only"
+    },
+    "profiles/development/C_train.jsonl.gz": {
+      "sha256": "5006369ebf50f21993104d8219b5e2a01f6659f3f0b89b92c7382529235a4598",
+      "conditions": 8000,
+      "usage": "development"
+    },
+    "profiles/sealed_QC_only/C_sealed_test.jsonl.gz": {
+      "sha256": "9a8add168de7a40633cb0b71d72a8142ec417274ef97c57ba802df66839ac0fa",
+      "conditions": 1000,
+      "usage": "sealed_QC_only"
+    },
+    "profiles/development/C_validation.jsonl.gz": {
+      "sha256": "c7ea93b0fdfaf4ed02514254f8e6286cc1b61364c87c19388179a26a41edbff3",
+      "conditions": 1000,
+      "usage": "development"
+    },
+    "profiles/development/D_train.jsonl.gz": {
+      "sha256": "ee6a70b3fdec8ce73b89f90cf6db0d7fa28d04c8d3447ef91cf67e586f0ff10b",
+      "conditions": 8000,
+      "usage": "development"
+    },
+    "profiles/sealed_QC_only/D_sealed_test.jsonl.gz": {
+      "sha256": "5b1f82623e2ad37dea319bfc95486cf321b1e0b2d292393cf75118f50c963df8",
+      "conditions": 1000,
+      "usage": "sealed_QC_only"
+    },
+    "profiles/development/D_validation.jsonl.gz": {
+      "sha256": "a993b457820d05babb716631cf43cc53aa4ec6bc1f841ab6e2ef6a983c819dcc",
+      "conditions": 1000,
+      "usage": "development"
+    }
+  },
+  "conditions": 50000,
+  "distinct_physical_profile_values": 32009,
+  "sealed_test_requires_explicit_QC_mode": true,
+  "old_T1_T2_T3_excluded_from_training_dictionary_and_selection": true,
+  "fallback_profile": {
+    "name": "assumed_P1_reference",
+    "voltage_kV": 49.0,
+    "current_uA": 196.1,
+    "reference_current_uA": 196.1,
+    "target": "Ag",
+    "live_time_s": 150.0,
+    "incident_photons_s": 10000000.0,
+    "channels": 2048,
+    "gain_keV_channel": 0.013839285714285714,
+    "zero_keV": 0.6133928571428573,
+    "noise_fwhm_eV": 55.0,
+    "fano_factor": 0.115,
+    "pair_creation_eV": 3.65,
+    "detector_area_cm2": 0.25,
+    "detector_distance_cm": 1.0,
+    "detector_si_um": 500.0,
+    "detector_be_um": 12.5,
+    "tube_be_um": 200.0,
+    "filter_Al_um": 0.0,
+    "incident_air_path_cm": 0.0,
+    "exit_air_path_cm": 0.0,
+    "air_density_g_cm3": 0.001205,
+    "incident_angle_deg": 45.0,
+    "exit_angle_deg": 45.0,
+    "scatter_angle_deg": 90.0,
+    "mass_thickness_g_cm2": 2.37,
+    "tube_line_fraction": 0.15,
+    "escape_fraction": 0.01,
+    "source_step_keV": 0.1,
+    "secondary_layers": 96,
+    "secondary": true,
+    "scatter": true,
+    "background_counts_channel": 0.0,
+    "calibration_status": "assumed_unverified"
+  }
+}
