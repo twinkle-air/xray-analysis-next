@@ -1,0 +1,33 @@
+{
+  "status": "passed_complete_no_spectrum_readiness_checks",
+  "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
+  "member_preflight": {
+    "A": {
+      "records": 40000,
+      "conditions": 20000,
+      "batches": 400
+    },
+    "B": {
+      "records": 20000,
+      "conditions": 10000,
+      "batches": 200
+    },
+    "C": {
+      "records": 20000,
+      "conditions": 10000,
+      "batches": 200
+    },
+    "D": {
+      "records": 20000,
+      "conditions": 10000,
+      "batches": 200
+    }
+  },
+  "production_release_failure_cases": 7,
+  "profile_plan_failure_cases": 4,
+  "all_source_syntax_checked": true,
+  "candidate_payloads_unchanged": true,
+  "publication_file_count": 100,
+  "spectra_generated": 0,
+  "production_approval_pending_collaborator_review": true
+}

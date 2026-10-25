@@ -1,0 +1,36 @@
+{
+  "status": "historical_resource_estimate_no_new_spectra",
+  "source_main": "cc921629e63570993b5980ebe6ea469ffa4fd6f0",
+  "reference_archive": {
+    "path": "datasets/round3/member_A/production_v1/archives/R3_A_base_D1_001.zip",
+    "git_blob": "592828b9b520589eb0af8b16adc130f3eea96994",
+    "sha256": "b01b50c81073bb135f4c5c6bfd08d3aefd25668f604ed3d877b47df2d77587f3",
+    "bytes": 10470327,
+    "expanded_bytes": 50963437,
+    "records": 46,
+    "CRC_checked": true
+  },
+  "estimated_archive_bytes_per_record": 227615.80434782608,
+  "estimated_expanded_bytes_per_record": 1107900.8043478262,
+  "estimated_total_bytes_per_record_including_blind_export": 1345516.608695652,
+  "estimates": {
+    "A": {
+      "records": 40000,
+      "native_archive_plus_expanded_plus_blind_estimated_bytes": 53820664347
+    },
+    "B": {
+      "records": 20000,
+      "native_archive_plus_expanded_plus_blind_estimated_bytes": 26910332173
+    },
+    "C": {
+      "records": 20000,
+      "native_archive_plus_expanded_plus_blind_estimated_bytes": 26910332173
+    },
+    "D": {
+      "records": 20000,
+      "native_archive_plus_expanded_plus_blind_estimated_bytes": 26910332173
+    }
+  },
+  "owner_workspace_free_bytes_at_preparation": 86423633920,
+  "scope": "Linear estimate from a prior archive of the same schema, not a capacity/time guarantee. Full production monitors a configurable free-space reserve and retains failed/partial batches."
+}

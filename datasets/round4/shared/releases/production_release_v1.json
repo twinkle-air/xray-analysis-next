@@ -1,0 +1,33 @@
+{
+  "schema": "round4-complete-production-release/1",
+  "status": "pending_collaborator_review",
+  "production_approved": false,
+  "usable_for_generation": false,
+  "members": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "spectra_per_member": {
+    "A": 40000,
+    "B": 20000,
+    "C": 20000,
+    "D": 20000
+  },
+  "pilot_required": false,
+  "pilot_spectra": 0,
+  "training_stages_are_production_gates": false,
+  "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
+  "production_tool_sha256": {
+    "prepare_conditions.py": "e0bcfdd35a628b006fa3a6630b3e3937d92b1a37acb62e0d5fb7e245f8bb6cd5",
+    "prepare_global.py": "bb53d62d2dac144449f2f9656578d8f7ccacce897a9e3b50ebd33fb3259b3f51",
+    "run_member.py": "2388be5107711088120b217a6705c202c78b2cd08634b33f5b4973a0325a8468",
+    "verify_freeze.py": "b467b156810c5a05f36a9d80e3e97c008f195785fddd2bdc996293b8f418f847",
+    "verify_release_gates.py": "86c7d8bb3f779cd7790be709b406d4b2020cb1dc3cf9cab1bd6b4b4b8fe26bbd"
+  },
+  "review_evidence": null,
+  "model_training_inclusion_approved": false,
+  "sealed_data_policy": "generation/physical QC only until final model/metric lock; never training/calibration/dictionary/selection",
+  "remaining_action": "Another collaborator reviews and merges the immutable freeze and tools; owner verifies merge evidence and unchanged hashes before production approval."
+}

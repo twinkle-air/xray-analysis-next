@@ -16,6 +16,7 @@
   "record_and_batch_plan": null,
   "window_budget_and_physical_QA": null,
   "actual_runner_command_and_help": null,
-  "quality_sample_evidence": null,
-  "production_release": null
+  "production_release": null,
+  "no_spectrum_preflight_evidence": null,
+  "pilot_required": false
 }

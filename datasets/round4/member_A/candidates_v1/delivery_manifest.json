@@ -1,0 +1,62 @@
+{
+  "schema": "round4-A-candidate-delivery/1",
+  "status": "candidate_only_not_production_release",
+  "member": "A",
+  "round_id": "round4",
+  "candidate_count": 2000,
+  "design_family_count_before_global_merge": 640,
+  "production_started": false,
+  "eligible_for_training": false,
+  "files": [
+    {
+      "path": "A_samples.json",
+      "bytes": 26834435,
+      "sha256": "d8e7ebfcc417ecb32c5f99a45dede77d5fe74485cf1f253c78dcbb4c811c32d4"
+    },
+    {
+      "path": "candidate_checks.json",
+      "bytes": 2016,
+      "sha256": "4feb719234901729501cd7975b8e1ef5436e19d45ea832e8372b9dfb9f35b818"
+    },
+    {
+      "path": "candidate_registry.csv",
+      "bytes": 14086945,
+      "sha256": "6a22023ce42017301c3c3f5a3306a99ed54f1d553d8a13ddaa40aeda60bed4ff"
+    },
+    {
+      "path": "cross_family_near_edges.csv",
+      "bytes": 71,
+      "sha256": "ae061a470c4304d601111d9550e45063c38a119b3effc9f9608a20616215c72d"
+    },
+    {
+      "path": "family_registry.json",
+      "bytes": 1462521,
+      "sha256": "95376ee3040ea0a6d563e0f8fdd25aca74ed5c8403c0613936a2efaa30cc5a28"
+    },
+    {
+      "path": "independent_verification.json",
+      "bytes": 352,
+      "sha256": "2f9834ac7edbcfd620dd1ab30538be4f0e23e98879ffb8e7e6f3a2435a914265"
+    },
+    {
+      "path": "input_identity.json",
+      "bytes": 524,
+      "sha256": "d2434bcf71f076d7425ede66168c35148af6f3c17e2bc0980183048aad7ac54d"
+    },
+    {
+      "path": "nearest_history.csv",
+      "bytes": 366618,
+      "sha256": "bb1a2bb4d27fe288969fee1a3354c27857e76a840b02b02539b47d99a7895570"
+    },
+    {
+      "path": "original_background_nearest_history.csv",
+      "bytes": 91299,
+      "sha256": "7b430fa9657ecfcc204098edb6f9dfe105911651fd0f774ab089af04d455c92f"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 3350,
+      "sha256": "d94fe8f640c84228a89a7b64ed1f65b2e77e6fc338f7bf8b52609ce76581ca76"
+    }
+  ]
+}

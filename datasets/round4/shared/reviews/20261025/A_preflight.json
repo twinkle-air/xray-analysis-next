@@ -1,0 +1,16 @@
+{
+  "status": "passed_no_spectrum_preflight",
+  "member": "A",
+  "records": 40000,
+  "batches": 400,
+  "conditions": 20000,
+  "roles": {
+    "sealed_test": 4000,
+    "train": 32000,
+    "validation": 4000
+  },
+  "pilot_spectra": 0,
+  "spectra_generated": 0,
+  "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
+  "release_production_approved": false
+}

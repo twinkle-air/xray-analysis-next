@@ -1,0 +1,10 @@
+{
+  "status": "preregistered_engineering_guardrail_not_accuracy_limit",
+  "maximum_lost_fraction_49kV": 0.5,
+  "maximum_lost_fraction_20kV": 0.1,
+  "conservation_rtol": 1e-09,
+  "conservation_atol": 1e-07,
+  "nonnegative_tolerance": 1e-12,
+  "policy": "Inherited preregistered numeric window guardrails; apply to every actual record in full production and full QC. Failed records are retained, not deleted or post-hoc budget-relaxed.",
+  "round_id": "round4"
+}

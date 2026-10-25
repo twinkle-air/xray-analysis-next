@@ -1,0 +1,7 @@
+{
+  "gain_keV_channel": [0.0135, 0.0142],
+  "zero_keV": [0.5, 0.75],
+  "noise_fwhm_eV": [45, 85],
+  "incident_photons_s": [5000000, 15000000],
+  "mass_thickness_g_cm2": [0.5, 3.0]
+}

@@ -1,0 +1,168 @@
+{
+  "status": "passed_coordinator_candidate_receipt",
+  "source_main": "cc921629e63570993b5980ebe6ea469ffa4fd6f0",
+  "members": {
+    "A": {
+      "recipes": 2000,
+      "families": 640,
+      "selfcheck_status": "passed"
+    },
+    "B": {
+      "recipes": 1000,
+      "families": 320,
+      "selfcheck_status": "passed"
+    },
+    "C": {
+      "recipes": 1000,
+      "families": 320,
+      "selfcheck_status": "passed"
+    },
+    "D": {
+      "recipes": 1000,
+      "families": 320,
+      "selfcheck_status": "passed"
+    }
+  },
+  "candidate_count": 5000,
+  "family_count": 1600,
+  "source_files": {
+    "datasets/round4/member_A/candidates_v1/A_samples.json": {
+      "sha256": "d8e7ebfcc417ecb32c5f99a45dede77d5fe74485cf1f253c78dcbb4c811c32d4",
+      "bytes": 26834435
+    },
+    "datasets/round4/member_A/candidates_v1/family_registry.json": {
+      "sha256": "95376ee3040ea0a6d563e0f8fdd25aca74ed5c8403c0613936a2efaa30cc5a28",
+      "bytes": 1462521
+    },
+    "datasets/round4/member_A/candidates_v1/independent_verification.json": {
+      "sha256": "2f9834ac7edbcfd620dd1ab30538be4f0e23e98879ffb8e7e6f3a2435a914265",
+      "bytes": 352
+    },
+    "datasets/round4/member_A/candidates_v1/candidate_checks.json": {
+      "sha256": "4feb719234901729501cd7975b8e1ef5436e19d45ea832e8372b9dfb9f35b818",
+      "bytes": 2016
+    },
+    "datasets/round4/member_B/candidates/B_samples.json": {
+      "sha256": "8aa831adcf28f65920eb3873db7ecbcf0298a7c2b1b2a791f265fd172eadc144",
+      "bytes": 9400042
+    },
+    "datasets/round4/member_B/candidates/family_registry.json": {
+      "sha256": "67f22166931887d5b0ab7101850b9ce81ea2c5623c5d9eeec06d8ef28029fe7b",
+      "bytes": 1041867
+    },
+    "datasets/round4/member_B/candidates/independent_verification.json": {
+      "sha256": "5a9e36b796c0c7632d1b35681756f8077f732444567e59783c59ba5d5e613718",
+      "bytes": 2560
+    },
+    "datasets/round4/member_B/candidates/candidate_checks.json": {
+      "sha256": "46389f2034c1db9d0d98747a614579561bd8ddb57091e3bc456ef75d599b0e7b",
+      "bytes": 3548
+    },
+    "datasets/round4/member_B/candidates/delivery_manifest.json": {
+      "sha256": "d16651a15d41f94f51c0fc701a6a67c2355e18bf91d43411cfbc6c076623cf08",
+      "bytes": 2422
+    },
+    "datasets/round4/member_C/candidates/C_samples.json": {
+      "sha256": "c70fc543cf3cb07509ce4049702a90e14dee46ba4641bfaa52587777e6254b28",
+      "bytes": 13794733
+    },
+    "datasets/round4/member_C/candidates/family_registry.json": {
+      "sha256": "73244829881c568d7c8fc762ca7a3cd0ca1b8a42de09c3a581182536565dc753",
+      "bytes": 746002
+    },
+    "datasets/round4/member_C/candidates/independent_verification.json": {
+      "sha256": "b8916955d5a10757ca03d1284bf11262cf5abbe030c47bc9f30251afeaa7021a",
+      "bytes": 1559
+    },
+    "datasets/round4/member_C/candidates/candidate_checks.json": {
+      "sha256": "75f29eb84fa945661b36b8806a94b7779de9fc56073ff4bb8f2b36ed042d6d35",
+      "bytes": 2787
+    },
+    "datasets/round4/member_C/candidates/delivery_manifest.json": {
+      "sha256": "12d8bbd9bd7be0ec8bdf093acb8bfc44955919a3b8315917eb31ecf89ca09c78",
+      "bytes": 2759
+    },
+    "datasets/round4/member_D/candidates/D_samples.json": {
+      "sha256": "59911b1f8947ac73e7767c768ba6ae2ab5378d4029fc02d3fcdb08d229b0ee63",
+      "bytes": 13790566
+    },
+    "datasets/round4/member_D/candidates/family_registry.json": {
+      "sha256": "4d5a54e53419d0632ad2545770254bfd2d976d74fde3cf99f4a50c8d9b7a34f1",
+      "bytes": 745850
+    },
+    "datasets/round4/member_D/candidates/independent_verification.json": {
+      "sha256": "28b9c370ac1f9f920c7d4dcfeda0ac21c7e3b94c000ad9c87ed0b4c0dae0fba0",
+      "bytes": 2159
+    },
+    "datasets/round4/member_D/candidates/candidate_checks.json": {
+      "sha256": "d299534b8d3720f5bf5b93d0a5c41c020dc5109cf61648738329b450e171e5af",
+      "bytes": 3303
+    },
+    "datasets/round4/member_D/candidates/delivery_manifest.json": {
+      "sha256": "debc7f03c3126315749aca78aefa8ffef63fecacee4e85eee3384dff7dfeca61",
+      "bytes": 2759
+    },
+    "datasets/round3/member_A/inputs/historical_compositions.json": {
+      "sha256": "8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473",
+      "bytes": 4260937
+    },
+    "datasets/round1/A-part-20261018/A_pilot_samples.json": {
+      "sha256": "687df28e0eb0365e82ea0ea56843ab771b052a3f01502635b5354077effb4b70",
+      "bytes": 701867
+    },
+    "datasets/round1/A-part-20261018/A_samples.json": {
+      "sha256": "b1fcc884112de2aca0b07594af16fd4867b7805ee117931ca7c8a679c7ec868e",
+      "bytes": 17384498
+    },
+    "datasets/round1/B-part/B_pilot_samples.json": {
+      "sha256": "ed3c26bc86c99d4af175b47fd1aea61bac9e4492d0b924c28fc565489e6702fe",
+      "bytes": 807612
+    },
+    "datasets/round1/B-part/B_samples.json": {
+      "sha256": "214ac617e74ca0153ebf8f5fc3aa8c1eb2f29c2e9297b884b5037c15d98973ec",
+      "bytes": 11893487
+    },
+    "datasets/round1/C-part-20261018/C_samples.json": {
+      "sha256": "ff783d84c6a0cbe426ad777fec8700201e097ccf15bf9261274a348242435b05",
+      "bytes": 2080020
+    },
+    "datasets/round2/member_C/C_r2_samples.json": {
+      "sha256": "0d20220aefb7772ac598d437a6fbe69cc8eb20203bc5b6919712b82a90b4ff37",
+      "bytes": 319745
+    },
+    "datasets/round2/member_C/qc/superseded_v1/C_r2_samples.json": {
+      "sha256": "584ebc5ad59aa4c314b2e34ef1e8c0ca260d597c6f0d119b53285d761a396660",
+      "bytes": 311642
+    },
+    "datasets/round2/member_D/design/backup_samples_D.json": {
+      "sha256": "1fa9d040a69d0d6983c420b13ecfe47fd7c57cc96245db5d6e39ba5360ab1891",
+      "bytes": 231542
+    },
+    "datasets/round2/member_D/design/candidate_samples_D.json": {
+      "sha256": "d19bb5be052efb95f0e4b07f00b9e1e94aa87ba9a3371bf6f8111967d21b1f85",
+      "bytes": 1894925
+    },
+    "datasets/round3/member_A/candidates_v1/A_samples.json": {
+      "sha256": "ba95f56fb8974e7b6319fb474f1c609ec2a24c40c77db77e6a96e9782963755a",
+      "bytes": 3130542
+    },
+    "datasets/round3/member_B/candidates/B_samples.json": {
+      "sha256": "bb61407dc09323e31706f506fd38e28145963fd577e7096604b8f24c7e8e2cf8",
+      "bytes": 3111637
+    },
+    "datasets/round3/member_C/candidates/C_samples.json": {
+      "sha256": "ad78e2e8d1279d9adaad67676bb99cad7426906ebde1a1bac2e370142536c168",
+      "bytes": 3140042
+    },
+    "datasets/round3/member_D/candidates/D_samples.json": {
+      "sha256": "f7120fdf413cb3d1bd46229f1029d0fa8448a2281038d366a193a2547f1d44a1",
+      "bytes": 3126611
+    }
+  },
+  "production_approved": false,
+  "spectra_generated": 0,
+  "notes": [
+    "A: merged candidate package has no delivery_manifest.json; coordinator receipt hashes bind every used source",
+    "B sets historical_train_only_constraint_pending=true unconditionally; coordinator independently derives actual history links from the registered composition table instead of treating this pending flag as an assigned role."
+  ]
+}

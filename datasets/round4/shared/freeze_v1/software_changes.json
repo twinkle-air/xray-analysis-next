@@ -1,0 +1,16 @@
+{
+  "generator_version": "0.2.2",
+  "physical_model_version": "0.2.0",
+  "changed_files": {
+    "dataset.py": {
+      "source_sha256": "8a62ad4f291d63d7c9a7a555f519d617e143b13e58a9f41671f299d9c7bfa002",
+      "frozen_sha256": "d0577f77b8f06b71a20aa1175240b432526fb07feacd550e3fb95f9196cf99e8"
+    },
+    "version.py": {
+      "source_sha256": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+      "frozen_sha256": "38197bf3f7b2ce102340f0b84df656706e18dcee1530a6991253bdb6695ccb6a"
+    }
+  },
+  "physics_core_unchanged": true,
+  "new_feature": "Complete per-condition profile_override in native make_plan, same profile for both repeats; existing no-override RNG plan unchanged"
+}

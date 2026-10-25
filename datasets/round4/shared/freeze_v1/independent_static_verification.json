@@ -1,0 +1,29 @@
+{
+  "status": "passed_independent_no_spectrum_verification",
+  "records": 100000,
+  "conditions": 50000,
+  "families": 1600,
+  "recipes": 5000,
+  "roles": {
+    "sealed_test": 10000,
+    "train": 80000,
+    "validation": 10000
+  },
+  "conditions_by_group": {
+    "development": 45000,
+    "sealed_in_distribution": 2500,
+    "sealed_challenge": 2500
+  },
+  "legacy_plan_compatibility_sha256": "55a1deb98404488e23ae59576fd99abfa404e01077dc5656bcbd64779a836c33",
+  "explicit_profile_negative_cases_rejected": 4,
+  "same_profile_two_distinct_noise_seeds": true,
+  "known_historical_noise_seeds_checked": 8400,
+  "explicit_current_and_historical_parent_claims_checked": true,
+  "maximum_profile_coordinate_rebuild_error": 0.0,
+  "physics_core_unchanged": true,
+  "old_T_profiles_reused": false,
+  "pilot_spectra": 0,
+  "spectra_generated": 0,
+  "production_approved": false,
+  "forward_physics_and_window_QC": "must execute on every actual generated record during the full production job"
+}

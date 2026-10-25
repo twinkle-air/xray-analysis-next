@@ -1,0 +1,8 @@
+{
+  "baseline": "workspace 0.2.0 before 2026-10-17 export revision; not proof of unavailable teammate source",
+  "files": {
+    "core.py": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "minerals.py": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+    "robustness.py": "8878e652ce4b1554e97d383e2428718f1f140d10624007206eea908d59b9f634"
+  }
+}

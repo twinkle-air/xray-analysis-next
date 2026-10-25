@@ -1,0 +1,31 @@
+{
+  "status": "passed_no_spectrum_preflight",
+  "conditions_checked": 50000,
+  "planned_records": 100000,
+  "batch_count": 1000,
+  "pilot_spectra_generated": 0,
+  "spectra_generated": 0,
+  "checks": [
+    "Profile schema/positive parameters",
+    "2048 increasing channel-energy axis",
+    "Fano/noise width positive and at least 2 channels at modeled >=1keV energies",
+    "10 distinct physical conditions per candidate excluding profile names",
+    "same condition retained in both noise repeats",
+    "100000 unique child seeds and opaque IDs",
+    "exact whole-family roles/stage quotas"
+  ],
+  "minimum_fwhm_bins": 5.266411670404838,
+  "actual_window_and_full_physics_QC": "required per actual generated record; not executed by static preflight",
+  "historical_seed_sources": [
+    {
+      "path": "datasets/round2/member_A/actual_record_index.csv",
+      "sha256": "c8849d34c2d1c6a922b19850f03cceea09b55e6a89869bfea3caa032ec163e8d"
+    },
+    {
+      "path": "datasets/round3/shared/freeze_v1/record_plan.csv",
+      "sha256": "68cf848cc5cea4c41ea80fdbd4248fa6428bcde9252d989b5c677d80b39a0abd"
+    }
+  ],
+  "known_historical_noise_seeds": 8400,
+  "historical_noise_registry_limit": "Round3 complete frozen noise plan plus available Round2 A index. Round1 and unavailable Round2 member record seeds are not claimed as exhaustively checked."
+}

@@ -1,0 +1,32 @@
+{
+  "scope": "QC/final evaluation only; excluded from model fitting, dictionary construction and selection",
+  "challenge_ranges": {
+    "gain_outer_abs_relative": [
+      0.0045,
+      0.005
+    ],
+    "zero_offset_keV": [
+      0.027,
+      0.03
+    ],
+    "noise_fwhm_multiplier": [
+      1.135,
+      1.15
+    ],
+    "exit_air_offset_cm": [
+      0.45,
+      0.5
+    ]
+  },
+  "five_challenge_types": [
+    "negative_gain_outer_band",
+    "positive_gain_outer_band",
+    "zero_upper_band",
+    "noise_upper_band",
+    "joint_outer_gain_zero_noise_air"
+  ],
+  "within_distribution_conditions_per_recipe": 5,
+  "challenge_conditions_per_recipe": 5,
+  "old_T1_T2_T3_reused": false,
+  "external_blindness": false
+}
