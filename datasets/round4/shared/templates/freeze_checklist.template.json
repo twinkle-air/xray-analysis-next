@@ -1,0 +1,21 @@
+{
+  "is_template": true,
+  "round_id": "round4",
+  "usable_for_generation": false,
+  "production_started": false,
+  "status": "pending",
+  "candidate_all_members": null,
+  "historical_sources_manifest": null,
+  "global_family_closure": null,
+  "family_role_stage_assignments": null,
+  "profile_distributions_and_instances": null,
+  "sealed_condition_isolation": null,
+  "generator_version_and_source_sha256": null,
+  "atomic_and_response_dependencies": null,
+  "seed_and_opaque_id_registry": null,
+  "record_and_batch_plan": null,
+  "window_budget_and_physical_QA": null,
+  "actual_runner_command_and_help": null,
+  "quality_sample_evidence": null,
+  "production_release": null
+}

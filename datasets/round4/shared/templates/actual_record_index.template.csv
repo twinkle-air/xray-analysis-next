@@ -1,0 +1,1 @@
+global_record_id,batch_id,native_id,opaque_blind_id,candidate_id,unified_family_id,member,research_usage,training_stage,condition_instance_id,condition_group,repeat,noise_seed,blind_path,blind_sha256,full_path,full_sha256,archive_path,archive_sha256,qc_status,eligible_for_training,exposure_status
