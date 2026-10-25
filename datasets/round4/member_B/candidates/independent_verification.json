@@ -1,0 +1,78 @@
+{
+  "schema": "round4-B-independent-candidate-review/1",
+  "status": "passed",
+  "errors": [],
+  "error_count": 0,
+  "notes": [],
+  "reviewed_files": {
+    "B_samples.json": {
+      "sha256": "8aa831adcf28f65920eb3873db7ecbcf0298a7c2b1b2a791f265fd172eadc144",
+      "bytes": 9400042
+    },
+    "candidate_registry.csv": {
+      "sha256": "f9c4b624592f50dc3eac1960dc7e6493272eaed5571b3beed20c293563242e11",
+      "bytes": 3952041
+    },
+    "family_registry.json": {
+      "sha256": "67f22166931887d5b0ab7101850b9ce81ea2c5623c5d9eeec06d8ef28029fe7b",
+      "bytes": 1041867
+    },
+    "line_interference_evidence.csv": {
+      "sha256": "313b6035f54780bf1265932150914ea4180399b205da37c2a0f6d75a6eb43820",
+      "bytes": 10302
+    }
+  },
+  "checks": {
+    "candidate_count": 1000,
+    "design_family_count": 320,
+    "category_counts": {
+      "element_gradient": 400,
+      "zero_spike": 200,
+      "matrix_interference": 200,
+      "routine_coverage": 200
+    },
+    "matrix_counts": {
+      "silicate_oxide": 500,
+      "iron_oxide": 500
+    },
+    "requested_role_counts": {
+      "sealed_test_nominal": 100,
+      "validation_nominal": 100,
+      "train_nominal": 800
+    },
+    "worst_closure_residual_percent": 0.0,
+    "worst_closure_candidate": "R4_B_ELEMENT_GRADIENT_0001_GRADIENT_01",
+    "worst_rebuild_delta_percent": 1.1226575225009583e-12,
+    "worst_rebuild_candidate": "R4_B_ROUTINE_0196_ROUTINE",
+    "range_violations": 0,
+    "controlled_zero_labels": 120,
+    "zero_entry_count": 5208,
+    "zero_label_conflicts": 0,
+    "line_evidence_rows": 40,
+    "line_window_eV": 150.0,
+    "history_rows_compared": 4800,
+    "history_min_L1_pp": 2.8117722511749617,
+    "history_links_at_0_5pp": 0,
+    "cross_member_round4": {
+      "A": {
+        "other_candidate_count": 2000,
+        "minimum_L1_percentage_points": 3.5036104964473105,
+        "pairs_at_0_5pp": 0,
+        "exact_composition_matches": 0
+      },
+      "C": {
+        "other_candidate_count": 1000,
+        "minimum_L1_percentage_points": 3.9657617919174104,
+        "pairs_at_0_5pp": 0,
+        "exact_composition_matches": 0
+      },
+      "D": {
+        "other_candidate_count": 1000,
+        "minimum_L1_percentage_points": 3.4282050434206113,
+        "pairs_at_0_5pp": 0,
+        "exact_composition_matches": 0
+      }
+    }
+  },
+  "scope": "Structural, closure, compensation, range, line-table and distance review of candidate compositions only. No spectra exist and no accuracy claim is made."
+}

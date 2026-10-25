@@ -1,0 +1,276 @@
+{
+  "schema": "round4-B-candidate-coverage/1",
+  "per_element": {
+    "Na": {
+      "records": 1000,
+      "positive_records": 995,
+      "zero_records": 5,
+      "min_percent": 0.0,
+      "max_percent": 3.6898354715417727,
+      "median_positive_percent": 0.948429444823597
+    },
+    "Mg": {
+      "records": 1000,
+      "positive_records": 995,
+      "zero_records": 5,
+      "min_percent": 0.0,
+      "max_percent": 7.215104595283804,
+      "median_positive_percent": 3.6040681554123073
+    },
+    "Al": {
+      "records": 1000,
+      "positive_records": 997,
+      "zero_records": 3,
+      "min_percent": 0.0,
+      "max_percent": 13.22756392543771,
+      "median_positive_percent": 6.668207714155294
+    },
+    "Si": {
+      "records": 1000,
+      "positive_records": 993,
+      "zero_records": 7,
+      "min_percent": 0.0,
+      "max_percent": 38.14843496310486,
+      "median_positive_percent": 16.345961538945076
+    },
+    "P": {
+      "records": 1000,
+      "positive_records": 993,
+      "zero_records": 7,
+      "min_percent": 0.0,
+      "max_percent": 0.4351062966413857,
+      "median_positive_percent": 0.20111389872871882
+    },
+    "S": {
+      "records": 1000,
+      "positive_records": 995,
+      "zero_records": 5,
+      "min_percent": 0.0,
+      "max_percent": 0.7012844128843417,
+      "median_positive_percent": 0.24907030874947553
+    },
+    "Cl": {
+      "records": 1000,
+      "positive_records": 997,
+      "zero_records": 3,
+      "min_percent": 0.0,
+      "max_percent": 0.597543311576758,
+      "median_positive_percent": 0.17523564653161003
+    },
+    "K": {
+      "records": 1000,
+      "positive_records": 993,
+      "zero_records": 7,
+      "min_percent": 0.0,
+      "max_percent": 4.114527252591102,
+      "median_positive_percent": 1.2338767573364353
+    },
+    "Ca": {
+      "records": 1000,
+      "positive_records": 997,
+      "zero_records": 3,
+      "min_percent": 0.0,
+      "max_percent": 10.717591766074765,
+      "median_positive_percent": 4.698096557268609
+    },
+    "Ti": {
+      "records": 1000,
+      "positive_records": 993,
+      "zero_records": 7,
+      "min_percent": 0.0,
+      "max_percent": 2.3845141480445595,
+      "median_positive_percent": 0.9424812838933021
+    },
+    "V": {
+      "records": 1000,
+      "positive_records": 738,
+      "zero_records": 262,
+      "min_percent": 0.0,
+      "max_percent": 0.250140655258502,
+      "median_positive_percent": 0.004389975341711
+    },
+    "Cr": {
+      "records": 1000,
+      "positive_records": 762,
+      "zero_records": 238,
+      "min_percent": 0.0,
+      "max_percent": 0.2305761282403044,
+      "median_positive_percent": 0.003419343082565531
+    },
+    "Mn": {
+      "records": 1000,
+      "positive_records": 997,
+      "zero_records": 3,
+      "min_percent": 0.0,
+      "max_percent": 3.0953873314170335,
+      "median_positive_percent": 0.600978154486713
+    },
+    "Fe": {
+      "records": 1000,
+      "positive_records": 997,
+      "zero_records": 3,
+      "min_percent": 0.0,
+      "max_percent": 51.936040722991514,
+      "median_positive_percent": 28.478610476820815
+    },
+    "Co": {
+      "records": 1000,
+      "positive_records": 716,
+      "zero_records": 284,
+      "min_percent": 0.0,
+      "max_percent": 0.14574599543435449,
+      "median_positive_percent": 0.0049055899682746845
+    },
+    "Ni": {
+      "records": 1000,
+      "positive_records": 720,
+      "zero_records": 280,
+      "min_percent": 0.0,
+      "max_percent": 0.19550230721825512,
+      "median_positive_percent": 0.0021041170085254342
+    },
+    "Cu": {
+      "records": 1000,
+      "positive_records": 756,
+      "zero_records": 244,
+      "min_percent": 0.0,
+      "max_percent": 0.19713269778397752,
+      "median_positive_percent": 0.004353577061701406
+    },
+    "Zn": {
+      "records": 1000,
+      "positive_records": 778,
+      "zero_records": 222,
+      "min_percent": 0.0,
+      "max_percent": 0.2878969240242671,
+      "median_positive_percent": 0.006418391905948912
+    },
+    "As": {
+      "records": 1000,
+      "positive_records": 794,
+      "zero_records": 206,
+      "min_percent": 0.0,
+      "max_percent": 0.194383133152695,
+      "median_positive_percent": 0.003643746332127009
+    },
+    "Se": {
+      "records": 1000,
+      "positive_records": 729,
+      "zero_records": 271,
+      "min_percent": 0.0,
+      "max_percent": 0.14168154753595982,
+      "median_positive_percent": 0.0026795285912982096
+    },
+    "Rb": {
+      "records": 1000,
+      "positive_records": 695,
+      "zero_records": 305,
+      "min_percent": 0.0,
+      "max_percent": 0.19988890878614488,
+      "median_positive_percent": 0.002816846750120201
+    },
+    "Sr": {
+      "records": 1000,
+      "positive_records": 677,
+      "zero_records": 323,
+      "min_percent": 0.0,
+      "max_percent": 0.29591218372726,
+      "median_positive_percent": 0.004834843322256835
+    },
+    "Y": {
+      "records": 1000,
+      "positive_records": 771,
+      "zero_records": 229,
+      "min_percent": 0.0,
+      "max_percent": 0.14659309708614118,
+      "median_positive_percent": 0.0026350472106747656
+    },
+    "Zr": {
+      "records": 1000,
+      "positive_records": 724,
+      "zero_records": 276,
+      "min_percent": 0.0,
+      "max_percent": 0.39552059292921654,
+      "median_positive_percent": 0.004617674641829966
+    },
+    "Nb": {
+      "records": 1000,
+      "positive_records": 726,
+      "zero_records": 274,
+      "min_percent": 0.0,
+      "max_percent": 0.1899651721247838,
+      "median_positive_percent": 0.006259001477524971
+    },
+    "Mo": {
+      "records": 1000,
+      "positive_records": 762,
+      "zero_records": 238,
+      "min_percent": 0.0,
+      "max_percent": 0.13623664250652442,
+      "median_positive_percent": 0.002859907010924703
+    },
+    "Cd": {
+      "records": 1000,
+      "positive_records": 776,
+      "zero_records": 224,
+      "min_percent": 0.0,
+      "max_percent": 0.1163288362661458,
+      "median_positive_percent": 0.0031059279503300274
+    },
+    "Sn": {
+      "records": 1000,
+      "positive_records": 779,
+      "zero_records": 221,
+      "min_percent": 0.0,
+      "max_percent": 0.1458466558237622,
+      "median_positive_percent": 0.003151028217234854
+    },
+    "Sb": {
+      "records": 1000,
+      "positive_records": 706,
+      "zero_records": 294,
+      "min_percent": 0.0,
+      "max_percent": 0.1356011760333228,
+      "median_positive_percent": 0.004388991380727765
+    },
+    "Ba": {
+      "records": 1000,
+      "positive_records": 742,
+      "zero_records": 258,
+      "min_percent": 0.0,
+      "max_percent": 0.36,
+      "median_positive_percent": 0.006761629277905987
+    },
+    "W": {
+      "records": 1000,
+      "positive_records": 742,
+      "zero_records": 258,
+      "min_percent": 0.0,
+      "max_percent": 0.19964002194182898,
+      "median_positive_percent": 0.0034936255443266642
+    },
+    "Pb": {
+      "records": 1000,
+      "positive_records": 757,
+      "zero_records": 243,
+      "min_percent": 0.0,
+      "max_percent": 0.2972283660822785,
+      "median_positive_percent": 0.004935571970633804
+    }
+  },
+  "design_type_counts": {
+    "element_gradient": 400,
+    "zero_spike": 200,
+    "matrix_interference": 200,
+    "routine_coverage": 200
+  },
+  "matrix_counts": {
+    "silicate_oxide": 500,
+    "iron_oxide": 500
+  },
+  "requested_role_counts": {
+    "sealed_test_nominal": 100,
+    "validation_nominal": 100,
+    "train_nominal": 800
+  }
+}

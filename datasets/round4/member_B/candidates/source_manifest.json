@@ -1,0 +1,56 @@
+{
+  "schema": "round4-B-candidate-source-manifest/1",
+  "status": "candidate_inputs_only_not_production_freeze",
+  "inputs": [
+    {
+      "path": "datasets/round3/member_A/inputs/design_ranges.json",
+      "sha256": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d",
+      "bytes": 15473,
+      "role": "Round3 A validated starting ranges; Round4 range proposal only"
+    },
+    {
+      "path": "datasets/round3/member_A/inputs/historical_compositions.json",
+      "sha256": "8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473",
+      "bytes": 4260937,
+      "records": 3800,
+      "role": "Round1/2 historical composition table with its embedded source list"
+    },
+    {
+      "path": "datasets/round3/member_A/inputs/generator/fp_competition/core.py",
+      "sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "bytes": 22109,
+      "role": "Round3 frozen composition conversion source"
+    },
+    {
+      "path": "datasets/round3/member_A/inputs/generator/fp_competition/minerals.py",
+      "sha256": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "bytes": 5340,
+      "role": "Round3 frozen range sampler source"
+    },
+    {
+      "path": "datasets/round3/member_A/inputs/generator/fp_competition/version.py",
+      "sha256": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+      "bytes": 94,
+      "role": "Frozen generator version identity"
+    },
+    {
+      "path": "datasets/round4/member_A/candidates_v1/A_samples.json",
+      "sha256": "d8e7ebfcc417ecb32c5f99a45dede77d5fe74485cf1f253c78dcbb4c811c32d4",
+      "bytes": 26834435,
+      "role": "Round4 A candidate recipes for the pairwise B-vs-A screen; not a role or family freeze"
+    },
+    {
+      "path": "datasets/round4/member_C/candidates/C_samples.json",
+      "sha256": "c70fc543cf3cb07509ce4049702a90e14dee46ba4641bfaa52587777e6254b28",
+      "bytes": 13794733,
+      "role": "Round4 C candidate recipes for the pairwise B-vs-C screen; not a role or family freeze"
+    },
+    {
+      "path": "datasets/round4/member_D/candidates/D_samples.json",
+      "sha256": "59911b1f8947ac73e7767c768ba6ae2ab5378d4029fc02d3fcdb08d229b0ee63",
+      "bytes": 13790566,
+      "role": "Round4 D candidate recipes for the pairwise B-vs-D screen; not a role or family freeze"
+    }
+  ],
+  "coverage_limit": "Known Round1/2 history from the Round3 A input table plus all four Round3 shared candidate registries. Does not prove absence of undocumented material ancestry."
+}
