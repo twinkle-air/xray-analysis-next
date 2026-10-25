@@ -1,0 +1,86 @@
+{
+  "schema": "round4-D-candidate-source-manifest/1",
+  "status": "candidate_inputs_only_not_production_freeze",
+  "inputs": [
+    {
+      "path": "datasets/round3/member_A/inputs/design_ranges.json",
+      "sha256": "5f347d179830f7e9c64e0d98fd02397582f263171e83c773513347d5090c9c6d",
+      "bytes": 15473,
+      "role": "Round3 A validated starting ranges; Round4 range proposal only"
+    },
+    {
+      "path": "datasets/round3/member_A/inputs/historical_compositions.json",
+      "sha256": "8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473",
+      "bytes": 4260937,
+      "role": "Round1/2 historical composition table with its embedded source list"
+    },
+    {
+      "path": "datasets/round3/member_A/inputs/historical_compositions.json",
+      "sha256": "8a4461df5020c07a89603adfab164873e854a03498cf62358c5cf80fe1fc6473",
+      "bytes": 4260937,
+      "records": 3800,
+      "coverage": "Round1/2 history prepared for Round3 A; see embedded source manifest and coverage limit"
+    },
+    {
+      "path": "datasets/round3/member_A/candidates_v1/A_samples.json",
+      "sha256": "ba95f56fb8974e7b6319fb474f1c609ec2a24c40c77db77e6a96e9782963755a",
+      "bytes": 3130542,
+      "records": 250,
+      "coverage": "Round3 member A candidate compositions; all were visible in the shared repository"
+    },
+    {
+      "path": "datasets/round3/member_B/candidates/B_samples.json",
+      "sha256": "bb61407dc09323e31706f506fd38e28145963fd577e7096604b8f24c7e8e2cf8",
+      "bytes": 3111637,
+      "records": 250,
+      "coverage": "Round3 member B candidate compositions; all were visible in the shared repository"
+    },
+    {
+      "path": "datasets/round3/member_C/candidates/C_samples.json",
+      "sha256": "ad78e2e8d1279d9adaad67676bb99cad7426906ebde1a1bac2e370142536c168",
+      "bytes": 3140042,
+      "records": 250,
+      "coverage": "Round3 member C candidate compositions; all were visible in the shared repository"
+    },
+    {
+      "path": "datasets/round3/member_D/candidates/D_samples.json",
+      "sha256": "f7120fdf413cb3d1bd46229f1029d0fa8448a2281038d366a193a2547f1d44a1",
+      "bytes": 3126611,
+      "records": 250,
+      "coverage": "Round3 member D candidate compositions; all were visible in the shared repository"
+    },
+    {
+      "path": "datasets/round3/member_A/inputs/generator/fp_competition/core.py",
+      "sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+      "bytes": 22109,
+      "role": "Round3 frozen composition conversion/range sampler source"
+    },
+    {
+      "path": "datasets/round3/member_A/inputs/generator/fp_competition/minerals.py",
+      "sha256": "69fb768c041ef100721794628f46cb8b90c5acbf5f4c4a45c5e088bca6de1662",
+      "bytes": 5340,
+      "role": "Round3 frozen composition conversion/range sampler source"
+    },
+    {
+      "path": "datasets/round3/member_A/inputs/generator/fp_competition/version.py",
+      "sha256": "7c7ec4124de0eb98bda3490a99b46c4de91512d70a5b5d7f102b640301563130",
+      "bytes": 94,
+      "role": "Round3 frozen composition conversion/range sampler source"
+    },
+    {
+      "path": "datasets/round4/member_A/candidates_v1/A_samples.json",
+      "sha256": "d8e7ebfcc417ecb32c5f99a45dede77d5fe74485cf1f253c78dcbb4c811c32d4",
+      "bytes": 26834435,
+      "records": 2000,
+      "role": "Round4 A candidate recipes for the D-vs-A pairwise screen; not a role or family freeze"
+    },
+    {
+      "path": "datasets/round4/member_C/candidates/C_samples.json",
+      "sha256": "c70fc543cf3cb07509ce4049702a90e14dee46ba4641bfaa52587777e6254b28",
+      "bytes": 13794733,
+      "records": 1000,
+      "role": "Round4 C candidate recipes for the D-vs-C pairwise screen; not a role or family freeze"
+    }
+  ],
+  "coverage_limit": "Known Round1/2 history from the Round3 A input table plus all four Round3 shared candidate registries. Does not prove absence of undocumented material ancestry."
+}

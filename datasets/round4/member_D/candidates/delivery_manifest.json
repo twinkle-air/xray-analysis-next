@@ -1,0 +1,87 @@
+{
+  "schema": "round4-D-candidate-delivery/1",
+  "status": "candidate_only_not_production_release",
+  "member": "D",
+  "round_id": "round4",
+  "candidate_count": 1000,
+  "design_family_count_before_global_merge": 320,
+  "production_started": false,
+  "eligible_for_training": false,
+  "files": [
+    {
+      "path": "D_samples.json",
+      "bytes": 13791796,
+      "sha256": "4b78f890c3ac7038ef8585d1f81211d43c1ea41e11f955cfc73531244703aafb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4441,
+      "sha256": "9d1222a32a63fe4926b779ebe1368bb5225b091007497329fa9ad21ca5b41121"
+    },
+    {
+      "path": "candidate_checks.json",
+      "bytes": 3303,
+      "sha256": "d299534b8d3720f5bf5b93d0a5c41c020dc5109cf61648738329b450e171e5af"
+    },
+    {
+      "path": "candidate_registry.csv",
+      "bytes": 7296705,
+      "sha256": "5e89959441b43c9fce34e371da3222394dc15bb3d82705caccc27ba9a00087ff"
+    },
+    {
+      "path": "coverage.json",
+      "bytes": 12760,
+      "sha256": "25d5c69875e5e7ed97f861a669051a2902058fc9eabcb53b1067130e923299c3"
+    },
+    {
+      "path": "cross_family_near_edges.csv",
+      "bytes": 71,
+      "sha256": "ae061a470c4304d601111d9550e45063c38a119b3effc9f9608a20616215c72d"
+    },
+    {
+      "path": "cross_member_near_edges.csv",
+      "bytes": 76,
+      "sha256": "b4c5fcda80a684281b3ea44c52ac8460fe75c68bec244b386cb88d5d77cb912e"
+    },
+    {
+      "path": "family_registry.json",
+      "bytes": 745855,
+      "sha256": "0c400f1a126478b750fc81a8a764df3459ebd31ebce0471089f99a59473efef9"
+    },
+    {
+      "path": "independent_verification.json",
+      "bytes": 2159,
+      "sha256": "28b9c370ac1f9f920c7d4dcfeda0ac21c7e3b94c000ad9c87ed0b4c0dae0fba0"
+    },
+    {
+      "path": "input_identity.json",
+      "bytes": 2488,
+      "sha256": "d7ab54d4c6ba28947a4b0db0cc36e890564c46a2a21f8479ce1782824a27f55a"
+    },
+    {
+      "path": "line_interference_evidence.csv",
+      "bytes": 10295,
+      "sha256": "5b64c386b922ba77dcb720a7d5d457c869fb0b2b9317be9eb09ffbb9b5643425"
+    },
+    {
+      "path": "nearest_history.csv",
+      "bytes": 184545,
+      "sha256": "50f053da8ccf9f1acff6af1a8335eb6c8b280c95d7144e4d2ebf3363aa8717f2"
+    },
+    {
+      "path": "original_background_nearest_history.csv",
+      "bytes": 44050,
+      "sha256": "b9846e9999ebfcb145f974e351e102d52b4422e6863d2075ef11ed21b90ce07b"
+    },
+    {
+      "path": "original_backgrounds.json",
+      "bytes": 773186,
+      "sha256": "2662dd4e13aa552b00c8055bda0ba2b9f89c82adb4bf7025f97923451bdce6bc"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 3999,
+      "sha256": "35af7d2862cbfba335b8c1ca5f96fda7b141e7bb3bd5719cc963213992eef7f7"
+    }
+  ]
+}
