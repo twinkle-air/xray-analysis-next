@@ -1,0 +1,743 @@
+{
+  "status": "failed_partial_retained",
+  "packaging_status": "pending",
+  "member": "B",
+  "expected_records": 20000,
+  "actual_records": 1900,
+  "roles": {
+    "sealed_test": 1000,
+    "train": 900
+  },
+  "complete_batches": 19,
+  "failures": [
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0001",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_sealed_test_none_sealed_challenge_0001"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0002",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_sealed_test_none_sealed_challenge_0002"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0003",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_sealed_test_none_sealed_challenge_0003"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0004",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_sealed_test_none_sealed_challenge_0004"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0005",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_sealed_test_none_sealed_challenge_0005"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0006",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_sealed_test_none_sealed_challenge_0006"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0007",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_sealed_test_none_sealed_challenge_0007"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0008",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_sealed_test_none_sealed_challenge_0008"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0007",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_sealed_test_none_sealed_in_distribution_0007"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0010",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_sealed_test_none_sealed_in_distribution_0010"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0001",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0001"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0003",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0003"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0004",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0004"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0007",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0007"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0008",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0008"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0011",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0011"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0014",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0014"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0015",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0015"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0016",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0016"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0021",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0021"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0022",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0022"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0023",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0023"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0025",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0025"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0026",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0026"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0030",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0030"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0031",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0031"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0027",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0033",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0033"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0034",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0034"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0035",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0035"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0036",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0036"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0037",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0038",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0038"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0039",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage1_development_0039"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0040",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0001",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0001"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0002",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0002"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0003",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0004",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0005",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0005"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0006",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0006"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0007",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0007"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0008",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0009",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0009"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0010",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0011",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0011"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0012",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0013",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0013"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0014",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0015",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0015"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0016",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0016"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0017",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0018",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0019",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0020",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0020"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0021",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0021"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0022",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0022"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0023",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_train_stage2_development_0023'"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0024",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0032",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0026",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0027",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0027"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0025",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0028",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0030",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0030"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0031",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0032",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0033",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0033"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0029",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0034",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0036",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0036"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0029",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0038",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage2_development_0038"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0037",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0035",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0039",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0040",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0002",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0004",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0004"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0005",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0005"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0006",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0006"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0003",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0007",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0009",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0009"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0008",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0001",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0011",
+      "error": "[Errno 22] Invalid argument: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_train_stage3_development_0011\\\\commands.json'"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0013",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0013"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0010",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0014",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0014"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0012",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0017",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0017"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0015",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0019",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0019"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0020",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0020"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0016",
+      "error": "[Errno 22] Invalid argument: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_train_stage3_development_0016\\\\commands.json'"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0022",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0023",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0023"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0024",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0024"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0021",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0026",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0027",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0027"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0028",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0028"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0025",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0030",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0030"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0017",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0032",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0032"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0018",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0031",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0029",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0020",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0033",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0038",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0038"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0037",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0028",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0041",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0041"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0042",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0042"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0040",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0044",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0044"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0045",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0045"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0039",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0035",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0048",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0048"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0049",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0049"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0034",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0046",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0036",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0047",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0053",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0055",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0055"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0056",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0056"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0054",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0058",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0058"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0043",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0060",
+      "error": "[Errno 17] 当文件已存在时，无法创建该文件。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_train_stage3_development_0060'"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0052",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0051",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0063",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0063"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0064",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0064"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0057",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0059",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0050",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0061",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0069",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0069"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0070",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0071",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0071"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0072",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0072"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0066",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0067",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0065",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0076",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0076"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0077",
+      "error": "Refusing to overwrite a partial or unindexed batch R4_B_train_stage3_development_0077"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0073",
+      "error": "[Errno 22] Invalid argument: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_train_stage3_development_0073\\\\commands.json'"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0068",
+      "error": "[Errno 22] Invalid argument: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_train_stage3_development_0068\\\\commands.json'"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0074",
+      "error": "[Errno 22] Invalid argument: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_train_stage3_development_0074\\\\commands.json'"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0079",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_train_stage3_development_0079'"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0080",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_train_stage3_development_0080'"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0075",
+      "error": "[Errno 22] Invalid argument: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_train_stage3_development_0075\\\\commands.json'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0001",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0001'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0002",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0002'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0003",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0003'"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0062",
+      "error": "[Errno 22] Invalid argument: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_train_stage3_development_0062\\\\commands.json'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0005",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0005'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0004",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0004'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0006",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0006'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0007",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0007'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0008",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0008'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0009",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0009'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0010",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0010'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0012",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0012'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0011",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0011'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0014",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0014'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0013",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0013'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0015",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0015'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0016",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0016'"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0078",
+      "error": "[Errno 22] Invalid argument: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_train_stage3_development_0078\\\\commands.json'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0017",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0017'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0018",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0018'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0019",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0019'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0020",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r3\\\\reports\\\\R4_B_validation_none_development_0020'"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0019",
+      "error": ""
+    }
+  ],
+  "full_audit_and_replay_performed": false,
+  "pilot_spectra": 0,
+  "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
+  "eligible_for_training": false,
+  "scientific_accuracy_verified": false
+}

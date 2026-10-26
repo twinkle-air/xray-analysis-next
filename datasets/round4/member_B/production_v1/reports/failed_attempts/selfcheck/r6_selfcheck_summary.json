@@ -1,0 +1,64 @@
+{
+  "status": "failed_partial_retained",
+  "packaging_status": "pending",
+  "member": "B",
+  "expected_records": 20000,
+  "actual_records": 18900,
+  "roles": {
+    "sealed_test": 2000,
+    "train": 16000,
+    "validation": 900
+  },
+  "complete_batches": 189,
+  "failures": [
+    {
+      "batch_id": "R4_B_validation_none_development_0012",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0010",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0014",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0015",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0016",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0017",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0018",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0019",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0020",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0011",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0013",
+      "error": ""
+    }
+  ],
+  "full_audit_and_replay_performed": false,
+  "pilot_spectra": 0,
+  "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
+  "eligible_for_training": false,
+  "scientific_accuracy_verified": false
+}

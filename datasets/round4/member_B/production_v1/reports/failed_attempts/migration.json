@@ -1,0 +1,3630 @@
+{
+  "note": "Per-batch provenance of the resume/carry chain; hashes come from the retained QC summaries and the final archive index.",
+  "records": [
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0001",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "a489b585d436fc4e535e38f997eefb86d947d00f6180f039234ebf4e2d9c759a",
+      "final_archive_sha256": "a489b585d436fc4e535e38f997eefb86d947d00f6180f039234ebf4e2d9c759a",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0002",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "9e2a5734daabfb293d279918258aa33d3bf85034cea92b1eb3d643fde9173a08",
+      "final_archive_sha256": "9e2a5734daabfb293d279918258aa33d3bf85034cea92b1eb3d643fde9173a08",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0003",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "f357f858d0c12b3110f11237a453aeb3a605be6fee3bb64f798cc8ef4c8b2dec",
+      "final_archive_sha256": "f357f858d0c12b3110f11237a453aeb3a605be6fee3bb64f798cc8ef4c8b2dec",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0004",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "0489d8e2024665f30f42100824a9d0c9d590162a583d9223a09f35fbeb8c0340",
+      "final_archive_sha256": "0489d8e2024665f30f42100824a9d0c9d590162a583d9223a09f35fbeb8c0340",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0005",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "a1631206f851eb7f5b4388748300c98c6d64c69bf1b773b4d32f7fdba4047443",
+      "final_archive_sha256": "a1631206f851eb7f5b4388748300c98c6d64c69bf1b773b4d32f7fdba4047443",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0006",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "f56b550cff6de0bc62008d54ddd5c7c63c6518b04ca30e074aef94495d923513",
+      "final_archive_sha256": "f56b550cff6de0bc62008d54ddd5c7c63c6518b04ca30e074aef94495d923513",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0007",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "0a5e4ff184cd10e8a820f997482dc08bbfce58a7d255850a9612e8372e7cf9fd",
+      "final_archive_sha256": "0a5e4ff184cd10e8a820f997482dc08bbfce58a7d255850a9612e8372e7cf9fd",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0008",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "32aa03851781c16b60e186025f100e79393fc6fa2ef003ca8514e6903b476761",
+      "final_archive_sha256": "32aa03851781c16b60e186025f100e79393fc6fa2ef003ca8514e6903b476761",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0009",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "21e3e385c2dc8d924b3948a693b75cd11f420fd2f16ac31e03e19ce91a19e168",
+      "final_archive_sha256": "21e3e385c2dc8d924b3948a693b75cd11f420fd2f16ac31e03e19ce91a19e168",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0010",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "131351d45aa87bfc573633b8c417fd3b67535097ebd0a39f0b6697dc164709aa",
+      "final_archive_sha256": "131351d45aa87bfc573633b8c417fd3b67535097ebd0a39f0b6697dc164709aa",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0001",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "cc0a2aeecf3028a4642b87e1d83262b47defabcbbfa2b3e3d87cb269e4f76d97",
+      "final_archive_sha256": "cc0a2aeecf3028a4642b87e1d83262b47defabcbbfa2b3e3d87cb269e4f76d97",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0002",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "fae45aa9421b85242523f57fad8ce55869009d14a4aceaec36c05885f26f55db",
+      "final_archive_sha256": "fae45aa9421b85242523f57fad8ce55869009d14a4aceaec36c05885f26f55db",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0003",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "97338a1fdb29d23d7ec7ced982662dc4e20527be0b5704e61bc4f0668f63d9e0",
+      "final_archive_sha256": "97338a1fdb29d23d7ec7ced982662dc4e20527be0b5704e61bc4f0668f63d9e0",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0004",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "806dbae6e7486d4ae2edaeb18334d7f638d72023843779e7c37304063ec74a67",
+      "final_archive_sha256": "806dbae6e7486d4ae2edaeb18334d7f638d72023843779e7c37304063ec74a67",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0005",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "319cc26a7bfa8cccac44ba8b080b3343bd0dea55a6e1a4f471379f400e0a3acc",
+      "final_archive_sha256": "319cc26a7bfa8cccac44ba8b080b3343bd0dea55a6e1a4f471379f400e0a3acc",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0006",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "8d772c9f41153dedeeefa053f2a80fdd2a31993de434576e16fc8ec6b02c60d0",
+      "final_archive_sha256": "8d772c9f41153dedeeefa053f2a80fdd2a31993de434576e16fc8ec6b02c60d0",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0007",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "5fb69493604a044ae3d951a17d9616416e11f7b13f3fe4bd7b1cdaf911461f62",
+      "final_archive_sha256": "5fb69493604a044ae3d951a17d9616416e11f7b13f3fe4bd7b1cdaf911461f62",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0008",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "4b8875c34583a893704f292145c565577ad750385fe0245439d59587ad8984d1",
+      "final_archive_sha256": "4b8875c34583a893704f292145c565577ad750385fe0245439d59587ad8984d1",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0009",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "d06346537825db8d7de393a4c6b1a07f47ba6e461f2d37edf8eb7391f4b3a229",
+      "final_archive_sha256": "d06346537825db8d7de393a4c6b1a07f47ba6e461f2d37edf8eb7391f4b3a229",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0010",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "0650999927f5bd52174fa8f54d921dc5c5338934acac1198d7902b4ab6e32738",
+      "final_archive_sha256": "0650999927f5bd52174fa8f54d921dc5c5338934acac1198d7902b4ab6e32738",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0001",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "6ad572d93e5debdbd0708b20c553b42d0b9276612b2bc1e6f236be4874d709e1",
+      "final_archive_sha256": "6ad572d93e5debdbd0708b20c553b42d0b9276612b2bc1e6f236be4874d709e1",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0002",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "646418567055d2a520864e83be025fdb070dbd4e0a05e47a1cee0a8523f84b49",
+      "final_archive_sha256": "646418567055d2a520864e83be025fdb070dbd4e0a05e47a1cee0a8523f84b49",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0003",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "3bc06f29be97ec0c58c0748039d4087dd70522ac20dcba0b154ea442c7477087",
+      "final_archive_sha256": "3bc06f29be97ec0c58c0748039d4087dd70522ac20dcba0b154ea442c7477087",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0004",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "54f6d598f3e722c92df2f78eb40df9332f738a0d65a24013b6b5e98762e167d8",
+      "final_archive_sha256": "54f6d598f3e722c92df2f78eb40df9332f738a0d65a24013b6b5e98762e167d8",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0005",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "e730c3882ab219d05a410e044afb9fe43cf3ecde11ee575ad6d9f1a19b494531",
+      "final_archive_sha256": "e730c3882ab219d05a410e044afb9fe43cf3ecde11ee575ad6d9f1a19b494531",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0006",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "d8c90a7bffce9c7636127dca4429a63c1cbf34234fb7bfe79cfc8a38a422ac9d",
+      "final_archive_sha256": "d8c90a7bffce9c7636127dca4429a63c1cbf34234fb7bfe79cfc8a38a422ac9d",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0007",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "b42eb32c068ea68627dc55ffe45da7aba44d746f9f2da62b9cb2a2faa6248091",
+      "final_archive_sha256": "b42eb32c068ea68627dc55ffe45da7aba44d746f9f2da62b9cb2a2faa6248091",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0008",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "66df8edd9857deebcd8bea75e62bd4f773b883fd1b0e8cb39f10b4807110d74f",
+      "final_archive_sha256": "66df8edd9857deebcd8bea75e62bd4f773b883fd1b0e8cb39f10b4807110d74f",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0009",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "9686888c2cab1c22c9c0a078ec30969c6d08a2ffbf4419c73914d15af6e32fdd",
+      "final_archive_sha256": "9686888c2cab1c22c9c0a078ec30969c6d08a2ffbf4419c73914d15af6e32fdd",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0010",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "e18989eab8eb5abc9b7c17233649275c5d3308eb389d0de5d2afb3f3959b9672",
+      "final_archive_sha256": "e18989eab8eb5abc9b7c17233649275c5d3308eb389d0de5d2afb3f3959b9672",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0011",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "18a3f71c9c5dc3d52ee446f9ed7c4f5e621e7dbf28028ca799e86714259224cd",
+      "final_archive_sha256": "18a3f71c9c5dc3d52ee446f9ed7c4f5e621e7dbf28028ca799e86714259224cd",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0012",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "db27f7df0a9e437ad0d0a3641380d40d7b6d6118a414b86a74425b6d2229db78",
+      "final_archive_sha256": "db27f7df0a9e437ad0d0a3641380d40d7b6d6118a414b86a74425b6d2229db78",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0013",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "d1d812c4fa55bcc8d1bb5c1421b521405334196bdfff31ef9605a18e40b38a66",
+      "final_archive_sha256": "d1d812c4fa55bcc8d1bb5c1421b521405334196bdfff31ef9605a18e40b38a66",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0014",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "22fbbc2710caca45da3cee53cdd5f18c6d0c7fab94201298013254c6dfc712d3",
+      "final_archive_sha256": "22fbbc2710caca45da3cee53cdd5f18c6d0c7fab94201298013254c6dfc712d3",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0015",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "13def07f063f129c6dbcbe89b85784a5c186f307b055c0956f343db13fa76c6d",
+      "final_archive_sha256": "13def07f063f129c6dbcbe89b85784a5c186f307b055c0956f343db13fa76c6d",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0016",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "af9a5c7d570a2372658b966fd51ad5301a1d5b2437b3dea585b1c9e0beb4f17e",
+      "final_archive_sha256": "af9a5c7d570a2372658b966fd51ad5301a1d5b2437b3dea585b1c9e0beb4f17e",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0017",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "4c09fac716674002491cda33a887c707d6ea61c32fa26f162b94c2eda7d908e1",
+      "final_archive_sha256": "4c09fac716674002491cda33a887c707d6ea61c32fa26f162b94c2eda7d908e1",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0018",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "616756c49ee48959d1b484e9bf9b2004600e97d9b685914e80ad92c0839214a7",
+      "final_archive_sha256": "616756c49ee48959d1b484e9bf9b2004600e97d9b685914e80ad92c0839214a7",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0019",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "396972f1f3bda4808019a2599bea24e7281f9e32e23733b92b16456e7a4e43d4",
+      "final_archive_sha256": "396972f1f3bda4808019a2599bea24e7281f9e32e23733b92b16456e7a4e43d4",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0020",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "1cb25b58ae68440d3f2f1ccb1396e45043adc9190113f0dd4ed5fb12181ad085",
+      "final_archive_sha256": "1cb25b58ae68440d3f2f1ccb1396e45043adc9190113f0dd4ed5fb12181ad085",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0021",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "25d46c58985781b2a9cd779a24284470cb4214594fa9952cc560c760eeeb3c51",
+      "final_archive_sha256": "25d46c58985781b2a9cd779a24284470cb4214594fa9952cc560c760eeeb3c51",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0022",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "f80361c2e08a19b1bd28e2d1d415495105def1e8ab0dee9b971dad3ef83b0ea1",
+      "final_archive_sha256": "f80361c2e08a19b1bd28e2d1d415495105def1e8ab0dee9b971dad3ef83b0ea1",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0023",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "8ee94b4bb0715e8e7a14dfe69d5ef24f0d0e3029b26a368cb03043c6a560032f",
+      "final_archive_sha256": "8ee94b4bb0715e8e7a14dfe69d5ef24f0d0e3029b26a368cb03043c6a560032f",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0024",
+      "appearance_runs": [
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r3",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "fb976240bc2cd33ba790d3459c4f9fa3108a6ef3d5b33da72cf93120f1b79c61",
+      "final_archive_sha256": "fb976240bc2cd33ba790d3459c4f9fa3108a6ef3d5b33da72cf93120f1b79c61",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0025",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "30759eb76f612210f23e7633d1b098b2a3d1d65b300379e63666d4e65bec8d7b",
+      "final_archive_sha256": "30759eb76f612210f23e7633d1b098b2a3d1d65b300379e63666d4e65bec8d7b",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0026",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "4d187512a0935ebc365e1b7d34e49215df05dd375cf950c33626692c781240fc",
+      "final_archive_sha256": "4d187512a0935ebc365e1b7d34e49215df05dd375cf950c33626692c781240fc",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0027",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "9872c52c5fe3c071f0521f77a67711600e6a2b490e9b3fc8ef4fbba7f29b4280",
+      "final_archive_sha256": "9872c52c5fe3c071f0521f77a67711600e6a2b490e9b3fc8ef4fbba7f29b4280",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0028",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "aafae4fab6c0d88c2fc753e04ad599907c84198218113a185c122ceccc7c4841",
+      "final_archive_sha256": "aafae4fab6c0d88c2fc753e04ad599907c84198218113a185c122ceccc7c4841",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0029",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "feca6ad4dc0de4bd17dfde7a166dd8832f577f1bf44103ab8093e05303ad40d2",
+      "final_archive_sha256": "feca6ad4dc0de4bd17dfde7a166dd8832f577f1bf44103ab8093e05303ad40d2",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0030",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "55b4de3e1eca26d423576905b9926d19c1dfb17e788692be86ec9c408af790be",
+      "final_archive_sha256": "55b4de3e1eca26d423576905b9926d19c1dfb17e788692be86ec9c408af790be",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0031",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "67f0f82d595f1806677e616bacbde7cbd5ac8dcfcf7a47791ec084c05e9e7faf",
+      "final_archive_sha256": "67f0f82d595f1806677e616bacbde7cbd5ac8dcfcf7a47791ec084c05e9e7faf",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0032",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "a0c74870901b3600fa4bbb0619d85df01fc7818b35a42effd0474d4cfc8b7ada",
+      "final_archive_sha256": "a0c74870901b3600fa4bbb0619d85df01fc7818b35a42effd0474d4cfc8b7ada",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0033",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "2661b67c7650a55b6452333a3bf8603103f202cbad08cf4e5cfd82cb6db621bd",
+      "final_archive_sha256": "2661b67c7650a55b6452333a3bf8603103f202cbad08cf4e5cfd82cb6db621bd",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0034",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "47fba058825c543bda0b119280d49ff12b4646aee98f8fa051d0b95b3b578057",
+      "final_archive_sha256": "47fba058825c543bda0b119280d49ff12b4646aee98f8fa051d0b95b3b578057",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0035",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "ef38978ff94f6912ddfcb0e4c4fb1f16af6af21eefe8687a0c23fc918c0579a8",
+      "final_archive_sha256": "ef38978ff94f6912ddfcb0e4c4fb1f16af6af21eefe8687a0c23fc918c0579a8",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0036",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "d4e83ff7185e7e8e57205232bd28759c9d38845288a70f0b49fd92736e03f9ba",
+      "final_archive_sha256": "d4e83ff7185e7e8e57205232bd28759c9d38845288a70f0b49fd92736e03f9ba",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0037",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "c07dd7732196483f67507767aa5472e4d606dfa9b07774803e7a075527b8d30b",
+      "final_archive_sha256": "c07dd7732196483f67507767aa5472e4d606dfa9b07774803e7a075527b8d30b",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0038",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "ea579c0441ba08c6546c2d6d0dca449bd557181ea6f5a6eeb0b8d8467293be6a",
+      "final_archive_sha256": "ea579c0441ba08c6546c2d6d0dca449bd557181ea6f5a6eeb0b8d8467293be6a",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0039",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "7a37e41b208e1d5878652331561f544b434b5163a9b7eea7ba3b3caeee41b899",
+      "final_archive_sha256": "7a37e41b208e1d5878652331561f544b434b5163a9b7eea7ba3b3caeee41b899",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0040",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "f6fca0e34bcdb8fb067928f0e16cea5b7bd7924484d59e963344ef931be24454",
+      "final_archive_sha256": "f6fca0e34bcdb8fb067928f0e16cea5b7bd7924484d59e963344ef931be24454",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0001",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "190b049c689d9307e93434d313809f87e5cf52ff541c4493ba7b52ea7d098e86",
+      "final_archive_sha256": "190b049c689d9307e93434d313809f87e5cf52ff541c4493ba7b52ea7d098e86",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0002",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "3c549ea8f6bd6869c0239a286e7b2650620781635c655a8710f2a949a9f8d9fc",
+      "final_archive_sha256": "3c549ea8f6bd6869c0239a286e7b2650620781635c655a8710f2a949a9f8d9fc",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0003",
+      "appearance_runs": [
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r4",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "8d38dff93dae7586a0697e533d3bb79c807d3a9247cd8bde81dc93e208d50fe5",
+      "final_archive_sha256": "8d38dff93dae7586a0697e533d3bb79c807d3a9247cd8bde81dc93e208d50fe5",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0004",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "18c4585aa7e2583beae9e8682ad0d5d8d51fcd119e0bfa115b8317dbdb784850",
+      "final_archive_sha256": "18c4585aa7e2583beae9e8682ad0d5d8d51fcd119e0bfa115b8317dbdb784850",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0005",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "f3c0f9b1cbe7252dca34dedb8a28884b854d8ee75f4a4f72f2e1bb07c54e0558",
+      "final_archive_sha256": "f3c0f9b1cbe7252dca34dedb8a28884b854d8ee75f4a4f72f2e1bb07c54e0558",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0006",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "c7d781ace4e7d40ac2aece8a308cbb88d3ee89cf4cbedbb480759ef8fe52bfa9",
+      "final_archive_sha256": "c7d781ace4e7d40ac2aece8a308cbb88d3ee89cf4cbedbb480759ef8fe52bfa9",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0007",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "509bfeb8c7a6c95375d95d91999573930929e0f99f5310684ba8950731f53e28",
+      "final_archive_sha256": "509bfeb8c7a6c95375d95d91999573930929e0f99f5310684ba8950731f53e28",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0008",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "d58e3f04adfd650b3d1a93e9b4597710396ded3e442c1d05107cca9cb6b319bf",
+      "final_archive_sha256": "d58e3f04adfd650b3d1a93e9b4597710396ded3e442c1d05107cca9cb6b319bf",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0009",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "04cdec48ed9ec6255896b8ba3b66f4604ff2fa50d5e2efee706c0133e75aa2c8",
+      "final_archive_sha256": "04cdec48ed9ec6255896b8ba3b66f4604ff2fa50d5e2efee706c0133e75aa2c8",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0010",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "150093f3cda7ba1552915536d1b41607a0c3674b85769c0a38205d22405ae9b9",
+      "final_archive_sha256": "150093f3cda7ba1552915536d1b41607a0c3674b85769c0a38205d22405ae9b9",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0011",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "f52c7a8344defd7648c0ffa5ef69342dfae5b940d0c0391f70b2c26437df1974",
+      "final_archive_sha256": "f52c7a8344defd7648c0ffa5ef69342dfae5b940d0c0391f70b2c26437df1974",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0012",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "9dca8f02960f62bd06997c0ff5399b47496e30b596796989373cab3c1d7e95d8",
+      "final_archive_sha256": "9dca8f02960f62bd06997c0ff5399b47496e30b596796989373cab3c1d7e95d8",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0013",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "cec6a835bcdd718473e416f40725751f6587f5d640ed469653cb94fc2f260dc1",
+      "final_archive_sha256": "cec6a835bcdd718473e416f40725751f6587f5d640ed469653cb94fc2f260dc1",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0014",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "1bd22a5bc4c606dffe3ad55ae4b8482f8d20e909eca93d31e37331179df78516",
+      "final_archive_sha256": "1bd22a5bc4c606dffe3ad55ae4b8482f8d20e909eca93d31e37331179df78516",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0015",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "86698ffa9d879992d725954271627cac7f28cd1747cfb42ab928341f63cb855b",
+      "final_archive_sha256": "86698ffa9d879992d725954271627cac7f28cd1747cfb42ab928341f63cb855b",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0016",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "d29e12c35fd4c2cb6a233c32fae759f1eb14918c1f2e7e8cd47c9739f9c17a3e",
+      "final_archive_sha256": "d29e12c35fd4c2cb6a233c32fae759f1eb14918c1f2e7e8cd47c9739f9c17a3e",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0017",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "5bd2d273d2cc0e618cc09c1eeb7d4f606c08c89307dddaed03fd9f2a20d2e4ae",
+      "final_archive_sha256": "5bd2d273d2cc0e618cc09c1eeb7d4f606c08c89307dddaed03fd9f2a20d2e4ae",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0018",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "4e67cb602eaf4131a4c340e1d6a282f0112ba8bba56e2b151a9a9961a6f3ad6e",
+      "final_archive_sha256": "4e67cb602eaf4131a4c340e1d6a282f0112ba8bba56e2b151a9a9961a6f3ad6e",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0019",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "f616754ff5dfc116a41a2e82680a4bfb006382808ead4cc8c6c900f8b42e4227",
+      "final_archive_sha256": "f616754ff5dfc116a41a2e82680a4bfb006382808ead4cc8c6c900f8b42e4227",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0020",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "9352ad443e551122b2cac7acf99f3613687789792625a6789341723e0691a9cd",
+      "final_archive_sha256": "9352ad443e551122b2cac7acf99f3613687789792625a6789341723e0691a9cd",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0021",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "88641119771a7c9ada3c270b2fa67abfd76de8ad503485fc79a209e2708c117f",
+      "final_archive_sha256": "88641119771a7c9ada3c270b2fa67abfd76de8ad503485fc79a209e2708c117f",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0022",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "5707291449238908529a995121a2d5f5db43eb986322536b12b25a14a79ce0b3",
+      "final_archive_sha256": "5707291449238908529a995121a2d5f5db43eb986322536b12b25a14a79ce0b3",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0023",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "b73c1da3a799e0d00d5e7f9a5d9be2d570664e53089ece211dd105a90e80b875",
+      "final_archive_sha256": "b73c1da3a799e0d00d5e7f9a5d9be2d570664e53089ece211dd105a90e80b875",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0024",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "1fa5bb068a54d31a2d559c774e52792c0041026014069dbcb45aaa68739a784b",
+      "final_archive_sha256": "1fa5bb068a54d31a2d559c774e52792c0041026014069dbcb45aaa68739a784b",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0025",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "f86832d5cf1c50d02edf645e51091129e444bf0e2a13f17988d4073ded4baf6e",
+      "final_archive_sha256": "f86832d5cf1c50d02edf645e51091129e444bf0e2a13f17988d4073ded4baf6e",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0026",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "6c8d1799d6a066ed8d7ca8d7cce421a68ee13aaea9531ebb2b558f42d288fd37",
+      "final_archive_sha256": "6c8d1799d6a066ed8d7ca8d7cce421a68ee13aaea9531ebb2b558f42d288fd37",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0027",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "00f6860d29f6e8108a6868c07e91da97ec33b3725a0e3343015a63acf2d211f8",
+      "final_archive_sha256": "00f6860d29f6e8108a6868c07e91da97ec33b3725a0e3343015a63acf2d211f8",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0028",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "81c03a00a2d1c8c83fb4670c957e2c39e9eee9299e3630bd961cd2fcca5bdac7",
+      "final_archive_sha256": "81c03a00a2d1c8c83fb4670c957e2c39e9eee9299e3630bd961cd2fcca5bdac7",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0029",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "b89494348e0a332096d217d305c358bfe6de7800b92c3302492874f230a3e8fc",
+      "final_archive_sha256": "b89494348e0a332096d217d305c358bfe6de7800b92c3302492874f230a3e8fc",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0030",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "b659a801ef76c68c79b0117adf9856954d9fb9fcadca9303d394da290323c15f",
+      "final_archive_sha256": "b659a801ef76c68c79b0117adf9856954d9fb9fcadca9303d394da290323c15f",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0031",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "c8b769b3570e2c3980e6239c0d270022ec43eafcdf7702bfdf2812f81ddc3bdb",
+      "final_archive_sha256": "c8b769b3570e2c3980e6239c0d270022ec43eafcdf7702bfdf2812f81ddc3bdb",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0032",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "49588dab523ea3cd0f5239a8ffa43909df235ee7792f2d2d5b95f54b4a387fbf",
+      "final_archive_sha256": "49588dab523ea3cd0f5239a8ffa43909df235ee7792f2d2d5b95f54b4a387fbf",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0033",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "3cd95d4c607207ef4baae6a7db8fe26e3b71b8faa702feeb65b63c17b1c961bc",
+      "final_archive_sha256": "3cd95d4c607207ef4baae6a7db8fe26e3b71b8faa702feeb65b63c17b1c961bc",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0034",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "d89c36c32418559be334bcca62000d11b9303da0f4dddedf15531410129e5744",
+      "final_archive_sha256": "d89c36c32418559be334bcca62000d11b9303da0f4dddedf15531410129e5744",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0035",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "51597dd43518cccfa3af911375f4de0a0aeabd7b18c8cfec545a0c9896f4f744",
+      "final_archive_sha256": "51597dd43518cccfa3af911375f4de0a0aeabd7b18c8cfec545a0c9896f4f744",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0036",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "e5a336661d8a080a7cccb3ad4230907bd550bb95d9ac4bf42fce973a170262aa",
+      "final_archive_sha256": "e5a336661d8a080a7cccb3ad4230907bd550bb95d9ac4bf42fce973a170262aa",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0037",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "99fff7b48e1c3bc9be34a4469c0ce490d5a8cb47a7c69c2a2d9359c17f7db8b8",
+      "final_archive_sha256": "99fff7b48e1c3bc9be34a4469c0ce490d5a8cb47a7c69c2a2d9359c17f7db8b8",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0038",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "3582780d0d4829e5f536751778ab1d8d6051cf5371abfc7be91e48da607a6653",
+      "final_archive_sha256": "3582780d0d4829e5f536751778ab1d8d6051cf5371abfc7be91e48da607a6653",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0039",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "c14f0459ae09150a7cf29119154133931de25d4dcd62f63de412fc414befc4d3",
+      "final_archive_sha256": "c14f0459ae09150a7cf29119154133931de25d4dcd62f63de412fc414befc4d3",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0040",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "3c5b0dbe7678c4c65af8e6a2077b09e74fca0da779e4fc4a6227c41edc9d335d",
+      "final_archive_sha256": "3c5b0dbe7678c4c65af8e6a2077b09e74fca0da779e4fc4a6227c41edc9d335d",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0001",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "699908ebfeb51c7939a3ec17ad51b9b52d5b2897fb55011378faa469c55f5b83",
+      "final_archive_sha256": "699908ebfeb51c7939a3ec17ad51b9b52d5b2897fb55011378faa469c55f5b83",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0002",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "03353b376fa6aaf6560b32e3ebe0323fb1da477b400e0e27f6fe3340d29741c6",
+      "final_archive_sha256": "03353b376fa6aaf6560b32e3ebe0323fb1da477b400e0e27f6fe3340d29741c6",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0003",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "25f76b2f84a42982610ea82d4815c6c722bf065b5acbe9e7a44aa14b4f847df1",
+      "final_archive_sha256": "25f76b2f84a42982610ea82d4815c6c722bf065b5acbe9e7a44aa14b4f847df1",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0004",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "428112238e873017f51df9a19cd4095c25b8101c1f992bb6d2f6837a83f8f0b0",
+      "final_archive_sha256": "428112238e873017f51df9a19cd4095c25b8101c1f992bb6d2f6837a83f8f0b0",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0005",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "39a366fdde21d2e403447cb109a317620b91b19528d7c14b71b143bc6a49a650",
+      "final_archive_sha256": "39a366fdde21d2e403447cb109a317620b91b19528d7c14b71b143bc6a49a650",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0006",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "0969f2c966d1d30352c534eade5e9626fba1757c85b37b5b1a52aece8f33fe6f",
+      "final_archive_sha256": "0969f2c966d1d30352c534eade5e9626fba1757c85b37b5b1a52aece8f33fe6f",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0007",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "68c8ca210da9d6d9ccc55de8924a5b66b886e0f58c44069e7fc30f446f7a5e1d",
+      "final_archive_sha256": "68c8ca210da9d6d9ccc55de8924a5b66b886e0f58c44069e7fc30f446f7a5e1d",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0008",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "3a0d3dcbeb94b73d4db9eab5d676b1a0113edf72d576306f74629fe1b41d6b3f",
+      "final_archive_sha256": "3a0d3dcbeb94b73d4db9eab5d676b1a0113edf72d576306f74629fe1b41d6b3f",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0009",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "d26049812aa9da9c781b33fe9e8138d728c5cce064291ccb82ff54637c33deea",
+      "final_archive_sha256": "d26049812aa9da9c781b33fe9e8138d728c5cce064291ccb82ff54637c33deea",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0010",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "3f864f1c8c11b4e4ab248a67622706fc058d99da07010f00bc5db2a52ab6a7de",
+      "final_archive_sha256": "3f864f1c8c11b4e4ab248a67622706fc058d99da07010f00bc5db2a52ab6a7de",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0011",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "40458d0bb4843075cbf986882c73b1d07e4bc1dc5b01b05a1073599e11ca9158",
+      "final_archive_sha256": "40458d0bb4843075cbf986882c73b1d07e4bc1dc5b01b05a1073599e11ca9158",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0012",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "f270b395137a0c94137992d160d21a555c5bfa3e15aae0dd1ac2847b22c48873",
+      "final_archive_sha256": "f270b395137a0c94137992d160d21a555c5bfa3e15aae0dd1ac2847b22c48873",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0013",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "bf9f2923dc8c2c551ff5f292a3de61debbf4edb5715fde5a02ea205c2627b4a7",
+      "final_archive_sha256": "bf9f2923dc8c2c551ff5f292a3de61debbf4edb5715fde5a02ea205c2627b4a7",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0014",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "bf59c012ad3fd54040652dee9bf1134bfe586ada795d156c1afc18125204dc4a",
+      "final_archive_sha256": "bf59c012ad3fd54040652dee9bf1134bfe586ada795d156c1afc18125204dc4a",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0015",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "81c42a2a6a41df92e85d997999c627eb20d37656bfdb8b923aedb8533b1f6dd9",
+      "final_archive_sha256": "81c42a2a6a41df92e85d997999c627eb20d37656bfdb8b923aedb8533b1f6dd9",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0016",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "ca48b68cda390bdca617163b25e7c39ba9cc5eff7ad26b2982f113c25b764909",
+      "final_archive_sha256": "ca48b68cda390bdca617163b25e7c39ba9cc5eff7ad26b2982f113c25b764909",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0017",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "13cbfce95094d4a3ea9c9f0914850bba2a3b64d5746e007f2c44f6824b963b22",
+      "final_archive_sha256": "13cbfce95094d4a3ea9c9f0914850bba2a3b64d5746e007f2c44f6824b963b22",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0018",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "7763cc7abcdf877bc84d8d0b1bbcc24e81b492afc278d9e6f6d74635cb30dec6",
+      "final_archive_sha256": "7763cc7abcdf877bc84d8d0b1bbcc24e81b492afc278d9e6f6d74635cb30dec6",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0019",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "ea4f6d13b4033b8ff00c13036345bff399447f368f871d58c9040367e7037154",
+      "final_archive_sha256": "ea4f6d13b4033b8ff00c13036345bff399447f368f871d58c9040367e7037154",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0020",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "9ef10e336ff22239ecaaaaf66c9f8ded72225157d4da4fe0dd972e6253b9106c",
+      "final_archive_sha256": "9ef10e336ff22239ecaaaaf66c9f8ded72225157d4da4fe0dd972e6253b9106c",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0021",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "97f392c732c052c4d3b4907d0ede1ba7ebac2c27a774d368255adcd1e7589ca3",
+      "final_archive_sha256": "97f392c732c052c4d3b4907d0ede1ba7ebac2c27a774d368255adcd1e7589ca3",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0022",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "ad5fb9917a8deb18725d35b16843ff56c289f3316c057cd63871904cf4a4b99b",
+      "final_archive_sha256": "ad5fb9917a8deb18725d35b16843ff56c289f3316c057cd63871904cf4a4b99b",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0023",
+      "appearance_runs": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "source_run": "r5",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "61b9adc75928cf76438ea5c5b9d4c2fca1a1a1e776e9719de58aa698e6a61ec9",
+      "final_archive_sha256": "61b9adc75928cf76438ea5c5b9d4c2fca1a1a1e776e9719de58aa698e6a61ec9",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0024",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "d3fffd72af6225a0ae36ad9d51ba0727ab9414b391857ba53612f0d48b7b300a",
+      "final_archive_sha256": "d3fffd72af6225a0ae36ad9d51ba0727ab9414b391857ba53612f0d48b7b300a",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0025",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "47f64a94d9c1b8152bdca87fe04055987cfc45a6e1d73caab4f7ccb0e8df883a",
+      "final_archive_sha256": "47f64a94d9c1b8152bdca87fe04055987cfc45a6e1d73caab4f7ccb0e8df883a",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0026",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "efa7fb5431e32ffaf7e2648b23ab36f60ed11cce60d21c160835e7b02691a684",
+      "final_archive_sha256": "efa7fb5431e32ffaf7e2648b23ab36f60ed11cce60d21c160835e7b02691a684",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0027",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "e5f4f9f7dde736775c38780214c9dab1de4ff7118e68b39975c1546fa287b18d",
+      "final_archive_sha256": "e5f4f9f7dde736775c38780214c9dab1de4ff7118e68b39975c1546fa287b18d",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0028",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "5b78d5e1256c1aa91ba6325b8439b75b698d380ab428104adf6398738a2dee7d",
+      "final_archive_sha256": "5b78d5e1256c1aa91ba6325b8439b75b698d380ab428104adf6398738a2dee7d",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0029",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "3fe4229193d31c3d1713714779f0cea9bb364bd9773224888921ada239a0cc27",
+      "final_archive_sha256": "3fe4229193d31c3d1713714779f0cea9bb364bd9773224888921ada239a0cc27",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0030",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "698969bd20b67574e348da673b5189ca9835a15cc6a6a959acd3b729ae6e2b7c",
+      "final_archive_sha256": "698969bd20b67574e348da673b5189ca9835a15cc6a6a959acd3b729ae6e2b7c",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0031",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "c9c332e4c6789963cb9d34221b7a485a0e9b963b5ed287288680eb53781d9d57",
+      "final_archive_sha256": "c9c332e4c6789963cb9d34221b7a485a0e9b963b5ed287288680eb53781d9d57",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0032",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "3e5cbf59cabbeb00ff7583a50f6209c233423c8a68a8000501f3591931daccff",
+      "final_archive_sha256": "3e5cbf59cabbeb00ff7583a50f6209c233423c8a68a8000501f3591931daccff",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0033",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "4713490bf3c8c85b15e211d15d308fb98c44b17ba37e2a153975eb46c3b05ca5",
+      "final_archive_sha256": "4713490bf3c8c85b15e211d15d308fb98c44b17ba37e2a153975eb46c3b05ca5",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0034",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "77f8bda34a3b742fc763e585b5a90c9bbb2c9360a3c232ee81b4df4e6bb61ec1",
+      "final_archive_sha256": "77f8bda34a3b742fc763e585b5a90c9bbb2c9360a3c232ee81b4df4e6bb61ec1",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0035",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "080c0e0683f323ae73abb2571cbed37bb43704536c16bf89ee538339c2873a39",
+      "final_archive_sha256": "080c0e0683f323ae73abb2571cbed37bb43704536c16bf89ee538339c2873a39",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0036",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "bec7f63ed351d8398c31b06b2fce74172947f8a135881391f9f63b683e13c1c4",
+      "final_archive_sha256": "bec7f63ed351d8398c31b06b2fce74172947f8a135881391f9f63b683e13c1c4",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0037",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "746a7af01f93f3f21c3f114b78964187e6a28dc81de0d2dffc6ea7b1bbf7aee5",
+      "final_archive_sha256": "746a7af01f93f3f21c3f114b78964187e6a28dc81de0d2dffc6ea7b1bbf7aee5",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0038",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "0a65025a7eb61586c1d09f4444fd491f386810e2818d7e58fd23746dc4d61cb8",
+      "final_archive_sha256": "0a65025a7eb61586c1d09f4444fd491f386810e2818d7e58fd23746dc4d61cb8",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0039",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "c37c7f46a5fe69fbb0b299565a004d609ec596df4a6525ffbf6ed2c7e3141df8",
+      "final_archive_sha256": "c37c7f46a5fe69fbb0b299565a004d609ec596df4a6525ffbf6ed2c7e3141df8",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0040",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "53618921e3bb4471c951a043b76d35e022ccff096c934e36cee4b95035f45a80",
+      "final_archive_sha256": "53618921e3bb4471c951a043b76d35e022ccff096c934e36cee4b95035f45a80",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0041",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "26975e29c76d05d35502256db92073626b96ec555661318a59add0594fbff697",
+      "final_archive_sha256": "26975e29c76d05d35502256db92073626b96ec555661318a59add0594fbff697",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0042",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "eaf6fd8ff29bd5f9c714c1777b783822a80d05c54723af6794d7235915f9bf3e",
+      "final_archive_sha256": "eaf6fd8ff29bd5f9c714c1777b783822a80d05c54723af6794d7235915f9bf3e",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0043",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "45e74056f88d3aa5e08e36d094aac748b9a394c931217e0a5388682cbbda27de",
+      "final_archive_sha256": "45e74056f88d3aa5e08e36d094aac748b9a394c931217e0a5388682cbbda27de",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0044",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "9235230eecad09afff712dd36a5a7cf2fa64ba82f3ef0ede672aa50a3785d40a",
+      "final_archive_sha256": "9235230eecad09afff712dd36a5a7cf2fa64ba82f3ef0ede672aa50a3785d40a",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0045",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "17ca783a1629b21fa6bb08e4eb6b67a13c5a188137ccede777c40ceb1f9a339d",
+      "final_archive_sha256": "17ca783a1629b21fa6bb08e4eb6b67a13c5a188137ccede777c40ceb1f9a339d",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0046",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "58e18fda099aeeaf4db562a684bc4eda86fd8f3e1890f9081b68c040b5a54fc2",
+      "final_archive_sha256": "58e18fda099aeeaf4db562a684bc4eda86fd8f3e1890f9081b68c040b5a54fc2",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0047",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "aa18dea3af160c3fcfe33cd186ca84e80520d384f955a4e71fed6e6470ce0981",
+      "final_archive_sha256": "aa18dea3af160c3fcfe33cd186ca84e80520d384f955a4e71fed6e6470ce0981",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0048",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "2d442a40f232f8b2d8ea54cd45c8ce6bc5542b342bd3b352c42245fcd60a5a01",
+      "final_archive_sha256": "2d442a40f232f8b2d8ea54cd45c8ce6bc5542b342bd3b352c42245fcd60a5a01",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0049",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "9250935309dfd9a68dcaef10ec5d994da8c8cd2968ea8fd8f6fd545dc051608c",
+      "final_archive_sha256": "9250935309dfd9a68dcaef10ec5d994da8c8cd2968ea8fd8f6fd545dc051608c",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0050",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "8531e80862c959e53d1468c3c3eb80272ec7ce56c4cb4db7f8068bea2eaebb59",
+      "final_archive_sha256": "8531e80862c959e53d1468c3c3eb80272ec7ce56c4cb4db7f8068bea2eaebb59",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0051",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "7899e6cf7d8f1d5667caa4cd2bb16322ee830f1c85db9c1383368633ab194d9c",
+      "final_archive_sha256": "7899e6cf7d8f1d5667caa4cd2bb16322ee830f1c85db9c1383368633ab194d9c",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0052",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "9ddff67c06238f14717fcfd5d46684e65be0d0c841846e0d6814ce3b7acb5b41",
+      "final_archive_sha256": "9ddff67c06238f14717fcfd5d46684e65be0d0c841846e0d6814ce3b7acb5b41",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0053",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "8ae1d63bf402401fcedbd80877e6e86435e09f5f673dfba032e8f29299720df4",
+      "final_archive_sha256": "8ae1d63bf402401fcedbd80877e6e86435e09f5f673dfba032e8f29299720df4",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0054",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "576dc48896d143d53fec7474936893993a19eb25c69efe8b6a48155cbbffcb46",
+      "final_archive_sha256": "576dc48896d143d53fec7474936893993a19eb25c69efe8b6a48155cbbffcb46",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0055",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "86f8f8363aa40cc0c20e884faba32ff69497939e9c2992be5c5876bc9b4705d6",
+      "final_archive_sha256": "86f8f8363aa40cc0c20e884faba32ff69497939e9c2992be5c5876bc9b4705d6",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0056",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "effdb83461fbcc9d2062eff90cf2ae67701e58bed3f75a325cc648d2ddfd6aa8",
+      "final_archive_sha256": "effdb83461fbcc9d2062eff90cf2ae67701e58bed3f75a325cc648d2ddfd6aa8",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0057",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "9dc7697d142353d0602a98212aafcdc57d487092985a55b7c6b31cddabc2e7cf",
+      "final_archive_sha256": "9dc7697d142353d0602a98212aafcdc57d487092985a55b7c6b31cddabc2e7cf",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0058",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "1fb1733325193a53ef34c9c2987f6c76968c440de342eb931f858e64e04fb785",
+      "final_archive_sha256": "1fb1733325193a53ef34c9c2987f6c76968c440de342eb931f858e64e04fb785",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0059",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "71ebecd01c8bc48c9394d9fd5d09902dc497c496741a487f8090524508667be2",
+      "final_archive_sha256": "71ebecd01c8bc48c9394d9fd5d09902dc497c496741a487f8090524508667be2",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0060",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "85645f2c30039f627b43248edec43b2d1693fe387812168d891ec9f12659531a",
+      "final_archive_sha256": "85645f2c30039f627b43248edec43b2d1693fe387812168d891ec9f12659531a",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0061",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "ea5f5b822973e208da2908dfef7a2a9523c189c9e916eadcf72d62c653059448",
+      "final_archive_sha256": "ea5f5b822973e208da2908dfef7a2a9523c189c9e916eadcf72d62c653059448",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0062",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "ce620c08e4f713e3430fd7f470ccc2adef52d452015c70e85f50be1aa4563f4c",
+      "final_archive_sha256": "ce620c08e4f713e3430fd7f470ccc2adef52d452015c70e85f50be1aa4563f4c",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0063",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "d646fa51c3cef24877e4c674c05b3a104ddb67f4449eb9770a183b5032233e44",
+      "final_archive_sha256": "d646fa51c3cef24877e4c674c05b3a104ddb67f4449eb9770a183b5032233e44",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0064",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "dbe3f6330f1a5119c3d735c21c197b7c2d53b97977414dc024ca6b839e607115",
+      "final_archive_sha256": "dbe3f6330f1a5119c3d735c21c197b7c2d53b97977414dc024ca6b839e607115",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0065",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "2055d8ad484c843d2b916de1b36814f0b86219deb199ca835326dfb33e1a5976",
+      "final_archive_sha256": "2055d8ad484c843d2b916de1b36814f0b86219deb199ca835326dfb33e1a5976",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0066",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "80ac642db6ef7b7de46794cb98a078ce5dc3f4afad0ae4d243868a5b4402cf35",
+      "final_archive_sha256": "80ac642db6ef7b7de46794cb98a078ce5dc3f4afad0ae4d243868a5b4402cf35",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0067",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "c93414e2638b7dd08343587df4cc65e03c345ceb6863c3db19be4fca79bc970d",
+      "final_archive_sha256": "c93414e2638b7dd08343587df4cc65e03c345ceb6863c3db19be4fca79bc970d",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0068",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "17d53c5ce1397db467be52000b31dbf0588535e326ad2c4cb7420c6cdc0efd4e",
+      "final_archive_sha256": "17d53c5ce1397db467be52000b31dbf0588535e326ad2c4cb7420c6cdc0efd4e",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0069",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "0ab666e2f82e54bfe6165619b77367e588d7cd3221c0eb418e33707ed2352c6a",
+      "final_archive_sha256": "0ab666e2f82e54bfe6165619b77367e588d7cd3221c0eb418e33707ed2352c6a",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0070",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "f4caf6a7e50cf3c15104dc49531d0356d2be7ab8ad664fe430244b9e97cd7296",
+      "final_archive_sha256": "f4caf6a7e50cf3c15104dc49531d0356d2be7ab8ad664fe430244b9e97cd7296",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0071",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "89ee8ae4be9eac85222b4e3e71d5ab30c57f00cf31a49a3ae8ed2a1e77ed6624",
+      "final_archive_sha256": "89ee8ae4be9eac85222b4e3e71d5ab30c57f00cf31a49a3ae8ed2a1e77ed6624",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r3",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0072",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "3571ee8c5f43d954822d6e5cbdfec2c57a79ebbf0b21d2159abba215b2af87b8",
+      "final_archive_sha256": "3571ee8c5f43d954822d6e5cbdfec2c57a79ebbf0b21d2159abba215b2af87b8",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0073",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "8bba515da132d452d43a1250e692cb5299b4c2c2adf14cae75689bdded459a77",
+      "final_archive_sha256": "8bba515da132d452d43a1250e692cb5299b4c2c2adf14cae75689bdded459a77",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0074",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "3993c0da536e1471e910940d4c390a0759532c669da202ce6b47a63ccc016a56",
+      "final_archive_sha256": "3993c0da536e1471e910940d4c390a0759532c669da202ce6b47a63ccc016a56",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0075",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "fb1d7d51e3b8d1c1ae730eb4be277b75c6553e28b57e4d9471c590b3bcd63438",
+      "final_archive_sha256": "fb1d7d51e3b8d1c1ae730eb4be277b75c6553e28b57e4d9471c590b3bcd63438",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0076",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "7fc068cea70b4635ce8aefbc8578e401f4f5202f9b8bded0d7276ebee27243c1",
+      "final_archive_sha256": "7fc068cea70b4635ce8aefbc8578e401f4f5202f9b8bded0d7276ebee27243c1",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0077",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "56a30efe29a3c8b250cab1de0d6b539ae61e965f598796b15067a0bb051cb769",
+      "final_archive_sha256": "56a30efe29a3c8b250cab1de0d6b539ae61e965f598796b15067a0bb051cb769",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0078",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "4826a9488e5807ef1242b8849e140147665550b53ab4c1c8f8fd797f28885c9e",
+      "final_archive_sha256": "4826a9488e5807ef1242b8849e140147665550b53ab4c1c8f8fd797f28885c9e",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0079",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "5761152f3200fee9ca8db43450523e222b7a36b3dc55f422a23d4116653dc6eb",
+      "final_archive_sha256": "5761152f3200fee9ca8db43450523e222b7a36b3dc55f422a23d4116653dc6eb",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0080",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "a62bf3419dc64f9ed68443e1e4d1fb7762bb73cc50f4918074657be27526b613",
+      "final_archive_sha256": "a62bf3419dc64f9ed68443e1e4d1fb7762bb73cc50f4918074657be27526b613",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0001",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "5ff69c5df159a2d6b52198885664fbf60b8a822fb28932aac848ebfe90de3eba",
+      "final_archive_sha256": "5ff69c5df159a2d6b52198885664fbf60b8a822fb28932aac848ebfe90de3eba",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0002",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "68829c75335ca8d83781b5f95b9981ba286849f35b59e55ca06bf9bece3d0236",
+      "final_archive_sha256": "68829c75335ca8d83781b5f95b9981ba286849f35b59e55ca06bf9bece3d0236",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0003",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "c675de6bc1d6c418a182c4c98ff94417cd72b4a92bfd3bcb28e853d1a1cacdaf",
+      "final_archive_sha256": "c675de6bc1d6c418a182c4c98ff94417cd72b4a92bfd3bcb28e853d1a1cacdaf",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0004",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "278ae8a31dbf0ed39da63d3c4a9b20159306f29cec78b11c2f40d399b5900d7b",
+      "final_archive_sha256": "278ae8a31dbf0ed39da63d3c4a9b20159306f29cec78b11c2f40d399b5900d7b",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0005",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "de0f69a64499a39334ce48cbf9be2e36307f57de941be9104b7cbe1b430cb5a4",
+      "final_archive_sha256": "de0f69a64499a39334ce48cbf9be2e36307f57de941be9104b7cbe1b430cb5a4",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0006",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "b6174bedab0be275a1187ed6075e91fa732394b5825984be4f6a495a0a439449",
+      "final_archive_sha256": "b6174bedab0be275a1187ed6075e91fa732394b5825984be4f6a495a0a439449",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0007",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "0d438b90877831a0d5b8bdb744cbf2ff411818c96711b89eee71780de03cf541",
+      "final_archive_sha256": "0d438b90877831a0d5b8bdb744cbf2ff411818c96711b89eee71780de03cf541",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0008",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "d92f89e5b2fadca1e3efb1665072e1f5b3e4e395cfe429a6f12087099a69038b",
+      "final_archive_sha256": "d92f89e5b2fadca1e3efb1665072e1f5b3e4e395cfe429a6f12087099a69038b",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0009",
+      "appearance_runs": [
+        "r6",
+        "r7"
+      ],
+      "source_run": "r6",
+      "carried_into_final_from": "r6",
+      "source_archive_sha256": "cecef52eb934e45bb16d970ea0a0c21722ab691f02c8833d81666b3f28607fe7",
+      "final_archive_sha256": "cecef52eb934e45bb16d970ea0a0c21722ab691f02c8833d81666b3f28607fe7",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0010",
+      "appearance_runs": [
+        "r7"
+      ],
+      "source_run": "r7",
+      "carried_into_final_from": "r7",
+      "source_archive_sha256": "94cd15782408ea51e11bdda7da50f8beb076265658629fa483680f78521d853e",
+      "final_archive_sha256": "94cd15782408ea51e11bdda7da50f8beb076265658629fa483680f78521d853e",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0011",
+      "appearance_runs": [
+        "r7"
+      ],
+      "source_run": "r7",
+      "carried_into_final_from": "r7",
+      "source_archive_sha256": "ffc2ce40884be2709971f3a8dab9d16a1c58c308bc2d1a8a932674d352196cf7",
+      "final_archive_sha256": "ffc2ce40884be2709971f3a8dab9d16a1c58c308bc2d1a8a932674d352196cf7",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0012",
+      "appearance_runs": [
+        "r7"
+      ],
+      "source_run": "r7",
+      "carried_into_final_from": "r7",
+      "source_archive_sha256": "96248f8297020b19d66e2b3010cb0a54ebbd75f07bf3b50c33a262cafe4f33cc",
+      "final_archive_sha256": "96248f8297020b19d66e2b3010cb0a54ebbd75f07bf3b50c33a262cafe4f33cc",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0013",
+      "appearance_runs": [
+        "r7"
+      ],
+      "source_run": "r7",
+      "carried_into_final_from": "r7",
+      "source_archive_sha256": "2d7cd6eb2c70ff762b782b384cc11433708f7664a978cd5aa10548a47b0927f9",
+      "final_archive_sha256": "2d7cd6eb2c70ff762b782b384cc11433708f7664a978cd5aa10548a47b0927f9",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0014",
+      "appearance_runs": [
+        "r7"
+      ],
+      "source_run": "r7",
+      "carried_into_final_from": "r7",
+      "source_archive_sha256": "9277a71ad8429f37a27e0c3388d13e55c1a909e11efa36ec87bf21d6c61c2bfb",
+      "final_archive_sha256": "9277a71ad8429f37a27e0c3388d13e55c1a909e11efa36ec87bf21d6c61c2bfb",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0015",
+      "appearance_runs": [
+        "r7"
+      ],
+      "source_run": "r7",
+      "carried_into_final_from": "r7",
+      "source_archive_sha256": "5c26a88d918ab9bbde3a86dbfc96a18e5d482585aa51186b4844db15367a2f72",
+      "final_archive_sha256": "5c26a88d918ab9bbde3a86dbfc96a18e5d482585aa51186b4844db15367a2f72",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r6"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0016",
+      "appearance_runs": [
+        "r7"
+      ],
+      "source_run": "r7",
+      "carried_into_final_from": "r7",
+      "source_archive_sha256": "08a41d9b4f69fd49e8501c33b1962997d3913bfe51bc61fab27ce166fa646127",
+      "final_archive_sha256": "08a41d9b4f69fd49e8501c33b1962997d3913bfe51bc61fab27ce166fa646127",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0017",
+      "appearance_runs": [
+        "r7"
+      ],
+      "source_run": "r7",
+      "carried_into_final_from": "r7",
+      "source_archive_sha256": "09c954bad06d48fdaf0fdb12b51ad21db50c85474d79dfde0d342487e1679db0",
+      "final_archive_sha256": "09c954bad06d48fdaf0fdb12b51ad21db50c85474d79dfde0d342487e1679db0",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0018",
+      "appearance_runs": [
+        "r7"
+      ],
+      "source_run": "r7",
+      "carried_into_final_from": "r7",
+      "source_archive_sha256": "7e6617542b09db85b7226661fc5911b47313e38aa02aa123360a4ddbe765273b",
+      "final_archive_sha256": "7e6617542b09db85b7226661fc5911b47313e38aa02aa123360a4ddbe765273b",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0019",
+      "appearance_runs": [
+        "r7"
+      ],
+      "source_run": "r7",
+      "carried_into_final_from": "r7",
+      "source_archive_sha256": "119eb5a51432efec6b084be0c224244f0424e772540475867b0cf4a09b1354d6",
+      "final_archive_sha256": "119eb5a51432efec6b084be0c224244f0424e772540475867b0cf4a09b1354d6",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0020",
+      "appearance_runs": [
+        "r7"
+      ],
+      "source_run": "r7",
+      "carried_into_final_from": "r7",
+      "source_archive_sha256": "16bf093f15bea112757f126de0c1f1df96399468460c090428f37619f4f0fc9c",
+      "final_archive_sha256": "16bf093f15bea112757f126de0c1f1df96399468460c090428f37619f4f0fc9c",
+      "archive_sha256_identical": true,
+      "qc_file_hashes_identical_to_final": true,
+      "failed_runs": [
+        "r1",
+        "r5",
+        "r6"
+      ]
+    }
+  ]
+}

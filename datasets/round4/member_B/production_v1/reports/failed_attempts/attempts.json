@@ -1,0 +1,144 @@
+{
+  "note": "Derived from the retained run directories; fields that were never recorded are null, not reconstructed.",
+  "runs": [
+    {
+      "run": "round4-B-production",
+      "directory": "outputs/round4-B-production",
+      "reason_documents": [
+        "RETRY_REASON.md"
+      ],
+      "workers_from_reason": null,
+      "passed_batches_from_qc": 0,
+      "spectra_from_qc": 0,
+      "failure_json_count": 200,
+      "selfcheck_status": "failed_partial_retained",
+      "selfcheck_actual_records": 0,
+      "selfcheck_complete_batches": 0,
+      "files": 1403,
+      "bytes": 116205469,
+      "first_mtime": 1792910896.5766861,
+      "last_mtime": 1792911009.965709
+    },
+    {
+      "run": "round4-B-production-r2-aborted-partial",
+      "directory": "outputs/round4-B-production-r2-aborted-partial",
+      "reason_documents": [
+        "REASON.md"
+      ],
+      "workers_from_reason": 12,
+      "passed_batches_from_qc": 0,
+      "spectra_from_qc": 0,
+      "failure_json_count": 0,
+      "selfcheck_status": null,
+      "selfcheck_actual_records": null,
+      "selfcheck_complete_batches": null,
+      "files": 440,
+      "bytes": 159428079,
+      "first_mtime": 1792911019.4405735,
+      "last_mtime": 1792911208.3908446
+    },
+    {
+      "run": "round4-B-production-r3",
+      "directory": "outputs/round4-B-production-r3",
+      "reason_documents": [
+        "REASON.md"
+      ],
+      "workers_from_reason": 8,
+      "passed_batches_from_qc": 37,
+      "spectra_from_qc": 3700,
+      "failure_json_count": 128,
+      "selfcheck_status": "failed_partial_retained",
+      "selfcheck_actual_records": 1900,
+      "selfcheck_complete_batches": 19,
+      "files": 14797,
+      "bytes": 6578221454,
+      "first_mtime": 1792911413.6451569,
+      "last_mtime": 1792934044.240718
+    },
+    {
+      "run": "round4-B-production-r4",
+      "directory": "outputs/round4-B-production-r4",
+      "reason_documents": [],
+      "workers_from_reason": null,
+      "passed_batches_from_qc": 63,
+      "spectra_from_qc": 6300,
+      "failure_json_count": 0,
+      "selfcheck_status": null,
+      "selfcheck_actual_records": null,
+      "selfcheck_complete_batches": null,
+      "files": 16782,
+      "bytes": 9092205192,
+      "first_mtime": 1792911413.6451569,
+      "last_mtime": 1792938911.0621586
+    },
+    {
+      "run": "round4-B-production-r5",
+      "directory": "outputs/round4-B-production-r5",
+      "reason_documents": [
+        "REASON.md"
+      ],
+      "workers_from_reason": 3,
+      "passed_batches_from_qc": 123,
+      "spectra_from_qc": 12300,
+      "failure_json_count": 74,
+      "selfcheck_status": "failed_partial_retained",
+      "selfcheck_actual_records": 12300,
+      "selfcheck_complete_batches": 123,
+      "files": 34921,
+      "bytes": 17458454696,
+      "first_mtime": 1792911413.6451569,
+      "last_mtime": 1792982149.8120947
+    },
+    {
+      "run": "round4-B-production-r6",
+      "directory": "outputs/round4-B-production-r6",
+      "reason_documents": [
+        "REASON.md"
+      ],
+      "workers_from_reason": 2,
+      "passed_batches_from_qc": 189,
+      "spectra_from_qc": 18900,
+      "failure_json_count": 11,
+      "selfcheck_status": "failed_partial_retained",
+      "selfcheck_actual_records": 18900,
+      "selfcheck_complete_batches": 189,
+      "files": 48262,
+      "bytes": 26082675877,
+      "first_mtime": 1792911413.6451569,
+      "last_mtime": 1792998512.146788
+    },
+    {
+      "run": "round4-B-production-r7",
+      "directory": "outputs/round4-B-production-r7",
+      "reason_documents": [],
+      "workers_from_reason": null,
+      "passed_batches_from_qc": 200,
+      "spectra_from_qc": 20000,
+      "failure_json_count": 0,
+      "selfcheck_status": "passed_member_full_QC_pending_coordinator_acceptance",
+      "selfcheck_actual_records": 20000,
+      "selfcheck_complete_batches": 200,
+      "files": 50408,
+      "bytes": 27542292801,
+      "first_mtime": 1792911413.6451569,
+      "last_mtime": 1793002131.8091557
+    }
+  ],
+  "failure_json_total": 413,
+  "failures_by_run": {
+    "r1": 200,
+    "r2": 0,
+    "r3": 128,
+    "r4": 0,
+    "r5": 74,
+    "r6": 11,
+    "r7": 0
+  },
+  "migration_rule": "runner resume checks: batch summary hash, archive SHA-256, QC manifest hashes and ZIP CRC; carry_completed.py copies only batches that pass them",
+  "migration_summary": {
+    "final_batches": 200,
+    "with_identical_archive_sha256": 200,
+    "with_identical_qc_hashes": 200,
+    "without_source": 0
+  }
+}
