@@ -34,7 +34,7 @@ python datasets/round4/member_B/verify_candidates.py   # 候选侧
 运行环境：Python 3.13.14，`numpy 2.4.6 / scipy 1.17.1 / xraylib 4.3.0 / matplotlib 3.11.2 / openpyxl 3.1.5`
 （与 `freeze_v1/scope.json` 的依赖版本一致）。
 
-本机共出现 6 个失败/中止修订，全部保留未删，逐批记录与原始文档见 `production_v1/reports/failed_attempts/`：
+本机共出现 6 个失败/中止修订（r1–r6），全部保留未删；第 7 次修订 r7 完成本次交付。逐批记录与原始文档见 `production_v1/reports/failed_attempts/`：
 
 | 修订 | 实测结果 | 完成 / 失败批次 |
 |---|---|---|
@@ -44,7 +44,7 @@ python datasets/round4/member_B/verify_candidates.py   # 候选侧
 | r4 | 当时权威修订，完成 63 批后暂停（未写 REASON） | 63 / 0 |
 | r5 | `--workers 4`，`MemoryError` | 123 / 74 |
 | r6 | `--workers 3`，验证段 `0010..0020` 仍 `MemoryError` | 189 / 11 |
-| r7 | `--workers 2`，本次交付 | 200 / 0 |
+| r7（交付修订） | `--workers 2`，完成交付 | 200 / 0 |
 
 迁移按 runner 自身的 resume 校验（summary 哈希 + 归档 SHA-256 + QC 清单哈希 + ZIP CRC）逐批进行；
 `failed_attempts/migration.json` 记录每个最终批次的来源修订、原包与最终包 SHA-256、QC 哈希一致性；
