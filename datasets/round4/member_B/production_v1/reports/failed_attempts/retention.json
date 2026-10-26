@@ -1,0 +1,64 @@
+{
+  "note": "Failed and partial runs stay outside the repository on this machine; only these evidence extracts are committed.",
+  "directories": [
+    {
+      "run": "r1",
+      "directory": "outputs/round4-B-production",
+      "files": 1403,
+      "bytes": 116205469,
+      "reason_documents": [
+        "RETRY_REASON.md"
+      ]
+    },
+    {
+      "run": "r2",
+      "directory": "outputs/round4-B-production-r2-aborted-partial",
+      "files": 440,
+      "bytes": 159428079,
+      "reason_documents": [
+        "REASON.md"
+      ]
+    },
+    {
+      "run": "r3",
+      "directory": "outputs/round4-B-production-r3",
+      "files": 14797,
+      "bytes": 6578221454,
+      "reason_documents": [
+        "REASON.md"
+      ]
+    },
+    {
+      "run": "r4",
+      "directory": "outputs/round4-B-production-r4",
+      "files": 16782,
+      "bytes": 9092205192,
+      "reason_documents": []
+    },
+    {
+      "run": "r5",
+      "directory": "outputs/round4-B-production-r5",
+      "files": 34921,
+      "bytes": 17458454696,
+      "reason_documents": [
+        "REASON.md"
+      ]
+    },
+    {
+      "run": "r6",
+      "directory": "outputs/round4-B-production-r6",
+      "files": 48262,
+      "bytes": 26082675877,
+      "reason_documents": [
+        "REASON.md"
+      ]
+    },
+    {
+      "run": "r7",
+      "directory": "outputs/round4-B-production-r7",
+      "files": 50408,
+      "bytes": 27542292801,
+      "reason_documents": []
+    }
+  ]
+}

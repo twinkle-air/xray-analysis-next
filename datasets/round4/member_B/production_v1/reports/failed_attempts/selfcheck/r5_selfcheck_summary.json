@@ -1,0 +1,327 @@
+{
+  "status": "failed_partial_retained",
+  "packaging_status": "pending",
+  "member": "B",
+  "expected_records": 20000,
+  "actual_records": 12300,
+  "roles": {
+    "sealed_test": 2000,
+    "train": 10300
+  },
+  "complete_batches": 123,
+  "failures": [
+    {
+      "batch_id": "R4_B_train_stage3_development_0026",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0025",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0029",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0030",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0024",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0032",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0033",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0034",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0035",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0036",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0031",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0038",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0039",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0040",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0041",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0042",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0043",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0037",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0044",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0045",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0047",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0046",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0048",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0049",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0050",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0051",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0052",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0053",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0054",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0055",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0056",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0057",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0058",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0059",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0060",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0061",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0028",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0064",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0062",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0063",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0065",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0066",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0068",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0067",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0069",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0071",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0070",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0073",
+      "error": "[Errno 22] Invalid argument: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r5\\\\reports\\\\R4_B_train_stage3_development_0073\\\\failure.json'"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0072",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0076",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0074",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0078",
+      "error": "[Errno 22] 系统资源不足，无法完成请求的服务。: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r5\\\\reports\\\\R4_B_train_stage3_development_0078'"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0077",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0079",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0080",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0001",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0002",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0003",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0004",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0005",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0006",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0008",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0007",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0009",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0010",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0011",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0012",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0013",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0015",
+      "error": "[Errno 22] Invalid argument: 'C:\\\\Users\\\\Lenovo\\\\Desktop\\\\兴智杯AI开发大赛\\\\datasets\\\\B-part-20261025_work\\\\repo4\\\\outputs\\\\round4-B-production-r5\\\\reports\\\\R4_B_validation_none_development_0015\\\\commands.json'"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0014",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0016",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0027",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0017",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0018",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0019",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0020",
+      "error": ""
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0075",
+      "error": ""
+    }
+  ],
+  "full_audit_and_replay_performed": false,
+  "pilot_spectra": 0,
+  "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
+  "eligible_for_training": false,
+  "scientific_accuracy_verified": false
+}

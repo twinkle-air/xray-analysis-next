@@ -1,0 +1,816 @@
+{
+  "status": "failed_partial_retained",
+  "packaging_status": "pending",
+  "member": "B",
+  "expected_records": 20000,
+  "actual_records": 0,
+  "roles": {},
+  "complete_batches": 0,
+  "failures": [
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0004",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0002",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0003",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0001",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0007",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0008",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0006",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0005",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0002",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0001",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0009",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_challenge_0010",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0003",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0004",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0005",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0006",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0009",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0010",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0008",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_sealed_test_none_sealed_in_distribution_0007",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0002",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0003",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0001",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0004",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0006",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0007",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0005",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0008",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0011",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0010",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0009",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0012",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0013",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0015",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0014",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0016",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0018",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0017",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0019",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0020",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0022",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0021",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0023",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0024",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0025",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0026",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0027",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0028",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0029",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0030",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0031",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0032",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0033",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0034",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0035",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0036",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0038",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0037",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0039",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage1_development_0040",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0002",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0001",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0003",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0004",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0006",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0005",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0007",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0008",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0009",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0010",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0011",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0013",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0012",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0014",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0015",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0017",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0018",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0016",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0019",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0021",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0022",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0020",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0023",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0024",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0025",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0026",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0027",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0029",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0028",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0030",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0031",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0032",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0033",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0034",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0035",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0036",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0037",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0038",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0039",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage2_development_0040",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0001",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0002",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0003",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0004",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0005",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0006",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0007",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0008",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0009",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0010",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0011",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0013",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0014",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0012",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0015",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0018",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0017",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0016",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0019",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0020",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0022",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0021",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0023",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0024",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0026",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0025",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0027",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0028",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0030",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0029",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0031",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0032",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0034",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0033",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0035",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0036",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0038",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0037",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0039",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0040",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0042",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0041",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0043",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0046",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0044",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0045",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0047",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0048",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0049",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0050",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0051",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0052",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0054",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0053",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0055",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0058",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0057",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0056",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0061",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0059",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0060",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0062",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0063",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0066",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0065",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0064",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0069",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0067",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0068",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0070",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0072",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0071",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0073",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0074",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0075",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0076",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0077",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0078",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0079",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_train_stage3_development_0080",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0001",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0002",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0004",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0003",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0005",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0006",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0008",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0007",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0009",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0010",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0011",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0012",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0013",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0014",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0015",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0016",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0017",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0018",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0019",
+      "error": "No package metadata was found for matplotlib"
+    },
+    {
+      "batch_id": "R4_B_validation_none_development_0020",
+      "error": "No package metadata was found for matplotlib"
+    }
+  ],
+  "full_audit_and_replay_performed": false,
+  "pilot_spectra": 0,
+  "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
+  "eligible_for_training": false,
+  "scientific_accuracy_verified": false
+}
