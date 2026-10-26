@@ -16,7 +16,7 @@
 | `round4-B-production-r7` | passed_member_full_QC_pending_coordinator_acceptance | 200 / 20,000 | 0 | — |
 
 - r1：环境缺 `matplotlib 3.11.2`（及 `openpyxl 3.1.5`），200 批全部失败、0 条谱；补齐依赖后另起修订。
-- r2：`--workers 2` 实测约 16.5 s/记录、预计约 23 小时，主动中止，未写 selfcheck。
+- r2：保留原因文档记录 4 worker， 实测约 16.5 s/记录、预计约 23 小时，主动中止，未写 selfcheck。
 - r3：`--workers 8` 在 15.7 GB 内存下 `MemoryError`；37 批通过、128 批失败。
 - r4：当时的权威修订，完成 63 批后暂停；未写 REASON 文档，本目录不臆造。
 - r5：`--workers 4`，123 批通过、74 批失败。
@@ -45,3 +45,9 @@
 
 迁移准入使用 runner 自身的 resume 校验（批次 summary 哈希、归档 SHA-256、QC 清单哈希、ZIP CRC）；
 只有通过校验的批次才被复制到新修订，失败批次与其展开数据保留在原修订目录，不删除、不改窗口预算、不改冻结输入。
+
+## 汇总口径复核
+
+worker 数按原始原因文档中本次修订的描述摘录，后续重启参数单独理解，不用于覆盖本次 worker 数。完整 CLI 和进程退出码未被保留，在 attempts.json 中明确为 null。
+
+413 表示归档内实际保留的 failure.json 数量。selfcheck 原件的失败项另计：r1=200、r3=181、r5=77、r6=11、r7=0。r3 原件记录 19 批完成，目录盘点有 37 个通过 summary；r5 原件有77条失败项，目录盘点有74份 failure.json。这些来源并非已证实为同一观测，差异原因未记录；原始 selfcheck、原因文档和 failure.json 均未改写。最终交付计数以 r7 的 20,000 条记录及200批完整 QC 为准。

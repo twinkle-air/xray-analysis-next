@@ -36,10 +36,10 @@ python datasets/round4/member_B/verify_candidates.py   # 候选侧
 
 本机共出现 6 个失败/中止修订（r1–r6），全部保留未删；第 7 次修订 r7 完成本次交付。逐批记录与原始文档见 `production_v1/reports/failed_attempts/`：
 
-| 修订 | 实测结果 | 完成 / 失败批次 |
+| 修订 | 保留证据 | 目录盘点完成批次 / failure.json 文件 |
 |---|---|---|
 | r1 | 缺 `matplotlib 3.11.2`，全批失败 | 0 / 200 |
-| r2 | `--workers 2` 约 16.5 s/记录、预计约 23 小时，主动中止 | 0 / 0（未写 selfcheck） |
+| r2 | 原因文档记录 4 worker， 约 16.5 s/记录、预计约 23 小时，主动中止 | 0 / 0（未写 selfcheck） |
 | r3 | `--workers 8` 在 15.7 GB 内存下 `MemoryError` | 37 / 128 |
 | r4 | 当时权威修订，完成 63 批后暂停（未写 REASON） | 63 / 0 |
 | r5 | `--workers 4`，`MemoryError` | 123 / 74 |
@@ -54,3 +54,5 @@ python datasets/round4/member_B/verify_candidates.py   # 候选侧
 
 生成器/配置版本、冻结清单 SHA-256（`25deee31…`）与 release（`production_release_v1.json`）都在
 `production_v1/selfcheck_summary.json` 与 `archive_index.json` 中可查。
+
+计数口径：413 是保留的逐批 failure.json 文件数。历史 selfcheck 的 r3 为 19 批完成/181 条失败项，r5 为 123 批完成/77 条失败项，与目录盘点不完全相同；差异原因未记录，原件保持不变。最终验收仅依据 r7 的 20,000 条权威索引与 200 批成功 QC。完整 CLI 与进程退出码未保留，汇总中明确记为 null。

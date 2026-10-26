@@ -2074,8 +2074,8 @@
     },
     {
       "path": "reports/failed_attempts/attempts.json",
-      "bytes": 4618,
-      "sha256": "93b180314bf9a33e305441e66a9e692034fb5ad3bb7ae500310016066bfd03a3"
+      "bytes": 8301,
+      "sha256": "ffe822aba99537c30496ee8069d33ea2b957606a01c031731e51ad13fc9e5415"
     },
     {
       "path": "reports/failed_attempts/carry_completed.py",
@@ -2099,8 +2099,8 @@
     },
     {
       "path": "reports/failed_attempts/README.md",
-      "bytes": 3254,
-      "sha256": "e3cd92054dbebb90bf9fd17f52baf8ec6e803cfcdf589b1c2d6dc98117ee370c"
+      "bytes": 3999,
+      "sha256": "6aeabcc43600e0e1711627e7311b5db5b91eb0d88b3f1ecd13116016c2be4d0b"
     },
     {
       "path": "reports/failed_attempts/reason_docs/r1_RETRY_REASON.md",
