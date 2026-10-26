@@ -1,0 +1,16 @@
+{
+  "remaining_records": 0,
+  "estimated_remaining_bytes": 0.0,
+  "available_bytes": 38759612416,
+  "reserved_free_bytes": 10737418240.0,
+  "reference": {
+    "path": "datasets/round3/member_A/production_v1/archives/R3_A_base_D1_001.zip",
+    "git_blob": "592828b9b520589eb0af8b16adc130f3eea96994",
+    "sha256": "b01b50c81073bb135f4c5c6bfd08d3aefd25668f604ed3d877b47df2d77587f3",
+    "bytes": 10470327,
+    "expanded_bytes": 50963437,
+    "records": 46,
+    "CRC_checked": true
+  },
+  "performance_guarantee": false
+}

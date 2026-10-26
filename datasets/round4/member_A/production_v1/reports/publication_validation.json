@@ -1,0 +1,11 @@
+{
+  "source_delivery_files_validated": 808,
+  "index_matches_all_frozen_columns_and_unique_ids_seeds": true,
+  "all_400_full_QC_evidence_scopes_checked": true,
+  "real_blind_part_restore_SHA256_CRC_40000_opaque_names": "passed",
+  "restore_negative_cases": [
+    "missing part",
+    "corrupt part",
+    "existing wrong output preserved"
+  ]
+}
