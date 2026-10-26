@@ -1,22 +1,42 @@
-第四轮成员B交付入口
+# 第四轮成员B交付入口
 
-正式放行（2026-10-25）：项目负责人已明确授权ABCD完整生产，追加协作者审查已由负责人豁免。A 40,000谱，B/C/D各20,000谱，不做试片。当前准入以[production_release_v1.json](../shared/releases/production_release_v1.json)为准；封存输入内的待审查文字是形成时的历史状态。
+状态（2026-10-26）：**候选与完整生产均已交付**。20,000 条谱全部通过批级窗口预算、全量 audit、全量物理 replay 与 ZIP CRC，0 失败。等待 A 的汇总复核；`eligible_for_training=false`。
 
+## 交付内容
 
-实际谱：0；状态：候选组成已提交，公共范围/条件/名册已准备为freeze_v1审查版，等待协作者审查和完整生产release放行。目标1,000配方、320个合并前设计族、20,000谱。
+| 目录 | 内容 |
+|---|---|
+| `candidates/` | 1,000 个候选组成 / 320 个合并前设计族、补偿账目、xraylib 线表证据、历史与跨成员 L1 筛查（已合并，PR #49） |
+| `production_v1/` | 200 个原生批次 ZIP 与 SHA-256、外部实际索引、盲包（两段）、QC 汇总包、archive/delivery 清单、selfcheck 与资源预检 |
+| `sealed_QC_only/` | 2,000 条封存记录索引与纪律说明（谱本体在 `production_v1/archives/`） |
 
-B 的主题是重叠峰与吸收/增强干扰（V/Cr、Mn/Fe、Co/Ni、As/Pb 等），逐族用 xraylib 实际线表在 150 eV 候选能窗内核对；能窗本身仍是候选筛选假设，不是已冻结的探测器响应。
+## 本轮结论
 
-当前已交付：candidates/ 下的 1,000 个候选组成、320 个设计族账目、逐条补偿账目、线表证据、历史与跨成员 L1 筛查、候选自检与独立复核。全部记录 requested_role 仅为名义预算，global_role_status=pending_global_freeze，eligible_for_training=false，未分配条件实例、噪声种子或能谱。
+- 记录数：**20,000 / 20,000**（训练 16,000 / 验证 2,000 / 封存 2,000）
+- 批次：200 / 200 全部 `passed_all_records`，失败 0
+- 原生归档：200 个 ZIP，合计约 4.79 GB，单体 22.7–25.1 MB
+- 盲包：`B_round4_blind_inputs.zip` 160 MB，拆为两段（恢复方法见 `production_v1/blind/RESTORE.md`）
+- 封存：`eligible_for_training=false`，只做生成/QC，未进入训练、校正、字典或选参
 
-目录约定：candidates/（候选、原始组成和族账目）、frozen_inputs/（被批准输入及源摘要）、production_v1/（原生档案指针/传输块、actual_record_index、交付manifest、reports和selfcheck）、sealed_QC_only/（封存指针/索引与QC）。后三者待A冻结后再建。
+## 复核
 
-复核命令（仓库根目录）：
+```powershell
+python datasets/round4/shared/production_tools/verify_release_gates.py --help
+python datasets/round4/member_B/verify_candidates.py   # 候选侧
+```
 
-    python datasets/round4/member_B/build_candidates.py
-    python datasets/round4/member_B/verify_candidates.py
+生产侧每批的 `summary.json`、`audit.json`、`replay.json`、`window_budget.json`、
+`commands.json`、`actual_record_index.csv` 均已收进 `production_v1/reports/B_all_batch_QC.zip`，
+逐文件 SHA-256 见 `production_v1/delivery_manifest.json`。
 
-每次交付PR写明release与stage，使用模板填写真实结果。不得预填通过、真实种子或可执行命令；所有轮次、用途、种子、完整结果等外部元数据不能混入blind_inputs。封存数据默认不具备训练资格。
+## 运行环境与重跑记录
 
+运行环境：Python 3.13.14，`numpy 2.4.6 / scipy 1.17.1 / xraylib 4.3.0 / matplotlib 3.11.2 / openpyxl 3.1.5`
+（与 `freeze_v1/scope.json` 的依赖版本一致）。
 
-当前下一步：按[公共生产工具说明](../shared/production_tools/README.md)做无产谱预检。完整记录计划已备齐；公共release经审查放行后一次生成本人完整配额。预检不生成试片，当前release已正式放行。
+本机曾出现四个失败/中止修订，全部保留未删：缺 `matplotlib` 导致的全批失败、4 worker 过慢主动中止、
+8/4/3 worker 在 15.7 GB 内存下的 `MemoryError` 分批失败。已通过批次按 runner 的 resume 规则迁移续跑，
+失败批次与展开数据保留在原修订目录并附 `REASON.md`；未删除失败谱、未放宽窗口预算、未改冻结输入。
+
+生成器/配置版本、冻结清单 SHA-256（`25deee31…`）与 release（`production_release_v1.json`）都在
+`production_v1/selfcheck_summary.json` 与 `archive_index.json` 中可查。

@@ -1,0 +1,37 @@
+{
+  "status": "post_production_actuals",
+  "supersedes": "the mid-run estimate that listed remaining_records before packaging",
+  "member": "B",
+  "round_id": "round4",
+  "actual_records": 20000,
+  "actual_batches": 200,
+  "actual_archive_bytes": 4788291423,
+  "actual_archive_count": 200,
+  "delivery_bytes": 4982559709,
+  "actual_batch_seconds": {
+    "total": 154535.4,
+    "max": 1510.1,
+    "mean": 772.7
+  },
+  "storage_at_packaging": {
+    "available_bytes": 219181715456,
+    "reserved_free_bytes": 10737418240.0,
+    "deficit_bytes": 0
+  },
+  "reference_for_estimation": {
+    "path": "datasets/round3/member_A/production_v1/archives/R3_A_base_D1_001.zip",
+    "git_blob": "592828b9b520589eb0af8b16adc130f3eea96994",
+    "sha256": "b01b50c81073bb135f4c5c6bfd08d3aefd25668f604ed3d877b47df2d77587f3",
+    "bytes": 10470327,
+    "expanded_bytes": 50963437,
+    "records": 46,
+    "CRC_checked": true
+  },
+  "estimate_history": {
+    "remaining_records_at_estimate": 1100,
+    "estimated_remaining_bytes": 1480068269.5652173,
+    "note": "the estimate was taken before the remaining batches ran; the actual figures above replace it"
+  },
+  "performance_guarantee": false,
+  "failures_and_reruns": "four earlier runs were kept with REASON.md files; only batches that passed the runner resume checks were carried forward, no spectra deleted and no window budget relaxed"
+}
