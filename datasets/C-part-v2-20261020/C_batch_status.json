@@ -19,6 +19,25 @@
     "Ba K 线中心落在能窗外，保留 L/M 线记录",
     "acceptance_status = pending_independent_validation"
   ],
+  "pr56_review_fixes": {
+    "R3-1_guard_default_index": "c_pilot_guard.py 的 INDEX_CANDIDATES 首位改为实际交付名 C_authoritative_index.csv（旧顺序只查 v2/index_v2.csv 等，从新 clone 默认入口会 FileNotFoundError）；新增 resolve_index()：候选全部缺失时报出候选名并以退出码 1 结束，自检未通过同样非零退出",
+    "R3-2_replay_exit_code": "check_and_pack_p5_v2.py 的 replay 分支改为\"先落盘报告、再过门禁\"：evaluate_replay() 校验 status/scope/spectra_recalculated==全量/complete_physics_recalculation/same_environment/errors/最大数组差为数值，任一项不符 raise SystemExit(1)；audit/pack 同样门禁，\"报告写完\"不再等于退出 0",
+    "detail_file": "C_qc_gate_report.json",
+    "examples_passed": true,
+    "exit_code_examples": {
+      "A_guard_default_entry": 0,
+      "B_guard_negative_index": 1,
+      "C_qc_stub_pass": 0,
+      "D_qc_stub_fail": 1,
+      "E_delivered_replay_report": "problems=[]"
+    },
+    "expected_exit_codes": {
+      "A_guard_default_entry": 0,
+      "B_guard_negative_index": 1,
+      "C_qc_stub_pass": 0,
+      "D_qc_stub_fail": 1
+    }
+  },
   "qc": {
     "audit": {
       "errors": 0,

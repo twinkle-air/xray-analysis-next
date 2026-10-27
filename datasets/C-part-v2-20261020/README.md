@@ -29,7 +29,8 @@
 | `P5_audit.json` | 全量 audit 报告（2000 条、错误 0） |
 | `P5_dataset.zip.sha256` | 整包外部校验值：`0176c90109473ed03a499edcb6fd12e6405b0dcb6879acba04951f544103c54a` |
 | `P5_pack.zip.part01`…`part08` | 密封数据集目录的 ZIP 分卷（每卷 < 43 MiB，合计 333,143,877 B） |
-| `scripts/` | v2 设计、生成、索引/划分、守卫、密封补齐、QC 与本布局生成脚本 |
+| `scripts/` | v2 设计、生成、索引/划分、守卫、密封补齐、QC 与本布局生成脚本；`run_v2_gate_examples.py` 复现退出码正/负例 |
+| `C_qc_gate_report.json` | PR #56 复核两条阻断项的正/负例实跑记录（真实退出码、命令、输出尾部、随包真报告的判定结果） |
 
 ## 重建与校验
 
@@ -56,6 +57,23 @@ python -B P5_dataset_v2/reproducibility/generator/fp_competition/app.py audit --
 - 全量物理重算：`passed`，重算 2000 条，
   最大数组绝对差 0.0，环境一致 True。
 - 打包：确定性 ZIP 333,143,877 B，SHA-256 `0176c90109473ed03a499edcb6fd12e6405b0dcb6879acba04951f544103c54a`。
+
+## 退出码约定与正/负例（PR #56 复核两条阻断项）
+
+- `scripts/c_pilot_guard.py` 的默认索引入口即本目录的 `C_authoritative_index.csv`
+  （候选名首位；从新 clone 直接 `python -B scripts/c_pilot_guard.py` 即可，无需 `--index`）。
+  自检未通过、或候选名全部找不到 → **退出码 1** 并打印原因。
+- `scripts/check_and_pack_p5_v2.py`：全量物理重算只有同时满足
+  `status=passed`、`scope=all_records`、`spectra_recalculated=` 密封 manifest 的全量条数、
+  `complete_physics_recalculation=true`、`same_environment=true`、`errors=[]` 才退出 0；
+  不合格时**报告仍然先落盘**（证据不丢），随后以退出码 1 结束。audit 与 pack 同样有门禁。
+- 实测退出码（`python -B scripts/run_v2_gate_examples.py`，逐条命令与输出见 `C_qc_gate_report.json`）：
+
+  - 从交付布局默认入口跑 c_pilot_guard 自检：实测退出码 **0**（期望 0）
+  - 守卫负例：把全部行改成可训练语义（应显示 NOT BLOCKED 并非零退出）：实测退出码 **1**（期望 1）
+  - QC 门禁正例：合成通过报告走同一路径：实测退出码 **0**（期望 0）
+  - QC 门禁负例：故障注入（failed / 只重算 1 条 / complete=false / 1 条 error）：实测退出码 **1**（期望 1）
+  - 随包真·全量 replay 报告 `P5_replay.json` 过同一门禁：期望 2000 条，不合格项 0 项
 
 ## 未验证事项
 

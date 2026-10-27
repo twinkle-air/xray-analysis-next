@@ -4,20 +4,28 @@
 本批次 2000 条 P5 谱是**留出条件 + 未通过评审的候选试产**，两类身份都禁止进入
 训练与调参；守卫只读取索引 CSV 的字段，不接触密封数据本体。
 
-自检：`python c_pilot_guard.py` 会在 v2 索引上验证 train/validation/test 三个入口
-全部被拒绝，并写出 `pilot_guard_selftest.json`。
+自检：`python c_pilot_guard.py` 会在**本批交付布局的默认索引**上验证 train/validation/test
+三个入口全部被拒绝，写出 `pilot_guard_selftest.json`，未通过时以退出码 1 结束。
+候选顺序以仓库里实际交付的文件名 `C_authoritative_index.csv` 为首（早期工作目录里的
+`v2/index_v2.csv` 等仍在后面，便于本地复跑）。
+
+负例：`python c_pilot_guard.py --index <含可训练行的 CSV>` 会报 `NOT BLOCKED` 并退出 1，
+证明自检不是"永远返回通过"。
 """
 from __future__ import annotations
 import csv
 import hashlib
 import json
 import os
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent.parent
 BLOCKED_BATCH_VERSIONS = ('review_failed', 'pilot_only')
-INDEX_CANDIDATES = ('v2/index_v2.csv', 'C_authoritative_index_v2.csv', 'index_v2.csv')
-ISOLATION_CANDIDATES = ('v2/pilot_isolation.json', 'pilot_isolation.json')
+# 交付布局的默认入口名在第一位：从新 clone 直接运行即可，不需要显式 --index
+INDEX_CANDIDATES = ('C_authoritative_index.csv', 'C_authoritative_index_v2.csv',
+                    'index_v2.csv', 'v2/index_v2.csv')
+ISOLATION_CANDIDATES = ('pilot_isolation.json', 'v2/pilot_isolation.json')
 
 
 def _first_existing(candidates):
@@ -103,9 +111,33 @@ def self_test(path=INDEX):
     return result
 
 
+def resolve_index(explicit=None):
+    """默认按交付布局解析索引；解析不到就报出候选名，而不是抛裸 FileNotFoundError。"""
+    if explicit:
+        return Path(explicit)
+    for rel in INDEX_CANDIDATES:
+        p = HERE / rel
+        if p.is_file():
+            return p
+    raise SystemExit('未找到权威索引；在 ' + str(HERE) + ' 下依次找 '
+                     + ', '.join(INDEX_CANDIDATES) + '。请用 --index 显式指定。')
+
+
 if __name__ == '__main__':
-    res = self_test()
-    out = Path(os.environ.get('C_GUARD_OUT', str(HERE / 'v2' / 'pilot_guard_selftest.json')))
+    explicit = None
+    args = sys.argv[1:]
+    if '--index' in args:
+        explicit = args[args.index('--index') + 1]
+    elif args and not args[0].startswith('-'):
+        explicit = args[0]
+    path = resolve_index(explicit)
+    res = self_test(path)
+    out = Path(os.environ.get('C_GUARD_OUT', str(HERE / 'pilot_guard_selftest.json')))
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(res, ensure_ascii=False, indent=2), encoding='utf-8')
-    print('passed', res['passed'], out)
+    print('index', res['index'], 'rows', res['rows'],
+          'train/validation/test entries',
+          [res[f'{s}_entry'] for s in ('train', 'validation', 'test')],
+          'passed', res['passed'], '->', out, flush=True)
+    if not res['passed']:
+        raise SystemExit(1)

@@ -10,8 +10,8 @@
       "sha256": "eaccb264ba524d68994f5d4aeed08f9e31bbe194334726eb9d1936ab7fb8be61"
     },
     "C_batch_status.json": {
-      "bytes": 3245,
-      "sha256": "734d6b0a1b6bd47cf99960eef7dc7479aa80794d31425d031826659e2decd6d0"
+      "bytes": 4438,
+      "sha256": "24c484f10c9f85425241369b737975344c233f47f9866d4fcfdcc349e763faee"
     },
     "C_coverage.json": {
       "bytes": 6647,
@@ -32,6 +32,10 @@
     "C_index_policy_check_v2.md": {
       "bytes": 1705,
       "sha256": "e114125cd744713dfa6159b7d710c7f056b1ae42590710ca8649ac795bb85bda"
+    },
+    "C_qc_gate_report.json": {
+      "bytes": 3398,
+      "sha256": "81a86aacb0825f19c3e15f405663f695fdb12f71358351d4a5bd43b72327990e"
     },
     "C_samples.json": {
       "bytes": 2963316,
@@ -86,24 +90,24 @@
       "sha256": "eb42afa07aafa7b9a72fc3a0138fa1063ed7ef2527c210cef07a715ccbe2a1ce"
     },
     "README.md": {
-      "bytes": 4587,
-      "sha256": "278ba369ec99bb8ef48030ad735193d74d077696006fe62d272dcdc2669e6115"
+      "bytes": 6263,
+      "sha256": "aa5c5624f00c7e805aec6f5e4fd6661d044b42a933343fda05bf982df045df0c"
     },
     "scripts/build_p5_index_v2.py": {
       "bytes": 16207,
       "sha256": "ea3bcb260e23bc5fe190c83da675ceca0068ce32a1d5b279d264c7325408ebb4"
     },
     "scripts/build_v2_payload.py": {
-      "bytes": 15559,
-      "sha256": "f32e1094692c92f6205dca0cb29f175ac4b557bf395993e67ecc1ea08523556a"
+      "bytes": 19744,
+      "sha256": "400dfb6a1d113c8995e4c6eb411aa0b91ccd022a31ddf9916017b735016d161c"
     },
     "scripts/c_pilot_guard.py": {
-      "bytes": 4499,
-      "sha256": "583a536138a4f01fdc64202fa5a39b2850a80a36805f784e2aeb5eb5a0b8b673"
+      "bytes": 5983,
+      "sha256": "f42d3c0094808a14e03169a8a067153d30a3bfbddcf43a8a27d2bf9b629343af"
     },
     "scripts/check_and_pack_p5_v2.py": {
-      "bytes": 3105,
-      "sha256": "750938492ff94ba652043e913ff6ff359edddba416dafc509d3d18c2ce83c66c"
+      "bytes": 8423,
+      "sha256": "e637aab6d94ca51d992a7d2e1424e500827b1faa66eeaa77d879041d827b5127"
     },
     "scripts/design_c_alloy_formulas_v2.py": {
       "bytes": 29756,
@@ -124,6 +128,10 @@
     "scripts/pregenerate_dryrun_v2.py": {
       "bytes": 3637,
       "sha256": "d7a4af30647eca0ce2ef7f02aa0d93eb1b83094501450e3a13290fa2938fcda8"
+    },
+    "scripts/run_v2_gate_examples.py": {
+      "bytes": 5584,
+      "sha256": "1abf52c44cc3d449ab41c2d95901b84252303e8c68a20f3ae9c90f30f99b06f7"
     },
     "scripts/v2_generation_status.py": {
       "bytes": 5995,
