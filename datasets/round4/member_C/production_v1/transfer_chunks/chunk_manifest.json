@@ -1,0 +1,36 @@
+{
+  "release": "production_release_v1",
+  "member": "C",
+  "note": "transfer chunks are transport material, not spectra; after concatenation the whole archive SHA-256 and the ZIP CRC must both verify",
+  "archives": [
+    {
+      "archive": "C_round4_blind_inputs.zip",
+      "reassemble": "concatenate parts in order",
+      "sha256_algorithm": "sha256",
+      "bytes": 160232051,
+      "sha256": "89a56c9bcf86d51c1440f4379e0c9e88b59a5220f03de959cf5f87b8843e2c57",
+      "parts": [
+        {
+          "part": "C_round4_blind_inputs.zip.part001",
+          "bytes": 50331648,
+          "sha256": "e6ad7e5b98e91dcb7c5b805503ed4589230f3a27095d6718a37d9d5e988037ce"
+        },
+        {
+          "part": "C_round4_blind_inputs.zip.part002",
+          "bytes": 50331648,
+          "sha256": "8c22b21c34c25ee6948b445797ce551f918338802bf3b2d4e0483c5bfca55762"
+        },
+        {
+          "part": "C_round4_blind_inputs.zip.part003",
+          "bytes": 50331648,
+          "sha256": "ec56858be12c0737aa4b124753d629851a4ef3834e60884141168c5c45411d62"
+        },
+        {
+          "part": "C_round4_blind_inputs.zip.part004",
+          "bytes": 9237107,
+          "sha256": "284a2d69bffcda785ecfcac3502b39ea6899185b29d07712bc0083f39f036b8f"
+        }
+      ]
+    }
+  ]
+}
