@@ -60,13 +60,13 @@
     },
     {
       "path": "datasets/round4/member_C/production_v1/native_archive_receipt.json",
-      "sha256": "0fd6350039e53a32b4ae7022d5498dc0876479cbbfd0dde9dbb884d7a03ef39e",
-      "bytes": 101098
+      "sha256": "8e6e2cc8087c2c4993834086fbbbb494f313b2baef67f93d01e3fb8caa29535e",
+      "bytes": 120774
     },
     {
       "path": "datasets/round4/member_C/production_v1/README.md",
-      "sha256": "46411b399ab902af361dff3cdd300b7ebdee626e5a551422f3a369ce48da45b4",
-      "bytes": 3270
+      "sha256": "498a728fa166f6c9c12e04da48200c35b0be6049cc6ef969d0aeb946e89c2b4a",
+      "bytes": 3525
     },
     {
       "path": "datasets/round4/member_C/production_v1/selfcheck/summary.json",
@@ -114,5 +114,5 @@
       "bytes": 524224
     }
   ],
-  "file_bytes_total": 182578151
+  "file_bytes_total": 182598082
 }

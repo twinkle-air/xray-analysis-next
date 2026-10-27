@@ -26,17 +26,19 @@ $fs.Close()
 ## 原生档案接收与核对
 
 ```powershell
-# 1) 逐个下载 Release 资产（需仓库读取权限），与 inventory 的 sha256 比对
+# 1) 逐个下载 Release 资产（仓库为私有：用带 token 的 API 地址 + Accept: application/octet-stream）
+$env:GH_TOKEN = <协调人自己的只读 token>
 $inv = Get-Content ../native_archive_inventory.json -Raw | ConvertFrom-Json
 $rec = Get-Content ../native_archive_receipt.json -Raw | ConvertFrom-Json
 foreach ($e in $inv.entries) {
   if ($e.role -eq "sealed_test") { continue }
   $a = $rec.assets | Where-Object { $_.asset -eq $e.archive }
-  Invoke-WebRequest $a.browser_download_url -OutFile $e.archive
+  $h = @{ Authorization = ("Bearer " + $env:GH_TOKEN); Accept = "application/octet-stream" }
+  Invoke-WebRequest $a.api_url -OutFile $e.archive -Headers $h
   if ((Get-FileHash $e.archive -Algorithm SHA256).Hash.ToLower() -ne $e.sha256) { "MISMATCH " + $e.archive }
 }
 # 2) 密封 20 档：解密 AES256 容器后按 receipt.sealed_test_custody.archives_inside 逐档核对
 gpg --decrypt --pinentry-mode loopback R4_C_sealed_test_native_archives.zip.aes256.gpg > R4_C_sealed_test_native_archives.zip
 ```
 
-GitHub 对每个资产回报的 digest 已记在 native_archive_receipt.json，与 inventory 的 SHA-256 全部一致（181/181），因此除“上传成功”外还有服务端存储字节的独立佐证。
+GitHub 对每个资产回报的 digest 已记在 native_archive_receipt.json，与 inventory 的 SHA-256 全部一致（181/181），因此除“上传成功”外还有服务端存储字节的独立佐证；本人已实测通过 api_url 取回一个 validation 资产并核对 SHA-256 相同。

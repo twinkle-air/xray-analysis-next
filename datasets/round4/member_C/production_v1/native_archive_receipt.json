@@ -121,7 +121,8 @@
     "passphrase_handed_over_by": "member C author to the coordinator directly; never stored in the repository",
     "verify": "gpg --decrypt --pinentry-mode loopback <asset> > container.zip, then check container.zip SHA-256 and every inner archive SHA-256 against this receipt"
   },
-  "how_to_pull": "curl -L -o <asset name> <browser_download_url> (needs repo read access, then sha256sum and compare with native_archive_inventory.json)",
+  "how_to_pull": "the repo is private, so an authenticated asset fetch is required: curl -L -H \"Authorization: Bearer <token with repo read>\" -H \"Accept: application/octet-stream\" <api_url> -o <asset>; browser_download_url works in a signed-in browser session. Compare the saved file with native_archive_inventory.json entries[].sha256.",
+  "fetch_tested": "member C downloaded one validation asset through the API url and its SHA-256 matched the inventory",
   "download_side_verification": "GitHub reports the digest of the stored bytes, so this receipt proves the handover bytes equal the produced bytes; a full download-and-rehash pass is available on request",
   "assets": [
     {
@@ -131,6 +132,7 @@
       "sha256": "6ac29d7e9c921daa508d5d6c2abedada6ff9b072f00f784449ca2fdcc3f5279d",
       "github_digest": "sha256:6ac29d7e9c921daa508d5d6c2abedada6ff9b072f00f784449ca2fdcc3f5279d",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_sealed_test_native_archives.zip.aes256.gpg",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681634730",
       "verified_by_github_digest": true
     },
     {
@@ -140,6 +142,7 @@
       "sha256": "0ed1e7fd164b39e488f34ceb43626d7728103772a6005360a8bf9556fa9a06b6",
       "github_digest": "sha256:0ed1e7fd164b39e488f34ceb43626d7728103772a6005360a8bf9556fa9a06b6",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0001.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681471420",
       "verified_by_github_digest": true
     },
     {
@@ -149,6 +152,7 @@
       "sha256": "559ab1fb8cb479f9499828422e26b5577ba807647d57d9b46a675da7935b1b57",
       "github_digest": "sha256:559ab1fb8cb479f9499828422e26b5577ba807647d57d9b46a675da7935b1b57",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0002.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681472107",
       "verified_by_github_digest": true
     },
     {
@@ -158,6 +162,7 @@
       "sha256": "aae262d7a83639ed945b72e1d0593aebd8d3b33eb9cf55c5836b6d3f5abb3511",
       "github_digest": "sha256:aae262d7a83639ed945b72e1d0593aebd8d3b33eb9cf55c5836b6d3f5abb3511",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0003.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681471696",
       "verified_by_github_digest": true
     },
     {
@@ -167,6 +172,7 @@
       "sha256": "96bebb454b6f2c940535d25aad7749aab81bf140e1d25de765850a292514d3f0",
       "github_digest": "sha256:96bebb454b6f2c940535d25aad7749aab81bf140e1d25de765850a292514d3f0",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0004.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681472397",
       "verified_by_github_digest": true
     },
     {
@@ -176,6 +182,7 @@
       "sha256": "34cffdb41cf1e080a59b6a43bb15c88f038e87c239a02e051dff5d92c39792fa",
       "github_digest": "sha256:34cffdb41cf1e080a59b6a43bb15c88f038e87c239a02e051dff5d92c39792fa",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0005.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681472691",
       "verified_by_github_digest": true
     },
     {
@@ -185,6 +192,7 @@
       "sha256": "6d9fa0a7376a6d96041b97820fcb2ff6e2f4879a33fc2c63bd933afc1159d43b",
       "github_digest": "sha256:6d9fa0a7376a6d96041b97820fcb2ff6e2f4879a33fc2c63bd933afc1159d43b",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0006.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681473013",
       "verified_by_github_digest": true
     },
     {
@@ -194,6 +202,7 @@
       "sha256": "c459102a32c4b890ef54320b65379c535a1b3ed41b242517f9d32455a197b37e",
       "github_digest": "sha256:c459102a32c4b890ef54320b65379c535a1b3ed41b242517f9d32455a197b37e",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0007.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681473347",
       "verified_by_github_digest": true
     },
     {
@@ -203,6 +212,7 @@
       "sha256": "27d3fdb9b8f35c6425b0770e2154f88c69c66b86b3462ee5471d81ed58d24f00",
       "github_digest": "sha256:27d3fdb9b8f35c6425b0770e2154f88c69c66b86b3462ee5471d81ed58d24f00",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0008.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681473740",
       "verified_by_github_digest": true
     },
     {
@@ -212,6 +222,7 @@
       "sha256": "7f334ba422aad9c106c5c4e8d06e295b414c329d42b3c924f607b578c5b13ca7",
       "github_digest": "sha256:7f334ba422aad9c106c5c4e8d06e295b414c329d42b3c924f607b578c5b13ca7",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0009.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681474108",
       "verified_by_github_digest": true
     },
     {
@@ -221,6 +232,7 @@
       "sha256": "178d4ccd947d735a236fdeb2055d5c3dc67927f4c3f7766ada7a3ed988c3ced4",
       "github_digest": "sha256:178d4ccd947d735a236fdeb2055d5c3dc67927f4c3f7766ada7a3ed988c3ced4",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0010.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681474370",
       "verified_by_github_digest": true
     },
     {
@@ -230,6 +242,7 @@
       "sha256": "457b381cceab41c02825fc84ecca7dd7208f016f594b988ea8aa53be83aebafe",
       "github_digest": "sha256:457b381cceab41c02825fc84ecca7dd7208f016f594b988ea8aa53be83aebafe",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0011.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681474659",
       "verified_by_github_digest": true
     },
     {
@@ -239,6 +252,7 @@
       "sha256": "bdda7cf3a197e31173c60c6fb957841d54170124369c1594bd73ec8b3c97edff",
       "github_digest": "sha256:bdda7cf3a197e31173c60c6fb957841d54170124369c1594bd73ec8b3c97edff",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0012.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681474963",
       "verified_by_github_digest": true
     },
     {
@@ -248,6 +262,7 @@
       "sha256": "3199b649c4d1c5ac8303207063c68e717803f138ba1c1694ddf6ddf51cb978ce",
       "github_digest": "sha256:3199b649c4d1c5ac8303207063c68e717803f138ba1c1694ddf6ddf51cb978ce",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0013.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681475276",
       "verified_by_github_digest": true
     },
     {
@@ -257,6 +272,7 @@
       "sha256": "8e033e657783d0d0c9384f1cb360027550b502a3208b37d84c2c5f190a4ca7b4",
       "github_digest": "sha256:8e033e657783d0d0c9384f1cb360027550b502a3208b37d84c2c5f190a4ca7b4",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0014.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681475544",
       "verified_by_github_digest": true
     },
     {
@@ -266,6 +282,7 @@
       "sha256": "57e0361d961c1db4221555b8eb8723616b854a3198c8694d9059b449e8a1c41c",
       "github_digest": "sha256:57e0361d961c1db4221555b8eb8723616b854a3198c8694d9059b449e8a1c41c",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0015.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681475909",
       "verified_by_github_digest": true
     },
     {
@@ -275,6 +292,7 @@
       "sha256": "9b3e1052323364795f245d12c91ef89dba8a4c9ad98d7055863126d09e7a5d86",
       "github_digest": "sha256:9b3e1052323364795f245d12c91ef89dba8a4c9ad98d7055863126d09e7a5d86",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0016.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681476286",
       "verified_by_github_digest": true
     },
     {
@@ -284,6 +302,7 @@
       "sha256": "270818fc483b8624846d486b60410521815e87a6db05bf6cb1d9c8c64dac7fbb",
       "github_digest": "sha256:270818fc483b8624846d486b60410521815e87a6db05bf6cb1d9c8c64dac7fbb",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0017.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681476604",
       "verified_by_github_digest": true
     },
     {
@@ -293,6 +312,7 @@
       "sha256": "fa126cec07ec13185b3fe9e6072ab02c223988d8c733254c55e74d391b768ff1",
       "github_digest": "sha256:fa126cec07ec13185b3fe9e6072ab02c223988d8c733254c55e74d391b768ff1",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0018.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681476896",
       "verified_by_github_digest": true
     },
     {
@@ -302,6 +322,7 @@
       "sha256": "850fb4e46ad1ec69ef147d3af25cf0971a64d234dc0be7350267bd4e27016446",
       "github_digest": "sha256:850fb4e46ad1ec69ef147d3af25cf0971a64d234dc0be7350267bd4e27016446",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0019.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681477263",
       "verified_by_github_digest": true
     },
     {
@@ -311,6 +332,7 @@
       "sha256": "adbe203c03fdc57d8fd16756d5c7c3148647a06b1f41a8282040b1ff54587ead",
       "github_digest": "sha256:adbe203c03fdc57d8fd16756d5c7c3148647a06b1f41a8282040b1ff54587ead",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0020.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681477744",
       "verified_by_github_digest": true
     },
     {
@@ -320,6 +342,7 @@
       "sha256": "e7102a990529b7eacc3d5910550d8c10767e7064bb1b9425c29d7007ae532fe6",
       "github_digest": "sha256:e7102a990529b7eacc3d5910550d8c10767e7064bb1b9425c29d7007ae532fe6",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0021.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681478065",
       "verified_by_github_digest": true
     },
     {
@@ -329,6 +352,7 @@
       "sha256": "84b06f8d735b4d6d9e5593e170aea4d05f6f1074b26e91287f3bb5e7e4ea5cfd",
       "github_digest": "sha256:84b06f8d735b4d6d9e5593e170aea4d05f6f1074b26e91287f3bb5e7e4ea5cfd",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0022.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681478372",
       "verified_by_github_digest": true
     },
     {
@@ -338,6 +362,7 @@
       "sha256": "0c5722d016becd3d4e9df4e2f11c844abf7b3d9d4229b735cff7606b8cb80aea",
       "github_digest": "sha256:0c5722d016becd3d4e9df4e2f11c844abf7b3d9d4229b735cff7606b8cb80aea",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0023.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681478710",
       "verified_by_github_digest": true
     },
     {
@@ -347,6 +372,7 @@
       "sha256": "cafd75c1d09452a95581bf519b9ce0967d7672a0bd959bd5c84f5e914c66ef80",
       "github_digest": "sha256:cafd75c1d09452a95581bf519b9ce0967d7672a0bd959bd5c84f5e914c66ef80",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0024.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681479161",
       "verified_by_github_digest": true
     },
     {
@@ -356,6 +382,7 @@
       "sha256": "567d0e6c87351cd5d85c987f884b8ad46a4234271e3c987d32bec053da082514",
       "github_digest": "sha256:567d0e6c87351cd5d85c987f884b8ad46a4234271e3c987d32bec053da082514",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0025.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681479643",
       "verified_by_github_digest": true
     },
     {
@@ -365,6 +392,7 @@
       "sha256": "0917ce93bea3a120d0dc807a06dff6dc4d9acb38b4e39c30d888bf68e12ae9aa",
       "github_digest": "sha256:0917ce93bea3a120d0dc807a06dff6dc4d9acb38b4e39c30d888bf68e12ae9aa",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0026.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681480174",
       "verified_by_github_digest": true
     },
     {
@@ -374,6 +402,7 @@
       "sha256": "8cf081f8bcaa804bb5262ed1e672508c0149da3e11c551ea563873065054aaa4",
       "github_digest": "sha256:8cf081f8bcaa804bb5262ed1e672508c0149da3e11c551ea563873065054aaa4",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0027.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681481156",
       "verified_by_github_digest": true
     },
     {
@@ -383,6 +412,7 @@
       "sha256": "ad315a8bf5e04c991509700d04495905f36912174cea26f160c570e0bdb2e2aa",
       "github_digest": "sha256:ad315a8bf5e04c991509700d04495905f36912174cea26f160c570e0bdb2e2aa",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0028.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681480628",
       "verified_by_github_digest": true
     },
     {
@@ -392,6 +422,7 @@
       "sha256": "b72861ef69704d3e1e77fae9c7cef2e592d2acd850f0939d57fd141e10f97753",
       "github_digest": "sha256:b72861ef69704d3e1e77fae9c7cef2e592d2acd850f0939d57fd141e10f97753",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0029.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681481459",
       "verified_by_github_digest": true
     },
     {
@@ -401,6 +432,7 @@
       "sha256": "b6ff9bbb25cfe90b876c58f966c8832ef3f215a797014c720726721dee93df57",
       "github_digest": "sha256:b6ff9bbb25cfe90b876c58f966c8832ef3f215a797014c720726721dee93df57",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0030.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681481842",
       "verified_by_github_digest": true
     },
     {
@@ -410,6 +442,7 @@
       "sha256": "3081290af9c86f3fcdb4eb7f3c6c8594fa994b04cc3399b1f6b143781b095d8d",
       "github_digest": "sha256:3081290af9c86f3fcdb4eb7f3c6c8594fa994b04cc3399b1f6b143781b095d8d",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0031.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681512078",
       "verified_by_github_digest": true
     },
     {
@@ -419,6 +452,7 @@
       "sha256": "b64be8a08578da25027de272a0a7ed34383112f2c75917552cb15a6b2279f6a5",
       "github_digest": "sha256:b64be8a08578da25027de272a0a7ed34383112f2c75917552cb15a6b2279f6a5",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0032.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681513077",
       "verified_by_github_digest": true
     },
     {
@@ -428,6 +462,7 @@
       "sha256": "cbefa9312fc0dfe4f1a24c176766419dee4dd53957bbc9d0314ece8008f8fb4c",
       "github_digest": "sha256:cbefa9312fc0dfe4f1a24c176766419dee4dd53957bbc9d0314ece8008f8fb4c",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0033.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681514132",
       "verified_by_github_digest": true
     },
     {
@@ -437,6 +472,7 @@
       "sha256": "9bdd3cc36db8fc4364c9b3e372dcdcbbcf79a5c17bae9784b9cd61fd788eae21",
       "github_digest": "sha256:9bdd3cc36db8fc4364c9b3e372dcdcbbcf79a5c17bae9784b9cd61fd788eae21",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0034.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681515177",
       "verified_by_github_digest": true
     },
     {
@@ -446,6 +482,7 @@
       "sha256": "78c7c9bf2b42253d9289bc553760f6ff9dcb847cdd1aac014b3a8a727a80a415",
       "github_digest": "sha256:78c7c9bf2b42253d9289bc553760f6ff9dcb847cdd1aac014b3a8a727a80a415",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0035.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681515608",
       "verified_by_github_digest": true
     },
     {
@@ -455,6 +492,7 @@
       "sha256": "2d955def2eba2bd4823860df2e30989479d7ec52e5b907f28aa74f52ad4940da",
       "github_digest": "sha256:2d955def2eba2bd4823860df2e30989479d7ec52e5b907f28aa74f52ad4940da",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0036.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681515870",
       "verified_by_github_digest": true
     },
     {
@@ -464,6 +502,7 @@
       "sha256": "f3e1f8ed232642543b61efeade41bcd087326a5d6319eac1c0b4bd13537d5d84",
       "github_digest": "sha256:f3e1f8ed232642543b61efeade41bcd087326a5d6319eac1c0b4bd13537d5d84",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0037.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681516142",
       "verified_by_github_digest": true
     },
     {
@@ -473,6 +512,7 @@
       "sha256": "a058fe62b4494873bacae6cf79a606e9623d213f424e6c4d90ac38adc2c2f17e",
       "github_digest": "sha256:a058fe62b4494873bacae6cf79a606e9623d213f424e6c4d90ac38adc2c2f17e",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0038.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681516409",
       "verified_by_github_digest": true
     },
     {
@@ -482,6 +522,7 @@
       "sha256": "3661ecd30f1468343f1da04699b91c527422a33e9a34d62404572c6402356ac4",
       "github_digest": "sha256:3661ecd30f1468343f1da04699b91c527422a33e9a34d62404572c6402356ac4",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0039.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681517014",
       "verified_by_github_digest": true
     },
     {
@@ -491,6 +532,7 @@
       "sha256": "fe9b562202867f4913900b7af1c42de1e3995824ff1ceacadac8ac4ef9c11fe1",
       "github_digest": "sha256:fe9b562202867f4913900b7af1c42de1e3995824ff1ceacadac8ac4ef9c11fe1",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage1_development_0040.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681516764",
       "verified_by_github_digest": true
     },
     {
@@ -500,6 +542,7 @@
       "sha256": "3d2e00a1a12974812f5af583d9a577a2a43cb8b16f8fa0b8ff7af4ddfaef56ee",
       "github_digest": "sha256:3d2e00a1a12974812f5af583d9a577a2a43cb8b16f8fa0b8ff7af4ddfaef56ee",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0001.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681517368",
       "verified_by_github_digest": true
     },
     {
@@ -509,6 +552,7 @@
       "sha256": "81244509a6fc948d7bdb8191c7ee9f92cdd6e0bd61e6ad6e167f92921e4102ac",
       "github_digest": "sha256:81244509a6fc948d7bdb8191c7ee9f92cdd6e0bd61e6ad6e167f92921e4102ac",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0002.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681517903",
       "verified_by_github_digest": true
     },
     {
@@ -518,6 +562,7 @@
       "sha256": "3a5b2ad95ce85a2d2b3241e65f109c90af0a4cd2548c8adce24678bd5a3a7dc2",
       "github_digest": "sha256:3a5b2ad95ce85a2d2b3241e65f109c90af0a4cd2548c8adce24678bd5a3a7dc2",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0003.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681518507",
       "verified_by_github_digest": true
     },
     {
@@ -527,6 +572,7 @@
       "sha256": "cd0e2ed5d3be5554ba66de33a5c02e0fbcd1b9028836918025856b140bd52c6e",
       "github_digest": "sha256:cd0e2ed5d3be5554ba66de33a5c02e0fbcd1b9028836918025856b140bd52c6e",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0004.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681519685",
       "verified_by_github_digest": true
     },
     {
@@ -536,6 +582,7 @@
       "sha256": "a33274335830904169e49b40eee2de187c5a94395572d0267c3f5bd89f98f3f2",
       "github_digest": "sha256:a33274335830904169e49b40eee2de187c5a94395572d0267c3f5bd89f98f3f2",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0005.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681519100",
       "verified_by_github_digest": true
     },
     {
@@ -545,6 +592,7 @@
       "sha256": "8c273fd6edc983a47618c810d6e2a6c844713df728244d08d5a2adae639abef8",
       "github_digest": "sha256:8c273fd6edc983a47618c810d6e2a6c844713df728244d08d5a2adae639abef8",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0006.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681520913",
       "verified_by_github_digest": true
     },
     {
@@ -554,6 +602,7 @@
       "sha256": "7dba2276123a106955faa840ad35ec01df6efbea2d95601314d96afd0b7c6bfd",
       "github_digest": "sha256:7dba2276123a106955faa840ad35ec01df6efbea2d95601314d96afd0b7c6bfd",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0007.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681521642",
       "verified_by_github_digest": true
     },
     {
@@ -563,6 +612,7 @@
       "sha256": "5ea7590613efff8d777a2d677c3910601d6a9e3676feea87d8188c8dfe9d2cfd",
       "github_digest": "sha256:5ea7590613efff8d777a2d677c3910601d6a9e3676feea87d8188c8dfe9d2cfd",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0008.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681522940",
       "verified_by_github_digest": true
     },
     {
@@ -572,6 +622,7 @@
       "sha256": "71ac2c45824456f48ef0c23a8dc76783ddb842f63db0622f58ce21e8e3bbe6b5",
       "github_digest": "sha256:71ac2c45824456f48ef0c23a8dc76783ddb842f63db0622f58ce21e8e3bbe6b5",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0009.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681522542",
       "verified_by_github_digest": true
     },
     {
@@ -581,6 +632,7 @@
       "sha256": "9b332b1bd8800f29b23495b6e558487fdaf20d7b8f14f423e42fcdb228fef88c",
       "github_digest": "sha256:9b332b1bd8800f29b23495b6e558487fdaf20d7b8f14f423e42fcdb228fef88c",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0010.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681523295",
       "verified_by_github_digest": true
     },
     {
@@ -590,6 +642,7 @@
       "sha256": "0d2f5d29b371d2c89333aa5df63360c7d9295bacc8bf20500330e9b804776663",
       "github_digest": "sha256:0d2f5d29b371d2c89333aa5df63360c7d9295bacc8bf20500330e9b804776663",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0011.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681523802",
       "verified_by_github_digest": true
     },
     {
@@ -599,6 +652,7 @@
       "sha256": "7a6dd4ec078ee9c6f8ef083bc0c4aa124e47e2dec8e074a9ca0a466d026d51b7",
       "github_digest": "sha256:7a6dd4ec078ee9c6f8ef083bc0c4aa124e47e2dec8e074a9ca0a466d026d51b7",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0012.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681524334",
       "verified_by_github_digest": true
     },
     {
@@ -608,6 +662,7 @@
       "sha256": "2ff49aec2ec7f481553330a21880c54e0005337d34e375d5b37d9105ee753a27",
       "github_digest": "sha256:2ff49aec2ec7f481553330a21880c54e0005337d34e375d5b37d9105ee753a27",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0013.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681524049",
       "verified_by_github_digest": true
     },
     {
@@ -617,6 +672,7 @@
       "sha256": "ae3008fcd2573ba2edf821ca67188cb34685f96307b7473da4b678897fc02d4c",
       "github_digest": "sha256:ae3008fcd2573ba2edf821ca67188cb34685f96307b7473da4b678897fc02d4c",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0014.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681524728",
       "verified_by_github_digest": true
     },
     {
@@ -626,6 +682,7 @@
       "sha256": "cfad90c1193fae4e12622e0f13ce1b9692820dd427412671d42ee388fdb32ee7",
       "github_digest": "sha256:cfad90c1193fae4e12622e0f13ce1b9692820dd427412671d42ee388fdb32ee7",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0015.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681525120",
       "verified_by_github_digest": true
     },
     {
@@ -635,6 +692,7 @@
       "sha256": "8a0f2a32ad5581b1f4078aaa19e8b27636d10cb978f82653e6cbf3c8d3f470c4",
       "github_digest": "sha256:8a0f2a32ad5581b1f4078aaa19e8b27636d10cb978f82653e6cbf3c8d3f470c4",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0016.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681526153",
       "verified_by_github_digest": true
     },
     {
@@ -644,6 +702,7 @@
       "sha256": "530d5201366133a643b4e20ac8048d7c36bd3d030296887c94223987e24903a8",
       "github_digest": "sha256:530d5201366133a643b4e20ac8048d7c36bd3d030296887c94223987e24903a8",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0017.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681525867",
       "verified_by_github_digest": true
     },
     {
@@ -653,6 +712,7 @@
       "sha256": "d92b468de5951cd5e00fc8936ab55142bd3057ccf0438604cc20a4fe612a9714",
       "github_digest": "sha256:d92b468de5951cd5e00fc8936ab55142bd3057ccf0438604cc20a4fe612a9714",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0018.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681525520",
       "verified_by_github_digest": true
     },
     {
@@ -662,6 +722,7 @@
       "sha256": "73646424920d94736c852906332ec33256470e569ff37080a2aaf7342ec52bf4",
       "github_digest": "sha256:73646424920d94736c852906332ec33256470e569ff37080a2aaf7342ec52bf4",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0019.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681526440",
       "verified_by_github_digest": true
     },
     {
@@ -671,6 +732,7 @@
       "sha256": "849ef104db7a0d79257b0aeec46dfb1bf4682e632ca58aa9a0b549d67b990dfa",
       "github_digest": "sha256:849ef104db7a0d79257b0aeec46dfb1bf4682e632ca58aa9a0b549d67b990dfa",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0020.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681527192",
       "verified_by_github_digest": true
     },
     {
@@ -680,6 +742,7 @@
       "sha256": "ceac8eca5226b3aec748390b65a627f459059bee4040e619a3bc98918ab5fced",
       "github_digest": "sha256:ceac8eca5226b3aec748390b65a627f459059bee4040e619a3bc98918ab5fced",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0021.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681572124",
       "verified_by_github_digest": true
     },
     {
@@ -689,6 +752,7 @@
       "sha256": "f88a3a348d7429f0b4543e7c7dfd280181517f02cf3ca0a4d55d7fa33a413a37",
       "github_digest": "sha256:f88a3a348d7429f0b4543e7c7dfd280181517f02cf3ca0a4d55d7fa33a413a37",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0022.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681573345",
       "verified_by_github_digest": true
     },
     {
@@ -698,6 +762,7 @@
       "sha256": "499aba7c6f4c54c6e19f3777d5d3d472052dba871e583b4f9187a06f228264e3",
       "github_digest": "sha256:499aba7c6f4c54c6e19f3777d5d3d472052dba871e583b4f9187a06f228264e3",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0023.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681574402",
       "verified_by_github_digest": true
     },
     {
@@ -707,6 +772,7 @@
       "sha256": "47b256c26ac15070574f8ef98da19b53ea9191c708c49adedea44f4f417644c6",
       "github_digest": "sha256:47b256c26ac15070574f8ef98da19b53ea9191c708c49adedea44f4f417644c6",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0024.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681574953",
       "verified_by_github_digest": true
     },
     {
@@ -716,6 +782,7 @@
       "sha256": "419a8139a0535d85f30c118793014dbac1d860c17773a503f5275f96892b1238",
       "github_digest": "sha256:419a8139a0535d85f30c118793014dbac1d860c17773a503f5275f96892b1238",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0025.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681575633",
       "verified_by_github_digest": true
     },
     {
@@ -725,6 +792,7 @@
       "sha256": "550c0c665bb559587bb8c5330fab1d3ac103c5ffbd796f265e1d56ca52137ad4",
       "github_digest": "sha256:550c0c665bb559587bb8c5330fab1d3ac103c5ffbd796f265e1d56ca52137ad4",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0026.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681577179",
       "verified_by_github_digest": true
     },
     {
@@ -734,6 +802,7 @@
       "sha256": "4c439d79d9d872a627910d4cac7c1cf37fafec04de85407a886cfaa42c18c064",
       "github_digest": "sha256:4c439d79d9d872a627910d4cac7c1cf37fafec04de85407a886cfaa42c18c064",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0027.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681577917",
       "verified_by_github_digest": true
     },
     {
@@ -743,6 +812,7 @@
       "sha256": "16182a89daf377c9820b554a558f22f935ebd5adec8c66cfd1999920675554ff",
       "github_digest": "sha256:16182a89daf377c9820b554a558f22f935ebd5adec8c66cfd1999920675554ff",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0028.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681578163",
       "verified_by_github_digest": true
     },
     {
@@ -752,6 +822,7 @@
       "sha256": "c52a5e53a1a515e06b36d3cfbc4976cf91d60776bde343d4967216bbe82462d8",
       "github_digest": "sha256:c52a5e53a1a515e06b36d3cfbc4976cf91d60776bde343d4967216bbe82462d8",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0029.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681578629",
       "verified_by_github_digest": true
     },
     {
@@ -761,6 +832,7 @@
       "sha256": "d0efd1429e331cdb3e4cecd709f824efa1b9edf33fa0c932118d16f1d4baf363",
       "github_digest": "sha256:d0efd1429e331cdb3e4cecd709f824efa1b9edf33fa0c932118d16f1d4baf363",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0030.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681578390",
       "verified_by_github_digest": true
     },
     {
@@ -770,6 +842,7 @@
       "sha256": "581215dd1aab5e932225e4b8004236ef88f4bc0c08006b761633b5f422cc9a88",
       "github_digest": "sha256:581215dd1aab5e932225e4b8004236ef88f4bc0c08006b761633b5f422cc9a88",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0031.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681578920",
       "verified_by_github_digest": true
     },
     {
@@ -779,6 +852,7 @@
       "sha256": "480eae03e08a53fbe2eca231cce056c635e67168bc2ffcf8cf85ef2873c2288f",
       "github_digest": "sha256:480eae03e08a53fbe2eca231cce056c635e67168bc2ffcf8cf85ef2873c2288f",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0032.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681579134",
       "verified_by_github_digest": true
     },
     {
@@ -788,6 +862,7 @@
       "sha256": "99031b12b4f2634331cb79d1a51dd8ad84a8b869038823ee3f86d1393139b291",
       "github_digest": "sha256:99031b12b4f2634331cb79d1a51dd8ad84a8b869038823ee3f86d1393139b291",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0033.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681579803",
       "verified_by_github_digest": true
     },
     {
@@ -797,6 +872,7 @@
       "sha256": "b09e49433388beb1010a62b0bf33abca2407383e51078c4540d399c5b4e59022",
       "github_digest": "sha256:b09e49433388beb1010a62b0bf33abca2407383e51078c4540d399c5b4e59022",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0034.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681579523",
       "verified_by_github_digest": true
     },
     {
@@ -806,6 +882,7 @@
       "sha256": "6971175200b4d145ee68f38c2f74806aa4219d2a57468c073dbeb541328985c7",
       "github_digest": "sha256:6971175200b4d145ee68f38c2f74806aa4219d2a57468c073dbeb541328985c7",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0035.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681580067",
       "verified_by_github_digest": true
     },
     {
@@ -815,6 +892,7 @@
       "sha256": "e5ec3419b15054cfed6e5d9fa662ec95026e7e9c28d10358ca28ac2d29bc54a3",
       "github_digest": "sha256:e5ec3419b15054cfed6e5d9fa662ec95026e7e9c28d10358ca28ac2d29bc54a3",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0036.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681580771",
       "verified_by_github_digest": true
     },
     {
@@ -824,6 +902,7 @@
       "sha256": "185ac53ac57c9df703a93daae60aad897c79e095c37bf968f53a365d7d558604",
       "github_digest": "sha256:185ac53ac57c9df703a93daae60aad897c79e095c37bf968f53a365d7d558604",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0037.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681580355",
       "verified_by_github_digest": true
     },
     {
@@ -833,6 +912,7 @@
       "sha256": "4eef70c4d63ace42575c6e38cb94b2db032674dfa969b0846bd3d954b861cc52",
       "github_digest": "sha256:4eef70c4d63ace42575c6e38cb94b2db032674dfa969b0846bd3d954b861cc52",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0038.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681581705",
       "verified_by_github_digest": true
     },
     {
@@ -842,6 +922,7 @@
       "sha256": "5449a4f1eee0f50333283c1fceb552343cc60b5dc35811062ac17cc47623aa01",
       "github_digest": "sha256:5449a4f1eee0f50333283c1fceb552343cc60b5dc35811062ac17cc47623aa01",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0039.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681581971",
       "verified_by_github_digest": true
     },
     {
@@ -851,6 +932,7 @@
       "sha256": "86332619816cc0413dc7cc7271eb0c8f5b962f0d3ab54e00f3879c03ce31383f",
       "github_digest": "sha256:86332619816cc0413dc7cc7271eb0c8f5b962f0d3ab54e00f3879c03ce31383f",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage2_development_0040.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681581026",
       "verified_by_github_digest": true
     },
     {
@@ -860,6 +942,7 @@
       "sha256": "690ac60dfbf7ab2a810632f770a059e3e815c66b9cc82764fceb74778034c55b",
       "github_digest": "sha256:690ac60dfbf7ab2a810632f770a059e3e815c66b9cc82764fceb74778034c55b",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0001.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681581447",
       "verified_by_github_digest": true
     },
     {
@@ -869,6 +952,7 @@
       "sha256": "213e09ca841b8d39bd35f1f89edd53ee8bf7fd6526a17eae7683c9e22634c55e",
       "github_digest": "sha256:213e09ca841b8d39bd35f1f89edd53ee8bf7fd6526a17eae7683c9e22634c55e",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0002.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681582521",
       "verified_by_github_digest": true
     },
     {
@@ -878,6 +962,7 @@
       "sha256": "df2731509df7bf372c6687623db11debce97720c0c72b934207c415a9da3aa15",
       "github_digest": "sha256:df2731509df7bf372c6687623db11debce97720c0c72b934207c415a9da3aa15",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0003.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681582288",
       "verified_by_github_digest": true
     },
     {
@@ -887,6 +972,7 @@
       "sha256": "81583f3e0d0636d0ff53f13f3089b78a754d4bd2e06599e01b4ee2e8cea02721",
       "github_digest": "sha256:81583f3e0d0636d0ff53f13f3089b78a754d4bd2e06599e01b4ee2e8cea02721",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0004.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681583416",
       "verified_by_github_digest": true
     },
     {
@@ -896,6 +982,7 @@
       "sha256": "68c32580788c5f508a7c5749e612e6bb5ad01338c4d6acd724dc574dd3b29af2",
       "github_digest": "sha256:68c32580788c5f508a7c5749e612e6bb5ad01338c4d6acd724dc574dd3b29af2",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0005.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681584142",
       "verified_by_github_digest": true
     },
     {
@@ -905,6 +992,7 @@
       "sha256": "ff4358c5e95fd04bd08093f06dcf1e0bb4403065151f2efd280462017e597007",
       "github_digest": "sha256:ff4358c5e95fd04bd08093f06dcf1e0bb4403065151f2efd280462017e597007",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0006.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681582722",
       "verified_by_github_digest": true
     },
     {
@@ -914,6 +1002,7 @@
       "sha256": "17dfd217760daf284110caf99632a650f53f11f9b1be446591ce42e6101c4fdd",
       "github_digest": "sha256:17dfd217760daf284110caf99632a650f53f11f9b1be446591ce42e6101c4fdd",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0007.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681583031",
       "verified_by_github_digest": true
     },
     {
@@ -923,6 +1012,7 @@
       "sha256": "12bcc637db5eca06a50b9a5387baaf10d04bbc2dab04c2a9a58ccde05b307e5b",
       "github_digest": "sha256:12bcc637db5eca06a50b9a5387baaf10d04bbc2dab04c2a9a58ccde05b307e5b",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0008.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681583841",
       "verified_by_github_digest": true
     },
     {
@@ -932,6 +1022,7 @@
       "sha256": "cc4a5c20114ef0ac7fbf5800cd7885cdb4c98728036be8820c254e61e6d4c7c1",
       "github_digest": "sha256:cc4a5c20114ef0ac7fbf5800cd7885cdb4c98728036be8820c254e61e6d4c7c1",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0009.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681584433",
       "verified_by_github_digest": true
     },
     {
@@ -941,6 +1032,7 @@
       "sha256": "aaf2cfd5011d71d3faadacca0eb99f7ba5c1d0d262ffa6cae51c38325e9bf0de",
       "github_digest": "sha256:aaf2cfd5011d71d3faadacca0eb99f7ba5c1d0d262ffa6cae51c38325e9bf0de",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0010.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681585604",
       "verified_by_github_digest": true
     },
     {
@@ -950,6 +1042,7 @@
       "sha256": "42528d34312f2d8d2f27e3237aea586256a1be55560505d213f12ad46ebc2ebd",
       "github_digest": "sha256:42528d34312f2d8d2f27e3237aea586256a1be55560505d213f12ad46ebc2ebd",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0011.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681584754",
       "verified_by_github_digest": true
     },
     {
@@ -959,6 +1052,7 @@
       "sha256": "8531e284d222257eba096c17146fecf034cb8cd8fdb5e4c3d03577b3e3a062cf",
       "github_digest": "sha256:8531e284d222257eba096c17146fecf034cb8cd8fdb5e4c3d03577b3e3a062cf",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0012.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681585282",
       "verified_by_github_digest": true
     },
     {
@@ -968,6 +1062,7 @@
       "sha256": "b5443a36182eda8dd1d576612e267813f8ed2a706521465b5927c55be665f462",
       "github_digest": "sha256:b5443a36182eda8dd1d576612e267813f8ed2a706521465b5927c55be665f462",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0013.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681585043",
       "verified_by_github_digest": true
     },
     {
@@ -977,6 +1072,7 @@
       "sha256": "3bffb22e57bc1ac3527588223cd7e89f6c8e1fb4bbd4b98b9b916722c1999d34",
       "github_digest": "sha256:3bffb22e57bc1ac3527588223cd7e89f6c8e1fb4bbd4b98b9b916722c1999d34",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0014.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681585855",
       "verified_by_github_digest": true
     },
     {
@@ -986,6 +1082,7 @@
       "sha256": "4a7cb2ed9ec6e5077c0ec56eed08c4f393cbf1fe1453b38541e4d941fa8f2edb",
       "github_digest": "sha256:4a7cb2ed9ec6e5077c0ec56eed08c4f393cbf1fe1453b38541e4d941fa8f2edb",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0015.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681586245",
       "verified_by_github_digest": true
     },
     {
@@ -995,6 +1092,7 @@
       "sha256": "9cb150c2b2539e08ef957665f90127d445ef4bd16fa8309a81f967cd5bd67654",
       "github_digest": "sha256:9cb150c2b2539e08ef957665f90127d445ef4bd16fa8309a81f967cd5bd67654",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0016.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681586643",
       "verified_by_github_digest": true
     },
     {
@@ -1004,6 +1102,7 @@
       "sha256": "ccf4c6842352ba9c715dbcc53125b5402d97d4166438c8bec672f0b0ddfbde99",
       "github_digest": "sha256:ccf4c6842352ba9c715dbcc53125b5402d97d4166438c8bec672f0b0ddfbde99",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0017.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681607113",
       "verified_by_github_digest": true
     },
     {
@@ -1013,6 +1112,7 @@
       "sha256": "8cc97ce09bf68887d6b6e9f121dadbacda30141e50edd2b71e7db8898915438c",
       "github_digest": "sha256:8cc97ce09bf68887d6b6e9f121dadbacda30141e50edd2b71e7db8898915438c",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0018.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681607338",
       "verified_by_github_digest": true
     },
     {
@@ -1022,6 +1122,7 @@
       "sha256": "89d2397d3ed2afae90fd348f53fd5b2453a76885c901179a6a151eb1d029aea3",
       "github_digest": "sha256:89d2397d3ed2afae90fd348f53fd5b2453a76885c901179a6a151eb1d029aea3",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0019.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681607603",
       "verified_by_github_digest": true
     },
     {
@@ -1031,6 +1132,7 @@
       "sha256": "5cdb72b5d150940731f9118758b029b14e9d0944ce7c41780bfda300d8577c6b",
       "github_digest": "sha256:5cdb72b5d150940731f9118758b029b14e9d0944ce7c41780bfda300d8577c6b",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0020.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681607792",
       "verified_by_github_digest": true
     },
     {
@@ -1040,6 +1142,7 @@
       "sha256": "1f7a4488e47cb9b03ee9a82851c3473259f56234308beb74144e6fd8f9c390fd",
       "github_digest": "sha256:1f7a4488e47cb9b03ee9a82851c3473259f56234308beb74144e6fd8f9c390fd",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0021.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681608583",
       "verified_by_github_digest": true
     },
     {
@@ -1049,6 +1152,7 @@
       "sha256": "1d2a050028dee8ec6ed208f2fc0937d76805fa350afd179b751b62d6dc1b86a0",
       "github_digest": "sha256:1d2a050028dee8ec6ed208f2fc0937d76805fa350afd179b751b62d6dc1b86a0",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0022.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681608061",
       "verified_by_github_digest": true
     },
     {
@@ -1058,6 +1162,7 @@
       "sha256": "9c2d1149f482398fc14b1a4283f58c0cb9c665528db63a5f0251c9cade029f54",
       "github_digest": "sha256:9c2d1149f482398fc14b1a4283f58c0cb9c665528db63a5f0251c9cade029f54",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0023.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681609454",
       "verified_by_github_digest": true
     },
     {
@@ -1067,6 +1172,7 @@
       "sha256": "23b4924cf03db4b32881f8aebdb3a72007ab089d41050b3d0efb776c9f3d1f1c",
       "github_digest": "sha256:23b4924cf03db4b32881f8aebdb3a72007ab089d41050b3d0efb776c9f3d1f1c",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0024.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681609693",
       "verified_by_github_digest": true
     },
     {
@@ -1076,6 +1182,7 @@
       "sha256": "5f85254f2053d900fb0d5c16847fb113ab6b7909d90d09734e72bb0c23ece65e",
       "github_digest": "sha256:5f85254f2053d900fb0d5c16847fb113ab6b7909d90d09734e72bb0c23ece65e",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0025.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681609960",
       "verified_by_github_digest": true
     },
     {
@@ -1085,6 +1192,7 @@
       "sha256": "1cb2a00b33b8bc635860eb1476b7f9a4d2104d03759aacc73f73f5b5ebba95f6",
       "github_digest": "sha256:1cb2a00b33b8bc635860eb1476b7f9a4d2104d03759aacc73f73f5b5ebba95f6",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0026.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681610415",
       "verified_by_github_digest": true
     },
     {
@@ -1094,6 +1202,7 @@
       "sha256": "a3180ede498cd9b7ac7fe27e933db318e780750cf816f004f7f4d14a34e9ffd1",
       "github_digest": "sha256:a3180ede498cd9b7ac7fe27e933db318e780750cf816f004f7f4d14a34e9ffd1",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0027.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681611058",
       "verified_by_github_digest": true
     },
     {
@@ -1103,6 +1212,7 @@
       "sha256": "9cbc6fd2bf7f036da2c20136fe4346e9a211989eb374b68826f159e7aaab70e4",
       "github_digest": "sha256:9cbc6fd2bf7f036da2c20136fe4346e9a211989eb374b68826f159e7aaab70e4",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0028.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681610785",
       "verified_by_github_digest": true
     },
     {
@@ -1112,6 +1222,7 @@
       "sha256": "c1895a899a451cd06e043122b1e3d4c257e9f0b102f9dc6fb473cc6c6153c7ff",
       "github_digest": "sha256:c1895a899a451cd06e043122b1e3d4c257e9f0b102f9dc6fb473cc6c6153c7ff",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0029.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681611335",
       "verified_by_github_digest": true
     },
     {
@@ -1121,6 +1232,7 @@
       "sha256": "74b2ffae2a200d7b116b8c484688000e72683acdeb2680d19616f84f1ec1a1f6",
       "github_digest": "sha256:74b2ffae2a200d7b116b8c484688000e72683acdeb2680d19616f84f1ec1a1f6",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0030.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681611563",
       "verified_by_github_digest": true
     },
     {
@@ -1130,6 +1242,7 @@
       "sha256": "38c7aa33194121e55f04e37d915cc97be5617273fdec50127018675f3b82ef75",
       "github_digest": "sha256:38c7aa33194121e55f04e37d915cc97be5617273fdec50127018675f3b82ef75",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0031.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681611978",
       "verified_by_github_digest": true
     },
     {
@@ -1139,6 +1252,7 @@
       "sha256": "2e576fb9cfd02465863512d5b0b8dca2252d08bb02c5deb45975047cf1a4dd02",
       "github_digest": "sha256:2e576fb9cfd02465863512d5b0b8dca2252d08bb02c5deb45975047cf1a4dd02",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0032.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681612292",
       "verified_by_github_digest": true
     },
     {
@@ -1148,6 +1262,7 @@
       "sha256": "ef55a39becfe7f79ad6062530a117e44154539a9e7001f2adbe07b1379ab846d",
       "github_digest": "sha256:ef55a39becfe7f79ad6062530a117e44154539a9e7001f2adbe07b1379ab846d",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0033.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681612612",
       "verified_by_github_digest": true
     },
     {
@@ -1157,6 +1272,7 @@
       "sha256": "20a062e1674ae5d069e817104eb4f6088fb0b9806df1b1c68c3f0ba58105e6e8",
       "github_digest": "sha256:20a062e1674ae5d069e817104eb4f6088fb0b9806df1b1c68c3f0ba58105e6e8",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0034.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681612983",
       "verified_by_github_digest": true
     },
     {
@@ -1166,6 +1282,7 @@
       "sha256": "e3d427e22e11a8921c2c5fc3d668132d19341949668e4922048cd00d6949ece5",
       "github_digest": "sha256:e3d427e22e11a8921c2c5fc3d668132d19341949668e4922048cd00d6949ece5",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0035.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681613238",
       "verified_by_github_digest": true
     },
     {
@@ -1175,6 +1292,7 @@
       "sha256": "10fc6316b9e41e500e1af1aa946748556c784fa29ecdc63aa9b219adedac9b8d",
       "github_digest": "sha256:10fc6316b9e41e500e1af1aa946748556c784fa29ecdc63aa9b219adedac9b8d",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0036.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681613687",
       "verified_by_github_digest": true
     },
     {
@@ -1184,6 +1302,7 @@
       "sha256": "f05214a9f550da25a6ad54f8091e08b345d6180d9aba48b4c99e137dc9519798",
       "github_digest": "sha256:f05214a9f550da25a6ad54f8091e08b345d6180d9aba48b4c99e137dc9519798",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0037.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681614062",
       "verified_by_github_digest": true
     },
     {
@@ -1193,6 +1312,7 @@
       "sha256": "e08d9f9dd149cc1012d9828d8c8a18896f7e848bca4a41a61fad16125ae8f31a",
       "github_digest": "sha256:e08d9f9dd149cc1012d9828d8c8a18896f7e848bca4a41a61fad16125ae8f31a",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0038.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681614441",
       "verified_by_github_digest": true
     },
     {
@@ -1202,6 +1322,7 @@
       "sha256": "b2c285736d36e42158ede8ed9b380d4d6b27c9d94acad9635784dba339622f5a",
       "github_digest": "sha256:b2c285736d36e42158ede8ed9b380d4d6b27c9d94acad9635784dba339622f5a",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0039.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681614857",
       "verified_by_github_digest": true
     },
     {
@@ -1211,6 +1332,7 @@
       "sha256": "a78cabd822dab1491e57a920ff681b22a8215a62f4503fe8c4b81f440a072a8d",
       "github_digest": "sha256:a78cabd822dab1491e57a920ff681b22a8215a62f4503fe8c4b81f440a072a8d",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0040.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681615572",
       "verified_by_github_digest": true
     },
     {
@@ -1220,6 +1342,7 @@
       "sha256": "35ddc03ba282c7ae841112f5372b04ebceafb8956a87696124bbbc92091325d4",
       "github_digest": "sha256:35ddc03ba282c7ae841112f5372b04ebceafb8956a87696124bbbc92091325d4",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0041.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681615228",
       "verified_by_github_digest": true
     },
     {
@@ -1229,6 +1352,7 @@
       "sha256": "43a2bede8917d7fc00f41ed31e4dbf85cad8d112418eb36c7f4f47f611757a0b",
       "github_digest": "sha256:43a2bede8917d7fc00f41ed31e4dbf85cad8d112418eb36c7f4f47f611757a0b",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0042.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681615911",
       "verified_by_github_digest": true
     },
     {
@@ -1238,6 +1362,7 @@
       "sha256": "9ad6bdf7d39c5ed6b7cab0f5d42c13a7e2e5b077a7096b1bf140b8e122def066",
       "github_digest": "sha256:9ad6bdf7d39c5ed6b7cab0f5d42c13a7e2e5b077a7096b1bf140b8e122def066",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0043.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681616174",
       "verified_by_github_digest": true
     },
     {
@@ -1247,6 +1372,7 @@
       "sha256": "bd1b9c2be7b6e4a22af7706fd6472548e954cb12ca5397f6ebdf3a64c2049129",
       "github_digest": "sha256:bd1b9c2be7b6e4a22af7706fd6472548e954cb12ca5397f6ebdf3a64c2049129",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0044.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681616536",
       "verified_by_github_digest": true
     },
     {
@@ -1256,6 +1382,7 @@
       "sha256": "a5ea613cf7d9d10add1af28c343d01513ac2c3f2004712ad4cb301e2728ad28b",
       "github_digest": "sha256:a5ea613cf7d9d10add1af28c343d01513ac2c3f2004712ad4cb301e2728ad28b",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0045.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681617130",
       "verified_by_github_digest": true
     },
     {
@@ -1265,6 +1392,7 @@
       "sha256": "9c2f2c7819e161f01e329922a9a78110293a3e2e22a1a24fb7b60d87a6494146",
       "github_digest": "sha256:9c2f2c7819e161f01e329922a9a78110293a3e2e22a1a24fb7b60d87a6494146",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0046.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681617866",
       "verified_by_github_digest": true
     },
     {
@@ -1274,6 +1402,7 @@
       "sha256": "4e7a46a3b16fbc14fc38e8a7801cf4ec4211312d45af431e7580c840817db5c1",
       "github_digest": "sha256:4e7a46a3b16fbc14fc38e8a7801cf4ec4211312d45af431e7580c840817db5c1",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0047.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681617493",
       "verified_by_github_digest": true
     },
     {
@@ -1283,6 +1412,7 @@
       "sha256": "68fe0c355522909858500be70d656756aca7879cb26676bbc1f9863320e87bca",
       "github_digest": "sha256:68fe0c355522909858500be70d656756aca7879cb26676bbc1f9863320e87bca",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0048.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681618156",
       "verified_by_github_digest": true
     },
     {
@@ -1292,6 +1422,7 @@
       "sha256": "f0cb1c908be4e57e43d18ecad06e6b4bdedc58b10a92fddcb2c649f635449430",
       "github_digest": "sha256:f0cb1c908be4e57e43d18ecad06e6b4bdedc58b10a92fddcb2c649f635449430",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0049.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681618370",
       "verified_by_github_digest": true
     },
     {
@@ -1301,6 +1432,7 @@
       "sha256": "b150dadc110dbb5655431d89aefeca3cf9f89b094190ea0f6f124a3adeaf23b1",
       "github_digest": "sha256:b150dadc110dbb5655431d89aefeca3cf9f89b094190ea0f6f124a3adeaf23b1",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0050.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681618654",
       "verified_by_github_digest": true
     },
     {
@@ -1310,6 +1442,7 @@
       "sha256": "d89f46f67cac17afe36f306b181b3b378fd1032f3f6a69c7b8e1a439cfa4868c",
       "github_digest": "sha256:d89f46f67cac17afe36f306b181b3b378fd1032f3f6a69c7b8e1a439cfa4868c",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0051.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681619015",
       "verified_by_github_digest": true
     },
     {
@@ -1319,6 +1452,7 @@
       "sha256": "7bfa84f6754dc9c315e18b8cffce83b11342a6107d12f4275b7d9639c4be329f",
       "github_digest": "sha256:7bfa84f6754dc9c315e18b8cffce83b11342a6107d12f4275b7d9639c4be329f",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0052.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681619362",
       "verified_by_github_digest": true
     },
     {
@@ -1328,6 +1462,7 @@
       "sha256": "5605476d55a5b1412f83ef79b9e2ba6e90b692088c5ca833242e92df8196f9ac",
       "github_digest": "sha256:5605476d55a5b1412f83ef79b9e2ba6e90b692088c5ca833242e92df8196f9ac",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0053.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681619675",
       "verified_by_github_digest": true
     },
     {
@@ -1337,6 +1472,7 @@
       "sha256": "298670bb0b3895bc1a5f11c9ead49b849826cd2e0b228b524a6213302765fb9f",
       "github_digest": "sha256:298670bb0b3895bc1a5f11c9ead49b849826cd2e0b228b524a6213302765fb9f",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0054.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681620167",
       "verified_by_github_digest": true
     },
     {
@@ -1346,6 +1482,7 @@
       "sha256": "201da3ba3106735416ed4efc15a7f57aa906b022df661ff0004e10cf1dfde34e",
       "github_digest": "sha256:201da3ba3106735416ed4efc15a7f57aa906b022df661ff0004e10cf1dfde34e",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0055.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681620514",
       "verified_by_github_digest": true
     },
     {
@@ -1355,6 +1492,7 @@
       "sha256": "4fe595823b3170f7038cec11a284be284704c8abd8be376238ef9ef1355f70d7",
       "github_digest": "sha256:4fe595823b3170f7038cec11a284be284704c8abd8be376238ef9ef1355f70d7",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0056.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681620798",
       "verified_by_github_digest": true
     },
     {
@@ -1364,6 +1502,7 @@
       "sha256": "bcd1c2cf698217234257317d2ef79322a34857eaaae62ce5e87c0647aace9017",
       "github_digest": "sha256:bcd1c2cf698217234257317d2ef79322a34857eaaae62ce5e87c0647aace9017",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0057.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681621121",
       "verified_by_github_digest": true
     },
     {
@@ -1373,6 +1512,7 @@
       "sha256": "6d281dd481da179e13413184efb1bf228127f10de0b86daeefb9b07a63bc2957",
       "github_digest": "sha256:6d281dd481da179e13413184efb1bf228127f10de0b86daeefb9b07a63bc2957",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0058.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681621422",
       "verified_by_github_digest": true
     },
     {
@@ -1382,6 +1522,7 @@
       "sha256": "3498069af5d0466f9e94a8943cc0a1ef653312f06ab96dfd10920fb8032cd494",
       "github_digest": "sha256:3498069af5d0466f9e94a8943cc0a1ef653312f06ab96dfd10920fb8032cd494",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0059.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681621654",
       "verified_by_github_digest": true
     },
     {
@@ -1391,6 +1532,7 @@
       "sha256": "616a0cf2b103c78bc20bd83ed4f243654569b1791c8f52b8e4a1bcd25d11ed28",
       "github_digest": "sha256:616a0cf2b103c78bc20bd83ed4f243654569b1791c8f52b8e4a1bcd25d11ed28",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0060.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681621857",
       "verified_by_github_digest": true
     },
     {
@@ -1400,6 +1542,7 @@
       "sha256": "a61177fb73f1efd5e3c6a5079539e406c11626822ddb70ed5c8ac61945ff0078",
       "github_digest": "sha256:a61177fb73f1efd5e3c6a5079539e406c11626822ddb70ed5c8ac61945ff0078",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0061.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681622087",
       "verified_by_github_digest": true
     },
     {
@@ -1409,6 +1552,7 @@
       "sha256": "cad750d40eb8c0cdc7b02414785ed695911f6812a3aa1d2f96fe11b026bbe4a7",
       "github_digest": "sha256:cad750d40eb8c0cdc7b02414785ed695911f6812a3aa1d2f96fe11b026bbe4a7",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0062.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681622303",
       "verified_by_github_digest": true
     },
     {
@@ -1418,6 +1562,7 @@
       "sha256": "7f0b1b7a56058ae858ce35d32a97498263eedb9d43da82b028e8ff4bc1320964",
       "github_digest": "sha256:7f0b1b7a56058ae858ce35d32a97498263eedb9d43da82b028e8ff4bc1320964",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0063.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681622886",
       "verified_by_github_digest": true
     },
     {
@@ -1427,6 +1572,7 @@
       "sha256": "a904c1a99ec999d5cefd38282a0c5971601903b0235a728801c07d8e7ad76049",
       "github_digest": "sha256:a904c1a99ec999d5cefd38282a0c5971601903b0235a728801c07d8e7ad76049",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0064.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681622620",
       "verified_by_github_digest": true
     },
     {
@@ -1436,6 +1582,7 @@
       "sha256": "b3eb24ace7d9326a86bd644788f2e30062a95c7ed0b7843bf2563107131ac625",
       "github_digest": "sha256:b3eb24ace7d9326a86bd644788f2e30062a95c7ed0b7843bf2563107131ac625",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0065.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681623419",
       "verified_by_github_digest": true
     },
     {
@@ -1445,6 +1592,7 @@
       "sha256": "26ce072c1358c8c30ac0ce0f2bbd5f26f6a3ece0d1b278f3fe42dca2740fdbfb",
       "github_digest": "sha256:26ce072c1358c8c30ac0ce0f2bbd5f26f6a3ece0d1b278f3fe42dca2740fdbfb",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0066.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681623788",
       "verified_by_github_digest": true
     },
     {
@@ -1454,6 +1602,7 @@
       "sha256": "4fb047f281074f73c07558cea34778bdf2594a9e1d2a5fd16c8b8c2b8ae850b4",
       "github_digest": "sha256:4fb047f281074f73c07558cea34778bdf2594a9e1d2a5fd16c8b8c2b8ae850b4",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0067.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681624123",
       "verified_by_github_digest": true
     },
     {
@@ -1463,6 +1612,7 @@
       "sha256": "2219b8425430ac693534b226d207678ce06110fa6b9b0776e42f72a304582e87",
       "github_digest": "sha256:2219b8425430ac693534b226d207678ce06110fa6b9b0776e42f72a304582e87",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0068.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681624380",
       "verified_by_github_digest": true
     },
     {
@@ -1472,6 +1622,7 @@
       "sha256": "09a9eb987a208648d7984fcdf96ed89eb3e4ac90ae59421f6a3805fb358fd793",
       "github_digest": "sha256:09a9eb987a208648d7984fcdf96ed89eb3e4ac90ae59421f6a3805fb358fd793",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0069.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681624672",
       "verified_by_github_digest": true
     },
     {
@@ -1481,6 +1632,7 @@
       "sha256": "3fb2fe66b5325961bb56a85c923f9b7925cd08977dbd8c250145870cf2bb82e5",
       "github_digest": "sha256:3fb2fe66b5325961bb56a85c923f9b7925cd08977dbd8c250145870cf2bb82e5",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0070.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681624961",
       "verified_by_github_digest": true
     },
     {
@@ -1490,6 +1642,7 @@
       "sha256": "b95cc5f3e455e4365d4bb19bd12e2a936f170bcfe7b6ab3a41a0a8cefd664ab2",
       "github_digest": "sha256:b95cc5f3e455e4365d4bb19bd12e2a936f170bcfe7b6ab3a41a0a8cefd664ab2",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0071.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681625260",
       "verified_by_github_digest": true
     },
     {
@@ -1499,6 +1652,7 @@
       "sha256": "c88c0fa555d0a25f2ff6f41d2b92b56013e94aa2d03cfb31a37131e6d49a8d15",
       "github_digest": "sha256:c88c0fa555d0a25f2ff6f41d2b92b56013e94aa2d03cfb31a37131e6d49a8d15",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0072.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681625614",
       "verified_by_github_digest": true
     },
     {
@@ -1508,6 +1662,7 @@
       "sha256": "800ddfe8053b33c7b5ced810dff5e06c72445f845c0d116e75c1ad47faabf616",
       "github_digest": "sha256:800ddfe8053b33c7b5ced810dff5e06c72445f845c0d116e75c1ad47faabf616",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0073.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681626230",
       "verified_by_github_digest": true
     },
     {
@@ -1517,6 +1672,7 @@
       "sha256": "061ec6f17dddbe0275b9c5625c1ff924988d0d53106edd6914fb43ba835fc9a6",
       "github_digest": "sha256:061ec6f17dddbe0275b9c5625c1ff924988d0d53106edd6914fb43ba835fc9a6",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0074.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681625929",
       "verified_by_github_digest": true
     },
     {
@@ -1526,6 +1682,7 @@
       "sha256": "686446e7599c00b19512d94b3cc51dce83e5fafb5867ef5eb7f70d4bdba410c1",
       "github_digest": "sha256:686446e7599c00b19512d94b3cc51dce83e5fafb5867ef5eb7f70d4bdba410c1",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0075.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681626532",
       "verified_by_github_digest": true
     },
     {
@@ -1535,6 +1692,7 @@
       "sha256": "64f14e9b1f8159a0b98a3e59ab06835f20f30df21bca2b6e2145af729201fb89",
       "github_digest": "sha256:64f14e9b1f8159a0b98a3e59ab06835f20f30df21bca2b6e2145af729201fb89",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0076.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681633995",
       "verified_by_github_digest": true
     },
     {
@@ -1544,6 +1702,7 @@
       "sha256": "ac80c7c8807bf539c0c468e1a75b384992e75c15eb54497f3364099fe2333327",
       "github_digest": "sha256:ac80c7c8807bf539c0c468e1a75b384992e75c15eb54497f3364099fe2333327",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0077.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681627099",
       "verified_by_github_digest": true
     },
     {
@@ -1553,6 +1712,7 @@
       "sha256": "453068cc76b18812fd9bbe67aeff23b2562074cbc2182af284500aaf1a26f796",
       "github_digest": "sha256:453068cc76b18812fd9bbe67aeff23b2562074cbc2182af284500aaf1a26f796",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0078.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681627649",
       "verified_by_github_digest": true
     },
     {
@@ -1562,6 +1722,7 @@
       "sha256": "a69a1c2d7da23df320bc3eec4003e136e6c890dcdd80df5695c3f8dc98cf9194",
       "github_digest": "sha256:a69a1c2d7da23df320bc3eec4003e136e6c890dcdd80df5695c3f8dc98cf9194",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0079.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681627392",
       "verified_by_github_digest": true
     },
     {
@@ -1571,6 +1732,7 @@
       "sha256": "65aa2ad2ec6a8be300f44f495f44b35a54343009e37e24b3e449dbe3c0ba4548",
       "github_digest": "sha256:65aa2ad2ec6a8be300f44f495f44b35a54343009e37e24b3e449dbe3c0ba4548",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_train_stage3_development_0080.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681627957",
       "verified_by_github_digest": true
     },
     {
@@ -1580,6 +1742,7 @@
       "sha256": "b5e5fa7443f01a76e75d2ddff6f04061e2bbfead9e71ff3a07512be2a8b783d8",
       "github_digest": "sha256:b5e5fa7443f01a76e75d2ddff6f04061e2bbfead9e71ff3a07512be2a8b783d8",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0001.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681634246",
       "verified_by_github_digest": true
     },
     {
@@ -1589,6 +1752,7 @@
       "sha256": "440521c695373cf14222ece461e85430352aee391e23d710b5068db378c1789f",
       "github_digest": "sha256:440521c695373cf14222ece461e85430352aee391e23d710b5068db378c1789f",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0002.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681634453",
       "verified_by_github_digest": true
     },
     {
@@ -1598,6 +1762,7 @@
       "sha256": "2e333b754ca6d279ece58e43d824c7a89c5842c3ae06cee21926d8659952c8c8",
       "github_digest": "sha256:2e333b754ca6d279ece58e43d824c7a89c5842c3ae06cee21926d8659952c8c8",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0003.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681628211",
       "verified_by_github_digest": true
     },
     {
@@ -1607,6 +1772,7 @@
       "sha256": "8e00dd2ca40b5ebcb7431c0b82ee63c1c55da14ed8c4a503a25f85a0f1fc2b84",
       "github_digest": "sha256:8e00dd2ca40b5ebcb7431c0b82ee63c1c55da14ed8c4a503a25f85a0f1fc2b84",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0004.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681628520",
       "verified_by_github_digest": true
     },
     {
@@ -1616,6 +1782,7 @@
       "sha256": "4af478a1e88e4716f3a8dbb5f721ccec830154d7323e7d71b13bda214a531ac1",
       "github_digest": "sha256:4af478a1e88e4716f3a8dbb5f721ccec830154d7323e7d71b13bda214a531ac1",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0005.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681628817",
       "verified_by_github_digest": true
     },
     {
@@ -1625,6 +1792,7 @@
       "sha256": "6a3b46ef4718003bf5b86c0b1e5056a48d45b7c62d25c3b64f5ed184525aa19c",
       "github_digest": "sha256:6a3b46ef4718003bf5b86c0b1e5056a48d45b7c62d25c3b64f5ed184525aa19c",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0006.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681629456",
       "verified_by_github_digest": true
     },
     {
@@ -1634,6 +1802,7 @@
       "sha256": "cbb7197fd6c8bed47dfc6b0b0247e6d93fd5d18ef33954b59ad12447e036e885",
       "github_digest": "sha256:cbb7197fd6c8bed47dfc6b0b0247e6d93fd5d18ef33954b59ad12447e036e885",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0007.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681629892",
       "verified_by_github_digest": true
     },
     {
@@ -1643,6 +1812,7 @@
       "sha256": "6907a6a63c75643d6d5fc754eca1b276ecf25c0f736867cb389cf105aee20294",
       "github_digest": "sha256:6907a6a63c75643d6d5fc754eca1b276ecf25c0f736867cb389cf105aee20294",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0008.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681630390",
       "verified_by_github_digest": true
     },
     {
@@ -1652,6 +1822,7 @@
       "sha256": "8b8c8f16b9199610032adf2422b9e33f65e1c8c3805f6f91c1aa3c6227c667d8",
       "github_digest": "sha256:8b8c8f16b9199610032adf2422b9e33f65e1c8c3805f6f91c1aa3c6227c667d8",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0009.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681630660",
       "verified_by_github_digest": true
     },
     {
@@ -1661,6 +1832,7 @@
       "sha256": "e40a7bce8e027b69f79cdd318868458c2267276b44949b9e1b0f74f7a437410a",
       "github_digest": "sha256:e40a7bce8e027b69f79cdd318868458c2267276b44949b9e1b0f74f7a437410a",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0010.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681630989",
       "verified_by_github_digest": true
     },
     {
@@ -1670,6 +1842,7 @@
       "sha256": "9ed217b59d65ade4f0f4234fc7acdd26e5a2e8f795c26bd6ae3da450f64b271f",
       "github_digest": "sha256:9ed217b59d65ade4f0f4234fc7acdd26e5a2e8f795c26bd6ae3da450f64b271f",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0011.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681631219",
       "verified_by_github_digest": true
     },
     {
@@ -1679,6 +1852,7 @@
       "sha256": "258db0cdff53b5a018a5d6d3313b861d3fae76b61bdbf8130c9ab09ddd8aa75d",
       "github_digest": "sha256:258db0cdff53b5a018a5d6d3313b861d3fae76b61bdbf8130c9ab09ddd8aa75d",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0012.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681631550",
       "verified_by_github_digest": true
     },
     {
@@ -1688,6 +1862,7 @@
       "sha256": "fbf20ba1c3c0fe21d447fade25270674556b4d67ca72b9da2345262a74a4fcc2",
       "github_digest": "sha256:fbf20ba1c3c0fe21d447fade25270674556b4d67ca72b9da2345262a74a4fcc2",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0013.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681631767",
       "verified_by_github_digest": true
     },
     {
@@ -1697,6 +1872,7 @@
       "sha256": "5466dde343669f87a02b6b75aec8ab1b5417bddcd2647fd494fa6efe2a3bef97",
       "github_digest": "sha256:5466dde343669f87a02b6b75aec8ab1b5417bddcd2647fd494fa6efe2a3bef97",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0014.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681632034",
       "verified_by_github_digest": true
     },
     {
@@ -1706,6 +1882,7 @@
       "sha256": "a8456f4bf10af3fa9bc710056adfeea4f68ea9c462b96317a8534ddbacab7237",
       "github_digest": "sha256:a8456f4bf10af3fa9bc710056adfeea4f68ea9c462b96317a8534ddbacab7237",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0015.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681632223",
       "verified_by_github_digest": true
     },
     {
@@ -1715,6 +1892,7 @@
       "sha256": "797e19a1a716a6732443ff41d2c0b6815a44976486c1b49f28fbbb5ffbe1bb15",
       "github_digest": "sha256:797e19a1a716a6732443ff41d2c0b6815a44976486c1b49f28fbbb5ffbe1bb15",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0016.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681632425",
       "verified_by_github_digest": true
     },
     {
@@ -1724,6 +1902,7 @@
       "sha256": "1bdaeeda7a2fd2eb6f645ebcaee7b10595c1b9b50677ebdda1428b3dee7ae191",
       "github_digest": "sha256:1bdaeeda7a2fd2eb6f645ebcaee7b10595c1b9b50677ebdda1428b3dee7ae191",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0017.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681632814",
       "verified_by_github_digest": true
     },
     {
@@ -1733,6 +1912,7 @@
       "sha256": "80f679c43064498e610ce463920633b65ed84d1a2b7cf8d5848729aee89f05cc",
       "github_digest": "sha256:80f679c43064498e610ce463920633b65ed84d1a2b7cf8d5848729aee89f05cc",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0018.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681633104",
       "verified_by_github_digest": true
     },
     {
@@ -1742,6 +1922,7 @@
       "sha256": "070a6ad15ca09dd33ed68efd031f602dd792bdc2bdc6a1c0a045d710cf69ab9e",
       "github_digest": "sha256:070a6ad15ca09dd33ed68efd031f602dd792bdc2bdc6a1c0a045d710cf69ab9e",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0019.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681633411",
       "verified_by_github_digest": true
     },
     {
@@ -1751,9 +1932,10 @@
       "sha256": "dd1ec8983417aced9622f0c5341b3d2c47f5a1ca86260d0fee21cd8d969db848",
       "github_digest": "sha256:dd1ec8983417aced9622f0c5341b3d2c47f5a1ca86260d0fee21cd8d969db848",
       "browser_download_url": "https://github.com/twinkle-air/xray-analysis-next/releases/download/round4-C-production-v1-native/R4_C_validation_none_development_0020.zip",
+      "api_url": "https://api.github.com/repos/twinkle-air/xray-analysis-next/releases/assets/681633718",
       "verified_by_github_digest": true
     }
   ],
   "problems": [],
-  "generated_at": "2026-10-27T21:12:08"
+  "generated_at": "2026-10-27T21:18:42"
 }
