@@ -3,7 +3,7 @@
   "stage": "production_v1_full_quota",
   "member": "C",
   "path_base": "datasets/round4/member_C",
-  "path_convention": "every path in this manifest is relative to path_base; a listed path exists in the git tree except where an entry documents that it is reassembled from the delivered_as parts. produced_at paths are author-side sources under outputs/ and are not part of the delivery",
+  "path_convention": "two conventions, deliberately distinct: files[].path is repository-relative (join it to the git tree root, do not prepend path_base), while every logical path inside blind_only_archive/qc_archive/native_archives is relative to path_base. A path_base-relative logical path exists in the git tree except where an entry documents that it is reassembled from the delivered_as parts; produced_at paths are author-side sources under outputs/ and are not part of the delivery",
   "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
   "records": 20000,
   "roles": {
@@ -38,7 +38,8 @@
     "inventory": "production_v1/native_archive_inventory.json",
     "pointers": "production_v1/native_archive_pointers.json",
     "receipt": "production_v1/native_archive_receipt.json",
-    "not_spectra": true
+    "not_spectra": true,
+    "sealed_test_custody": "pending: the 20 sealed_test archives are inside one AES256 Release asset whose passphrase has not been confirmed as received by the project lead; see native_archive_receipt.json sealed_test_custody.passphrase_handover_status"
   },
   "pilot_spectra": 0,
   "eligible_for_training": false,
@@ -55,18 +56,18 @@
     },
     {
       "path": "datasets/round4/member_C/production_v1/native_archive_pointers.json",
-      "sha256": "8326f6572b3f7e29fb62c9b9d65062ca93904b0b817869cb77cae0b23ec9249e",
-      "bytes": 114730
+      "sha256": "ed75f79a191067a64b20410b999fc66d7e2f64868894d7dc2a138b032563fee5",
+      "bytes": 114370
     },
     {
       "path": "datasets/round4/member_C/production_v1/native_archive_receipt.json",
-      "sha256": "8e6e2cc8087c2c4993834086fbbbb494f313b2baef67f93d01e3fb8caa29535e",
-      "bytes": 120774
+      "sha256": "1fae8975f33f1ce24e9a4cb64cbed2567fbb1e823e1a406e041a080869226c0b",
+      "bytes": 121135
     },
     {
       "path": "datasets/round4/member_C/production_v1/README.md",
-      "sha256": "498a728fa166f6c9c12e04da48200c35b0be6049cc6ef969d0aeb946e89c2b4a",
-      "bytes": 3525
+      "sha256": "09680d5c6db65cd1322c6d15bc918dc1540fd80789c24df2b29b0a5c9ab42c0a",
+      "bytes": 4239
     },
     {
       "path": "datasets/round4/member_C/production_v1/selfcheck/summary.json",
@@ -114,5 +115,5 @@
       "bytes": 524224
     }
   ],
-  "file_bytes_total": 182598082
+  "file_bytes_total": 182598797
 }

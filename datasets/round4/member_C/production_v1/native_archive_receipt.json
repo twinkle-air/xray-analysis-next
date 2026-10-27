@@ -118,7 +118,10 @@
       }
     ],
     "plaintext_container_sha256": "b43f761db5c0d53465f3c98a55cd51a70fd72985e9d0d48737ad72466b143321",
-    "passphrase_handed_over_by": "member C author to the coordinator directly; never stored in the repository",
+    "passphrase_handover_status": "pending",
+    "passphrase_handover_note": "the passphrase is handed to the project lead over an out-of-repo channel chosen by the lead; until the lead confirms receipt and usability this stays pending, and the sealed archives are not yet an accepted handover. The passphrase, key or token never enters the repository, PR, logs or review replies.",
+    "passphrase_handover_confirmed_at": null,
+    "passphrase_handover_custody": null,
     "verify": "gpg --decrypt --pinentry-mode loopback <asset> > container.zip, then check container.zip SHA-256 and every inner archive SHA-256 against this receipt"
   },
   "how_to_pull": "the repo is private, so an authenticated asset fetch is required: curl -L -H \"Authorization: Bearer <token with repo read>\" -H \"Accept: application/octet-stream\" <api_url> -o <asset>; browser_download_url works in a signed-in browser session. Compare the saved file with native_archive_inventory.json entries[].sha256.",
@@ -1937,5 +1940,5 @@
     }
   ],
   "problems": [],
-  "generated_at": "2026-10-27T21:18:42"
+  "generated_at": "2026-10-27T21:28:21"
 }

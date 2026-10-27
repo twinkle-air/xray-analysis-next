@@ -23,7 +23,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_challenge_0001.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_challenge_0002",
@@ -35,7 +35,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_challenge_0002.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_challenge_0003",
@@ -47,7 +47,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_challenge_0003.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_challenge_0004",
@@ -59,7 +59,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_challenge_0004.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_challenge_0005",
@@ -71,7 +71,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_challenge_0005.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_challenge_0006",
@@ -83,7 +83,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_challenge_0006.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_challenge_0007",
@@ -95,7 +95,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_challenge_0007.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_challenge_0008",
@@ -107,7 +107,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_challenge_0008.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_challenge_0009",
@@ -119,7 +119,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_challenge_0009.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_challenge_0010",
@@ -131,7 +131,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_challenge_0010.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_in_distribution_0002",
@@ -143,7 +143,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_in_distribution_0002.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_in_distribution_0001",
@@ -155,7 +155,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_in_distribution_0001.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_in_distribution_0003",
@@ -167,7 +167,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_in_distribution_0003.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_in_distribution_0004",
@@ -179,7 +179,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_in_distribution_0004.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_in_distribution_0005",
@@ -191,7 +191,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_in_distribution_0005.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_in_distribution_0006",
@@ -203,7 +203,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_in_distribution_0006.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_in_distribution_0007",
@@ -215,7 +215,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_in_distribution_0007.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_in_distribution_0008",
@@ -227,7 +227,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_in_distribution_0008.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_in_distribution_0009",
@@ -239,7 +239,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_in_distribution_0009.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_sealed_test_none_sealed_in_distribution_0010",
@@ -251,7 +251,7 @@
       "eligible_for_training": false,
       "handover_asset": "R4_C_sealed_test_native_archives.zip.aes256.gpg",
       "handover_asset_member": "R4_C_sealed_test_none_sealed_in_distribution_0010.zip",
-      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory, passphrase handed to the coordinator directly"
+      "handover_container": "AES256 (GnuPG symmetric); plaintext per-archive SHA-256 in the inventory; passphrase handover pending"
     },
     {
       "batch_id": "R4_C_train_stage1_development_0001",
