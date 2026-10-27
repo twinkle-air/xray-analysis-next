@@ -2,6 +2,8 @@
   "release": "production_release_v1",
   "stage": "production_v1_full_quota",
   "member": "C",
+  "path_base": "datasets/round4/member_C",
+  "path_convention": "every path in this manifest is relative to path_base; a listed path exists in the git tree except where an entry documents that it is reassembled from the delivered_as parts. produced_at paths are author-side sources under outputs/ and are not part of the delivery",
   "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
   "records": 20000,
   "roles": {
@@ -10,13 +12,33 @@
     "validation": 2000
   },
   "blind_only_archive": {
-    "path": "C_round4_blind_inputs.zip",
+    "delivered_as": [
+      "production_v1/transfer_chunks/C_round4_blind_inputs.zip.part001",
+      "production_v1/transfer_chunks/C_round4_blind_inputs.zip.part002",
+      "production_v1/transfer_chunks/C_round4_blind_inputs.zip.part003",
+      "production_v1/transfer_chunks/C_round4_blind_inputs.zip.part004"
+    ],
+    "reassemble_into": "production_v1/transfer_chunks/C_round4_blind_inputs.zip",
+    "chunk_manifest": "production_v1/transfer_chunks/chunk_manifest.json",
+    "bytes": 160232051,
     "sha256": "89a56c9bcf86d51c1440f4379e0c9e88b59a5220f03de959cf5f87b8843e2c57",
-    "records": 20000
+    "records": 20000,
+    "produced_at": "outputs/round4-C-production/C_round4_blind_inputs.zip"
   },
   "qc_archive": {
-    "path": "reports/C_all_batch_QC.zip",
-    "sha256": "5815386c8e08f77a8576c858c297d38230a844284ef65373fd76e0ea3fdd542e"
+    "path": "production_v1/transfer_chunks/C_all_batch_QC.zip",
+    "sha256": "5815386c8e08f77a8576c858c297d38230a844284ef65373fd76e0ea3fdd542e",
+    "bytes": 3956739,
+    "duplicate_at": "sealed_QC_only/C_all_batch_QC.zip",
+    "produced_at": "outputs/round4-C-production/reports/C_all_batch_QC.zip"
+  },
+  "native_archives": {
+    "count": 200,
+    "bytes": 4811744386,
+    "inventory": "production_v1/native_archive_inventory.json",
+    "pointers": "production_v1/native_archive_pointers.json",
+    "receipt": "production_v1/native_archive_receipt.json",
+    "not_spectra": true
   },
   "pilot_spectra": 0,
   "eligible_for_training": false,
@@ -27,14 +49,24 @@
       "bytes": 13495750
     },
     {
+      "path": "datasets/round4/member_C/production_v1/native_archive_inventory.json",
+      "sha256": "f86d35c1efbb316409dae4dceb1a671e2508a7d7a32eea6ed6e92ca9c1abcc78",
+      "bytes": 191683
+    },
+    {
       "path": "datasets/round4/member_C/production_v1/native_archive_pointers.json",
-      "sha256": "13fcf3827f0569394ac8c9f5d4aabeb5f42d86005f1a4476f794ecaba80bf742",
-      "bytes": 95731
+      "sha256": "8326f6572b3f7e29fb62c9b9d65062ca93904b0b817869cb77cae0b23ec9249e",
+      "bytes": 114730
+    },
+    {
+      "path": "datasets/round4/member_C/production_v1/native_archive_receipt.json",
+      "sha256": "0fd6350039e53a32b4ae7022d5498dc0876479cbbfd0dde9dbb884d7a03ef39e",
+      "bytes": 101098
     },
     {
       "path": "datasets/round4/member_C/production_v1/README.md",
-      "sha256": "22a48bcd79f169b4e65cc6789ca376afc28f8964c936da93fccb8183266c5937",
-      "bytes": 1684
+      "sha256": "46411b399ab902af361dff3cdd300b7ebdee626e5a551422f3a369ce48da45b4",
+      "bytes": 3270
     },
     {
       "path": "datasets/round4/member_C/production_v1/selfcheck/summary.json",
@@ -82,5 +114,5 @@
       "bytes": 524224
     }
   ],
-  "file_bytes_total": 182264785
+  "file_bytes_total": 182578151
 }
