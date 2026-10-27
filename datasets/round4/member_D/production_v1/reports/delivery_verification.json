@@ -52,5 +52,13 @@
  "blind_only_archive_sha256": "cbd82cb4894fedc429a80e732c4fb7aa91abcacf8daea753d25a434b1fc612df",
  "qc_archive_sha256": "1b20ac9cfe25ad48bad198aeadef057743a3b0ef8afd75be63e6458bef52163a",
  "delivered_archive_hashes_match_independently_verified_source": true,
- "delivered_archive_hash_mismatches": []
+ "delivered_archive_hash_mismatches": [],
+ "blind_only_archive": {
+  "delivered_in_git": true,
+  "parts": 4,
+  "sha256": "cbd82cb4894fedc429a80e732c4fb7aa91abcacf8daea753d25a434b1fc612df",
+  "reassembled_locally_sha_match": true,
+  "reassembled_zip_crc": "passed",
+  "reassembled_entry_count": 20000
+ }
 }

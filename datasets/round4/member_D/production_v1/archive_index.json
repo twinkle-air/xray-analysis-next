@@ -4202,15 +4202,41 @@
   }
  ],
  "blind_only_archive": {
-  "path": "datasets/round4/member_D/production_v1/archives/D_round4_blind_inputs.zip",
+  "path": "datasets/round4/member_D/production_v1/blind/D_round4_blind_inputs.zip (part01..part04)",
   "sha256": "cbd82cb4894fedc429a80e732c4fb7aa91abcacf8daea753d25a434b1fc612df",
   "bytes": 160410944,
   "record_count": 20000,
   "labels_included": false,
-  "delivered_in_git": false,
-  "local_retained_path": "outputs/round4-D-production/D_round4_blind_inputs.zip",
-  "excluded_reason": "160,410,944 bytes exceeds the GitHub 100 MB per-file limit and this repository does not use Git LFS; the export is reproducible from the 200 delivered native archives by the frozen runner packaging step, and its SHA-256 is pinned here and in delivery_verification.json.",
-  "regenerate": "run_member.py production packaging step (frozen tool) over the 200 delivered native archives"
+  "delivered_in_git": true,
+  "excluded_reason": "kept as four git-safe parts because the whole file exceeds the GitHub 100 MB per-file limit and the repository does not use Git LFS",
+  "regenerate": "run_member.py production packaging step (frozen tool) over the 200 delivered native archives",
+  "split_into_parts": [
+   {
+    "path": "datasets/round4/member_D/production_v1/blind/D_round4_blind_inputs.zip.part01",
+    "bytes": 40102736,
+    "sha256": "ffc1314bf7fbd66818eeb8e0ff8cc5be171ea8fb4e6f851b1a82e999de331064"
+   },
+   {
+    "path": "datasets/round4/member_D/production_v1/blind/D_round4_blind_inputs.zip.part02",
+    "bytes": 40102736,
+    "sha256": "306115bd2a4a03987b0bb3192f06a2efc5ef442d9431c280bc220eab72e19e75"
+   },
+   {
+    "path": "datasets/round4/member_D/production_v1/blind/D_round4_blind_inputs.zip.part03",
+    "bytes": 40102736,
+    "sha256": "875eb7e9936a5d28acdc239eef30413aa765ca055596002503353b1125f68bf7"
+   },
+   {
+    "path": "datasets/round4/member_D/production_v1/blind/D_round4_blind_inputs.zip.part04",
+    "bytes": 40102736,
+    "sha256": "4eeee01738bff97fd3fa52d31a1029e437540405355237279501918fa2e1f5f9"
+   }
+  ],
+  "part_count": 4,
+  "restore_documentation": "datasets/round4/member_D/production_v1/blind/RESTORE.md",
+  "parts_sha256_index": "datasets/round4/member_D/production_v1/blind/PARTS.sha256",
+  "whole_sha256_sidecar": "datasets/round4/member_D/production_v1/blind/D_round4_blind_inputs.zip.sha256",
+  "reassembled_and_verified_locally": true
  },
  "qc_archive": {
   "path": "datasets/round4/member_D/production_v1/reports/D_all_batch_QC.zip",

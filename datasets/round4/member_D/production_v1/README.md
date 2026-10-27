@@ -14,7 +14,7 @@ D 分部配额 **20,000 谱**：1,000 条候选配方（320 个预合并设计�
 
 - `actual_record_index.csv`：20,000 条记录索引，固定全局 ID、配方/设计族、用途、profile、计数子种子、盲/全结果哈希、所属 ZIP，以及 `eligible_for_training=false`。
 - `archives/R4_D_*.zip`：200 个原生批次归档（每批 100 谱，含 blind_inputs、truth、full_results、输入/配置、环境与逐批命令记录），单包最大 25 MB。
-- 仅盲样本导出 `D_round4_blind_inputs.zip`（160,410,944 B）**未进入 git**：仓库未启用 Git LFS，而 GitHub 对单文件设 100 MB 硬限，推送会被 `GH001` 拒绝。其 SHA-256 固定在 `archive_index.json` 与 `reports/delivery_verification.json`，内容可由这 200 个原生归档通过冻结 runner 的打包步骤逐字节复现；本地保留于 `outputs/round4-D-production/D_round4_blind_inputs.zip`。
+- 仅盲样本导出 `D_round4_blind_inputs.zip`（160,410,944 B）以 4 个分片随仓库交付于 `blind/`：GitHub 对单文件设 100 MB 硬限且本仓库未启用 LFS。拼接与校验见 `blind/RESTORE.md`，整包 SHA-256 固定为 `cbd82cb4894fedc429a80e732c4fb7aa91abcacf8daea753d25a434b1fc612df`，分片哈希见 `blind/PARTS.sha256`；本次交付已在本地完成还原并通过 ZIP 内部 CRC 与 20,000 条目核对。
 - `tools/`：本次实际使用的非冻结辅助脚本（回收并发包装器 `run_member_recycle.py`、独立复核 `verify_production_D.py`、组包 `package_D_round4.py` 与元数据 `finalize_D_round4.py`）。包装器只子类化 `concurrent.futures.ProcessPoolExecutor`，冻结 runner 与生成器未被改动，`reports/delivery_verification.json` 中记录了 runner 哈希与放行文件一致。
 - `reports/D_all_batch_QC.zip`：逐批 audit/replay/window_budget/summary/commands/actual_record_index 证据。
 - `archive_index.json` / `batch_metrics.json`：逐批哈希、字节数、窗外最大损失比例、生成+质检耗时与角色分布。

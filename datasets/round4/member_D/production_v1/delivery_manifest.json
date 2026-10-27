@@ -1,13 +1,13 @@
 {
  "self_excluded": true,
  "generated_at_utc": "2026-10-27T05:48:40Z",
- "file_count": 298,
- "total_bytes": 4824420465,
+ "file_count": 305,
+ "total_bytes": 4984835029,
  "files": [
   {
    "path": "datasets/round4/member_D/production_v1/README.md",
-   "sha256": "379f63d47e53d52d5a3fe84bd0b6f27a444d6ad89f3c86639c4451149d7e1654",
-   "bytes": 5940
+   "sha256": "bc5cb93eac7ff1ea3a44cd4084bbd50271d04086d1d3fe14834784ecd1ec6fce",
+   "bytes": 5990
   },
   {
    "path": "datasets/round4/member_D/production_v1/actual_record_index.csv",
@@ -16,8 +16,8 @@
   },
   {
    "path": "datasets/round4/member_D/production_v1/archive_index.json",
-   "sha256": "fc3ec2f036795dcb74be74f7eb7385afd813d94ae17da325cb0a51d5f768d19c",
-   "bytes": 193077
+   "sha256": "0f188e881f253bc5504243bb95eb3d57ec14ca3e5bf5c24f9c8a9e77c3d45f03",
+   "bytes": 194618
   },
   {
    "path": "datasets/round4/member_D/production_v1/archives/R4_D_sealed_test_none_sealed_challenge_0001.zip",
@@ -1025,6 +1025,41 @@
    "bytes": 190252
   },
   {
+   "path": "datasets/round4/member_D/production_v1/blind/D_round4_blind_inputs.zip.part01",
+   "bytes": 40102736,
+   "sha256": "ffc1314bf7fbd66818eeb8e0ff8cc5be171ea8fb4e6f851b1a82e999de331064"
+  },
+  {
+   "path": "datasets/round4/member_D/production_v1/blind/D_round4_blind_inputs.zip.part02",
+   "bytes": 40102736,
+   "sha256": "306115bd2a4a03987b0bb3192f06a2efc5ef442d9431c280bc220eab72e19e75"
+  },
+  {
+   "path": "datasets/round4/member_D/production_v1/blind/D_round4_blind_inputs.zip.part03",
+   "bytes": 40102736,
+   "sha256": "875eb7e9936a5d28acdc239eef30413aa765ca055596002503353b1125f68bf7"
+  },
+  {
+   "path": "datasets/round4/member_D/production_v1/blind/D_round4_blind_inputs.zip.part04",
+   "bytes": 40102736,
+   "sha256": "4eeee01738bff97fd3fa52d31a1029e437540405355237279501918fa2e1f5f9"
+  },
+  {
+   "path": "datasets/round4/member_D/production_v1/blind/D_round4_blind_inputs.zip.sha256",
+   "bytes": 93,
+   "sha256": "12237099ddc3eaaec57ac2dd4c8c50f1145de03e0da9739cdbdc379ea3159467"
+  },
+  {
+   "path": "datasets/round4/member_D/production_v1/blind/PARTS.sha256",
+   "bytes": 400,
+   "sha256": "08058ede5fc5a662ebd0a3d42d6c365cd49c0409530769f4f13f5381b3b0d795"
+  },
+  {
+   "path": "datasets/round4/member_D/production_v1/blind/RESTORE.md",
+   "bytes": 1151,
+   "sha256": "d02fb427c77319937d4293a39f726ae3266f34ff6243ec3d65348bd7b1ac56ad"
+  },
+  {
    "path": "datasets/round4/member_D/production_v1/frozen_identity.json",
    "sha256": "a897ef3b88738080e17c348801791360783284c5b15038fb8361a3983247dcf4",
    "bytes": 10766
@@ -1041,8 +1076,8 @@
   },
   {
    "path": "datasets/round4/member_D/production_v1/reports/delivery_verification.json",
-   "sha256": "dddc32ebe35c16470a40f713e43a404dde415a0b6207788ef94f4bf9a7af7f8d",
-   "bytes": 1810
+   "sha256": "11f1c2ec0c197ab2c1d4cbd31d8de8ce3e6a990cf1c93d7ce4fb93a0d6fc89b4",
+   "bytes": 2195
   },
   {
    "path": "datasets/round4/member_D/production_v1/reports/failed_attempts/attempt1_workers4_20261025T103411Z/R4_D_sealed_test_none_sealed_challenge_0005/audit.json",
@@ -1496,8 +1531,10 @@
   }
  ],
  "removed_files": [
-  "archives/D_round4_blind_inputs.zip",
-  "archives/D_round4_blind_inputs.zip.sha256"
+  {
+   "path": "datasets/round4/member_D/production_v1/archives/D_round4_blind_inputs.zip",
+   "reason": "split into four git-safe parts under production_v1/blind/"
+  }
  ],
- "removal_note": "Blind-only export excluded from git because of the GitHub per-file size limit; SHA-256 pinned in archive_index.json."
+ "removal_note": "Blind-only export is delivered as four parts because of the GitHub 100 MB per-file limit; whole-package SHA-256 pinned in archive_index.json and blind/PARTS.sha256."
 }
