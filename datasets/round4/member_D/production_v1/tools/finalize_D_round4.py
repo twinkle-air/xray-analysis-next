@@ -192,12 +192,21 @@ for p in sorted(DST.rglob('*')):
         files.append({'path': p.as_posix(), 'sha256': d, 'bytes': p.stat().st_size})
         if p.as_posix() in expected and expected[p.as_posix()] != d:
             mismatches.append(p.as_posix())
-json.dump({'self_excluded': True, 'generated_at_utc': now, 'file_count': len(files),
-           'total_bytes': total, 'files': files},
-          open(DST / 'delivery_manifest.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 dv = json.load(open(DST / 'reports/delivery_verification.json', encoding='utf-8'))
 dv['delivered_archive_hashes_match_independently_verified_source'] = (len(mismatches) == 0)
 dv['delivered_archive_hash_mismatches'] = mismatches
 json.dump(dv, open(DST / 'reports/delivery_verification.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+# The report is finalized after the first hash pass: refresh its manifest entry
+# before sealing the manifest so the inventory describes the delivered bytes.
+verification_path = DST / 'reports/delivery_verification.json'
+for entry in files:
+    if entry['path'] == verification_path.as_posix():
+        entry['sha256'] = sha(verification_path)
+        entry['bytes'] = verification_path.stat().st_size
+total = sum(entry['bytes'] for entry in files)
+json.dump({'self_excluded': True, 'generated_at_utc': now, 'file_count': len(files),
+           'total_bytes': total, 'files': files},
+          open(DST / 'delivery_manifest.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('manifest_files', len(files), 'total_bytes', total, 'hash_mismatches', len(mismatches))
 print('sealed_cross_role', json.load(open(DST / 'reports/delivery_verification.json', encoding='utf-8'))['record_ids_reused_across_roles'])

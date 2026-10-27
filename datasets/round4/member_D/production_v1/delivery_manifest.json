@@ -2,7 +2,7 @@
  "self_excluded": true,
  "generated_at_utc": "2026-10-27T11:39:53Z",
  "file_count": 309,
- "total_bytes": 4984893640,
+ "total_bytes": 4984894214,
  "files": [
   {
    "path": "datasets/round4/member_D/production_v1/actual_record_index.csv",
@@ -1076,8 +1076,8 @@
   },
   {
    "path": "datasets/round4/member_D/production_v1/reports/delivery_verification.json",
-   "sha256": "a77a9ebe5d13554e41ec13ae9cc15262f8a45da6f51cc89ae02498598b4adb20",
-   "bytes": 8871
+   "sha256": "bb82626b424c5d306e4ab336efdcb467378c8279df6fcd194ad5b42893df75d4",
+   "bytes": 8986
   },
   {
    "path": "datasets/round4/member_D/production_v1/reports/failed_attempts/attempt1_workers4_20261025T103411Z/attempt_notes.json",
@@ -1526,8 +1526,8 @@
   },
   {
    "path": "datasets/round4/member_D/production_v1/tools/finalize_D_round4.py",
-   "sha256": "2a947abec69a9397f770f97640ebad1a0d7733ec6d6374ec3deea6e6ceb83a64",
-   "bytes": 15363
+   "sha256": "4e050e2414498787b505c8881fe2767ab0ac36bb04d16db776e327c3a7dbfc1d",
+   "bytes": 15822
   },
   {
    "path": "datasets/round4/member_D/production_v1/tools/package_D_round4.py",
