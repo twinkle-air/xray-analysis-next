@@ -1,0 +1,19 @@
+{
+  "status": "passed_member_full_QC_pending_coordinator_acceptance",
+  "packaging_status": "complete",
+  "member": "C",
+  "expected_records": 20000,
+  "actual_records": 20000,
+  "roles": {
+    "sealed_test": 2000,
+    "train": 16000,
+    "validation": 2000
+  },
+  "complete_batches": 200,
+  "failures": [],
+  "full_audit_and_replay_performed": true,
+  "pilot_spectra": 0,
+  "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
+  "eligible_for_training": false,
+  "scientific_accuracy_verified": false
+}

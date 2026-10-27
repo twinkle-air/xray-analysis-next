@@ -1,0 +1,86 @@
+{
+  "release": "production_release_v1",
+  "stage": "production_v1_full_quota",
+  "member": "C",
+  "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
+  "records": 20000,
+  "roles": {
+    "sealed_test": 2000,
+    "train": 16000,
+    "validation": 2000
+  },
+  "blind_only_archive": {
+    "path": "C_round4_blind_inputs.zip",
+    "sha256": "89a56c9bcf86d51c1440f4379e0c9e88b59a5220f03de959cf5f87b8843e2c57",
+    "records": 20000
+  },
+  "qc_archive": {
+    "path": "reports/C_all_batch_QC.zip",
+    "sha256": "5815386c8e08f77a8576c858c297d38230a844284ef65373fd76e0ea3fdd542e"
+  },
+  "pilot_spectra": 0,
+  "eligible_for_training": false,
+  "files": [
+    {
+      "path": "datasets/round4/member_C/production_v1/actual_record_index.csv",
+      "sha256": "48b059d782f2730e59a2a8fd981eb967c6717bfd6b252c448893d6373ef18be9",
+      "bytes": 13495750
+    },
+    {
+      "path": "datasets/round4/member_C/production_v1/native_archive_pointers.json",
+      "sha256": "13fcf3827f0569394ac8c9f5d4aabeb5f42d86005f1a4476f794ecaba80bf742",
+      "bytes": 95731
+    },
+    {
+      "path": "datasets/round4/member_C/production_v1/README.md",
+      "sha256": "22a48bcd79f169b4e65cc6789ca376afc28f8964c936da93fccb8183266c5937",
+      "bytes": 1684
+    },
+    {
+      "path": "datasets/round4/member_C/production_v1/selfcheck/summary.json",
+      "sha256": "7b6a908f6b25fa138bbd81aa1b7161a1ccbb8347f597cf10fcc71d91eca1384f",
+      "bytes": 564
+    },
+    {
+      "path": "datasets/round4/member_C/production_v1/transfer_chunks/C_all_batch_QC.zip",
+      "sha256": "5815386c8e08f77a8576c858c297d38230a844284ef65373fd76e0ea3fdd542e",
+      "bytes": 3956739
+    },
+    {
+      "path": "datasets/round4/member_C/production_v1/transfer_chunks/C_round4_blind_inputs.zip.part001",
+      "sha256": "e6ad7e5b98e91dcb7c5b805503ed4589230f3a27095d6718a37d9d5e988037ce",
+      "bytes": 50331648
+    },
+    {
+      "path": "datasets/round4/member_C/production_v1/transfer_chunks/C_round4_blind_inputs.zip.part002",
+      "sha256": "8c22b21c34c25ee6948b445797ce551f918338802bf3b2d4e0483c5bfca55762",
+      "bytes": 50331648
+    },
+    {
+      "path": "datasets/round4/member_C/production_v1/transfer_chunks/C_round4_blind_inputs.zip.part003",
+      "sha256": "ec56858be12c0737aa4b124753d629851a4ef3834e60884141168c5c45411d62",
+      "bytes": 50331648
+    },
+    {
+      "path": "datasets/round4/member_C/production_v1/transfer_chunks/C_round4_blind_inputs.zip.part004",
+      "sha256": "284a2d69bffcda785ecfcac3502b39ea6899185b29d07712bc0083f39f036b8f",
+      "bytes": 9237107
+    },
+    {
+      "path": "datasets/round4/member_C/production_v1/transfer_chunks/chunk_manifest.json",
+      "sha256": "680947ceb12e930d55451e90d49d51a702b7df718643fb3769cfda52ec1cfa41",
+      "bytes": 1303
+    },
+    {
+      "path": "datasets/round4/member_C/sealed_QC_only/C_all_batch_QC.zip",
+      "sha256": "5815386c8e08f77a8576c858c297d38230a844284ef65373fd76e0ea3fdd542e",
+      "bytes": 3956739
+    },
+    {
+      "path": "datasets/round4/member_C/sealed_QC_only/sealed_pointer_index.json",
+      "sha256": "e6d3cfdbf51a55f0be198490c0a12b25f5cfad79014c3947b4c2ecfdbd23e055",
+      "bytes": 524224
+    }
+  ],
+  "file_bytes_total": 182264785
+}
