@@ -12,9 +12,11 @@
  "concurrency": {
   "workers": 6,
   "max_tasks_per_child": 2,
-  "invocation": "frozen runner imported unchanged through work/run_member_recycle.py, which subclasses concurrent.futures.ProcessPoolExecutor to recycle each worker after 2 batches and keep the pool at the requested width",
+  "invocation": "frozen runner imported unchanged through the delivered tools/run_member_recycle.py (during production the same script sat in work/), which subclasses concurrent.futures.ProcessPoolExecutor to recycle each worker after 2 batches and keep the pool at the requested width",
   "frozen_runner_modified": false,
-  "wrapper_sha256": "7bb6b6f47094d16e03217e3b9f7309486e73ed9bcf39f8fa3adcb9e905af2528",
+  "wrapper_sha256": "41e9b78a4745a574eec3a07bf15d0f82d7b67408225831bb9cc7a367a0f6cefd",
+  "wrapper_pre_review_sha256": "7bb6b6f47094d16e03217e3b9f7309486e73ed9bcf39f8fa3adcb9e905af2528",
+  "wrapper_change_on_2026-10-27": "tool-directory resolution now walks to the real repository root (honours XRAY_REPO_ROOT / XRAY_PRODUCTION_TOOLS); the pool subclass is byte-for-byte unchanged",
   "history": [
    {
     "attempt": "attempt1_workers4",
@@ -49,9 +51,10 @@
   ]
  },
  "batch_commands": {
-  "production": "python -B work/run_member_recycle.py --repository . --freeze datasets/round4/shared/freeze_v1 --release datasets/round4/shared/releases/production_release_v1.json --member D --out outputs/round4-D-production --workers 6 --minimum-free-gib 10 --include-sealed-qc",
-  "verification": "python -B work/verify_production_D.py",
-  "packaging": "python -B work/package_D_round4.py && python -B work/finalize_D_round4.py"
+  "production": "python -B datasets/round4/member_D/production_v1/tools/run_member_recycle.py --repository . --freeze datasets/round4/shared/freeze_v1 --release datasets/round4/shared/releases/production_release_v1.json --member D --out outputs/round4-D-production --workers 6 --minimum-free-gib 10 --include-sealed-qc",
+  "verification": "python -B datasets/round4/member_D/production_v1/tools/verify_production_D.py --out outputs/round4-D-production --report outputs/round4-D-production.independent_verification.json",
+  "verifier_selftest": "python -B datasets/round4/member_D/production_v1/tools/selftest_verify_D.py --report work/verifier_selftest_D.json",
+  "packaging": "python -B datasets/round4/member_D/production_v1/tools/package_D_round4.py && python -B datasets/round4/member_D/production_v1/tools/finalize_D_round4.py"
  },
  "run_logs_sha256": {
   "round4-D-production.run2.log": "e34fb74144911b7c399877dd2dc3b570760558a218eca728beaa3e7c0025af98",

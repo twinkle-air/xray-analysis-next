@@ -1,15 +1,19 @@
-import csv, datetime, hashlib, json, pathlib, platform, zipfile
+import csv, datetime, hashlib, json, pathlib, platform, shutil, zipfile
 
 REPO = pathlib.Path('.')
 SRC = REPO / 'outputs/round4-D-production'
 DST = REPO / 'datasets/round4/member_D/production_v1'
 FREEZE = REPO / 'datasets/round4/shared/freeze_v1'
 RUNNER = REPO / 'datasets/round4/shared/production_tools/run_member.py'
-WRAPPER = REPO / 'work/run_member_recycle.py'
+WRAPPER = DST / 'tools/run_member_recycle.py'
+VERIFY = DST / 'tools/verify_production_D.py'
+SELFTEST = DST / 'tools/selftest_verify_D.py'
 LOGS = [REPO / 'outputs/round4-D-production.run2.log', REPO / 'outputs/round4-D-production.run3.log',
         REPO / 'outputs/round4-D-production.run4.log', REPO / 'outputs/round4-D-production.run5.log',
         REPO / 'outputs/round4-D-production.run6.log', REPO / 'outputs/round4-D-production.run7.log']
 RELEASE = REPO / 'datasets/round4/shared/releases/production_release_v1.json'
+# Wrapper as delivered before the PR #55 review fixed its tool-directory resolution.
+PRODUCTION_WRAPPER_SHA256 = '7bb6b6f47094d16e03217e3b9f7309486e73ed9bcf39f8fa3adcb9e905af2528'
 
 
 def sha(p):
@@ -26,8 +30,17 @@ rel = json.load(open(RELEASE, encoding='utf-8'))
 idx = list(csv.DictReader(open(DST / 'actual_record_index.csv', encoding='utf-8')))
 aindex = json.load(open(DST / 'archive_index.json', encoding='utf-8'))
 ver = json.load(open(SRC.parent / 'round4-D-production.independent_verification.json', encoding='utf-8'))
-ver['batches_checked'] = len(ver['batches'])
-ver['batches_failed'] = sum(1 for b in ver['batches'] if not b['ok'])
+if ver.get('schema') != 'round4-member-D-independent-verification/v2':
+    raise SystemExit('independent verification report is not the v2 contract report; re-run tools/verify_production_D.py')
+ver['batches_checked'] = ver['totals'].get('batches_with_evidence', 0)
+ver['batches_failed'] = ver['failure_count']
+
+(DST / 'reports').mkdir(exist_ok=True)
+for name, source in (('independent_verification_D_full.json',
+                      SRC.parent / 'round4-D-production.independent_verification.json'),
+                     ('verifier_selftest_D.json', REPO / 'work/verifier_selftest_D.json'),
+                     ('fresh_clone_entrypoint_check.json', REPO / 'work/fresh_clone_entrypoint_check.json')):
+    shutil.copy2(source, DST / 'reports' / name)
 
 roles = {}
 for r in idx:
@@ -37,7 +50,30 @@ sealed_archives = {r['archive_path'] for r in idx if r['research_usage'] == 'sea
 other_archives = {r['archive_path'] for r in idx if r['research_usage'] != 'sealed_test'}
 max_lost = max(n['maximum_window_lost_fraction'] for n in aindex['native_archives'])
 
-with zipfile.ZipFile(DST / 'archives/D_round4_blind_inputs.zip') as z:
+blind_dir = DST / 'blind'
+parts = sorted(blind_dir.glob('D_round4_blind_inputs.zip.part*'))
+if not parts:
+    raise SystemExit('no blind parts under production_v1/blind; re-run tools/package_D_round4.py')
+sidecar = (blind_dir / 'D_round4_blind_inputs.zip.sha256').read_text(encoding='ascii').split()[0]
+stream = hashlib.sha256()
+for p in parts:
+    with open(p, 'rb') as f:
+        for block in iter(lambda: f.read(1 << 22), b''):
+            stream.update(block)
+if stream.hexdigest() != sidecar:
+    raise SystemExit(f'blind parts rehash {stream.hexdigest()} != sidecar {sidecar}')
+recorded_parts = {}
+for line in (blind_dir / 'PARTS.sha256').read_text(encoding='ascii').splitlines():
+    digest, name = line.split()
+    recorded_parts[name] = digest
+for p in parts:
+    if recorded_parts.get(p.name) != sha(p):
+        raise SystemExit(f'delivered blind part {p.name} does not match PARTS.sha256')
+
+blind_source = SRC / 'D_round4_blind_inputs.zip'
+if not blind_source.is_file():
+    raise SystemExit(f'{blind_source} is the source of the delivered parts and is missing')
+with zipfile.ZipFile(blind_source) as z:
     names = z.namelist()
     crc = z.testzip()
     keys = set()
@@ -65,7 +101,8 @@ json.dump({
     'activation': {'path': 'datasets/round4/shared/releases/production_release_v1_activation.json'},
     'hashes': {'freeze_manifest.json': sha(FREEZE / 'freeze_manifest.json'),
                'production_release_v1.json': sha(RELEASE), 'run_member.py': sha(RUNNER),
-               'run_member_recycle.py': sha(WRAPPER)},
+               'run_member_recycle.py': sha(WRAPPER),
+               'run_member_recycle.py_as_used_during_production': PRODUCTION_WRAPPER_SHA256},
     'frozen_input_hashes': frozen_files, 'generator_source_sha256': generator_hashes,
     'physics_core_sha256': generator_hashes.get('generator/fp_competition/core.py'),
     'quota': {'spectra': len(idx), 'native_batches': len(aindex['native_archives']), 'recipes': 1000,
@@ -78,7 +115,18 @@ json.dump({
 json.dump({
     'status': 'member_independent_verification_passed_pending_coordinator_acceptance',
     'verified_at_utc': now, 'independent_of_runner': True,
-    'verification_script': 'work/verify_production_D.py',
+    'verification_script': VERIFY.relative_to(REPO).as_posix(),
+    'verification_report': 'datasets/round4/member_D/production_v1/reports/independent_verification_D_full.json',
+    'verification_contract': {
+        'schema': ver['schema'], 'status': ver['status'], 'verifier_exit_code': ver['exit_code'],
+        'failure_count': ver['failure_count'], 'failed_check_names': ver['failed_check_names'],
+        'expected_batches_from_frozen_plan': ver['expected_batches'],
+        'expected_records_from_frozen_plan': ver['expected_records'],
+        'non_zero_exit_on_any_failure': True,
+        'note': 'missing batches, tampered QC/archive hashes, incomplete audit or replay, window-budget breaches, '
+                'index row or frozen-plan field drift, eligibility flips and blind-export mismatches all fail the run'},
+    'verifier_selftest': json.load(open(REPO / 'work/verifier_selftest_D.json', encoding='utf-8')),
+    'fresh_clone_entrypoint_check': json.load(open(REPO / 'work/fresh_clone_entrypoint_check.json', encoding='utf-8')),
     'round_id': 'round4', 'member': 'D',
     'native_batches': len(aindex['native_archives']), 'batches_with_passed_summary': ver['batches_checked'],
     'batches_failing_independent_checks': ver['batches_failed'],
@@ -115,16 +163,20 @@ json.dump({
     'freeze_manifest_sha256': sha(FREEZE / 'freeze_manifest.json'),
     'runner_sha256': sha(RUNNER),
     'concurrency': {'workers': 6, 'max_tasks_per_child': 2,
-                    'invocation': 'frozen runner imported unchanged through work/run_member_recycle.py, which subclasses concurrent.futures.ProcessPoolExecutor to recycle each worker after 2 batches and keep the pool at the requested width',
+                    'invocation': 'frozen runner imported unchanged through the delivered tools/run_member_recycle.py (during production the same script sat in work/), which subclasses concurrent.futures.ProcessPoolExecutor to recycle each worker after 2 batches and keep the pool at the requested width',
                     'frozen_runner_modified': False, 'wrapper_sha256': sha(WRAPPER),
+                    'wrapper_pre_review_sha256': PRODUCTION_WRAPPER_SHA256,
+                    'wrapper_change_on_2026-10-27': 'tool-directory resolution now walks to the real repository root '
+                                                    '(honours XRAY_REPO_ROOT / XRAY_PRODUCTION_TOOLS); the pool subclass is byte-for-byte unchanged',
                     'history': [{'attempt': 'attempt1_workers4', 'workers': 4, 'recycle': None, 'outcome': '7 MemoryError batches + 4 interrupted batches; preserved'},
                                 {'attempt': 'attempt2_workers2', 'workers': 2, 'recycle': None, 'outcome': 'stopped by owner request to use 3 workers; in-flight batches preserved'},
                                 {'attempt': 'attempt3_session_stopped', 'workers': 3, 'recycle': None, 'outcome': 'Qoder restart terminated the job; in-flight batches preserved'},
                                 {'attempt': 'attempt4_oom_workers3', 'workers': 3, 'recycle': None, 'outcome': '22 MemoryError batches + 3 interrupted at Windows commit exhaustion; preserved'},
                                 {'attempt': 'owner_confirmed_6_plus_2', 'workers': 6, 'recycle': 2, 'outcome': 'first attempt terminated by session logoff at 2026-10-26 18:42 (6 batches interrupted, preserved); second attempt terminated when worker processes vanished at 2026-10-26 23:01 (6 batches interrupted, preserved, coincident nvlddmkm event 153); third attempt completed 200/200 with 0 failures'}]},
-    'batch_commands': {'production': 'python -B work/run_member_recycle.py --repository . --freeze datasets/round4/shared/freeze_v1 --release datasets/round4/shared/releases/production_release_v1.json --member D --out outputs/round4-D-production --workers 6 --minimum-free-gib 10 --include-sealed-qc',
-                       'verification': 'python -B work/verify_production_D.py',
-                       'packaging': 'python -B work/package_D_round4.py && python -B work/finalize_D_round4.py'},
+    'batch_commands': {'production': 'python -B datasets/round4/member_D/production_v1/tools/run_member_recycle.py --repository . --freeze datasets/round4/shared/freeze_v1 --release datasets/round4/shared/releases/production_release_v1.json --member D --out outputs/round4-D-production --workers 6 --minimum-free-gib 10 --include-sealed-qc',
+                       'verification': 'python -B datasets/round4/member_D/production_v1/tools/verify_production_D.py --out outputs/round4-D-production --report outputs/round4-D-production.independent_verification.json',
+                       'verifier_selftest': 'python -B datasets/round4/member_D/production_v1/tools/selftest_verify_D.py --report work/verifier_selftest_D.json',
+                       'packaging': 'python -B datasets/round4/member_D/production_v1/tools/package_D_round4.py && python -B datasets/round4/member_D/production_v1/tools/finalize_D_round4.py'},
     'run_logs_sha256': {p.name: sha(p) for p in LOGS if p.is_file()},
     'notes': 'The frozen runner, generator and inputs were never edited. Every batch that failed or was interrupted is preserved under reports/failed_attempts with its QC evidence and was regenerated from scratch under the same frozen batch seeds and conditions.'},
           open(DST / 'reports/commands_and_environment.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

@@ -53,9 +53,53 @@ for z in sorted((SRC / 'archives').glob('*.zip')):
         'audit_member': bid + '/audit.json', 'replay_member': bid + '/replay.json'})
 
 blind = SRC / 'D_round4_blind_inputs.zip'
-copy_if_needed(blind, DST / 'archives/D_round4_blind_inputs.zip')
-(DST / 'archives/D_round4_blind_inputs.zip.sha256').write_text(
-    sha(blind) + '  D_round4_blind_inputs.zip\n', encoding='ascii')
+
+# GitHub rejects single files over 100 MB and this repository has no LFS, so the
+# export ships as ordered parts the same way members A and B delivered theirs.
+BLIND_PARTS = 4
+blind_dir = DST / 'blind'
+blind_dir.mkdir(exist_ok=True)
+whole = sha(blind)
+size = blind.stat().st_size
+span = -(-size // BLIND_PARTS)
+part_hashes = {}
+with open(blind, 'rb') as src:
+    for index in range(BLIND_PARTS):
+        target = blind_dir / f'{blind.name}.part{index + 1:02d}'
+        take = min(span, size - index * span)
+        if take <= 0:
+            continue
+        h = hashlib.sha256()
+        with open(target, 'wb') as dst:
+            remaining = take
+            while remaining:
+                block = src.read(min(1 << 22, remaining))
+                if not block:
+                    break
+                h.update(block)
+                dst.write(block)
+                remaining -= len(block)
+        part_hashes[target.name] = {'sha256': h.hexdigest(), 'bytes': target.stat().st_size}
+reassembled = hashlib.sha256()
+for target in sorted(blind_dir.glob(f'{blind.name}.part*')):
+    with open(target, 'rb') as f:
+        for block in iter(lambda: f.read(1 << 22), b''):
+            reassembled.update(block)
+if reassembled.hexdigest() != whole:
+    raise SystemExit('blind part reassembly does not reproduce the source hash')
+(blind_dir / f'{blind.name}.sha256').write_text(whole + '  ' + blind.name + '\n', encoding='ascii')
+(blind_dir / 'PARTS.sha256').write_text(
+    ''.join(f"{v['sha256']}  {k}\n" for k, v in sorted(part_hashes.items())), encoding='ascii')
+(blind_dir / 'RESTORE.md').write_text(
+    '# 还原仅盲样本导出\n\n'
+    '```bash\n'
+    f"cat {blind.name}.part* > {blind.name}\n"
+    f'sha256sum -c {blind.name}.sha256\n'
+    f'unzip -t {blind.name}\n'
+    '```\n\n'
+    f"整包 {size:,} 字节，SHA-256 `{whole}`，{len(rows):,} 条不透明条目；分片哈希见 `PARTS.sha256`。\n"
+    '本次交付已在本地完成分片重组并通过 ZIP 内部 CRC 与条目计数核对。\n',
+    encoding='utf-8')
 
 fa = DST / 'reports/failed_attempts'
 fa.mkdir(exist_ok=True)
@@ -86,8 +130,14 @@ for ad in sorted((SRC / 'failed_attempts').iterdir()):
 
 fm = json.load(open(FREEZE / 'freeze_manifest.json', encoding='utf-8'))
 json.dump({'native_archives': native,
-           'blind_only_archive': {'path': (DST / 'archives/D_round4_blind_inputs.zip').as_posix(),
-                                  'sha256': sha(blind), 'bytes': blind.stat().st_size,
+           'blind_only_archive': {'path': (blind_dir / blind.name).as_posix(),
+                                  'sha256': whole, 'bytes': size,
+                                  'delivered_in_git': True, 'split_into_parts': sorted(part_hashes),
+                                  'part_count': len(part_hashes),
+                                  'restore_documentation': (blind_dir / 'RESTORE.md').as_posix(),
+                                  'parts_sha256_index': (blind_dir / 'PARTS.sha256').as_posix(),
+                                  'whole_sha256_sidecar': (blind_dir / f'{blind.name}.sha256').as_posix(),
+                                  'reassembled_and_verified_locally': True,
                                   'record_count': len(rows), 'labels_included': False},
            'qc_archive': {'path': (DST / 'reports/D_all_batch_QC.zip').as_posix(),
                           'sha256': sha(DST / 'reports/D_all_batch_QC.zip'),
