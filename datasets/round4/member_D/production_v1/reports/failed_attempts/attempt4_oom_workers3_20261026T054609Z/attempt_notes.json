@@ -1,0 +1,263 @@
+{
+ "attempt": "attempt4_oom_workers3",
+ "preserved_at_utc": "20261026T054609Z",
+ "reason": "3-worker run hit Windows commit exhaustion; 22 batches raised MemoryError and 3 batches were interrupted without summary.",
+ "evidence": [
+  "Windows Resource-Exhaustion-Detector events 2004 at 2026-10-25 13:34:44 and 13:39:44",
+  "Kernel-Power 107 at 2026-10-25 13:41:30"
+ ],
+ "policy": {
+  "deleted": false,
+  "eligible_for_training": false,
+  "note": "Preserved verbatim; batches will be regenerated from scratch with the same frozen seeds/conditions."
+ },
+ "counts": {
+  "failed_memory_error": 22,
+  "partial_no_summary": 3
+ },
+ "items": [
+  {
+   "batch": "R4_D_train_stage1_development_0037",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 100
+  },
+  {
+   "batch": "R4_D_train_stage1_development_0038",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 100
+  },
+  {
+   "batch": "R4_D_train_stage1_development_0039",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 100
+  },
+  {
+   "batch": "R4_D_train_stage1_development_0040",
+   "category": "partial_no_summary",
+   "records_on_disk": 54
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0001",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 28
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0002",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0003",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0004",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0005",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0006",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 30
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0007",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 20
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0008",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0009",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0010",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0011",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0012",
+   "category": "partial_no_summary",
+   "records_on_disk": 14
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0013",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0014",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0015",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0016",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0017",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0018",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0019",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0020",
+   "category": "failed_memory_error",
+   "error_type": "MemoryError",
+   "message": null,
+   "partial_data_preserved": true,
+   "records_on_disk": 0
+  },
+  {
+   "batch": "R4_D_train_stage2_development_0021",
+   "category": "partial_no_summary",
+   "records_on_disk": 6
+  }
+ ],
+ "delivered_evidence": [
+  "R4_D_train_stage1_development_0037/audit.json",
+  "R4_D_train_stage1_development_0037/commands.json",
+  "R4_D_train_stage1_development_0037/failure.json",
+  "R4_D_train_stage1_development_0037/window_budget.json",
+  "R4_D_train_stage1_development_0038/commands.json",
+  "R4_D_train_stage1_development_0038/failure.json",
+  "R4_D_train_stage1_development_0038/window_budget.json",
+  "R4_D_train_stage1_development_0039/audit.json",
+  "R4_D_train_stage1_development_0039/commands.json",
+  "R4_D_train_stage1_development_0039/failure.json",
+  "R4_D_train_stage1_development_0039/window_budget.json",
+  "R4_D_train_stage2_development_0001/commands.json",
+  "R4_D_train_stage2_development_0001/failure.json",
+  "R4_D_train_stage2_development_0002/commands.json",
+  "R4_D_train_stage2_development_0002/failure.json",
+  "R4_D_train_stage2_development_0003/commands.json",
+  "R4_D_train_stage2_development_0003/failure.json",
+  "R4_D_train_stage2_development_0004/commands.json",
+  "R4_D_train_stage2_development_0004/failure.json",
+  "R4_D_train_stage2_development_0005/commands.json",
+  "R4_D_train_stage2_development_0005/failure.json",
+  "R4_D_train_stage2_development_0006/commands.json",
+  "R4_D_train_stage2_development_0006/failure.json",
+  "R4_D_train_stage2_development_0007/commands.json",
+  "R4_D_train_stage2_development_0007/failure.json",
+  "R4_D_train_stage2_development_0008/commands.json",
+  "R4_D_train_stage2_development_0008/failure.json",
+  "R4_D_train_stage2_development_0009/commands.json",
+  "R4_D_train_stage2_development_0009/failure.json",
+  "R4_D_train_stage2_development_0010/commands.json",
+  "R4_D_train_stage2_development_0010/failure.json",
+  "R4_D_train_stage2_development_0011/commands.json",
+  "R4_D_train_stage2_development_0011/failure.json",
+  "R4_D_train_stage2_development_0013/commands.json",
+  "R4_D_train_stage2_development_0013/failure.json",
+  "R4_D_train_stage2_development_0014/commands.json",
+  "R4_D_train_stage2_development_0014/failure.json",
+  "R4_D_train_stage2_development_0015/commands.json",
+  "R4_D_train_stage2_development_0015/failure.json",
+  "R4_D_train_stage2_development_0016/commands.json",
+  "R4_D_train_stage2_development_0016/failure.json",
+  "R4_D_train_stage2_development_0017/commands.json",
+  "R4_D_train_stage2_development_0017/failure.json",
+  "R4_D_train_stage2_development_0018/commands.json",
+  "R4_D_train_stage2_development_0018/failure.json",
+  "R4_D_train_stage2_development_0019/commands.json",
+  "R4_D_train_stage2_development_0019/failure.json",
+  "R4_D_train_stage2_development_0020/commands.json",
+  "R4_D_train_stage2_development_0020/failure.json"
+ ],
+ "full_partial_spectra_retained_locally_at": "outputs/round4-D-production/failed_attempts/attempt4_oom_workers3_20261026T054609Z/sealed_batches (gitignored; not delivered because the spectra never passed QC)"
+}

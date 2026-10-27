@@ -1,0 +1,53 @@
+{
+ "attempt": "attempt5_session_logoff",
+ "preserved_at_utc": "20261026T142828Z",
+ "reason": "Windows session logoff at 2026-10-26 18:42 (Winlogon event 6003) terminated the detached 6-worker run; no MemoryError and no QC failure was recorded.",
+ "policy": {
+  "deleted": false,
+  "eligible_for_training": false
+ },
+ "counts": {
+  "partial_no_summary": 6
+ },
+ "items": [
+  {
+   "batch": "R4_D_train_stage3_development_0017",
+   "category": "partial_no_summary",
+   "records_on_disk": 100
+  },
+  {
+   "batch": "R4_D_train_stage3_development_0018",
+   "category": "partial_no_summary",
+   "records_on_disk": 100
+  },
+  {
+   "batch": "R4_D_train_stage3_development_0019",
+   "category": "partial_no_summary",
+   "records_on_disk": 100
+  },
+  {
+   "batch": "R4_D_train_stage3_development_0020",
+   "category": "partial_no_summary",
+   "records_on_disk": 53
+  },
+  {
+   "batch": "R4_D_train_stage3_development_0021",
+   "category": "partial_no_summary",
+   "records_on_disk": 30
+  },
+  {
+   "batch": "R4_D_train_stage3_development_0022",
+   "category": "partial_no_summary",
+   "records_on_disk": 17
+  }
+ ],
+ "delivered_evidence": [
+  "R4_D_train_stage3_development_0017/audit.json",
+  "R4_D_train_stage3_development_0017/window_budget.json",
+  "R4_D_train_stage3_development_0018/audit.json",
+  "R4_D_train_stage3_development_0018/window_budget.json",
+  "R4_D_train_stage3_development_0019/audit.json",
+  "R4_D_train_stage3_development_0019/window_budget.json"
+ ],
+ "full_partial_spectra_retained_locally_at": "outputs/round4-D-production/failed_attempts/attempt5_session_logoff_20261026T142828Z/sealed_batches (gitignored; not delivered because the spectra never passed QC)"
+}

@@ -1,0 +1,68 @@
+{
+ "round_id": "round4",
+ "member": "D",
+ "working_directory": "C:\\Users\\陈\\Desktop\\AI开发\\repo-xray",
+ "base_main_commit": "cc921629e63570993b5980ebe6ea469ffa4fd6f0",
+ "interpreter": "C:\\Users\\陈\\Desktop\\AI开发\\round2-D-work\\.venv\\Scripts\\python.exe",
+ "python_version": "3.12.10",
+ "platform": "Windows-11-10.0.26200-SP0",
+ "environment_caveat": "Pinned project virtualenv used for every generation attempt; system python without numpy/scipy/xraylib was rejected by the frozen runner.",
+ "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
+ "runner_sha256": "2388be5107711088120b217a6705c202c78b2cd08634b33f5b4973a0325a8468",
+ "concurrency": {
+  "workers": 6,
+  "max_tasks_per_child": 2,
+  "invocation": "frozen runner imported unchanged through the delivered tools/run_member_recycle.py (during production the same script sat in work/), which subclasses concurrent.futures.ProcessPoolExecutor to recycle each worker after 2 batches and keep the pool at the requested width",
+  "frozen_runner_modified": false,
+  "wrapper_sha256": "41e9b78a4745a574eec3a07bf15d0f82d7b67408225831bb9cc7a367a0f6cefd",
+  "wrapper_pre_review_sha256": "7bb6b6f47094d16e03217e3b9f7309486e73ed9bcf39f8fa3adcb9e905af2528",
+  "wrapper_change_on_2026-10-27": "tool-directory resolution now walks to the real repository root (honours XRAY_REPO_ROOT / XRAY_PRODUCTION_TOOLS); the pool subclass is byte-for-byte unchanged",
+  "history": [
+   {
+    "attempt": "attempt1_workers4",
+    "workers": 4,
+    "recycle": null,
+    "outcome": "7 MemoryError batches + 4 interrupted batches; preserved"
+   },
+   {
+    "attempt": "attempt2_workers2",
+    "workers": 2,
+    "recycle": null,
+    "outcome": "stopped by owner request to use 3 workers; in-flight batches preserved"
+   },
+   {
+    "attempt": "attempt3_session_stopped",
+    "workers": 3,
+    "recycle": null,
+    "outcome": "Qoder restart terminated the job; in-flight batches preserved"
+   },
+   {
+    "attempt": "attempt4_oom_workers3",
+    "workers": 3,
+    "recycle": null,
+    "outcome": "22 MemoryError batches + 3 interrupted at Windows commit exhaustion; preserved"
+   },
+   {
+    "attempt": "owner_confirmed_6_plus_2",
+    "workers": 6,
+    "recycle": 2,
+    "outcome": "first attempt terminated by session logoff at 2026-10-26 18:42 (6 batches interrupted, preserved); second attempt terminated when worker processes vanished at 2026-10-26 23:01 (6 batches interrupted, preserved, coincident nvlddmkm event 153); third attempt completed 200/200 with 0 failures"
+   }
+  ]
+ },
+ "batch_commands": {
+  "production": "python -B datasets/round4/member_D/production_v1/tools/run_member_recycle.py --repository . --freeze datasets/round4/shared/freeze_v1 --release datasets/round4/shared/releases/production_release_v1.json --member D --out outputs/round4-D-production --workers 6 --minimum-free-gib 10 --include-sealed-qc",
+  "verification": "python -B datasets/round4/member_D/production_v1/tools/verify_production_D.py --out outputs/round4-D-production --report outputs/round4-D-production.independent_verification.json",
+  "verifier_selftest": "python -B datasets/round4/member_D/production_v1/tools/selftest_verify_D.py --report work/verifier_selftest_D.json",
+  "packaging": "python -B datasets/round4/member_D/production_v1/tools/package_D_round4.py && python -B datasets/round4/member_D/production_v1/tools/finalize_D_round4.py"
+ },
+ "run_logs_sha256": {
+  "round4-D-production.run2.log": "e34fb74144911b7c399877dd2dc3b570760558a218eca728beaa3e7c0025af98",
+  "round4-D-production.run3.log": "abce3ca993c8a79d89585b95217429a31f8521f4d19304ca250152149a5006e6",
+  "round4-D-production.run4.log": "430fa0b873d269eba4bc80e80075ef2d428538d3b20f211343f7827afa5b9a27",
+  "round4-D-production.run5.log": "7d2c87b177d08295d8723ff2515a4c134456944f24d5c8781de8834878f63739",
+  "round4-D-production.run6.log": "be3f1680714f9e9bbd7aacf2364dbc4769c5c78b8fec8400b707e0ac5b6645f3",
+  "round4-D-production.run7.log": "65ddf3b3bbde431247554b36252a32d5eb88fca2029ddaa35b1bfba4dc2ae503"
+ },
+ "notes": "The frozen runner, generator and inputs were never edited. Every batch that failed or was interrupted is preserved under reports/failed_attempts with its QC evidence and was regenerated from scratch under the same frozen batch seeds and conditions."
+}

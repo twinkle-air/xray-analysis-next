@@ -1,0 +1,220 @@
+{
+ "schema": "round4-member-D-verifier-selftest/v1",
+ "status": "pass",
+ "exit_code": 0,
+ "generated_at_utc": "2026-10-27T11:34:21Z",
+ "verifier": "C:\\Users\\陈\\Desktop\\AI开发\\repo-xray\\datasets\\round4\\member_D\\production_v1\\tools\\verify_production_D.py",
+ "cases": [
+  {
+   "case": "baseline_passes",
+   "expected_exit": 0,
+   "exit": 0,
+   "status": "pass",
+   "failed_checks": [],
+   "passed": true
+  },
+  {
+   "case": "missing_batch",
+   "expected_checks": [
+    "batch_set_complete"
+   ],
+   "expected_exit": "non-zero",
+   "exit": 1,
+   "status": "fail",
+   "failed_checks": [
+    "batch_set_complete"
+   ],
+   "undetected": [],
+   "passed": true
+  },
+  {
+   "case": "extra_batch",
+   "expected_checks": [
+    "batch_set_exact"
+   ],
+   "expected_exit": "non-zero",
+   "exit": 1,
+   "status": "fail",
+   "failed_checks": [
+    "batch_set_exact"
+   ],
+   "undetected": [],
+   "passed": true
+  },
+  {
+   "case": "archive_tampered",
+   "expected_checks": [
+    "archive_sha256"
+   ],
+   "expected_exit": "non-zero",
+   "exit": 1,
+   "status": "fail",
+   "failed_checks": [
+    "archive_bytes",
+    "archive_sha256",
+    "index_archive_sha256"
+   ],
+   "undetected": [],
+   "passed": true
+  },
+  {
+   "case": "qc_hash_broken",
+   "expected_checks": [
+    "qc_files_hashed"
+   ],
+   "expected_exit": "non-zero",
+   "exit": 1,
+   "status": "fail",
+   "failed_checks": [
+    "audit_full",
+    "qc_files_hashed"
+   ],
+   "undetected": [],
+   "passed": true
+  },
+  {
+   "case": "audit_incomplete",
+   "expected_checks": [
+    "audit_full"
+   ],
+   "expected_exit": "non-zero",
+   "exit": 1,
+   "status": "fail",
+   "failed_checks": [
+    "audit_full"
+   ],
+   "undetected": [],
+   "passed": true
+  },
+  {
+   "case": "summary_not_passed",
+   "expected_checks": [
+    "summary_status"
+   ],
+   "expected_exit": "non-zero",
+   "exit": 1,
+   "status": "fail",
+   "failed_checks": [
+    "summary_status"
+   ],
+   "undetected": [],
+   "passed": true
+  },
+  {
+   "case": "index_row_dropped",
+   "expected_checks": [
+    "index_row_count",
+    "index_ids_exact"
+   ],
+   "expected_exit": "non-zero",
+   "exit": 1,
+   "status": "fail",
+   "failed_checks": [
+    "blind_entry_count",
+    "blind_ids_resolve",
+    "index_ids_exact",
+    "index_role_distribution",
+    "index_row_count"
+   ],
+   "undetected": [],
+   "passed": true
+  },
+  {
+   "case": "index_role_flipped",
+   "expected_checks": [
+    "index_matches_frozen_plan",
+    "index_role_distribution",
+    "families_do_not_cross_usage"
+   ],
+   "expected_exit": "non-zero",
+   "exit": 1,
+   "status": "fail",
+   "failed_checks": [
+    "families_do_not_cross_usage",
+    "index_matches_frozen_plan",
+    "index_role_distribution"
+   ],
+   "undetected": [],
+   "passed": true
+  },
+  {
+   "case": "index_eligibility_flipped",
+   "expected_checks": [
+    "index_not_eligible"
+   ],
+   "expected_exit": "non-zero",
+   "exit": 1,
+   "status": "fail",
+   "failed_checks": [
+    "index_not_eligible"
+   ],
+   "undetected": [],
+   "passed": true
+  },
+  {
+   "case": "window_budget_breached",
+   "expected_checks": [
+    "window_budget_passed",
+    "window_budget_within_frozen_caps"
+   ],
+   "expected_exit": "non-zero",
+   "exit": 1,
+   "status": "fail",
+   "failed_checks": [
+    "window_budget_passed",
+    "window_budget_within_frozen_caps"
+   ],
+   "undetected": [],
+   "passed": true
+  },
+  {
+   "case": "blind_entry_dropped",
+   "expected_checks": [
+    "blind_entry_count"
+   ],
+   "expected_exit": "non-zero",
+   "exit": 1,
+   "status": "fail",
+   "failed_checks": [
+    "blind_entry_count"
+   ],
+   "undetected": [],
+   "passed": true
+  },
+  {
+   "case": "blind_payload_relabelled",
+   "expected_checks": [
+    "blind_keys_allowed",
+    "blind_no_label_leakage",
+    "blind_entry_sha256"
+   ],
+   "expected_exit": "non-zero",
+   "exit": 1,
+   "status": "fail",
+   "failed_checks": [
+    "blind_entry_sha256",
+    "blind_keys_allowed",
+    "blind_no_label_leakage"
+   ],
+   "undetected": [],
+   "passed": true
+  },
+  {
+   "case": "full_result_tampered",
+   "expected_checks": [
+    "full_result_sha256"
+   ],
+   "expected_exit": "non-zero",
+   "exit": 1,
+   "status": "fail",
+   "failed_checks": [
+    "full_result_sha256",
+    "index_archive_sha256"
+   ],
+   "undetected": [],
+   "passed": true
+  }
+ ],
+ "case_count": 14,
+ "failed_case_count": 0
+}

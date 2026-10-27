@@ -1,0 +1,21 @@
+{
+ "attempt": "attempt3",
+ "workers": 3,
+ "reason": "Run stopped overnight between 2026-10-25 23:27 and 2026-10-26 07:41 (all python workers gone; no batch failure recorded). In-flight batches preserved instead of deleting; completed batches retained.",
+ "preserved": [
+  "in_distribution_0009 (generation+audit complete, replay interrupted)",
+  "in_distribution_0010 (generation+audit complete, replay interrupted)",
+  "R4_D_train_stage1_development_0001 (10/100 records generated)"
+ ],
+ "eligible_for_training": false,
+ "partial_data_preserved": true,
+ "preserved_at_utc": "20261025T234211Z",
+ "counts": {},
+ "delivered_evidence": [
+  "R4_D_sealed_test_none_sealed_in_distribution_0009/audit.json",
+  "R4_D_sealed_test_none_sealed_in_distribution_0009/window_budget.json",
+  "R4_D_sealed_test_none_sealed_in_distribution_0010/audit.json",
+  "R4_D_sealed_test_none_sealed_in_distribution_0010/window_budget.json"
+ ],
+ "full_partial_spectra_retained_locally_at": "outputs/round4-D-production/failed_attempts/attempt3_session_stopped_20261025T234211Z/sealed_batches (gitignored; not delivered because the spectra never passed QC)"
+}

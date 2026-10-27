@@ -1,0 +1,605 @@
+{
+  "records": [
+    {
+      "native_id": "S000001",
+      "lost_fraction": 0.009940877246933183,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000002",
+      "lost_fraction": 0.009940877246933183,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000003",
+      "lost_fraction": 0.002234458274746281,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000004",
+      "lost_fraction": 0.002234458274746281,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000005",
+      "lost_fraction": 0.010063939042542748,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000006",
+      "lost_fraction": 0.010063939042542748,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000007",
+      "lost_fraction": 0.009793601595492113,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000008",
+      "lost_fraction": 0.009793601595492113,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000009",
+      "lost_fraction": 0.01016467372209718,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000010",
+      "lost_fraction": 0.01016467372209718,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000011",
+      "lost_fraction": 0.009843157329096023,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000012",
+      "lost_fraction": 0.009843157329096023,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000013",
+      "lost_fraction": 0.002382383205835166,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000014",
+      "lost_fraction": 0.002382383205835166,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000015",
+      "lost_fraction": 0.009847197729847282,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000016",
+      "lost_fraction": 0.009847197729847282,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000017",
+      "lost_fraction": 0.010184644676910727,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000018",
+      "lost_fraction": 0.010184644676910727,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000019",
+      "lost_fraction": 0.01001446964140404,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000020",
+      "lost_fraction": 0.01001446964140404,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000021",
+      "lost_fraction": 0.0023728552165468435,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000022",
+      "lost_fraction": 0.0023728552165468435,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000023",
+      "lost_fraction": 0.010014289606173508,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000024",
+      "lost_fraction": 0.010014289606173508,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000025",
+      "lost_fraction": 0.009909154819117314,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000026",
+      "lost_fraction": 0.009909154819117314,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000027",
+      "lost_fraction": 0.002450353026577684,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000028",
+      "lost_fraction": 0.002450353026577684,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000029",
+      "lost_fraction": 0.010030143454461652,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000030",
+      "lost_fraction": 0.010030143454461652,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000031",
+      "lost_fraction": 0.009900766296292518,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000032",
+      "lost_fraction": 0.009900766296292518,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000033",
+      "lost_fraction": 0.009951256279769548,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000034",
+      "lost_fraction": 0.009951256279769548,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000035",
+      "lost_fraction": 0.00999613290189297,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000036",
+      "lost_fraction": 0.00999613290189297,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000037",
+      "lost_fraction": 0.0023131333692645124,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000038",
+      "lost_fraction": 0.0023131333692645124,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000039",
+      "lost_fraction": 0.009820925375240415,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000040",
+      "lost_fraction": 0.009820925375240415,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000041",
+      "lost_fraction": 0.009702451819302089,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000042",
+      "lost_fraction": 0.009702451819302089,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000043",
+      "lost_fraction": 0.00978528711996968,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000044",
+      "lost_fraction": 0.00978528711996968,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000045",
+      "lost_fraction": 0.009932001576722076,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000046",
+      "lost_fraction": 0.009932001576722076,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000047",
+      "lost_fraction": 0.009770656269233865,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000048",
+      "lost_fraction": 0.009770656269233865,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000049",
+      "lost_fraction": 0.009973503384949471,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000050",
+      "lost_fraction": 0.009973503384949471,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000051",
+      "lost_fraction": 0.0027800637017326496,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000052",
+      "lost_fraction": 0.0027800637017326496,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000053",
+      "lost_fraction": 0.002727449938535628,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000054",
+      "lost_fraction": 0.002727449938535628,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000055",
+      "lost_fraction": 0.0026699439765545644,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000056",
+      "lost_fraction": 0.0026699439765545644,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000057",
+      "lost_fraction": 0.002798224464059069,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000058",
+      "lost_fraction": 0.002798224464059069,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000059",
+      "lost_fraction": 0.0008003935685546867,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000060",
+      "lost_fraction": 0.0008003935685546867,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000061",
+      "lost_fraction": 0.002808344160935906,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000062",
+      "lost_fraction": 0.002808344160935906,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000063",
+      "lost_fraction": 0.002751149568974921,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000064",
+      "lost_fraction": 0.002751149568974921,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000065",
+      "lost_fraction": 0.0027569524903289897,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000066",
+      "lost_fraction": 0.0027569524903289897,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000067",
+      "lost_fraction": 0.002732577955864089,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000068",
+      "lost_fraction": 0.002732577955864089,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000069",
+      "lost_fraction": 0.0008736819429543462,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000070",
+      "lost_fraction": 0.0008736819429543462,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000071",
+      "lost_fraction": 0.0026723805086128773,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000072",
+      "lost_fraction": 0.0026723805086128773,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000073",
+      "lost_fraction": 0.0027247247729980453,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000074",
+      "lost_fraction": 0.0027247247729980453,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000075",
+      "lost_fraction": 0.0008380651251856161,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000076",
+      "lost_fraction": 0.0008380651251856161,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000077",
+      "lost_fraction": 0.0027563013993341223,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000078",
+      "lost_fraction": 0.0027563013993341223,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000079",
+      "lost_fraction": 0.002766154110829028,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000080",
+      "lost_fraction": 0.002766154110829028,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000081",
+      "lost_fraction": 0.0008407550348311863,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000082",
+      "lost_fraction": 0.0008407550348311863,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000083",
+      "lost_fraction": 0.002765146985600344,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000084",
+      "lost_fraction": 0.002765146985600344,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000085",
+      "lost_fraction": 0.0008582739027243185,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000086",
+      "lost_fraction": 0.0008582739027243185,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000087",
+      "lost_fraction": 0.002811996334484162,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000088",
+      "lost_fraction": 0.002811996334484162,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000089",
+      "lost_fraction": 0.0026717146907500973,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000090",
+      "lost_fraction": 0.0026717146907500973,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000091",
+      "lost_fraction": 0.0027771276090436535,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000092",
+      "lost_fraction": 0.0027771276090436535,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000093",
+      "lost_fraction": 0.0027241836459368594,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000094",
+      "lost_fraction": 0.0027241836459368594,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000095",
+      "lost_fraction": 0.002766214390104327,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000096",
+      "lost_fraction": 0.002766214390104327,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000097",
+      "lost_fraction": 0.002830660254507761,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000098",
+      "lost_fraction": 0.002830660254507761,
+      "budget": 0.5,
+      "passed": true
+    },
+    {
+      "native_id": "S000099",
+      "lost_fraction": 0.0008721275984979035,
+      "budget": 0.1,
+      "passed": true
+    },
+    {
+      "native_id": "S000100",
+      "lost_fraction": 0.0008721275984979035,
+      "budget": 0.1,
+      "passed": true
+    }
+  ],
+  "status": "passed"
+}

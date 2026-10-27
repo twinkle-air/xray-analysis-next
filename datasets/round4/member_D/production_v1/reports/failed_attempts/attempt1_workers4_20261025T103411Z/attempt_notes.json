@@ -1,0 +1,75 @@
+{
+ "attempt": "attempt1",
+ "workers": 4,
+ "stopped_utc": "20261025T103411Z",
+ "reason": "MemoryError under 4-worker concurrency; free physical memory ~0.3 GiB. 7 failed and 4 partial batches preserved; run restarted with --workers 2.",
+ "failed_batches": [
+  {
+   "batch_id": "R4_D_sealed_test_none_sealed_challenge_0005",
+   "error_type": "MemoryError"
+  },
+  {
+   "batch_id": "R4_D_sealed_test_none_sealed_challenge_0007",
+   "error_type": "MemoryError"
+  },
+  {
+   "batch_id": "R4_D_sealed_test_none_sealed_challenge_0009",
+   "error_type": "MemoryError"
+  },
+  {
+   "batch_id": "R4_D_sealed_test_none_sealed_challenge_0010",
+   "error_type": "MemoryError"
+  },
+  {
+   "batch_id": "R4_D_sealed_test_none_sealed_in_distribution_0001",
+   "error_type": "MemoryError"
+  },
+  {
+   "batch_id": "R4_D_sealed_test_none_sealed_in_distribution_0002",
+   "error_type": "MemoryError"
+  },
+  {
+   "batch_id": "R4_D_sealed_test_none_sealed_in_distribution_0003",
+   "error_type": "MemoryError"
+  }
+ ],
+ "partial_batches": [
+  "R4_D_sealed_test_none_sealed_in_distribution_0006",
+  "R4_D_sealed_test_none_sealed_in_distribution_0007",
+  "R4_D_sealed_test_none_sealed_in_distribution_0008",
+  "R4_D_sealed_test_none_sealed_in_distribution_0009"
+ ],
+ "passed_batches_retained": [
+  "R4_D_sealed_test_none_sealed_challenge_0001",
+  "R4_D_sealed_test_none_sealed_challenge_0002",
+  "R4_D_sealed_test_none_sealed_challenge_0003",
+  "R4_D_sealed_test_none_sealed_challenge_0004",
+  "R4_D_sealed_test_none_sealed_challenge_0006",
+  "R4_D_sealed_test_none_sealed_challenge_0008",
+  "R4_D_sealed_test_none_sealed_in_distribution_0004",
+  "R4_D_sealed_test_none_sealed_in_distribution_0005"
+ ],
+ "preserved_at_utc": "20261025T103411Z",
+ "counts": {},
+ "delivered_evidence": [
+  "R4_D_sealed_test_none_sealed_challenge_0005/audit.json",
+  "R4_D_sealed_test_none_sealed_challenge_0005/commands.json",
+  "R4_D_sealed_test_none_sealed_challenge_0005/failure.json",
+  "R4_D_sealed_test_none_sealed_challenge_0005/window_budget.json",
+  "R4_D_sealed_test_none_sealed_challenge_0007/commands.json",
+  "R4_D_sealed_test_none_sealed_challenge_0007/failure.json",
+  "R4_D_sealed_test_none_sealed_challenge_0009/commands.json",
+  "R4_D_sealed_test_none_sealed_challenge_0009/failure.json",
+  "R4_D_sealed_test_none_sealed_challenge_0010/commands.json",
+  "R4_D_sealed_test_none_sealed_challenge_0010/failure.json",
+  "R4_D_sealed_test_none_sealed_in_distribution_0001/commands.json",
+  "R4_D_sealed_test_none_sealed_in_distribution_0001/failure.json",
+  "R4_D_sealed_test_none_sealed_in_distribution_0002/commands.json",
+  "R4_D_sealed_test_none_sealed_in_distribution_0002/failure.json",
+  "R4_D_sealed_test_none_sealed_in_distribution_0003/commands.json",
+  "R4_D_sealed_test_none_sealed_in_distribution_0003/failure.json",
+  "R4_D_sealed_test_none_sealed_in_distribution_0006/audit.json",
+  "R4_D_sealed_test_none_sealed_in_distribution_0006/window_budget.json"
+ ],
+ "full_partial_spectra_retained_locally_at": "outputs/round4-D-production/failed_attempts/attempt1_workers4_20261025T103411Z/sealed_batches (gitignored; not delivered because the spectra never passed QC)"
+}

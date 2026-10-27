@@ -1,0 +1,8 @@
+{
+  "batch_id": "R4_D_train_stage2_development_0003",
+  "error_type": "MemoryError",
+  "error": "",
+  "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
+  "partial_data_preserved": true,
+  "eligible_for_training": false
+}

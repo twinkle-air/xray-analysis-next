@@ -1,0 +1,34 @@
+{
+ "schema": "round4-member-D-independent-verification/v2",
+ "status": "pass",
+ "exit_code": 0,
+ "generated_at_utc": "2026-10-27T11:34:15Z",
+ "elapsed_seconds": 258.313,
+ "out": "outputs\\round4-D-production",
+ "freeze": "C:\\Users\\陈\\Desktop\\AI开发\\repo-xray\\datasets\\round4\\shared\\freeze_v1",
+ "freeze_manifest_sha256": "25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519",
+ "expected_batches": 200,
+ "expected_records": 20000,
+ "totals": {
+  "batches_with_evidence": 200,
+  "index_rows": 20000,
+  "roles": {
+   "sealed_test": 2000,
+   "train": 16000,
+   "validation": 2000
+  },
+  "records_full_hash_checked": 20000,
+  "blind_entries": 20000,
+  "blind_top_level_keys": [
+   "axis",
+   "counts",
+   "signal_unit",
+   "synthetic",
+   "x"
+  ]
+ },
+ "failure_count": 0,
+ "failed_check_names": [],
+ "failed_checks": [],
+ "truncation": null
+}
