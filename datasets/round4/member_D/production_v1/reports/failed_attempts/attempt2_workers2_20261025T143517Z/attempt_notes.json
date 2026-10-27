@@ -1,0 +1,18 @@
+{
+ "attempt": "attempt2",
+ "workers": 2,
+ "reason": "User requested 3-worker parallelism on 2026-10-25; in-flight batches preserved instead of deleting. Completed batches retained in the main output.",
+ "preserved": [
+  "R4_D_sealed_test_none_sealed_in_distribution_0003 (generation complete, replay interrupted)",
+  "R4_D_sealed_test_none_sealed_in_distribution_0006 (48/100 records generated)"
+ ],
+ "eligible_for_training": false,
+ "partial_data_preserved": true,
+ "preserved_at_utc": "20261025T143517Z",
+ "counts": {},
+ "delivered_evidence": [
+  "R4_D_sealed_test_none_sealed_in_distribution_0003/audit.json",
+  "R4_D_sealed_test_none_sealed_in_distribution_0003/window_budget.json"
+ ],
+ "full_partial_spectra_retained_locally_at": "outputs/round4-D-production/failed_attempts/attempt2_workers2_20261025T143517Z/sealed_batches (gitignored; not delivered because the spectra never passed QC)"
+}

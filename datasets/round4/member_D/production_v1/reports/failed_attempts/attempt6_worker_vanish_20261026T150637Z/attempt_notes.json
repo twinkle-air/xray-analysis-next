@@ -1,0 +1,52 @@
+{
+ "attempt": "attempt6_worker_vanish",
+ "preserved_at_utc": "20261026T150637Z",
+ "reason": "All six worker processes disappeared at 2026-10-26 23:01 mid-generation (77-97 of 100 records written). No MemoryError, no failure.json, no reboot; coincident nvlddmkm event 153 and WER LiveKernelEvent 141.",
+ "evidence": [
+  "System log nvlddmkm Id 153 at 23:01:29",
+  "Application log WER LiveKernelEvent 141 with WATCHDOG-20261026-2301.dmp at 23:01:45/23:02:27",
+  "Kernel-Power 105 at 23:01:26",
+  "last boot 2026-09-26 10:44 (no restart)"
+ ],
+ "policy": {
+  "deleted": false,
+  "eligible_for_training": false
+ },
+ "counts": {
+  "partial_no_summary": 6
+ },
+ "items": [
+  {
+   "batch": "R4_D_train_stage3_development_0017",
+   "category": "partial_no_summary",
+   "records_on_disk": 93
+  },
+  {
+   "batch": "R4_D_train_stage3_development_0018",
+   "category": "partial_no_summary",
+   "records_on_disk": 91
+  },
+  {
+   "batch": "R4_D_train_stage3_development_0019",
+   "category": "partial_no_summary",
+   "records_on_disk": 78
+  },
+  {
+   "batch": "R4_D_train_stage3_development_0020",
+   "category": "partial_no_summary",
+   "records_on_disk": 77
+  },
+  {
+   "batch": "R4_D_train_stage3_development_0021",
+   "category": "partial_no_summary",
+   "records_on_disk": 97
+  },
+  {
+   "batch": "R4_D_train_stage3_development_0022",
+   "category": "partial_no_summary",
+   "records_on_disk": 95
+  }
+ ],
+ "delivered_evidence": [],
+ "full_partial_spectra_retained_locally_at": "outputs/round4-D-production/failed_attempts/attempt6_worker_vanish_20261026T150637Z/sealed_batches (gitignored; not delivered because the spectra never passed QC)"
+}

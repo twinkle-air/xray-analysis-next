@@ -1,0 +1,56 @@
+{
+ "status": "member_independent_verification_passed_pending_coordinator_acceptance",
+ "verified_at_utc": "2026-10-27T05:48:40Z",
+ "independent_of_runner": true,
+ "verification_script": "work/verify_production_D.py",
+ "round_id": "round4",
+ "member": "D",
+ "native_batches": 200,
+ "batches_with_passed_summary": 200,
+ "batches_failing_independent_checks": 0,
+ "total_spectra": 20000,
+ "unique_global_record_ids": 20000,
+ "unique_opaque_blind_ids": 20000,
+ "blind_archive_entries": 20000,
+ "blind_archive_crc": "passed",
+ "blind_names_are_opaque": true,
+ "blind_top_level_keys": [
+  "axis",
+  "counts",
+  "signal_unit",
+  "synthetic",
+  "x"
+ ],
+ "blind_label_leakage": [],
+ "roles": {
+  "sealed_test": 2000,
+  "train": 16000,
+  "validation": 2000
+ },
+ "record_ids_reused_across_roles": 0,
+ "sealed_archives_shared_with_non_sealed": [],
+ "all_batch_summaries_passed": true,
+ "all_native_ZIP_SHA_CRC_and_internal_integrity_passed": true,
+ "all_spectra_audited": true,
+ "all_spectra_full_physics_replayed": true,
+ "runner_hash_matches_release": true,
+ "freeze_manifest_hash_matches_release": true,
+ "all_window_budgets_passed": true,
+ "maximum_window_lost_fraction": 0.03678396069913528,
+ "eligible_for_training_values_in_index": [
+  "False"
+ ],
+ "failures_in_final_run": 0,
+ "preserved_failure_attempts": [
+  "attempt1_workers4_20261025T103411Z",
+  "attempt2_workers2_20261025T143517Z",
+  "attempt3_session_stopped_20261025T234211Z",
+  "attempt4_oom_workers3_20261026T054609Z",
+  "attempt5_session_logoff_20261026T142828Z",
+  "attempt6_worker_vanish_20261026T150637Z"
+ ],
+ "blind_only_archive_sha256": "cbd82cb4894fedc429a80e732c4fb7aa91abcacf8daea753d25a434b1fc612df",
+ "qc_archive_sha256": "1b20ac9cfe25ad48bad198aeadef057743a3b0ef8afd75be63e6458bef52163a",
+ "delivered_archive_hashes_match_independently_verified_source": true,
+ "delivered_archive_hash_mismatches": []
+}
