@@ -1,6 +1,6 @@
 # Round-4 member C production_v1
 
-冻结生成器 v1 全量 20,000 谱（200 批 × 100），freeze manifest `25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519`，无试片，全部记录 `eligible_for_training=false`，等待协调人验收。
+冻结生成器 v1 全量 20,000 谱（200 批 × 100），freeze manifest `25deee3198281d033641ca45817a40727461269df11d653df5ca842b908fa519`，无试片，全部记录 `eligible_for_training=false`，协调人交接核验已完成，训练纳入仍待另行批准。
 
 - `actual_record_index.csv`：20,000 条记录的实际路径/SHA 账目。
 - `transfer_chunks/C_round4_blind_inputs.zip.part*` + `chunk_manifest.json`：全部盲谱 ZIP 的无损分块（48 MiB/块），按序拼接后核对整档 SHA-256 与 ZIP CRC；分块本身不是能谱。
@@ -44,3 +44,7 @@ gpg --decrypt --pinentry-mode loopback R4_C_sealed_test_native_archives.zip.aes2
 GitHub 对每个资产回报的 digest 已记在 native_archive_receipt.json，与 inventory 的 SHA-256 全部一致（181/181），因此除“上传成功”外还有服务端存储字节的独立佐证；本人已实测通过 api_url 取回一个 validation 资产并核对 SHA-256 相同。
 
 第 2 步需要解密口令：口令不进仓库/PR/日志，由本人通过仓库外渠道单独交给项目负责人，负责人确认“已收到且可用”后 receipt 的 `sealed_test_custody.passphrase_handover_status` 才改为 received；在那之前密封 20 档按“密文已托管、凭据未闭环”处理，不得视为完成交接。
+
+## 协调人封存交接核验
+
+2026-10-27：负责人提供的凭据已在本机验证可用，成功解密 Release 的 AES256 容器；明文容器 SHA-256、内部20个原包的大小/SHA-256/ZIP CRC，以及2,000条记录的 blind/full 摘要和冻结条件/种子/重复均通过。非敏感证据见 `reports/coordinator_sealed_handover_verification.json`，回执状态为 `received`。临时密文、明文与 GnuPG 工作目录均已删除；口令不进入仓库、PR或报告。本项为工程交接/QC，不代表真实仪器准确度，不自动准入训练。

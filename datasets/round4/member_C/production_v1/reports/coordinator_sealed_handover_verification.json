@@ -1,0 +1,201 @@
+{
+  "schema": "round4-C-coordinator-sealed-handover-verification/1",
+  "status": "passed",
+  "verified_at_utc": "2026-10-27T14:20:11Z",
+  "release_asset_id": 681634730,
+  "encrypted_bytes": 495479241,
+  "encrypted_sha256": "6ac29d7e9c921daa508d5d6c2abedada6ff9b072f00f784449ca2fdcc3f5279d",
+  "plaintext_container_sha256": "b43f761db5c0d53465f3c98a55cd51a70fd72985e9d0d48737ad72466b143321",
+  "container_CRC": "passed",
+  "decryption_succeeded": true,
+  "credential_supplied_by_owner": true,
+  "credential_included_in_report": false,
+  "sealed_native_archives": 20,
+  "sealed_records": 2000,
+  "archives": [
+    {
+      "archive": "R4_C_sealed_test_none_sealed_challenge_0001.zip",
+      "bytes": 24184480,
+      "sha256": "a4a4db965537206f012e7ff5c1e21a922e17c2453a24085546c93bbfbae0780f",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_challenge_0002.zip",
+      "bytes": 24873878,
+      "sha256": "96d79e2e50e60ec6ba908d07e3eff91aa9a872a903d608e8f8c49d12173df733",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_challenge_0003.zip",
+      "bytes": 24951989,
+      "sha256": "75f4f7c1f07622327b9599e430c90c8b070763ac603f46fdd6548d88dfad4775",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_challenge_0004.zip",
+      "bytes": 25104152,
+      "sha256": "6990f87596e31f3ab98fd1f170b03f84d194733e4297c4217cfc3e017b12b48e",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_challenge_0005.zip",
+      "bytes": 24885287,
+      "sha256": "1d5b37aa6e005195fbf50ff07697d2a5a26b2b749a9e99daad512c2eddf31756",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_challenge_0006.zip",
+      "bytes": 25059296,
+      "sha256": "ec31d6d71d78c0c93de3b77b19373c9768b266adbe34f6343b9404b94558647a",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_challenge_0007.zip",
+      "bytes": 24602595,
+      "sha256": "0929a9b4cdc7f0d16faf4cadcb46f63db1775a1d72cab40b811bd9cc3b5e83fa",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_challenge_0008.zip",
+      "bytes": 24401354,
+      "sha256": "0ac13d71253a5cd48695923db5349830808a0b88d38c0f4ff5219e2724c71f34",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_challenge_0009.zip",
+      "bytes": 25004126,
+      "sha256": "468380e5ea8f3e70157bdccbef46bf8c4ae3fa6dd92628726deca83dd88f24f7",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_challenge_0010.zip",
+      "bytes": 24724586,
+      "sha256": "719c63bbf5cd3b8940c10e7a4c604686b0b8669ebcb993ebdf33b924f337cdb9",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_in_distribution_0001.zip",
+      "bytes": 24088341,
+      "sha256": "865ade08d252ceb7e49c9a6e6713bf6267fe52df130877bc65a690640daee170",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_in_distribution_0002.zip",
+      "bytes": 24886041,
+      "sha256": "f7975f6f3d29bcada636d0fccea7d3dff34541962c291ba89e786d5f384e61a5",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_in_distribution_0003.zip",
+      "bytes": 24952057,
+      "sha256": "b12c644b6ebedbdd6c0b62536e6424409799ded81101bf9f2cfc97a483655566",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_in_distribution_0004.zip",
+      "bytes": 25072579,
+      "sha256": "2280fd909d3c2c1b9bad3c142d119ebc229694b497703f2be4aa1773f8043fe4",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_in_distribution_0005.zip",
+      "bytes": 24868691,
+      "sha256": "395231a50787afe7b492f648dd7365f49efb3597cef829495ae9cf90b39d1baf",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_in_distribution_0006.zip",
+      "bytes": 25041624,
+      "sha256": "29dde56e05b71ddd55ebae26b530c4c241a4faaf31efcbe7b7be702237b00cf7",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_in_distribution_0007.zip",
+      "bytes": 24582507,
+      "sha256": "457bff64f0aefaa2bd6faae9b18f0fa6b782609abd4c4b29a1c41e6cfb85f1f6",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_in_distribution_0008.zip",
+      "bytes": 24389655,
+      "sha256": "b19b22c2f7cee24a360c73f9a16b7421f975902f522731033d974ea8eb0b7a29",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_in_distribution_0009.zip",
+      "bytes": 25039777,
+      "sha256": "e499638cbd4749229ad7800fa6f5528d8c35aeb78fb02e5116645dbf824a64a7",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    },
+    {
+      "archive": "R4_C_sealed_test_none_sealed_in_distribution_0010.zip",
+      "bytes": 24762482,
+      "sha256": "99abaae7297a7af91095c4c42a4f74ae44ed74d4d3df336e2ddb42ca3349c049",
+      "CRC": "passed",
+      "records_verified": 100,
+      "blind_full_hashes_match": true,
+      "truth_seed_condition_repeat_match": true
+    }
+  ],
+  "temporary_cipher_plaintext_and_GnuPG_directory_removed": true,
+  "physical_replay_performed": false,
+  "training_started": false,
+  "elapsed_seconds": 96.9
+}
