@@ -1,0 +1,77 @@
+{
+  "batch_id": "C-part-v2-20261020",
+  "batch_version": "C-recipes-v2",
+  "identity": {
+    "generator_version": "0.2.1",
+    "manifest_sha256": "604cd6a07ca7857fd901073bc3a276210447fce4f41aa5a0af7b9ac6a4666f1f",
+    "master_samples_sha256": "78ca94780021c17915565d152cffb234976e2d007d796126d84cbf4ce3d1a9b3",
+    "physical_model_version": "0.2.0",
+    "physics_core_sha256": "e820ecdb5ed5fbceb870f382c8c7c411ba85c65673bc19258fb935f562ed83b0",
+    "profile_sha256": "e30ba2115f3b3507b835cda8f5e21209e615348e87ef7f6a7a32999d424cb280",
+    "replicates": 2,
+    "seed_batch": 2026110205,
+    "seed_split": 20261102,
+    "zip_sha256": "0176c90109473ed03a499edcb6fd12e6405b0dcb6879acba04951f544103c54a"
+  },
+  "not_verified": [
+    "全部为合成数据，无真实设备校准，不证明真实含量准确度或 95%/5% 目标",
+    "模型未包含死时间、堆积、粒度、水分、多层、多次散射、粗糙度与长期漂移",
+    "Ba K 线中心落在能窗外，保留 L/M 线记录",
+    "acceptance_status = pending_independent_validation"
+  ],
+  "qc": {
+    "audit": {
+      "errors": 0,
+      "spectra_checked": 2000,
+      "status": "passed"
+    },
+    "index_policy_check": {
+      "passed": true
+    },
+    "pack": {
+      "sha256": "0176c90109473ed03a499edcb6fd12e6405b0dcb6879acba04951f544103c54a  P5_v2_dataset.zip",
+      "status": null,
+      "zip_bytes": 333143877
+    },
+    "replay": {
+      "complete_physics_recalculation": true,
+      "maximum_absolute_array_difference": 0.0,
+      "same_environment": true,
+      "spectra_recalculated": 2000,
+      "status": "passed"
+    },
+    "replay_errors": 0
+  },
+  "review_findings_addressed": {
+    "P1-1_heldout_label": "all rows benchmark_split=heldout, holdout_status=condition_heldout, usage_policy=pilot_only_isolated_from_training_and_tuning; recipe_family_split 仅描述配方来源",
+    "P1-2_leakage": "leak_group 粒度划分，跨集合组数 0，相同组成跨集合 0",
+    "P2-1_distinct_compositions": "1000/1000（v1 为 944）",
+    "P2-2_interference_control": "Ni/Cr/Mo/Cu 对照不再写死 8%，Fe 不作对照变量",
+    "P2-3_declared_range": "逐情景区间校验，越界 0 项（v1 常规情景 548 行越界）"
+  },
+  "review_status": "pending_independent_review",
+  "role": "C 部分：1000 条铁基合金主配方 + P5 留出条件 2000 谱（v2，修复 PR #2 首轮 5 条）",
+  "scale": {
+    "dataset_files_in_zip": 4055,
+    "distinct_compositions": 1000,
+    "duplicate_composition_groups": 0,
+    "formulas": 1000,
+    "group_size_histogram": {
+      "1": 600,
+      "5": 80
+    },
+    "leak_groups": 680,
+    "scenario_counts": {
+      "interference_control": 200,
+      "regular_variation": 600,
+      "sparse_boundary": 200
+    },
+    "spectra": 2000,
+    "zip_bytes": 333143877
+  },
+  "supersedes": "C-part-20261018 (C-recipes-v1, PR #2 review_failed)",
+  "usage": {
+    "note": "P5 是留出条件批次：本批 2000 谱不得用于训练、调参或阈值挑选；下游请经 scripts/c_pilot_guard.py::training_rows() 读取（会拒绝而非静默放行）。本交付不为其他批次的可训练性作背书。",
+    "trainable": false
+  }
+}
