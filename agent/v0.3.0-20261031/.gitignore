@@ -1,0 +1,16 @@
+# Task artifacts and caches (never committed)
+jobs/
+outputs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mpl-cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.log
+
+# V9/V10 model package: extracted from ../../models/v9-v10-20261030/*.zip, not duplicated here
+deliverables/xrf-models-v9-v10-20261030/
