@@ -236,7 +236,7 @@ follow = follow_up(agent_root, "请跑一次 V9 对照", job_id, Workspace(works
 
 ## 8. 入库范围与仓库位置
 
-本目录是 `xray-analysis-next` 仓库 `main` 之外的独立版本目录，按该仓库 [CONTRIBUTING.md](../../CONTRIBUTING.md) 经任务分支与 PR 提交，**不直接推送 main**。
+本目录是 `xray-analysis-next` 仓库内的独立版本目录（`agent/v0.3.0-20261031/`），按该仓库 [CONTRIBUTING.md](../../CONTRIBUTING.md) 经任务分支与 PR 提交，**不直接推送 main**。
 
 **入库内容：**
 - `agent-workspace/agent/` 与 `agent-workspace/verify_*.py`：当前可运行的代码与本机校验脚本。
