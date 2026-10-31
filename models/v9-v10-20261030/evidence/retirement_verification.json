@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "retained_versions": [
+    "V9",
+    "V10"
+  ],
+  "embedded_dependencies_preserved": true,
+  "protected_runtime_files": 180,
+  "hashes_unchanged": true,
+  "before_after_outputs_identical": true,
+  "retired_path_reads_blocked": true,
+  "portable_export_same_outputs": true,
+  "preserved_data_evidence_files": 52,
+  "net_bytes_freed": 99521303,
+  "default_version": "V9",
+  "default_unchanged": true,
+  "completed_utc": "2026-10-30T12:59:03.425428+00:00"
+}

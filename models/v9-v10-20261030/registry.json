@@ -1,0 +1,20 @@
+{
+  "package": "xrf-models-v9-v10.zip",
+  "sha256": "10caac0e0b8a669a35a92a4f924704300a1adcda97fec8f44159707b10bd38f3",
+  "models": {
+    "V9": {
+      "entrypoint": "outputs/model-v9-20261028/domain_guard/domain_runtime.py",
+      "role": "optional_disagreement_reference"
+    },
+    "V10": {
+      "entrypoint": "outputs/model-v10-20261030/runtime_v10.py",
+      "role": "recommended_primary_in_future_agent"
+    }
+  },
+  "wrapper": "run_model.py --model {version} --input INPUT --out OUTPUT",
+  "local_default_remains": "V9",
+  "agent_runtime_created": false,
+  "supports": "synthetic 2048-channel nonnegative integer counts only",
+  "formal_report_eligible": false,
+  "hardware_validated": false
+}

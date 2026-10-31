@@ -1,0 +1,70 @@
+{
+  "status": "pass",
+  "no_retraining": true,
+  "source_frozen_files_unchanged": true,
+  "same_host_original_and_export_example_results_bit_exact": true,
+  "standalone_V6_deleted": true,
+  "V9_V10_after_retirement_results_bit_exact": true,
+  "export_not_reading_original_model_directories": true,
+  "checks": [
+    {
+      "version": "V9",
+      "check": "zero_total",
+      "rejected": true,
+      "error_type_verified": true
+    },
+    {
+      "version": "V10",
+      "check": "zero_total",
+      "rejected": true,
+      "error_type_verified": true
+    },
+    {
+      "version": "V9",
+      "check": "truth_leak",
+      "rejected": true,
+      "error_type_verified": true
+    },
+    {
+      "version": "V10",
+      "check": "truth_leak",
+      "rejected": true,
+      "error_type_verified": true
+    },
+    {
+      "version": "V9",
+      "check": "fractional_counts",
+      "rejected": true,
+      "error_type_verified": true
+    },
+    {
+      "version": "V10",
+      "check": "fractional_counts",
+      "rejected": true,
+      "error_type_verified": true
+    },
+    {
+      "version": "V9",
+      "check": "new_domain_raw_input_portability",
+      "bit_exact": true
+    },
+    {
+      "version": "V10",
+      "check": "new_domain_raw_input_portability",
+      "bit_exact": true
+    },
+    {
+      "version": "V9",
+      "check": "tampered_weight",
+      "rejected": true,
+      "error_type_verified": true
+    },
+    {
+      "version": "V10",
+      "check": "tampered_weight",
+      "rejected": true,
+      "error_type_verified": true
+    }
+  ],
+  "scope": "engineering checks; not independent blind or real-device validation"
+}

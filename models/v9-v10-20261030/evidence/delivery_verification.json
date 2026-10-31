@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "archive_sha256": "10caac0e0b8a669a35a92a4f924704300a1adcda97fec8f44159707b10bd38f3",
+  "archive_bytes": 84904453,
+  "archive_crc_pass": true,
+  "fresh_extraction_verification": {
+    "status": "pass",
+    "files_checked": 189,
+    "python_sources_compiled": 30,
+    "smoke": true
+  },
+  "only_versions_published": [
+    "V9",
+    "V10"
+  ],
+  "model_algorithms_unchanged": true,
+  "independent_real_device_validation": false
+}
