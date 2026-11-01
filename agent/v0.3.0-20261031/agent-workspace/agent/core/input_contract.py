@@ -5,6 +5,10 @@ from .paths import write_json, sha256_hex
 
 REQUIRED_KEYS = ("axis", "signal_unit", "synthetic", "x", "counts")
 N_CHANNELS = 2048
+# Counts are accepted as plain integers and handed to the model unchanged. Anything wider
+# than an exact float risks overflowing the C math used downstream (math.isinf on 10**400
+# raises OverflowError), so this is a hard structural limit, not a quality gate.
+MAX_COUNT = 2**53 - 1
 BANNED_EXTRA_KEYS = ("truth", "ground_truth", "reference", "seed", "instrument", "measurement_time",
                      "live_time", "distance", "container", "energy_calibration", "smoothed",
                      "background_subtracted", "normalized")
@@ -20,6 +24,11 @@ class ContractError(Exception):
 
 def _is_int_like(v) -> bool:
     return isinstance(v, int) and not isinstance(v, bool)
+
+
+def _is_valid_count(v) -> bool:
+    """A count the contract will forward: a bounded finite integer, never a float or NaN."""
+    return isinstance(v, int) and not isinstance(v, bool) and abs(v) <= MAX_COUNT and math.isfinite(v)
 
 
 def validate(task_file: pathlib.Path) -> dict:
@@ -75,8 +84,12 @@ def validate(task_file: pathlib.Path) -> dict:
         bad = [i for i, c in enumerate(counts) if c < 0]
         raise ContractError("INVALID_COUNTS", "counts must be non-negative",
                             {"negative_indices": bad[:10], "n_negative": len(bad)})
-    if any(c != c or math.isinf(c) for c in counts):  # counts are ints, keep the guard explicit
-        raise ContractError("INVALID_COUNTS", "counts must be finite")
+    if any(not _is_valid_count(c) for c in counts):
+        bad = [i for i, c in enumerate(counts) if not _is_valid_count(c)]
+        raise ContractError(
+            "INVALID_COUNTS",
+            f"counts must be finite integers not larger than {MAX_COUNT} in magnitude",
+            {"max_count": MAX_COUNT, "bad_indices": bad[:10], "n_bad": len(bad)})
     total = sum(counts)
     if total <= 0:
         raise ContractError("INVALID_COUNTS", "counts must sum to a positive value")
