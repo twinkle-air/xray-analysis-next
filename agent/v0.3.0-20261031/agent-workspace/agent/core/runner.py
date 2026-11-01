@@ -137,16 +137,21 @@ if sys.platform == "win32":
     _JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE = 0x00002000
 
     class _JobBasicLimit(ctypes.Structure):
-        """JOBOBJECT_BASIC_LIMIT_INFORMATION: the limit flags we need to read and extend."""
+        """JOBOBJECT_BASIC_LIMIT_INFORMATION, laid out as MSDOC documents.
+
+        The struct is 64 bytes on x64. `JobSet` is a DWORD (4 bytes) and `Affinity` a
+        DWORD_PTR (8 bytes); the previous layout swapped their sizes, which made the
+        struct 72 bytes and silently truncated every field after `JobSet`.
+        """
         _fields_ = [("PerProcessUserTimeLimit", ctypes.c_ulonglong),
                     ("PerJobUserTimeLimit", ctypes.c_ulonglong),
                     ("LimitFlags", ctypes.c_ulong),
                     ("MinimumActiveProcesses", ctypes.c_ulong),
                     ("MaximumActiveProcesses", ctypes.c_ulong),
-                    ("JobSet", ctypes.c_void_p),
+                    ("JobSet", ctypes.c_ulong),
+                    ("Affinity", ctypes.c_void_p),
                     ("ProcessListHead", ctypes.c_void_p),
                     ("ProcessListTail", ctypes.c_void_p),
-                    ("Affinity", ctypes.c_ulong),
                     ("PriorityClass", ctypes.c_ulong),
                     ("SchedulingClass", ctypes.c_ulong)]
 
@@ -170,36 +175,44 @@ class _JobHandle:
             return
         try:
             limit = _JobBasicLimit()
-            kernel32.QueryInformationJobObject(
-                handle, 2, ctypes.byref(limit), ctypes.sizeof(limit), None)
+            if not kernel32.QueryInformationJobObject(
+                    handle, 2, ctypes.byref(limit), ctypes.sizeof(limit), None):
+                raise OSError(ctypes.GetLastError(), "QueryInformationJobObject failed")
             limit.LimitFlags |= _JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE
-            kernel32.SetInformationJobObject(
-                handle, 2, ctypes.byref(limit), ctypes.sizeof(limit))
+            if not kernel32.SetInformationJobObject(
+                    handle, 2, ctypes.byref(limit), ctypes.sizeof(limit)):
+                raise OSError(ctypes.GetLastError(), "SetInformationJobObject failed")
         except Exception:
             kernel32.CloseHandle(handle)
             return
         self.handle = handle
 
     def assign(self, proc: subprocess.Popen) -> bool:
-        """Open a handle to the child and bind it to the job, before it spawns."""
+        """Open a handle to the child and bind it to the job, before it spawns.
+
+        Returns True only when the child is actually inside the job. A failure leaves the
+        child running but unowned, so the caller must terminate it explicitly rather than
+        assume the job will take care of it.
+        """
         if self.handle is None:
             return False
         # AssignProcessToJobObject wants a process handle, not a pid.
+        kernel32 = ctypes.windll.kernel32
         try:
-            handle = ctypes.windll.kernel32.OpenProcess(
-                0x1F0FFF, False, proc.pid)
+            handle = kernel32.OpenProcess(0x1F0FFF, False, proc.pid)
             if not handle:
                 return False
         except Exception:
             return False
         try:
-            ctypes.windll.kernel32.AssignProcessToJobObject(self.handle, handle)
+            if not kernel32.AssignProcessToJobObject(self.handle, handle):
+                return False
             self.assigned = True
             return True
         except Exception:
             return False
         finally:
-            ctypes.windll.kernel32.CloseHandle(handle)
+            kernel32.CloseHandle(handle)
 
     def terminate(self) -> None:
         """Kill every process the job owns, regardless of depth.

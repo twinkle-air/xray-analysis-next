@@ -40,6 +40,11 @@ class ModelRegistry:
     def verify_package(self, version: str) -> dict:
         """Check every file the model lists in its freeze.json against the manifest.
 
+        The frozen entrypoint checks local_files and processing_dependencies on import;
+        a cache hit never executes it, so an install whose dependencies changed would
+        otherwise keep serving a stale result. Both sections are checked here with the
+        same口径. Older freeze formats (a bare `files` map) are honored as-is.
+
         Returns {ok, checked, mismatches}. Does NOT recompute a hash to 'fix' a mismatch.
         """
         model = self.model(version)
@@ -47,10 +52,15 @@ class ModelRegistry:
         if not integrity_file.exists():
             raise RegistryError(f"integrity file missing for {version}: {integrity_file}")
         freeze = read_json(integrity_file)
-        local_files = freeze.get("local_files", {})
         root = self.workspace.root / model["package_root"]
+        # the entrypoint verifies local_files and processing_dependencies; a bare
+        # `files` map is the older format and is checked the same way.
+        files = freeze.get("local_files") or freeze.get("files") or {}
+        processing = freeze.get("processing_dependencies", {})
         mismatches = []
-        for rel, expected in local_files.items():
+        checked = 0
+        for rel, expected in files.items():
+            checked += 1
             path = root / rel
             if not path.exists():
                 mismatches.append((rel, expected, "missing"))
@@ -58,7 +68,16 @@ class ModelRegistry:
             actual = hashlib.file_digest(open(path, "rb"), "sha256").hexdigest()
             if actual != expected:
                 mismatches.append((rel, expected, actual))
-        return {"version": version, "ok": not mismatches, "checked": len(local_files),
+        for rel, expected in processing.items():
+            checked += 1
+            path = (root / rel).resolve()
+            if not path.exists():
+                mismatches.append((rel, expected, "missing"))
+                continue
+            actual = hashlib.file_digest(open(path, "rb"), "sha256").hexdigest()
+            if actual != expected:
+                mismatches.append((rel, expected, actual))
+        return {"version": version, "ok": not mismatches, "checked": checked,
                 "mismatches": mismatches, "integrity_file": str(integrity_file)}
 
     def package_sha(self, version: str) -> str:

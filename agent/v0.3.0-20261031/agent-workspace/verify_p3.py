@@ -107,6 +107,13 @@ def e06():
     if scratch.exists():
         verify_common.rmtree(scratch)
     shutil.copytree(package, scratch)
+    # the V10 freeze lists processing_dependencies relative to the package root, so a
+    # copied package needs the sibling model-v9 bundle copied too, or the copy would be
+    # incomplete for reasons unrelated to the test.
+    v9_bundle = (package / "../model-v9-20261028/bundle").resolve()
+    if v9_bundle.exists():
+        shutil.copytree(v9_bundle, (scratch / "../model-v9-20261028/bundle").resolve(),
+                        dirs_exist_ok=True)
 
     from agent.core.paths import Workspace
     from agent.core.registry import ModelRegistry
