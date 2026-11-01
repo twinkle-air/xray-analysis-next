@@ -15,6 +15,7 @@ import sys
 import tempfile
 
 import verify_common
+from agent.core.paths import write_json
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -259,6 +260,76 @@ def clean_slate():
     check("no leftover scratch dirs after the clean-slate chain", not leftovers, leftovers)
 
 
+# ------------------------------------------------------------------ F05: a comparison the host triggered on its own reaches the report
+
+
+def f05():
+    print("--- F05 natural-language comparison must reach the report")
+    t01 = abs_path("deliverables/智能体功能测试谱集-20261031/01_正常输入/T01.json")
+    obj, rc, err = verify_common.run(["agent", "--task-file", t01, "--query", "请跑一次 V9 对照",
+                        "--sample-description", "铝合金粉末"])
+    check("comparison ran", rc == 0 and obj.get("status") == "exported", f"rc={rc}")
+    job_id = obj["job_id"]
+    comparison = read_job(job_id, "inference", "comparison.json")
+    check("V9 comparison ran", bool(comparison.get("v9_job_id")), str(comparison))
+    envelope = json.loads(pathlib.Path(obj["json_path"]).read_text(encoding="utf-8"))
+    check("comparison carried into report JSON",
+          envelope.get("comparison", {}).get("v9_job_id") == comparison["v9_job_id"],
+          f"report comparison={envelope.get('comparison')}")
+    check("report states V9 was run", "V9 对照已完成" in obj.get("markdown", ""))
+    print()
+
+
+# ------------------------------------------------------------------ F06: equal V9 values must not be rendered as "V9 未报出"
+
+
+def f06():
+    print("--- F06 equal V9 values are reported as agreement, not as V9 not reporting")
+    t01 = abs_path("deliverables/智能体功能测试谱集-20261031/01_正常输入/T01.json")
+    obj, rc, _ = verify_common.run(["agent", "--task-file", t01, "--query", "请分析这张谱",
+                        "--sample-description", "铝合金粉末"])
+    job_id = obj["job_id"]
+    compare, rc2, _ = verify_common.run(["compare", "--job-id", job_id])
+    check("comparison succeeded", rc2 == 0 and compare.get("error_code") is None, f"rc={rc2}")
+    comparison = read_job(job_id, "inference", "comparison.json")
+    v10 = read_job(job_id, "inference", "result.json")["predicted_element_percent"]
+    v9 = read_job(comparison["v9_job_id"], "inference", "result.json")["predicted_element_percent"]
+    # force the two versions to agree on Si so the comparison reports no difference
+    comparison["v9_predicted_element_percent"] = dict(v10)
+    write_json(JOBS / job_id / "inference" / "comparison.json", comparison)
+    export, rc3, _ = verify_common.run(["export", "--job-id", job_id, "--include-comparison"])
+    check("export succeeded", rc3 == 0 and export.get("status") == "exported", f"rc={rc3}")
+    md = export.get("markdown") or ""
+    si_row = [line for line in md.splitlines() if line.startswith("| Si ")]
+    check("Si row exists", bool(si_row), "Si missing from report")
+    check("Si shows the V9 value instead of 'V9 未报出'",
+          "V9 未报出" not in si_row[0] and "V9=" in si_row[0], si_row[0] if si_row else "")
+    print()
+
+
+# ------------------------------------------------------------------ tool contract parameters are enforced
+
+
+def f_extra_param():
+    print("--- extra tool parameters are rejected by the executor, not only by the hint")
+    from agent.orchestrator import ToolExecutor, ToolCall, ToolError
+    from agent.core.paths import Workspace
+
+    ws = Workspace(ROOT)
+    executor = ToolExecutor(ws)
+    obj, rc, _ = verify_common.run(["analyze", "--task-file",
+                                    abs_path("deliverables/智能体功能测试谱集-20261031/01_正常输入/T01.json")])
+    check("analysis succeeded", rc == 0 and obj.get("status") == "succeeded", f"rc={rc}")
+    call = ToolCall(id="call-status", name="get_job_status", arguments={
+        "job_id": obj["job_id"], "extra_field": "must be rejected"})
+    try:
+        executor.execute(call)
+        check("extra parameter rejected", False, "extra parameter was accepted")
+    except ToolError as exc:
+        check("extra parameter rejected", exc.code == "CONTRACT_VIOLATION", f"code={exc.code}")
+    print()
+
+
 # ------------------------------------------------------------------ thin interface
 
 
@@ -313,6 +384,9 @@ def main():
     e08()
     clean_slate()
     thin_interface()
+    f05()
+    f06()
+    f_extra_param()
 
     print("=" * 70)
     if failures:

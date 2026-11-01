@@ -77,7 +77,7 @@
           "n_reported_v10": {"type": ["integer", "null"]},
           "n_reported_v9": {"type": ["integer", "null"]},
           "differing_elements": {"type": "array", "items": {"type": "object",
-            "properties": {"element": {"type": "string"}, "v10_mass_percent": {"type": ["number", "null"]}, "v9_mass_percent": {"type": ["number", "null"]}, "abs_diff_pp": {"type": ["number", "null"]}}}},
+            "properties": {"element": {"type": "string"}, "v10_mass_percent": {"type": ["number", "null"]}, "v9_mass_percent": {"type": ["number", "null"]}, "abs_diff_ppm": {"type": ["number", "null"]}}}},
           "error_code": {"type": ["string", "null"]},
           "note": {"type": "string"}
         },

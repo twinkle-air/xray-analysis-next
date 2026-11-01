@@ -12,6 +12,7 @@ import pathlib
 import sys
 
 from agent.core.reporting import _between, _parse_number, _table_rows
+from agent.core.paths import write_json
 import verify_common
 
 HERE = pathlib.Path(__file__).resolve().parent
@@ -139,6 +140,35 @@ def main():
         check("read-only enforced", True)
     print()
 
+    print("--- F01 damaged dedup cache must not be trusted")
+    cached = JOBS / job_ids["T01"] / "inference" / "result.json"
+    backup = cached.read_text(encoding="utf-8")
+    corrupted = json.loads(backup)
+    corrupted["predicted_element_percent"]["Fe"] = 12345.0
+    write_json(cached, corrupted)
+    obj, rc, err = run(["analyze", "--task-file", str(SPECTRA / "01_正常输入" / "T04_重复上传.json")])
+    cached.write_text(backup, encoding="utf-8")
+    print(f"     rc={rc} status={obj.get('status')} reused_from={obj.get('reused_from')}")
+    check("corrupted cache rejected instead of reused", obj.get("status") == "succeeded",
+          f"status={obj.get('status')}")
+    check("Fe restored to the real model value",
+          json.loads((JOBS / obj["job_id"] / "inference" / "result.json").read_text(encoding="utf-8"))
+          ["predicted_element_percent"]["Fe"] == g1["predicted_element_percent"]["Fe"])
+    print()
+
+    print("--- huge integer counts are rejected structurally, not via a math error")
+    huge = json.loads((SPECTRA / "01_正常输入" / "T01.json").read_text(encoding="utf-8"))
+    huge["counts"][0] = 10**400
+    huge_path = ROOT / "jobs" / ".tmp-huge.json"
+    write_json(huge_path, huge)
+    obj, rc, err = run(["analyze", "--task-file", str(huge_path)])
+    huge_path.unlink()
+    print(f"     rc={rc} status={obj.get('status')} error={obj.get('error_code')}")
+    check("rejected with INVALID_COUNTS", obj.get("error_code") == "INVALID_COUNTS",
+          f"error_code={obj.get('error_code')}")
+    check("no OverflowError surfaced", "OverflowError" not in err, err[:200])
+    print()
+
     print("--- compare_models on T01")
     obj, rc, err = run(["compare", "--job-id", job_ids["T01"]])
     print(f"     rc={rc} v9_job={obj.get('v9_job_id')} note={obj.get('note')[:100]}")
@@ -156,7 +186,7 @@ def main():
     check("differing elements reported", len(obj["differing_elements"]) > 0,
           f"{len(obj['differing_elements'])}")
     check("abs_diff_ppm is the true signed gap",
-          all(abs(d["abs_diff_pp"] - abs(d["v10_mass_percent"] - d["v9_mass_percent"]) * 10000) <= 1e-6
+          all(abs(d["abs_diff_ppm"] - abs(d["v10_mass_percent"] - d["v9_mass_percent"]) * 10000) <= 1e-6
               for d in obj["differing_elements"]))
     print()
 

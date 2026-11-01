@@ -7,8 +7,10 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import pathlib
 import re
+import shutil
 from typing import Optional
 
 from .job import INFERENCE_NAME, Job
@@ -113,10 +115,9 @@ def _build_elements(inference: dict, model: dict, comparison: dict | None) -> li
     predictions = inference.get("predicted_element_percent", {})
     probs = inference.get("classification_probability", {}) or {}
     threshold = model.get("classification_threshold")
-    v9 = {}
-    if comparison and comparison.get("differing_elements"):
-        for d in comparison["differing_elements"]:
-            v9[d["element"]] = d.get("v9_mass_percent")
+    # the comparison carries the full V9 prediction when it ran; differing_elements alone
+    # cannot tell "V9 agrees" apart from "V9 did not report".
+    v9 = comparison.get("v9_predicted_element_percent", {}) if comparison else {}
     out = []
     for element in elements:
         value = predictions.get(element, 0.0)
@@ -202,7 +203,13 @@ def _evidence_index(job: Job, json_path, md_path, comparison: dict | None, infer
 
 
 def build_report(job: Job, comparison: dict | None = None, warnings: Optional[list] = None) -> dict:
-    """Write the JSON envelope and Markdown report; return paths plus a consistency flag."""
+    """Write the JSON envelope and Markdown report; return paths plus a consistency flag.
+
+    Everything is built in a private scratch directory first. A failed consistency check
+    leaves no published artifact; the published hashes are computed after the envelope is
+    final and recorded in a separate manifest, so the report never has to summarize a
+    version of itself that did not yet exist.
+    """
     workspace = job.workspace
     registry = ModelRegistry(workspace)
     model = registry.model(job.get("model_version"))
@@ -243,7 +250,11 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
     report_dir.mkdir(parents=True, exist_ok=True)
     json_path = report_dir / "results.json"
     md_path = report_dir / "report.md"
-    write_json(json_path, envelope)
+
+    scratch = report_dir / ".tmp"
+    scratch.mkdir(parents=True, exist_ok=True)
+    tmp_json = scratch / "results.json"
+    tmp_md = scratch / "report.md"
 
     template = workspace.report_template().read_text(encoding="utf-8")
     diagnostics = json.dumps(inference.get("axis_diagnostics"), ensure_ascii=False, indent=2)
@@ -288,21 +299,40 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
         "comparison_note": comparison_note,
         "elapsed_s": str(state.get("elapsed_s", "")),
         "error_code": str(state.get("error_code") or "无"),
-        "evidence_index": "\n".join(
-            f"- `{i['artifact']}` — {i['note']}，SHA-256 `{i['sha256']}`"
-            for i in _evidence_index(job, json_path, md_path, comparison, inference)),
+        "evidence_index": "{evidence_index}",
         "tool_name": TOOL_NAME,
         "tool_version": TOOL_VERSION,
         "consistency_check": "{consistency_check}",
     })
 
-    md_path.write_text(markdown, encoding="utf-8")
+    # 1. write the draft envelope and the draft report into the scratch directory
+    write_json(tmp_json, envelope)
+    tmp_md.write_text(markdown, encoding="utf-8")
+
+    # 2. the consistency check runs against the draft; the report is not published yet
     consistency = _verify_report_table(markdown, elements)
+    if not consistency:
+        shutil.rmtree(scratch, ignore_errors=True)
+        raise ReportError(
+            "generated Markdown table does not match the numerical result; refusing to publish")
+
+    # 3. the envelope is now final, so its hash and the report hash can be recorded
     envelope["consistency_check"] = bool(consistency)
-    write_json(json_path, envelope)
-    # the report references its own consistency result
-    markdown = _fill(markdown, {"consistency_check": "通过" if consistency else "不一致"})
-    md_path.write_text(markdown, encoding="utf-8")
+    write_json(tmp_json, envelope)
+    manifest = _evidence_index(job, tmp_json, tmp_md, comparison, inference)
+    markdown = _fill(markdown, {
+        "consistency_check": "通过" if consistency else "不一致",
+        "evidence_index": "\n".join(
+            f"- `{i['artifact']}` — {i['note']}，SHA-256 `{i['sha256']}`" for i in manifest),
+    })
+    tmp_md.write_text(markdown, encoding="utf-8")
+    (scratch / "evidence_manifest.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    # 4. publish atomically: nothing outside the scratch directory exists until now
+    os.replace(tmp_json, json_path)
+    os.replace(tmp_md, md_path)
+    shutil.rmtree(scratch, ignore_errors=True)
 
     return {
         "markdown": markdown,

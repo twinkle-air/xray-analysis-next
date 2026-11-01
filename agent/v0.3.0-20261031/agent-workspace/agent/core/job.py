@@ -62,15 +62,48 @@ def write_index(workspace: Workspace, index: dict) -> None:
     write_json(path, {INDEX: index, "updated_at": _utc_now(), "schema_version": SCHEMA_VERSION})
 
 
-def lookup_dedup(workspace: Workspace, key: str) -> Optional[str]:
-    """Return the job_id already bound to this dedup key, or None."""
-    return read_index(workspace).get(key)
+def lookup_dedup(workspace: Workspace, key: str) -> dict | None:
+    """Return the cached entry bound to this dedup key, or None.
+
+    A v0.2.4-style index holds a bare job id; migrate it once so the cached result can be
+    verified against the current model and adapter instead of being trusted blindly.
+    """
+    index = read_index(workspace)
+    entry = index.get(key)
+    if isinstance(entry, str):
+        job = Job.open(workspace, entry)
+        if job is None:
+            del index[key]
+            write_index(workspace, index)
+            return None
+        entry = {
+            "job_id": job.job_id,
+            "model_version": job.get("model_version"),
+            "adapter": job.get("adapter"),
+            "package_sha256": job.get("model_package_sha256"),
+            "created_at": index.get("updated_at"),
+        }
+        index[key] = entry
+        write_index(workspace, index)
+    if not isinstance(entry, dict):
+        return None
+    adapter = entry.get("adapter")
+    if isinstance(adapter, dict):
+        entry["adapter"] = f'{adapter.get("name")}:{adapter.get("version")}'
+    return entry
 
 
-def register_dedup(workspace: Workspace, key: str, job_id: str) -> None:
+def register_dedup(workspace: Workspace, key: str, job_id: str, model_version: str, adapter: str,
+                   package_sha256: str) -> None:
     index = read_index(workspace)
     if key not in index:
-        index[key] = job_id
+        index[key] = {
+            "job_id": job_id,
+            "model_version": model_version,
+            "adapter": adapter,
+            "package_sha256": package_sha256,
+            "created_at": _utc_now(),
+        }
         write_index(workspace, index)
 
 

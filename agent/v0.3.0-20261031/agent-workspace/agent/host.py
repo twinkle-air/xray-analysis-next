@@ -46,6 +46,7 @@ class ToolResult:
     tool_call_id: str
     name: str
     content: str
+    arguments: dict = dataclasses.field(default_factory=dict)
 
 
 @dataclasses.dataclass

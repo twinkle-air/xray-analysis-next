@@ -17,7 +17,7 @@ from .job import (
     COMPARISON_NAME, COUNTS_BLOB, INFERENCE_NAME, Job, Job as _Job, lookup_dedup, register_dedup,
     _posix,
 )
-from .paths import Workspace, read_json, write_json
+from .paths import Workspace, read_json, write_json, sha256_hex
 from .registry import ModelRegistry, RegistryError
 from .runner import RunResult, run_model
 
@@ -99,6 +99,51 @@ def _envelope(job: _Job, elapsed_s: Optional[float] = None) -> dict:
     }
 
 
+# ------------------------------------------------------------------ dedup
+
+
+def _reuse_if_valid(workspace: Workspace, entry: dict, job: Job, model_version: str) -> Job | None:
+    """Reuse a cached result only when the cache itself and the current package still agree.
+
+    Returns the job whose result was copied, or None when the cache must not be trusted.
+    """
+    existing = Job.open(workspace, entry["job_id"])
+    if existing is None or existing.stage() != "succeeded":
+        return None
+    if existing.get("model_version") != model_version:
+        return None
+    if existing.get("adapter") != job.get("adapter"):
+        return None
+    if existing.get("model_package_sha256") != job.get("model_package_sha256"):
+        return None
+    if existing.get("input_sha256") != job.get("input_sha256"):
+        return None
+
+    cached = existing.sub("inference") / INFERENCE_NAME
+    if not cached.exists():
+        return None
+    if _posix(cached) not in existing.get("artifact_refs", []):
+        return None
+    if sha256_hex(cached) != existing.get("inference_sha256"):
+        return None
+
+    try:
+        result = read_json(cached)
+        _check_inference(result, ModelRegistry(workspace).model(model_version), model_version)
+    except (OSError, json.JSONDecodeError, ToolError):
+        job.add_warning(f"dedup cache {entry['job_id']} is damaged; recomputing")
+        return None
+
+    dst = job.sub("inference") / INFERENCE_NAME
+    shutil.copy2(cached, dst)
+    job.set("reused_from", entry["job_id"])
+    job.set("input_sha256", existing.get("input_sha256"))
+    job.append_artifact(str(dst))
+    job.log().write_text(f"reused result of {entry['job_id']} (dedup key match, cache verified)\n", encoding="utf-8")
+    job.transition("succeeded")
+    return job
+
+
 # ------------------------------------------------------------------ tools
 
 
@@ -113,6 +158,23 @@ def analyze_spectrum(
     package_sha = registry.package_sha(model_version)
     adapter = registry.adapter()
 
+    # the package is verified before any result is trusted; a tampered or incomplete
+    # installation fails closed instead of serving a stale cached value.
+    try:
+        integrity = registry.verify_package(model_version)
+    except RegistryError as exc:
+        job = Job.create(workspace, task_file, model_version, f'{adapter["name"]}:{adapter["version"]}', package_sha, sample_description)
+        job.fail("INTEGRITY_FAILED")
+        job.add_warning(str(exc))
+        return _envelope(job)
+    if not integrity["ok"]:
+        bad = ", ".join(f"{rel} ({status})" for rel, _, status in integrity["mismatches"][:3])
+        job = Job.create(workspace, task_file, model_version, f'{adapter["name"]}:{adapter["version"]}', package_sha, sample_description)
+        job.fail("INTEGRITY_FAILED")
+        job.add_warning(f"model package integrity check failed for {model_version}: {bad} "
+                        f"({integrity['checked']} files, {len(integrity['mismatches'])} mismatches)")
+        return _envelope(job)
+
     job = Job.create(workspace, task_file, model_version, f'{adapter["name"]}:{adapter["version"]}', package_sha, sample_description)
     try:
         job.parse_input(sample_description)
@@ -121,21 +183,12 @@ def analyze_spectrum(
         job.add_warning(str(exc))
         return _envelope(job)
 
-    dedup_key = job.get("dedup_key")
-    existing_id = lookup_dedup(workspace, dedup_key)
-    if existing_id and existing_id != job.job_id:
-        existing = Job.open(workspace, existing_id)
-        if existing is not None and existing.stage() == "succeeded":
-            src = existing.sub("inference") / INFERENCE_NAME
-            dst = job.sub("inference") / INFERENCE_NAME
-            shutil.copy2(src, dst)
-            job.set("reused_from", existing_id)
-            job.set("input_sha256", existing.get("input_sha256") or job.get("input_sha256"))
-            job.append_artifact(str(dst))
-            job.log().write_text(f"reused result of {existing_id} (dedup key match)\n", encoding="utf-8")
-            job.transition("succeeded")
-            return _envelope(job)
-    register_dedup(workspace, dedup_key, job.job_id)
+    entry = lookup_dedup(workspace, job.get("dedup_key"))
+    if entry is not None:
+        existing = _reuse_if_valid(workspace, entry, job, model_version)
+        if existing is not None:
+            return _envelope(existing)
+    register_dedup(workspace, job.get("dedup_key"), job.job_id, model_version, adapter, package_sha)
 
     job.transition("running")
     counts_file = pathlib.Path(job.get("model_input_ref"))
@@ -162,6 +215,7 @@ def analyze_spectrum(
         job.add_warning(str(exc))
         return _envelope(job, run["wall_s"])
 
+    job.set("inference_sha256", sha256_hex(job.sub("inference") / INFERENCE_NAME))
     job.set("elapsed_s", run["wall_s"])
     job.append_artifact(str(job.sub("inference") / INFERENCE_NAME))
     job.transition("succeeded")
@@ -268,6 +322,9 @@ def compare_models(workspace: Workspace, job_id: str) -> dict:
         "differing_elements": differing,
         "error_code": None,
         "note": note,
+        # the full V9 result, so the report can show "V9 agrees" instead of "V9 did not report"
+        # when the two versions happen to match.
+        "v9_predicted_element_percent": v9_result.get("predicted_element_percent", {}),
     }
     write_json(existing_comparison, comparison)
     job.set("comparison_job_id", v9_job.job_id)
@@ -291,18 +348,37 @@ def export_report(
             "CONTRACT_VIOLATION",
             f"export_report requires a succeeded job, stage={job.stage()}")
 
-    from .reporting import build_report
+    from .reporting import build_report, ReportError
 
     try:
         comparison = None
-        if include_comparison:
-            comp_path = job.sub("inference") / COMPARISON_NAME
-            if not comp_path.exists():
+        comp_path = job.sub("inference") / COMPARISON_NAME
+        if comp_path.exists():
+            comparison = read_json(comp_path)
+            if include_comparison and comparison.get("error_code") is not None:
                 raise ToolError(
                     "CONTRACT_VIOLATION",
-                    "include_comparison requires a completed compare_models run; none found")
-            comparison = read_json(comp_path)
+                    "include_comparison requires a completed compare_models run; comparison failed")
+        elif include_comparison:
+            raise ToolError(
+                "CONTRACT_VIOLATION",
+                "include_comparison requires a completed compare_models run; none found")
         result = build_report(job, comparison=comparison)
+    except ReportError as exc:
+        job.set("report_state", "failed")
+        job.add_warning(str(exc))
+        job.save()
+        return {
+            "schema_version": SCHEMA_VERSION,
+            "job_id": job_id,
+            "markdown": "",
+            "json_path": "",
+            "markdown_path": "",
+            "status": "failed",
+            "consistency_check": False,
+            "warnings": [f"report generation failed: {exc}"],
+            "error_code": "NUMERICAL_FAILURE",
+        }
     except ToolError:
         raise
     except Exception as exc:
@@ -362,7 +438,7 @@ def _diff(v10_model: dict, v9_model: dict, v10_result: dict, v9_result: dict):
                 "element": element,
                 "v10_mass_percent": a,
                 "v9_mass_percent": b,
-                "abs_diff_pp": round(diff_pp, 6),
+                "abs_diff_ppm": round(diff_pp, 6),
             })
             n += 1
     reported_v10 = _n_reported(v10_result)

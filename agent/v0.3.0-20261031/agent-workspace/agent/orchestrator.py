@@ -7,6 +7,7 @@ and never writes state.
 from __future__ import annotations
 
 import json
+import os
 import pathlib
 from datetime import datetime, timezone
 from typing import Optional
@@ -63,10 +64,23 @@ class ToolExecutor:
             arguments["job_id"] = self.job_id
         return arguments
 
+    def _validate(self, call_: ToolCall) -> None:
+        """Reject arguments the tool contract does not declare, before any tool runs."""
+        contracts = read_json(self.workspace.tool_contracts())
+        spec = contracts.get("tools", {}).get(call_.name, {})
+        params = spec.get("parameters", {})
+        if params.get("additionalProperties") is False:
+            allowed = set(params.get("properties", {}).keys())
+            extra = [k for k in call_.arguments if k not in allowed]
+            if extra:
+                raise ToolError("CONTRACT_VIOLATION",
+                                f"tool {call_.name!r} does not accept extra arguments: {extra}")
+
     def execute(self, call_: ToolCall) -> ToolResult:
         name = call_.name
         if name not in self.TOOLS:
             raise ToolError("CONTRACT_VIOLATION", f"unknown tool {name!r}")
+        self._validate(call_)
         arguments = self._resolve(call_)
         try:
             if name == "analyze_spectrum":
@@ -99,7 +113,19 @@ class ToolExecutor:
         if name == "analyze_spectrum":
             # a job is created even when validation fails, so the failure can be traced.
             self.job_id = body.get("job_id") or self.job_id
+            if body.get("job_id") is None:
+                _log_no_job_id(body)
         return ToolResult(tool_call_id=call_.id, name=name, content=json.dumps(body, ensure_ascii=False))
+
+
+def _log_no_job_id(body: dict) -> None:
+    """Persistent log so a race across subprocesses can be diagnosed after the fact."""
+    import pathlib, sys
+    log = pathlib.Path(os.environ.get("H02_LOG", "C:/Users/Twinkle/Desktop/通用X射线谱分析/agent-workspace/h02_fail.log"))
+    log.parent.mkdir(parents=True, exist_ok=True)
+    with log.open("a", encoding="utf-8") as f:
+        f.write(f"no job_id body={json.dumps(body, ensure_ascii=False)}\n")
+    print(f"      [ORCHDBG] analyze_spectrum returned no job_id: {body}", file=sys.stderr)
 
 
 def _wants_comparison(user_query: str) -> bool:
@@ -173,6 +199,14 @@ def review_decision(
     return {"action": action, "reason": reason, "triggered_rules": triggered}
 
 
+def _execute(executor: ToolExecutor, call_: ToolCall) -> ToolResult:
+    """Run a host tool call and remember the id and arguments the host actually sent."""
+    result = executor.execute(call_)
+    result.tool_call_id = call_.id
+    result.arguments = dict(call_.arguments)
+    return result
+
+
 def follow_up(
     agent_root: pathlib.Path,
     user_query: str,
@@ -200,10 +234,10 @@ def follow_up(
 
     executor = ToolExecutor(workspace)
     executor.job_id = job_id
-    results = [executor.execute(call_) for call_ in host_result.tool_calls]
+    executed = [_execute(executor, call_) for call_ in host_result.tool_calls]
 
-    exported = next((json.loads(r.content) for r in results if r.name == "export_report"), None)
-    analyzed = next((json.loads(r.content) for r in results if r.name == "analyze_spectrum"), None)
+    exported = next((json.loads(r.content) for r in executed if r.name == "export_report"), None)
+    analyzed = next((json.loads(r.content) for r in executed if r.name == "analyze_spectrum"), None)
     resulting_job_id = analyzed.get("job_id") if analyzed else job_id
 
     trajectory["turns"].append({
@@ -211,8 +245,9 @@ def follow_up(
         "messages": [{"role": "user", "content": user_query}],
         "host": _host_result_payload(host_result),
         "tool_calls_executed": [
-            {"name": r.name, "arguments": {}, "result": json.loads(r.content), "error": None}
-            for r in results
+            {"name": r.name, "tool_call_id": r.tool_call_id,
+             "arguments": r.arguments, "result": json.loads(r.content), "error": None}
+            for r in executed
         ],
     })
     _save_trajectory(job, trajectory)
@@ -221,7 +256,7 @@ def follow_up(
         "schema_version": "1.0",
         "job_id": resulting_job_id,
         "status": exported.get("status") if exported else (analyzed.get("status") if analyzed else "continued"),
-        "tool_calls_executed": [r.name for r in results],
+        "tool_calls_executed": [r.name for r in executed],
         "markdown": exported.get("markdown") if exported else None,
         "markdown_path": exported.get("markdown_path") if exported else None,
         "json_path": exported.get("json_path") if exported else None,
@@ -232,15 +267,26 @@ def follow_up(
 def _history_from(trajectory: dict) -> list[dict]:
     """Rebuild the host-visible message list from a recorded trajectory.
 
-    Tool results are replayed as tool messages, so the host sees what the tools actually
-    returned instead of an orchestrator-written summary.
+    Every tool call the host made is replayed as an assistant message with a stable id,
+    followed by the tool's answer as a tool message carrying the same id. Without the
+    assistant side the history cannot be sent to a compliant Chat Completions host, and
+    without matching tool_call_ids the host cannot bind an answer to the call that made it.
     """
     messages = []
     for turn in trajectory.get("turns", []):
         messages.extend(turn.get("messages", []))
         for executed in turn.get("tool_calls_executed", []):
+            call_id = executed.get("tool_call_id") or executed.get("id") or f"call-{executed['name']}"
+            messages.append({
+                "role": "assistant",
+                "tool_calls": [{"id": call_id, "type": "function",
+                                "function": {"name": executed["name"],
+                                             "arguments": json.dumps(executed.get("arguments", {}),
+                                                                     ensure_ascii=False)}}],
+            })
             messages.append({
                 "role": "tool",
+                "tool_call_id": call_id,
                 "content": json.dumps({
                     "name": executed["name"],
                     "body": executed["result"],
@@ -397,7 +443,7 @@ def orchestrate(
     export_result = None
     if not no_export and decision["action"] == "export_report":
         export_call = ToolCall(id="call-export", name="export_report", arguments={
-            "include_comparison": comparison_done and include_comparison,
+            "include_comparison": bool(comparison_done or include_comparison),
         })
         export_result = executor.execute(export_call)
         export_body = json.loads(export_result.content)
