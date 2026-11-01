@@ -179,16 +179,28 @@ def _verify_report_table(markdown: str, elements: list) -> bool:
     return True
 
 
-def _evidence_index(job: Job, json_path, md_path, comparison: dict | None, inference: dict):
-    items = []
-    for ref, note in (
+def _evidence_index(job: Job, json_path, md_path, comparison: dict | None, inference: dict,
+                    include_md: bool = True):
+    """Build the published evidence index.
+
+    `json_path` and `md_path` are the final locations on disk (not the scratch copies), so
+    every hash in the manifest stays readable after the scratch directory is removed.
+
+    `include_md` controls whether the report's own entry is emitted: the manifest file
+    (`evidence_manifest.json`) lists both published artifacts, but the Markdown must not
+    summarize a version of itself, so the report's own hash is excluded from section 6.
+    """
+    entries = [
         (job.get("input_ref"), "不可变原始输入"),
         (job.get("parsed_ref"), "校验与解析结果"),
         (job.get("inference_ref"), "数值输出"),
         (job.get("comparison_ref"), "V9 对照输出" if comparison else "未运行"),
         (_posix(json_path), "结构化结果"),
-        (_posix(md_path), "Markdown 报告"),
-    ):
+    ]
+    if include_md:
+        entries.append((_posix(md_path), "Markdown 报告"))
+    items = []
+    for ref, note in entries:
         if not ref:
             continue
         path = pathlib.Path(ref)
@@ -200,6 +212,13 @@ def _evidence_index(job: Job, json_path, md_path, comparison: dict | None, infer
             "note": note,
         })
     return items
+
+
+def _write_manifest(manifest_path: pathlib.Path, manifest: list) -> None:
+    """Persist the evidence manifest next to the report, so it survives publication."""
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    manifest_path.write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def build_report(job: Job, comparison: dict | None = None, warnings: Optional[list] = None) -> dict:
@@ -319,19 +338,38 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
     # 3. the envelope is now final, so its hash and the report hash can be recorded
     envelope["consistency_check"] = bool(consistency)
     write_json(tmp_json, envelope)
-    manifest = _evidence_index(job, tmp_json, tmp_md, comparison, inference)
-    markdown = _fill(markdown, {
-        "consistency_check": "通过" if consistency else "不一致",
-        "evidence_index": "\n".join(
-            f"- `{i['artifact']}` — {i['note']}，SHA-256 `{i['sha256']}`" for i in manifest),
-    })
+    # section 6 is left blank for now: the published files do not exist yet, so their
+    # hashes would be wrong. It is filled in after step 4, when the report is on disk.
     tmp_md.write_text(markdown, encoding="utf-8")
-    (scratch / "evidence_manifest.json").write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
     # 4. publish atomically: nothing outside the scratch directory exists until now
     os.replace(tmp_json, json_path)
     os.replace(tmp_md, md_path)
+
+    # 5. section 6 is rendered from the manifest minus the report's own entry. The
+    #    manifest keeps the report hash (it is written after the report, so that hash is
+    #    the one on disk), but the Markdown must not summarize a version of itself: that
+    #    hash would otherwise never converge.
+    def _manifest():
+        return _evidence_index(job, json_path, md_path, comparison, inference,
+                               include_md=True)
+
+    section_manifest = [m for m in _manifest()
+                        if not m["artifact"].endswith("report.md")]
+    markdown = _fill(markdown, {
+        "consistency_check": "通过" if consistency else "不一致",
+        "evidence_index": "\n".join(
+            f"- `{m['artifact']}` — {m['note']}，SHA-256 `{m['sha256']}`"
+            for m in section_manifest),
+    })
+    tmp_md_final = scratch / "report.md"
+    tmp_md_final.write_text(markdown, encoding="utf-8")
+    os.replace(tmp_md_final, md_path)
+
+    # 6. the manifest is written last, after the report is final, so the report hash it
+    #    carries matches the file on disk. It is not self-referential: section 6 of the
+    #    Markdown omits the report's own entry, so nothing has to summarize itself.
+    _write_manifest(job.sub("report") / "evidence_manifest.json", _manifest())
     shutil.rmtree(scratch, ignore_errors=True)
 
     return {
