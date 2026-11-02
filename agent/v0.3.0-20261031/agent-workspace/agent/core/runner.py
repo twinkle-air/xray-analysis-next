@@ -98,6 +98,23 @@ def _terminate(proc: subprocess.Popen, job: "_JobHandle | None") -> None:
             pass
 
 
+def _kill_process_tree(pid: int) -> None:
+    """Kill a process and all its descendants by handing the walk to taskkill.
+
+    The Job Object calls can fail (access denied on a process we did not create, a
+    build without job support), and a silent return there leaks the grandchild.
+    """
+    if sys.platform != "win32":
+        return
+    try:
+        subprocess.run(["taskkill", "/PID", str(pid), "/F", "/T"],
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                       creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
+                       timeout=10)
+    except Exception:
+        pass
+
+
 def _kill_job(proc: subprocess.Popen) -> None:
     """Terminate the child and any process it spawned, in one shot.
 
@@ -106,140 +123,149 @@ def _kill_job(proc: subprocess.Popen) -> None:
     whole tree; TerminateJobObject kills it regardless of how deep the tree grew.
 
     Only used as a fallback when no job handle was available (e.g. an older interpreter).
+    Every failure path still kills the tree with taskkill, so a broken Job Object can
+    never turn into a leaked grandchild.
     """
     if sys.platform != "win32":
         return
     kernel32 = ctypes.windll.kernel32
     job = kernel32.CreateJobObjectW(None, None)
     if not job:
+        _kill_process_tree(proc.pid)
         return
     try:
         handle = kernel32.OpenProcess(0x1F0FFF, False, proc.pid)
         if not handle:
+            _kill_process_tree(proc.pid)
             return
         try:
-            kernel32.AssignProcessToJobObject(job, handle)
+            if not kernel32.AssignProcessToJobObject(job, handle):
+                kernel32.CloseHandle(handle)
+                _kill_process_tree(proc.pid)
+                return
             kernel32.TerminateJobObject(job, 0)
         finally:
             kernel32.CloseHandle(handle)
     except Exception:
-        pass
+        _kill_process_tree(proc.pid)
     finally:
         kernel32.CloseHandle(job)
 
 
 # ------------------------------------------------------------------ Windows Job Object
 
-
 if sys.platform == "win32":
     # the whole tree dies when the handle is closed, so a crashed runner cannot leak
     # grandchildren.
     _JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE = 0x00002000
 
-    class _JobBasicLimit(ctypes.Structure):
-        """JOBOBJECT_BASIC_LIMIT_INFORMATION, laid out as MSDOC documents.
+    class _JobBasic(ctypes.Structure):
+        """JOBOBJECT_BASIC_LIMIT_INFORMATION.
 
-        The struct is 64 bytes on x64. `JobSet` is a DWORD (4 bytes) and `Affinity` a
-        DWORD_PTR (8 bytes); the previous layout swapped their sizes, which made the
-        struct 72 bytes and silently truncated every field after `JobSet`.
+        Fields follow the documented x64 layout and the struct is 64 bytes; the
+        working-set / active-process fields are never set by us, but they must sit at
+        their real offsets or SetInformationJobObject reads them as our values.
         """
-        _fields_ = [("PerProcessUserTimeLimit", ctypes.c_ulonglong),
-                    ("PerJobUserTimeLimit", ctypes.c_ulonglong),
-                    ("LimitFlags", ctypes.c_ulong),
-                    ("MinimumActiveProcesses", ctypes.c_ulong),
-                    ("MaximumActiveProcesses", ctypes.c_ulong),
-                    ("JobSet", ctypes.c_ulong),
-                    ("Affinity", ctypes.c_void_p),
-                    ("ProcessListHead", ctypes.c_void_p),
-                    ("ProcessListTail", ctypes.c_void_p),
-                    ("PriorityClass", ctypes.c_ulong),
-                    ("SchedulingClass", ctypes.c_ulong)]
+        _fields_ = [
+            ("PerProcessUserTimeLimit", ctypes.c_uint64),
+            ("PerJobUserTimeLimit", ctypes.c_uint64),
+            ("LimitFlags", ctypes.c_uint32),
+            ("MinimumWorkingSetSize", ctypes.c_size_t),
+            ("MaximumWorkingSetSize", ctypes.c_size_t),
+            ("ActiveProcessLimit", ctypes.c_uint32),
+            ("Affinity", ctypes.c_size_t),
+            ("PriorityClass", ctypes.c_uint32),
+            ("SchedulingClass", ctypes.c_uint32),
+        ]
+
+    # We no longer define _JobExtendedLimit; we use class 2 for query/set.
 
 
-class _JobHandle:
-    """Owns a Windows Job Object. Closing it kills every process in the tree.
 
-    The handle is assigned to the child *immediately* after it is created, before the child
-    has a chance to spawn its own children: anything the child starts inherits the job, so
-    TerminateJobObject reaches grandchildren without walking a process tree.
-    """
+    class _JobHandle:
+        """Owns a Windows Job Object. Closing it kills every process in the tree.
 
-    def __init__(self):
-        self.handle: int | None = None
-        self.assigned: bool = False
-        if sys.platform != "win32":
-            return
-        kernel32 = ctypes.windll.kernel32
-        handle = kernel32.CreateJobObjectW(None, None)
-        if not handle:
-            return
-        try:
-            limit = _JobBasicLimit()
-            if not kernel32.QueryInformationJobObject(
-                    handle, 2, ctypes.byref(limit), ctypes.sizeof(limit), None):
-                raise OSError(ctypes.GetLastError(), "QueryInformationJobObject failed")
-            limit.LimitFlags |= _JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE
-            if not kernel32.SetInformationJobObject(
-                    handle, 2, ctypes.byref(limit), ctypes.sizeof(limit)):
-                raise OSError(ctypes.GetLastError(), "SetInformationJobObject failed")
-        except Exception:
-            kernel32.CloseHandle(handle)
-            return
-        self.handle = handle
-
-    def assign(self, proc: subprocess.Popen) -> bool:
-        """Open a handle to the child and bind it to the job, before it spawns.
-
-        Returns True only when the child is actually inside the job. A failure leaves the
-        child running but unowned, so the caller must terminate it explicitly rather than
-        assume the job will take care of it.
+        The handle is assigned to the child *immediately* after it is created, before the child
+        has a chance to spawn its own children: anything the child starts inherits the job, so
+        TerminateJobObject reaches grandchildren without walking a process tree.
         """
-        if self.handle is None:
-            return False
-        # AssignProcessToJobObject wants a process handle, not a pid.
-        kernel32 = ctypes.windll.kernel32
-        try:
-            handle = kernel32.OpenProcess(0x1F0FFF, False, proc.pid)
+
+        def __init__(self):
+            self.handle: int | None = None
+            self.assigned: bool = False
+            if sys.platform != "win32":
+                return
+            kernel32 = ctypes.windll.kernel32
+            handle = kernel32.CreateJobObjectW(None, None)
             if not handle:
-                return False
-        except Exception:
-            return False
-        try:
-            if not kernel32.AssignProcessToJobObject(self.handle, handle):
-                return False
-            self.assigned = True
-            return True
-        except Exception:
-            return False
-        finally:
-            kernel32.CloseHandle(handle)
-
-    def terminate(self) -> None:
-        """Kill every process the job owns, regardless of depth.
-
-        The child was bound to the job at creation, so anything it spawned is inside the
-        job too. If the bind failed (parent already in a job, or an old Windows build), the
-        fallback is the caller's concern: `_terminate` checks `assigned` first.
-        """
-        if self.handle is None:
-            return
-        try:
-            ctypes.windll.kernel32.TerminateJobObject(self.handle, 0)
-        except Exception:
-            pass
-
-    def close(self) -> None:
-        if self.handle is not None:
+                return
             try:
-                ctypes.windll.kernel32.CloseHandle(self.handle)
+                # Use JOBOBJECT_BASIC_LIMIT_INFORMATION (class 2) to set KILL_ON_JOB_CLOSE
+                basic = _JobBasic()
+                if not kernel32.QueryInformationJobObject(
+                        handle, 2, ctypes.byref(basic), ctypes.sizeof(basic), None):
+                    raise OSError(ctypes.GetLastError(), "QueryInformationJobObject (class 2) failed")
+                basic.LimitFlags |= _JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE
+                if not kernel32.SetInformationJobObject(
+                        handle, 2, ctypes.byref(basic), ctypes.sizeof(basic)):
+                    raise OSError(ctypes.GetLastError(), "SetInformationJobObject (class 2) failed")
+            except Exception:
+                # If setting the flag fails, we still keep the handle for fallback termination.
+                pass
+            self.handle = handle
+
+        def assign(self, proc: subprocess.Popen) -> bool:
+            """Open a handle to the child and bind it to the job.
+
+            Returns True only when the child is actually inside the job. A failure leaves the
+            child running but unowned, so the caller must terminate it explicitly rather than
+            assume the job will take care of it.
+            """
+            if self.handle is None:
+                return False
+            kernel32 = ctypes.windll.kernel32
+            try:
+                handle = kernel32.OpenProcess(0x1F0FFF, False, proc.pid)
+                if not handle:
+                    return False
+            except Exception:
+                return False
+            try:
+                if not kernel32.AssignProcessToJobObject(self.handle, handle):
+                    return False
+                self.assigned = True
+                return True
+            except Exception:
+                return False
             finally:
-                self.handle = None
+                kernel32.CloseHandle(handle)  # part of _JobHandle.assign
 
-    def __enter__(self) -> "_JobHandle":
-        return self
+        def terminate(self) -> None:
+            """Kill every process the job owns, regardless of depth.
 
-    def __exit__(self, *exc) -> None:
-        self.close()
+            The child was bound to the job at creation, so anything it spawned is inside the
+            job too. If the bind failed (parent already in a job, or an old Windows build), the
+            fallback is the caller's concern: `_terminate` checks `assigned` first.
+            """
+            if self.handle is None:
+                return
+            try:
+                ctypes.windll.kernel32.TerminateJobObject(self.handle, 0)
+            except Exception:
+                pass
+
+        def close(self) -> None:
+            if self.handle is not None:
+                try:
+                    ctypes.windll.kernel32.CloseHandle(self.handle)
+                finally:
+                    self.handle = None
+
+        def __enter__(self) -> "_JobHandle":
+            return self
+
+        def __exit__(self, *exc) -> None:
+            self.close()
 
 
 def run_model(workspace: Workspace, version: str, task_file: pathlib.Path, out: pathlib.Path,
@@ -269,24 +295,48 @@ def run_model(workspace: Workspace, version: str, task_file: pathlib.Path, out: 
     log = tmp_dir / "child.log"
     t0 = time.perf_counter()
     # the log fd is held until the child exits, so the child never sees a closed pipe.
-    with _JobHandle() as job, log.open("wb") as log_fd:
-        proc = subprocess.Popen(
-            [str(workspace.python()), str(runner), "--model", version,
-             "--input", str(task_file), "--out", str(staged)],
-            stdout=log_fd, stderr=subprocess.STDOUT,
-            env=env, cwd=str(workspace.root))
-        job.assign(proc)
-        peak, timed_out = _wait_for(proc, timeout)
-        if timed_out:
-            _terminate(proc, job)
-        wall = time.perf_counter() - t0
-        stderr = _read_tail(log)
+    with _JobHandle() as job:
+        # If Job Object initialization fails, job.handle remains None.
+        # We must not spawn the child; just return a clean error.
+        if job.handle is None:
+            # No valid job object available; cannot isolate the numerical backend.
+            return RunResult(exit_code=-1, wall_s=0.0, peak_working_set_bytes=None,
+                             stderr="failed to create job object for process isolation",
+                             error_code="INTEGRITY_FAILED", temp_cleaned=True)
 
-    if timed_out:
-        # the parent log handle is closed now; the child's duplicate is gone too.
-        _remove(tmp_dir)
-        return RunResult(exit_code=-1, wall_s=wall, peak_working_set_bytes=peak, stderr=stderr,
-                         error_code="TIMEOUT", temp_cleaned=True)
+        log = tmp_dir / "child.log"
+        t0 = time.perf_counter()
+        with log.open("wb") as log_fd:
+            proc = subprocess.Popen(
+                [str(workspace.python()), str(runner), "--model", version,
+                 "--input", str(task_file), "--out", str(staged)],
+                stdout=log_fd, stderr=subprocess.STDOUT,
+                env=env, cwd=str(workspace.root))
+            # Important: if job.handle is not None but assign returns False, the
+            # child process is not inside the job object. We must terminate it explicitly
+            # and report an error.
+            if not job.assign(proc):
+                # Job object not usable; force-terminate the wrapper immediately.
+                _kill_job(proc)  # tries to put wrapper and its descendants into a job
+                wall = time.perf_counter() - t0
+                if proc.returncode != 0:
+                    stderr = _read_tail(log)
+                else:
+                    stderr = "child terminated before assignment; job assignment failed"
+                return RunResult(exit_code=-1, wall_s=wall, peak_working_set_bytes=None,
+                                 stderr=stderr, error_code="INTEGRITY_FAILED", temp_cleaned=True)
+
+            peak, timed_out = _wait_for(proc, timeout)
+            if timed_out:
+                _terminate(proc, job)
+            wall = time.perf_counter() - t0
+            stderr = _read_tail(log)
+
+        if timed_out:
+            # the parent log handle is closed now; the child's duplicate is gone too.
+            _remove(tmp_dir)
+            return RunResult(exit_code=-1, wall_s=wall, peak_working_set_bytes=peak, stderr=stderr,
+                             error_code="TIMEOUT", temp_cleaned=True)
 
     error_code = None
     if proc.returncode != 0:

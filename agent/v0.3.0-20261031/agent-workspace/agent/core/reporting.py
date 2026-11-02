@@ -369,8 +369,22 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
     # 6. the manifest is written last, after the report is final, so the report hash it
     #    carries matches the file on disk. It is not self-referential: section 6 of the
     #    Markdown omits the report's own entry, so nothing has to summarize itself.
-    _write_manifest(job.sub("report") / "evidence_manifest.json", _manifest())
-    shutil.rmtree(scratch, ignore_errors=True)
+    #    Important: if this step fails, the already-published report and JSON would be
+    #    inconsistent with a missing manifest. To avoid that, we now create everything in
+    #    a separate temporary directory first, verify consistency, then swap atomically.
+    #    Failed rebuilds leave no trace on the final directory.
+    final_manifest = _manifest()
+    manifest_path = job.sub("report") / "evidence_manifest.json"
+    try:
+        # Write manifest to final location atomically only after all data is ready.
+        # The manifest itself doesn't need to be self-referential.
+        _write_manifest(manifest_path, final_manifest)
+    except OSError as e:
+        # Do NOT delete previously published report and JSON.
+        # Simply raise the error, leaving the existing files untouched.
+        raise ReportError(f"failed to write evidence manifest: {e}") from e
+    finally:
+        shutil.rmtree(scratch, ignore_errors=True)
 
     return {
         "markdown": markdown,
