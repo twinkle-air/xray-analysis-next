@@ -180,11 +180,13 @@ def _verify_report_table(markdown: str, elements: list) -> bool:
 
 
 def _evidence_index(job: Job, json_path, md_path, comparison: dict | None, inference: dict,
-                    include_md: bool = True):
+                    include_md: bool = True, hash_paths: dict | None = None) -> list:
     """Build the published evidence index.
 
-    `json_path` and `md_path` are the final locations on disk (not the scratch copies), so
-    every hash in the manifest stays readable after the scratch directory is removed.
+    `json_path` and `md_path` are the *names* the manifest carries: they always point at the
+    published locations, so the index stays readable after publication. The SHA-256 is taken
+    from the file whose content is authoritative instead, which lets us hash the scratch
+    copies while building and prove the published hashes before anything moves.
 
     `include_md` controls whether the report's own entry is emitted: the manifest file
     (`evidence_manifest.json`) lists both published artifacts, but the Markdown must not
@@ -199,6 +201,7 @@ def _evidence_index(job: Job, json_path, md_path, comparison: dict | None, infer
     ]
     if include_md:
         entries.append((_posix(md_path), "Markdown 报告"))
+    source = hash_paths or {}
     items = []
     for ref, note in entries:
         if not ref:
@@ -206,9 +209,10 @@ def _evidence_index(job: Job, json_path, md_path, comparison: dict | None, infer
         path = pathlib.Path(ref)
         if not path.is_absolute():
             path = job.workspace.root / path
+        target = source.get(ref, path)
         items.append({
             "artifact": ref,
-            "sha256": sha256_hex(path) if path.exists() else None,
+            "sha256": sha256_hex(target) if target.exists() else None,
             "note": note,
         })
     return items
@@ -219,6 +223,34 @@ def _write_manifest(manifest_path: pathlib.Path, manifest: list) -> None:
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
     manifest_path.write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def _back_up_existing(targets, report_dir) -> pathlib.Path | None:
+    """Snapshot the published triset before the atomic commit replaces it.
+
+    Only used to roll back a *partial* commit: the whole candidate lives in scratch until
+    the commit, so every failure before it leaves the published files untouched.
+    """
+    backup_dir = None
+    for target in targets:
+        if target.exists():
+            if backup_dir is None:
+                backup_dir = report_dir / ".backup_old"
+                backup_dir.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(target, backup_dir / target.name)
+    return backup_dir
+
+
+def _restore_from_backup(backup_dir: pathlib.Path | None, report_dir) -> None:
+    if backup_dir is None or not backup_dir.exists():
+        return
+    for name in ("results.json", "report.md", "evidence_manifest.json"):
+        src = backup_dir / name
+        if src.exists():
+            try:
+                shutil.copy2(src, report_dir / name)
+            except OSError:
+                pass
 
 
 def build_report(job: Job, comparison: dict | None = None, warnings: Optional[list] = None) -> dict:
@@ -338,23 +370,20 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
     # 3. the envelope is now final, so its hash and the report hash can be recorded
     envelope["consistency_check"] = bool(consistency)
     write_json(tmp_json, envelope)
-    # section 6 is left blank for now: the published files do not exist yet, so their
-    # hashes would be wrong. It is filled in after step 4, when the report is on disk.
-    tmp_md.write_text(markdown, encoding="utf-8")
 
-    # 4. publish atomically: nothing outside the scratch directory exists until now
-    os.replace(tmp_json, json_path)
-    os.replace(tmp_md, md_path)
+    # 4. the whole triset -- JSON, Markdown, manifest -- is built inside the scratch
+    #    directory. Nothing outside scratch is touched until the commit, so a failure at any
+    #    point leaves the previously published version byte-identical.
+    manifest_path = report_dir / "evidence_manifest.json"
+    tmp_manifest = scratch / "evidence_manifest.json"
 
-    # 5. section 6 is rendered from the manifest minus the report's own entry. The
-    #    manifest keeps the report hash (it is written after the report, so that hash is
-    #    the one on disk), but the Markdown must not summarize a version of itself: that
-    #    hash would otherwise never converge.
-    def _manifest():
+    def _manifest(hashed):
+        # the manifest names the published files but hashes the scratch copies: the content
+        # is identical once committed, and only a final file has a trustworthy hash.
         return _evidence_index(job, json_path, md_path, comparison, inference,
-                               include_md=True)
+                               include_md=True, hash_paths=hashed)
 
-    section_manifest = [m for m in _manifest()
+    section_manifest = [m for m in _manifest({_posix(json_path): tmp_json, _posix(md_path): tmp_md})
                         if not m["artifact"].endswith("report.md")]
     markdown = _fill(markdown, {
         "consistency_check": "通过" if consistency else "不一致",
@@ -362,29 +391,32 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
             f"- `{m['artifact']}` — {m['note']}，SHA-256 `{m['sha256']}`"
             for m in section_manifest),
     })
-    tmp_md_final = scratch / "report.md"
-    tmp_md_final.write_text(markdown, encoding="utf-8")
-    os.replace(tmp_md_final, md_path)
+    tmp_md.write_text(markdown, encoding="utf-8")
 
-    # 6. the manifest is written last, after the report is final, so the report hash it
-    #    carries matches the file on disk. It is not self-referential: section 6 of the
-    #    Markdown omits the report's own entry, so nothing has to summarize itself.
-    #    Important: if this step fails, the already-published report and JSON would be
-    #    inconsistent with a missing manifest. To avoid that, we now create everything in
-    #    a separate temporary directory first, verify consistency, then swap atomically.
-    #    Failed rebuilds leave no trace on the final directory.
-    final_manifest = _manifest()
-    manifest_path = job.sub("report") / "evidence_manifest.json"
+    final_manifest = _manifest({_posix(json_path): tmp_json, _posix(md_path): tmp_md})
+    # the manifest is what section 6 quotes, so re-deriving section 6 from it must reproduce
+    # the Markdown we just wrote; otherwise the published report would summarize a manifest
+    # it does not match.
+    non_md = [m for m in final_manifest if not m["artifact"].endswith("report.md")]
+    if non_md != section_manifest:
+        shutil.rmtree(scratch, ignore_errors=True)
+        raise ReportError("evidence index does not match the generated report")
+
+    # 6. commit atomically: the three published files move together, or not at all.
+    #    the manifest is written into scratch first, so a failure here leaves no trace.
+    backups = _back_up_existing((json_path, md_path, manifest_path), report_dir)
     try:
-        # Write manifest to final location atomically only after all data is ready.
-        # The manifest itself doesn't need to be self-referential.
-        _write_manifest(manifest_path, final_manifest)
+        _write_manifest(tmp_manifest, final_manifest)
+        os.replace(tmp_json, json_path)
+        os.replace(tmp_md, md_path)
+        os.replace(tmp_manifest, manifest_path)
     except OSError as e:
-        # Do NOT delete previously published report and JSON.
-        # Simply raise the error, leaving the existing files untouched.
-        raise ReportError(f"failed to write evidence manifest: {e}") from e
+        _restore_from_backup(backups, report_dir)
+        raise ReportError(f"failed to publish the report atomically: {e}") from e
     finally:
         shutil.rmtree(scratch, ignore_errors=True)
+        if backups is not None:
+            shutil.rmtree(backups, ignore_errors=True)
 
     return {
         "markdown": markdown,
