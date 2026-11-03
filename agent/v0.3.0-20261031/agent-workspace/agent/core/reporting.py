@@ -225,30 +225,45 @@ def _write_manifest(manifest_path: pathlib.Path, manifest: list) -> None:
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def _back_up_existing(targets, report_dir) -> pathlib.Path | None:
+def _back_up_existing(targets, report_dir) -> tuple[pathlib.Path | None, set[str]]:
     """Snapshot the published triset before the atomic commit replaces it.
 
     Only used to roll back a *partial* commit: the whole candidate lives in scratch until
-    the commit, so every failure before it leaves the published files untouched.
+    the commit, so every failure before it leaves the published files untouched. Returns
+    the backup directory, if any, and the names that were already on disk, so a failed
+    commit can both restore the old files and drop the ones it created.
     """
     backup_dir = None
+    existed = set()
     for target in targets:
         if target.exists():
+            existed.add(target.name)
             if backup_dir is None:
                 backup_dir = report_dir / ".backup_old"
                 backup_dir.mkdir(parents=True, exist_ok=True)
             shutil.copy2(target, backup_dir / target.name)
-    return backup_dir
+    return backup_dir, existed
 
 
-def _restore_from_backup(backup_dir: pathlib.Path | None, report_dir) -> None:
-    if backup_dir is None or not backup_dir.exists():
-        return
+def _restore_from_backup(backup_dir: pathlib.Path | None, existed: set[str], report_dir) -> None:
+    """Undo a partial commit: restore what was there, remove what this commit created.
+
+    On a first export nothing is backed up, so a failure that lands after the first file
+    has moved must not leave a half-published triset behind.
+    """
     for name in ("results.json", "report.md", "evidence_manifest.json"):
-        src = backup_dir / name
-        if src.exists():
+        if name in existed:
+            if backup_dir is None:
+                continue
+            src = backup_dir / name
+            if src.exists():
+                try:
+                    shutil.copy2(src, report_dir / name)
+                except OSError:
+                    pass
+        else:
             try:
-                shutil.copy2(src, report_dir / name)
+                (report_dir / name).unlink()
             except OSError:
                 pass
 
@@ -404,14 +419,14 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
 
     # 6. commit atomically: the three published files move together, or not at all.
     #    the manifest is written into scratch first, so a failure here leaves no trace.
-    backups = _back_up_existing((json_path, md_path, manifest_path), report_dir)
+    backups, existed = _back_up_existing((json_path, md_path, manifest_path), report_dir)
     try:
         _write_manifest(tmp_manifest, final_manifest)
         os.replace(tmp_json, json_path)
         os.replace(tmp_md, md_path)
         os.replace(tmp_manifest, manifest_path)
     except OSError as e:
-        _restore_from_backup(backups, report_dir)
+        _restore_from_backup(backups, existed, report_dir)
         raise ReportError(f"failed to publish the report atomically: {e}") from e
     finally:
         shutil.rmtree(scratch, ignore_errors=True)

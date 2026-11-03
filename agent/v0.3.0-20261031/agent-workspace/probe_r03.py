@@ -180,7 +180,105 @@ R1_REPLACE_FAULT = (
     "os.replace = counted\n"
 )
 
-# ---------------------------------------------------------------------- shim cases A-E
+# A first export has nothing to roll back to, so a failure inside the commit block must
+# not leave a half-published triset where a later run could mistake it for a real report.
+R1_FIRST_TEMPLATE = (
+    "import hashlib, json, os, pathlib, shutil, sys\n"
+    "sys.path.insert(0, '.')\n"
+    "import agent.core.reporting as R\n"
+    "from agent.core.job import Job\n"
+    "from agent.core.paths import Workspace\n"
+    "from agent.core.tools import export_report\n"
+    "ROOT = pathlib.Path(r'{root}')\n"
+    "TRIO = ('results.json', 'report.md', 'evidence_manifest.json')\n"
+    "def report_dir():\n"
+    "    return ROOT / 'jobs' / JOB / 'report'\n"
+    "def pick_job():\n"
+    "    for d in sorted((ROOT / 'jobs').iterdir()):\n"
+    "        st = d / 'audit' / 'state.json'\n"
+    "        if not st.is_file():\n"
+    "            continue\n"
+    "        try:\n"
+    "            state = json.loads(st.read_text(encoding='utf-8'))\n"
+    "        except Exception:\n"
+    "            continue\n"
+    "        if state.get('stage') == 'succeeded':\n"
+    "            return d.name\n"
+    "    return None\n"
+    "JOB = pick_job()\n"
+    "if JOB is None:\n"
+    "    print(json.dumps(['no_succeeded_job']))\n"
+    "    sys.exit(0)\n"
+    "# the report dir is empty, so nothing here predates this export\n"
+    "shutil.rmtree(report_dir(), ignore_errors=True)\n"
+    "__POST_FAULT__\n"
+    "job = Job.open(Workspace(ROOT), JOB)\n"
+    "job.set('sample_description', 'candidate mutation')\n"
+    "job.save()\n"
+    "res = export_report(Workspace(ROOT), JOB)\n"
+    "left = [(report_dir() / n).exists() for n in TRIO]\n"
+    "print(json.dumps([\n"
+    "    res['status'],\n"
+    "    any(left),\n"
+    "    (report_dir() / '.tmp').exists(),\n"
+    "    (report_dir() / '.backup_old').exists(),\n"
+    "]))\n"
+)
+
+
+def render_r1_first(patch: str) -> str:
+    return R1_FIRST_TEMPLATE.format(root=ROOT).replace("__POST_FAULT__", patch)
+
+
+def run_r1_first_case(label, patch):
+    PROBE.mkdir(parents=True, exist_ok=True)
+    script = PROBE / "r1_first_runner.py"
+    script.write_text(render_r1_first(patch), encoding="utf-8")
+    env = dict(os.environ, PYTHONUTF8="1", PYTHONIOENCODING="utf-8")
+    try:
+        proc = subprocess.run([sys.executable, str(script)], capture_output=True,
+                              text=True, encoding="utf-8", errors="replace", env=env,
+                              cwd=str(ROOT), timeout=180)
+        lines = proc.stdout.strip().splitlines()
+        if lines and lines[-1] == "['no_succeeded_job']":
+            return (["no_succeeded_job"], 9,
+                    proc.stderr or "no succeeded job present to export from")
+        return json.loads(lines[-1]), proc.returncode, proc.stderr
+    finally:
+        if script.exists():
+            script.unlink()
+
+
+def replace_fault_on(nth: int) -> str:
+    """Fail the nth os.replace that targets a published file, letting the rest proceed.
+
+    The counter is scoped to the three commit replaces rather than global, because the
+    draft envelope and report are written to .tmp/ and the job state is saved to audit/;
+    a global counter would trip on one of those before reaching the commit block.
+    """
+    return (
+        "import os\n"
+        "_real = os.replace\n"
+        "n = [0]\n"
+        "def counted(a, b):\n"
+        "    dst = pathlib.Path(b)\n"
+        "    if dst.parent != report_dir() or dst.name not in TRIO:\n"
+        "        return _real(a, b)\n"
+        "    n[0] += 1\n"
+        f"    if n[0] == {nth}:\n"
+        "        raise OSError(13, 'simulated first-export replace failure', str(b))\n"
+        "    return _real(a, b)\n"
+        "os.replace = counted\n"
+    )
+
+
+R1_MANIFEST_FAULT = (
+    "import agent.core.reporting as R\n"
+    "_wm = R._write_manifest\n"
+    "def broken(path, manifest):\n"
+    "    raise OSError(9, 'simulated manifest write failure', str(path))\n"
+    "R._write_manifest = broken\n"
+)
 
 # each shim replaces a Job Object API entry point before agent.core.runner imports it.
 SHIMS = {
@@ -466,6 +564,25 @@ if __name__ == "__main__":
                   f"second_status={res[1]}")
             check(f"{label}: previous triset is byte-identical", res[2], "published files changed")
         check(f"{label}: no scratch left behind", res[4], ".tmp or .backup_old remains")
+        check(f"{label}: clean interpreter exit", rc == 0, f"rc={rc} err={err[:200]}")
+
+    print("\n-- R1 first export: a failure on the very first export must leave no triset")
+    for label, patch in (
+        ("second_replace_fails", replace_fault_on(2)),
+        ("third_replace_fails", replace_fault_on(3)),
+    ):
+        print(f"\n-- {label}")
+        res, rc, err = run_r1_first_case(label, patch)
+        if res == ["no_succeeded_job"]:
+            check(f"{label}: a succeeded job exists to export from", False, err)
+            continue
+        print(f"   status={res[0]} triset_present={res[1]} tmp_left={res[2]} "
+              f"backup_old_left={res[3]}")
+        check(f"{label}: export reports failure", res[0] == "failed", f"status={res[0]}")
+        check(f"{label}: no published triset file remains", not res[1],
+              "results.json, report.md or evidence_manifest.json present")
+        check(f"{label}: scratch directory removed", not res[2], ".tmp remains")
+        check(f"{label}: backup directory removed", not res[3], ".backup_old remains")
         check(f"{label}: clean interpreter exit", rc == 0, f"rc={rc} err={err[:200]}")
 
     write_probe_scripts()
