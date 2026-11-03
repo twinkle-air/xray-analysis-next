@@ -251,13 +251,21 @@ follow = follow_up(agent_root, "请跑一次 V9 对照", job_id, Workspace(works
 - **进程树终止修正**：`JOBOBJECT_BASIC_LIMIT_INFORMATION` 的字段顺序写错（`JobSet` 按指针、`Affinity` 按 DWORD），结构体实际变成 72 字节，后续字段被截断，`KILL_ON_JOB_CLOSE` 可能未生效。按 MSDN 布局改回 64 字节后，超时终止覆盖整棵进程树。
 - **证据清单收敛**：报告第 6 节不再包含报告自身哈希（自引用永远无法收敛），`evidence_manifest.json` 在发布后按最终文件重新生成；发布仍是「暂存 → 校验 → 原子替换」。
 - **E06 用例修正**：完整性测试拷贝 V10 包时一并补齐 V9 依赖，避免因缺依赖而误判，只测被篡改的目标文件。
+- **发布失败处理**：`evidence_manifest.json` 写入失败时不再删除已发布的 JSON/Markdown
+  （一次失败的重建不该抹掉上一份报告），改为抛 `ReportError`，暂存目录始终清理。
+- **进程终止兜底**：`CreateJobObjectW` / `OpenProcess` / `AssignProcessToJobObject` 任一失败
+  都用 `taskkill /T /F` 终止整棵进程树；`JOBOBJECT_BASIC_LIMIT_INFORMATION` 按 x64 真实布局
+  重排为 64 字节，`LimitFlags` 之后的字段不再错位。
+- **R03 探针**：`probe_r03.py` 注入 `QueryInformationJobObject` / `OpenProcess` /
+  `AssignProcessToJobObject` 失败，另加无注入的对照用例，断言必须报错、暂存目录清理、
+  孙进程不存活；探针在系统临时目录里使用替身入口，不改动冻结模型包。
 
 ## 8. 入库范围与仓库位置
 
 本目录是 `xray-analysis-next` 仓库内的独立版本目录（`agent/v0.3.0-20261031/`），按该仓库 [CONTRIBUTING.md](../../CONTRIBUTING.md) 经任务分支与 PR 提交，**不直接推送 main**。
 
 **入库内容：**
-- `agent-workspace/agent/` 与 `agent-workspace/verify_*.py`：当前可运行的代码与本机校验脚本。
+- `agent-workspace/agent/`、`agent-workspace/verify_*.py` 与 `agent-workspace/probe_r03.py`：当前可运行的代码与本机校验脚本。
 - `deliverables/智能体功能测试谱集-20261031/`：6 个功能测试输入、3 份评估参考与说明，共约 300 KB。
 - `README.md`（本文件）与 `.gitignore`。
 

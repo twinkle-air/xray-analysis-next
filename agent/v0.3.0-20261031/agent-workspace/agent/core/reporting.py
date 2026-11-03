@@ -11,6 +11,7 @@ import os
 import pathlib
 import re
 import shutil
+import time
 from typing import Optional
 
 from .job import INFERENCE_NAME, Job
@@ -45,7 +46,34 @@ SUPPLEMENTARY = [
 
 
 class ReportError(Exception):
-    pass
+    """A documented report-generation failure. Carries no error_code surface."""
+
+
+class ReportRollbackError(ReportError):
+    """Publication failed and the previous published version could not be fully restored.
+
+    The backup is intentionally left on disk; see ``backup_dir`` for the last good copy.
+    """
+
+    def __init__(self, publish_error, backup_dir, failed):
+        self.publish_error = str(publish_error)
+        self.backup_dir = None if backup_dir is None else str(backup_dir)
+        self.failed = dict(failed)
+        detail = "; ".join(f"{name}: {reason}" for name, reason in self.failed.items())
+        if self.backup_dir:
+            msg = (
+                f"report publication failed ({self.publish_error}) and the previous "
+                f"version could not be fully restored ({detail}). The last good copy is "
+                f"kept at {self.backup_dir}; restore it manually before the next export, "
+                "which will refuse to overwrite that backup until it is removed."
+            )
+        else:
+            msg = (
+                f"report publication failed ({self.publish_error}) and the files created "
+                f"by this attempt could not be removed ({detail}). No backup exists for a "
+                "first export; remove the listed files before exporting again."
+            )
+        super().__init__(msg)
 
 
 def _read_inference(job: Job) -> dict:
@@ -180,11 +208,13 @@ def _verify_report_table(markdown: str, elements: list) -> bool:
 
 
 def _evidence_index(job: Job, json_path, md_path, comparison: dict | None, inference: dict,
-                    include_md: bool = True):
+                    include_md: bool = True, hash_paths: dict | None = None) -> list:
     """Build the published evidence index.
 
-    `json_path` and `md_path` are the final locations on disk (not the scratch copies), so
-    every hash in the manifest stays readable after the scratch directory is removed.
+    `json_path` and `md_path` are the *names* the manifest carries: they always point at the
+    published locations, so the index stays readable after publication. The SHA-256 is taken
+    from the file whose content is authoritative instead, which lets us hash the scratch
+    copies while building and prove the published hashes before anything moves.
 
     `include_md` controls whether the report's own entry is emitted: the manifest file
     (`evidence_manifest.json`) lists both published artifacts, but the Markdown must not
@@ -199,6 +229,7 @@ def _evidence_index(job: Job, json_path, md_path, comparison: dict | None, infer
     ]
     if include_md:
         entries.append((_posix(md_path), "Markdown 报告"))
+    source = hash_paths or {}
     items = []
     for ref, note in entries:
         if not ref:
@@ -206,9 +237,10 @@ def _evidence_index(job: Job, json_path, md_path, comparison: dict | None, infer
         path = pathlib.Path(ref)
         if not path.is_absolute():
             path = job.workspace.root / path
+        target = source.get(ref, path)
         items.append({
             "artifact": ref,
-            "sha256": sha256_hex(path) if path.exists() else None,
+            "sha256": sha256_hex(target) if target.exists() else None,
             "note": note,
         })
     return items
@@ -219,6 +251,116 @@ def _write_manifest(manifest_path: pathlib.Path, manifest: list) -> None:
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
     manifest_path.write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def _back_up_existing(targets, report_dir) -> tuple[pathlib.Path | None, set[str]]:
+    """Snapshot the published triset before the atomic commit replaces it.
+
+    Only used to roll back a *partial* commit: the whole candidate lives in scratch until
+    the commit, so every failure before it leaves the published files untouched. Returns
+    the backup directory, if any, and the names that were already on disk, so a failed
+    commit can both restore the old files and drop the ones it created.
+
+    A leftover recovery backup is never overwritten: it carries a RECOVERY_NEEDED.json the
+    publishing tooling cannot rebuild, so the export stops before touching the triset.
+    """
+    # a recovery backup from an earlier failure is still waiting for a manual pick;
+    # it is not a usable snapshot and must not be silently replaced.
+    leftover = report_dir / ".backup_old"
+    if leftover.exists() and any((leftover / n).exists() for n in _TRIO):
+        raise ReportError(
+            f"cannot publish the report: {leftover} still holds the previous version and an "
+            f"unprocessed recovery note. Copy the old files back from {leftover} into the "
+            f"report directory and delete {leftover}; the next export will refuse to "
+            "overwrite that backup until it is removed."
+        )
+
+    backup_dir = None
+    existed = set()
+    for target in targets:
+        if target.exists():
+            existed.add(target.name)
+            if backup_dir is None:
+                backup_dir = report_dir / ".backup_old"
+                backup_dir.mkdir(parents=True, exist_ok=True)
+            try:
+                shutil.copy2(target, backup_dir / target.name)
+            except OSError as exc:
+                # leave no half-written snapshot behind: the un-backed-up files are still
+                # publishing on the side while the candidate is still in scratch.
+                shutil.rmtree(backup_dir, ignore_errors=True)
+                raise ReportError(
+                    f"failed to snapshot the published triset: "
+                    f"{type(exc).__name__}: {exc} ({backup_dir}); delete the partial "
+                    "backup and export again, otherwise this error repeats"
+                ) from exc
+    return backup_dir, existed
+
+
+_TRIO = ("results.json", "report.md", "evidence_manifest.json")
+
+
+def _restore_from_backup(backup_dir, existed, report_dir):
+    """Undo a partial commit. Returns (restored, failed); never hides a failure.
+
+    A file is only counted as restored after its hash matches the backup copy, so a
+    copy that raised no exception but wrote garbage is still reported. Each name is
+    attempted independently: one failure does not stop the others.
+    """
+    restored, failed = [], {}
+    for name in _TRIO:
+        dst = report_dir / name
+        if name in existed:
+            src = None if backup_dir is None else backup_dir / name
+            if src is None or not src.exists():
+                failed[name] = "backup copy is missing"
+                continue
+            try:
+                shutil.copy2(src, dst)
+                if sha256_hex(src) != sha256_hex(dst):
+                    failed[name] = "restored file hash does not match the backup"
+                else:
+                    restored.append(name)
+            except OSError as exc:
+                failed[name] = f"{type(exc).__name__}: {exc}"
+        elif dst.exists():
+            try:
+                dst.unlink()
+                restored.append(name)
+            except OSError as exc:
+                failed[name] = f"{type(exc).__name__}: {exc}"
+    return restored, failed
+
+
+def _write_recovery_report(backup_dir, publish_error, failed):
+    """Record what went wrong and how to recover, inside the backup directory.
+
+    `publish_error` is the publication failure that triggered the write, `failed_restores`
+    lists the names the restore could not recover, and `files` records the SHA-256 of the
+    backup copies so a manual recovery can be verified afterwards. Returns the report
+    path, or None if it could not be written.
+    """
+    payload = {
+        "created_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "publish_error": str(publish_error),
+        "failed_restores": failed,
+        "backup_dir": _posix(backup_dir),
+        "files": {
+            n: sha256_hex(backup_dir / n)
+            for n in _TRIO if (backup_dir / n).exists()
+        },
+        "manual_recovery": (
+            "copy each file from backup_dir into the report directory, verify the sha256 "
+            "above, then delete backup_dir"
+        ),
+    }
+    path = backup_dir / "RECOVERY_NEEDED.json"
+    try:
+        path.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    except OSError:
+        return None
+    return path
 
 
 def build_report(job: Job, comparison: dict | None = None, warnings: Optional[list] = None) -> dict:
@@ -338,23 +480,20 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
     # 3. the envelope is now final, so its hash and the report hash can be recorded
     envelope["consistency_check"] = bool(consistency)
     write_json(tmp_json, envelope)
-    # section 6 is left blank for now: the published files do not exist yet, so their
-    # hashes would be wrong. It is filled in after step 4, when the report is on disk.
-    tmp_md.write_text(markdown, encoding="utf-8")
 
-    # 4. publish atomically: nothing outside the scratch directory exists until now
-    os.replace(tmp_json, json_path)
-    os.replace(tmp_md, md_path)
+    # 4. the whole triset -- JSON, Markdown, manifest -- is built inside the scratch
+    #    directory. Nothing outside scratch is touched until the commit, so a failure at any
+    #    point leaves the previously published version byte-identical.
+    manifest_path = report_dir / "evidence_manifest.json"
+    tmp_manifest = scratch / "evidence_manifest.json"
 
-    # 5. section 6 is rendered from the manifest minus the report's own entry. The
-    #    manifest keeps the report hash (it is written after the report, so that hash is
-    #    the one on disk), but the Markdown must not summarize a version of itself: that
-    #    hash would otherwise never converge.
-    def _manifest():
+    def _manifest(hashed):
+        # the manifest names the published files but hashes the scratch copies: the content
+        # is identical once committed, and only a final file has a trustworthy hash.
         return _evidence_index(job, json_path, md_path, comparison, inference,
-                               include_md=True)
+                               include_md=True, hash_paths=hashed)
 
-    section_manifest = [m for m in _manifest()
+    section_manifest = [m for m in _manifest({_posix(json_path): tmp_json, _posix(md_path): tmp_md})
                         if not m["artifact"].endswith("report.md")]
     markdown = _fill(markdown, {
         "consistency_check": "通过" if consistency else "不一致",
@@ -362,15 +501,41 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
             f"- `{m['artifact']}` — {m['note']}，SHA-256 `{m['sha256']}`"
             for m in section_manifest),
     })
-    tmp_md_final = scratch / "report.md"
-    tmp_md_final.write_text(markdown, encoding="utf-8")
-    os.replace(tmp_md_final, md_path)
+    tmp_md.write_text(markdown, encoding="utf-8")
 
-    # 6. the manifest is written last, after the report is final, so the report hash it
-    #    carries matches the file on disk. It is not self-referential: section 6 of the
-    #    Markdown omits the report's own entry, so nothing has to summarize itself.
-    _write_manifest(job.sub("report") / "evidence_manifest.json", _manifest())
-    shutil.rmtree(scratch, ignore_errors=True)
+    final_manifest = _manifest({_posix(json_path): tmp_json, _posix(md_path): tmp_md})
+    # the manifest is what section 6 quotes, so re-deriving section 6 from it must reproduce
+    # the Markdown we just wrote; otherwise the published report would summarize a manifest
+    # it does not match.
+    non_md = [m for m in final_manifest if not m["artifact"].endswith("report.md")]
+    if non_md != section_manifest:
+        shutil.rmtree(scratch, ignore_errors=True)
+        raise ReportError("evidence index does not match the generated report")
+
+    # 6. commit atomically: the three published files move together, or not at all.
+    #    the manifest is written into scratch first, so a failure here leaves no trace.
+    backups, existed = _back_up_existing((json_path, md_path, manifest_path), report_dir)
+    keep_backup = False
+    try:
+        _write_manifest(tmp_manifest, final_manifest)
+        os.replace(tmp_json, json_path)
+        os.replace(tmp_md, md_path)
+        os.replace(tmp_manifest, manifest_path)
+    except OSError as e:
+        restored, failed = _restore_from_backup(backups, existed, report_dir)
+        if failed:
+            # the last published copy is not yet restored, so it stays on disk and a
+            # recovery report points at it: the operator has to intervene before
+            # publishing again.
+            keep_backup = True
+            if backups is not None:
+                _write_recovery_report(backups, e, failed)
+            raise ReportRollbackError(e, backups, failed) from e
+        raise ReportError(f"failed to publish the report atomically: {e}") from e
+    finally:
+        shutil.rmtree(scratch, ignore_errors=True)
+        if backups is not None and not keep_backup:
+            shutil.rmtree(backups, ignore_errors=True)
 
     return {
         "markdown": markdown,
