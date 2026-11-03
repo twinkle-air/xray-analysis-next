@@ -10,10 +10,15 @@ restores it by hand. Cases F-G exercise the Job Object directly: closing the han
 killing the owning process, must both take the whole tree down. Every check reads the
 files on disk; nothing is trusted from a self-reported flag.
 
-Layout: the probe lives at `agent/<version>/agent-workspace/` in the repository (under it
-`agent/` is the package and `jobs/` the task dir), and the local project root is isomorphic,
-so every path is derived from this module's own location and every child script inserts
-that root on `sys.path` itself instead of relying on the current directory. The probe
+Layout: the probe lives at `agent/<version>/agent-workspace/` in the repository. That
+directory is the Python source root -- `agent/` sits under it -- but it is *not* the
+runtime workspace root, which is the directory Workspace points at: the one holding
+`agent-workspace/agent`, `jobs/` and `deliverables/`, i.e. the parent of this file in the
+repository. In the flat development layout both roles coincide. The probe therefore keeps
+the two concepts apart: the source root only ever feeds sys.path/PYTHONPATH, while the
+workspace root is discovered by asking Workspace where its registry would land, so the
+probe works under whichever layout actually surrounds it. Every child script inserts the
+source root on `sys.path` itself instead of relying on the current directory. The probe
 creates every job it consumes, so it never reads or mutates another run's tasks.
 """
 from __future__ import annotations
@@ -28,9 +33,35 @@ import subprocess
 import sys
 import time
 
-ROOT = pathlib.Path(__file__).resolve().parent
+SOURCE_DIR = pathlib.Path(__file__).resolve().parent   # holds agent/, feeds sys.path
+
+
+def _find_workspace_root() -> pathlib.Path:
+    """The directory Workspace must be pointed at, discovered instead of assumed.
+
+    Workspace resolves ``agent/``, ``jobs/`` and ``deliverables/`` against its root, and
+    which directory that is depends on the layout: the checked-out repository nests the
+    package under ``<version>/agent-workspace/agent`` (workspace root = this file's
+    parent's parent), the flat development layout keeps it at ``agent/`` directly
+    (workspace root = this file's directory). Rather than hard-coding a depth, ask
+    Workspace itself where its model registry would live and keep the first candidate
+    that actually has it on disk. A wrong guess fails loudly here instead of as a
+    FileNotFoundError inside the first analysis.
+    """
+    from agent.core.paths import Workspace
+
+    for base in (SOURCE_DIR, SOURCE_DIR.parent):
+        if Workspace(base).model_registry().is_file():
+            return base
+    raise SystemExit(
+        f"R03 probe: no runtime workspace root found around {SOURCE_DIR} "
+        f"(looked for agent-workspace/agent or agent under {SOURCE_DIR} and "
+        f"{SOURCE_DIR.parent})")
+
+
+ROOT = _find_workspace_root()             # Workspace root: model, jobs and reports hang off it
 SPECTRA_REL = "deliverables" / pathlib.Path("智能体功能测试谱集-20261031") / "01_正常输入" / "T01.json"
-WORK = ROOT / "probe_r03_workspace"          # probe private scratch, removed at the end
+WORK = SOURCE_DIR / "probe_r03_workspace"  # probe private scratch, removed at the end
 OUT = WORK / "out.json"
 MARKER = WORK / "survivor.txt"
 TMP_DIR = WORK / ".tmp-V10"
@@ -44,18 +75,18 @@ CREATED = []                                  # job ids this probe run owns, for
 def _find_spectra() -> pathlib.Path:
     """Locate the spectrum input without a hard-coded absolute path.
 
-    The probe's own directory is the workspace root in the assembled layout
-    (``agent/`` package + ``deliverables/`` under it); in the checked-out repository the
-    deliverables sit one level above the probe. Either is accepted; anything else is a
-    loud failure, never a silent skip.
+    The deliverables hang off the runtime workspace root, whichever level that turned out
+    to be; the source directory is tried too, so a layout that keeps everything under the
+    probe's own directory still works. Anything else is a loud failure, never a silent
+    skip.
     """
-    for base in (ROOT, ROOT.parent):
+    for base in (ROOT, SOURCE_DIR):
         candidate = base / SPECTRA_REL
         if candidate.is_file():
             return candidate
     raise SystemExit(
-        f"R03 probe: spectrum input not found relative to {ROOT} "
-        f"(looked for {SPECTRA_REL} under {ROOT} and {ROOT.parent})")
+        f"R03 probe: spectrum input not found relative to {SOURCE_DIR} "
+        f"(looked for {SPECTRA_REL} under {ROOT} and {SOURCE_DIR})")
 
 
 SPECTRA = _find_spectra()
@@ -472,7 +503,7 @@ SHIMS = {
 
 RUNNER_TEMPLATE = (
     "import json, pathlib, sys, time\n"
-    "sys.path.insert(0, " + repr(str(ROOT)) + ")\n"
+    "sys.path.insert(0, " + repr(str(SOURCE_DIR)) + ")\n"
     "from agent.core.paths import Workspace\n"
     "from agent.core.runner import run_model\n"
     "MARKER = pathlib.Path(" + repr(str(MARKER)) + ")\n"
@@ -499,15 +530,16 @@ def run_shim_case(name, patch, timeout=10.0):
     (shim_dir / "sitecustomize.py").write_text(patch, encoding="utf-8")
     script = WORK / f"case_runner_{name}.py"
     script.write_text(RUNNER_TEMPLATE.format(timeout=timeout), encoding="utf-8")
-    # the shim directory is only reachable through PYTHONPATH; the root must stay on it
-    # too, or the generated script cannot import the package its sitecustomize patches.
+    # the shim directory is only reachable through PYTHONPATH; the source root must stay on
+    # it too, or the generated script cannot import the package its sitecustomize patches,
+    # while the workspace root passed to run_model is threaded through the script itself.
     env = dict(os.environ,
-               PYTHONPATH=str(shim_dir) + os.pathsep + str(ROOT),
+               PYTHONPATH=str(shim_dir) + os.pathsep + str(SOURCE_DIR),
                PYTHONUTF8="1", PYTHONIOENCODING="utf-8")
     try:
         proc = subprocess.run([sys.executable, str(script)], capture_output=True,
                               text=True, encoding="utf-8", errors="replace", env=env,
-                              cwd=str(ROOT), timeout=240)
+                              cwd=str(SOURCE_DIR), timeout=240)
         if proc.returncode != 0 or not proc.stdout.strip():
             # an early crash has to surface its stderr, or the real cause gets buried under
             # an IndexError from splitlines() instead of the fault it belongs to.
@@ -588,7 +620,7 @@ def write_probe_scripts() -> None:
     )
     WRAPPER_SCRIPT.write_text(
         "import pathlib, subprocess, sys, time\n"
-        "sys.path.insert(0, " + _path_arg(ROOT) + ")\n"
+        "sys.path.insert(0, " + _path_arg(SOURCE_DIR) + ")\n"
         "from agent.core.runner import _JobHandle\n"
         "child = subprocess.Popen([sys.executable, str(" + _path_arg(CHILD_SCRIPT) + ")],\n"
         "                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)\n"
@@ -701,6 +733,23 @@ def case_parent_abnormal_exit() -> None:
           "survivor.txt written after the wrapper was killed")
 
 
+def check_workspace() -> None:
+    """Fail loudly up front when the frozen model package the first analysis needs is absent.
+
+    The probe cannot exercise publication without an analysis to publish, and a missing
+    package is a setup problem -- say so here instead of letting it surface as a
+    FileNotFoundError several cases in.
+    """
+    from agent.core.paths import Workspace
+    from agent.core.registry import ModelRegistry
+
+    registry = ModelRegistry(Workspace(ROOT))
+    for version in sorted(registry.models()):
+        integrity = ROOT / registry.model(version)["integrity_file"]
+        check(f"model package for {version} is present on disk", integrity.is_file(),
+              f"{integrity} is missing")
+
+
 # ------------------------------------------------------------------------------ main
 
 def main() -> int:
@@ -714,6 +763,9 @@ def main() -> int:
                 print(f"  - {label}: {detail}")
         return 1
     check("spectrum input present", SPECTRA.is_file())
+    print(f"   source root {SOURCE_DIR}")
+    print(f"   workspace root {ROOT}")
+    check_workspace()
     WORK.mkdir(parents=True, exist_ok=True)
 
     run_r1_cases()
