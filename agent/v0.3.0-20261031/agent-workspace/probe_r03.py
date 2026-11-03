@@ -2,24 +2,63 @@
 and process isolation.
 
 Cases A-E drive `run_model` with a ctypes shim injected into a *fresh* interpreter, so the
-fault belongs to the Windows API, not to the frozen model. Cases R1 re-export an already
-successful report while failing the manifest write and the final atomic replace: the
-previously published triset must stay byte-identical. Cases F-G exercise the Job Object
-directly: closing the handle, and killing the owning process, must both take the whole tree
-down. Every case asserts on the actual files on disk, never on a self-reported flag.
+fault belongs to the Windows API, not to the frozen model. Cases D and R1 exercise the
+publication transaction: a failed commit must leave the previously published triset
+byte-identical, and a failed commit *plus* a failed restore must leave the backup and a
+machine-readable recovery note on disk, which blocks the next export until the operator
+restores it by hand. Cases F-G exercise the Job Object directly: closing the handle, and
+killing the owning process, must both take the whole tree down. Every check reads the
+files on disk; nothing is trusted from a self-reported flag.
+
+Layout: the probe lives at `agent/<version>/agent-workspace/` in the repository (under it
+`agent/` is the package and `jobs/` the task dir), and the local project root is isomorphic,
+so every path is derived from this module's own location and every child script inserts
+that root on `sys.path` itself instead of relying on the current directory. The probe
+creates every job it consumes, so it never reads or mutates another run's tasks.
 """
 from __future__ import annotations
 
-import json, os, pathlib, shutil, subprocess, sys, time
+import hashlib
+import json
+import os
+import pathlib
+import shutil
+import stat
+import subprocess
+import sys
+import time
 
-ROOT = pathlib.Path("C:/Users/Twinkle/Desktop/通用X射线谱分析")
-SPECTRA = ROOT / "deliverables/智能体功能测试谱集-20261031/01_正常输入/T01.json"
-PROBE = ROOT / "jobs/r03_probe"
-OUT = PROBE / "out.json"
-MARKER = PROBE / "survivor.txt"
-TMP_DIR = PROBE / ".tmp-V10"
+ROOT = pathlib.Path(__file__).resolve().parent
+SPECTRA_REL = "deliverables" / pathlib.Path("智能体功能测试谱集-20261031") / "01_正常输入" / "T01.json"
+WORK = ROOT / "probe_r03_workspace"          # probe private scratch, removed at the end
+OUT = WORK / "out.json"
+MARKER = WORK / "survivor.txt"
+TMP_DIR = WORK / ".tmp-V10"
+SHIM_DIR = WORK / "shim"
 
 FAIL = []
+TRIO = ("results.json", "report.md", "evidence_manifest.json")
+CREATED = []                                  # job ids this probe run owns, for the audit
+
+
+def _find_spectra() -> pathlib.Path:
+    """Locate the spectrum input without a hard-coded absolute path.
+
+    The probe's own directory is the workspace root in the assembled layout
+    (``agent/`` package + ``deliverables/`` under it); in the checked-out repository the
+    deliverables sit one level above the probe. Either is accepted; anything else is a
+    loud failure, never a silent skip.
+    """
+    for base in (ROOT, ROOT.parent):
+        candidate = base / SPECTRA_REL
+        if candidate.is_file():
+            return candidate
+    raise SystemExit(
+        f"R03 probe: spectrum input not found relative to {ROOT} "
+        f"(looked for {SPECTRA_REL} under {ROOT} and {ROOT.parent})")
+
+
+SPECTRA = _find_spectra()
 
 
 def fail(label, detail=""):
@@ -34,251 +73,367 @@ def check(label, cond, detail=""):
         fail(label, detail)
 
 
-# ---------------------------------------------------------------------- R1: publication
-
-# the published triset must survive a failed re-export byte-identical. Every check reads the
-# files on disk; nothing is trusted from a self-reported flag.
-#
-# the fault is spliced into the runner script itself rather than injected through
-# sitecustomize: sitecustomize runs before the script puts '.' on sys.path, so it could not
-# import agent.core. The baseline export runs before the fault is applied, so only the
-# re-export is affected.
-JOB = None
-
-R1_TEMPLATE = (
-    "import hashlib, json, os, pathlib, shutil, sys\n"
-    "sys.path.insert(0, '.')\n"
-    "import agent.core.reporting as R\n"
-    "from agent.core.job import Job\n"
-    "from agent.core.paths import Workspace\n"
-    "from agent.core.tools import export_report\n"
-    "ROOT = pathlib.Path(r'{root}')\n"
-    "TRIO = ('results.json', 'report.md', 'evidence_manifest.json')\n"
-    "def sha(p):\n"
-    "    return hashlib.file_digest(open(p, 'rb'), 'sha256').hexdigest()\n"
-    "def report_dir():\n"
-    "    return ROOT / 'jobs' / JOB / 'report'\n"
-    "def pick_job():\n"
-    "    for d in sorted((ROOT / 'jobs').iterdir()):\n"
-    "        st = d / 'audit' / 'state.json'\n"
-    "        if not st.is_file():\n"
-    "            continue\n"
-    "        try:\n"
-    "            state = json.loads(st.read_text(encoding='utf-8'))\n"
-    "        except Exception:\n"
-    "            continue\n"
-    "        if state.get('stage') == 'succeeded':\n"
-    "            return d.name\n"
-    "    return None\n"
-    "JOB = pick_job()\n"
-    "if JOB is None:\n"
-    "    print(json.dumps(['no_succeeded_job']))\n"
-    "    sys.exit(0)\n"
-    "def reset():\n"
-    "    shutil.rmtree(report_dir(), ignore_errors=True)\n"
-    "    job = Job.open(Workspace(ROOT), JOB)\n"
-    "    job.set('sample_description', 'baseline')\n"
-    "    job.set('report_state', None)\n"
-    "    job.save()\n"
-    "def hashes():\n"
-    "    out = dict()\n"
-    "    for n in TRIO:\n"
-    "        p = report_dir() / n\n"
-    "        try:\n"
-    "            out[n] = sha(p)\n"
-    "        except OSError:\n"
-    "            out[n] = None\n"
-    "    return out\n"
-    "def files_present():\n"
-    "    return all((report_dir() / n).exists() for n in TRIO)\n"
-    "def manifest_ok():\n"
-    "    try:\n"
-    "        man = json.loads((report_dir() / 'evidence_manifest.json').read_text(encoding='utf-8'))\n"
-    "    except Exception:\n"
-    "        return False\n"
-    "    for e in man:\n"
-    "        p = pathlib.Path(e['artifact'])\n"
-    "        if not p.is_absolute():\n"
-    "            p = ROOT / p\n"
-    "        try:\n"
-    "            if hashlib.file_digest(open(p, 'rb'), 'sha256').hexdigest() != e['sha256']:\n"
-    "                return False\n"
-    "        except Exception:\n"
-    "            return False\n"
-    "    return True\n"
-    "def scratch_gone():\n"
-    "    rd = report_dir()\n"
-    "    return not (rd / '.tmp').exists() and not (rd / '.backup_old').exists()\n"
-    "reset()\n"
-    "res = export_report(Workspace(ROOT), JOB)\n"
-    "first = hashes()\n"
-    "__POST_PATCH__\n"
-    "job = Job.open(Workspace(ROOT), JOB)\n"
-    "job.set('sample_description', 'candidate mutation')\n"
-    "job.save()\n"
-    "res2 = export_report(Workspace(ROOT), JOB)\n"
-    "second = hashes()\n"
-    "print(json.dumps([\n"
-    "    res['status'],\n"
-    "    res2['status'],\n"
-    "    first == second,\n"
-    "    files_present(),\n"
-    "    manifest_ok(),\n"
-    "    scratch_gone(),\n"
-    "]))\n"
-)
+def sha(p: pathlib.Path) -> str:
+    return hashlib.file_digest(open(p, "rb"), "sha256").hexdigest()
 
 
-def render_r1(patch: str) -> str:
-    return R1_TEMPLATE.format(root=ROOT).replace("__POST_PATCH__", patch)
+def try_sha(p: pathlib.Path):
+    return sha(p) if p.is_file() else None
 
 
-def run_r1_case(label, patch):
-    PROBE.mkdir(parents=True, exist_ok=True)
-    script = PROBE / "r1_runner.py"
-    script.write_text(render_r1(patch), encoding="utf-8")
-    env = dict(os.environ, PYTHONUTF8="1", PYTHONIOENCODING="utf-8")
-    try:
-        proc = subprocess.run([sys.executable, str(script)], capture_output=True,
-                              text=True, encoding="utf-8", errors="replace", env=env,
-                              cwd=str(ROOT), timeout=180)
-        lines = proc.stdout.strip().splitlines()
-        if lines and lines[-1] == "['no_succeeded_job']":
-            return (["no_succeeded_job"], 9,
-                    proc.stderr or "no succeeded job present to export from")
-        return json.loads(lines[-1]), proc.returncode, proc.stderr
-    finally:
-        if script.exists():
-            script.unlink()
+def report_dir(job_id: str) -> pathlib.Path:
+    return ROOT / "jobs" / job_id / "report"
 
 
-R1_NO_FAULT = ""
-R1_MANIFEST_FAULT = (
-    "import agent.core.reporting as R\n"
-    "_wm = R._write_manifest\n"
-    "def broken(path, manifest):\n"
-    "    raise OSError(9, 'simulated manifest write failure', str(path))\n"
-    "R._write_manifest = broken\n"
-)
-R1_REPLACE_FAULT = (
-    "import os\n"
-    "_real = os.replace\n"
-    "n = [0]\n"
-    "def counted(a, b):\n"
-    "    dst = pathlib.Path(b)\n"
-    "    # only the three replaces inside the publication commit block count; the draft\n"
-    "    # writes land in .tmp/ and a job state save lands in audit/, so a global counter\n"
-    "    # would trip on those before reaching the commit block.\n"
-    "    if dst.parent != report_dir() or dst.name not in TRIO:\n"
-    "        return _real(a, b)\n"
-    "    n[0] += 1\n"
-    "    # the commit block moves json, then report.md, then the manifest; report.md is the\n"
-    "    # second, and the first that would otherwise commit new candidate content.\n"
-    "    if n[0] == 2:\n"
-    "        raise OSError(5, 'simulated replace failure', str(b))\n"
-    "    return _real(a, b)\n"
-    "os.replace = counted\n"
-)
-
-# A first export has nothing to roll back to, so a failure inside the commit block must
-# not leave a half-published triset where a later run could mistake it for a real report.
-R1_FIRST_TEMPLATE = (
-    "import hashlib, json, os, pathlib, shutil, sys\n"
-    "sys.path.insert(0, '.')\n"
-    "import agent.core.reporting as R\n"
-    "from agent.core.job import Job\n"
-    "from agent.core.paths import Workspace\n"
-    "from agent.core.tools import export_report\n"
-    "ROOT = pathlib.Path(r'{root}')\n"
-    "TRIO = ('results.json', 'report.md', 'evidence_manifest.json')\n"
-    "def report_dir():\n"
-    "    return ROOT / 'jobs' / JOB / 'report'\n"
-    "def pick_job():\n"
-    "    for d in sorted((ROOT / 'jobs').iterdir()):\n"
-    "        st = d / 'audit' / 'state.json'\n"
-    "        if not st.is_file():\n"
-    "            continue\n"
-    "        try:\n"
-    "            state = json.loads(st.read_text(encoding='utf-8'))\n"
-    "        except Exception:\n"
-    "            continue\n"
-    "        if state.get('stage') == 'succeeded':\n"
-    "            return d.name\n"
-    "    return None\n"
-    "JOB = pick_job()\n"
-    "if JOB is None:\n"
-    "    print(json.dumps(['no_succeeded_job']))\n"
-    "    sys.exit(0)\n"
-    "# the report dir is empty, so nothing here predates this export\n"
-    "shutil.rmtree(report_dir(), ignore_errors=True)\n"
-    "__POST_FAULT__\n"
-    "job = Job.open(Workspace(ROOT), JOB)\n"
-    "job.set('sample_description', 'candidate mutation')\n"
-    "job.save()\n"
-    "res = export_report(Workspace(ROOT), JOB)\n"
-    "left = [(report_dir() / n).exists() for n in TRIO]\n"
-    "print(json.dumps([\n"
-    "    res['status'],\n"
-    "    any(left),\n"
-    "    (report_dir() / '.tmp').exists(),\n"
-    "    (report_dir() / '.backup_old').exists(),\n"
-    "]))\n"
-)
+def job_state(job_id: str) -> dict:
+    return json.loads((ROOT / "jobs" / job_id / "audit" / "state.json")
+                      .read_text(encoding="utf-8"))
 
 
-def render_r1_first(patch: str) -> str:
-    return R1_FIRST_TEMPLATE.format(root=ROOT).replace("__POST_FAULT__", patch)
+# ------------------------------------------------------------------ probe-owned job
 
+def write_task() -> pathlib.Path:
+    """One off-copy of the spectrum, mutated so dedup never hands back another run's job.
 
-def run_r1_first_case(label, patch):
-    PROBE.mkdir(parents=True, exist_ok=True)
-    script = PROBE / "r1_first_runner.py"
-    script.write_text(render_r1_first(patch), encoding="utf-8")
-    env = dict(os.environ, PYTHONUTF8="1", PYTHONIOENCODING="utf-8")
-    try:
-        proc = subprocess.run([sys.executable, str(script)], capture_output=True,
-                              text=True, encoding="utf-8", errors="replace", env=env,
-                              cwd=str(ROOT), timeout=180)
-        lines = proc.stdout.strip().splitlines()
-        if lines and lines[-1] == "['no_succeeded_job']":
-            return (["no_succeeded_job"], 9,
-                    proc.stderr or "no succeeded job present to export from")
-        return json.loads(lines[-1]), proc.returncode, proc.stderr
-    finally:
-        if script.exists():
-            script.unlink()
-
-
-def replace_fault_on(nth: int) -> str:
-    """Fail the nth os.replace that targets a published file, letting the rest proceed.
-
-    The counter is scoped to the three commit replaces rather than global, because the
-    draft envelope and report are written to .tmp/ and the job state is saved to audit/;
-    a global counter would trip on one of those before reaching the commit block.
+    Each call mutates a different channel, so every case generates its own task and the
+    workspace's dedup index can never couple two probe cases to the same job.
     """
-    return (
-        "import os\n"
-        "_real = os.replace\n"
-        "n = [0]\n"
-        "def counted(a, b):\n"
-        "    dst = pathlib.Path(b)\n"
-        "    if dst.parent != report_dir() or dst.name not in TRIO:\n"
-        "        return _real(a, b)\n"
-        "    n[0] += 1\n"
-        f"    if n[0] == {nth}:\n"
-        "        raise OSError(13, 'simulated first-export replace failure', str(b))\n"
-        "    return _real(a, b)\n"
-        "os.replace = counted\n"
-    )
+    CREATED.append(None)  # reserve a slot; the job id fills it in analyze_probe_job
+    task = WORK / f"T01_R03_MUTATED_{len(CREATED)}.json"
+    if task.exists():
+        task.unlink()
+    src = json.loads(SPECTRA.read_text(encoding="utf-8"))
+    src["counts"][0] += len(CREATED)
+    task.write_text(json.dumps(src, ensure_ascii=False), encoding="utf-8")
+    return task
 
 
-R1_MANIFEST_FAULT = (
-    "import agent.core.reporting as R\n"
-    "_wm = R._write_manifest\n"
-    "def broken(path, manifest):\n"
-    "    raise OSError(9, 'simulated manifest write failure', str(path))\n"
-    "R._write_manifest = broken\n"
-)
+def analyze_probe_job() -> str:
+    from agent.core.paths import Workspace
+    from agent.core.tools import analyze_spectrum
+    res = analyze_spectrum(Workspace(ROOT), write_task(), "r03 probe")
+    if res.get("status") != "succeeded":
+        fail("probe job analysis", str(res)[:300])
+        raise SystemExit(1)
+    CREATED[-1] = res["job_id"]
+    return res["job_id"]
+
+
+def drop_job(job_id: str) -> None:
+    rmtree_readonly(ROOT / "jobs" / job_id)
+
+
+def rmtree_readonly(path: pathlib.Path) -> None:
+    """Remove a tree even when the agent marked its staged input read-only.
+
+    Windows refuses to delete read-only files, and `Job.create` deliberately leaves the
+    staged input read-only, so `shutil.rmtree(ignore_errors=True)` silently leaves the
+    whole job directory behind. The failing entry is unlocked and retried instead.
+    """
+    target = pathlib.Path(path)
+    if not target.exists():
+        return
+
+    def unlock(_func, bad_path, _exc) -> None:
+        p = pathlib.Path(bad_path)
+        try:
+            os.chmod(p, stat.S_IWRITE)
+            if p.is_file():
+                p.unlink()
+            elif p.is_dir():
+                p.rmdir()
+        except OSError:
+            pass
+
+    try:
+        shutil.rmtree(target, onexc=unlock)
+    except TypeError:
+        # onexc is Python 3.12+; the deprecated `onerror` spelled the same contract.
+        shutil.rmtree(target, onerror=unlock)
+
+
+def audit_leftovers() -> None:
+    """Report residue instead of deleting it: hidden leftovers would hide real bugs.
+
+    Every job this run created must already be gone (each case drops its own), and no
+    ``.tmp-*`` scratch may remain under ``jobs/``. Anything left is a failure first and
+    only then cleaned up, so the operator sees it in the report.
+    """
+    leftovers = []
+    for job_id in CREATED:
+        if job_id and (ROOT / "jobs" / job_id).exists():
+            leftovers.append(f"job {job_id} was not removed")
+    for tmp in sorted((ROOT / "jobs").glob(".tmp-*")) if (ROOT / "jobs").exists() else []:
+        leftovers.append(f"scratch {tmp.name} remains under jobs/")
+    if leftovers:
+        for item in leftovers:
+            fail("leftover audit", item)
+        for job_id in CREATED:
+            if job_id:
+                drop_job(job_id)
+    check("leftover audit: the probe removed every job it created", not leftovers,
+          "; ".join(leftovers))
+    leftover_scratch = sorted(p.name for p in (ROOT / "jobs").glob(".tmp-*")) \
+        if (ROOT / "jobs").exists() else []
+    check("leftover audit: no .tmp-* scratch under jobs/", not leftover_scratch,
+          "; ".join(leftover_scratch))
+
+
+# ---------------------------------------------------------------- R1: publication
+
+def install_replace_fault(rd: pathlib.Path, nth: int):
+    """Raise OSError on the nth os.replace that publishes one of the triset files."""
+    # the counter only counts the three commit replaces: the draft envelope, the scratch
+    # manifest and the job state are all written elsewhere, so a global counter would trip
+    # long before the commit block.
+    real = os.replace
+    counter = [0]
+
+    def counted(a, b):
+        dst = pathlib.Path(b)
+        if dst.parent != rd or dst.name not in TRIO:
+            return real(a, b)
+        counter[0] += 1
+        if counter[0] == nth:
+            raise OSError(13, "simulated publish failure", str(b))
+        return real(a, b)
+
+    os.replace = counted
+    return real
+
+
+def install_restore_fault(rd: pathlib.Path):
+    """Raise PermissionError only on the rollback copy that results.json performs."""
+    # the fault is scoped to `dst.parent == rd`, so the snapshot copy that backs the triset
+    # up before the commit is never disturbed -- only the restore path can trip it.
+    real = shutil.copy2
+    hit = [False]
+
+    def guarded(src, dst, *a, **k):
+        if not hit[0] and pathlib.Path(dst).parent == rd and pathlib.Path(dst).name == "results.json":
+            hit[0] = True
+            raise PermissionError(13, "simulated restore failure", str(dst))
+        return real(src, dst, *a, **k)
+
+    shutil.copy2 = guarded
+    return real
+
+
+def install_manifest_fault():
+    import agent.core.reporting as R
+    real = R._write_manifest
+
+    def broken(path, manifest):
+        raise OSError(9, "simulated manifest write failure", str(path))
+
+    R._write_manifest = broken
+    return real
+
+
+def restore_os_replace(real):
+    os.replace = real
+
+
+def restore_copy2(real):
+    shutil.copy2 = real
+
+
+def restore_manifest(real):
+    import agent.core.reporting as R
+    R._write_manifest = real
+
+
+def export_for(job_id: str) -> dict:
+    from agent.core.paths import Workspace
+    from agent.core.tools import export_report
+    return export_report(Workspace(ROOT), job_id)
+
+
+def case_baseline(label: str, job_id: str) -> dict:
+    """Clean export: the triset hashes returned here are the "before" for the fault cases."""
+    rd = report_dir(job_id)
+    res = export_for(job_id)
+    out = {
+        "status": res["status"],
+        "baseline": {n: try_sha(rd / n) for n in TRIO},
+        "manifest_ok": manifest_matches_disk(job_id),
+    }
+    check(f"{label}: export succeeded", out["status"] == "exported", f"status={res['status']}")
+    check(f"{label}: all three files exist", all((rd / n).is_file() for n in TRIO))
+    check(f"{label}: manifest hashes match disk", out["manifest_ok"] is True, "hash mismatch")
+    check(f"{label}: no scratch left behind", not (rd / ".tmp").exists(), ".tmp remains")
+    check(f"{label}: no leftover backup", not (rd / ".backup_old").exists(), ".backup_old remains")
+    return out
+
+
+def manifest_matches_disk(job_id: str) -> bool:
+    rd = report_dir(job_id)
+    try:
+        manifest = json.loads((rd / "evidence_manifest.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    for entry in manifest:
+        p = pathlib.Path(entry["artifact"])
+        if not p.is_absolute():
+            p = ROOT / p
+        if try_sha(p) != entry.get("sha256"):
+            return False
+    return True
+
+
+def case_published_failure(label: str, job_id: str, fault: str) -> dict:
+    """Re-export the published triset; the failure must not change a published byte."""
+    rd = report_dir(job_id)
+    before = {n: try_sha(rd / n) for n in TRIO}
+    undo = None
+    if fault == "manifest":
+        real = install_manifest_fault()
+        undo = lambda: restore_manifest(real)
+    elif fault in ("replace_1", "replace_2", "replace_3"):
+        real = install_replace_fault(rd, int(fault.rsplit("_", 1)[1]))
+        undo = lambda: restore_os_replace(real)
+    else:
+        raise ValueError(fault)
+    try:
+        res = export_for(job_id)
+    finally:
+        undo()
+    published = {n: try_sha(rd / n) for n in TRIO}
+    check(f"{label}: export reported failure", res["status"] == "failed",
+          f"status={res['status']}")
+    check(f"{label}: warning carries the failure",
+          "; ".join(res.get("warnings") or []), "warning empty")
+    check(f"{label}: previous triset byte-identical", published == before, str(published))
+    check(f"{label}: job state machine is failed",
+          job_state(job_id).get("report_state") == "failed", "unexpected report_state")
+    return res
+
+
+def case_combined_failure(label: str, job_id: str) -> None:
+    """A publish failure whose own restore also fails: the backup must survive on disk."""
+    rd = report_dir(job_id)
+    before = {n: try_sha(rd / n) for n in TRIO}
+    real_replace = install_replace_fault(rd, 2)
+    real_copy2 = install_restore_fault(rd)
+    try:
+        res = export_for(job_id)
+    finally:
+        restore_os_replace(real_replace)
+        restore_copy2(real_copy2)
+
+    backup = rd / ".backup_old"
+    recovery = backup / "RECOVERY_NEEDED.json"
+    check(f"{label}: export reported failure", res["status"] == "failed",
+          f"status={res['status']}")
+    check(f"{label}: raised a rollback error naming the backup",
+          str(backup) in "; ".join(res.get("warnings") or []), "no backup path in warning")
+    check(f"{label}: backup directory kept on disk", backup.is_dir(), ".backup_old gone")
+    check(f"{label}: old results.json kept in the backup",
+          (backup / "results.json").is_file() and
+          sha(backup / "results.json") == before["results.json"],
+          "backup differs from the published version")
+    check(f"{label}: recovery note written", recovery.is_file(), "RECOVERY_NEEDED.json missing")
+    if recovery.is_file():
+        payload = json.loads(recovery.read_text(encoding="utf-8"))
+        check(f"{label}: recovery records publish_error", bool(payload.get("publish_error")))
+        check(f"{label}: recovery records failed_restores",
+              "results.json" in payload.get("failed_restores", {}),
+              str(payload.get("failed_restores")))
+        check(f"{label}: recovery records backup hashes",
+              "results.json" in payload.get("files", {}), str(payload.get("files")))
+    # results.json could not be rolled back, so the candidate is still on disk while the
+    # previous version only lives in the backup.
+    check(f"{label}: the unrestored file keeps its new content",
+          try_sha(rd / "report.md") == before["report.md"] and
+          try_sha(rd / "evidence_manifest.json") == before["evidence_manifest.json"])
+
+
+def case_leftover_recovery(label: str, job_id: str) -> None:
+    """The leftover recovery backup blocks the next export instead of being overwritten."""
+    from agent.core.reporting import ReportError
+    rd = report_dir(job_id)
+    backup = rd / ".backup_old"
+    recovery = backup / "RECOVERY_NEEDED.json"
+    if not recovery.is_file():
+        fail(f"{label}: recovery note present to guard", str(recovery))
+        return
+    guard_hash = try_sha(backup / "results.json")
+    before = {n: try_sha(rd / n) for n in TRIO}
+    try:
+        res = export_for(job_id)
+        raised = None
+    except ReportError as exc:
+        res, raised = None, exc
+    check(f"{label}: export refused instead of publishing",
+          res is None or res["status"] == "failed", f"raised={raised!r}")
+    check(f"{label}: failure names the leftover backup",
+          (raised is not None and str(backup) in str(raised)) or
+          (res is not None and str(backup) in "; ".join(res.get("warnings") or [])),
+          "no backup path in the failure")
+    check(f"{label}: backup untouched", try_sha(backup / "results.json") == guard_hash,
+          "backup hash changed")
+    check(f"{label}: formal files untouched", {n: try_sha(rd / n) for n in TRIO} == before,
+          "triset changed")
+    check(f"{label}: recovery note still readable", recovery.is_file(), "note gone")
+
+
+def case_recovery_after_leftover(label: str, job_id: str) -> None:
+    """Operator-side recovery: restore the backup by hand, then the export works again."""
+    rd = report_dir(job_id)
+    backup = rd / ".backup_old"
+    if not backup.is_dir():
+        fail(f"{label}: backup present to recover from", str(backup))
+        return
+    for n in TRIO:
+        if (backup / n).is_file():
+            shutil.copy2(backup / n, rd / n)
+    shutil.rmtree(backup, ignore_errors=True)
+    check(f"{label}: backup restored and cleared", not backup.exists(), ".backup_old remains")
+    res = export_for(job_id)
+    check(f"{label}: export succeeds after recovery", res["status"] == "exported",
+          f"status={res['status']}")
+    check(f"{label}: manifest hashes match disk again", manifest_matches_disk(job_id) is True)
+    check(f"{label}: scratch cleaned after recovery", not (rd / ".tmp").exists())
+
+
+def run_r1_cases() -> None:
+    """The full transaction matrix: single failures, combined failure, guard, recovery."""
+    print("\n-- R1: report export is transactional")
+    single = [
+        ("manifest write fails", "manifest"),
+        ("first atomic replace fails", "replace_1"),
+        ("second atomic replace fails", "replace_2"),
+        ("third atomic replace fails", "replace_3"),
+    ]
+    for label, fault in single:
+        print(f"\n-- {label}")
+        job = analyze_probe_job()
+        case_baseline(label, job)
+        case_published_failure(label, job, fault)
+        drop_job(job)
+
+    print("\n-- publish failure plus restore failure keeps the recovery backup")
+    job = analyze_probe_job()
+    case_baseline("publish+restore", job)
+    case_combined_failure("publish+restore", job)
+    case_leftover_recovery("leftover recovery guard", job)
+    case_recovery_after_leftover("hand recovery unblocks the export", job)
+    drop_job(job)
+
+    print("\n-- first export: a failure before any publication leaves no triset at all")
+    for label, fault in single:
+        print(f"\n-- {label} (first export)")
+        job = analyze_probe_job()
+        case_published_failure(label, job, fault)
+        rd = report_dir(job)
+        check(f"{label}: no published file remains", not any((rd / n).exists() for n in TRIO))
+        check(f"{label}: no scratch left behind", not (rd / ".tmp").exists(), ".tmp remains")
+        check(f"{label}: no leftover backup", not (rd / ".backup_old").exists(),
+              ".backup_old remains")
+        drop_job(job)
+
+
+# ---------------------------------------------------------- A-E + D: run_model shims
 
 # each shim replaces a Job Object API entry point before agent.core.runner imports it.
 SHIMS = {
@@ -317,72 +472,103 @@ SHIMS = {
 
 RUNNER_TEMPLATE = (
     "import json, pathlib, sys, time\n"
-    "sys.path.insert(0, '.')\n"
+    "sys.path.insert(0, " + repr(str(ROOT)) + ")\n"
     "from agent.core.paths import Workspace\n"
     "from agent.core.runner import run_model\n"
-    "MARKER = pathlib.Path(r'{marker}')\n"
+    "MARKER = pathlib.Path(" + repr(str(MARKER)) + ")\n"
     "if MARKER.exists():\n"
     "    MARKER.unlink()\n"
-    "res = run_model(Workspace(pathlib.Path(r'{root}')), 'V10',\n"
-    "                pathlib.Path(r'{spectra}'), pathlib.Path(r'{out}'), timeout={timeout})\n"
+    "res = run_model(Workspace(" + repr(str(ROOT)) + "), 'V10',\n"
+    "                pathlib.Path(" + repr(str(SPECTRA)) + "),\n"
+    "                pathlib.Path(" + repr(str(OUT)) + "), timeout={timeout})\n"
     "# give a child that escaped binding a moment to finish and release the temp dir\n"
     "time.sleep(2.5)\n"
     "print(json.dumps({{\n"
     "    'error_code': res['error_code'],\n"
     "    'temp_cleaned': res['temp_cleaned'],\n"
     "    'wall_s': res['wall_s'],\n"
-    "    'tmp_exists': pathlib.Path(r'{tmp}').exists(),\n"
+    "    'tmp_exists': pathlib.Path(" + repr(str(TMP_DIR)) + ").exists(),\n"
     "    'survivor': MARKER.exists(),\n"
     "}}))\n"
 )
 
 
 def run_shim_case(name, patch, timeout=10.0):
-    shim_dir = PROBE / "shim"
+    shim_dir = SHIM_DIR
     shim_dir.mkdir(parents=True, exist_ok=True)
     (shim_dir / "sitecustomize.py").write_text(patch, encoding="utf-8")
-    script = PROBE / "case_runner.py"
-    script.write_text(RUNNER_TEMPLATE.format(root=ROOT, spectra=SPECTRA, out=OUT,
-        marker=MARKER, tmp=TMP_DIR, timeout=timeout), encoding="utf-8")
-    env = dict(os.environ, PYTHONPATH=str(shim_dir), PYTHONUTF8="1",
-               PYTHONIOENCODING="utf-8")
+    script = WORK / f"case_runner_{name}.py"
+    script.write_text(RUNNER_TEMPLATE.format(timeout=timeout), encoding="utf-8")
+    # the shim directory is only reachable through PYTHONPATH; the root must stay on it
+    # too, or the generated script cannot import the package its sitecustomize patches.
+    env = dict(os.environ,
+               PYTHONPATH=str(shim_dir) + os.pathsep + str(ROOT),
+               PYTHONUTF8="1", PYTHONIOENCODING="utf-8")
     try:
         proc = subprocess.run([sys.executable, str(script)], capture_output=True,
-                              text=True, encoding="utf-8", env=env,
-                              cwd=str(ROOT), timeout=180)
-        body = proc.stdout.strip().splitlines()[-1]
-        return json.loads(body), proc.returncode, proc.stderr
+                              text=True, encoding="utf-8", errors="replace", env=env,
+                              cwd=str(ROOT), timeout=240)
+        if proc.returncode != 0 or not proc.stdout.strip():
+            # an early crash has to surface its stderr, or the real cause gets buried under
+            # an IndexError from splitlines() instead of the fault it belongs to.
+            tail = proc.stderr.strip().splitlines()[-1][:400] if proc.stderr.strip() else ""
+            fail(f"{name}: child did not produce usable output", f"rc={proc.returncode} {tail}")
+            return ({"error_code": "PROBE_CRASH", "temp_cleaned": False,
+                     "wall_s": 0.0, "tmp_exists": TMP_DIR.exists(), "survivor": False},
+                    proc.returncode, proc.stderr)
+        return json.loads(proc.stdout.strip().splitlines()[-1]), proc.returncode, proc.stderr
     finally:
         shutil.rmtree(shim_dir, ignore_errors=True)
         if script.exists():
             script.unlink()
 
 
-# ------------------------------------------------------------------------ isolation F-G
+def run_shim_cases() -> None:
+    print("\n-- shimmed run_model cases (A-E), each asserting the real scratch dir is gone")
+    for name, patch in SHIMS.items():
+        print(f"\n-- {name}")
+        if TMP_DIR.exists():
+            shutil.rmtree(TMP_DIR, ignore_errors=True)
+        if OUT.exists():
+            OUT.unlink()
+        res, rc, err = run_shim_case(name, patch)
+        print(f"   error_code={res['error_code']} temp_cleaned={res['temp_cleaned']} "
+              f"wall={res['wall_s']:.3f}s tmp_exists={res['tmp_exists']} survivor={res['survivor']}")
+        check(f"{name}: fails rather than succeeds",
+              res["error_code"] in ("TIMEOUT", "INTEGRITY_FAILED"),
+              f"error_code={res['error_code']}")
+        check(f"{name}: self-reported temp_cleaned", res["temp_cleaned"] is True,
+              f"temp_cleaned={res['temp_cleaned']}")
+        check(f"{name}: real scratch directory removed", not res["tmp_exists"],
+              f"{TMP_DIR} still exists")
+        check(f"{name}: clean interpreter exit", rc == 0, f"rc={rc} err={err[:200]}")
 
-CHILD_SCRIPT = PROBE / "probe_child.py"
-GRANDCHILD_SCRIPT = PROBE / "probe_grandchild.py"
-WRAPPER_SCRIPT = PROBE / "probe_wrapper.py"
+    print("\n-- D control: unshimmed run_model must time out and leave nothing")
+    if TMP_DIR.exists():
+        shutil.rmtree(TMP_DIR, ignore_errors=True)
+    if OUT.exists():
+        OUT.unlink()
+    res, rc, err = run_shim_case("control", "", timeout=1.0)
+    check("control: returns TIMEOUT", res["error_code"] == "TIMEOUT",
+          f"error_code={res['error_code']}")
+    check("control: real scratch directory removed", not res["tmp_exists"],
+          f"{TMP_DIR} still exists")
+    check("control: no result published", not OUT.exists(), "result file appeared")
+
+
+# ---------------------------------------------------------------- F-G: isolation
+
+CHILD_SCRIPT = WORK / "probe_child.py"
+GRANDCHILD_SCRIPT = WORK / "probe_grandchild.py"
+WRAPPER_SCRIPT = WORK / "probe_wrapper.py"
 
 
 def _path_arg(path: pathlib.Path) -> str:
-    """Embed an absolute path in a generated script without quoting or escape trouble.
-
-    A raw string literal around a Windows path breaks on a trailing backslash, and a
-    normal one treats every backslash as the start of an escape, so ``repr()`` is used
-    instead of either.
-    """
+    """Embed an absolute path in a generated script without quoting or escape trouble."""
     return repr(str(path))
 
 
 def write_probe_scripts() -> None:
-    GRANDCHILD_SCRIPT.write_text(
-        "import pathlib, time\n"
-        "MARKER = pathlib.Path(" + _path_arg(MARKER) + ")\n"
-        "time.sleep(5)\n"
-        "MARKER.write_text('survived')\n",
-        encoding="utf-8",
-    )
     CHILD_SCRIPT.write_text(
         "import pathlib, subprocess, sys, time\n"
         "MARKER = pathlib.Path(" + _path_arg(MARKER) + ")\n"
@@ -393,9 +579,16 @@ def write_probe_scripts() -> None:
         "grand.wait()\n",
         encoding="utf-8",
     )
+    GRANDCHILD_SCRIPT.write_text(
+        "import pathlib, time\n"
+        "MARKER = pathlib.Path(" + _path_arg(MARKER) + ")\n"
+        "time.sleep(5)\n"
+        "MARKER.write_text('survived')\n",
+        encoding="utf-8",
+    )
     WRAPPER_SCRIPT.write_text(
         "import pathlib, subprocess, sys, time\n"
-        "sys.path.insert(0, '.')\n"
+        "sys.path.insert(0, " + _path_arg(ROOT) + ")\n"
         "from agent.core.runner import _JobHandle\n"
         "child = subprocess.Popen([sys.executable, str(" + _path_arg(CHILD_SCRIPT) + ")],\n"
         "                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)\n"
@@ -430,7 +623,7 @@ def _close_handle_scenario(job, label: str) -> bool:
                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     if not job.assign(proc):
         # the child is not inside the job, so this scenario cannot prove anything; report
-        # it rather than aborting the whole probe and leaving the scratch dir behind.
+        # it rather than abort the whole probe and leave the scratch dir behind.
         check(f"close_handle: {label}: binding the probe child", False, "assign failed")
         return False
     time.sleep(0.3)
@@ -463,7 +656,12 @@ def _job_without_flag():
     return job
 
 
-def case_close_handle() -> bool:
+def _job_handle():
+    from agent.core.runner import _JobHandle
+    return _JobHandle()
+
+
+def case_close_handle() -> None:
     """F: closing the job handle must kill the whole tree, and the flag is what makes it so.
 
     KILL_ON_JOB_CLOSE is what makes that happen: _JobHandle sets the flag and re-queries it
@@ -473,18 +671,15 @@ def case_close_handle() -> bool:
     The negative control first proves that a plain Job Object -- one that binds and closes
     just as cleanly -- does not take the tree down, so the later pass is not vacuous.
     """
-    import ctypes
-    from agent.core.runner import _JobHandle
-
     control = _close_handle_scenario(_job_without_flag(), "negative control (flag unset)")
     check("close_handle: negative control -- a flagless job leaks the grandchild", control,
           "grandchild did not survive; the control is not exercising the leak")
-    survived = _close_handle_scenario(_JobHandle(), "KILL_ON_JOB_CLOSE set")
+    survived = _close_handle_scenario(_job_handle(), "KILL_ON_JOB_CLOSE set")
     check("close_handle: closing the handle kills the whole tree", not survived,
           "grandchild survived the handle close")
-    return survived
 
-def case_parent_abnormal_exit():
+
+def case_parent_abnormal_exit() -> None:
     """G: a runner that crashes (or is killed) must not leak its descendants."""
     if MARKER.exists():
         MARKER.unlink()
@@ -504,103 +699,43 @@ def case_parent_abnormal_exit():
     survived = survived or MARKER.exists()
     check("parent_abnormal_exit: no descendant survives a crashed runner", not survived,
           "survivor.txt written after the wrapper was killed")
-    return survived
 
 
 # ------------------------------------------------------------------------------ main
 
-if __name__ == "__main__":
-    print("R03 probe: Job Object faults, real temp cleanup, process isolation")
+def main() -> int:
+    print("R03 probe: report publication transactionality, run_model faults, process isolation")
+    if not SPECTRA.is_file():
+        fail("spectrum input present", f"cannot locate {SPECTRA}")
+        print("\n" + "=" * 70)
+        if FAIL:
+            print(f"{len(FAIL)} FAILED:")
+            for label, detail in FAIL:
+                print(f"  - {label}: {detail}")
+        return 1
+    check("spectrum input present", SPECTRA.is_file())
+    WORK.mkdir(parents=True, exist_ok=True)
 
-    print("\n-- shimmed run_model cases (A-E), each asserting the real scratch dir is gone")
-    for name, patch in SHIMS.items():
-        print(f"\n-- {name}")
-        if TMP_DIR.exists():
-            shutil.rmtree(TMP_DIR, ignore_errors=True)
-        if OUT.exists():
-            OUT.unlink()
-        res, rc, err = run_shim_case(name, patch)
-        print(f"   error_code={res['error_code']} temp_cleaned={res['temp_cleaned']} "
-              f"wall={res['wall_s']:.3f}s tmp_exists={res['tmp_exists']} survivor={res['survivor']}")
-        check(f"{name}: fails rather than succeeds",
-              res["error_code"] in ("TIMEOUT", "INTEGRITY_FAILED"),
-              f"error_code={res['error_code']}")
-        check(f"{name}: self-reported temp_cleaned", res["temp_cleaned"] is True,
-              f"temp_cleaned={res['temp_cleaned']}")
-        check(f"{name}: real scratch directory removed", not res["tmp_exists"],
-              f"{TMP_DIR} still exists")
-        # the frozen model entry point never writes survivor.txt, so a "no grandchild
-        # survived" check here would be vacuously true; it is covered for real by cases F
-        # and G, which spawn a two-level tree and assert on the actual file.
-        check(f"{name}: clean interpreter exit", rc == 0, f"rc={rc} err={err[:200]}")
-
-    print("\n-- D control: unshimmed run_model must time out and leave nothing")
-    if TMP_DIR.exists():
-        shutil.rmtree(TMP_DIR, ignore_errors=True)
-    if OUT.exists():
-        OUT.unlink()
-    res, rc, err = run_shim_case("control", "", timeout=1.0)
-    check("control: returns TIMEOUT", res["error_code"] == "TIMEOUT", f"error_code={res['error_code']}")
-    check("control: real scratch directory removed", not res["tmp_exists"], f"{TMP_DIR} still exists")
-    check("control: no result published", not OUT.exists(), "result file appeared")
-
-    print("\n-- R1: report export is transactional")
-    for label, patch in (("first_export", R1_NO_FAULT),
-                         ("manifest_write_fails", R1_MANIFEST_FAULT),
-                         ("atomic_replace_fails", R1_REPLACE_FAULT)):
-        print(f"\n-- {label}")
-        res, rc, err = run_r1_case(label, patch)
-        if res == ["no_succeeded_job"]:
-            check(f"{label}: a succeeded job exists to export from", False, err)
-            continue
-        print(f"   first_status={res[0]} second_status={res[1]} triset_unchanged={res[2]} "
-              f"manifest_ok={res[3]} scratch_gone={res[4]}")
-        check(f"{label}: first export succeeds", res[0] == "exported", f"first_status={res[0]}")
-        if label == "first_export":
-            check(f"{label}: re-export succeeds", res[1] == "exported", f"second_status={res[1]}")
-            check(f"{label}: manifest hashes match disk", res[3], "manifest hash mismatch")
-        else:
-            check(f"{label}: failed re-export raises rather than publishes", res[1] == "failed",
-                  f"second_status={res[1]}")
-            check(f"{label}: previous triset is byte-identical", res[2], "published files changed")
-        check(f"{label}: no scratch left behind", res[4], ".tmp or .backup_old remains")
-        check(f"{label}: clean interpreter exit", rc == 0, f"rc={rc} err={err[:200]}")
-
-    print("\n-- R1 first export: a failure on the very first export must leave no triset")
-    for label, patch in (
-        ("second_replace_fails", replace_fault_on(2)),
-        ("third_replace_fails", replace_fault_on(3)),
-    ):
-        print(f"\n-- {label}")
-        res, rc, err = run_r1_first_case(label, patch)
-        if res == ["no_succeeded_job"]:
-            check(f"{label}: a succeeded job exists to export from", False, err)
-            continue
-        print(f"   status={res[0]} triset_present={res[1]} tmp_left={res[2]} "
-              f"backup_old_left={res[3]}")
-        check(f"{label}: export reports failure", res[0] == "failed", f"status={res[0]}")
-        check(f"{label}: no published triset file remains", not res[1],
-              "results.json, report.md or evidence_manifest.json present")
-        check(f"{label}: scratch directory removed", not res[2], ".tmp remains")
-        check(f"{label}: backup directory removed", not res[3], ".backup_old remains")
-        check(f"{label}: clean interpreter exit", rc == 0, f"rc={rc} err={err[:200]}")
+    run_r1_cases()
+    run_shim_cases()
 
     write_probe_scripts()
-
-
     print("\n-- F: closing the job handle kills the whole tree (with negative control)")
     case_close_handle()
-
     print("\n-- G: killing the owning process kills the whole tree")
     case_parent_abnormal_exit()
 
-    if PROBE.exists():
-        shutil.rmtree(PROBE, ignore_errors=True)
-
+    audit_leftovers()
+    shutil.rmtree(WORK, ignore_errors=True)
     print("\n" + "=" * 70)
     if FAIL:
         print(f"{len(FAIL)} FAILED:")
         for label, detail in FAIL:
             print(f"  - {label}: {detail}")
-        sys.exit(1)
+        return 1
     print("R03 PROBE PASSED")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
