@@ -353,18 +353,18 @@ def thin_interface():
 
     from agent.orchestrator import follow_up
     from agent.core.paths import Workspace
-    follow = follow_up((HERE / "agent").resolve(), "请导出报告", job_id, Workspace(ROOT))
+    follow = follow_up(verify_common.PACKAGE, "请导出报告", job_id, Workspace(ROOT))
     check("follow-up '导出报告' re-exports on the same job",
           follow["status"] == "exported" and follow["job_id"] == job_id,
           f"status={follow['status']} job={follow['job_id']}")
     check("follow-up writes the markdown file", bool(follow.get("markdown_path"))
           and pathlib.Path(follow["markdown_path"]).exists())
 
-    follow2 = follow_up((HERE / "agent").resolve(), "请跑一次 V9 对照", job_id, Workspace(ROOT))
+    follow2 = follow_up(verify_common.PACKAGE, "请跑一次 V9 对照", job_id, Workspace(ROOT))
     check("follow-up 'V9 对照' routes to compare_models, not export",
           follow2["tool_calls_executed"] == ["compare_models"], f"tools={follow2['tool_calls_executed']}")
 
-    follow3 = follow_up((HERE / "agent").resolve(), "现在导出报告", job_id, Workspace(ROOT))
+    follow3 = follow_up(verify_common.PACKAGE, "现在导出报告", job_id, Workspace(ROOT))
     check("after comparison, follow-up exports", follow3["status"] == "exported",
           f"status={follow3['status']}")
 
@@ -383,8 +383,20 @@ def thin_interface():
 
 
 def main():
-    if JOBS.exists():
-        verify_common.rmtree(JOBS)
+    """Run the suite against a throwaway workspace; the real workspace is never touched."""
+    global ROOT, SPECTRA, JOBS
+    ws = verify_common.TestWorkspace.create()
+    verify_common.ACTIVE = ws
+    ROOT = ws.root
+    SPECTRA = ROOT / "deliverables" / "智能体功能测试谱集-20261031"
+    JOBS = ROOT / "jobs"
+    try:
+        return run_cases()
+    finally:
+        ws.close()
+
+
+def run_cases():
     print(f"workspace root: {ROOT}\n")
 
     e05()

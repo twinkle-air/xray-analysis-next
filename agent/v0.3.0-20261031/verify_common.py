@@ -1,12 +1,17 @@
 """Shared helpers for the verify_p*.py suites.
 
-Two things the stock stdlib gets wrong on a Chinese Windows developer machine, which turned
-into intermittent suite failures:
+Four guarantees the stock stdlib does not give on a Chinese Windows developer machine:
 
 * subprocess stdout is decoded with the ANSI code page (CP936) unless UTF-8 is requested, so
   the CLI's Chinese JSON either fails to parse or silently mangles paths.
 * `shutil.rmtree(ignore_errors=True)` leaves read-only files behind, so a second suite run
   starts from a non-empty jobs/ directory.
+* a regression never deletes or reuses a real workspace: each suite runs against a throwaway
+  copy of the agent tree, the test spectra and the frozen model package, and the CLI is
+  pointed at that copy through --workspace. Only data the suite itself creates is removed.
+* the default regression is deterministic: the local stand-in host runs, and no ambient
+  XRF_AGENT_LLM_* configuration leaks in (or is depended on) from the machine. A real host
+  is an explicit, opt-in entry point, never the default.
 """
 from __future__ import annotations
 
@@ -16,48 +21,103 @@ import shutil
 import stat
 import subprocess
 import sys
+import tempfile
 
 HERE = pathlib.Path(__file__).resolve().parent
-ROOT = HERE
-# The `agent` package sits either directly under this directory (flat developer layout) or
-# under `agent-workspace/` (checked-out repository layout). Both the suites and the CLI
-# subprocess import it, so the package parent is what goes on the search path either way.
+# `agent` sits either directly under this directory (flat developer layout) or under
+# `agent-workspace/` (checked-out repository layout).
 PACKAGE = next(p for p in (HERE / "agent", HERE / "agent-workspace" / "agent") if p.is_dir())
 PACKAGE_PARENT = PACKAGE.parent
-CLI = [sys.executable, "-m", "agent.cli"]
+# The workspace everything is resolved against: the directory holding the agent tree and
+# deliverables/. agent-workspace/ nests the package one level deeper than the flat layout.
+WORKSPACE = PACKAGE_PARENT if (PACKAGE_PARENT / "deliverables").is_dir() else PACKAGE_PARENT.parent
+PACKAGE_REL = PACKAGE.relative_to(WORKSPACE)
+LLM_VARS = ("XRF_AGENT_LLM_HOST", "XRF_AGENT_LLM_API_BASE", "XRF_AGENT_LLM_API_KEY",
+            "XRF_AGENT_LLM_MODEL")
+
+ACTIVE = None  # the TestWorkspace of the running suite; its main() sets this
 
 
-def env(extra=None) -> dict:
-    paths = [str(PACKAGE_PARENT)]
-    if str(ROOT) not in paths:
-        paths.append(str(ROOT))
-    out = dict(os.environ, PYTHONPATH=os.pathsep.join(paths))
-    # Decode subprocess stdout/stderr as UTF-8 instead of the ANSI code page.
-    out["PYTHONUTF8"] = "1"
-    out["PYTHONIOENCODING"] = "utf-8"
+class TestWorkspace:
+    """A throwaway workspace mirroring the source layout: only suite-created data is touched."""
+
+    def __init__(self, root: pathlib.Path):
+        self.root = root
+
+    @classmethod
+    def create(cls) -> "TestWorkspace":
+        root = pathlib.Path(tempfile.mkdtemp(prefix="xrf-verify-"))
+        shutil.copytree(WORKSPACE / PACKAGE_REL, root / PACKAGE_REL,
+                        ignore=shutil.ignore_patterns("__pycache__"))
+        shutil.copytree(WORKSPACE / "deliverables", root / "deliverables",
+                        ignore=shutil.ignore_patterns("__pycache__"))
+        print(f"isolated test workspace: {root}")
+        return cls(root)
+
+    @property
+    def package_parent(self) -> pathlib.Path:
+        return self.root / PACKAGE_REL.parent
+
+    def env(self, extra=None, real_host: bool = False) -> dict:
+        paths = [str(self.package_parent)]
+        if str(self.root) not in paths:
+            paths.append(str(self.root))
+        out = dict(os.environ, PYTHONPATH=os.pathsep.join(paths))
+        if not real_host:
+            out["XRF_AGENT_LLM_HOST"] = "local_simulation"
+            for var in LLM_VARS[1:]:
+                out.pop(var, None)
+        out["PYTHONUTF8"] = "1"
+        out["PYTHONIOENCODING"] = "utf-8"
+        if extra:
+            out.update(extra)
+        return out
+
+    def cli(self) -> list:
+        return [sys.executable, "-m", "agent.cli", "--workspace", str(self.root)]
+
+    def close(self) -> None:
+        rmtree(self.root)
+
+
+def env(extra=None, real_host: bool = False) -> dict:
+    """UTF-8 subprocess environment for the active test workspace (or the source tree)."""
+    if ACTIVE is not None:
+        return ACTIVE.env(extra, real_host)
+    out = dict(os.environ, PYTHONPATH=str(PACKAGE_PARENT), PYTHONUTF8="1",
+               PYTHONIOENCODING="utf-8")
+    if not real_host:
+        out["XRF_AGENT_LLM_HOST"] = "local_simulation"
+        for var in LLM_VARS[1:]:
+            out.pop(var, None)
     if extra:
         out.update(extra)
     return out
 
 
-def run(args, extra=None) -> tuple:
-    """Run one CLI command. Returns (parsed_stdoutObject, returncode, stderr_text)."""
+def run(args, extra=None, real_host: bool = False) -> tuple:
+    """Run one CLI command against the active test workspace."""
+    base = ACTIVE.cli() if ACTIVE else [sys.executable, "-m", "agent.cli"]
+    cwd = str(ACTIVE.root) if ACTIVE else str(HERE)
     proc = subprocess.run(
-        CLI + args, capture_output=True, text=True, encoding="utf-8",
-        env=env(extra), cwd=str(ROOT))
+        base + args, capture_output=True, text=True, encoding="utf-8",
+        env=env(extra, real_host), cwd=cwd)
     body = proc.stdout.strip()
     try:
-        obj = __import__("json").loads(body) if body else {}
-    except __import__("json").JSONDecodeError as exc:
+        import json
+        obj = json.loads(body) if body else {}
+    except json.JSONDecodeError as exc:
         obj = {"_raw": body[:2000], "_parse_error": str(exc)}
     return obj, proc.returncode, proc.stderr
 
 
-def run_text(args, extra=None) -> tuple:
+def run_text(args, extra=None, real_host: bool = False) -> tuple:
     """Run one CLI command and return the raw stdout text, for human-facing output."""
+    base = ACTIVE.cli() if ACTIVE else [sys.executable, "-m", "agent.cli"]
+    cwd = str(ACTIVE.root) if ACTIVE else str(HERE)
     proc = subprocess.run(
-        CLI + args, capture_output=True, text=True, encoding="utf-8",
-        env=env(extra), cwd=str(ROOT))
+        base + args, capture_output=True, text=True, encoding="utf-8",
+        env=env(extra, real_host), cwd=cwd)
     return proc.stdout, proc.returncode, proc.stderr
 
 

@@ -26,6 +26,7 @@ SPECTRA = ROOT / "deliverables" / "智能体功能测试谱集-20261031"
 JOBS = ROOT / "jobs"
 
 failures = []
+REAL_HOST = False
 
 
 def check(name, condition, detail=""):
@@ -40,18 +41,44 @@ def abs_path(rel: str) -> str:
     return str((ROOT / rel).resolve())
 
 
-def run(args, extra_env=None):
-    """Run the CLI as a separate process so host environment variables can be swapped."""
-    return verify_common.run(args, extra_env)
+def run(args, extra_env=None, real_host=None):
+    """Run the CLI as a separate process so host environment variables can be swapped.
+
+    `real_host=None` follows the suite default (the deterministic stand-in); the config
+    failure tests pass real_host=False explicitly so they stay meaningful even when a real
+    host is configured on the machine.
+    """
+    if real_host is None:
+        real_host = REAL_HOST
+    return verify_common.run(args, extra_env, real_host=real_host)
 
 
 def read_job(job_id, bucket, name):
     return json.loads((JOBS / job_id / bucket / name).read_text(encoding="utf-8"))
 
 
-def main():
-    if JOBS.exists():
-        verify_common.rmtree(JOBS)
+def main(argv=None):
+    """Run the host regression.
+
+    Default: deterministic local stand-in host, and no ambient XRF_AGENT_LLM_* leaking in.
+    Pass --real-host to run H01-H04 against a configured real host instead (the environment
+    must then provide XRF_AGENT_LLM_HOST/API_BASE/API_KEY/MODEL yourself).
+    """
+    global REAL_HOST
+    REAL_HOST = "--real-host" in (sys.argv[1:] if argv is None else argv)
+    ws = verify_common.TestWorkspace.create()
+    verify_common.ACTIVE = ws
+    global ROOT, SPECTRA, JOBS
+    ROOT = ws.root
+    SPECTRA = ROOT / "deliverables" / "智能体功能测试谱集-20261031"
+    JOBS = ROOT / "jobs"
+    try:
+        return run_cases()
+    finally:
+        ws.close()
+
+
+def run_cases():
     print(f"workspace root: {ROOT}\n")
 
     t01 = abs_path("deliverables/智能体功能测试谱集-20261031/01_正常输入/T01.json")
@@ -62,8 +89,14 @@ def main():
                         "--sample-description", "铝合金粉末，未知仪器"])
     print(f"     rc={rc} status={obj.get('status')} simulated={obj.get('host_config', {}).get('simulated')}")
     check("export succeeded", rc == 0 and obj.get("status") == "exported", f"rc={rc} status={obj.get('status')}")
-    check("host marked as simulation", obj.get("host_config", {}).get("simulated") is True)
-    check("no real api base leaked", obj.get("host_config", {}).get("api_base") is None)
+    if REAL_HOST:
+        check("the configured real host is in use",
+              obj.get("host_config", {}).get("simulated") is False
+              and bool(obj.get("host_config", {}).get("api_base")),
+              str(obj.get("host_config")))
+    else:
+        check("host marked as simulation", obj.get("host_config", {}).get("simulated") is True)
+        check("no real api base leaked", obj.get("host_config", {}).get("api_base") is None)
     job_id = obj["job_id"]
     t01_job_id = job_id
     check("trajectory recorded", bool(obj.get("trajectory_ref")) and pathlib.Path(obj["trajectory_ref"]).exists())
@@ -165,10 +198,10 @@ def main():
     print()
 
     print("--- host backend selection")
-    obj, rc, err = run(["agent", "--task-file", t01, "--host-mode", "unknown"])
+    obj, rc, err = run(["agent", "--task-file", t01, "--host-mode", "unknown"], real_host=False)
     check("unknown host mode rejected", rc == 2 and "UNSUPPORTED_HOST" in err, f"rc={rc} {err[:160]}")
     obj, rc, err = run(["agent", "--task-file", t01, "--host-mode", "api"],
-                       extra_env={"XRF_AGENT_LLM_HOST": "api"})
+                       extra_env={"XRF_AGENT_LLM_HOST": "api"}, real_host=False)
     check("api mode without credentials reports the missing config",
           rc == 2 and "MISSING_HOST_CONFIG" in err, f"rc={rc} {err[:160]}")
     print()

@@ -68,8 +68,21 @@ def close(a, b):
 
 
 def main():
-    if JOBS.exists():
-        verify_common.rmtree(JOBS)
+    """Run the suite against a throwaway workspace; the real workspace is never touched."""
+    global ROOT, SPECTRA, JOBS, REF
+    ws = verify_common.TestWorkspace.create()
+    verify_common.ACTIVE = ws
+    ROOT = ws.root
+    SPECTRA = ROOT / "deliverables" / "智能体功能测试谱集-20261031"
+    JOBS = ROOT / "jobs"
+    REF = SPECTRA / "03_验收参考"
+    try:
+        return run_cases()
+    finally:
+        ws.close()
+
+
+def run_cases():
     print(f"workspace root: {ROOT}\n")
 
     job_ids = {}
