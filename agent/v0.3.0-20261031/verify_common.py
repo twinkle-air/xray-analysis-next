@@ -10,11 +10,13 @@ Four guarantees the stock stdlib does not give on a Chinese Windows developer ma
   copy of the agent tree, the test spectra and the frozen model package, and the CLI is
   pointed at that copy through --workspace. Only data the suite itself creates is removed.
 * the default regression is deterministic: the local stand-in host runs, and no ambient
-  XRF_AGENT_LLM_* configuration leaks in (or is depended on) from the machine. A real host
-  is an explicit, opt-in entry point, never the default.
+  XRF_AGENT_LLM_* configuration leaks in (or is depended on) from the machine — the
+  current process and every subprocess both get a scrubbed environment, restored on exit.
+  A real host is an explicit, opt-in entry point, never the default.
 """
 from __future__ import annotations
 
+import contextlib
 import os
 import pathlib
 import shutil
@@ -32,10 +34,43 @@ PACKAGE_PARENT = PACKAGE.parent
 # deliverables/. agent-workspace/ nests the package one level deeper than the flat layout.
 WORKSPACE = PACKAGE_PARENT if (PACKAGE_PARENT / "deliverables").is_dir() else PACKAGE_PARENT.parent
 PACKAGE_REL = PACKAGE.relative_to(WORKSPACE)
-LLM_VARS = ("XRF_AGENT_LLM_HOST", "XRF_AGENT_LLM_API_BASE", "XRF_AGENT_LLM_API_KEY",
-            "XRF_AGENT_LLM_MODEL")
+# host.py reads every host knob from the XRF_AGENT_LLM_* namespace: HOST, API_BASE/API_URL,
+# API_KEY/KEY, MODEL, TIMEOUT, MAX_TOKENS, TEMPERATURE. Scrubbing by prefix covers all of
+# them, aliases included, without maintaining an ever-growing allowlist.
+LLM_PREFIX = "XRF_AGENT_LLM_"
 
 ACTIVE = None  # the TestWorkspace of the running suite; its main() sets this
+
+
+def scrub_host_env(out) -> None:
+    """Replace every XRF_AGENT_LLM_* in a mapping (os.environ, or a subprocess env copy) with
+    an explicit local stand-in host."""
+    for key in [k for k in out if k.startswith(LLM_PREFIX)]:
+        del out[key]
+    out["XRF_AGENT_LLM_HOST"] = "local_simulation"
+
+
+@contextlib.contextmanager
+def isolated_host_env(real_host: bool = False, ambient=None):
+    """Keep the default regression deterministic whatever this machine happens to have
+    configured: scrub XRF_AGENT_LLM_* from this process for the duration and restore the
+    exact previous environment on exit. Subprocesses are scrubbed separately by env().
+
+    `ambient` first injects a machine-style configuration (a fully configured real host, or
+    invalid numeric values) so a regression of the scrub is what a test catches; a working
+    scrub is what keeps it out of the code under test. `real_host=True` leaves the ambient
+    configuration in place for the explicit --real-host entry.
+    """
+    saved = dict(os.environ)
+    try:
+        if ambient:
+            os.environ.update(ambient)
+        if not real_host:
+            scrub_host_env(os.environ)
+        yield
+    finally:
+        os.environ.clear()
+        os.environ.update(saved)
 
 
 class TestWorkspace:
@@ -64,9 +99,7 @@ class TestWorkspace:
             paths.append(str(self.root))
         out = dict(os.environ, PYTHONPATH=os.pathsep.join(paths))
         if not real_host:
-            out["XRF_AGENT_LLM_HOST"] = "local_simulation"
-            for var in LLM_VARS[1:]:
-                out.pop(var, None)
+            scrub_host_env(out)
         out["PYTHONUTF8"] = "1"
         out["PYTHONIOENCODING"] = "utf-8"
         if extra:
@@ -87,9 +120,7 @@ def env(extra=None, real_host: bool = False) -> dict:
     out = dict(os.environ, PYTHONPATH=str(PACKAGE_PARENT), PYTHONUTF8="1",
                PYTHONIOENCODING="utf-8")
     if not real_host:
-        out["XRF_AGENT_LLM_HOST"] = "local_simulation"
-        for var in LLM_VARS[1:]:
-            out.pop(var, None)
+        scrub_host_env(out)
     if extra:
         out.update(extra)
     return out

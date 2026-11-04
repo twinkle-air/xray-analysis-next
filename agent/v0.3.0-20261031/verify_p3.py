@@ -391,7 +391,8 @@ def main():
     SPECTRA = ROOT / "deliverables" / "智能体功能测试谱集-20261031"
     JOBS = ROOT / "jobs"
     try:
-        return run_cases()
+        with verify_common.isolated_host_env():
+            return run_cases()
     finally:
         ws.close()
 

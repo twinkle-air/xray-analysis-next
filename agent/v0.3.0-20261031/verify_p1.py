@@ -77,7 +77,8 @@ def main():
     JOBS = ROOT / "jobs"
     REF = SPECTRA / "03_验收参考"
     try:
-        return run_cases()
+        with verify_common.isolated_host_env():
+            return run_cases()
     finally:
         ws.close()
 

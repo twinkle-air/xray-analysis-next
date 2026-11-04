@@ -73,7 +73,8 @@ def main(argv=None):
     SPECTRA = ROOT / "deliverables" / "智能体功能测试谱集-20261031"
     JOBS = ROOT / "jobs"
     try:
-        return run_cases()
+        with verify_common.isolated_host_env(real_host=REAL_HOST):
+            return run_cases()
     finally:
         ws.close()
 
@@ -206,6 +207,51 @@ def run_cases():
           rc == 2 and "MISSING_HOST_CONFIG" in err, f"rc={rc} {err[:160]}")
     print()
 
+    print("--- ambient machine configuration cannot change the default host")
+    from agent.host import detect_config
+
+    if not REAL_HOST:
+        # a machine that has a complete, real API host configured
+        real_ambient = {
+            "XRF_AGENT_LLM_HOST": "api",
+            "XRF_AGENT_LLM_API_BASE": "https://sentinel.invalid/v1",
+            "XRF_AGENT_LLM_API_KEY": "sentinel-not-a-real-key",
+            "XRF_AGENT_LLM_MODEL": "sentinel-model",
+        }
+        with verify_common.isolated_host_env(ambient=real_ambient):
+            try:
+                cfg = detect_config()
+                ok = cfg.host == "local_simulation" and cfg.simulated is True
+                detail = f"host={cfg.host} simulated={cfg.simulated}"
+            except Exception as exc:
+                ok, detail = False, f"{type(exc).__name__}: {exc}"
+            check("a configured real host is scrubbed in-process", ok, detail)
+            obj, rc, err = run(["agent", "--task-file", t01, "--query", "请分析这张谱"])
+            check("the default run stays on the stand-in host",
+                  rc == 0 and obj.get("host_config", {}).get("simulated") is True,
+                  f"rc={rc} status={obj.get('status')}")
+            check("the sentinel base never reached the run",
+                  obj.get("host_config", {}).get("api_base") is None, str(obj.get("host_config")))
+        # a machine whose host values are invalid: an unknown host plus non-numeric numbers
+        bad_ambient = {
+            "XRF_AGENT_LLM_HOST": "unsupported-review-sentinel",
+            "XRF_AGENT_LLM_TIMEOUT": "not-a-number",
+            "XRF_AGENT_LLM_MAX_TOKENS": "not-a-number",
+            "XRF_AGENT_LLM_TEMPERATURE": "not-a-number",
+        }
+        with verify_common.isolated_host_env(ambient=bad_ambient):
+            try:
+                cfg = detect_config()
+                ok = cfg.host == "local_simulation" and cfg.timeout == 120.0
+                detail = f"host={cfg.host} timeout={cfg.timeout}"
+            except Exception as exc:
+                ok, detail = False, f"{type(exc).__name__}: {exc}"
+            check("an invalid ambient host is scrubbed in-process", ok, detail)
+            obj, rc, err = run(["agent", "--task-file", t01, "--query", "请分析这张谱"])
+            check("the default run is stable under invalid ambient values",
+                  rc == 0 and obj.get("host_config", {}).get("simulated") is True,
+                  f"rc={rc} status={obj.get('status')}")
+    print()
     print("--- API client contract (no network call expected)")
     from unittest.mock import MagicMock, patch
     from agent.host import HostConfig, api_chat
