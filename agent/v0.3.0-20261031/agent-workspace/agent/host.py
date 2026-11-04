@@ -47,6 +47,7 @@ class ToolResult:
     name: str
     content: str
     arguments: dict = dataclasses.field(default_factory=dict)
+    executed_arguments: dict = dataclasses.field(default_factory=dict)
 
 
 @dataclasses.dataclass
