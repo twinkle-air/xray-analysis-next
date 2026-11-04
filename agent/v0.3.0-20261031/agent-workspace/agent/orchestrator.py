@@ -250,7 +250,7 @@ def follow_up(
             for r in executed
         ],
     })
-    _save_trajectory(job, trajectory)
+    _save_trajectory(workspace, job_id, trajectory)
 
     return {
         "schema_version": "1.0",
@@ -321,7 +321,17 @@ def _user_message(agent_root: pathlib.Path, user_query: str, spectrum_path: Opti
     return "\n".join(lines)
 
 
-def _save_trajectory(job: Job, trajectory: dict) -> str:
+def _save_trajectory(workspace: Workspace, job_id: str, trajectory: dict) -> str:
+    """Record the trajectory without clobbering fields the tools persisted afterwards.
+
+    `compare_models` and `export_report` open the job themselves and save their own state
+    (comparison refs, report refs, artifact list), so a Job handle held from before those
+    calls would write a stale snapshot back over the fresh one on disk. Only trajectory_ref
+    is touched here, on a state read after every tool has run.
+    """
+    job = Job.open(workspace, job_id)
+    if job is None:
+        raise OrchestrationError(f"job {job_id} disappeared before the trajectory was saved")
     path = job.sub("audit") / "trajectory.json"
     write_json(path, trajectory)
     job.set("trajectory_ref", _posix(path))
@@ -409,8 +419,8 @@ def orchestrate(
     status = analyze_result.get("status")
     if status != "succeeded":
         trajectory["job_id"] = executor.job_id
-        _save_trajectory(job, trajectory)
-        return _envelope(executor.job_id, analyze_result, None, None, _save_trajectory(job, trajectory), config,
+        trajectory_path = _save_trajectory(workspace, executor.job_id, trajectory)
+        return _envelope(executor.job_id, analyze_result, None, None, trajectory_path, config,
                          {"action": "stop", "reason": "主分析失败，无对照与报告", "triggered_rules": []})
 
     comparison_done = False
@@ -461,6 +471,6 @@ def orchestrate(
         })
 
     trajectory["job_id"] = executor.job_id
-    trajectory_path = _save_trajectory(job, trajectory)
+    trajectory_path = _save_trajectory(workspace, executor.job_id, trajectory)
     return _envelope(executor.job_id, analyze_result, comparison_result, export_result,
                      trajectory_path, config, decision)
