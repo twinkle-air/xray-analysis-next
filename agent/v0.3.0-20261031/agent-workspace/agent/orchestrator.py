@@ -59,8 +59,16 @@ class ToolExecutor:
         self.job_id: Optional[str] = None
 
     def _resolve(self, call_: ToolCall) -> dict:
+        """The arguments the tool will actually run with.
+
+        The bound job id is added only when the tool's contract declares it;
+        analyze_spectrum has no job parameter, so inventing one there would record a
+        parameter the tool never received.
+        """
         arguments = dict(call_.arguments)
-        if self.job_id is not None:
+        contracts = read_json(self.workspace.tool_contracts())
+        params = contracts.get("tools", {}).get(call_.name, {}).get("parameters", {})
+        if "job_id" in params.get("properties", {}) and self.job_id is not None:
             arguments["job_id"] = self.job_id
         return arguments
 
@@ -115,7 +123,12 @@ class ToolExecutor:
             self.job_id = body.get("job_id") or self.job_id
             if body.get("job_id") is None:
                 _log_no_job_id(body)
-        return ToolResult(tool_call_id=call_.id, name=name, content=json.dumps(body, ensure_ascii=False))
+        # the resolved arguments are snapshotted here, while the call is the one that ran;
+        # rebuilding them later from the executor's state would bind this result to whatever
+        # job id the executor holds last.
+        return ToolResult(tool_call_id=call_.id, name=name,
+                          content=json.dumps(body, ensure_ascii=False),
+                          executed_arguments=dict(arguments))
 
 
 def _log_no_job_id(body: dict) -> None:
@@ -209,14 +222,6 @@ def _forwardable(body: dict) -> dict:
     return {k: v for k, v in body.items() if k != "markdown"}
 
 
-def _resolved_arguments(executor: "ToolExecutor", arguments: dict) -> dict:
-    """The arguments the executor actually ran with: the call plus the bound job id."""
-    resolved = dict(arguments)
-    if executor.job_id is not None:
-        resolved["job_id"] = executor.job_id
-    return resolved
-
-
 def _execute(executor: ToolExecutor, call_: ToolCall) -> ToolResult:
     """Run a host tool call and remember the id and arguments the host actually sent."""
     result = executor.execute(call_)
@@ -265,7 +270,7 @@ def follow_up(
         "tool_calls_executed": [
             {"name": r.name, "tool_call_id": r.tool_call_id,
              "origin": "host", "arguments": dict(r.arguments or {}),
-             "executed_arguments": _resolved_arguments(executor, dict(r.arguments or {})),
+             "executed_arguments": dict(r.executed_arguments or {}),
              "result": json.loads(r.content), "error": None}
             for r in executed
         ],
@@ -424,7 +429,7 @@ def orchestrate(
         "tool_calls_executed": [
             {"name": r.name, "tool_call_id": r.tool_call_id,
              "origin": "host", "arguments": dict(r.arguments or {}),
-             "executed_arguments": _resolved_arguments(executor, dict(r.arguments or {})),
+             "executed_arguments": dict(r.executed_arguments or {}),
              "result": json.loads(r.content), "error": None}
             for r in results
         ],
@@ -468,7 +473,7 @@ def orchestrate(
             "tool_calls_executed": [{
                 "name": compare_result.name, "tool_call_id": compare_call.id,
                 "origin": "policy", "arguments": dict(compare_call.arguments),
-                "executed_arguments": _resolved_arguments(executor, dict(compare_call.arguments)),
+                "executed_arguments": dict(compare_result.executed_arguments or {}),
                 "triggered_rules": decision.get("triggered_rules", []),
                 "result": json.loads(compare_result.content), "error": None,
             }],
@@ -493,7 +498,7 @@ def orchestrate(
             "tool_calls_executed": [{
                 "name": export_result.name, "tool_call_id": export_call.id,
                 "origin": "policy", "arguments": dict(export_call.arguments),
-                "executed_arguments": _resolved_arguments(executor, dict(export_call.arguments)),
+                "executed_arguments": dict(export_result.executed_arguments or {}),
                 "result": json.loads(export_result.content), "error": None,
             }],
             "review_decision": decision,

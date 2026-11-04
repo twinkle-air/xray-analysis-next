@@ -10,7 +10,9 @@ import json
 import pathlib
 import sys
 
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+# the package's parent, so the module works both as `python -m agent.cli` and as a bare
+# script (`python -I agent/cli.py`), where sys.path[0] is the package directory itself.
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 from agent.core import reporting  # noqa: E402
 from agent.core.job import Job  # noqa: E402
