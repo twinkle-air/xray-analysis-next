@@ -10,7 +10,7 @@ import json
 import pathlib
 import sys
 
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 from agent.core import reporting  # noqa: E402
 from agent.core.job import Job  # noqa: E402
@@ -19,10 +19,10 @@ from agent.core.tools import (  # noqa: E402
     ToolError, analyze_spectrum, compare_models, export_report, get_job_status,
 )
 from agent.orchestrator import OrchestrationError, orchestrate  # noqa: E402
-from agent.host import HostError  # noqa: E402
+from agent.host import HostError, detect_config  # noqa: E402
 
 HERE = pathlib.Path(__file__).resolve().parent
-WORKSPACE_ROOT = HERE.parent.parent
+WORKSPACE_ROOT = HERE.parent
 
 
 def _workspace(args) -> Workspace:
@@ -96,6 +96,9 @@ def cmd_agent_interactive(args) -> int:
     if not task_file.is_file():
         print(f"error: task file not found: {task_file}", file=sys.stderr)
         return 2
+    announced = _announce_host(args.host_mode)
+    if announced:
+        return announced
     sample_description = args.sample_description or ""
 
     try:
@@ -149,11 +152,31 @@ def _print_summary(result: dict, workspace: Workspace) -> None:
     print()
 
 
+def _announce_host(host_mode) -> int:
+    """Resolve the host up front and say which one is in use, or fail loudly.
+
+    Priority: an explicit --host-mode flag, then XRF_AGENT_LLM_HOST, then
+    local_simulation. A real host asked for but not configured is an error, never a
+    silent fall back to the simulator.
+    """
+    try:
+        config = detect_config(host_mode)
+    except HostError as exc:
+        print(f"error [{exc.code}]: {exc}", file=sys.stderr)
+        return 2
+    print(f"宿主: {config.host} | 模型: {config.model or '-'} | 地址: {config.api_base or '-'} "
+          f"| simulated={config.simulated}", file=sys.stderr)
+    return 0
+
+
 def cmd_agent(args) -> int:
     """Coordinate a natural-language request through the LLM host and the four tools."""
     if args.interactive:
         return cmd_agent_interactive(args)
     workspace = _workspace(args)
+    announced = _announce_host(args.host_mode)
+    if announced:
+        return announced
     try:
         result = orchestrate(
             workspace.root,
@@ -207,8 +230,9 @@ def main(argv=None) -> int:
     p.add_argument("--interactive", action="store_true",
                    help="keep asking follow-up questions about the same spectrum")
     p.add_argument("--once", action="store_true", help="with --interactive, run only the first turn")
-    p.add_argument("--host-mode", default="local_simulation",
-                   help="LLM host backend (default: local_simulation, which is not a real model)")
+    p.add_argument("--host-mode", default=None,
+                   help="LLM host backend; flag wins over XRF_AGENT_LLM_HOST, then the env "
+                        "var, then local_simulation")
     p.set_defaults(func=cmd_agent)
 
     args = parser.parse_args(argv)

@@ -173,8 +173,12 @@ def api_chat(messages: list[dict], functions: list[dict], config: HostConfig) ->
         "max_tokens": config.max_tokens,
     }
     if functions:
-        payload["functions"] = functions
-        payload["function_call"] = "auto"
+        # The function spec itself is unchanged; only the envelope differs. The InternLM
+        # endpoint silently ignores the legacy `functions` field (verified against
+        # Atria-Dawn: no call is made and the model answers in prose), so the modern
+        # `tools` wrapper is what gets sent.
+        payload["tools"] = [{"type": "function", "function": f} for f in functions]
+        payload["tool_choice"] = "auto"
     if config.temperature is not None:
         payload["temperature"] = config.temperature
 
