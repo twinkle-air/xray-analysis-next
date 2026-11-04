@@ -199,6 +199,24 @@ def review_decision(
     return {"action": action, "reason": reason, "triggered_rules": triggered}
 
 
+def _forwardable(body: dict) -> dict:
+    """What the host needs to choose the next step, minus the bulk it cannot act on.
+
+    The export body carries the whole report Markdown; forwarding it whole buried the job
+    id so deeply that a live host asked the user for it instead of using the tool result
+    in front of it. The report itself stays on disk and in the trajectory.
+    """
+    return {k: v for k, v in body.items() if k != "markdown"}
+
+
+def _resolved_arguments(executor: "ToolExecutor", arguments: dict) -> dict:
+    """The arguments the executor actually ran with: the call plus the bound job id."""
+    resolved = dict(arguments)
+    if executor.job_id is not None:
+        resolved["job_id"] = executor.job_id
+    return resolved
+
+
 def _execute(executor: ToolExecutor, call_: ToolCall) -> ToolResult:
     """Run a host tool call and remember the id and arguments the host actually sent."""
     result = executor.execute(call_)
@@ -246,7 +264,9 @@ def follow_up(
         "host": _host_result_payload(host_result),
         "tool_calls_executed": [
             {"name": r.name, "tool_call_id": r.tool_call_id,
-             "arguments": r.arguments, "result": json.loads(r.content), "error": None}
+             "origin": "host", "arguments": dict(r.arguments or {}),
+             "executed_arguments": _resolved_arguments(executor, dict(r.arguments or {})),
+             "result": json.loads(r.content), "error": None}
             for r in executed
         ],
     })
@@ -394,7 +414,7 @@ def orchestrate(
 
     user_text = _user_message(agent_root, user_query, spectrum_path, sample_description)
     host_result = chat(agent_root, _messages_for_turn(system, user_text), config)
-    results = [executor.execute(call_) for call_ in host_result.tool_calls]
+    results = [_execute(executor, call_) for call_ in host_result.tool_calls]
     analyze_result = next((json.loads(r.content) for r in results if r.name == "analyze_spectrum"), None)
 
     trajectory["turns"].append({
@@ -402,7 +422,10 @@ def orchestrate(
         "messages": _messages_for_turn(system, user_text),
         "host": _host_result_payload(host_result),
         "tool_calls_executed": [
-            {"name": r.name, "arguments": {}, "result": json.loads(r.content), "error": None}
+            {"name": r.name, "tool_call_id": r.tool_call_id,
+             "origin": "host", "arguments": dict(r.arguments or {}),
+             "executed_arguments": _resolved_arguments(executor, dict(r.arguments or {})),
+             "result": json.loads(r.content), "error": None}
             for r in results
         ],
     })
@@ -435,14 +458,18 @@ def orchestrate(
         comparison_done = comparison_body.get("error_code") is None
         comparison_result = comparison_body
 
-        comparison_text = "V9 对照返回。差异仅作为复核线索，不是真值。\n" + json.dumps(comparison_body, ensure_ascii=False)
+        comparison_text = "V9 对照返回。差异仅作为复核线索，不是真值。\n" + json.dumps(
+            _forwardable(comparison_body), ensure_ascii=False)
         host_result = chat(agent_root, _messages_for_turn(system, comparison_text), config)
         trajectory["turns"].append({
             "turn": 2,
             "messages": _messages_for_turn(system, comparison_text),
             "host": _host_result_payload(host_result),
             "tool_calls_executed": [{
-                "name": compare_result.name, "arguments": {},
+                "name": compare_result.name, "tool_call_id": compare_call.id,
+                "origin": "policy", "arguments": dict(compare_call.arguments),
+                "executed_arguments": _resolved_arguments(executor, dict(compare_call.arguments)),
+                "triggered_rules": decision.get("triggered_rules", []),
                 "result": json.loads(compare_result.content), "error": None,
             }],
             "review_decision": decision,
@@ -457,14 +484,16 @@ def orchestrate(
         })
         export_result = executor.execute(export_call)
         export_body = json.loads(export_result.content)
-        export_text = "报告导出返回。\n" + json.dumps(export_body, ensure_ascii=False)
+        export_text = "报告导出返回。\n" + json.dumps(_forwardable(export_body), ensure_ascii=False)
         host_result = chat(agent_root, _messages_for_turn(system, export_text), config)
         trajectory["turns"].append({
             "turn": len(trajectory["turns"]) + 1,
             "messages": _messages_for_turn(system, export_text),
             "host": _host_result_payload(host_result),
             "tool_calls_executed": [{
-                "name": export_result.name, "arguments": {},
+                "name": export_result.name, "tool_call_id": export_call.id,
+                "origin": "policy", "arguments": dict(export_call.arguments),
+                "executed_arguments": _resolved_arguments(executor, dict(export_call.arguments)),
                 "result": json.loads(export_result.content), "error": None,
             }],
             "review_decision": decision,
