@@ -8,7 +8,9 @@ Usage: python verify_p3.py   (run from the repository root)
 """
 from __future__ import annotations
 
+import hashlib
 import json
+import os
 import pathlib
 import shutil
 import sys
@@ -197,23 +199,36 @@ def e08():
     from agent.core.paths import Workspace
 
     ws = Workspace(ROOT)
-    outside = ROOT.parent / "outside-workspace-task.json"
+    # The task file lives in a directory exclusive to this run. A fixed file name directly
+    # in the shared parent used to be written and deleted here, so two concurrent suite runs
+    # clobbered each other. Nothing writes to the shared path any more: if a file already
+    # sits there it is read as the expected value and left byte-for-byte untouched.
+    shared = ROOT.parent / "outside-workspace-task.json"
+    if not shared.exists():
+        shared.write_text("not-a-task-sentinel\n", encoding="utf-8")
+    expected = shared.read_text(encoding="utf-8")
     try:
-        outside.write_text("{}", encoding="utf-8")
-        for label, task_file in (
-            ("absolute path outside the workspace", outside),
-            ("relative path escaping the workspace", pathlib.Path("..") / outside.name),
-            ("nested traversal via repeated ..", pathlib.Path("jobs") / ".." / ".." / outside.name),
-        ):
-            try:
-                analyze_spectrum(ws, task_file, "")
-                check(f"{label} is refused", False, "traversal succeeded")
-            except ToolError as exc:
-                check(f"{label} raises PATH_TRAVERSAL", exc.code == "PATH_TRAVERSAL",
-                      f"code={exc.code}")
+        with tempfile.TemporaryDirectory(prefix="xrf-verify-outside-") as raw_dir:
+            outside_dir = pathlib.Path(raw_dir)
+            outside = outside_dir / "outside-workspace-task.json"
+            outside.write_text("{}", encoding="utf-8")
+            for label, task_file in (
+                ("absolute path outside the workspace", outside),
+                ("relative path escaping the workspace",
+                 pathlib.Path("..") / outside_dir.name / outside.name),
+                ("nested traversal via repeated ..",
+                 pathlib.Path("jobs") / ".." / ".." / outside_dir.name / outside.name),
+            ):
+                try:
+                    analyze_spectrum(ws, task_file, "")
+                    check(f"{label} is refused", False, "traversal succeeded")
+                except ToolError as exc:
+                    check(f"{label} raises PATH_TRAVERSAL", exc.code == "PATH_TRAVERSAL",
+                          f"code={exc.code}")
     finally:
-        if outside.exists():
-            outside.unlink()
+        check("a pre-existing outside-workspace-task.json is left untouched",
+              shared.exists() and shared.read_text(encoding="utf-8") == expected,
+              f"exists={shared.exists()}")
 
     try:
         analyze_spectrum(ws, ROOT / "jobs" / "this-file-does-not-exist.json", "")
@@ -382,18 +397,145 @@ def thin_interface():
           rc4 == 2 and "UNSUPPORTED_HOST" in err4, f"rc={rc4} {err4[:160]}")
 
 
+ARGV = []
+GUARD = None
+
+
+def _probe_exit(argv):
+    """`--probe-exit <code>`: print a line and exit with that code immediately.
+
+    Never runs a case; it exists so the compatibility entries in agent-workspace/ can prove
+    they forward arguments and exit codes (a nonzero one included) instead of reimplementing
+    the suite.
+    """
+    for i, arg in enumerate(argv):
+        if arg == "--probe-exit" and i + 1 < len(argv):
+            try:
+                code = int(argv[i + 1])
+            except ValueError:
+                continue
+            print(f"probe-exit {code}", flush=True)
+            return code
+    return None
+
+
+class _RealJobsGuard:
+    """Snapshot the source workspace's jobs/ and add a per-run sentinel, then assert the
+    suite left both alone. The retired entries deleted this directory outright; a hash
+    snapshot catches a wholesale wipe as well as edits.
+
+    Files that appear after the snapshot (another concurrent instance's own sentinel, which
+    it removes itself) are tolerated: only paths present at snapshot time must survive
+    unmodified.
+    """
+
+    def __init__(self):
+        self.jobs = verify_common.WORKSPACE / "jobs"
+        self.made_dir = not self.jobs.exists()
+        self.jobs.mkdir(parents=True, exist_ok=True)
+        self.sentinel = self.jobs / f"p3-sentinel-{os.getpid()}.json"
+        self.sentinel_text = "the suite must not wipe this directory\n"
+        self.sentinel.write_text(self.sentinel_text, encoding="utf-8")
+        self.snapshot = self._take()
+
+    def _take(self) -> dict:
+        # p3-sentinel-* markers belong to whichever run created them and are removed by
+        # that run; comparing them between snapshots would make concurrent instances see
+        # each other's cleanup as a change.
+        return {
+            str(p.relative_to(self.jobs)): hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in sorted(self.jobs.rglob("*"))
+            if p.is_file() and not p.name.startswith("p3-sentinel-")
+        }
+
+    def finish(self) -> None:
+        after = self._take()
+        removed = [p for p in self.snapshot if p not in after]
+        changed = [p for p in self.snapshot if p in after and after[p] != self.snapshot[p]]
+        check("the source workspace's jobs/ files survive unmodified",
+              not removed and not changed, f"removed={removed[:3]} changed={changed[:3]}")
+        check("this run's jobs/ sentinel survives unchanged",
+              self.sentinel.exists()
+              and self.sentinel.read_text(encoding="utf-8") == self.sentinel_text,
+              self.sentinel.name)
+        self.cleanup_marker()
+
+    def cleanup_marker(self) -> None:
+        """Remove this run's own marker even when the suite fails before finish() runs."""
+        try:
+            self.sentinel.unlink()
+        except OSError:
+            pass
+        if self.made_dir and self.jobs.exists() and not any(self.jobs.iterdir()):
+            self.jobs.rmdir()
+
+
+def forwarder_entries():
+    """The retired suite copies under agent-workspace/ are now thin forwarders: verify one
+    of them forwards arguments and exit codes by running its cheapest path."""
+    print("--- compatibility entries forward arguments and exit codes")
+    import subprocess
+    entry = verify_common.PACKAGE_PARENT / "verify_p3.py"
+    if not entry.exists() or entry == pathlib.Path(__file__).resolve():
+        print("  SKIP no separate compatibility entry here (flat layout)")
+        return
+    for code in (7, 3):
+        proc = subprocess.run([sys.executable, str(entry), "--probe-exit", str(code)],
+                              capture_output=True, text=True, encoding="utf-8")
+        check(f"the compatibility entry forwards --probe-exit {code}",
+              proc.returncode == code and f"probe-exit {code}" in proc.stdout,
+              f"rc={proc.returncode} out={proc.stdout[:80]!r}")
+
+
+def concurrent_instances():
+    """Two full suite instances run at once: each gets its own throwaway workspace and its
+    own exclusive outside-task directory, so nothing is shared to overwrite."""
+    print("--- two concurrent suite instances do not collide")
+    import subprocess
+    myself = pathlib.Path(__file__).resolve()
+    procs = [subprocess.Popen([sys.executable, str(myself), "--no-concurrency"],
+                             stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                             text=True, encoding="utf-8")
+             for _ in range(2)]
+    results = [p.communicate() for p in procs]
+    codes = [p.returncode for p in procs]
+    roots = []
+    for i, (code, (out, _)) in enumerate(zip(codes, results), 1):
+        line = next((l for l in out.splitlines()
+                     if l.startswith("isolated test workspace:")), "")
+        roots.append(line.split(":", 1)[1].strip() if line else "")
+        tail = "\n".join(out.splitlines()[-5:])
+        check(f"concurrent instance {i} passes in its own workspace",
+              code == 0 and "ALL CASES PASSED" in out and bool(line), f"rc={code}\n{tail}")
+    check("the two concurrent instances used separate workspaces",
+          len(set(roots)) == 2 and all(roots), str(roots))
+
+
 def main():
-    """Run the suite against a throwaway workspace; the real workspace is never touched."""
-    global ROOT, SPECTRA, JOBS
+    """Run the suite against a throwaway workspace; the real workspace is never touched.
+
+    `--probe-exit <code>` is a no-case probe for the compatibility entries in
+    agent-workspace/: it prints a line and exits with <code> so they can prove they forward
+    arguments and exit codes. `--no-concurrency` skips the two-duplicate-run check (it is
+    passed to the duplicates themselves to stop the recursion).
+    """
+    global ROOT, SPECTRA, JOBS, ARGV, GUARD
+    ARGV = sys.argv[1:]
+    probe = _probe_exit(ARGV)
+    if probe is not None:
+        return probe
     ws = verify_common.TestWorkspace.create()
     verify_common.ACTIVE = ws
     ROOT = ws.root
     SPECTRA = ROOT / "deliverables" / "智能体功能测试谱集-20261031"
     JOBS = ROOT / "jobs"
+    GUARD = _RealJobsGuard()
     try:
         with verify_common.isolated_host_env():
             return run_cases()
     finally:
+        if GUARD is not None:
+            GUARD.cleanup_marker()
         ws.close()
 
 
@@ -409,6 +551,13 @@ def run_cases():
     f05()
     f06()
     f_extra_param()
+    forwarder_entries()
+    if "--no-concurrency" in ARGV:
+        print("--- concurrent duplicate run skipped (--no-concurrency)")
+    else:
+        concurrent_instances()
+    if GUARD is not None:
+        GUARD.finish()
 
     print("=" * 70)
     if failures:
