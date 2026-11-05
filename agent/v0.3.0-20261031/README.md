@@ -298,9 +298,9 @@ python -B verify_package.py --smoke
 cd ..\..
 
 # 2. 全部回归（从本目录运行，约 3–5 分钟）
-python agent-workspace\verify_p1.py
-python agent-workspace\verify_p2.py
-python agent-workspace\verify_p3.py
+python -B verify_p1.py
+python -B verify_p2.py
+python -B verify_p3.py
 
 # 3. 单张谱端到端
 python -m agent.cli agent --task-file "deliverables/智能体功能测试谱集-20261031/01_正常输入/T01.json" --sample-description "铝合金粉末" --interactive --once
@@ -308,4 +308,4 @@ python -m agent.cli agent --task-file "deliverables/智能体功能测试谱集-
 
 预期三套套件末尾均输出 `ALL CASES PASSED`；模型包自检输出 `{"status": "pass", ...}`。
 
-> 校验脚本会自动设定 `PYTHONUTF8=1` 并在启动时清理只读残留，可在中文 Windows 上连续重复运行。
+> 校验脚本会自动设定 `PYTHONUTF8=1`，并在一次性临时工作区中运行；正式 `jobs/` 不会被清理或修改。
