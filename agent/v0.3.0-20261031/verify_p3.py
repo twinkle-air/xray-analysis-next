@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import os
 import pathlib
 import shutil
 import sys
@@ -199,36 +198,40 @@ def e08():
     from agent.core.paths import Workspace
 
     ws = Workspace(ROOT)
-    # The task file lives in a directory exclusive to this run. A fixed file name directly
-    # in the shared parent used to be written and deleted here, so two concurrent suite runs
-    # clobbered each other. Nothing writes to the shared path any more: if a file already
-    # sits there it is read as the expected value and left byte-for-byte untouched.
+    # The outside task file lives in a directory exclusive to this run and doubles as the
+    # sentinel, compared byte for byte afterwards. The fixed name this suite used to write
+    # into the shared parent is never created, written or removed here: absent must stay
+    # absent, and a file that was already there must stay untouched.
     shared = ROOT.parent / "outside-workspace-task.json"
-    if not shared.exists():
-        shared.write_text("not-a-task-sentinel\n", encoding="utf-8")
-    expected = shared.read_text(encoding="utf-8")
-    try:
-        with tempfile.TemporaryDirectory(prefix="xrf-verify-outside-") as raw_dir:
-            outside_dir = pathlib.Path(raw_dir)
-            outside = outside_dir / "outside-workspace-task.json"
-            outside.write_text("{}", encoding="utf-8")
-            for label, task_file in (
-                ("absolute path outside the workspace", outside),
-                ("relative path escaping the workspace",
-                 pathlib.Path("..") / outside_dir.name / outside.name),
-                ("nested traversal via repeated ..",
-                 pathlib.Path("jobs") / ".." / ".." / outside_dir.name / outside.name),
-            ):
-                try:
-                    analyze_spectrum(ws, task_file, "")
-                    check(f"{label} is refused", False, "traversal succeeded")
-                except ToolError as exc:
-                    check(f"{label} raises PATH_TRAVERSAL", exc.code == "PATH_TRAVERSAL",
-                          f"code={exc.code}")
-    finally:
-        check("a pre-existing outside-workspace-task.json is left untouched",
-              shared.exists() and shared.read_text(encoding="utf-8") == expected,
-              f"exists={shared.exists()}")
+    shared_before = shared.read_bytes() if shared.exists() else None
+    with tempfile.TemporaryDirectory(prefix="xrf-verify-outside-") as raw_dir:
+        outside_dir = pathlib.Path(raw_dir)
+        sentinel = outside_dir / "outside-workspace-task.json"
+        sentinel_bytes = b"{}"
+        sentinel.write_bytes(sentinel_bytes)
+        for label, task_file in (
+            ("absolute path outside the workspace", sentinel),
+            ("relative path escaping the workspace",
+             pathlib.Path("..") / outside_dir.name / sentinel.name),
+            ("nested traversal via repeated ..",
+             pathlib.Path("jobs") / ".." / ".." / outside_dir.name / sentinel.name),
+        ):
+            try:
+                analyze_spectrum(ws, task_file, "")
+                check(f"{label} is refused", False, "traversal succeeded")
+            except ToolError as exc:
+                check(f"{label} raises PATH_TRAVERSAL", exc.code == "PATH_TRAVERSAL",
+                      f"code={exc.code}")
+        check("the sentinel in the exclusive directory is untouched",
+              sentinel.exists() and sentinel.read_bytes() == sentinel_bytes,
+              f"exists={sentinel.exists()}")
+    shared_after = shared.read_bytes() if shared.exists() else None
+    check("no outside-workspace-task.json appears in the shared parent",
+          shared_before is not None or shared_after is None,
+          f"before={shared_before is not None} after={shared_after is not None}")
+    check("a pre-existing outside-workspace-task.json is untouched",
+          shared_before is None or shared_after == shared_before,
+          f"changed={shared_before is not None and shared_after != shared_before}")
 
     try:
         analyze_spectrum(ws, ROOT / "jobs" / "this-file-does-not-exist.json", "")
@@ -420,54 +423,45 @@ def _probe_exit(argv):
 
 
 class _RealJobsGuard:
-    """Snapshot the source workspace's jobs/ and add a per-run sentinel, then assert the
-    suite left both alone. The retired entries deleted this directory outright; a hash
-    snapshot catches a wholesale wipe as well as edits.
-
-    Files that appear after the snapshot (another concurrent instance's own sentinel, which
-    it removes itself) are tolerated: only paths present at snapshot time must survive
-    unmodified.
-    """
+    """A pure read-only snapshot of the source workspace's jobs/: the suite must leave it
+    exactly as it was found. The retired entries deleted this directory outright, so the
+    snapshot records the directory set and every file's relative path and SHA-256, and
+    reports additions, removals, content changes and directory changes. No file or directory
+    is ever created, written or removed by this guard, and nothing is excluded by name; a
+    violation is reported, never cleaned up."""
 
     def __init__(self):
         self.jobs = verify_common.WORKSPACE / "jobs"
-        self.made_dir = not self.jobs.exists()
-        self.jobs.mkdir(parents=True, exist_ok=True)
-        self.sentinel = self.jobs / f"p3-sentinel-{os.getpid()}.json"
-        self.sentinel_text = "the suite must not wipe this directory\n"
-        self.sentinel.write_text(self.sentinel_text, encoding="utf-8")
-        self.snapshot = self._take()
+        self.existed = self.jobs.exists()
+        self.dirs, self.files = self._take()
 
-    def _take(self) -> dict:
-        # p3-sentinel-* markers belong to whichever run created them and are removed by
-        # that run; comparing them between snapshots would make concurrent instances see
-        # each other's cleanup as a change.
-        return {
-            str(p.relative_to(self.jobs)): hashlib.sha256(p.read_bytes()).hexdigest()
-            for p in sorted(self.jobs.rglob("*"))
-            if p.is_file() and not p.name.startswith("p3-sentinel-")
-        }
+    def _take(self) -> tuple:
+        dirs, files = set(), {}
+        if self.jobs.exists():
+            for p in sorted(self.jobs.rglob("*")):
+                rel = str(p.relative_to(self.jobs))
+                if p.is_dir():
+                    dirs.add(rel)
+                elif p.is_file():
+                    files[rel] = hashlib.sha256(p.read_bytes()).hexdigest()
+        return dirs, files
 
     def finish(self) -> None:
-        after = self._take()
-        removed = [p for p in self.snapshot if p not in after]
-        changed = [p for p in self.snapshot if p in after and after[p] != self.snapshot[p]]
-        check("the source workspace's jobs/ files survive unmodified",
-              not removed and not changed, f"removed={removed[:3]} changed={changed[:3]}")
-        check("this run's jobs/ sentinel survives unchanged",
-              self.sentinel.exists()
-              and self.sentinel.read_text(encoding="utf-8") == self.sentinel_text,
-              self.sentinel.name)
-        self.cleanup_marker()
-
-    def cleanup_marker(self) -> None:
-        """Remove this run's own marker even when the suite fails before finish() runs."""
-        try:
-            self.sentinel.unlink()
-        except OSError:
-            pass
-        if self.made_dir and self.jobs.exists() and not any(self.jobs.iterdir()):
-            self.jobs.rmdir()
+        dirs, files = self._take()
+        if self.jobs.exists() != self.existed:
+            check("the source workspace's jobs/ existence is unchanged",
+                  False, f"before={self.existed} after={self.jobs.exists()}")
+            return
+        added = sorted(set(files) - set(self.files))
+        removed = sorted(set(self.files) - set(files))
+        changed = sorted(p for p in set(files) & set(self.files)
+                         if files[p] != self.files[p])
+        added_dirs = sorted(set(dirs) - set(self.dirs))
+        removed_dirs = sorted(set(self.dirs) - set(dirs))
+        check("the source workspace's jobs/ is byte-for-byte unchanged",
+              not (added or removed or changed or added_dirs or removed_dirs),
+              f"added={added[:3]} removed={removed[:3]} changed={changed[:3]} "
+              f"dirs +{added_dirs[:3]}/-{removed_dirs[:3]}")
 
 
 def forwarder_entries():
@@ -534,8 +528,6 @@ def main():
         with verify_common.isolated_host_env():
             return run_cases()
     finally:
-        if GUARD is not None:
-            GUARD.cleanup_marker()
         ws.close()
 
 
