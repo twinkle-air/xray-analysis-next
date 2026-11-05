@@ -24,7 +24,25 @@ from agent.orchestrator import OrchestrationError, orchestrate  # noqa: E402
 from agent.host import HostError, detect_config  # noqa: E402
 
 HERE = pathlib.Path(__file__).resolve().parent
-WORKSPACE_ROOT = HERE.parent
+
+
+def _default_workspace_root() -> pathlib.Path:
+    """The workspace the CLI drives without --workspace: where the registry actually lives.
+
+    In the flat layout that is the package's parent; in the checked-out repository the
+    package sits under agent-workspace/ and the workspace root is one level above that --
+    agent-workspace/ itself would double the agent-workspace path segment.
+    """
+    for base in (HERE.parent, HERE.parent.parent):
+        try:
+            if Workspace(base).model_registry().is_file():
+                return base
+        except (OSError, ValueError):
+            continue
+    return HERE.parent
+
+
+WORKSPACE_ROOT = _default_workspace_root()
 
 
 def _workspace(args) -> Workspace:
