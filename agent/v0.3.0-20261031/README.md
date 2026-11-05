@@ -10,7 +10,7 @@
 | 项 | 值 |
 |---|---|
 | 版本 | v0.3.0-20261031（方案 v1.1 首版落地，入库于 `xray-analysis-next`） |
-| 状态 | **双布局自动化复跑记录**（项目 `.venv`：P1 72 + P2 47；P3 扁平 51／嵌套 53，2026-11-04） |
+| 状态 | **双布局自动化复跑记录**（项目 `.venv`：P1 72 + P2 47；P3 扁平 52／嵌套 54，2026-11-05） |
 | 主后端 | V10（完整分类＋定量增量），默认 |
 | 复核后端 | V9（联合强度定量＋谱支持诊断），按请求触发 |
 | 语言／运行时 | Python 3.12，numpy 2.4.6 / scipy 1.17.1 / xraylib 4.3.0（见模型包 `requirements.txt`） |
@@ -123,8 +123,8 @@ Expand-Archive ..\..\models\v9-v10-20261030\xrf-models-v9-v10.zip -DestinationPa
 
 # 2. 准备数值环境（模型包自带 requirements.txt）
 cd deliverables\xrf-models-v9-v10-20261030
-..\..\..\.venv\Scripts\python.exe -m pip install -r requirements.txt
-..\..\..\.venv\Scripts\python.exe -B verify_package.py --smoke      # 预期: {"status": "pass", "files_checked": 189, ...}
+..\..\..\..\.venv\Scripts\python.exe -m pip install -r requirements.txt
+..\..\..\..\.venv\Scripts\python.exe -B verify_package.py --smoke      # 预期: {"status": "pass", "files_checked": 189, ...}
 cd ..\..
 
 # 3. 智能体本身无额外依赖，复用同一解释器；调用时必须把 agent-workspace 放进 PYTHONPATH
@@ -217,13 +217,13 @@ follow = follow_up(agent_root, "请跑一次 V9 对照", job_id, Workspace(works
 
 ## 7. 核验结果
 
-### 自动化套件（2026-11-04 作者复跑记录）
+### 自动化套件（2026-11-05 作者复跑记录）
 
 | 套件 | 覆盖 | 通过 |
 |---|---|---|
 | `verify_p1.py` | T01–T06 数值闭环：V10 锁定、32 元素值与参考一致（rtol=1e-9/atol=1e-10）、输入 SHA-256、V9 对照、差异元素与 abs_diff_ppm、报告导出（含对照）、被篡改的去重缓存不采信、超大计数结构性拒绝、未知 job 不枚举、临时目录清理 | **72 项** |
 | `verify_p2.py` | 宿主接入：H01 自然语言上传、H02 用户请求对照一次调用、H03 恶意备注存入但不执行、H04 失败输入无报告、R01/R02/R03 规则、宿主后端选择、API 客户端契约（无真实网络） | **47 项（扁平／嵌套）** |
-| `verify_p3.py` | E05 多余字段拒绝且点名、E06 完整性失配报告不重算哈希（含处理依赖）、E07 超时 kill 整个进程树无产物、E08 路径穿越/缺失/目录拒绝、空 jobs/ 完整链路、thin 界面五轮、F05/F06 对照写入报告且等值不误报、工具拒绝未声明参数 | **51 项（扁平）／53 项（嵌套）** |
+| `verify_p3.py` | E05 多余字段拒绝且点名、E06 完整性失配报告不重算哈希（含处理依赖）、E07 超时 kill 整个进程树无产物、E08 路径穿越/缺失/目录拒绝、空 jobs/ 完整链路、thin 界面五轮、F05/F06 对照写入报告且等值不误报、工具拒绝未声明参数 | **52 项（扁平）／54 项（嵌套）** |
 
 ### 关键行为断言（已验证）
 
@@ -294,7 +294,7 @@ set PYTHONPATH=%CD%\agent-workspace
 
 # 1. 模型包自检（需先按 §5 解压）
 cd deliverables\xrf-models-v9-v10-20261030
-..\..\..\.venv\Scripts\python.exe -B verify_package.py --smoke
+..\..\..\..\.venv\Scripts\python.exe -B verify_package.py --smoke
 cd ..\..
 
 # 2. 全部回归（从本目录运行，约 3–5 分钟）
