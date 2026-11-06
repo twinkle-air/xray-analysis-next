@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "declared_on": "2026-11-06",
+  "python": {
+    "min": "3.12.14",
+    "policy": "minimum only; higher minor and patch versions are accepted"
+  },
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "xraylib": "4.3.0"
+  },
+  "match": "packages exact, python floor",
+  "on_mismatch": "RUNTIME_MISMATCH",
+  "on_missing_dependency": "DEPENDENCY_MISSING",
+  "provenance": "参考环境实测（2026-11-06）：Python 3.12.14 AMD64 + numpy 2.4.6 + scipy 1.17.1 + xraylib 4.3.0；该组合已由 v0.3.1 的 verify_p1/p2/p3 基线（72/47/60 PASS）跑通。Python 仅设下限，接受更高次版本；三个数值库精确锁定，差异视为不同运行环境。"
+}

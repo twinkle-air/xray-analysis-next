@@ -41,10 +41,11 @@ def _posix(path) -> str:
 
 class Session:
     def __init__(self, workspace_root, task_file, sample_description: str = "",
-                 host_mode: Optional[str] = None):
+                 host_mode: Optional[str] = None, allow_unverified_runtime: bool = False):
         self.workspace = Workspace(workspace_root)
         self.task_file = pathlib.Path(task_file)
         self.sample_description = sample_description
+        self.allow_unverified_runtime = allow_unverified_runtime
         self.config: HostConfig = detect_config(host_mode)
         self.main_job_id: Optional[str] = None
         self.comparison_job_id: Optional[str] = None
@@ -61,6 +62,7 @@ class Session:
             sample_description=self.sample_description,
             include_comparison=include_comparison,
             host_mode=self.config.host,
+            allow_unverified_runtime=self.allow_unverified_runtime,
         )
         self.main_job_id = result.get("job_id")
         if self.main_job_id:
@@ -150,13 +152,15 @@ class Session:
     def _compare(self, question: str, job: Job) -> dict:
         calls = []
         comparison_path = job.sub("inference") / "comparison.json"
-        if comparison_path.exists():
+        reused = comparison_path.exists()
+        if reused:
             comparison = read_json(comparison_path)
             calls.append({"name": "compare_models", "origin": "reused_existing",
                           "job_id": self.main_job_id,
                           "v9_job_id": comparison.get("v9_job_id")})
         else:
-            comparison = compare_models(self.workspace, self.main_job_id)
+            comparison = compare_models(self.workspace, self.main_job_id,
+                                        allow_unverified_runtime=self.allow_unverified_runtime)
             calls.append({"name": "compare_models", "origin": "session",
                           "job_id": self.main_job_id,
                           "v9_job_id": comparison.get("v9_job_id")})
@@ -181,17 +185,31 @@ class Session:
                       "status": exported.get("status"),
                       "error_code": exported.get("error_code")})
         answer = self._comparison_text(comparison, None if export_failed else report_path)
+        if reused:
+            reuse_note = self._comparison_policy().get("statuses", {}).get("reused")
+            if reuse_note:
+                answer += f"\n{reuse_note}"
         if export_failed:
             answer += (f"\n报告导出失败：{exported.get('error_code') or exported.get('status')}。"
                        f"报告未发布，两版数值结果仍分别保留在主任务 "
                        f"`{self.main_job_id}` 与对照任务 `{self.comparison_job_id}`。")
         return self._answer_deterministic(question, "compare", answer, calls)
 
+    def _comparison_policy(self) -> dict:
+        """F02: the session answers read the same registry policy as the exported report,
+        so a chat answer and a standalone report can never state different rules."""
+        try:
+            return read_json(self.workspace.comparison_policy())
+        except (OSError, json.JSONDecodeError):
+            return {}
+
     def _comparison_text(self, comparison: dict, report_path: str | None = None) -> str:
         self.comparison_job_id = comparison.get("v9_job_id") or self.comparison_job_id
+        policy = self._comparison_policy()
+        rules = "；".join(policy.get("rules", [])) or "V9 不是真值；两版独立保留，不取平均、不逐元素择优"
         text = (
             f"V9 对照已完成并关联主任务 `{self.main_job_id}`；"
-            f"V9 结果保存在对照任务 `{self.comparison_job_id}`，两版结果分别保留、不平均、不覆盖。\n"
+            f"V9 结果保存在对照任务 `{self.comparison_job_id}`。{rules}。\n"
             f"{comparison.get('note')}\n"
             f"V10 结果：{_posix(self.workspace.job_dir(self.main_job_id) / 'inference' / 'result.json')}\n"
             f"V9 结果：{_posix(self.workspace.job_dir(self.comparison_job_id) / 'inference' / 'result.json')}")

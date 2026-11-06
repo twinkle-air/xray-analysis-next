@@ -56,8 +56,9 @@ class ToolExecutor:
         "export_report": export_report,
     }
 
-    def __init__(self, workspace: Workspace):
+    def __init__(self, workspace: Workspace, allow_unverified_runtime: bool = False):
         self.workspace = workspace
+        self.allow_unverified_runtime = allow_unverified_runtime
         self.job_id: Optional[str] = None
 
     def _resolve(self, call_: ToolCall) -> dict:
@@ -98,6 +99,12 @@ class ToolExecutor:
                     self.workspace,
                     pathlib.Path(arguments["task_file"]),
                     arguments.get("sample_description", ""),
+                    allow_unverified_runtime=self.allow_unverified_runtime,
+                )
+            elif name == "compare_models":
+                body = self.TOOLS[name](
+                    self.workspace, arguments["job_id"],
+                    allow_unverified_runtime=self.allow_unverified_runtime,
                 )
             elif name == "export_report":
                 body = self.TOOLS[name](
@@ -296,6 +303,7 @@ def follow_up(
     workspace: Workspace,
     host_mode: Optional[str] = None,
     context: Optional[dict] = None,
+    allow_unverified_runtime: bool = False,
 ) -> dict:
     """Append one user question to an existing job and let the host pick the next documented tool.
 
@@ -325,7 +333,7 @@ def follow_up(
     })
     host_result = chat(agent_root, messages, config)
 
-    executor = ToolExecutor(workspace)
+    executor = ToolExecutor(workspace, allow_unverified_runtime=allow_unverified_runtime)
     executor.job_id = job_id
     executed = []
     blocked = []
@@ -558,10 +566,26 @@ def _envelope(job_id, analyze_result, comparison_result, export_result, trajecto
         "input_sha256": (analyze_result or {}).get("input_sha256"),
         "reused_from": (analyze_result or {}).get("reused_from"),
         "comparison_job_id": (analyze_result or {}).get("comparison_job_id"),
+        "rejection": (analyze_result or {}).get("rejection"),
         "trajectory_ref": trajectory_path,
         "host_config": config_summary(config),
         "review_decision": decision,
     }
+
+
+def _failure_answer(analyze_result: Optional[dict]) -> dict:
+    """F03: a failed first turn still answers the user in Chinese. The answer is always
+    program-generated, so it is labelled as such instead of looking like a host reply."""
+    if not analyze_result:
+        return {"answer": "分析未成功：智能体没有拿到分析结果。本次未运行数值模型，也未生成分析报告。",
+                "answer_source": "program"}
+    rejection = analyze_result.get("rejection") or {}
+    if rejection.get("user_message"):
+        return {"answer": rejection["user_message"], "answer_source": "program"}
+    warnings = analyze_result.get("warnings") or []
+    reason = warnings[0] if warnings else analyze_result.get("error_code") or "未知原因"
+    return {"answer": f"无法完成分析：{reason}。本次未运行数值模型，也未生成分析报告。",
+            "answer_source": "program"}
 
 
 def orchestrate(
@@ -571,6 +595,7 @@ def orchestrate(
     sample_description: str = "",
     include_comparison: bool = False,
     no_export: bool = False,
+    allow_unverified_runtime: bool = False,
     host_mode: Optional[str] = None,
     max_turns: int = 4,
     agent_root: Optional[pathlib.Path] = None,
@@ -583,7 +608,7 @@ def orchestrate(
     workspace = Workspace(workspace_root)
     agent_root = agent_root or workspace.agent_root()
     config = detect_config(host_mode)
-    executor = ToolExecutor(workspace)
+    executor = ToolExecutor(workspace, allow_unverified_runtime=allow_unverified_runtime)
     system = _system_prompt(agent_root)
     spectrum_path = _resolve_spectrum(workspace, spectrum_path)
 
@@ -630,8 +655,10 @@ def orchestrate(
     if status != "succeeded":
         trajectory["job_id"] = executor.job_id
         trajectory_path = _save_trajectory(workspace, executor.job_id, trajectory)
-        return _envelope(executor.job_id, analyze_result, None, None, trajectory_path, config,
+        body = _envelope(executor.job_id, analyze_result, None, None, trajectory_path, config,
                          {"action": "stop", "reason": "主分析失败，无对照与报告", "triggered_rules": []})
+        body.update(_failure_answer(analyze_result))
+        return body
 
     comparison_done = False
     comparison_result = None

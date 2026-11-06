@@ -50,6 +50,16 @@
       "http_like": 400,
       "message": "The job needs additional user input before it can run.",
       "action": "Ask for the specific missing field; do not fill it with a guess."
+    },
+    "RUNTIME_MISMATCH": {
+      "http_like": 500,
+      "message": "The numerical runtime (Python or numpy/scipy/xraylib versions) does not match the declared runtime policy.",
+      "action": "Stop before inference or cache use; record the actual versions; never silently fall back to another interpreter. Proceed only with an explicit --allow-unverified-runtime opt-in, which records the unverified status."
+    },
+    "DEPENDENCY_MISSING": {
+      "http_like": 500,
+      "message": "A numerical dependency the frozen model needs is missing from the selected interpreter.",
+      "action": "Stop before inference; report which dependency is missing; do not substitute another interpreter silently."
     }
   }
 }
