@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-10-31",
+  "note": "Version, entrypoint and scope are fixed by the frozen package; the agent must not let a prompt override them.",
+  "default_model": "V10",
+  "models": {
+    "V10": {
+      "version": "V10",
+      "revision": "full-classification-and-quantification-incremental",
+      "entrypoint": "runtime_v10.py",
+      "package_root": "deliverables/xrf-models-v9-v10-20261030/outputs/model-v10-20261030",
+      "integrity_file": "deliverables/xrf-models-v9-v10-20261030/outputs/model-v10-20261030/freeze.json",
+      "package_sha256_source": "deliverables/xrf-models-v9-v10-20261030/integrity.json",
+      "preprocessing": "preprocess.extract (unified_rebuild)",
+      "elements": [
+        "Na","Mg","Al","Si","P","S","Cl","K","Ca","Ti","V","Cr","Mn","Fe","Co","Ni","Cu","Zn","As","Se","Rb","Sr","Y","Zr","Nb","Mo","Cd","Sn","Sb","Ba","W","Pb"
+      ],
+      "n_elements": 32,
+      "classification_threshold": 0.9,
+      "scope": "synthetic_numerical_research",
+      "formal_report_eligible": false,
+      "hardware_validated": false,
+      "run_as": "deliverables/xrf-models-v9-v10-20261030/run_model.py --model V10",
+      "cannot_infer": "This model is not validated for measured spectra, unknown instrument gain/zero, or non-2048-channel inputs."
+    },
+    "V9": {
+      "version": "V9",
+      "revision": "domain-guarded-joint-quantification",
+      "entrypoint": "domain_guard/domain_runtime.py",
+      "package_root": "deliverables/xrf-models-v9-v10-20261030/outputs/model-v9-20261028",
+      "integrity_file": "deliverables/xrf-models-v9-v10-20261030/outputs/model-v9-20261028/freeze.json",
+      "package_sha256_source": "deliverables/xrf-models-v9-v10-20261030/integrity.json",
+      "preprocessing": "v9 spectral fit + domain support",
+      "elements": [
+        "Na","Mg","Al","Si","P","S","Cl","K","Ca","Ti","V","Cr","Mn","Fe","Co","Ni","Cu","Zn","As","Se","Rb","Sr","Y","Zr","Nb","Mo","Cd","Sn","Sb","Ba","W","Pb"
+      ],
+      "n_elements": 32,
+      "classification_threshold": null,
+      "scope": "synthetic_numerical_research",
+      "formal_report_eligible": false,
+      "hardware_validated": false,
+      "run_as": "deliverables/xrf-models-v9-v10-20261030/run_model.py --model V9",
+      "cannot_infer": "V9 is a reference-only backend. It is not a ground truth and must not gate or overwrite V10 results."
+    }
+  },
+  "adapter": {
+    "name": "synthetic_2048_channel_counts",
+    "version": "1.0",
+    "notes": "Maps a validated five-field task file onto the model's blind_counts reader. No rescaling, smoothing, background subtraction or rebinning is applied."
+  }
+}

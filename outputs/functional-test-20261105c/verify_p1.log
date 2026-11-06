@@ -1,0 +1,113 @@
+isolated test workspace: C:\Users\Twinkle\AppData\Local\Temp\xrf-verify-ag03jfs2
+workspace root: C:\Users\Twinkle\AppData\Local\Temp\xrf-verify-ag03jfs2
+
+--- T01 (T01.json)
+     status=succeeded error_code=None job=1a30350b0779 rc=0
+  PASS succeeded
+  PASS no error
+  PASS model locked to V10
+  PASS metadata matches reference
+  PASS nonzero elements match reference
+  PASS all 32 values within rtol=1e-9/atol=1e-10
+  PASS input hash matches file hash
+
+--- T02 (T02.json)
+     status=succeeded error_code=None job=4e5672bca38e rc=0
+  PASS succeeded
+  PASS no error
+  PASS model locked to V10
+  PASS metadata matches reference
+  PASS nonzero elements match reference
+  PASS all 32 values within rtol=1e-9/atol=1e-10
+  PASS input hash matches file hash
+
+--- T03 (T03.json)
+     status=succeeded error_code=None job=4b5898df0a45 rc=0
+  PASS succeeded
+  PASS no error
+  PASS model locked to V10
+  PASS metadata matches reference
+  PASS nonzero elements match reference
+  PASS all 32 values within rtol=1e-9/atol=1e-10
+  PASS input hash matches file hash
+
+--- T04 (T04_重复上传.json)
+     status=succeeded error_code=None job=ebae9dbbc8c3 rc=0
+  PASS succeeded
+  PASS no error
+  PASS model locked to V10
+  PASS metadata matches reference
+  PASS nonzero elements match reference
+  PASS all 32 values within rtol=1e-9/atol=1e-10
+  PASS input hash matches file hash
+
+--- T05 (T05_全零计数.json)
+     status=failed error_code=INVALID_COUNTS job=bb46e9e3a943 rc=0
+  PASS rejected
+  PASS explicit error code
+  PASS no inference artifact
+  PASS no report artifact
+--- T06 (T06_错误道数.json)
+     status=failed error_code=INVALID_COUNTS job=a4a99acd56c7 rc=0
+  PASS rejected
+  PASS explicit error code
+  PASS no inference artifact
+  PASS no report artifact
+--- T04 dedup / no overwrite of T01
+  PASS distinct job ids
+  PASS same input hash
+  PASS reuse recorded
+  PASS identical predictions
+  PASS T01 result untouched
+
+--- input immutability
+  PASS original bytes preserved
+  PASS read-only enforced
+
+--- F01 damaged dedup cache must not be trusted
+     rc=0 status=succeeded reused_from=None
+  PASS corrupted cache rejected instead of reused
+  PASS Fe restored to the real model value
+
+--- huge integer counts are rejected structurally, not via a math error
+     rc=0 status=failed error=INVALID_COUNTS
+  PASS rejected with INVALID_COUNTS
+  PASS no OverflowError surfaced
+
+--- compare_models on T01
+     rc=0 v9_job=339ea2ddc58f note=V9对照已完成：V10 报出 10 个元素，V9 报出 10 个元素。10 个元素两版含量差 > 0 ppm。 两版均报出的元素差异最大者见 differing_elements。 V9 不是真值，一
+  PASS compare succeeded
+  PASS separate v9 job
+  PASS V9 preserved separately
+  PASS V9 matches reference
+  PASS V10 unchanged
+  PASS differing elements reported
+  PASS abs_diff_ppm is the true signed gap
+
+--- export_report on T01 (with comparison)
+     rc=0 consistency=True md=C:\Users\Twinkle\AppData\Local\Temp\xrf-verify-ag03jfs2\jobs\1a30350b0779\report\report.md
+  PASS export succeeded
+  PASS consistency passed
+  PASS markdown written
+  PASS json written
+  PASS declares research draft
+  PASS carries job id
+  PASS carries the research-draft disclaimer
+  PASS renders non-reported as '本模型未报出'
+  PASS non-reported rows render 本模型未报出
+  PASS reported rows carry numeric values
+  PASS envelope has 32 elements
+  PASS reported flag follows the threshold rule for every element
+  PASS ppm equals percent*10000
+  PASS comparison carried into report
+
+--- get_job_status unknown id must not enumerate
+  PASS unknown job reported absent
+  PASS clean exit
+
+--- scratch and temp cleanup
+  PASS no leftover .tmp-* scratch dirs
+  PASS model wrapper cleaned its tmp dirs
+
+======================================================================
+ALL CASES PASSED

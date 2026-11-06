@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "codes": {
+    "UNSUPPORTED_FORMAT": {
+      "http_like": 400,
+      "message": "Input is not a supported spectrum format or channel count.",
+      "action": "Do not interpolate or rebin. Return the rejection reason and stop."
+    },
+    "INVALID_COUNTS": {
+      "http_like": 400,
+      "message": "Counts fail the five-field contract (length, finiteness, non-negativity, integer type or total).",
+      "action": "Reject; do not fall back to a default spectrum."
+    },
+    "INTEGRITY_FAILED": {
+      "http_like": 500,
+      "message": "Frozen model package or dependency hash does not match the registry.",
+      "action": "Stop without producing content; do not recompute a hash to 'fix' the mismatch."
+    },
+    "TIMEOUT": {
+      "http_like": 504,
+      "message": "Numerical backend exceeded the task timeout.",
+      "action": "Terminate the subprocess, mark failed, clean temp files; one justified recovery only."
+    },
+    "NUMERICAL_FAILURE": {
+      "http_like": 500,
+      "message": "The model process exited without publishing a valid result.",
+      "action": "Stop; do not emit a fallback content guess."
+    },
+    "OVERWRITE_REFUSED": {
+      "http_like": 409,
+      "message": "A result for this job already exists and overwrite is not permitted.",
+      "action": "Return the existing job id and artifact refs."
+    },
+    "NOT_FOUND": {
+      "http_like": 404,
+      "message": "No job with this id exists in this workspace.",
+      "action": "Do not enumerate or read other directories."
+    },
+    "PATH_TRAVERSAL": {
+      "http_like": 400,
+      "message": "A requested path escapes the job or workspace root.",
+      "action": "Reject the operation."
+    },
+    "CONTRACT_VIOLATION": {
+      "http_like": 400,
+      "message": "A tool argument breaks a documented tool contract.",
+      "action": "Reject; do not guess the intended argument."
+    },
+    "AWAITING_INPUT": {
+      "http_like": 400,
+      "message": "The job needs additional user input before it can run.",
+      "action": "Ask for the specific missing field; do not fill it with a guess."
+    }
+  }
+}

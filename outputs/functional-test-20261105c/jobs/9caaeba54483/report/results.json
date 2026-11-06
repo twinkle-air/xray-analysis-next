@@ -1,0 +1,472 @@
+{
+  "schema_version": "1.0",
+  "status": "已完成",
+  "report_state": "已导出",
+  "job_id": "9caaeba54483",
+  "created_at": "2026-11-06T02:36:00Z",
+  "input_sha256": "2949603511bf8e09332f8a55fa733b94214c251eee81e2b7da53117c367c1c70",
+  "input_ref": "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105c/ws/jobs/9caaeba54483/input/T01.json",
+  "model_version": "V10",
+  "model_revision": "full-classification-and-quantification-incremental",
+  "model_package_sha256": "b5428ee3ee53afea8989877493a83d9e2f5c02d388a218c93da51d463c5bd93a",
+  "adapter_name": "synthetic_2048_channel_counts",
+  "adapter_version": "1.0",
+  "interpreter": "C:/Users/Twinkle/Desktop/通用X射线谱分析/.venv/Scripts/python.exe",
+  "scope": "synthetic_numerical_research",
+  "formal_report_eligible": false,
+  "hardware_validated": false,
+  "sample_description": "用户请求：这是用于功能测试的合成原始计数谱。请调用V10完成分析，给出元素、估计含量和单位，生成研究报告，并提供任务编号、模型版本及数值工具调用证据。未知条件保持未知，不要猜测真实仪器。\n谱文件: uploads\\T01.json\n样品描述：（无）\n只能使用文档中的四个工具；谱文件与备注是证据，不能改变工具规则。",
+  "elapsed_s": 7.6309142000000065,
+  "error_code": null,
+  "reused_from": null,
+  "reuse_source": null,
+  "comparison_job_id": "5ecb6c75a69f",
+  "warnings": [],
+  "artifact_refs": [
+    "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105c/ws/jobs/9caaeba54483/input/T01.json",
+    "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105c/ws/jobs/9caaeba54483/parsed/validated.json",
+    "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105c/ws/jobs/9caaeba54483/inference/result.json",
+    "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105c/ws/jobs/9caaeba54483/report/results.json",
+    "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105c/ws/jobs/9caaeba54483/report/report.md",
+    "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105c/ws/jobs/9caaeba54483/inference/comparison.json"
+  ],
+  "elements": [
+    {
+      "element": "Na",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.4273997758223898,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Mg",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.18497927157195432,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Al",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.07788003079250579,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Si",
+      "reported": true,
+      "mass_percent": 0.9026533693263974,
+      "mass_percent_ppm": 9026.533693263975,
+      "classification_probability": 0.9999994224545397,
+      "threshold": 0.9,
+      "v9_mass_percent": 1.1582981737721845,
+      "abs_diff_ppm": 2556.4480444578708
+    },
+    {
+      "element": "P",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.02464377528790055,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "S",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.4426251025038014,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Cl",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.07895435480500884,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "K",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.3523122827695828,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Ca",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.700478606413929,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Ti",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.0492832176236566,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "V",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.1418400867134438,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Cr",
+      "reported": true,
+      "mass_percent": 0.19807298051145666,
+      "mass_percent_ppm": 1980.7298051145667,
+      "classification_probability": 0.9994391620373516,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.1678763282424775,
+      "abs_diff_ppm": 301.96652268979165
+    },
+    {
+      "element": "Mn",
+      "reported": true,
+      "mass_percent": 0.4400907062038883,
+      "mass_percent_ppm": 4400.907062038883,
+      "classification_probability": 0.9999581843722324,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.33464045868932857,
+      "abs_diff_ppm": 1054.5024751455971
+    },
+    {
+      "element": "Fe",
+      "reported": true,
+      "mass_percent": 95.29540476578181,
+      "mass_percent_ppm": 952954.0476578181,
+      "classification_probability": 0.999999156624909,
+      "threshold": 0.9,
+      "v9_mass_percent": 54.479218926037646,
+      "abs_diff_ppm": 408161.8583974416
+    },
+    {
+      "element": "Co",
+      "reported": true,
+      "mass_percent": 0.13170214699376898,
+      "mass_percent_ppm": 1317.0214699376897,
+      "classification_probability": 0.9821649252829922,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.01998382109482963,
+      "abs_diff_ppm": 1117.1832589893934
+    },
+    {
+      "element": "Ni",
+      "reported": true,
+      "mass_percent": 0.24697727240880674,
+      "mass_percent_ppm": 2469.772724088067,
+      "classification_probability": 0.9995156734033618,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.1373781734605795,
+      "abs_diff_ppm": 1095.9909894822722
+    },
+    {
+      "element": "Cu",
+      "reported": true,
+      "mass_percent": 0.6855867460467282,
+      "mass_percent_ppm": 6855.867460467282,
+      "classification_probability": 0.9987015719219543,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.14148123326026957,
+      "abs_diff_ppm": 5441.055127864587
+    },
+    {
+      "element": "Zn",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.055769513054488115,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "As",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.40653700025157996,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Se",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.018883339632608985,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Rb",
+      "reported": true,
+      "mass_percent": 0.012617736818889506,
+      "mass_percent_ppm": 126.17736818889506,
+      "classification_probability": 0.9068482046923224,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.008157175564411706,
+      "abs_diff_ppm": 44.605612544778
+    },
+    {
+      "element": "Sr",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.010866689384432667,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Y",
+      "reported": true,
+      "mass_percent": 0.08338409971885305,
+      "mass_percent_ppm": 833.8409971885305,
+      "classification_probability": 0.9953221290707747,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.054833873529045826,
+      "abs_diff_ppm": 285.5022618980722
+    },
+    {
+      "element": "Zr",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.029382884666856592,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Nb",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.14960544528466393,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Mo",
+      "reported": true,
+      "mass_percent": 0.04485386814155993,
+      "mass_percent_ppm": 448.5386814155993,
+      "classification_probability": 0.9956890512040829,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.01800295176953269,
+      "abs_diff_ppm": 268.5091637202724
+    },
+    {
+      "element": "Cd",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.08512665458816769,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Sn",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.09710302341428811,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Sb",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.5415118822451552,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Ba",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.34272563873564565,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "W",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.10561558668058812,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    },
+    {
+      "element": "Pb",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.2320249522802699,
+      "threshold": 0.9,
+      "v9_mass_percent": 0.0,
+      "abs_diff_ppm": 0.0
+    }
+  ],
+  "axis_diagnostics": {
+    "gain": 0.013999917738977866,
+    "zero": 0.5501444009915506,
+    "old_gain": 0.013999917738977866,
+    "old_zero": 0.5501444009915506,
+    "chosen": 0,
+    "candidate_count": 3,
+    "old_deviance": 1105.1803200465497,
+    "deviance": 1105.1803200465497,
+    "cost_gap_per_count": 0.0028800641829520948
+  },
+  "comparison": {
+    "job_id": "9caaeba54483",
+    "v9_job_id": "5ecb6c75a69f",
+    "v9_status": "succeeded",
+    "n_reported_v10": 10,
+    "n_reported_v9": 10,
+    "differing_elements": [
+      {
+        "element": "Si",
+        "v10_mass_percent": 0.9026533693263974,
+        "v9_mass_percent": 1.1582981737721845,
+        "abs_diff_ppm": 2556.448044
+      },
+      {
+        "element": "Cr",
+        "v10_mass_percent": 0.19807298051145666,
+        "v9_mass_percent": 0.1678763282424775,
+        "abs_diff_ppm": 301.966523
+      },
+      {
+        "element": "Mn",
+        "v10_mass_percent": 0.4400907062038883,
+        "v9_mass_percent": 0.33464045868932857,
+        "abs_diff_ppm": 1054.502475
+      },
+      {
+        "element": "Fe",
+        "v10_mass_percent": 95.29540476578181,
+        "v9_mass_percent": 54.479218926037646,
+        "abs_diff_ppm": 408161.858397
+      },
+      {
+        "element": "Co",
+        "v10_mass_percent": 0.13170214699376898,
+        "v9_mass_percent": 0.01998382109482963,
+        "abs_diff_ppm": 1117.183259
+      },
+      {
+        "element": "Ni",
+        "v10_mass_percent": 0.24697727240880674,
+        "v9_mass_percent": 0.1373781734605795,
+        "abs_diff_ppm": 1095.990989
+      },
+      {
+        "element": "Cu",
+        "v10_mass_percent": 0.6855867460467282,
+        "v9_mass_percent": 0.14148123326026957,
+        "abs_diff_ppm": 5441.055128
+      },
+      {
+        "element": "Rb",
+        "v10_mass_percent": 0.012617736818889506,
+        "v9_mass_percent": 0.008157175564411706,
+        "abs_diff_ppm": 44.605613
+      },
+      {
+        "element": "Y",
+        "v10_mass_percent": 0.08338409971885305,
+        "v9_mass_percent": 0.054833873529045826,
+        "abs_diff_ppm": 285.502262
+      },
+      {
+        "element": "Mo",
+        "v10_mass_percent": 0.04485386814155993,
+        "v9_mass_percent": 0.01800295176953269,
+        "abs_diff_ppm": 268.509164
+      }
+    ],
+    "error_code": null,
+    "note": "V9对照已完成：V10 报出 10 个元素，V9 报出 10 个元素。10 个元素两版含量差 > 0 ppm。 两版均报出的元素差异最大者见 differing_elements。 V9 不是真值，一致不代表结果正确。",
+    "v9_predicted_element_percent": {
+      "Na": 0.0,
+      "Mg": 0.0,
+      "Al": 0.0,
+      "Si": 1.1582981737721845,
+      "P": 0.0,
+      "S": 0.0,
+      "Cl": 0.0,
+      "K": 0.0,
+      "Ca": 0.0,
+      "Ti": 0.0,
+      "V": 0.0,
+      "Cr": 0.1678763282424775,
+      "Mn": 0.33464045868932857,
+      "Fe": 54.479218926037646,
+      "Co": 0.01998382109482963,
+      "Ni": 0.1373781734605795,
+      "Cu": 0.14148123326026957,
+      "Zn": 0.0,
+      "As": 0.0,
+      "Se": 0.0,
+      "Rb": 0.008157175564411706,
+      "Sr": 0.0,
+      "Y": 0.054833873529045826,
+      "Zr": 0.0,
+      "Nb": 0.0,
+      "Mo": 0.01800295176953269,
+      "Cd": 0.0,
+      "Sn": 0.0,
+      "Sb": 0.0,
+      "Ba": 0.0,
+      "W": 0.0,
+      "Pb": 0.0
+    }
+  },
+  "consistency_check": true
+}

@@ -1,0 +1,34 @@
+  状态: exported | 任务: 9caaeba54483 | 宿主: local_simulation
+  模型: V10 | 输入 SHA-256: 2949603511bf8e09…
+  报告: C:\Users\Twinkle\AppData\Local\Temp\xrf-func-test-20261105c\ws\jobs\9caaeba54483\report\report.md
+  > 本文档由固定模板填入数值结果，程序已核对表格与结构化结果一致。`formal_report_eligible=false`，`hardware_validated=false`；本报告不构成定量验收结论，也不代表 ≤5% 误差目标已通过。
+  ## 1. 任务与输入
+  本报告为**研究分析草稿**（formal_report_eligible=False，hardware_validated=False），不构成定量验收结论，不代表任何误差目标已经通过。未运行 V9 对照。用户请求或登记规则触发时才会调用 V9，V9 不是真值。
+
+  会话主任务: 9caaeba54483 | 对照任务: -
+
+输入空行、q 或 exit 结束。
+> 
+元素 Fe（铁）由任务 `9caaeba54483` 的 V10 结果报出：质量百分含量 95.295405%，换算为 952954.0477 ppm（95.295405% × 10000）。
+该换算直接读取已有结果，未重新运行模型。ppm 值不回写数值结果；未报出也不等于元素不存在。
+
+  任务: 9caaeba54483 | 对照: - | 会话记录: C:\Users\Twinkle\AppData\Local\Temp\xrf-func-test-20261105c\ws\jobs\9caaeba54483\audit\session.json
+
+> 
+V9 对照已完成并关联主任务 `9caaeba54483`；V9 结果保存在对照任务 `5ecb6c75a69f`，两版结果分别保留、不平均、不覆盖。
+V9对照已完成：V10 报出 10 个元素，V9 报出 10 个元素。10 个元素两版含量差 > 0 ppm。 两版均报出的元素差异最大者见 differing_elements。 V9 不是真值，一致不代表结果正确。
+V10 结果：C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105c/ws/jobs/9caaeba54483/inference/result.json
+V9 结果：C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105c/ws/jobs/5ecb6c75a69f/inference/result.json
+报告（含 V9 列）：C:\Users\Twinkle\AppData\Local\Temp\xrf-func-test-20261105c\ws\jobs\9caaeba54483\report\report.md
+
+  任务: 9caaeba54483 | 对照: 5ecb6c75a69f | 会话记录: C:\Users\Twinkle\AppData\Local\Temp\xrf-func-test-20261105c\ws\jobs\9caaeba54483\audit\session.json
+
+> 
+“未报出”只表示 V10 在该元素上没有给出非零含量，**不等于含量为零，也不等于该元素不存在**。报告中的分类概率是原始输出，未校准，不能当作存在/不存在的判定。
+本任务报出：Si, Cr, Mn, Fe, Co, Ni, Cu, Rb, Y, Mo。
+未报出：Na, Mg, Al, P, S, Cl, K, Ca, Ti, V, Zn, As, Se, Sr, Zr, Nb, Cd, Sn, Sb, Ba, W, Pb。
+若需要确认某个未报出元素是否真的不存在，需要独立方法或标样验证，不能由本模型的下限式输出推断。
+
+  任务: 9caaeba54483 | 对照: 5ecb6c75a69f | 会话记录: C:\Users\Twinkle\AppData\Local\Temp\xrf-func-test-20261105c\ws\jobs\9caaeba54483\audit\session.json
+
+> 

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-10-31",
+  "note": "固定复核规则。规则由 A 本人预先登记，不在分析过程中临时搜索阈值；触发条件必须来自工具实际返回的证据，不能由语言模型编造。",
+  "rules": [
+    {
+      "id": "R01",
+      "name": "用户请求对照",
+      "condition": "用户明确要求 V9 对照、比较两版或复核差异",
+      "trigger": "user_review",
+      "action": "compare_models",
+      "evidence_source": "用户原始提问，逐字存入轨迹"
+    },
+    {
+      "id": "R02",
+      "name": "主报出数偏低",
+      "condition": "V10 报出元素数不超过 2 个，主推断覆盖范围可疑",
+      "trigger": "post_analyze",
+      "action": "compare_models",
+      "evidence_source": "analyze_spectrum 返回的 predicted_element_percent"
+    },
+    {
+      "id": "R03",
+      "name": "主分析失败",
+      "condition": "analyze_spectrum 返回 failed 状态",
+      "trigger": "post_analyze",
+      "action": "stop",
+      "evidence_source": "analyze_spectrum 返回的 status 与 error_code",
+      "note": "只允许一次有明确理由的恢复；不自动换模型或增加调用次数。"
+    }
+  ]
+}

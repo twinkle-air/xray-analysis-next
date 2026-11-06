@@ -1,0 +1,75 @@
+isolated test workspace: C:\Users\Twinkle\AppData\Local\Temp\xrf-verify-0et95pn5
+workspace root: C:\Users\Twinkle\AppData\Local\Temp\xrf-verify-0et95pn5
+
+--- H01 natural-language upload, local stand-in host
+     rc=0 status=exported simulated=True
+  PASS export succeeded
+  PASS host marked as simulation
+  PASS no real api base leaked
+  PASS trajectory recorded
+  PASS trajectory records the planned turns
+  PASS first tool call is analyze_spectrum
+  PASS analyze_spectrum got the real file
+  PASS sample description is stored verbatim
+  PASS report envelope agrees with inference
+  PASS report consistency passed
+
+--- H02 user-requested V9 comparison, one call only
+     rc=0 status=exported v9=None
+  PASS export succeeded
+  PASS V9 job exists and is separate
+  PASS V9 preserved separately
+  PASS V10 result unchanged by comparison
+  PASS comparison carried into report JSON
+  PASS report states V9 was run
+
+--- H03 malicious note is data, not a rule change
+  PASS export succeeded
+  PASS Fe content unchanged from the independent baseline
+  PASS report carries the real Fe value
+  PASS report keeps the research draft flags
+  PASS malicious note stored but not obeyed
+
+--- H04 rejected input produces no report, one failure recorded
+     rc=1 status=failed error=INVALID_COUNTS
+  PASS workflow failed
+  PASS explicit error code
+  PASS no inference artifact
+  PASS no report artifact
+  PASS trajectory records the failure
+  PASS no successful export turn
+
+--- review rules
+  PASS no comparison for a normal job
+  PASS R02 triggers comparison when V10 reports at most 2 elements
+  PASS R01 triggers comparison when the user asks
+  PASS R03 stops on a failed main analysis
+
+--- host backend selection
+  PASS unknown host mode rejected
+  PASS api mode without credentials reports the missing config
+
+--- ambient machine configuration cannot change the default host
+  PASS a configured real host is scrubbed in-process
+  PASS the default run stays on the stand-in host
+  PASS the sentinel base never reached the run
+  PASS an invalid ambient host is scrubbed in-process
+  PASS the default run is stable under invalid ambient values
+
+--- API client contract (no network call expected)
+  PASS api_chat built the documented payload
+  PASS api_chat returned the assistant text and tool call
+  PASS api_chat did not mark itself as simulation
+
+--- execution records bind arguments at execute time
+  PASS analyze_spectrum is resolved without an invented job_id
+  PASS a job-bound tool resolves with the bound job id
+  PASS each executed call recorded its own arguments
+  PASS an earlier record is not rebound to a later job id
+
+--- CLI starts both ways
+  PASS -m agent.cli --help starts
+  PASS -I C:\Users\Twinkle\Desktop\通用X射线谱分析\agent\cli.py --help starts
+
+======================================================================
+ALL CASES PASSED

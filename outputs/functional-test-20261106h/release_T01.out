@@ -1,0 +1,17 @@
+  状态: exported | 任务: 7b5513d61cf9 | 宿主: local_simulation
+  模型: V10 | 输入 SHA-256: 2949603511bf8e09…
+  报告: C:\Users\Twinkle\AppData\Local\Temp\xrf-release-test-20261106\jobs\7b5513d61cf9\report\report.md
+  > 本文档由固定模板填入数值结果，程序已核对表格与结构化结果一致。`formal_report_eligible=false`，`hardware_validated=false`；本报告不构成定量验收结论，也不代表 ≤5% 误差目标已通过。
+  ## 1. 任务与输入
+  本报告为**研究分析草稿**（formal_report_eligible=False，hardware_validated=False），不构成定量验收结论，不代表任何误差目标已经通过。未运行 V9 对照。用户请求或登记规则触发时才会调用 V9，V9 不是真值。
+
+  会话主任务: 7b5513d61cf9 | 对照任务: -
+
+输入空行、q 或 exit 结束。
+> 
+元素 Fe（铁）由任务 `7b5513d61cf9` 的 V10 结果报出：质量百分含量 95.295405%，换算为 952954.0477 ppm（95.295405% × 10000）。
+该换算直接读取已有结果，未重新运行模型。ppm 值不回写数值结果；未报出也不等于元素不存在。
+
+  任务: 7b5513d61cf9 | 对照: - | 会话记录: C:\Users\Twinkle\AppData\Local\Temp\xrf-release-test-20261106\jobs\7b5513d61cf9\audit\session.json
+
+> 

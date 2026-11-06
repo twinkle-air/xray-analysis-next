@@ -1,0 +1,72 @@
+isolated test workspace: C:\Users\Twinkle\AppData\Local\Temp\xrf-verify-h1g9tlpw
+workspace root: C:\Users\Twinkle\AppData\Local\Temp\xrf-verify-h1g9tlpw
+
+--- E05 extra fields (truth / seed) are rejected, not forwarded
+  PASS banned extra fields rejected
+  PASS explicit error code
+  PASS no inference artifact for extra fields
+  PASS banned fields named in the warnings
+  PASS no parsed input was published for extra fields
+  PASS any extra field is rejected, not just banned ones
+--- E06 package integrity mismatch is reported, never re-hashed
+  PASS integrity passes on an untouched copy
+  PASS mismatch is detected after tampering
+  PASS the offending file is named
+  PASS the expected hash is kept, not recomputed
+  PASS integrity passes again after restoring the file
+--- E07 timeout terminates the child and publishes no result
+  PASS run_model returns TIMEOUT on a short deadline
+  PASS no result is published for a timed-out run
+  PASS the private temp directory is removed
+  PASS the child is killed promptly (wall within a few multiples of the deadline)
+--- E08 traversal, missing input and directories are refused
+  PASS absolute path outside the workspace raises PATH_TRAVERSAL
+  PASS relative path escaping the workspace raises PATH_TRAVERSAL
+  PASS nested traversal via repeated .. raises PATH_TRAVERSAL
+  PASS the sentinel in the exclusive directory is untouched
+  PASS no outside-workspace-task.json appears in the shared parent
+  PASS a pre-existing outside-workspace-task.json is untouched
+  PASS missing task file raises NOT_FOUND
+  PASS directory task file raises NOT_FOUND
+--- clean-slate full chain from an empty jobs/ directory
+  PASS clean-slate first run exports
+  PASS report envelope agrees with inference
+  PASS trajectory survived the clean slate
+  PASS clean-slate comparison runs
+  PASS V9 job preserved separately
+  PASS no leftover scratch dirs after the clean-slate chain
+--- thin interactive interface
+  PASS interactive first turn exits cleanly
+  PASS interactive first turn reports a job id
+  PASS follow-up '导出报告' re-exports on the same job
+  PASS follow-up writes the markdown file
+  PASS follow-up 'V9 对照' routes to compare_models, not export
+  PASS after comparison, follow-up exports
+  PASS all five turns share one trajectory and one job id
+  PASS the report carries the research-draft disclaimer
+  PASS unknown host mode still rejected in interactive mode
+--- F05 natural-language comparison must reach the report
+  PASS comparison ran
+  PASS V9 comparison ran
+  PASS comparison carried into report JSON
+  PASS report states V9 was run
+
+--- F06 equal V9 values are reported as agreement, not as V9 not reporting
+  PASS comparison succeeded
+  PASS export succeeded
+  PASS Si row exists
+  PASS Si shows the V9 value instead of 'V9 未报出'
+
+--- extra tool parameters are rejected by the executor, not only by the hint
+  PASS analysis succeeded
+  PASS extra parameter rejected
+
+--- compatibility entries forward arguments and exit codes
+  SKIP no separate compatibility entry here (flat layout)
+--- two concurrent suite instances do not collide
+  PASS concurrent instance 1 passes in its own workspace
+  PASS concurrent instance 2 passes in its own workspace
+  PASS the two concurrent instances used separate workspaces
+  PASS the source workspace's jobs/ is byte-for-byte unchanged
+======================================================================
+ALL CASES PASSED
