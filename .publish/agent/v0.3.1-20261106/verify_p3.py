@@ -362,6 +362,93 @@ def f_extra_param():
     print()
 
 
+def g01_export_failure():
+    print("--- G01 a failed export is never reported as success")
+    import agent.session as session_mod
+    from agent.core.job import Job
+    from agent.core.paths import Workspace
+    from agent.core.tools import ToolError
+
+    job_id = "fixedg01job0"
+    job_dir = ROOT / "jobs" / job_id
+    (job_dir / "audit").mkdir(parents=True)
+    (job_dir / "inference").mkdir(parents=True)
+    (job_dir / "audit" / "state.json").write_text(json.dumps({
+        "schema_version": "1.0", "job_id": job_id, "stage": "succeeded",
+        "model_version": "V10", "error_code": None, "warnings": [],
+        "comparison_job_id": None, "reused_from": None, "artifact_refs": [],
+    }, ensure_ascii=False), encoding="utf-8")
+    job = Job.open(Workspace(ROOT), job_id)
+    check("the seeded job opens as succeeded", job is not None and job.stage() == "succeeded",
+          f"job={job}")
+
+    original = session_mod.export_report
+    try:
+        session_mod.export_report = lambda workspace, jid, include_comparison=False: {
+            "schema_version": "1.0", "job_id": jid, "markdown": "", "json_path": "",
+            "markdown_path": "", "status": "failed", "consistency_check": False,
+            "warnings": ["report generation failed: injected"], "error_code": "NUMERICAL_FAILURE"}
+        session = session_mod.Session(
+            ROOT, abs_path("deliverables/智能体功能测试谱集-20261031/01_正常输入/T01.json"),
+            "", host_mode="local_simulation")
+        session.main_job_id = job_id
+        session._session_path = None
+        session._record = None
+        out = session.ask("请导出报告")
+        check("failed export is not called exported",
+              "报告已导出" not in out["answer"] and "报告导出失败" in out["answer"],
+              out["answer"][:120])
+        call = next((c for c in out["tool_calls"] if c.get("name") == "export_report"), {})
+        check("the failure is recorded on the tool call",
+              call.get("failed") is True and call.get("error_code") == "NUMERICAL_FAILURE",
+              json.dumps(call, ensure_ascii=False)[:200])
+
+        def raising(workspace, jid, include_comparison=False):
+            raise ToolError("CONTRACT_VIOLATION", "export_report requires a succeeded job")
+
+        session_mod.export_report = raising
+        out2 = session.ask("请导出报告")
+        check("a ToolError export is not called exported",
+              "报告已导出" not in out2["answer"] and "报告导出失败" in out2["answer"],
+              out2["answer"][:120])
+    finally:
+        session_mod.export_report = original
+    print()
+
+
+def g02_history_replays_answers():
+    print("--- G02 follow-up history replays the answers the user saw")
+    from agent.orchestrator import _history_from
+
+    trajectory = {"turns": [
+        {"turn": 1,
+         "messages": [{"role": "system", "content": "system prompt"},
+                      {"role": "user", "content": "第一次问题"}],
+         "tool_calls_executed": [
+             {"name": "analyze_spectrum", "tool_call_id": "call-1", "arguments": {},
+              "result": {"job_id": "job1"}, "error": None}],
+         "answer": "第一次回答：ppm 等于质量百分含量乘以一万。"},
+        {"turn": 2, "messages": [{"role": "user", "content": "追问"}],
+         "answer": "第二次回答：未报出不等于不存在。"},
+        {"turn": 3, "messages": [{"role": "user", "content": "重复回答"}],
+         "answer": "第二次回答：未报出不等于不存在。"},
+    ]}
+    history = _history_from(trajectory)
+    roles = [m["role"] for m in history]
+    assistant_texts = [m["content"] for m in history
+                       if m["role"] == "assistant" and m.get("content")]
+    check("no system message is replayed mid-history", "system" not in roles, str(roles))
+    check("the answers are replayed as assistant messages",
+          assistant_texts == ["第一次回答：ppm 等于质量百分含量乘以一万。",
+                              "第二次回答：未报出不等于不存在。"],
+          json.dumps(assistant_texts, ensure_ascii=False))
+    check("an answer that repeats the previous one is not duplicated",
+          len(assistant_texts) == 2, json.dumps(assistant_texts, ensure_ascii=False))
+    check("a tool turn keeps assistant, tool, then answer order",
+          roles[:4] == ["user", "assistant", "tool", "assistant"], str(roles[:4]))
+    print()
+
+
 # ------------------------------------------------------------------ thin interface
 
 
@@ -548,6 +635,8 @@ def run_cases():
     f05()
     f06()
     f_extra_param()
+    g01_export_failure()
+    g02_history_replays_answers()
     forwarder_entries()
     if "--no-concurrency" in ARGV:
         print("--- concurrent duplicate run skipped (--no-concurrency)")

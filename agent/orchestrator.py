@@ -438,8 +438,11 @@ def _history_from(trajectory: dict) -> list[dict]:
     followed by the tool's answer as a tool message carrying the same id. Without the
     assistant side the history cannot be sent to a compliant Chat Completions host, and
     without matching tool_call_ids the host cannot bind an answer to the call that made it.
+    The answer the user was actually shown is replayed as the turn's final assistant
+    message, so a later "what did you just say" question can see it.
     """
     messages = []
+    seen_answers = set()
     for turn in trajectory.get("turns", []):
         for message in turn.get("messages", []):
             # the stored turns each begin with the system prompt; replaying it mid-history
@@ -466,6 +469,14 @@ def _history_from(trajectory: dict) -> list[dict]:
                     "error": executed["error"],
                 }, ensure_ascii=False),
             })
+        answer = turn.get("answer")
+        if answer and answer not in seen_answers:
+            seen_answers.add(answer)
+            last = messages[-1] if messages else None
+            already = (last is not None and last.get("role") == "assistant"
+                       and not last.get("tool_calls") and last.get("content") == answer)
+            if not already:
+                messages.append({"role": "assistant", "content": answer})
     return messages
 
 

@@ -167,11 +167,24 @@ class Session:
 
         self.comparison_job_id = comparison.get("v9_job_id")
         job = Job.open(self.workspace, self.main_job_id)
-        exported = export_report(self.workspace, self.main_job_id, include_comparison=True)
+        try:
+            exported = export_report(self.workspace, self.main_job_id, include_comparison=True)
+        except ToolError as exc:
+            exported = {"status": "failed", "error_code": getattr(exc, "code", "NUMERICAL_FAILURE"),
+                        "markdown_path": ""}
+        report_path = exported.get("markdown_path") or None
+        export_failed = exported.get("status") != "exported" or not report_path
         calls.append({"name": "export_report", "origin": "session",
                       "job_id": self.main_job_id,
-                      "markdown_path": exported.get("markdown_path")})
-        answer = self._comparison_text(comparison, exported.get("markdown_path"))
+                      "markdown_path": report_path,
+                      "failed": export_failed,
+                      "status": exported.get("status"),
+                      "error_code": exported.get("error_code")})
+        answer = self._comparison_text(comparison, None if export_failed else report_path)
+        if export_failed:
+            answer += (f"\n报告导出失败：{exported.get('error_code') or exported.get('status')}。"
+                       f"报告未发布，两版数值结果仍分别保留在主任务 "
+                       f"`{self.main_job_id}` 与对照任务 `{self.comparison_job_id}`。")
         return self._answer_deterministic(question, "compare", answer, calls)
 
     def _comparison_text(self, comparison: dict, report_path: str | None = None) -> str:
@@ -249,7 +262,28 @@ class Session:
 
     def _export(self, question: str, job: Job) -> dict:
         include = (job.sub("inference") / "comparison.json").exists()
-        exported = export_report(self.workspace, self.main_job_id, include_comparison=include)
+        try:
+            exported = export_report(self.workspace, self.main_job_id, include_comparison=include)
+        except ToolError as exc:
+            return self._answer_deterministic(
+                question, "export",
+                f"报告导出失败：{getattr(exc, 'code', 'NUMERICAL_FAILURE')}。报告未发布，"
+                f"数值结果仍保留在任务 `{self.main_job_id}` 的 inference/result.json。",
+                [{"name": "export_report", "origin": "session", "job_id": self.main_job_id,
+                  "failed": True, "error_code": getattr(exc, "code", "NUMERICAL_FAILURE")}])
+        failed = (exported.get("status") != "exported"
+                  or not exported.get("markdown_path")
+                  or exported.get("consistency_check") is not True)
+        if failed:
+            reason = exported.get("error_code") or "consistency_check 未通过"
+            warnings = "; ".join(exported.get("warnings") or []) or "无附加说明"
+            return self._answer_deterministic(
+                question, "export",
+                f"报告导出失败：{reason}。报告未发布，数值结果仍保留在任务 "
+                f"`{self.main_job_id}` 的 inference/result.json。失败说明：{warnings}",
+                [{"name": "export_report", "origin": "session", "job_id": self.main_job_id,
+                  "failed": True, "status": exported.get("status"),
+                  "error_code": exported.get("error_code")}])
         answer = f"报告已导出（include_comparison={include}）：{exported.get('markdown_path')}"
         return self._answer_deterministic(question, "export", answer, [{
             "name": "export_report", "origin": "session", "job_id": self.main_job_id,
