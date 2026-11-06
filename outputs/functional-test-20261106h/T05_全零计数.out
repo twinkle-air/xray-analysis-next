@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "job_id": "33309e5e0c43",
+  "status": "failed",
+  "error_code": "INVALID_COUNTS",
+  "warnings": [
+    "counts must sum to a positive value"
+  ],
+  "model_version": "V10",
+  "input_sha256": "8492b9dd3bfc5cda51082478c07577e6120fe04a3fabb216ec62e8d03603c817",
+  "reused_from": null,
+  "comparison_job_id": null,
+  "trajectory_ref": "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261106h/ws/jobs/33309e5e0c43/audit/trajectory.json",
+  "host_config": {
+    "host": "api",
+    "api_base": "https://discovery-api.intern-ai.org.cn",
+    "model": "Sage-A1.5",
+    "max_tokens": 2048,
+    "timeout_s": 180.0,
+    "temperature": null,
+    "simulated": false,
+    "note": "Compliant LLM host in use."
+  },
+  "review_decision": {
+    "action": "stop",
+    "reason": "主分析失败，无对照与报告",
+    "triggered_rules": []
+  }
+}

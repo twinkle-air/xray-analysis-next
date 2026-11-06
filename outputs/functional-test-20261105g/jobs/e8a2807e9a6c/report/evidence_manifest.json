@@ -1,0 +1,32 @@
+[
+  {
+    "artifact": "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105g/ws/jobs/e8a2807e9a6c/input/T01.json",
+    "sha256": "2949603511bf8e09332f8a55fa733b94214c251eee81e2b7da53117c367c1c70",
+    "note": "不可变原始输入"
+  },
+  {
+    "artifact": "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105g/ws/jobs/e8a2807e9a6c/parsed/validated.json",
+    "sha256": "cde0e23f5a792ae0df90b82f3d7e53d31a0b310fea10694f40ce380944041181",
+    "note": "校验与解析结果"
+  },
+  {
+    "artifact": "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105g/ws/jobs/e8a2807e9a6c/inference/result.json",
+    "sha256": "43383972bfcf264480c30efbcce502fc156ffe959f92a193c16d086f940ede5b",
+    "note": "数值输出"
+  },
+  {
+    "artifact": "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105g/ws/jobs/e8a2807e9a6c/inference/comparison.json",
+    "sha256": "6830cee00a27ada3f3dce8645508eab2207ccafb78ef114a6be9567bf6415630",
+    "note": "V9 对照输出"
+  },
+  {
+    "artifact": "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105g/ws/jobs/e8a2807e9a6c/report/results.json",
+    "sha256": "593970b869c0f4f84af02eb3deceb661f983e48fd5a343c363c10ae5e14aa0f1",
+    "note": "结构化结果"
+  },
+  {
+    "artifact": "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261105g/ws/jobs/e8a2807e9a6c/report/report.md",
+    "sha256": "55569c53892e339e8c926f3de75e7c47b73ae3fd382325e91b4acd50d34f6014",
+    "note": "Markdown 报告"
+  }
+]

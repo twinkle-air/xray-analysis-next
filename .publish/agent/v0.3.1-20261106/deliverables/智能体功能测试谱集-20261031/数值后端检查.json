@@ -1,0 +1,58 @@
+{
+  "status": "pass",
+  "input_files": 6,
+  "independent_valid_spectra": 3,
+  "duplicate_files": 1,
+  "invalid_files": 2,
+  "numeric_checks": [
+    {
+      "case": "T01",
+      "version": "V10",
+      "status": "numeric_reference_generated",
+      "elapsed_seconds": null,
+      "existing_reference_reused": true,
+      "nonzero_elements": 10
+    },
+    {
+      "case": "T02",
+      "version": "V10",
+      "status": "numeric_reference_generated",
+      "elapsed_seconds": null,
+      "existing_reference_reused": true,
+      "nonzero_elements": 14
+    },
+    {
+      "case": "T03",
+      "version": "V10",
+      "status": "numeric_reference_generated",
+      "elapsed_seconds": null,
+      "existing_reference_reused": true,
+      "nonzero_elements": 12
+    },
+    {
+      "case": "T01",
+      "version": "V9",
+      "status": "numeric_reference_generated",
+      "elapsed_seconds": null,
+      "existing_reference_reused": true,
+      "nonzero_elements": 10
+    },
+    {
+      "case": "T05",
+      "version": "V10",
+      "status": "rejected_by_frozen_wrapper",
+      "elapsed_seconds": 1.75
+    },
+    {
+      "case": "T06",
+      "version": "V10",
+      "status": "rejected_by_frozen_wrapper",
+      "elapsed_seconds": 1.641
+    }
+  ],
+  "V10_reference_created_for": 3,
+  "V9_reference_created_for": 1,
+  "actual_finished_agent_tested": false,
+  "scientific_accuracy_proven": false,
+  "selection_locked_before_inference": true
+}

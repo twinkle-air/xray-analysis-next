@@ -1,18 +1,26 @@
-# Local environments and caches
+# Python / tooling
 .venv/
-venv/
 __pycache__/
-*.py[cod]
-.pytest_cache/
-node_modules/
+*.pyc
 .mpl-cache/
-# Secrets and local configuration
+.pytest_cache/
 .env
 .env.*
-!.env.example
-# Local analysis results and build outputs
-outputs/
+
+# build & generated outputs
+outputs/*
+!outputs/functional-test-20261105c
+!outputs/functional-test-20261105g
+!outputs/functional-test-20261106h
 dist/
-*.log
-.DS_Store
-Thumbs.db
+_publish_*.py
+
+# large / packaging copies kept out of the repo
+datasets/
+deliverables/
+.publish/*
+!.publish/agent/v0.3.1-20261106
+.staging-agent/
+.staging-xrf-agent/
+.model-release-upload/
+.collaboration-upload/

@@ -1,0 +1,365 @@
+{
+  "schema_version": "1.0",
+  "status": "已完成",
+  "report_state": "草稿",
+  "job_id": "c10730138aa6",
+  "created_at": "2026-11-06T03:53:44Z",
+  "input_sha256": "5a10c23eab04d1e375ba8a797c0654c089e1579ae81479c79922527254951a6c",
+  "input_ref": "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261106h/ws/jobs/c10730138aa6/input/T03.json",
+  "model_version": "V10",
+  "model_revision": "full-classification-and-quantification-incremental",
+  "model_package_sha256": "b5428ee3ee53afea8989877493a83d9e2f5c02d388a218c93da51d463c5bd93a",
+  "adapter_name": "synthetic_2048_channel_counts",
+  "adapter_version": "1.0",
+  "interpreter": "C:/Users/Twinkle/Desktop/通用X射线谱分析/.venv/Scripts/python.exe",
+  "scope": "synthetic_numerical_research",
+  "formal_report_eligible": false,
+  "hardware_validated": false,
+  "sample_description": "无",
+  "elapsed_s": 35.26970380000057,
+  "error_code": null,
+  "reused_from": null,
+  "reuse_source": null,
+  "comparison_job_id": null,
+  "warnings": [],
+  "artifact_refs": [
+    "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261106h/ws/jobs/c10730138aa6/input/T03.json",
+    "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261106h/ws/jobs/c10730138aa6/parsed/validated.json",
+    "C:/Users/Twinkle/AppData/Local/Temp/xrf-func-test-20261106h/ws/jobs/c10730138aa6/inference/result.json"
+  ],
+  "elements": [
+    {
+      "element": "Na",
+      "reported": true,
+      "mass_percent": 1.9305530681665142,
+      "mass_percent_ppm": 19305.530681665143,
+      "classification_probability": 0.9999713132168707,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Mg",
+      "reported": true,
+      "mass_percent": 0.8398994687816933,
+      "mass_percent_ppm": 8398.994687816932,
+      "classification_probability": 0.9999830117994855,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Al",
+      "reported": true,
+      "mass_percent": 0.6212324842961741,
+      "mass_percent_ppm": 6212.324842961741,
+      "classification_probability": 0.9998589201828175,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Si",
+      "reported": true,
+      "mass_percent": 2.8397735187383564,
+      "mass_percent_ppm": 28397.735187383565,
+      "classification_probability": 0.9999991423054788,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "P",
+      "reported": true,
+      "mass_percent": 1.515187808669589,
+      "mass_percent_ppm": 15151.87808669589,
+      "classification_probability": 0.9996919909501204,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "S",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.7439710707049179,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Cl",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.2790932625153433,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "K",
+      "reported": true,
+      "mass_percent": 2.268101107317318,
+      "mass_percent_ppm": 22681.01107317318,
+      "classification_probability": 0.9999285771475175,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Ca",
+      "reported": true,
+      "mass_percent": 3.311424111208228,
+      "mass_percent_ppm": 33114.24111208228,
+      "classification_probability": 0.999884361558609,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Ti",
+      "reported": true,
+      "mass_percent": 1.956302894869321,
+      "mass_percent_ppm": 19563.028948693212,
+      "classification_probability": 0.9999348517390108,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "V",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.4060709320710814,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Cr",
+      "reported": true,
+      "mass_percent": 1.0738955173181226,
+      "mass_percent_ppm": 10738.955173181226,
+      "classification_probability": 0.9987420870350099,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Mn",
+      "reported": true,
+      "mass_percent": 1.5447047519772874,
+      "mass_percent_ppm": 15447.047519772874,
+      "classification_probability": 0.9998946238418014,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Fe",
+      "reported": true,
+      "mass_percent": 44.64589752886046,
+      "mass_percent_ppm": 446458.9752886046,
+      "classification_probability": 0.9999987961617846,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Co",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.21959028917217363,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Ni",
+      "reported": true,
+      "mass_percent": 3.5047840888832025,
+      "mass_percent_ppm": 35047.84088883203,
+      "classification_probability": 0.998590281928494,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Cu",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.5246072411894285,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Zn",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.13110481679286196,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "As",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.06019187927827416,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Se",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.05564727991687849,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Rb",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.07745822802546733,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Sr",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.18221487289624835,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Y",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.28126210631374343,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Zr",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.17780963062696054,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Nb",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.13031201517453025,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Mo",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.1746414086063285,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Cd",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.4167218007500883,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Sn",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.4704414816357623,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Sb",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.48381712440055286,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Ba",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.8089459456528737,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "W",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.40267054347266135,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    },
+    {
+      "element": "Pb",
+      "reported": false,
+      "mass_percent": 0.0,
+      "mass_percent_ppm": 0.0,
+      "classification_probability": 0.3878357905492839,
+      "threshold": 0.9,
+      "v9_mass_percent": null,
+      "abs_diff_ppm": null
+    }
+  ],
+  "axis_diagnostics": {
+    "gain": 0.007999597567366108,
+    "zero": 0.3003494734974708,
+    "old_gain": 0.007999597567366108,
+    "old_zero": 0.3003494734974708,
+    "chosen": 0,
+    "candidate_count": 3,
+    "old_deviance": 1305.1453721052665,
+    "deviance": 1305.1453721052665,
+    "cost_gap_per_count": 0.0017462734982095114
+  },
+  "comparison": null,
+  "consistency_check": true
+}
