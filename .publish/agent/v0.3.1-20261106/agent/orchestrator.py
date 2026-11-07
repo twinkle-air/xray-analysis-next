@@ -573,6 +573,13 @@ def _envelope(job_id, analyze_result, comparison_result, export_result, trajecto
     }
 
 
+# error codes that mean the numerical backend started and failed, as opposed to a
+# pre-run rejection (bad input, unverified runtime, broken package) where the model
+# never ran. The user-facing answer must not claim "未运行数值模型" for a run that did
+# start and die: the two situations need different instructions.
+POST_RUN_ERROR_CODES = ("TIMEOUT", "NUMERICAL_FAILURE")
+
+
 def _failure_answer(analyze_result: Optional[dict]) -> dict:
     """F03: a failed first turn still answers the user in Chinese. The answer is always
     program-generated, so it is labelled as such instead of looking like a host reply."""
@@ -584,7 +591,11 @@ def _failure_answer(analyze_result: Optional[dict]) -> dict:
         return {"answer": rejection["user_message"], "answer_source": "program"}
     warnings = analyze_result.get("warnings") or []
     reason = warnings[0] if warnings else analyze_result.get("error_code") or "未知原因"
-    return {"answer": f"无法完成分析：{reason}。本次未运行数值模型，也未生成分析报告。",
+    if (analyze_result.get("error_code") or "") in POST_RUN_ERROR_CODES:
+        outcome = "本次数值模型已运行但失败，未产生可用结果，也未生成分析报告。"
+    else:
+        outcome = "本次未运行数值模型，也未生成分析报告。"
+    return {"answer": f"无法完成分析：{reason}。{outcome}",
             "answer_source": "program"}
 
 

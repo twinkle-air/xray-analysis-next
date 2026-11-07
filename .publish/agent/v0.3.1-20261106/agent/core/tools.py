@@ -308,10 +308,41 @@ def get_job_status(workspace: Workspace, job_id: str) -> dict:
     }
 
 
+def _cached_comparison(job: Job, comp: dict, v10_model: dict, v9_model: dict) -> dict:
+    """Serve a cached comparison whose runtime identity matches the current one.
+
+    The identity fields come from the artifact and are never reinvented; the derived view
+    (differing elements, summary, note) is rebuilt from the stored predictions instead of
+    copied, so the repeated call returns exactly the same structure as the first call, and
+    an artifact from before the summary existed still yields one.
+    """
+    v10_result = _read_inference(job)
+    v9_result = {"predicted_element_percent": comp.get("v9_predicted_element_percent", {})}
+    differing, summary, note = _diff(v10_model, v9_model, v10_result, v9_result)
+    return {
+        "job_id": job.job_id,
+        "parent_job_id": job.job_id,
+        "v9_job_id": comp.get("v9_job_id"),
+        "v9_status": comp.get("v9_status"),
+        "n_reported_v10": _n_reported(v10_result),
+        "n_reported_v9": _n_reported(v9_result),
+        "differing_elements": differing,
+        "comparison_summary": summary,
+        "error_code": comp.get("error_code"),
+        "note": note,
+    }
+
+
 def compare_models(
     workspace: Workspace, job_id: str, allow_unverified_runtime: bool = False
 ) -> dict:
-    """Run V9 once on the same input as a completed V10 job. Does not replace V10."""
+    """Run V9 once on the same input as a completed V10 job. Does not replace V10.
+
+    A stored comparison artifact is a cache, not a bypass: the runtime is checked first,
+    and the artifact is served only when it was produced by this same runtime identity.
+    Anything else (another environment, or a file from before runtime ids existed) is
+    recomputed under the current environment instead of silently passing as fresh.
+    """
     registry = ModelRegistry(workspace)
     v10 = registry.model("V10")
     v9 = registry.model("V9")
@@ -330,15 +361,34 @@ def compare_models(
             "CONTRACT_VIOLATION",
             f"compare_models requires a V10 job, model={job.get('model_version')!r}")
 
+    # the runtime is verified before V9 runs *and* before a cached comparison is served:
+    # the artifact is a result some environment produced, so F01 applies to it too. A
+    # refused comparison never touches the succeeded V10 result; the attempt is recorded
+    # on the job it belongs to.
+    try:
+        fingerprint = runtime.verify(workspace)
+    except runtime.RuntimeCheckError as exc:
+        job.add_warning(f"V9对照无法运行: {exc}")
+        return _compare_result(job.job_id, None, None, None, None, [],
+                               f"V9对照无法运行: {exc}", exc.code)
+    if not fingerprint.get("verified"):
+        if not allow_unverified_runtime:
+            job.add_warning(fingerprint.get("reason"))
+            return _compare_result(job.job_id, None, None, None, None, [],
+                                   f"V9对照无法运行: {fingerprint.get('reason')}",
+                                   fingerprint.get("error_code", "RUNTIME_MISMATCH"))
+        job.add_warning(f"运行环境未验证（--allow-unverified-runtime）: {fingerprint.get('reason')}")
+
     existing_comparison = job.sub("inference") / COMPARISON_NAME
     if existing_comparison.exists():
         try:
             comp = read_json(existing_comparison)
-            return {k: comp[k] for k in (
-                "job_id", "v9_job_id", "v9_status", "n_reported_v10", "n_reported_v9",
-                "differing_elements", "error_code", "note")}
-        except (OSError, json.JSONDecodeError, KeyError) as exc:
+        except (OSError, json.JSONDecodeError) as exc:
             raise ToolError("NUMERICAL_FAILURE", f"comparison artifact unreadable: {exc}")
+        if comp.get("runtime_id") == fingerprint.get("id") and fingerprint.get("id"):
+            return _cached_comparison(job, comp, v10, v9)
+        # the artifact came from another runtime, or predates runtime ids: recompute it
+        job.add_warning("已有对照来自其他运行环境或缺少运行环境标识，重新运行 V9")
 
     # V9 runs on the same five-field counts; write a minimal file so validation passes.
     counts = read_json(job.sub("parsed") / "validated.json")
@@ -353,25 +403,9 @@ def compare_models(
         sample_description=f"V9对照 for job {job_id}")
     v9_job.set("parent_job_id", job_id)
     v9_job.set("relation", "v9_comparison")
-    # V9 runs under the same interpreter as V10; check it the same way before the run.
-    try:
-        fingerprint = runtime.verify(workspace)
-    except runtime.RuntimeCheckError as exc:
-        v9_job.fail(exc.code)
-        v9_job.add_warning(str(exc))
-        v9_job.save()
-        return _compare_result(job.job_id, None, None, None, None, [],
-                               f"V9对照无法运行: {exc}", exc.code)
+    # the runtime is already verified above; the V9 job binds the measured fingerprint so
+    # the artifact records which environment produced it.
     v9_job.bind_runtime(fingerprint)
-    if not fingerprint.get("verified"):
-        if not allow_unverified_runtime:
-            v9_job.add_warning(fingerprint.get("reason"))
-            v9_job.fail(fingerprint.get("error_code", "RUNTIME_MISMATCH"))
-            v9_job.save()
-            return _compare_result(job.job_id, None, None, None, None, [],
-                                   f"V9对照无法运行: {fingerprint.get('reason')}",
-                                   fingerprint.get("error_code", "RUNTIME_MISMATCH"))
-        v9_job.add_warning(f"运行环境未验证（--allow-unverified-runtime）: {fingerprint.get('reason')}")
     v9_job.save()
     try:
         v9_job.parse_input(f"V9对照 for job {job_id}")
@@ -406,6 +440,10 @@ def compare_models(
         "n_reported_v9": _n_reported(v9_result),
         "differing_elements": differing,
         "comparison_summary": summary,
+        # the runtime identity that produced this comparison: the cache-reuse check above
+        # reads it, so a change of environment cannot serve this artifact as its own.
+        "runtime_id": v9_job.get("runtime_id"),
+        "runtime_verified": v9_job.get("runtime_verified"),
         "error_code": None,
         "note": note,
         # the full V9 result, so the report can show "V9 agrees" instead of "V9 did not report"
