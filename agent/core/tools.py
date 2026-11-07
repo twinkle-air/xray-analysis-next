@@ -19,18 +19,45 @@ from .job import (
 )
 from .paths import Workspace, read_json, write_json, sha256_hex
 from .registry import ModelRegistry, RegistryError
+from . import runtime
 from .runner import RunResult, run_model
 
 SCHEMA_VERSION = "1.0"
 THRESHOLD_DEFAULT = 0.9
+# the comparison threshold is part of the published wording, so it lives here as a named
+# constant instead of an inline 1e-6: the note must never claim "> 0 ppm" while the code
+# compares against something else.
+DIFF_THRESHOLD_PPM = 1e-6
+TOP_N_DEFAULT = 3
 
 
 class ToolError(Exception):
     """A documented tool contract was broken. Carries the error_code surface to the caller."""
 
-    def __init__(self, code: str, message: str):
+    def __init__(self, code: str, message: str, user_message: str | None = None):
         super().__init__(message)
         self.code = code
+        self.user_message = user_message
+
+
+def _rejection_payload(code: str, reason_code: str, user_message: str, debug: str,
+                       expected=None, actual=None) -> dict:
+    """F03: one rejection shape for every refusal that reaches a user. The English debug
+    text stays for support; the Chinese message is what a user reads."""
+    return {
+        "reason_code": reason_code or code,
+        "user_message": f"{user_message} 本次未运行数值模型，也未生成分析报告。",
+        "expected": expected,
+        "actual": actual,
+        "debug": debug,
+    }
+
+
+def _contract_rejection(exc: ContractError) -> dict:
+    return _rejection_payload(
+        exc.code, exc.reason_code,
+        exc.user_message or "无法分析：输入不符合本程序的数据契约。", str(exc),
+        expected=exc.expected, actual=exc.actual)
 
 
 # ------------------------------------------------------------------ validation
@@ -42,9 +69,13 @@ def _constrain(workspace: Workspace, task_file: pathlib.Path) -> pathlib.Path:
     resolved = raw.resolve() if raw.is_absolute() else (workspace.root / raw).resolve()
     root = workspace.root.resolve()
     if resolved != root and root not in resolved.parents:
-        raise ToolError("PATH_TRAVERSAL", f"task file escapes the workspace: {task_file}")
+        raise ToolError(
+            "PATH_TRAVERSAL", f"task file escapes the workspace: {task_file}",
+            "无法分析：任务文件位于工作区之外。为保证产物可追溯，只允许读取工作区内的文件。")
     if not resolved.is_file():
-        raise ToolError("NOT_FOUND", f"task file does not exist: {task_file}")
+        raise ToolError(
+            "NOT_FOUND", f"task file does not exist: {task_file}",
+            "无法分析：任务文件不存在。请确认文件路径指向一个已存在的谱文件。")
     return resolved
 
 
@@ -84,9 +115,10 @@ def _read_inference(job: Job) -> dict:
 # ------------------------------------------------------------------ envelopes
 
 
-def _envelope(job: _Job, elapsed_s: Optional[float] = None) -> dict:
+def _envelope(job: _Job, elapsed_s: Optional[float] = None,
+              rejection: Optional[dict] = None) -> dict:
     state = job.as_dict()
-    return {
+    envelope = {
         "schema_version": SCHEMA_VERSION,
         "status": state["stage"],
         "job_id": state["job_id"],
@@ -99,7 +131,12 @@ def _envelope(job: _Job, elapsed_s: Optional[float] = None) -> dict:
         "warnings": list(state["warnings"]),
         "error_code": state["error_code"],
         "elapsed_s": round(elapsed_s, 3) if elapsed_s is not None else state.get("stage_elapsed_s"),
+        "runtime_verified": state.get("runtime_verified"),
+        "runtime_fingerprint": state.get("runtime_fingerprint"),
     }
+    if rejection is not None:
+        envelope["rejection"] = rejection
+    return envelope
 
 
 # ------------------------------------------------------------------ dedup
@@ -120,6 +157,8 @@ def _reuse_if_valid(workspace: Workspace, entry: dict, job: Job, model_version: 
     if existing.get("model_package_sha256") != job.get("model_package_sha256"):
         return None
     if existing.get("input_sha256") != job.get("input_sha256"):
+        return None
+    if existing.get("runtime_id") != job.get("runtime_id"):
         return None
 
     cached = existing.sub("inference") / INFERENCE_NAME
@@ -151,7 +190,8 @@ def _reuse_if_valid(workspace: Workspace, entry: dict, job: Job, model_version: 
 
 
 def analyze_spectrum(
-    workspace: Workspace, task_file: pathlib.Path, sample_description: str = ""
+    workspace: Workspace, task_file: pathlib.Path, sample_description: str = "",
+    allow_unverified_runtime: bool = False,
 ) -> dict:
     """Ingest a spectrum, validate it, lock the version and run V10. Never overwrites."""
     task_file = _constrain(workspace, task_file)
@@ -184,7 +224,25 @@ def analyze_spectrum(
     except ContractError as exc:
         job.fail(exc.code)
         job.add_warning(str(exc))
+        return _envelope(job, rejection=_contract_rejection(exc))
+
+    # the numerical runtime is checked after the input contract and before any inference or
+    # cache use: a wrong interpreter must fail loudly instead of silently producing a
+    # different result. A refused job still records what was measured, so the audit trail
+    # shows the actual versions; an explicit opt-in proceeds and records why.
+    try:
+        fingerprint = runtime.verify(workspace)
+    except runtime.RuntimeCheckError as exc:
+        job.fail(exc.code)
+        job.add_warning(str(exc))
         return _envelope(job)
+    job.bind_runtime(fingerprint)
+    if not fingerprint.get("verified"):
+        if not allow_unverified_runtime:
+            job.add_warning(fingerprint.get("reason"))
+            job.fail(fingerprint.get("error_code", "RUNTIME_MISMATCH"))
+            return _envelope(job)
+        job.add_warning(f"运行环境未验证（--allow-unverified-runtime）: {fingerprint.get('reason')}")
 
     entry = lookup_dedup(workspace, job.get("dedup_key"))
     if entry is not None:
@@ -250,8 +308,44 @@ def get_job_status(workspace: Workspace, job_id: str) -> dict:
     }
 
 
-def compare_models(workspace: Workspace, job_id: str) -> dict:
-    """Run V9 once on the same input as a completed V10 job. Does not replace V10."""
+def _cached_comparison(job: Job, comp: dict, v10_model: dict, v9_model: dict,
+                       fingerprint: dict) -> dict:
+    """Serve a cached comparison whose runtime identity matches the current one.
+
+    The identity fields come from the artifact and are never reinvented; the derived view
+    (differing elements, summary, note) is rebuilt from the stored predictions instead of
+    copied, so the repeated call returns exactly the same structure as the first call, and
+    an artifact from before the summary existed still yields one.
+    """
+    v10_result = _read_inference(job)
+    v9_result = {"predicted_element_percent": comp.get("v9_predicted_element_percent", {})}
+    differing, summary, note = _diff(v10_model, v9_model, v10_result, v9_result)
+    return {
+        "job_id": job.job_id,
+        "parent_job_id": job.job_id,
+        "v9_job_id": comp.get("v9_job_id"),
+        "v9_status": comp.get("v9_status"),
+        "n_reported_v10": _n_reported(v10_result),
+        "n_reported_v9": _n_reported(v9_result),
+        "differing_elements": differing,
+        "comparison_summary": summary,
+        "runtime_verified": fingerprint.get("verified"),
+        "runtime_id": fingerprint.get("id"),
+        "error_code": comp.get("error_code"),
+        "note": note,
+    }
+
+
+def compare_models(
+    workspace: Workspace, job_id: str, allow_unverified_runtime: bool = False
+) -> dict:
+    """Run V9 once on the same input as a completed V10 job. Does not replace V10.
+
+    A stored comparison artifact is a cache, not a bypass: the runtime is checked first,
+    and the artifact is served only when it was produced by this same runtime identity.
+    Anything else (another environment, or a file from before runtime ids existed) is
+    recomputed under the current environment instead of silently passing as fresh.
+    """
     registry = ModelRegistry(workspace)
     v10 = registry.model("V10")
     v9 = registry.model("V9")
@@ -270,15 +364,36 @@ def compare_models(workspace: Workspace, job_id: str) -> dict:
             "CONTRACT_VIOLATION",
             f"compare_models requires a V10 job, model={job.get('model_version')!r}")
 
+    # the runtime is verified before V9 runs *and* before a cached comparison is served:
+    # the artifact is a result some environment produced, so F01 applies to it too. A
+    # refused comparison never touches the succeeded V10 result; the attempt is recorded
+    # on the job it belongs to.
+    try:
+        fingerprint = runtime.verify(workspace)
+    except runtime.RuntimeCheckError as exc:
+        job.add_warning(f"V9对照无法运行: {exc}")
+        # no fingerprint exists to report: the probe itself could not run
+        return _compare_result(job.job_id, None, None, None, None, [],
+                               f"V9对照无法运行: {exc}", exc.code)
+    if not fingerprint.get("verified"):
+        if not allow_unverified_runtime:
+            job.add_warning(fingerprint.get("reason"))
+            return _compare_result(job.job_id, None, None, None, None, [],
+                                   f"V9对照无法运行: {fingerprint.get('reason')}",
+                                   fingerprint.get("error_code", "RUNTIME_MISMATCH"),
+                                   fingerprint=fingerprint)
+        job.add_warning(f"运行环境未验证（--allow-unverified-runtime）: {fingerprint.get('reason')}")
+
     existing_comparison = job.sub("inference") / COMPARISON_NAME
     if existing_comparison.exists():
         try:
             comp = read_json(existing_comparison)
-            return {k: comp[k] for k in (
-                "job_id", "v9_job_id", "v9_status", "n_reported_v10", "n_reported_v9",
-                "differing_elements", "error_code", "note")}
-        except (OSError, json.JSONDecodeError, KeyError) as exc:
+        except (OSError, json.JSONDecodeError) as exc:
             raise ToolError("NUMERICAL_FAILURE", f"comparison artifact unreadable: {exc}")
+        if comp.get("runtime_id") == fingerprint.get("id") and fingerprint.get("id"):
+            return _cached_comparison(job, comp, v10, v9, fingerprint)
+        # the artifact came from another runtime, or predates runtime ids: recompute it
+        job.add_warning("已有对照来自其他运行环境或缺少运行环境标识，重新运行 V9")
 
     # V9 runs on the same five-field counts; write a minimal file so validation passes.
     counts = read_json(job.sub("parsed") / "validated.json")
@@ -293,6 +408,9 @@ def compare_models(workspace: Workspace, job_id: str) -> dict:
         sample_description=f"V9对照 for job {job_id}")
     v9_job.set("parent_job_id", job_id)
     v9_job.set("relation", "v9_comparison")
+    # the runtime is already verified above; the V9 job binds the measured fingerprint so
+    # the artifact records which environment produced it.
+    v9_job.bind_runtime(fingerprint)
     v9_job.save()
     try:
         v9_job.parse_input(f"V9对照 for job {job_id}")
@@ -306,7 +424,7 @@ def compare_models(workspace: Workspace, job_id: str) -> dict:
             v9_job.add_warning(v9_run["stderr"][-600:])
             v9_job.save()
             return _compare_result(job.job_id, None, None, None, None, [], "V9对照失败",
-                                   v9_run["error_code"])
+                                   v9_run["error_code"], fingerprint=fingerprint)
         v9_result = _read_inference(v9_job)
         _check_inference(v9_result, v9, "V9")
         v9_job.set("elapsed_s", v9_run["wall_s"])
@@ -316,9 +434,10 @@ def compare_models(workspace: Workspace, job_id: str) -> dict:
         v9_job.fail(getattr(exc, "code", "NUMERICAL_FAILURE"))
         v9_job.add_warning(str(exc))
         return _compare_result(job.job_id, None, None, None, None, [],
-                               f"V9对照准备失败: {exc}", getattr(exc, "code", "NUMERICAL_FAILURE"))
+                               f"V9对照准备失败: {exc}", getattr(exc, "code", "NUMERICAL_FAILURE"),
+                               fingerprint=fingerprint)
 
-    differing, note = _diff(v10, v9, _read_inference(job), v9_result)
+    differing, summary, note = _diff(v10, v9, _read_inference(job), v9_result)
     comparison = {
         "job_id": job_id,
         "v9_job_id": v9_job.job_id,
@@ -326,6 +445,11 @@ def compare_models(workspace: Workspace, job_id: str) -> dict:
         "n_reported_v10": _n_reported(_read_inference(job)),
         "n_reported_v9": _n_reported(v9_result),
         "differing_elements": differing,
+        "comparison_summary": summary,
+        # the runtime identity that produced this comparison: the cache-reuse check above
+        # reads it, so a change of environment cannot serve this artifact as its own.
+        "runtime_id": v9_job.get("runtime_id"),
+        "runtime_verified": v9_job.get("runtime_verified"),
         "error_code": None,
         "note": note,
         # the full V9 result, so the report can show "V9 agrees" instead of "V9 did not report"
@@ -339,7 +463,7 @@ def compare_models(workspace: Workspace, job_id: str) -> dict:
     job.save()
     return _compare_result(job.job_id, v9_job.job_id, v9_job.stage(),
                            comparison["n_reported_v10"], comparison["n_reported_v9"],
-                           differing, note, None)
+                           differing, note, None, summary=summary, fingerprint=fingerprint)
 
 
 def export_report(
@@ -434,35 +558,76 @@ def _n_reported(result: dict) -> int:
 
 
 def _diff(v10_model: dict, v9_model: dict, v10_result: dict, v9_result: dict):
+    """Compare the two predictions and build the human-readable summary from real values.
+
+    `differing` keeps every element above the threshold (the full machine truth).
+    `summary` is the derived Top-N view plus the one-sided reporting groups; it never
+    changes a value, it only sorts and groups what the two models actually produced.
+    """
     elements = v10_model.get("elements", [])
     v10 = v10_result.get("predicted_element_percent", {})
     v9 = v9_result.get("predicted_element_percent", {})
+    order = {element: index for index, element in enumerate(elements)}
     differing = []
-    n = 0
     for element in elements:
         a = v10.get(element, 0.0)
         b = v9.get(element, 0.0)
         diff_pp = abs(a - b) * 10000.0
-        if diff_pp > 1e-6:
+        if diff_pp > DIFF_THRESHOLD_PPM:
             differing.append({
                 "element": element,
                 "v10_mass_percent": a,
                 "v9_mass_percent": b,
+                # signed and named: delta_ppm is always V10 - V9, never the absolute value
+                "delta_ppm": round((a - b) * 10000.0, 6),
                 "abs_diff_ppm": round(diff_pp, 6),
             })
-            n += 1
+    n = len(differing)
+    top = sorted(differing, key=lambda e: (-e["abs_diff_ppm"], order[e["element"]]))[:TOP_N_DEFAULT]
+    top_n = [
+        {"element": e["element"],
+         "v10_mass_percent": e["v10_mass_percent"],
+         "v9_mass_percent": e["v9_mass_percent"],
+         "delta_ppm": e["delta_ppm"],
+         "abs_diff_ppm": e["abs_diff_ppm"]}
+        for e in top
+    ]
+    groups = {
+        "only_v10_reported": [e for e in elements if v10.get(e, 0.0) > 0 and v9.get(e, 0.0) <= 0],
+        "only_v9_reported": [e for e in elements if v9.get(e, 0.0) > 0 and v10.get(e, 0.0) <= 0],
+        "both_reported": [e for e in elements if v10.get(e, 0.0) > 0 and v9.get(e, 0.0) > 0],
+    }
+    summary = {
+        "top_n": top_n,
+        "n_top_n": len(top_n),
+        "top_n_limit": TOP_N_DEFAULT,
+        "groups": groups,
+        "n_differing": n,
+        "threshold_ppm": DIFF_THRESHOLD_PPM,
+        "delta_definition": "delta_ppm = V10 − V9，单位 ppm；abs_diff_ppm 为其绝对值",
+    }
     reported_v10 = _n_reported(v10_result)
     reported_v9 = _n_reported(v9_result)
-    note = (
-        f"V9对照已完成：V10 报出 {reported_v10} 个元素，V9 报出 {reported_v9} 个元素。"
-        f"{n} 个元素两版含量差 > 0 ppm。"
-        + (" 两版均报出的元素差异最大者见 differing_elements。" if n else " 两版逐元素一致。")
-        + " V9 不是真值，一致不代表结果正确。")
-    return differing, note
+    threshold_text = f"{DIFF_THRESHOLD_PPM:g}"
+    if n:
+        ranking = "、".join(
+            f"{e['element']}（{e['abs_diff_ppm']:.4f} ppm）" for e in top_n) or "无"
+        note = (
+            f"V9对照已完成：V10 报出 {reported_v10} 个元素，V9 报出 {reported_v9} 个元素。"
+            f"{n} 个元素两版含量差超过比较阈值 {threshold_text} ppm。"
+            f"差异最大的前 {len(top_n)} 个元素：{ranking}。"
+            " V9 不是真值，一致不代表结果正确。")
+    else:
+        note = (
+            f"V9对照已完成：V10 报出 {reported_v10} 个元素，V9 报出 {reported_v9} 个元素。"
+            f"没有元素两版含量差超过比较阈值 {threshold_text} ppm，两版逐元素一致。"
+            " V9 不是真值，一致不代表结果正确。")
+    return differing, summary, note
 
 
-def _compare_result(job_id, v9_job_id, v9_status, n10, n9, differing, note, error_code):
-    return {
+def _compare_result(job_id, v9_job_id, v9_status, n10, n9, differing, note, error_code,
+                    summary=None, fingerprint=None):
+    result = {
         "job_id": job_id,
         "parent_job_id": job_id,
         "v9_job_id": v9_job_id,
@@ -470,6 +635,13 @@ def _compare_result(job_id, v9_job_id, v9_status, n10, n9, differing, note, erro
         "n_reported_v10": n10,
         "n_reported_v9": n9,
         "differing_elements": differing,
+        "comparison_summary": summary,
         "error_code": error_code,
         "note": note,
     }
+    if fingerprint is not None:
+        # every comparison answer carries the environment state it ran under, so callers
+        # (CLI, session, report) never have to guess whether it was verified.
+        result["runtime_verified"] = fingerprint.get("verified")
+        result["runtime_id"] = fingerprint.get("id")
+    return result

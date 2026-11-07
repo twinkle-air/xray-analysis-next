@@ -38,10 +38,13 @@ def _posix(path) -> str:
     return str(path).replace("\\", "/")
 
 
-def _dedup_key(input_sha256: str, adapter: str, package_sha256: str, model_version: str) -> str:
+def _dedup_key(input_sha256: str, adapter: str, package_sha256: str, model_version: str,
+               runtime_id: Optional[str] = None) -> str:
     import hashlib
 
     payload = f"{input_sha256}|{adapter}|{package_sha256}|{model_version}"
+    if runtime_id:
+        payload += f"|runtime={runtime_id}"
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
@@ -263,6 +266,24 @@ class Job:
         if self._state is None:
             raise RuntimeError("job state not loaded")
         self._state[key] = value
+
+    def bind_runtime(self, fingerprint: dict) -> None:
+        """Bind the numerical runtime fingerprint and include it in the dedup key.
+
+        A result produced under one version set is never silently reused for an analysis run
+        under another: the fingerprint makes different environments land on different dedup
+        keys, and a job without a runtime id (created before the check existed) is never
+        reused either.
+        """
+        if self._state is None:
+            raise RuntimeError("job state not loaded")
+        self._state["runtime_fingerprint"] = fingerprint
+        self._state["runtime_id"] = fingerprint.get("id")
+        self._state["runtime_verified"] = bool(fingerprint.get("verified"))
+        self._state["dedup_key"] = _dedup_key(
+            self._state["input_sha256"], self._state["adapter"],
+            self._state["model_package_sha256"], self._state["model_version"],
+            runtime_id=fingerprint.get("id"))
 
     def get(self, key, default=None):
         if self._state is None:

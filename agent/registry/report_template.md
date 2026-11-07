@@ -11,6 +11,7 @@
 | 输入 SHA-256 | {input_sha256} |
 | 数值模型 | {model_version}（{model_revision}） |
 | 模型包 SHA-256 | {model_package_sha256} |
+| 运行环境 | {runtime_summary} |
 | 复用来源 | {reuse_note} |
 | 输入适配器 | {adapter_name} v{adapter_version} |
 | 状态 | {status} |
@@ -51,12 +52,23 @@
 | 数值输出 | {inference_ref} |
 | 刻度诊断 | {axis_diagnostics} |
 | 模型对照 | {comparison_note} |
-| 计算耗时 | {elapsed_s} |
+| 执行方式 | {execution_mode} |
+| 本次请求耗时 | {current_request_wall_s} |
+| 本任务推理耗时 | {inference_wall_s} |
+| 来源推理耗时 | {source_inference_wall_s} |
 | 错误码 | {error_code} |
 
 ## 6. 证据索引
 
 {evidence_index}
 
+## 7. 对照策略说明（V9 的角色）
+
+{comparison_policy_text}
+
+### 7.1 差异最大的元素（Top 3）
+
+{comparison_top_text}
+
 ---
-*报告由 {tool_name} v{tool_version} 生成。报告表格与结构化 JSON 的一致性检查结果：{consistency_check}。*
+*报告由 {tool_name} v{tool_version}（报告组件）生成；智能体产品版本 {agent_display_version}（内部版本 {agent_version}）；报告结构版本 {report_schema_version}。报告表格与结构化 JSON 的一致性检查结果：{consistency_check}。*
