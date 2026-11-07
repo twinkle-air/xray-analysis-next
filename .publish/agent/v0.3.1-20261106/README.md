@@ -1,49 +1,20 @@
-# 通用 X 射线谱分析智能体 v0.3.1（2026-11-06）
+# 通用 X 射线谱分析智能体
 
-> v0.3.0（2026-10-31）的延续版本。本目录是自包含工作区：`agent/` 是代码，`verify_p*.py` 是校验脚本，
-> `deliverables/` 放功能测试谱集；V9/V10 冻结模型包不重复入库，按 §5 从
-> `models/v9-v10-20261030/` 解压到 `deliverables/xrf-models-v9-v10-20261030/`。
-> 相比 v0.3.0 的 `agent-workspace/` 嵌套布局，本版改为扁平布局，本目录即工作区根，
-> 快速开始中的命令可以直接运行。
+面向 2048 道合成 X 射线能谱的证据驱动分析智能体：输入一张谱加一段样品描述，由 V10 主模型给出候选元素与质量百分比，按登记规则触发 V9 对照，最后输出 Markdown 研究草稿与结构化证据包。全流程只允许调用四个登记工具，每一步产物落盘可追溯。
 
-## 1. 构建状态总览
-
-| 项 | 值 |
-|---|---|
-| 版本 | v0.3.1-20261106 |
-| 状态 | **179 项自动化用例通过**（P1 72 + P2 47 + P3 60，UTF-8 由启动入口内置，不再依赖手工环境变量） |
-| 主后端 | V10（完整分类＋定量增量），默认 |
-| 复核后端 | V9（联合强度定量＋谱支持诊断），按请求触发 |
-| 语言／运行时 | Python 3.12，numpy 2.4.6 / scipy 1.17.1 / xraylib 4.3.0 |
-| 宿主 | `local_simulation`（确定性本地路由，默认）；`api` 后端已用真实 **Sage-A1.5** 验证 |
-| 源码 | `agent/`，15 个 `.py` 文件（v0.3.0 为 14 个，新增 `session.py`） |
-| 注册表 | `agent/registry/`，4 份 JSON + 1 份提示词 + 1 份模板 |
-
-真实宿主复测（Sage-A1.5）：T01 四轮连续会话（分析 → ppm 追问 → V9 对照 → 未报出含义）通过；
-T02/T03 正常分析通过且数值与冻结参考逐字节一致；T05/T06 被正确拒绝且无成功报告。
-
-## 2. 相对 v0.3.0 的变更
-
-- **会话上下文**：新增 `agent/session.py`，交互模式记录当前谱、主任务与对照任务，追问不再重新整条编排。
-- **`follow_up()` 接通**：追问注入已有结果摘要；拒绝再次调用 `analyze_spectrum`；工具执行后把结果回传宿主，由宿主生成中文结论。
-- **回答来源可追溯**：每轮轨迹与 `audit/session.json` 记录 `answer_source`（`model` 或 `program_fallback`）及兜底原因；对照轮为混合执行（宿主调用 `compare_models`，程序补齐报告导出）时区分明确。
-- **复用来源可见**：CLI 摘要与报告“复用来源”行写明来源任务、模型版本、输入哈希与模型包哈希。
-- **UTF-8 启动入口**：CLI 启动时统一设置 stdio／控制台编码，中文提示、报告与管道输入不再需要手工 `PYTHONUTF8`。
-- **真实宿主路径修复**：历史重放去除重复 `system` 消息（曾导致 Sage 端 HTTP 400）；提示词中的谱文件路径解析为工作区绝对路径，避免宿主改写相对路径。
-- **PR 复核两项修复**：导出失败不再回复“报告已导出”（`_export`/`_compare` 校验导出结果并记录失败原因）；多轮历史重放每轮已展示给用户的答复，重复答复只保留一次。新增 `G01`/`G02` 回归用例。
-
-## 3. 目录结构
+## 目录
 
 | 路径 | 内容 |
 |---|---|
-| `agent/` | 可运行代码：四工具、`session.py`、`orchestrator.py`、`host.py`、注册表 |
-| `verify_p1.py` / `verify_p2.py` / `verify_p3.py` / `verify_common.py` | 自动化校验套件 |
-| `deliverables/智能体功能测试谱集-20261031/` | 功能测试谱集（T01–T06）与验收参考 |
-| `deliverables/xrf-models-v9-v10-20261030/` | 解压后的冻结模型包（不入库，按 §5 解压） |
+| `agent/` | 可运行代码：四工具入口、编排与宿主、注册表（`agent/registry/`） |
+| `agent-workspace/` | P0 基线测量结果与调试探针脚本 |
+| `verify_p1.py` / `verify_p2.py` / `verify_p3.py` | 自动化校验套件 |
+| `jobs/` | 每个任务的产物：输入、解析、推理、对照、审计轨迹、报告 |
+| `智能体构建情况与使用指南.md` | 构建状态、工具契约、核验结果与已知限制 |
 
-## 4. 快速开始
+## 快速开始
 
-在本目录运行（Python 需含 numpy/scipy/xraylib，见 §5）：
+依赖 Python ≥ 3.12.14、numpy 2.4.6、scipy 1.17.1、xraylib 4.3.0（见指南 §1 与 §5）。
 
 ```bash
 python -m agent.cli agent \
@@ -51,36 +22,15 @@ python -m agent.cli agent \
   --sample-description "铝合金粉末，未知仪器"
 ```
 
-四工具也可单独驱动：`analyze`、`status`、`compare`、`export`；参数与返回值见
-`agent/registry/tool_contracts.json`。多轮追问用 `--interactive`，
-会话记录写入任务目录 `audit/session.json`，工具轨迹写入 `audit/trajectory.json`。
+每次分析前会先核验**实际运行模型子进程的解释器**（不是父进程）是否满足 `agent/registry/runtime_policy.json` 声明的版本策略，并把指纹写进任务状态、JSON 与报告；环境不符时按 `RUNTIME_MISMATCH` 拒绝运行（不留静默回退），依赖缺失按 `DEPENDENCY_MISSING` 拒绝。需要临时放行时只能用 `--allow-unverified-runtime`（唯一入口，结果如实标记为未验证）。跨环境的旧结果不会复用：去重键已绑定运行环境指纹。
 
-真实宿主运行（密钥只放进程环境变量，不要写入文件或聊天）：
+四工具也可单独驱动：`analyze_spectrum`、`get_job_status`、`compare_models`、`export_report`，参数与返回值见 `agent/registry/tool_contracts.json` 与指南 §3。
 
-```bash
-XRF_AGENT_LLM_HOST=api XRF_AGENT_LLM_API_BASE=https://discovery-api.intern-ai.org.cn \
-XRF_AGENT_LLM_API_KEY=*** XRF_AGENT_LLM_MODEL=Sage-A1.5 \
-python -m agent.cli agent --interactive --host-mode api --task-file .../T01.json
-```
+多轮追问用 `--interactive`：会话记录当前谱、主任务与对照任务（`audit/session.json`），追问直接读取已有结果，不再重新推理；轨迹中每轮标注 `answer_source`（`model` / `program_fallback`）。真实宿主用 `--host-mode api` 加 `XRF_AGENT_LLM_*` 环境变量；请求/响应中可核验的模型标识是 `Sage-A1.5`。
 
-## 5. 解压模型包
+## 边界
 
-```bash
-python -m pip install -r deliverables/xrf-models-v9-v10-20261030/requirements.txt
-unzip models/v9-v10-20261030/<模型包>.zip -d deliverables/xrf-models-v9-v10-20261030/
-```
-
-完整性由 `agent/registry/model_registry.json` 与模型包内 `freeze.json` 在每次分析前校验。
-
-## 6. 模型名称口径
-
-请求与响应中可核验的模型标识是 **Sage-A1.5**（`XRF_AGENT_LLM_MODEL` 与轨迹
-`host_config.model`）。文中“书生 S2”指服务方对该产品序列的称呼，发布材料统一以
-API 可核验的 `Sage-A1.5` 为准，避免混用。
-
-## 7. 边界与限制
-
-- `formal_report_eligible=false`、`hardware_validated=false`：报告是研究草稿，不构成定量验收结论。
-- V9 不是真值，两版一致也可能共同偏误，不做平均或逐元素择优。
-- 只接受 2048 道、`synthetic: true` 的计数 JSON；实测谱接入需单独验收。
-- 真实宿主复测覆盖 T01–T06；超出该范围的超时、取消、路径权限、安全与完整实测定量验收仍需另行执行。
+- `formal_report_eligible=false`、`hardware_validated=false`：报告是研究草稿，不构成定量验收结论，两版模型均未达到相对误差 ≤5% 目标。
+- V9 不是真值，两版一致也可能共同偏误，不做平均或逐元素择优；对照策略集中写在报告第 7 节，规则取自 `agent/registry/comparison_policy.json`。
+- 只接受 2048 道、`synthetic: true` 的计数 JSON；拒绝原因以中文 `user_message` 给出（保留机器码与英文调试信息），实测谱接入需单独验收。
+- 其余限制见 [智能体构建情况与使用指南.md](智能体构建情况与使用指南.md) §8。

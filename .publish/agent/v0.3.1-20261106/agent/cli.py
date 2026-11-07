@@ -62,6 +62,11 @@ def _dump(obj) -> None:
     print(json.dumps(obj, ensure_ascii=False, indent=2))
 
 
+def _print_warnings(result: dict) -> None:
+    for warning in result.get("warnings") or []:
+        print(f"warning: {warning}", file=sys.stderr)
+
+
 def cmd_analyze(args) -> int:
     workspace = _workspace(args)
     task_file = pathlib.Path(args.task_file)
@@ -69,11 +74,15 @@ def cmd_analyze(args) -> int:
         print(f"error: task file not found: {task_file}", file=sys.stderr)
         return 2
     try:
-        result = analyze_spectrum(workspace, task_file, args.sample_description or "")
+        result = analyze_spectrum(workspace, task_file, args.sample_description or "",
+                                  allow_unverified_runtime=args.allow_unverified_runtime)
     except ToolError as exc:
         print(f"error [{exc.code}]: {exc}", file=sys.stderr)
+        if getattr(exc, "user_message", None):
+            print(f"用户提示: {exc.user_message}", file=sys.stderr)
         return 2
     _dump(result)
+    _print_warnings(result)
     return 0
 
 
@@ -83,6 +92,8 @@ def cmd_status(args) -> int:
         result = get_job_status(workspace, args.job_id)
     except ToolError as exc:
         print(f"error [{exc.code}]: {exc}", file=sys.stderr)
+        if getattr(exc, "user_message", None):
+            print(f"用户提示: {exc.user_message}", file=sys.stderr)
         return 2
     _dump(result)
     return 0 if result.get("exists") else 1
@@ -91,11 +102,15 @@ def cmd_status(args) -> int:
 def cmd_compare(args) -> int:
     workspace = _workspace(args)
     try:
-        result = compare_models(workspace, args.job_id)
+        result = compare_models(workspace, args.job_id,
+                                allow_unverified_runtime=args.allow_unverified_runtime)
     except ToolError as exc:
         print(f"error [{exc.code}]: {exc}", file=sys.stderr)
+        if getattr(exc, "user_message", None):
+            print(f"用户提示: {exc.user_message}", file=sys.stderr)
         return 2
     _dump(result)
+    _print_warnings(result)
     return 0
 
 
@@ -105,6 +120,8 @@ def cmd_export(args) -> int:
         result = export_report(workspace, args.job_id, args.include_comparison)
     except ToolError as exc:
         print(f"error [{exc.code}]: {exc}", file=sys.stderr)
+        if getattr(exc, "user_message", None):
+            print(f"用户提示: {exc.user_message}", file=sys.stderr)
         return 2
     _dump(result)
     if result.get("markdown_path"):
@@ -131,7 +148,8 @@ def cmd_agent_interactive(args) -> int:
 
     try:
         session = Session(workspace.root, task_file, sample_description,
-                          host_mode=args.host_mode)
+                          host_mode=args.host_mode,
+                          allow_unverified_runtime=args.allow_unverified_runtime)
         result = session.start(args.query or "请分析这张谱",
                                include_comparison=args.compare)
     except (OrchestrationError, ToolError, HostError, ValueError) as exc:
@@ -165,6 +183,9 @@ def cmd_agent_interactive(args) -> int:
 def _print_summary(result: dict, workspace: Workspace) -> None:
     status = result.get("status")
     print(f"  状态: {status} | 任务: {result.get('job_id')} | 宿主: {result.get('host_config', {}).get('host')}")
+    if result.get("answer"):
+        source = result.get("answer_source") or "program"
+        print(f"  回答（{source}）: {result['answer']}")
     if result.get("model_version"):
         print(f"  模型: {result.get('model_version')} | 输入 SHA-256: {str(result.get('input_sha256') or '-')[:16]}…")
     if result.get("reused_from"):
@@ -195,6 +216,8 @@ def _announce_host(host_mode) -> int:
         config = detect_config(host_mode)
     except HostError as exc:
         print(f"error [{exc.code}]: {exc}", file=sys.stderr)
+        if getattr(exc, "user_message", None):
+            print(f"用户提示: {exc.user_message}", file=sys.stderr)
         return 2
     print(f"宿主: {config.host} | 模型: {config.model or '-'} | 地址: {config.api_base or '-'} "
           f"| simulated={config.simulated}", file=sys.stderr)
@@ -217,12 +240,14 @@ def cmd_agent(args) -> int:
             sample_description=args.sample_description or "",
             include_comparison=args.compare,
             no_export=args.no_export,
+            allow_unverified_runtime=args.allow_unverified_runtime,
             host_mode=args.host_mode,
         )
     except (OrchestrationError, ToolError, HostError) as exc:
         print(f"error [{getattr(exc, 'code', 'ORCHESTRATION_FAILURE')}]: {exc}", file=sys.stderr)
         return 2
     _dump(result)
+    _print_warnings(result)
     if result.get("reused_from"):
         print(f"\n复用来源: 任务 {result['reused_from']} 的计算结果（未重新推理）", file=sys.stderr)
     if result.get("markdown_path"):
@@ -266,6 +291,10 @@ def main(argv=None) -> int:
     _force_utf8_stdio()
     parser = argparse.ArgumentParser(prog="xrf-agent", description="XRF spectrum analysis agent (tools only)")
     parser.add_argument("--workspace", default=str(WORKSPACE_ROOT), help="workspace root (default: script parent parent)")
+    parser.add_argument("--allow-unverified-runtime", action="store_true",
+                        help="run even when the numerical runtime (Python / numpy / scipy / "
+                             "xraylib) does not match the declared policy; the unverified "
+                             "status and reason are recorded in the job, JSON and report")
     sub = parser.add_subparsers(dest="command", required=True)
 
     p = sub.add_parser("analyze", help="ingest a spectrum and run V10")

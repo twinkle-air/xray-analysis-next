@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "declared_on": "2026-11-06",
+  "note": "版本元数据的单一来源。report_generator_version 是报告组件版本，不是产品发布号；agent_version 才是智能体产品版本。",
+  "agent_version": "0.4.0",
+  "agent_name": "xrf-analysis-agent",
+  "report_generator_name": "xrf-agent",
+  "report_generator_version": "1.1.0",
+  "report_schema_version": "1.0",
+  "source_commit": null,
+  "source_commit_note": "发布构建时写入当前提交号；开发树中保持 null，不预设未产生的提交号。",
+  "baseline_commit": "104aa88e1c92b9483ee19312c1e367c1c36c5275",
+  "baseline_version": "0.3.1"
+}

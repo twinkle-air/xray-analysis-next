@@ -20,7 +20,8 @@ from .registry import ModelRegistry
 
 SCHEMA_VERSION = "1.0"
 TOOL_NAME = "xrf-agent"
-TOOL_VERSION = "1.0.0-p1"
+TOOL_VERSION = "1.1.0"
+REPORTED_UNKNOWN = "未记录"
 
 STAGE_CN = {
     "received": "已接收",
@@ -128,6 +129,144 @@ def _table_rows(text: str):
 
 def _posix(path) -> str:
     return str(path).replace("\\", "/")
+
+
+def _registry_json(path: pathlib.Path, what: str) -> dict:
+    """Read a registry file that the report depends on. Missing or broken = no report."""
+    if not path.exists():
+        raise ReportError(f"{what} missing: {path}")
+    try:
+        return read_json(path)
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ReportError(f"{what} unreadable: {path} ({exc})")
+
+
+def comparison_status(comparison: dict | None) -> str:
+    """The report's view of the comparison: not_run / succeeded / failed.
+
+    A comparison artifact belongs to the job it was computed for, so any artifact that
+    exists and did not fail counts as this job's own completed comparison.
+    """
+    if comparison is None:
+        return "not_run"
+    if comparison.get("error_code"):
+        return "failed"
+    return "succeeded"
+
+
+def comparison_status_text(policy: dict, comparison: dict | None) -> str:
+    """Short status line for the body. Carries the phrase the suites grep for, nothing more:
+    the *policy* itself is stated once, in section 7."""
+    status = comparison_status(comparison)
+    text = (policy.get("statuses") or {}).get(status) or ""
+    if status == "succeeded":
+        v9_job_id = (comparison or {}).get("v9_job_id")
+        n10 = (comparison or {}).get("n_reported_v10")
+        n9 = (comparison or {}).get("n_reported_v9")
+        text = (f"V9 对照已完成，关联对照任务 `{v9_job_id}`；"
+                f"V10 报出 {n10} 个元素，V9 报出 {n9} 个元素。")
+    return text
+
+
+def comparison_policy_text(policy: dict, comparison: dict | None) -> str:
+    """The one place the report states what V9 is for. Read from the registry, never
+    improvised by the host, so the report and the session answers share one source."""
+    status = comparison_status(comparison)
+    parts = [f"- {policy.get('role', 'V10 是主结果，V9 是独立差异参考。')}"]
+    for rule in policy.get("rules", []):
+        parts.append(f"- {rule}")
+    statuses = policy.get("statuses") or {}
+    parts.append(f"- 本次对照状态：{statuses.get(status, status)}")
+    return "\n".join(parts)
+
+
+def _fmt_pct(value) -> str:
+    return REPORTED_UNKNOWN if value is None else f"{value:.6f}"
+
+
+def comparison_top_text(comparison: dict | None) -> str:
+    """Top-N differences as a small table, straight out of the computed summary."""
+    if comparison is None:
+        return "未运行 V9 对照，本节不提供差异摘要。"
+    summary = comparison.get("comparison_summary") or {}
+    if comparison.get("error_code"):
+        return "V9 对照失败，本节不提供差异摘要。"
+    top = summary.get("top_n") or []
+    if not top:
+        threshold = summary.get("threshold_ppm")
+        threshold_text = f"{threshold:g}" if isinstance(threshold, (int, float)) else ">"
+        return (f"两版逐元素一致：没有元素含量差超过比较阈值 {threshold_text} ppm，"
+                "没有可列出的差异。")
+    lines = ["| 元素 | V10 含量 (%) | V9 含量 (%) | 差值 ppm（V10−V9） | 绝对差 ppm |",
+             "|---|---|---|---|---|"]
+    for entry in top:
+        lines.append(
+            f"| {entry['element']} | {_fmt_pct(entry.get('v10_mass_percent'))} | "
+            f"{_fmt_pct(entry.get('v9_mass_percent'))} | {entry.get('delta_ppm'):.4f} | "
+            f"{entry.get('abs_diff_ppm'):.4f} |")
+    groups = summary.get("groups") or {}
+    lines.append("")
+    lines.append(
+        f"仅 V10 报出：{', '.join(groups.get('only_v10_reported') or []) or '无'}；"
+        f"仅 V9 报出：{', '.join(groups.get('only_v9_reported') or []) or '无'}；"
+        f"两版均报出：{', '.join(groups.get('both_reported') or []) or '无'}。")
+    threshold = summary.get("threshold_ppm")
+    threshold_text = f"{threshold:g}" if isinstance(threshold, (int, float)) else "未记录"
+    lines.append(
+        f"上方为差异最大的前 {summary.get('top_n_limit', len(top))} 个元素；"
+        f"比较阈值为 {threshold_text} ppm，超过该阈值即计为有差异。"
+        "完整差异清单见结构化 JSON 的 differing_elements。"
+        "“未报出”不是零含量，也不是元素不存在。")
+    return "\n".join(lines)
+
+
+def runtime_summary(state: dict) -> str:
+    """The runtime fingerprint as one report row: what actually ran, and whether it was
+    verified against the declared policy."""
+    fingerprint = state.get("runtime_fingerprint") or {}
+    if not fingerprint:
+        return "未记录（本任务未绑定运行环境指纹）"
+    versions = " / ".join(f"{name} {fingerprint.get(name, '?')}"
+                          for name in ("python", "numpy", "scipy", "xraylib"))
+    machine = fingerprint.get("platform") or "?"
+    source = fingerprint.get("selection_source")
+    source_cn = {"workspace_venv": "工作区虚拟环境",
+                 "current_interpreter": "当前解释器（无工作区 venv）"}.get(source, source or "?")
+    verified = fingerprint.get("verified")
+    if verified is True:
+        verdict = "已按声明策略核验"
+    elif verified is False:
+        verdict = "未通过策略核验（--allow-unverified-runtime 显式放行，结果按未验证记录）"
+    else:
+        verdict = "核验状态未知"
+    return f"{versions}（{machine}，{source_cn}）— {verdict}"
+
+
+def _timing_text(value) -> str:
+    return REPORTED_UNKNOWN if value is None else f"{value:.3f} s"
+
+
+def timing_block(state: dict, reuse_source: dict | None) -> dict:
+    """F05: keep the four clocks apart. `current_request_wall_s` is this job's own wall
+    time (creation -> final stage), `inference_wall_s` the model subprocess time, and
+    `source_inference_wall_s` the source job's model time when this result was reused.
+    A reused job never claims the source's inference time as its own."""
+    reused_from = state.get("reused_from")
+    if reused_from:
+        execution_mode = "缓存复用（未重新推理）"
+        inference_wall_s = None
+    else:
+        execution_mode = "独立运行数值模型"
+        inference_wall_s = state.get("elapsed_s")
+    source_inference = None
+    if reuse_source:
+        source_inference = reuse_source.get("inference_wall_s")
+    return {
+        "execution_mode": execution_mode,
+        "current_request_wall_s": state.get("stage_elapsed_s"),
+        "inference_wall_s": inference_wall_s,
+        "source_inference_wall_s": source_inference,
+    }
 
 
 def _fill(template: str, values: dict) -> str:
@@ -380,6 +519,8 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
     adapter = registry.adapter()
     state = job.as_dict()
     inference = _read_inference(job)
+    policy = _registry_json(workspace.comparison_policy(), "comparison policy")
+    versions = _registry_json(workspace.version_metadata(), "version metadata")
 
     elements = _build_elements(inference, model, comparison)
 
@@ -396,6 +537,7 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
                 "model_package_sha256": source_state.get("model_package_sha256"),
                 "created_at": source_state.get("created_at"),
                 "inference_ref": source_state.get("inference_ref"),
+                "inference_wall_s": source_state.get("elapsed_s"),
             }
             reuse_note = (
                 f"本次复用任务 `{reused_from}` 的计算结果（未重新推理）；来源模型 "
@@ -407,6 +549,13 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
                           "来源任务状态不可读，仅保留任务号。")
     else:
         reuse_note = "本次独立运行数值模型，未复用旧任务。"
+
+    timing = timing_block(state, reuse_source)
+    agent_version = versions.get("agent_version") or "未记录"
+    generator_version = versions.get("report_generator_version") or TOOL_VERSION
+    report_schema_version = versions.get("report_schema_version") or SCHEMA_VERSION
+    source_commit = versions.get("source_commit") or None
+    comp_status = comparison_status(comparison)
 
     envelope = {
         "schema_version": SCHEMA_VERSION,
@@ -422,6 +571,18 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
         "adapter_name": adapter.get("name"),
         "adapter_version": adapter.get("version"),
         "interpreter": state.get("interpreter"),
+        "runtime_id": state.get("runtime_id"),
+        "runtime_verified": state.get("runtime_verified"),
+        "runtime_fingerprint": state.get("runtime_fingerprint"),
+        "execution_mode": timing["execution_mode"],
+        "current_request_wall_s": timing["current_request_wall_s"],
+        "inference_wall_s": timing["inference_wall_s"],
+        "source_inference_wall_s": timing["source_inference_wall_s"],
+        "agent_version": agent_version,
+        "report_generator_name": versions.get("report_generator_name") or TOOL_NAME,
+        "report_generator_version": generator_version,
+        "report_schema_version": report_schema_version,
+        "source_commit": source_commit,
         "scope": inference.get("scope"),
         "formal_report_eligible": bool(inference.get("formal_report_eligible")),
         "hardware_validated": bool(inference.get("hardware_validated")),
@@ -430,6 +591,13 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
         "error_code": state.get("error_code"),
         "reused_from": reused_from,
         "reuse_source": reuse_source,
+        "comparison_status": comp_status,
+        "comparison_policy": {
+            "primary_model": policy.get("primary_model"),
+            "reference_model": policy.get("reference_model"),
+            "role": policy.get("role"),
+            "rules": list(policy.get("rules", [])),
+        },
         "comparison_job_id": state.get("comparison_job_id"),
         "warnings": list(state.get("warnings", []) + (warnings or [])),
         "artifact_refs": list(state.get("artifact_refs", [])),
@@ -456,16 +624,12 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
     if model.get("cannot_infer"):
         limitations += f"\n- {model['cannot_infer']}"
     supplementary = "\n".join(f"- {SUPPLEMENTARY[i]}" for i in range(len(SUPPLEMENTARY)))
-    comparison_note = (
-        f"V9 对照已完成，关联主任务 `{state['job_id']}`，对照任务 `{comparison['v9_job_id']}`。"
-        f"V10 报出 {comparison['n_reported_v10']} 个元素，V9 报出 {comparison['n_reported_v9']} 个元素；"
-        f"{len(comparison.get('differing_elements', []))} 个元素两版含量不同。"
-        if comparison else "未运行 V9 对照。用户请求或登记规则触发时才会调用 V9，V9 不是真值。"
-    )
+    comparison_note = comparison_status_text(policy, comparison)
     analyst_note = (
         f"本报告为**研究分析草稿**（formal_report_eligible={envelope['formal_report_eligible']}，"
         f"hardware_validated={envelope['hardware_validated']}），不构成定量验收结论，"
         f"不代表任何误差目标已经通过。{comparison_note}"
+        f"V9 的角色、对照策略与差异摘要在第 7 节统一说明，正文不重复。"
     )
 
     markdown = _fill(template, {
@@ -477,6 +641,7 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
         "model_package_sha256": state.get("model_package_sha256", ""),
         "adapter_name": adapter.get("name", ""),
         "adapter_version": adapter.get("version", ""),
+        "runtime_summary": runtime_summary(state),
         "reuse_note": reuse_note,
         "status": STAGE_CN.get(state["stage"], state["stage"]),
         "sample_description": state.get("sample_description") or "（无）",
@@ -490,11 +655,19 @@ def build_report(job: Job, comparison: dict | None = None, warnings: Optional[li
         "inference_ref": state.get("inference_ref", ""),
         "axis_diagnostics": diagnostics,
         "comparison_note": comparison_note,
+        "execution_mode": timing["execution_mode"],
+        "current_request_wall_s": _timing_text(timing["current_request_wall_s"]),
+        "inference_wall_s": _timing_text(timing["inference_wall_s"]),
+        "source_inference_wall_s": _timing_text(timing["source_inference_wall_s"]),
+        "comparison_policy_text": comparison_policy_text(policy, comparison),
+        "comparison_top_text": comparison_top_text(comparison),
         "elapsed_s": str(state.get("elapsed_s", "")),
         "error_code": str(state.get("error_code") or "无"),
         "evidence_index": "{evidence_index}",
         "tool_name": TOOL_NAME,
-        "tool_version": TOOL_VERSION,
+        "tool_version": generator_version,
+        "agent_version": agent_version,
+        "report_schema_version": report_schema_version,
         "consistency_check": "{consistency_check}",
     })
 
