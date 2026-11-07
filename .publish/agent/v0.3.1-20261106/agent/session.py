@@ -149,21 +149,46 @@ class Session:
 
     # ------------------------------------------------------------------ handlers
 
+    @staticmethod
+    def _existing_comparison_v9_job(job: Job) -> Optional[str]:
+        """The v9 job id of a comparison artifact already on disk, if any.
+
+        Used only to recognise afterwards that compare_models reused the artifact instead
+        of recomputing; it never decides the reuse itself.
+        """
+        path = job.sub("inference") / "comparison.json"
+        if not path.exists():
+            return None
+        try:
+            return read_json(path).get("v9_job_id")
+        except (OSError, json.JSONDecodeError):
+            return None
+
     def _compare(self, question: str, job: Job) -> dict:
+        """Ask for a V9 comparison through compare_models, always.
+
+        The tool owns the runtime verification and the cache decision; reading the stored
+        artifact here instead would rebuild the reuse logic a second time and skip the
+        environment check F01 requires.
+        """
         calls = []
-        comparison_path = job.sub("inference") / "comparison.json"
-        reused = comparison_path.exists()
-        if reused:
-            comparison = read_json(comparison_path)
-            calls.append({"name": "compare_models", "origin": "reused_existing",
-                          "job_id": self.main_job_id,
-                          "v9_job_id": comparison.get("v9_job_id")})
-        else:
-            comparison = compare_models(self.workspace, self.main_job_id,
-                                        allow_unverified_runtime=self.allow_unverified_runtime)
-            calls.append({"name": "compare_models", "origin": "session",
-                          "job_id": self.main_job_id,
-                          "v9_job_id": comparison.get("v9_job_id")})
+        existing_v9_job = self._existing_comparison_v9_job(job)
+        try:
+            comparison = compare_models(
+                self.workspace, self.main_job_id,
+                allow_unverified_runtime=self.allow_unverified_runtime)
+        except ToolError as exc:
+            return self._answer_deterministic(
+                question, "compare",
+                f"V9 对照无法运行：{getattr(exc, 'code', 'NUMERICAL_FAILURE')}。"
+                f"V10 结果保留在任务 `{self.main_job_id}`，未受影响。",
+                [{"name": "compare_models", "origin": "session", "job_id": self.main_job_id,
+                  "failed": True, "error_code": getattr(exc, "code", "NUMERICAL_FAILURE")}])
+        reused = existing_v9_job is not None and comparison.get("v9_job_id") == existing_v9_job
+        calls.append({"name": "compare_models",
+                      "origin": "reused_existing" if reused else "session",
+                      "job_id": self.main_job_id,
+                      "v9_job_id": comparison.get("v9_job_id")})
         if comparison.get("error_code"):
             answer = (f"V9 对照失败：{comparison.get('error_code')}。"
                       f"V10 结果保留在任务 `{self.main_job_id}`，未受影响。")
@@ -185,6 +210,9 @@ class Session:
                       "status": exported.get("status"),
                       "error_code": exported.get("error_code")})
         answer = self._comparison_text(comparison, None if export_failed else report_path)
+        if comparison.get("runtime_verified") is False:
+            answer += ("\n本次对照在 --allow-unverified-runtime 放行下完成，运行环境未验证，"
+                       "结果按未验证记录。")
         if reused:
             reuse_note = self._comparison_policy().get("statuses", {}).get("reused")
             if reuse_note:

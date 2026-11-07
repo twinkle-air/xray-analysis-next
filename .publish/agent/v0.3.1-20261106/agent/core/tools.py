@@ -308,7 +308,8 @@ def get_job_status(workspace: Workspace, job_id: str) -> dict:
     }
 
 
-def _cached_comparison(job: Job, comp: dict, v10_model: dict, v9_model: dict) -> dict:
+def _cached_comparison(job: Job, comp: dict, v10_model: dict, v9_model: dict,
+                       fingerprint: dict) -> dict:
     """Serve a cached comparison whose runtime identity matches the current one.
 
     The identity fields come from the artifact and are never reinvented; the derived view
@@ -328,6 +329,8 @@ def _cached_comparison(job: Job, comp: dict, v10_model: dict, v9_model: dict) ->
         "n_reported_v9": _n_reported(v9_result),
         "differing_elements": differing,
         "comparison_summary": summary,
+        "runtime_verified": fingerprint.get("verified"),
+        "runtime_id": fingerprint.get("id"),
         "error_code": comp.get("error_code"),
         "note": note,
     }
@@ -369,6 +372,7 @@ def compare_models(
         fingerprint = runtime.verify(workspace)
     except runtime.RuntimeCheckError as exc:
         job.add_warning(f"V9对照无法运行: {exc}")
+        # no fingerprint exists to report: the probe itself could not run
         return _compare_result(job.job_id, None, None, None, None, [],
                                f"V9对照无法运行: {exc}", exc.code)
     if not fingerprint.get("verified"):
@@ -376,7 +380,8 @@ def compare_models(
             job.add_warning(fingerprint.get("reason"))
             return _compare_result(job.job_id, None, None, None, None, [],
                                    f"V9对照无法运行: {fingerprint.get('reason')}",
-                                   fingerprint.get("error_code", "RUNTIME_MISMATCH"))
+                                   fingerprint.get("error_code", "RUNTIME_MISMATCH"),
+                                   fingerprint=fingerprint)
         job.add_warning(f"运行环境未验证（--allow-unverified-runtime）: {fingerprint.get('reason')}")
 
     existing_comparison = job.sub("inference") / COMPARISON_NAME
@@ -386,7 +391,7 @@ def compare_models(
         except (OSError, json.JSONDecodeError) as exc:
             raise ToolError("NUMERICAL_FAILURE", f"comparison artifact unreadable: {exc}")
         if comp.get("runtime_id") == fingerprint.get("id") and fingerprint.get("id"):
-            return _cached_comparison(job, comp, v10, v9)
+            return _cached_comparison(job, comp, v10, v9, fingerprint)
         # the artifact came from another runtime, or predates runtime ids: recompute it
         job.add_warning("已有对照来自其他运行环境或缺少运行环境标识，重新运行 V9")
 
@@ -419,7 +424,7 @@ def compare_models(
             v9_job.add_warning(v9_run["stderr"][-600:])
             v9_job.save()
             return _compare_result(job.job_id, None, None, None, None, [], "V9对照失败",
-                                   v9_run["error_code"])
+                                   v9_run["error_code"], fingerprint=fingerprint)
         v9_result = _read_inference(v9_job)
         _check_inference(v9_result, v9, "V9")
         v9_job.set("elapsed_s", v9_run["wall_s"])
@@ -429,7 +434,8 @@ def compare_models(
         v9_job.fail(getattr(exc, "code", "NUMERICAL_FAILURE"))
         v9_job.add_warning(str(exc))
         return _compare_result(job.job_id, None, None, None, None, [],
-                               f"V9对照准备失败: {exc}", getattr(exc, "code", "NUMERICAL_FAILURE"))
+                               f"V9对照准备失败: {exc}", getattr(exc, "code", "NUMERICAL_FAILURE"),
+                               fingerprint=fingerprint)
 
     differing, summary, note = _diff(v10, v9, _read_inference(job), v9_result)
     comparison = {
@@ -457,7 +463,7 @@ def compare_models(
     job.save()
     return _compare_result(job.job_id, v9_job.job_id, v9_job.stage(),
                            comparison["n_reported_v10"], comparison["n_reported_v9"],
-                           differing, note, None, summary=summary)
+                           differing, note, None, summary=summary, fingerprint=fingerprint)
 
 
 def export_report(
@@ -620,8 +626,8 @@ def _diff(v10_model: dict, v9_model: dict, v10_result: dict, v9_result: dict):
 
 
 def _compare_result(job_id, v9_job_id, v9_status, n10, n9, differing, note, error_code,
-                    summary=None):
-    return {
+                    summary=None, fingerprint=None):
+    result = {
         "job_id": job_id,
         "parent_job_id": job_id,
         "v9_job_id": v9_job_id,
@@ -633,3 +639,9 @@ def _compare_result(job_id, v9_job_id, v9_status, n10, n9, differing, note, erro
         "error_code": error_code,
         "note": note,
     }
+    if fingerprint is not None:
+        # every comparison answer carries the environment state it ran under, so callers
+        # (CLI, session, report) never have to guess whether it was verified.
+        result["runtime_verified"] = fingerprint.get("verified")
+        result["runtime_id"] = fingerprint.get("id")
+    return result
