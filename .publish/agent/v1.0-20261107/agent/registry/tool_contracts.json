@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-10-31",
+  "note": "Contracts are read by the CLI and by the LLM host. A host must not invent arguments outside these signatures.",
+  "tools": {
+    "analyze_spectrum": {
+      "description": "Ingest a spectrum file, validate it, lock the model version and run V10. Returns a job id and status. Never overwrites an existing result.",
+      "parameters": {
+        "type": "object",
+        "required": ["task_file"],
+        "properties": {
+          "task_file": {
+            "type": "string",
+            "description": "Absolute path to the task JSON. Must be a file already written to disk; the tool never invents a missing spectrum."
+          },
+          "sample_description": {
+            "type": "string",
+            "description": "Optional free-text user note (material, powder/bulk, instrument, measurement time, etc.). Stored separately from the model input and never fills missing calibration fields."
+          }
+        },
+        "additionalProperties": false
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "job_id": {"type": "string"},
+          "status": {"type": "string"},
+          "input_sha256": {"type": "string"},
+          "model_version": {"type": "string"},
+          "model_package_sha256": {"type": "string"},
+          "warnings": {"type": "array", "items": {"type": "string"}},
+          "error_code": {"type": ["string", "null"]},
+          "elapsed_s": {"type": ["number", "null"]},
+          "runtime_verified": {"type": ["boolean", "null"], "description": "Whether the numerical runtime fingerprint satisfied the declared runtime policy. Null before the check ran."},
+          "runtime_fingerprint": {"type": ["object", "null"], "description": "Measured interpreter and package versions plus the interpreter selection source."},
+          "rejection": {"type": ["object", "null"], "description": "Present on an input refusal: stable reason_code, Chinese user_message, expected/actual and the English debug text."}
+        },
+        "required": ["job_id", "status"]
+      }
+    },
+    "get_job_status": {
+      "description": "Return the stage, elapsed time, error code and artifact refs of a single job. Unknown jobs cannot be used to read other directories.",
+      "parameters": {
+        "type": "object",
+        "required": ["job_id"],
+        "properties": {
+          "job_id": {"type": "string"}
+        },
+        "additionalProperties": false
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "job_id": {"type": "string"},
+          "stage": {"type": "string"},
+          "stage_elapsed_s": {"type": ["number", "null"]},
+          "error_code": {"type": ["string", "null"]},
+          "artifact_refs": {"type": "array", "items": {"type": "string"}},
+          "exists": {"type": "boolean"}
+        },
+        "required": ["exists"]
+      }
+    },
+    "compare_models": {
+      "description": "Run V9 once on the same input as a completed V10 job and return the differences. Does not replace the V10 result and never averages the two.",
+      "parameters": {
+        "type": "object",
+        "required": ["job_id"],
+        "properties": {
+          "job_id": {"type": "string", "description": "Id of a job whose V10 result already exists and succeeded."}
+        },
+        "additionalProperties": false
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "job_id": {"type": "string"},
+          "v9_job_id": {"type": ["string", "null"]},
+          "v9_status": {"type": ["string", "null"]},
+          "n_reported_v10": {"type": ["integer", "null"]},
+          "n_reported_v9": {"type": ["integer", "null"]},
+          "differing_elements": {"type": "array", "items": {"type": "object",
+            "properties": {"element": {"type": "string"}, "v10_mass_percent": {"type": ["number", "null"]}, "v9_mass_percent": {"type": ["number", "null"]}, "delta_ppm": {"type": ["number", "null"], "description": "Signed V10 - V9 difference in ppm; never the absolute value."}, "abs_diff_ppm": {"type": ["number", "null"]}}}},
+          "comparison_summary": {"type": ["object", "null"], "description": "Derived, deterministic view of the comparison: Top-N differences by abs_diff_ppm (element order breaks ties), one-sided reporting groups, and the comparison threshold in ppm. The full differing_elements list is never replaced by it."},
+          "error_code": {"type": ["string", "null"]},
+          "note": {"type": "string"}
+        },
+        "required": ["job_id", "note"]
+      }
+    },
+    "export_report": {
+      "description": "Emit a structured JSON result and a Chinese Markdown report with an evidence index for a completed job. A programmatic check compares the report table against the JSON first.",
+      "parameters": {
+        "type": "object",
+        "required": ["job_id"],
+        "properties": {
+          "job_id": {"type": "string"},
+          "include_comparison": {"type": "boolean", "default": false, "description": "When true, requires a completed compare_models run for this job."}
+        },
+        "additionalProperties": false
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "job_id": {"type": "string"},
+          "markdown": {"type": "string"},
+          "json_path": {"type": "string"},
+          "markdown_path": {"type": "string"},
+          "status": {"type": "string"},
+          "consistency_check": {"type": "boolean"},
+          "warnings": {"type": "array", "items": {"type": "string"}},
+          "error_code": {"type": ["string", "null"]}
+        },
+        "required": ["job_id", "status", "consistency_check"]
+      }
+    }
+  }
+}
